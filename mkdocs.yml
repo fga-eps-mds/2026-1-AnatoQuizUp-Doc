@@ -1,0 +1,8 @@
+site_name: AnatoQuizUp
+site_description: AnatoQuizUp é um jogo de perguntas e respostas sobre anatomia humana, desenvolvido para ajudar estudantes de medicina a aprenderem de forma divertida e interativa.
+
+theme:
+  name: material
+
+nav:
+  - Início: index.md
