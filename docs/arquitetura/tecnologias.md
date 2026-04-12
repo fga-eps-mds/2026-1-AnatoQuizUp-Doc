@@ -38,7 +38,7 @@ Responsável pelas regras de negócio e processamento da aplicação.
 ---
 
 
-## Bibliografia
+## Referências
 
 > CAJUDEVS. Entendendo o C4 Model: uma abordagem para arquitetura de software. Disponível em: <https://medium.com/cajudevs/entendendo-o-c4-model-uma-abordagem-para-arquitetura-de-software-3ed0f007ae66>. Acesso em: 10 abr. 2026.
 >

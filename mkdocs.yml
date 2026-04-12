@@ -10,22 +10,26 @@ theme:
 nav:
   - Início: index.md
   - Produto:
-      - Visão do Produto: produto/visao.md
-      - Lean Inception: produto/lean_inception.md
+    - Visão do Produto: produto/visao.md
+    - Lean Inception: produto/lean_inception.md
   - Backlog:
-      - Visão Geral: backlog/overview.md
-      - Épicos e Histórias: backlog/historias.md
+    - Visão Geral: backlog/overview.md
+    - Épicos e Histórias: backlog/historias.md
   - Arquitetura:
-      - Visão Geral: arquitetura/visao_geral.md
-      - Tecnologias: arquitetura/tecnologias.md
-      - Decisões Arquiteturais: arquitetura/decisoes.md
+    - Visão Geral: arquitetura/visao_geral.md
+    - Tecnologias: arquitetura/tecnologias.md
+    - Decisões Arquiteturais: arquitetura/decisoes.md
   - Protótipos: prototipo/figma.md
   - Projeto e Processo:
-      - Roadmap e Releases: processo/roadmap.md
-      - Sprints: processo/sprints.md
-      - Metodologia e DoD: processo/metodologia.md
+    - Roadmap e Releases: processo/roadmap.md
+    - Sprints: processo/sprints.md
+    - Reuniões e Atas: processo/reunioes.md
+    - Metodologia e DoD: processo/metodologia.md
   - Qualidade e Métricas:
-      - Métricas e Dashboard: qualidade/qualidade.md
+    - Métricas e Dashboard: qualidade/qualidade.md
   - Decisões:
-      - Decisões do Projeto: decisoes/decisoes.md
-  - Contribuição: contribuicao/contribuicao.md
+    - Decisões do Projeto: decisoes/decisoes.md
+  - Contribuição: 
+    - Código de Conduta: contribuicao/codigo_conduta.md
+    - Política de Branchs: contribuicao/politica_branchs.md
+    - Política de Commits: contribuicao/politica_commits.md
