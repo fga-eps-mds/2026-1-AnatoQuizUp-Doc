@@ -1,4 +1,4 @@
-# Arquitetura da Solução
+# Tecnologias
 
 ## Estilo Arquitetural
 ( a definir...)
@@ -8,8 +8,7 @@
 ### Diagrama de Contâiners
 O diagrama a seguir apresenta a decomposição do sistema em seus principais contêineres, mostrando as escolhas tecnológicas e a comunicação entre contâiners
 
-![Diagrama de Contêineres](.\diagramas\AnatoQuiz-diagrama-de-contexto.drawio.png)
-
+![Diagrama de Contêineres](../assets/arquitetura/diagrama-de-contexto.png)
 
 ## Componentes
 
@@ -30,7 +29,7 @@ Responsável pelas regras de negócio e processamento da aplicação.
 
 ---
 
-### 🔹 Banco de Dados (PostgreSQL)
+### Banco de Dados (PostgreSQL)
 
 - Armazena dados de usuários  
 - Armazena questões e seus estados
@@ -39,12 +38,14 @@ Responsável pelas regras de negócio e processamento da aplicação.
 ---
 
 
-## Referências
-- [Entendendo o C4 Model](https://medium.com/cajudevs/entendendo-o-c4-model-uma-abordagem-para-arquitetura-de-software-3ed0f007ae66)  
-- [C4 Model – Container Diagram](https://c4model.com/diagrams/container) 
+## Bibliografia
 
-## 📄 Histórico de Versão
+> CAJUDEVS. Entendendo o C4 Model: uma abordagem para arquitetura de software. Disponível em: <https://medium.com/cajudevs/entendendo-o-c4-model-uma-abordagem-para-arquitetura-de-software-3ed0f007ae66>. Acesso em: 10 abr. 2026.
+>
+>C4 MODEL. Container Diagram. Disponível em: <https://c4model.com/diagrams/container>. Acesso em: 10 abr. 2026.
 
-| Data   | Versão | Descrição                                      | Autor(es)                                      |
-|--------|--------|-----------------------------------------------|------------------------------------------------|
-| 10/04  | 1.0    | Criação do documento de arquitetura   | Caio Santos   |
+## Histórico de Versão
+
+| Data   | Versão | Descrição | Autor(es) |
+|--------|--------|-----------|-----------|
+| 10/04/2026 | 1.0 | Criação do documento de arquitetura | [Caio Santos](https://github.com/caiobsantos) | 

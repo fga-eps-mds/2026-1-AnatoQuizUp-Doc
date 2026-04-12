@@ -3,6 +3,29 @@ site_description: AnatoQuizUp é um jogo de perguntas e respostas sobre anatomia
 
 theme:
   name: material
-
+  language: pt-BR
+  features:
+      - navigation.tabs
+    
 nav:
   - Início: index.md
+  - Produto:
+      - Visão do Produto: produto/visao.md
+      - Lean Inception: produto/lean_inception.md
+  - Backlog:
+      - Visão Geral: backlog/overview.md
+      - Épicos e Histórias: backlog/historias.md
+  - Arquitetura:
+      - Visão Geral: arquitetura/visao_geral.md
+      - Tecnologias: arquitetura/tecnologias.md
+      - Decisões Arquiteturais: arquitetura/decisoes.md
+  - Protótipos: prototipo/figma.md
+  - Projeto e Processo:
+      - Roadmap e Releases: processo/roadmap.md
+      - Sprints: processo/sprints.md
+      - Metodologia e DoD: processo/metodologia.md
+  - Qualidade e Métricas:
+      - Métricas e Dashboard: qualidade/qualidade.md
+  - Decisões:
+      - Decisões do Projeto: decisoes/decisoes.md
+  - Contribuição: contribuicao/contribuicao.md
