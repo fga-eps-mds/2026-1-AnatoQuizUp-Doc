@@ -1,5 +1,5 @@
 ---
-name: Tarefa
+name: Task
 about: Atividade técnica necessária para o projeto
 title: "[TASK] "
 labels: task
