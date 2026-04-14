@@ -1,7 +1,50 @@
 # Tecnologias
 
 ## Estilo Arquitetural
-( a definir...)
+
+### Frontend
+
+#### As Camadas (Feature-Sliced Design)
+
+A arquitetura é dividida em camadas, organizadas da mais externa (acoplada ao projeto) para a mais interna (genérica e reutilizável). A regra fundamental é que uma camada superior pode importar recursos de uma inferior, mas nunca o contrário.
+
+* **`app/`**: Configurações globais, roteamento base, provedores de contexto e estilos globais da aplicação. É o ponto de inicialização do sistema.
+* **`pages/`**: A composição final de uma tela. As páginas reúnem `widgets` e `features` e lidam com os parâmetros das rotas, mantendo-se o mais limpas possível de lógicas complexas.
+* **`widgets/`**: Blocos independentes e complexos de interface que unem várias funcionalidades em um único componente estrutural (ex: um `Header` completo ou um `Sidebar`).
+* **`features/`**: Funcionalidades modulares que entregam valor de negócio direto ao usuário (ex: a ação de fazer login, enviar um formulário). Contêm as interações do usuário e as chamadas à API REST correspondentes.
+* **`entities/`**: O conceito central dos dados de negócio (ex: Usuário, Produto, Cliente). Contém as tipagens, as interfaces e o gerenciamento do estado global desses dados.
+* **`shared/`**: Código puramente técnico e desconectado das regras de negócio. Inclui componentes visuais genéricos (botões, inputs formatados) e configurações base de infraestrutura (como o cliente HTTP para as chamadas REST).
+
+---
+
+#### Estrutura de Pastas
+
+\`\`\`text
+src/
+├── app/
+│   ├── styles/global.css      
+│   └── App.tsx                
+├── pages/
+│   └── login/
+│       └── ui/LoginPage.tsx   
+├── widgets/
+│   └── header/
+│       └── ui/Header.tsx      
+├── features/
+│   └── auth-by-username/
+│       ├── ui/LoginForm.tsx   
+│       └── api/loginApi.ts    
+├── entities/
+│   └── user/
+│       ├── model/userStore.ts 
+│       └── types/user.ts      
+└── shared/
+    ├── ui/
+    │   ├── Button.tsx         
+    │   └── Input.tsx          
+    └── api/
+        └── httpClient.ts
+\`\`\`
 
 ## Visão Geral
 
