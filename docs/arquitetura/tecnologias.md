@@ -19,7 +19,8 @@ A arquitetura é dividida em camadas, organizadas da mais externa (acoplada ao p
 
 #### Estrutura de Pastas
 
-\`\`\`text
+```
+
 src/
 ├── app/
 │   ├── styles/global.css      
@@ -44,7 +45,8 @@ src/
     │   └── Input.tsx          
     └── api/
         └── httpClient.ts
-\`\`\`
+
+```
 
 ## Visão Geral
 
@@ -66,9 +68,9 @@ O diagrama a seguir apresenta a decomposição do sistema em seus principais con
 
 O React é uma biblioteca que será utilizada como base para a construção da interface da aplicação, permitindo o desenvolvimento de componentes reutilizáveis e dinâmicos. Sua abordagem baseada em componentes facilita a organização do código e melhora a manutenção do sistema em relação ao desenvolvimento tradicional utilizando HTML, CSS e Javascript.
 
-**Nextjs**
+**Vite**
 
-O Next.js será empregado como framework principal, oferecendo recursos como renderização no servidor, geração de páginas estáticas e roteamento otimizado. Isso contribui para melhor experiência de usuário, desempenho e escalabilidade da aplicação.
+Vite é uma ferramenta de desenvolvimento e build para frontends de aplicações web. Ele possui um sistema que permite um menor tempo de espera durante o desenvolvimento, suporte ao React, server-side rendering (SSR), code-splitting e carregamento assíncrono e pode ter suas capacidades expandidas via plugin-ins. Além disso ele não é opinativo quanto a estrutura de pastas, o que permite maior liberdade na estruturação do código para seguir os padrões escolhidos.
 
 **Tailwind CSS**
 
@@ -102,7 +104,7 @@ Responsável pelas regras de negócio e processamento da aplicação.
 
 > React. Disponível em: <https://react.dev>. Acesso em: 13 abr. 2026.
 
-> Next.js Docs. Disponível em: <https://nextjs.org/docs>. Acesso em: 13 abr. 2026.
+> Vite Docs. Disponível em: <https://vite.dev/guide/>. Acesso em: 13 abr. 2026.
 
 > O que é Tailwind CSS. Disponível em: <https://tailwindcss.com.br/guia-tailwind/o-que-e-tailwind-css>. Acesso em: 13 abr. 2026. 
 
@@ -112,3 +114,4 @@ Responsável pelas regras de negócio e processamento da aplicação.
 |--------|--------|-----------|-----------|
 | 10/04/2026 | 1.0 | Criação do documento de arquitetura | [Caio Santos](https://github.com/caiobsantos) | 
 | 13/04/2026 | 1.1 | Adicionando tecnologias a serem utilizadas no frontend | [João Vitor](https://github.com/Joa0V) | 
+| 14/04/2026 | 1.2 | Adicionando estrutura de pastas | [Pedro Cabeceira](https://github.com/pkbceira03) | 
