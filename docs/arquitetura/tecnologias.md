@@ -6,7 +6,7 @@
 
 #### As Camadas (Feature-Sliced Design)
 
-A arquitetura é dividida em camadas, organizadas da mais externa (acoplada ao projeto) para a mais interna (genérica e reutilizável). A regra fundamental é que uma camada superior pode importar recursos de uma inferior, mas nunca o contrário.
+A arquitetura é dividida em camadas, organizadas da mais externa (acoplada ao projeto) para a mais interna (genérica e reutilizável), sem deixar de levar em conta o domínio de negócio na organização. A regra fundamental é que uma camada superior pode importar recursos de uma inferior, mas nunca o contrário. A seguir estão descritas as camadas a serem utilizadas no frontend:
 
 * **`app/`**: Configurações globais, roteamento base, provedores de contexto e estilos globais da aplicação. É o ponto de inicialização do sistema.
 * **`pages/`**: A composição final de uma tela. As páginas reúnem `widgets` e `features` e lidam com os parâmetros das rotas, mantendo-se o mais limpas possível de lógicas complexas.
@@ -15,9 +15,15 @@ A arquitetura é dividida em camadas, organizadas da mais externa (acoplada ao p
 * **`entities/`**: O conceito central dos dados de negócio (ex: Usuário, Produto, Cliente). Contém as tipagens, as interfaces e o gerenciamento do estado global desses dados.
 * **`shared/`**: Código puramente técnico e desconectado das regras de negócio. Inclui componentes visuais genéricos (botões, inputs formatados) e configurações base de infraestrutura (como o cliente HTTP para as chamadas REST).
 
+Com excessão de `app/` e `shared/`, todas as camadas podem ser divididas em subcamadas de domínio (slices), seguindo o princípio de tornar o projeto mais compreensível e estável diante de mudanças nos requisitos de negócio. As camadas `app/` e `shared/` e as subcamadas de domínio (slices) consistem de segmentos, que agrupam código de acordo com seu propósito (componentes de interface, comunicação com o backend, etc.). A seguir é apresentado o diagrama da arquitetura adotada:
+
+![Camadas](../assets/arquitetura/diagrama-arquitetura-frontend.png)
+
 ---
 
 #### Estrutura de Pastas
+
+A seguir está um exemplo do uso do Feature-Sliced Design na implementação de uma página de login:
 
 ```
 
@@ -102,6 +108,8 @@ Responsável pelas regras de negócio e processamento da aplicação.
 
 >C4 MODEL. Container Diagram. Disponível em: <https://c4model.com/diagrams/container>. Acesso em: 10 abr. 2026.
 
+> Feature-Sliced Design. Overview. Disponível em: <https://feature-sliced.design/docs/get-started/overview>. Acesso em: 17 abr. 2026.
+
 > React. Disponível em: <https://react.dev>. Acesso em: 13 abr. 2026.
 
 > Vite Docs. Disponível em: <https://vite.dev/guide/>. Acesso em: 13 abr. 2026.
@@ -114,4 +122,5 @@ Responsável pelas regras de negócio e processamento da aplicação.
 |--------|--------|-----------|-----------|
 | 10/04/2026 | 1.0 | Criação do documento de arquitetura | [Caio Santos](https://github.com/caiobsantos) | 
 | 13/04/2026 | 1.1 | Adicionando tecnologias a serem utilizadas no frontend | [João Vitor](https://github.com/Joa0V) | 
-| 14/04/2026 | 1.2 | Adicionando estrutura de pastas | [Pedro Cabeceira](https://github.com/pkbceira03) | 
+| 14/04/2026 | 1.2 | Adicionando estrutura de pastas frontend | [Pedro Cabeceira](https://github.com/pkbceira03) |
+| 17/04/2026 | 1.3 | Adicionando diagrama arquitetural frontend | [João Vitor](https://github.com/Joa0V) | 
