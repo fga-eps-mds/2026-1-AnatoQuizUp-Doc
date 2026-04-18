@@ -23,36 +23,71 @@ Com excessão de `app/` e `shared/`, todas as camadas podem ser divididas em sub
 
 #### Estrutura de Pastas
 
-A seguir está um exemplo do uso do Feature-Sliced Design na implementação de uma página de login:
+##### Frontend
 
-```
+A seguir está um exemplo do uso do Feature-Sliced Design na implementação do frontend:
 
+```text
 src/
 ├── app/
-│   ├── styles/global.css      
-│   └── App.tsx                
 ├── pages/
-│   └── login/
-│       └── ui/LoginPage.tsx   
 ├── widgets/
-│   └── header/
-│       └── ui/Header.tsx      
 ├── features/
-│   └── auth-by-username/
-│       ├── ui/LoginForm.tsx   
-│       └── api/loginApi.ts    
 ├── entities/
-│   └── user/
-│       ├── model/userStore.ts 
-│       └── types/user.ts      
 └── shared/
-    ├── ui/
-    │   ├── Button.tsx         
-    │   └── Input.tsx          
-    └── api/
-        └── httpClient.ts
-
 ```
+
+- **`app/`**: concentra a inicialização da aplicação, configurações globais, provedores, estilos e definição base de rotas.
+- **`pages/`**: representa as páginas finais da aplicação, compondo `widgets` e `features` conforme a navegação do usuário.
+- **`widgets/`**: reúne blocos mais complexos de interface, formados por múltiplos componentes e comportamentos.
+- **`features/`**: implementa funcionalidades orientadas ao usuário, como autenticação, envio de formulários e fluxos de interação.
+- **`entities/`**: organiza os modelos centrais do domínio, incluindo tipagens, estado e regras relacionadas às entidades do sistema.
+- **`shared/`**: contém recursos reutilizáveis e desacoplados do domínio, como componentes genéricos, utilitários e infraestrutura técnica.
+
+##### Backend
+
+A API backend adota uma estrutura modular para separar configuração, domínio, utilitários compartilhados e apoio à manutenção do projeto:
+
+```text
+anatoquizup-api/
+├── .github/
+│   ├── ISSUE_TEMPLATE/
+│   └── workflows/
+├── prisma/
+│   └── migrations/
+├── src/
+│   ├── config/
+│   ├── modules/
+│   │   └── domain/
+│   │       ├── dto/
+│   │       └── __tests__/
+│   └── shared/
+│       ├── constants/
+│       ├── errors/
+│       ├── middlewares/
+│       ├── types/
+│       └── utils/
+└── tests/
+```
+
+- **`.github/`**: armazena arquivos de automação e apoio ao fluxo de colaboração do repositório.
+- **`.github/ISSUE_TEMPLATE/`**: define modelos padronizados para abertura de issues.
+- **`.github/workflows/`**: concentra fluxos de integração contínua e automações do GitHub Actions.
+- **`prisma/`**: reúne os artefatos de persistência e versionamento do banco de dados.
+- **`prisma/migrations/`**: guarda o histórico de migrations aplicadas ao esquema do banco.
+- **`src/`**: contém o código-fonte principal da API.
+- **`src/config/`**: centraliza configurações da aplicação, como variáveis de ambiente, integração de serviços e parâmetros globais.
+- **`src/modules/`**: organiza as funcionalidades da API por módulo de negócio.
+- **`src/modules/domain/`**: representa um módulo funcional da aplicação com rotas, controller, service, repository e schemas relacionados.
+- **`src/modules/domain/dto/`**: concentra os tipos e contratos de entrada e saída usados pelo módulo.
+- **`src/modules/domain/__tests__/`**: reserva os testes automatizados específicos do módulo.
+- **`src/shared/`**: agrupa recursos compartilhados entre diferentes módulos da aplicação.
+- **`src/shared/constants/`**: define constantes reutilizadas em diferentes partes do backend.
+- **`src/shared/errors/`**: implementa classes e códigos de erro padronizados para tratamento de exceções.
+- **`src/shared/middlewares/`**: reúne middlewares reutilizáveis, como autenticação e autorização.
+- **`src/shared/types/`**: centraliza tipagens comuns utilizadas em múltiplos módulos.
+- **`src/shared/utils/`**: contém funções utilitárias e helpers compartilhados.
+- **`tests/`**: concentra a estrutura de testes em nível de aplicação.
 
 ## Visão Geral
 
@@ -124,3 +159,4 @@ Responsável pelas regras de negócio e processamento da aplicação.
 | 13/04/2026 | 1.1 | Adicionando tecnologias a serem utilizadas no frontend | [João Vitor](https://github.com/Joa0V) | 
 | 14/04/2026 | 1.2 | Adicionando estrutura de pastas frontend | [Pedro Cabeceira](https://github.com/pkbceira03) |
 | 17/04/2026 | 1.3 | Adicionando diagrama arquitetural frontend | [João Vitor](https://github.com/Joa0V) | 
+| 18/04/2026 | 1.4 | Adicionando estrutura de pastas backend | [Bruno Ricardo](https://github.com/EhOBruno) |
