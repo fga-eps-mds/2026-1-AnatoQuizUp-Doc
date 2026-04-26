@@ -19,6 +19,8 @@ nav:
     - Visão Geral: arquitetura/visao_geral.md
     - Tecnologias: arquitetura/tecnologias.md
     - Decisões Arquiteturais: arquitetura/decisoes.md
+    - Banco de Dados:
+      - Versão 1: arquitetura/banco-de-dados/v1.md
   - Protótipos: prototipo/figma.md
   - Projeto e Processo:
     - Roadmap e Releases: processo/roadmap.md
