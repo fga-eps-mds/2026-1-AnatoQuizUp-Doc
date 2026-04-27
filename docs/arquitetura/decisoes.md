@@ -19,6 +19,27 @@ Com excessão de `app/` e `shared/`, todas as camadas podem ser divididas em sub
 
 ![Camadas](../assets/arquitetura/diagrama-arquitetura-frontend.png)
 
+### Backend
+
+#### Diagrama de Componentes
+
+A arquitetura do backend segue uma organização em camadas para separar as responsabilidades do processamento das requisições, da regra de negócio, da persistência de dados e da comunicação com serviços externos. O fluxo de dependência ocorre de cima para baixo: uma camada superior pode chamar a camada imediatamente inferior para delegar uma responsabilidade, mas a camada inferior não deve depender da camada superior. Assim, por exemplo, um `Controller` pode acionar um `Service`, mas um `Service` não deve conhecer nem chamar um `Controller`.
+
+As camadas do backend são organizadas da seguinte forma:
+
+* **`Routes`**: definem os endpoints da API e direcionam cada requisição HTTP para os middlewares e controllers correspondentes.
+* **`Middlewares`**: executam validações e controles transversais antes da regra principal da rota, como autenticação, autorização, tratamento de erros e validação de dados.
+* **`Controllers`**: recebem a requisição já encaminhada pela rota, extraem os dados necessários, chamam os services e montam a resposta HTTP enviada ao cliente.
+* **`Services`**: concentram as regras de negócio da aplicação. Eles coordenam as operações do domínio e decidem quando acessar dados persistidos ou serviços externos.
+* **`Repositories`**: isolam o acesso ao banco de dados, permitindo que os services solicitem consultas e gravações sem conhecer detalhes da implementação do PostgreSQL.
+* **`AI`**: centraliza a comunicação com o serviço externo de inteligência artificial, encapsulando chamadas HTTP, montagem de payloads e interpretação das respostas recebidas.
+* **`PostgreSQL`**: representa o banco de dados relacional utilizado para persistir os dados principais da aplicação.
+* **`Repositório AI`**: representa o serviço externo de inteligência artificial consumido pelo backend via HTTP.
+
+Essa divisão reduz o acoplamento entre as camadas, facilita a manutenção dos módulos e permite testar cada responsabilidade de forma mais isolada.
+
+![Diagrama de componentes do backend](../assets/arquitetura/diagrama-de-componentes-backend.png)
+
 ---
 
 #### Estrutura de Pastas
@@ -101,3 +122,4 @@ anatoquizup-api/
 | 17/04/2026 | 1.3 | Adicionando diagrama arquitetural frontend | [João Vitor](https://github.com/Joa0V) | 
 | 18/04/2026 | 1.4 | Adicionando estrutura de pastas backend | [Bruno Ricardo](https://github.com/EhOBruno) |
 | 26/04/2026 | 1.5 | Reorganização da seção de arquitetura, concentrando arquiteturais e estruturas adotadas em uma página só| [Ana Catarina](https://github.com/an4catarina) |
+| 27/04/2026 | 1.6 | Adicionando arquitetura de componentes do backend | [Bruno Ricardo](https://github.com/EhOBruno) |
