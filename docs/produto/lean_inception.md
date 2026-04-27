@@ -23,6 +23,21 @@ Também ficou definido que a primeira versão do produto deveria focar em entreg
 
 De forma geral, a Lean Inception ajudou a transformar o planejamento do projeto em algo mais concreto. Ela deu suporte para organizar a visão do produto, entender melhor os usuários, revisar prioridades e construir uma sequência de entregas mais coerente com os objetivos discutidos com o cliente.
 
+## Acompanhamento das Etapas
+
+| Etapa | Feito | Validado |
+|-------|-------|----------|
+| Visão do Produto | ✅ | ✅ |
+| É - Não é, Faz - Não faz | ✅ | ✅ |
+| Objetivos do Negócio | ✅ | ✅ |
+| Personas | ✅ | ✅ |
+| Jornada do Usuário | ✅ | ✅ |
+| Brainstorming de Funcionalidades | ✅ | ✅ |
+| Revisão Técnica, de Negócio e UX | ✅ | ✅ |
+| Sequenciador | ✅ | ✅ |
+| Estimativa de tempo | ✅ | ✅ |
+| Canvas MVP | ✅ | ❌ |
+
 ## Lean Inception Completa
 
 O material completo da Lean Inception, com todos os quadros produzidos pela equipe, está no Figma abaixo.
@@ -38,3 +53,4 @@ Se preferir abrir direto no Figma:
 | Data   | Versão | Descrição | Autor(es) |
 |--------|--------|-----------|-----------|
 | 26/04/2026 | 1.0 | Criação da página da Lean Inception com contextualização do processo e link para o material completo no Figma | [Ana Catarina](https://github.com/an4catarina) |
+| 27/04/2026 | 1.1 | Inclusão da tabela de acompanhamento das etapas da Lean Inception | Equipe AnatoQuizUp |
