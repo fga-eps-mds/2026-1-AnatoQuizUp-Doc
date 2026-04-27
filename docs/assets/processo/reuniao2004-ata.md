@@ -1,4 +1,4 @@
-# Ata de Reunião
+# Ata de Reunião - 20/04/2026
 
 ## Identificação
 - **Título da reunião:** Validação do sequenciador e dos critérios de aceitação com os PO's
