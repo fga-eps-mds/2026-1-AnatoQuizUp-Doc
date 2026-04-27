@@ -22,6 +22,11 @@ nav:
     - Visão Geral: arquitetura/visao_geral.md
     - Tecnologias: arquitetura/tecnologias.md
     - Decisões Arquiteturais: arquitetura/decisoes.md
+    - Visões Arquiteturais:
+      - Visão Lógica: arquitetura/visoes/logica.md
+      - Visão de Processos: arquitetura/visoes/processos.md
+      - Visão de Implementação: arquitetura/visoes/implementacao.md
+      - Visão de Implantação: arquitetura/visoes/implantacao.md
     - Banco de Dados:
       - Versão 1: arquitetura/banco-de-dados/v1.md
   - Protótipos: prototipo/figma.md
