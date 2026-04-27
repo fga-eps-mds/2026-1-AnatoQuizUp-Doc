@@ -14,7 +14,10 @@ nav:
     - Lean Inception: produto/lean_inception.md
   - Backlog:
     - Visão Geral: backlog/overview.md
-    - Épicos e Histórias: backlog/historias.md
+    - Histórias e Tarefas:
+      - Release Major 1: backlog/release-major-1.md
+      - Release Major 2: backlog/release-major-2.md
+      - Release Major 3: backlog/release-major-3.md
   - Arquitetura:
     - Visão Geral: arquitetura/visao_geral.md
     - Tecnologias: arquitetura/tecnologias.md
@@ -36,3 +39,12 @@ nav:
     - Código de Conduta: contribuicao/codigo_conduta.md
     - Política de Branchs: contribuicao/politica_branchs.md
     - Política de Commits: contribuicao/politica_commits.md
+
+markdown_extensions:
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
