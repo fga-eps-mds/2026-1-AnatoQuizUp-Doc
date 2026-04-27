@@ -33,6 +33,9 @@ nav:
   - Projeto e Processo:
     - Roadmap e Releases: processo/roadmap.md
     - Sprints: processo/sprints.md
+    - EVM Sprint 1: processo/evm-sprint1.md
+    - Quadro de Conhecimento: processo/quadro-conhecimento.md
+    - Matriz de Riscos: processo/riscos.md
     - Reuniões: processo/reunioes.md
     - Atas: processo/atas.md
     - Metodologia e DoD: processo/metodologia.md
