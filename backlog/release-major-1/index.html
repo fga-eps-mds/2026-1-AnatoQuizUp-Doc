@@ -1,0 +1,3543 @@
+
+<!doctype html>
+<html lang="pt" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="AnatoQuizUp é um jogo de perguntas e respostas sobre anatomia humana, desenvolvido para ajudar estudantes de medicina a aprenderem de forma divertida e interativa.">
+      
+      
+      
+      
+        <link rel="prev" href="../overview/">
+      
+      
+        <link rel="next" href="../release-major-2/">
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.45">
+    
+    
+      
+        <title>Release Major 1 - AnatoQuizUp</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.0253249f.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#historias-e-tarefas-release-major-1" class="md-skip">
+          Pular para conteúdo
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Cabeçalho">
+    <a href="../.." title="AnatoQuizUp" class="md-header__button md-logo" aria-label="AnatoQuizUp" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            AnatoQuizUp
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Release Major 1
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Buscar" placeholder="Buscar" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Pesquisar">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Limpar" aria-label="Limpar" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Inicializando busca
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Abas" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+    
+  
+  Início
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../produto/visao/" class="md-tabs__link">
+          
+  
+  Produto
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../overview/" class="md-tabs__link">
+          
+  
+  Backlog
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../arquitetura/visao_geral/" class="md-tabs__link">
+          
+  
+  Arquitetura
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../prototipo/figma/" class="md-tabs__link">
+        
+  
+    
+  
+  Protótipos
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../processo/roadmap/" class="md-tabs__link">
+          
+  
+  Projeto e Processo
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../qualidade/qualidade/" class="md-tabs__link">
+          
+  
+  Qualidade e Métricas
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../decisoes/decisoes/" class="md-tabs__link">
+          
+  
+  Decisões
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../contribuicao/codigo_conduta/" class="md-tabs__link">
+          
+  
+  Contribuição
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navegação" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="AnatoQuizUp" class="md-nav__button md-logo" aria-label="AnatoQuizUp" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    AnatoQuizUp
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Início
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Produto
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Produto
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../produto/visao/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Visão do Produto
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../produto/lean_inception/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Lean Inception
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+      
+        
+        
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Backlog
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Backlog
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../overview/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Visão Geral
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_3_2" id="__nav_3_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Histórias e Tarefas
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3_2">
+            <span class="md-nav__icon md-icon"></span>
+            Histórias e Tarefas
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Release Major 1
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Release Major 1
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Índice">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Índice
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#visao-geral" class="md-nav__link">
+    <span class="md-ellipsis">
+      Visão geral
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#perfis-de-usuario" class="md-nav__link">
+    <span class="md-ellipsis">
+      Perfis de usuário
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Perfis de usuário">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#aluno" class="md-nav__link">
+    <span class="md-ellipsis">
+      Aluno
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#professor" class="md-nav__link">
+    <span class="md-ellipsis">
+      Professor
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#administrador" class="md-nav__link">
+    <span class="md-ellipsis">
+      Administrador
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#escopo-da-release" class="md-nav__link">
+    <span class="md-ellipsis">
+      Escopo da release
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Escopo da release">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#incluido" class="md-nav__link">
+    <span class="md-ellipsis">
+      Incluído
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fora-de-escopo" class="md-nav__link">
+    <span class="md-ellipsis">
+      Fora de escopo
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dependencias" class="md-nav__link">
+    <span class="md-ellipsis">
+      Dependências
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#resumo-de-pontos" class="md-nav__link">
+    <span class="md-ellipsis">
+      Resumo de pontos
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Resumo de pontos">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#por-categoria" class="md-nav__link">
+    <span class="md-ellipsis">
+      Por categoria
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#por-repositorio" class="md-nav__link">
+    <span class="md-ellipsis">
+      Por repositório
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#product-backlog" class="md-nav__link">
+    <span class="md-ellipsis">
+      Product Backlog
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Product Backlog">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#us-01-cadastro-de-aluno" class="md-nav__link">
+    <span class="md-ellipsis">
+      US 01 - Cadastro de Aluno
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="US 01 - Cadastro de Aluno">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#criterios-de-aceitacao" class="md-nav__link">
+    <span class="md-ellipsis">
+      Critérios de aceitação
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#us-02-login-de-aluno" class="md-nav__link">
+    <span class="md-ellipsis">
+      US 02 - Login de Aluno
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="US 02 - Login de Aluno">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#criterios-de-aceitacao_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Critérios de aceitação
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#us-03-cadastro-de-professor" class="md-nav__link">
+    <span class="md-ellipsis">
+      US 03 - Cadastro de Professor
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="US 03 - Cadastro de Professor">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#criterios-de-aceitacao_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Critérios de aceitação
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#us-04-login-de-professor" class="md-nav__link">
+    <span class="md-ellipsis">
+      US 04 - Login de Professor
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="US 04 - Login de Professor">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#criterios-de-aceitacao_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      Critérios de aceitação
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#us-05-logout" class="md-nav__link">
+    <span class="md-ellipsis">
+      US 05 - Logout
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="US 05 - Logout">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#criterios-de-aceitacao_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      Critérios de aceitação
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#us-06-recuperacao-de-senha" class="md-nav__link">
+    <span class="md-ellipsis">
+      US 06 - Recuperação de Senha
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="US 06 - Recuperação de Senha">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#criterios-de-aceitacao_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      Critérios de aceitação
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#us-07-visao-de-aluno-para-o-professor" class="md-nav__link">
+    <span class="md-ellipsis">
+      US 07 - Visão de Aluno para o Professor
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="US 07 - Visão de Aluno para o Professor">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#criterios-de-aceitacao_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      Critérios de aceitação
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#us-08-painel-de-administracao-de-usuarios" class="md-nav__link">
+    <span class="md-ellipsis">
+      US 08 - Painel de Administração de Usuários
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="US 08 - Painel de Administração de Usuários">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#criterios-de-aceitacao_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      Critérios de aceitação
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#project-backlog" class="md-nav__link">
+    <span class="md-ellipsis">
+      Project Backlog
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Project Backlog">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#task-01-modelagem-do-banco-de-dados" class="md-nav__link">
+    <span class="md-ellipsis">
+      TASK 01 - Modelagem do banco de dados
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="TASK 01 - Modelagem do banco de dados">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#criterios-de-conclusao" class="md-nav__link">
+    <span class="md-ellipsis">
+      Critérios de conclusão
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#task-02-seed-de-administrador" class="md-nav__link">
+    <span class="md-ellipsis">
+      TASK 02 - Seed de administrador
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="TASK 02 - Seed de administrador">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#criterios-de-conclusao_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Critérios de conclusão
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#task-03-setup-do-modulo-de-autenticacao-no-backend" class="md-nav__link">
+    <span class="md-ellipsis">
+      TASK 03 - Setup do módulo de autenticação no backend
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="TASK 03 - Setup do módulo de autenticação no backend">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#criterios-de-conclusao_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Critérios de conclusão
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#task-04-configuracao-jwt" class="md-nav__link">
+    <span class="md-ellipsis">
+      TASK 04 - Configuração JWT
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="TASK 04 - Configuração JWT">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#criterios-de-conclusao_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      Critérios de conclusão
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#task-05-setup-da-estrutura-fsd-no-frontend" class="md-nav__link">
+    <span class="md-ellipsis">
+      TASK 05 - Setup da estrutura FSD no frontend
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="TASK 05 - Setup da estrutura FSD no frontend">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#criterios-de-conclusao_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      Critérios de conclusão
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#task-06-spike-pesquisa-de-lib-de-envio-de-email" class="md-nav__link">
+    <span class="md-ellipsis">
+      TASK 06 - Spike: pesquisa de lib de envio de email
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="TASK 06 - Spike: pesquisa de lib de envio de email">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#criterios-de-conclusao_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      Critérios de conclusão
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#task-09-configuracao-do-servico-de-email" class="md-nav__link">
+    <span class="md-ellipsis">
+      TASK 09 - Configuração do serviço de email
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="TASK 09 - Configuração do serviço de email">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#criterios-de-conclusao_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      Critérios de conclusão
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#task-10-middleware-de-autenticacao" class="md-nav__link">
+    <span class="md-ellipsis">
+      TASK 10 - Middleware de autenticação
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="TASK 10 - Middleware de autenticação">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#criterios-de-conclusao_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      Critérios de conclusão
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#task-11-middleware-de-autorizacao-por-papel" class="md-nav__link">
+    <span class="md-ellipsis">
+      TASK 11 - Middleware de autorização por papel
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="TASK 11 - Middleware de autorização por papel">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#criterios-de-conclusao_8" class="md-nav__link">
+    <span class="md-ellipsis">
+      Critérios de conclusão
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#task-12-renovacao-automatica-de-sessao" class="md-nav__link">
+    <span class="md-ellipsis">
+      TASK 12 - Renovação automática de sessão
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="TASK 12 - Renovação automática de sessão">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#criterios-de-conclusao_9" class="md-nav__link">
+    <span class="md-ellipsis">
+      Critérios de conclusão
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#task-13-rotas-protegidas-no-frontend" class="md-nav__link">
+    <span class="md-ellipsis">
+      TASK 13 - Rotas protegidas no frontend
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="TASK 13 - Rotas protegidas no frontend">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#criterios-de-conclusao_10" class="md-nav__link">
+    <span class="md-ellipsis">
+      Critérios de conclusão
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#task-14-widget-de-navegacao" class="md-nav__link">
+    <span class="md-ellipsis">
+      TASK 14 - Widget de navegação
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="TASK 14 - Widget de navegação">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#criterios-de-conclusao_11" class="md-nav__link">
+    <span class="md-ellipsis">
+      Critérios de conclusão
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#task-15-pagina-inicio" class="md-nav__link">
+    <span class="md-ellipsis">
+      TASK 15 - Página Início
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="TASK 15 - Página Início">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#criterios-de-conclusao_12" class="md-nav__link">
+    <span class="md-ellipsis">
+      Critérios de conclusão
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#task-16-tela-de-erro-404-e-fallback" class="md-nav__link">
+    <span class="md-ellipsis">
+      TASK 16 - Tela de erro 404 e fallback
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="TASK 16 - Tela de erro 404 e fallback">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#criterios-de-conclusao_13" class="md-nav__link">
+    <span class="md-ellipsis">
+      Critérios de conclusão
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#historico-de-versao" class="md-nav__link">
+    <span class="md-ellipsis">
+      Histórico de Versão
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../release-major-2/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Release Major 2
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../release-major-3/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Release Major 3
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Arquitetura
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            Arquitetura
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../arquitetura/visao_geral/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Visão Geral
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../arquitetura/tecnologias/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Tecnologias
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../arquitetura/decisoes/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Decisões Arquiteturais
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_4" id="__nav_4_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Visões Arquiteturais
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_4">
+            <span class="md-nav__icon md-icon"></span>
+            Visões Arquiteturais
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../arquitetura/visoes/logica/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Visão Lógica
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../arquitetura/visoes/processos/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Visão de Processos
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../arquitetura/visoes/implementacao/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Visão de Implementação
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../arquitetura/visoes/implantacao/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Visão de Implantação
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_5" id="__nav_4_5_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Banco de Dados
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_5">
+            <span class="md-nav__icon md-icon"></span>
+            Banco de Dados
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../arquitetura/banco-de-dados/v1/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Versão 1
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../prototipo/figma/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Protótipos
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Projeto e Processo
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            Projeto e Processo
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../processo/roadmap/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Roadmap e Releases
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../processo/datas-importantes/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Datas Importantes
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../processo/comunicacao/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Comunicação
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../processo/sprints/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Sprints
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../processo/evm-sprint1/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    EVM Sprint 1
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../processo/quadro-conhecimento/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Quadro de Conhecimento
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../processo/riscos/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Matriz de Riscos
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../processo/reunioes/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Reuniões
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../processo/atas/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Atas
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../processo/metodologia/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Metodologia e DoD
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Qualidade e Métricas
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            Qualidade e Métricas
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../qualidade/qualidade/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Métricas e Dashboard
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8" >
+        
+          
+          <label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Decisões
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8">
+            <span class="md-nav__icon md-icon"></span>
+            Decisões
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../decisoes/decisoes/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Decisões do Projeto
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_9" >
+        
+          
+          <label class="md-nav__link" for="__nav_9" id="__nav_9_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Contribuição
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_9_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_9">
+            <span class="md-nav__icon md-icon"></span>
+            Contribuição
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../contribuicao/codigo_conduta/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Código de Conduta
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../contribuicao/politica_branchs/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Política de Branchs
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../contribuicao/politica_commits/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Política de Commits
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Índice">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Índice
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#visao-geral" class="md-nav__link">
+    <span class="md-ellipsis">
+      Visão geral
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#perfis-de-usuario" class="md-nav__link">
+    <span class="md-ellipsis">
+      Perfis de usuário
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Perfis de usuário">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#aluno" class="md-nav__link">
+    <span class="md-ellipsis">
+      Aluno
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#professor" class="md-nav__link">
+    <span class="md-ellipsis">
+      Professor
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#administrador" class="md-nav__link">
+    <span class="md-ellipsis">
+      Administrador
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#escopo-da-release" class="md-nav__link">
+    <span class="md-ellipsis">
+      Escopo da release
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Escopo da release">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#incluido" class="md-nav__link">
+    <span class="md-ellipsis">
+      Incluído
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fora-de-escopo" class="md-nav__link">
+    <span class="md-ellipsis">
+      Fora de escopo
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dependencias" class="md-nav__link">
+    <span class="md-ellipsis">
+      Dependências
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#resumo-de-pontos" class="md-nav__link">
+    <span class="md-ellipsis">
+      Resumo de pontos
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Resumo de pontos">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#por-categoria" class="md-nav__link">
+    <span class="md-ellipsis">
+      Por categoria
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#por-repositorio" class="md-nav__link">
+    <span class="md-ellipsis">
+      Por repositório
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#product-backlog" class="md-nav__link">
+    <span class="md-ellipsis">
+      Product Backlog
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Product Backlog">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#us-01-cadastro-de-aluno" class="md-nav__link">
+    <span class="md-ellipsis">
+      US 01 - Cadastro de Aluno
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="US 01 - Cadastro de Aluno">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#criterios-de-aceitacao" class="md-nav__link">
+    <span class="md-ellipsis">
+      Critérios de aceitação
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#us-02-login-de-aluno" class="md-nav__link">
+    <span class="md-ellipsis">
+      US 02 - Login de Aluno
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="US 02 - Login de Aluno">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#criterios-de-aceitacao_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Critérios de aceitação
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#us-03-cadastro-de-professor" class="md-nav__link">
+    <span class="md-ellipsis">
+      US 03 - Cadastro de Professor
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="US 03 - Cadastro de Professor">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#criterios-de-aceitacao_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Critérios de aceitação
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#us-04-login-de-professor" class="md-nav__link">
+    <span class="md-ellipsis">
+      US 04 - Login de Professor
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="US 04 - Login de Professor">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#criterios-de-aceitacao_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      Critérios de aceitação
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#us-05-logout" class="md-nav__link">
+    <span class="md-ellipsis">
+      US 05 - Logout
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="US 05 - Logout">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#criterios-de-aceitacao_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      Critérios de aceitação
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#us-06-recuperacao-de-senha" class="md-nav__link">
+    <span class="md-ellipsis">
+      US 06 - Recuperação de Senha
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="US 06 - Recuperação de Senha">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#criterios-de-aceitacao_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      Critérios de aceitação
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#us-07-visao-de-aluno-para-o-professor" class="md-nav__link">
+    <span class="md-ellipsis">
+      US 07 - Visão de Aluno para o Professor
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="US 07 - Visão de Aluno para o Professor">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#criterios-de-aceitacao_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      Critérios de aceitação
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#us-08-painel-de-administracao-de-usuarios" class="md-nav__link">
+    <span class="md-ellipsis">
+      US 08 - Painel de Administração de Usuários
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="US 08 - Painel de Administração de Usuários">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#criterios-de-aceitacao_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      Critérios de aceitação
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#project-backlog" class="md-nav__link">
+    <span class="md-ellipsis">
+      Project Backlog
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Project Backlog">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#task-01-modelagem-do-banco-de-dados" class="md-nav__link">
+    <span class="md-ellipsis">
+      TASK 01 - Modelagem do banco de dados
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="TASK 01 - Modelagem do banco de dados">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#criterios-de-conclusao" class="md-nav__link">
+    <span class="md-ellipsis">
+      Critérios de conclusão
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#task-02-seed-de-administrador" class="md-nav__link">
+    <span class="md-ellipsis">
+      TASK 02 - Seed de administrador
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="TASK 02 - Seed de administrador">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#criterios-de-conclusao_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Critérios de conclusão
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#task-03-setup-do-modulo-de-autenticacao-no-backend" class="md-nav__link">
+    <span class="md-ellipsis">
+      TASK 03 - Setup do módulo de autenticação no backend
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="TASK 03 - Setup do módulo de autenticação no backend">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#criterios-de-conclusao_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Critérios de conclusão
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#task-04-configuracao-jwt" class="md-nav__link">
+    <span class="md-ellipsis">
+      TASK 04 - Configuração JWT
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="TASK 04 - Configuração JWT">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#criterios-de-conclusao_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      Critérios de conclusão
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#task-05-setup-da-estrutura-fsd-no-frontend" class="md-nav__link">
+    <span class="md-ellipsis">
+      TASK 05 - Setup da estrutura FSD no frontend
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="TASK 05 - Setup da estrutura FSD no frontend">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#criterios-de-conclusao_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      Critérios de conclusão
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#task-06-spike-pesquisa-de-lib-de-envio-de-email" class="md-nav__link">
+    <span class="md-ellipsis">
+      TASK 06 - Spike: pesquisa de lib de envio de email
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="TASK 06 - Spike: pesquisa de lib de envio de email">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#criterios-de-conclusao_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      Critérios de conclusão
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#task-09-configuracao-do-servico-de-email" class="md-nav__link">
+    <span class="md-ellipsis">
+      TASK 09 - Configuração do serviço de email
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="TASK 09 - Configuração do serviço de email">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#criterios-de-conclusao_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      Critérios de conclusão
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#task-10-middleware-de-autenticacao" class="md-nav__link">
+    <span class="md-ellipsis">
+      TASK 10 - Middleware de autenticação
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="TASK 10 - Middleware de autenticação">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#criterios-de-conclusao_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      Critérios de conclusão
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#task-11-middleware-de-autorizacao-por-papel" class="md-nav__link">
+    <span class="md-ellipsis">
+      TASK 11 - Middleware de autorização por papel
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="TASK 11 - Middleware de autorização por papel">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#criterios-de-conclusao_8" class="md-nav__link">
+    <span class="md-ellipsis">
+      Critérios de conclusão
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#task-12-renovacao-automatica-de-sessao" class="md-nav__link">
+    <span class="md-ellipsis">
+      TASK 12 - Renovação automática de sessão
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="TASK 12 - Renovação automática de sessão">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#criterios-de-conclusao_9" class="md-nav__link">
+    <span class="md-ellipsis">
+      Critérios de conclusão
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#task-13-rotas-protegidas-no-frontend" class="md-nav__link">
+    <span class="md-ellipsis">
+      TASK 13 - Rotas protegidas no frontend
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="TASK 13 - Rotas protegidas no frontend">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#criterios-de-conclusao_10" class="md-nav__link">
+    <span class="md-ellipsis">
+      Critérios de conclusão
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#task-14-widget-de-navegacao" class="md-nav__link">
+    <span class="md-ellipsis">
+      TASK 14 - Widget de navegação
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="TASK 14 - Widget de navegação">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#criterios-de-conclusao_11" class="md-nav__link">
+    <span class="md-ellipsis">
+      Critérios de conclusão
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#task-15-pagina-inicio" class="md-nav__link">
+    <span class="md-ellipsis">
+      TASK 15 - Página Início
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="TASK 15 - Página Início">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#criterios-de-conclusao_12" class="md-nav__link">
+    <span class="md-ellipsis">
+      Critérios de conclusão
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#task-16-tela-de-erro-404-e-fallback" class="md-nav__link">
+    <span class="md-ellipsis">
+      TASK 16 - Tela de erro 404 e fallback
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="TASK 16 - Tela de erro 404 e fallback">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#criterios-de-conclusao_13" class="md-nav__link">
+    <span class="md-ellipsis">
+      Critérios de conclusão
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#historico-de-versao" class="md-nav__link">
+    <span class="md-ellipsis">
+      Histórico de Versão
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<h1 id="historias-e-tarefas-release-major-1">Histórias e Tarefas - Release Major 1</h1>
+<p>Este documento contém as histórias de usuário e tarefas técnicas da <strong>Release Major 1</strong> do AnatoQuizUp, com estimativas, repositórios, dependências e critérios de aceitação ou conclusão.</p>
+<h2 id="visao-geral">Visão geral</h2>
+<p>A Release Major 1 entrega a base de <strong>cadastro de usuários</strong> e <strong>controle de acesso</strong> do AnatoQuizUp. Esta release não inclui IA, gamificação ou questões; ela estabelece a fundação de autenticação, autorização e gestão de usuários para as próximas entregas do produto.</p>
+<table>
+<thead>
+<tr>
+<th>Aspecto</th>
+<th>Valor</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Período da sprint</td>
+<td>17/04/2026 a 27/04/2026</td>
+</tr>
+<tr>
+<td>Data de entrega</td>
+<td>Segunda-feira, 27/04/2026</td>
+</tr>
+<tr>
+<td>Total de histórias de usuário</td>
+<td>8</td>
+</tr>
+<tr>
+<td>Total de tarefas técnicas</td>
+<td>14</td>
+</tr>
+<tr>
+<td>Desenvolvedores disponíveis</td>
+<td>12</td>
+</tr>
+</tbody>
+</table>
+<h2 id="perfis-de-usuario">Perfis de usuário</h2>
+<h3 id="aluno">Aluno</h3>
+<ul>
+<li>Qualquer pessoa pode se cadastrar, com qualquer email válido.</li>
+<li>Status inicial: <strong>ATIVO</strong>, com acesso imediato após o cadastro.</li>
+<li>Pode marcar a opção <strong>"Não estou matriculado em nenhuma universidade"</strong> para pular os campos acadêmicos.</li>
+</ul>
+<h3 id="professor">Professor</h3>
+<ul>
+<li>Cadastro inclui SIAPE com 7 dígitos numéricos e valor único.</li>
+<li>Status inicial: <strong>PENDENTE</strong>, aguardando aprovação do administrador.</li>
+<li>Após aprovação manual do Administrador, o status muda para <strong>ATIVO</strong>.</li>
+</ul>
+<h3 id="administrador">Administrador</h3>
+<ul>
+<li>Criado via seed no banco de dados, sem tela de cadastro.</li>
+<li>Aprova ou rejeita cadastros de professores.</li>
+<li>Gerencia ativação e desativação de contas.</li>
+</ul>
+<h2 id="escopo-da-release">Escopo da release</h2>
+<h3 id="incluido">Incluído</h3>
+<ul>
+<li>Cadastro e login de aluno.</li>
+<li>Cadastro e login de professor com aprovação administrativa.</li>
+<li>Logout e proteção de rotas.</li>
+<li>Recuperação de senha por email.</li>
+<li>Painel administrativo para gerenciamento de usuários.</li>
+<li>Estrutura inicial de autenticação, autorização, tokens e organização frontend/backend.</li>
+</ul>
+<h3 id="fora-de-escopo">Fora de escopo</h3>
+<ul>
+<li>IA.</li>
+<li>Gamificação.</li>
+<li>Cadastro, geração ou resolução de questões.</li>
+<li>Funcionalidades acadêmicas além dos dados necessários ao cadastro.</li>
+</ul>
+<h2 id="dependencias">Dependências</h2>
+<pre class="mermaid"><code>graph LR
+    T1[TASK 01&lt;br/&gt;Modelagem] --&gt; T2[TASK 02&lt;br/&gt;Seed]
+    T1 --&gt; T4[TASK 04&lt;br/&gt;JWT]
+    T1 --&gt; T3[TASK 03&lt;br/&gt;Auth Module]
+    T4 --&gt; T10[TASK 10&lt;br/&gt;Middleware Auth]
+    T10 --&gt; T11[TASK 11&lt;br/&gt;Middleware Papel]
+    T4 --&gt; T3
+    T6[TASK 06&lt;br/&gt;Spike Email] --&gt; T9[TASK 09&lt;br/&gt;Email Service]
+    T5[TASK 05&lt;br/&gt;FSD] --&gt; T13[TASK 13&lt;br/&gt;Rotas Protegidas]
+    T5 --&gt; T14[TASK 14&lt;br/&gt;Header]
+    T5 --&gt; T16[TASK 16&lt;br/&gt;404]
+    T14 --&gt; T15[TASK 15&lt;br/&gt;Início]
+    T3 --&gt; US01[US 01&lt;br/&gt;Cadastro Aluno]
+    T3 --&gt; US02[US 02&lt;br/&gt;Login Aluno]
+    T3 --&gt; US03[US 03&lt;br/&gt;Cadastro Prof]
+    T3 --&gt; US04[US 04&lt;br/&gt;Login Prof]
+    US02 --&gt; US05[US 05&lt;br/&gt;Logout]
+    US02 --&gt; T12[TASK 12&lt;br/&gt;Refresh Token]
+    T9 --&gt; US06[US 06&lt;br/&gt;Recuperar Senha]
+    US02 --&gt; US07[US 07&lt;br/&gt;Visão Aluno]
+    T10 --&gt; US08[US 08&lt;br/&gt;Painel Admin]
+    T11 --&gt; US08</code></pre>
+<h2 id="resumo-de-pontos">Resumo de pontos</h2>
+<h3 id="por-categoria">Por categoria</h3>
+<table>
+<thead>
+<tr>
+<th>Categoria</th>
+<th>Quantidade</th>
+<th>Pontos</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Histórias de usuário</td>
+<td>8</td>
+<td>42</td>
+</tr>
+<tr>
+<td>Tarefas técnicas</td>
+<td>14</td>
+<td>29</td>
+</tr>
+<tr>
+<td><strong>Total</strong></td>
+<td><strong>22</strong></td>
+<td><strong>71</strong></td>
+</tr>
+</tbody>
+</table>
+<h3 id="por-repositorio">Por repositório</h3>
+<table>
+<thead>
+<tr>
+<th>Repositório</th>
+<th>Pontos</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Backend</td>
+<td>36</td>
+</tr>
+<tr>
+<td>Frontend</td>
+<td>30</td>
+</tr>
+<tr>
+<td>Fullstack</td>
+<td>5</td>
+</tr>
+<tr>
+<td><strong>Total</strong></td>
+<td><strong>71</strong></td>
+</tr>
+</tbody>
+</table>
+<h2 id="product-backlog">Product Backlog</h2>
+<h3 id="us-01-cadastro-de-aluno">US 01 - Cadastro de Aluno</h3>
+<blockquote>
+<p><strong>Como</strong> aluno<br />
+<strong>Quero</strong> me cadastrar na plataforma com meus dados pessoais<br />
+<strong>Para</strong> ter acesso ao sistema de quiz</p>
+<p><strong>Estimativa:</strong> 5 pontos<br />
+<strong>Repo:</strong> Fullstack <br />
+<strong>Epic:</strong> Cadastro de Usuários    </p>
+</blockquote>
+<h4 id="criterios-de-aceitacao">Critérios de aceitação</h4>
+<ul>
+<li>[ ] Ao acessar a página de cadastro, consigo preencher todos os campos obrigatórios de identificação pessoal e perfil acadêmico antes de criar minha conta.</li>
+<li>[ ] Os campos obrigatórios são: nome completo, email, senha, confirmação de senha, data de nascimento, nacionalidade, estado, cidade e escolaridade.</li>
+<li>[ ] Existe a flag <strong>"Não estou matriculado em nenhuma universidade"</strong>. Quando desmarcada, os campos instituição, curso e período aparecem e são obrigatórios. Quando marcada, esses campos somem do formulário.</li>
+<li>[ ] O campo nacionalidade oferece uma lista de opções para seleção.</li>
+<li>[ ] O campo estado oferece uma lista com os 26 estados brasileiros mais o Distrito Federal.</li>
+<li>[ ] O campo escolaridade oferece as opções: Ensino Fundamental, Ensino Médio, Graduação, Pós-graduação, Outro.</li>
+<li>[ ] Ao preencher todos os campos e clicar em <strong>"Cadastrar"</strong>, recebo confirmação visual de sucesso e sou direcionado para a tela de login.</li>
+<li>[ ] Se o email já estiver cadastrado, vejo mensagem de erro indicando isso e a conta não é criada.</li>
+<li>[ ] Se a senha tiver menos de 8 caracteres, vejo mensagem explicando o requisito mínimo.</li>
+<li>[ ] Se a senha e a confirmação forem diferentes, vejo a mensagem <strong>"As senhas não coincidem"</strong>.</li>
+<li>[ ] Nenhum campo obrigatório pode ser deixado em branco. Cada campo não preenchido exibe mensagem de erro individualizada.</li>
+<li>[ ] Na tela de cadastro há um link <strong>"Já tem conta? Faça login"</strong> que me leva para a tela de login.</li>
+</ul>
+<h3 id="us-02-login-de-aluno">US 02 - Login de Aluno</h3>
+<blockquote>
+<p><strong>Como</strong> aluno cadastrado   <br />
+<strong>Quero</strong> fazer login com meu email e senha <br />
+<strong>Para</strong> acessar a plataforma </p>
+<p><strong>Estimativa:</strong> 5 pontos<br />
+<strong>Repo:</strong> Fullstack <br />
+<strong>Epic:</strong> Cadastro de Usuários    </p>
+</blockquote>
+<h4 id="criterios-de-aceitacao_1">Critérios de aceitação</h4>
+<ul>
+<li>[ ] Ao informar email e senha corretos e clicar em <strong>"Entrar"</strong>, sou direcionado para a página inicial e meu nome aparece na tela.</li>
+<li>[ ] Se email ou senha estiverem incorretos, vejo a mensagem <strong>"Email ou senha inválidos"</strong>, sem indicar qual dos dois está errado.</li>
+<li>[ ] Se minha conta estiver desativada, vejo a mensagem <strong>"Conta desativada. Entre em contato com o administrador."</strong></li>
+<li>[ ] Se deixar email ou senha em branco, vejo mensagem indicando que os campos são obrigatórios.</li>
+<li>[ ] Na tela de login há um link <strong>"Não tem conta? Cadastre-se"</strong> que me leva para a tela de cadastro.</li>
+<li>[ ] Na tela de login há um link <strong>"Esqueci minha senha"</strong> que me leva para a recuperação.</li>
+<li>[ ] Na tela de login há um botão <strong>"Entrar como Professor"</strong> que me leva para a tela de login do professor.</li>
+<li>[ ] Na tela de login há um botão <strong>"Entrar como Administrador"</strong> que me leva para a tela de login do administrador.</li>
+</ul>
+<h3 id="us-03-cadastro-de-professor">US 03 - Cadastro de Professor</h3>
+<blockquote>
+<p><strong>Como</strong> professor da UnB   <br />
+<strong>Quero</strong> me cadastrar com meu email institucional e SIAPE  <br />
+<strong>Para</strong> ter acesso ao sistema após aprovação do administrador    </p>
+<p><strong>Estimativa:</strong> 8 pontos    <br />
+<strong>Repo:</strong> Fullstack <br />
+<strong>Epic:</strong> Cadastro de Usuários    </p>
+</blockquote>
+<h4 id="criterios-de-aceitacao_2">Critérios de aceitação</h4>
+<ul>
+<li>[ ] A página de cadastro do professor é acessada ao clicar em <strong>"Cadastre-se"</strong> na tela de login do professor.</li>
+<li>[ ] Os campos obrigatórios são: nome completo, email institucional, SIAPE, instituição com campo bloqueado mostrando <strong>"Universidade de Brasília - UnB"</strong>, departamento, curso, senha e confirmação de senha.</li>
+<li>[ ] O email é validado e deve terminar em <code>unb.br</code>, aceitando subdomínios como <code>aluno.unb.br</code> e <code>medicina.unb.br</code>.</li>
+<li>[ ] O SIAPE é validado e deve conter exatamente 7 dígitos numéricos.</li>
+<li>[ ] Se o email ou o SIAPE já estiverem cadastrados, vejo mensagem específica e a conta não é criada.</li>
+<li>[ ] Os campos departamento e curso aceitam texto livre.</li>
+<li>[ ] A senha deve ter no mínimo 8 caracteres e a confirmação deve coincidir.</li>
+<li>[ ] Após cadastrar com sucesso, vejo a mensagem <strong>"Cadastro realizado! Seu cadastro está em análise pelo administrador. Você poderá acessar a plataforma após aprovação."</strong></li>
+<li>[ ] Minha conta é criada com status <strong>PENDENTE</strong> e não consigo logar até ser aprovada.</li>
+<li>[ ] Há um link <strong>"Já tem conta? Faça login"</strong> que leva para a tela de login do professor.</li>
+</ul>
+<h3 id="us-04-login-de-professor">US 04 - Login de Professor</h3>
+<blockquote>
+<p><strong>Como</strong> professor cadastrado   <br />
+<strong>Quero</strong> fazer login com meu email institucional e senha   <br />
+<strong>Para</strong> acessar a plataforma quando meu cadastro for aprovado    </p>
+<p><strong>Estimativa:</strong> 5 pontos    <br />
+<strong>Repo:</strong> Fullstack <br />
+<strong>Epic:</strong> Cadastro de Usuários    </p>
+</blockquote>
+<h4 id="criterios-de-aceitacao_3">Critérios de aceitação</h4>
+<ul>
+<li>[ ] A página de login do professor é acessada ao clicar em <strong>"Entrar como Professor"</strong> na tela de login principal.</li>
+<li>[ ] Ao informar email e senha corretos e meu cadastro estar aprovado, sou direcionado para a página inicial.</li>
+<li>[ ] Se meu cadastro estiver pendente, vejo a mensagem <strong>"Seu cadastro está em análise pelo administrador. Você receberá acesso em breve."</strong></li>
+<li>[ ] Se minha conta estiver desativada, vejo a mensagem <strong>"Conta desativada. Entre em contato com o administrador."</strong></li>
+<li>[ ] Se as credenciais estiverem incorretas, vejo a mensagem <strong>"Email ou senha inválidos"</strong>.</li>
+<li>[ ] Há link <strong>"Não tem conta? Cadastre-se"</strong> que leva para o cadastro do professor.</li>
+<li>[ ] Há link <strong>"Esqueci minha senha"</strong> que leva para a recuperação de senha.</li>
+<li>[ ] Há link <strong>"Voltar para login do aluno"</strong> que leva para a tela de login principal.</li>
+</ul>
+<h3 id="us-05-logout">US 05 - Logout</h3>
+<blockquote>
+<p><strong>Como</strong> usuário logado <br />
+<strong>Quero</strong> sair da minha conta   <br />
+<strong>Para</strong> encerrar minha sessão com segurança      </p>
+<p><strong>Estimativa:</strong> 2 pontos    <br />
+<strong>Repo:</strong> Fullstack     <br />
+<strong>Epic:</strong> Cadastro de Usuários    </p>
+</blockquote>
+<h4 id="criterios-de-aceitacao_4">Critérios de aceitação</h4>
+<ul>
+<li>[ ] Em todas as páginas após o login, há um botão <strong>"Sair"</strong> visível no cabeçalho.</li>
+<li>[ ] Ao clicar em <strong>"Sair"</strong>, minha sessão é encerrada e sou redirecionado para a tela de login.</li>
+<li>[ ] Após sair, se eu tentar acessar qualquer página do sistema diretamente pela URL, sou redirecionado para a tela de login.</li>
+</ul>
+<h3 id="us-06-recuperacao-de-senha">US 06 - Recuperação de Senha</h3>
+<blockquote>
+<p><strong>Como</strong> usuário que esqueceu a senha   <br />
+<strong>Quero</strong> recuperá-la por email     <br />
+<strong>Para</strong> voltar a acessar a plataforma    </p>
+<p><strong>Estimativa:</strong> 5 pontos    <br />
+<strong>Repo:</strong> Fullstack <br />
+<strong>Epic:</strong> Cadastro de Usuários    </p>
+</blockquote>
+<h4 id="criterios-de-aceitacao_5">Critérios de aceitação</h4>
+<ul>
+<li>[ ] Ao clicar em <strong>"Esqueci minha senha"</strong> na tela de login, sou levado para uma página onde informo meu email.</li>
+<li>[ ] Ao informar o email e clicar em <strong>"Enviar"</strong>, vejo a mensagem <strong>"Se o email existir no sistema, enviamos instruções de recuperação"</strong>, independentemente de o email existir.</li>
+<li>[ ] Recebo um email com link de redefinição válido por 1 hora.</li>
+<li>[ ] Ao acessar o link e informar nova senha e confirmação, minha senha é atualizada e sou redirecionado para a tela de login.</li>
+<li>[ ] Se o link estiver expirado ou já tiver sido usado, vejo a mensagem <strong>"Link expirado ou inválido. Solicite novamente."</strong></li>
+<li>[ ] O fluxo funciona igual para alunos e professores.</li>
+</ul>
+<h3 id="us-07-visao-de-aluno-para-o-professor">US 07 - Visão de Aluno para o Professor</h3>
+<blockquote>
+<p><strong>Como</strong> professor  <br />
+<strong>Quero</strong> alternar para a visão de aluno    <br />
+<strong>Para</strong> visualizar o sistema exatamente como meus alunos o veem  </p>
+<p><strong>Estimativa:</strong> 3 pontos    <br />
+<strong>Repo:</strong> Frontend  <br />
+<strong>Epic:</strong> Controle de Acesso  </p>
+</blockquote>
+<h4 id="criterios-de-aceitacao_6">Critérios de aceitação</h4>
+<ul>
+<li>[ ] No menu do sistema, como professor, vejo um botão <strong>"Ver como aluno"</strong>.</li>
+<li>[ ] Ao clicar em <strong>"Ver como aluno"</strong>, a interface muda para exibir apenas as funcionalidades disponíveis para alunos.</li>
+<li>[ ] Enquanto na visão de aluno, um banner visível no topo da tela indica <strong>"Você está na visão de aluno"</strong>.</li>
+<li>[ ] Há um botão <strong>"Voltar para visão de professor"</strong> visível no banner.</li>
+<li>[ ] Ao clicar em <strong>"Voltar para visão de professor"</strong>, a interface retorna ao modo normal.</li>
+<li>[ ] A visão de aluno se mantém entre páginas e só é desativada ao clicar explicitamente em <strong>"Voltar"</strong>.</li>
+</ul>
+<h3 id="us-08-painel-de-administracao-de-usuarios">US 08 - Painel de Administração de Usuários</h3>
+<blockquote>
+<p><strong>Como</strong> administrador  <br />
+<strong>Quero</strong> visualizar, aprovar e gerenciar os usuários cadastrados   <br />
+<strong>Para</strong> manter controle sobre quem tem acesso ao sistema     </p>
+<p><strong>Estimativa:</strong> 9 pontos    <br />
+<strong>Repo:</strong> Fullstack     <br />
+<strong>Epic:</strong> Controle de Acesso      </p>
+</blockquote>
+<h4 id="criterios-de-aceitacao_7">Critérios de aceitação</h4>
+<ul>
+<li>[ ] Como administrador, acesso o painel de gerenciamento de usuários e vejo uma lista com todos os usuários cadastrados, exibindo todos os dados do perfil: nome completo, email, tipo de conta, situação, data de cadastro, data de nascimento, nacionalidade, estado, cidade, escolaridade, instituição, curso, período, departamento e SIAPE quando professor.</li>
+<li>[ ] Há uma seção destacada no topo do painel chamada <strong>"Aguardando aprovação"</strong> com a lista de professores em status <strong>PENDENTE</strong>.</li>
+<li>[ ] Nos cards da seção de pendentes, há botões <strong>"Aprovar"</strong> e <strong>"Rejeitar"</strong>.</li>
+<li>[ ] Ao aprovar um professor pendente, seu status muda para <strong>ATIVO</strong> e ele consegue fazer login.</li>
+<li>[ ] Ao rejeitar um professor pendente, seu status muda para <strong>INATIVO</strong>, mantendo o cadastro para histórico.</li>
+<li>[ ] Para usuários ativos, há um botão <strong>"Desativar"</strong> que muda a situação para inativa.</li>
+<li>[ ] Para usuários inativos, há um botão <strong>"Reativar"</strong> que muda a situação para ativa.</li>
+<li>[ ] Ao clicar em um usuário da lista, abre uma visualização detalhada com todos os seus dados.</li>
+<li>[ ] Há um campo de busca que filtra usuários por nome ou email em tempo real.</li>
+<li>[ ] Há um filtro por situação: Todos, Pendentes, Ativos, Inativos.</li>
+<li>[ ] A lista é paginada.</li>
+<li>[ ] O administrador não consegue desativar a si mesmo nem alterar o status de outro administrador.</li>
+<li>[ ] Alunos e professores não conseguem acessar essa página e são redirecionados com a mensagem <strong>"Acesso não autorizado"</strong>.</li>
+</ul>
+<h2 id="project-backlog">Project Backlog</h2>
+<h3 id="task-01-modelagem-do-banco-de-dados">TASK 01 - Modelagem do banco de dados</h3>
+<blockquote>
+<p><strong>Estimativa:</strong> 3 pontos
+<strong>Repo:</strong> Backend
+<strong>Tipo:</strong> Infraestrutura
+<strong>Bloqueia:</strong> todas as US</p>
+</blockquote>
+<h4 id="criterios-de-conclusao">Critérios de conclusão</h4>
+<ul>
+<li>[ ] Schema Prisma criado com os modelos <code>User</code>, <code>RefreshToken</code> e <code>PasswordResetToken</code>.</li>
+<li>[ ] Enums <code>Papel</code> (<code>ALUNO</code>, <code>PROFESSOR</code>, <code>ADMINISTRADOR</code>) e <code>StatusUsuario</code> (<code>PENDENTE</code>, <code>ATIVO</code>, <code>INATIVO</code>) definidos.</li>
+<li>[ ] Campo SIAPE adicionado como único e nullable, usado apenas por professores.</li>
+<li>[ ] Campos do aluno incluídos: data de nascimento, nacionalidade, estado, cidade e escolaridade.</li>
+<li>[ ] Campos do professor incluídos: departamento.</li>
+<li>[ ] Migration inicial gerada e aplicada com sucesso no Docker local.</li>
+<li>[ ] <code>prisma generate</code> produz o client sem erro.</li>
+<li>[ ] <code>.env.example</code> atualizado com <code>DATABASE_URL</code> de referência.</li>
+</ul>
+<h3 id="task-02-seed-de-administrador">TASK 02 - Seed de administrador</h3>
+<blockquote>
+<p><strong>Estimativa:</strong> 1 ponto
+<strong>Repo:</strong> Backend
+<strong>Tipo:</strong> Infraestrutura
+<strong>Bloqueado por:</strong> TASK 01</p>
+</blockquote>
+<h4 id="criterios-de-conclusao_1">Critérios de conclusão</h4>
+<ul>
+<li>[ ] Script <code>prisma/seed.ts</code> criado.</li>
+<li>[ ] Credenciais lidas de variáveis de ambiente: <code>ADMIN_EMAIL</code> e <code>ADMIN_PASSWORD</code>.</li>
+<li>[ ] Senha hasheada com bcryptjs, usando 10 salt rounds.</li>
+<li>[ ] Seed idempotente, sem duplicar administrador quando rodar mais de uma vez.</li>
+<li>[ ] Comando <code>npm run seed</code> adicionado ao <code>package.json</code>.</li>
+</ul>
+<h3 id="task-03-setup-do-modulo-de-autenticacao-no-backend">TASK 03 - Setup do módulo de autenticação no backend</h3>
+<blockquote>
+<p><strong>Estimativa:</strong> 3 pontos
+<strong>Repo:</strong> Backend
+<strong>Tipo:</strong> Infraestrutura
+<strong>Bloqueado por:</strong> TASK 01, TASK 04</p>
+</blockquote>
+<h4 id="criterios-de-conclusao_2">Critérios de conclusão</h4>
+<ul>
+<li>[ ] Estrutura <code>src/modules/auth/</code> criada com controller, service, repository, routes, schemas e DTOs.</li>
+<li>[ ] Schemas de validação Zod para login, cadastro, cadastro de professor, recuperação de senha, redefinição de senha e refresh.</li>
+<li>[ ] DTOs de request e response definidos com TypeScript.</li>
+<li>[ ] Arquivo de rotas com todos os endpoints mapeados.</li>
+<li>[ ] Rotas registradas no <code>index.ts</code> principal sob o prefixo <code>/api/v1</code>.</li>
+<li>[ ] Service e repository com métodos esqueleto.</li>
+</ul>
+<h3 id="task-04-configuracao-jwt">TASK 04 - Configuração JWT</h3>
+<blockquote>
+<p><strong>Estimativa:</strong> 2 pontos
+<strong>Repo:</strong> Backend
+<strong>Tipo:</strong> Infraestrutura
+<strong>Bloqueado por:</strong> TASK 01</p>
+</blockquote>
+<h4 id="criterios-de-conclusao_3">Critérios de conclusão</h4>
+<ul>
+<li>[ ] Lib <code>jsonwebtoken</code> instalada e configurada.</li>
+<li>[ ] <code>JWT_SECRET</code> e <code>JWT_REFRESH_SECRET</code> adicionados ao <code>.env</code> e <code>.env.example</code>.</li>
+<li>[ ] Função para gerar access token com expiração de 60 minutos.</li>
+<li>[ ] Função para gerar refresh token com expiração de 7 dias.</li>
+<li>[ ] Função para verificar token com tratamento de erros.</li>
+<li>[ ] Funções localizadas em <code>src/shared/utils/jwt.ts</code>.</li>
+<li>[ ] Testes unitários cobrindo geração, verificação, expiração e assinatura inválida.</li>
+</ul>
+<h3 id="task-05-setup-da-estrutura-fsd-no-frontend">TASK 05 - Setup da estrutura FSD no frontend</h3>
+<blockquote>
+<p><strong>Estimativa:</strong> 2 pontos
+<strong>Repo:</strong> Frontend
+<strong>Tipo:</strong> Infraestrutura</p>
+</blockquote>
+<h4 id="criterios-de-conclusao_4">Critérios de conclusão</h4>
+<ul>
+<li>[ ] Estrutura de pastas <code>app/</code>, <code>pages/</code>, <code>widgets/</code>, <code>features/</code>, <code>entities/</code> e <code>shared/</code> criada.</li>
+<li>[ ] <code>shared/api/httpClient.ts</code> com Axios configurado, usando <code>baseURL</code> via <code>VITE_API_URL</code>.</li>
+<li>[ ] <code>entities/user/model/types.ts</code> com tipagem dos enums <code>Papel</code> e <code>StatusUsuario</code> em PT-BR.</li>
+<li>[ ] <code>app/router.tsx</code> com React Router e rotas placeholder.</li>
+<li>[ ] <code>app/App.tsx</code> renderizando o router.</li>
+<li>[ ] Componentes base em <code>shared/ui/</code>: Button e Input.</li>
+<li>[ ] <code>npm run dev</code> sobe sem erro.</li>
+</ul>
+<h3 id="task-06-spike-pesquisa-de-lib-de-envio-de-email">TASK 06 - Spike: pesquisa de lib de envio de email</h3>
+<blockquote>
+<p><strong>Estimativa:</strong> 1 ponto
+<strong>Repo:</strong> Backend
+<strong>Tipo:</strong> Spike
+<strong>Timebox:</strong> 4 horas</p>
+</blockquote>
+<h4 id="criterios-de-conclusao_5">Critérios de conclusão</h4>
+<ul>
+<li>[ ] Pelo menos 3 opções comparadas, como Resend, Nodemailer com Gmail, SendGrid ou Mailtrap.</li>
+<li>[ ] Critérios de comparação documentados: free tier, facilidade e documentação.</li>
+<li>[ ] Lib escolhida com justificativa.</li>
+<li>[ ] Teste rápido de envio de email realizado com a lib escolhida.</li>
+<li>[ ] Variáveis de ambiente necessárias documentadas.</li>
+<li>[ ] Comentário na issue ou documento curto com a decisão.</li>
+</ul>
+<h3 id="task-09-configuracao-do-servico-de-email">TASK 09 - Configuração do serviço de email</h3>
+<blockquote>
+<p><strong>Estimativa:</strong> 2 pontos
+<strong>Repo:</strong> Backend
+<strong>Tipo:</strong> Infraestrutura
+<strong>Bloqueado por:</strong> TASK 06</p>
+</blockquote>
+<h4 id="criterios-de-conclusao_6">Critérios de conclusão</h4>
+<ul>
+<li>[ ] Lib escolhida no spike instalada e configurada.</li>
+<li>[ ] Variáveis de ambiente adicionadas ao <code>.env</code> e <code>.env.example</code>.</li>
+<li>[ ] Função <code>sendPasswordResetEmail(to, resetLink)</code> criada em <code>src/shared/services/emailService.ts</code>.</li>
+<li>[ ] Template HTML do email de redefinição com logo, link e aviso de expiração em 1 hora.</li>
+<li>[ ] Teste manual de envio de email funcional.</li>
+<li>[ ] Falha no envio é logada, mas não derruba o endpoint.</li>
+</ul>
+<h3 id="task-10-middleware-de-autenticacao">TASK 10 - Middleware de autenticação</h3>
+<blockquote>
+<p><strong>Estimativa:</strong> 3 pontos
+<strong>Repo:</strong> Backend
+<strong>Tipo:</strong> Técnica
+<strong>Bloqueado por:</strong> TASK 04</p>
+</blockquote>
+<h4 id="criterios-de-conclusao_7">Critérios de conclusão</h4>
+<ul>
+<li>[ ] Middleware criado em <code>src/shared/middlewares/autenticacao.middleware.ts</code>.</li>
+<li>[ ] Verifica header <code>Authorization: Bearer &lt;token&gt;</code> e decodifica o JWT.</li>
+<li>[ ] Popula <code>req.user</code> com <code>{ userId, papel, email }</code>.</li>
+<li>[ ] Status do usuário verificado a cada requisição: <code>PENDENTE</code> ou <code>INATIVO</code> retorna 403.</li>
+<li>[ ] Rotas públicas excluídas: cadastro, cadastro de professor, login, refresh, recuperação de senha e redefinição de senha.</li>
+<li>[ ] Testes cobrindo token válido, ausente, expirado, inválido, usuário pendente e usuário inativo.</li>
+</ul>
+<h3 id="task-11-middleware-de-autorizacao-por-papel">TASK 11 - Middleware de autorização por papel</h3>
+<blockquote>
+<p><strong>Estimativa:</strong> 2 pontos
+<strong>Repo:</strong> Backend
+<strong>Tipo:</strong> Técnica
+<strong>Bloqueado por:</strong> TASK 10</p>
+</blockquote>
+<h4 id="criterios-de-conclusao_8">Critérios de conclusão</h4>
+<ul>
+<li>[ ] Middleware criado em <code>src/shared/middlewares/autorizacao.middleware.ts</code>.</li>
+<li>[ ] Função <code>autorizar(...papeisPermitidos)</code> retorna um middleware.</li>
+<li>[ ] Middleware lê <code>req.user.papel</code> e bloqueia com 403 se o usuário não estiver autorizado.</li>
+<li>[ ] Testes cobrindo papel correto, papel incorreto e múltiplos papéis aceitos.</li>
+</ul>
+<h3 id="task-12-renovacao-automatica-de-sessao">TASK 12 - Renovação automática de sessão</h3>
+<blockquote>
+<p><strong>Estimativa:</strong> 3 pontos
+<strong>Repo:</strong> Fullstack
+<strong>Tipo:</strong> Técnica
+<strong>Bloqueado por:</strong> TASK 04, US 02</p>
+</blockquote>
+<h4 id="criterios-de-conclusao_9">Critérios de conclusão</h4>
+<ul>
+<li>[ ] Endpoint <code>POST /api/v1/autenticacao/atualizar-token</code> recebe refresh token e retorna novo par de tokens.</li>
+<li>[ ] Refresh token antigo é deletado do banco, aplicando rotation.</li>
+<li>[ ] Refresh token inválido, expirado ou já usado retorna 401.</li>
+<li>[ ] Interceptor no frontend detecta 401 e tenta atualizar token automaticamente.</li>
+<li>[ ] Se o refresh falhar no frontend, limpa estado e redireciona para login.</li>
+<li>[ ] Não há loop infinito: o frontend não tenta refresh do próprio endpoint de refresh.</li>
+</ul>
+<h3 id="task-13-rotas-protegidas-no-frontend">TASK 13 - Rotas protegidas no frontend</h3>
+<blockquote>
+<p><strong>Estimativa:</strong> 3 pontos
+<strong>Repo:</strong> Frontend
+<strong>Tipo:</strong> Técnica
+<strong>Bloqueado por:</strong> TASK 05, US 02</p>
+</blockquote>
+<h4 id="criterios-de-conclusao_10">Critérios de conclusão</h4>
+<ul>
+<li>[ ] Componente <code>RotaProtegida</code> criado com prop <code>papeisPermitidos?: Papel[]</code>.</li>
+<li>[ ] Sem token, redireciona para <code>/login</code>.</li>
+<li>[ ] Com token válido e papel não autorizado, redireciona para <code>/inicio</code> com mensagem.</li>
+<li>[ ] Com token válido e papel autorizado, renderiza children.</li>
+<li>[ ] Todas as rotas protegidas no <code>router.tsx</code> usam o componente.</li>
+</ul>
+<h3 id="task-14-widget-de-navegacao">TASK 14 - Widget de navegação</h3>
+<blockquote>
+<p><strong>Estimativa:</strong> 2 pontos
+<strong>Repo:</strong> Frontend
+<strong>Tipo:</strong> Infraestrutura
+<strong>Bloqueado por:</strong> TASK 05, US 02</p>
+</blockquote>
+<h4 id="criterios-de-conclusao_11">Critérios de conclusão</h4>
+<ul>
+<li>[ ] Widget <code>widgets/header/ui/Header.tsx</code> criado.</li>
+<li>[ ] Exibe nome do usuário logado.</li>
+<li>[ ] Menu adapta por papel: Aluno com Início, Professor com Início e toggle, Administrador com Início e Gerenciar usuários.</li>
+<li>[ ] Botão de logout funcional.</li>
+<li>[ ] Layout responsivo.</li>
+</ul>
+<h3 id="task-15-pagina-inicio">TASK 15 - Página Início</h3>
+<blockquote>
+<p><strong>Estimativa:</strong> 1 ponto
+<strong>Repo:</strong> Frontend
+<strong>Tipo:</strong> Infraestrutura
+<strong>Bloqueado por:</strong> TASK 05, TASK 14</p>
+</blockquote>
+<h4 id="criterios-de-conclusao_12">Critérios de conclusão</h4>
+<ul>
+<li>[ ] Page <code>pages/inicio/</code> criada.</li>
+<li>[ ] Mensagem de boas-vindas: <strong>"Bem-vindo(a), {nome}!"</strong></li>
+<li>[ ] Layout com Header.</li>
+<li>[ ] Rota <code>/inicio</code> protegida via <code>RotaProtegida</code>, permitindo qualquer papel autenticado.</li>
+</ul>
+<h3 id="task-16-tela-de-erro-404-e-fallback">TASK 16 - Tela de erro 404 e fallback</h3>
+<blockquote>
+<p><strong>Estimativa:</strong> 1 ponto
+<strong>Repo:</strong> Frontend
+<strong>Tipo:</strong> Infraestrutura
+<strong>Bloqueado por:</strong> TASK 05</p>
+</blockquote>
+<h4 id="criterios-de-conclusao_13">Critérios de conclusão</h4>
+<ul>
+<li>[ ] Page <code>pages/nao-encontrada/</code> criada com mensagem amigável e link para voltar à home.</li>
+<li>[ ] Rota catch-all (<code>*</code>) no React Router apontando para a página 404.</li>
+<li>[ ] Error boundary em <code>app/</code> capturando erros de renderização.</li>
+</ul>
+<h2 id="historico-de-versao">Histórico de Versão</h2>
+<table>
+<thead>
+<tr>
+<th>Data</th>
+<th>Versão</th>
+<th>Descrição</th>
+<th>Autor(es)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>27/04/2026</td>
+<td>1.0</td>
+<td>Criação das histórias e tarefas da Release Major 1</td>
+<td><a href="https://github.com/Brenofrds">Breno Fernandes</a></td>
+</tr>
+<tr>
+<td>27/04/2026</td>
+<td>1.1</td>
+<td>Adição da visão geral, escopo, dependências e convenções da Release Major 1</td>
+<td><a href="https://github.com/Brenofrds">Breno Fernandes</a></td>
+</tr>
+</tbody>
+</table>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.tabs"], "search": "../../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copiado para \u00e1rea de transfer\u00eancia", "clipboard.copy": "Copiar para \u00e1rea de transfer\u00eancia", "search.result.more.one": "mais 1 nesta p\u00e1gina", "search.result.more.other": "# mais nesta p\u00e1gina", "search.result.none": "Nenhum documento encontrado", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Digite para iniciar a busca", "search.result.term.missing": "Ausente", "select.version": "Selecione a vers\u00e3o"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.83f73b43.min.js"></script>
+      
+    
+  </body>
+</html>
