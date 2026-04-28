@@ -1,0 +1,33 @@
+{
+  "components": [
+    {
+      "qualifier": "FIL",
+      "language": "ts",
+      "path": "file1.ts",
+      "measures": [
+        {"metric": "complexity", "value": "580"},
+        {"metric": "functions", "value": "190"},
+        {"metric": "coverage", "value": "70.0"},
+        {"metric": "duplicated_lines_density", "value": "3.0"},
+        {"metric": "comment_lines_density", "value": "0.3"},
+        {"metric": "ncloc", "value": "2400"}
+      ]
+    },
+    {
+      "qualifier": "DIR",
+      "path": "root",
+      "measures": [
+        {"metric": "tests", "value": "80"},
+        {"metric": "test_errors", "value": "6"},
+        {"metric": "test_failures", "value": "12"}
+      ]
+    },
+    {
+      "qualifier": "UTS",
+      "path": "tests",
+      "measures": [
+        {"metric": "test_execution_time", "value": "400000"}
+      ]
+    }
+  ]
+}
