@@ -1,1 +1,46 @@
-{"timestamp":"2026-04-27T02:33:16Z","commit":"541aa85e9f100515d28f9f7c65e4a6e0b6f7acba","filename":"fga-eps-mds-2026_1_UNB-AnatoQuizUp-Back-04-27-2026-02-33-15-v1.0.0.json","data":{"errors":[{"msg":"Component key \u0027fga-eps-mds_2026-1-AnatoQuizUp-Back\u0027 not found"}]}}
+{
+  "component": {
+    "id": "AZ2TZhhQ0owBDFxnLbpU",
+    "key": "fga-eps-mds_2026-1-AnatoQuizUp-API",
+    "name": "2026-1-AnatoQuizUp-API",
+    "qualifier": "TRK",
+    "measures": [
+      {
+        "metric": "coverage",
+        "value": "96.3",
+        "bestValue": false
+      },
+      {
+        "metric": "complexity",
+        "value": "291"
+      },
+      {
+        "metric": "duplicated_lines_density",
+        "value": "0.0",
+        "bestValue": true
+      },
+      {
+        "metric": "functions",
+        "value": "158"
+      },
+      {
+        "metric": "security_rating",
+        "value": "1.0",
+        "bestValue": true
+      },
+      {
+        "metric": "ncloc",
+        "value": "3082"
+      },
+      {
+        "metric": "files",
+        "value": "78"
+      },
+      {
+        "metric": "comment_lines_density",
+        "value": "0.7",
+        "bestValue": false
+      }
+    ]
+  }
+}
