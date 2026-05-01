@@ -9,46 +9,56 @@ theme:
     
 nav:
   - Início: index.md
+
   - Produto:
-    - Visão do Produto: produto/visao.md
-    - Lean Inception: produto/lean_inception.md
-  - Backlog:
-    - Visão Geral: backlog/overview.md
-    - Histórias e Tarefas:
-      - Release Major 1: backlog/release-major-1.md
-      - Release Major 2: backlog/release-major-2.md
-      - Release Major 3: backlog/release-major-3.md
+      - Visão do Produto: produto/visao.md
+      - Lean Inception: produto/lean_inception.md
+      - Protótipos: prototipo/figma.md
+
+  - Planejamento:
+      - Visão Geral:
+          - Roadmap e Releases: processo/roadmap.md
+          - Datas Importantes: processo/datas-importantes.md
+      - Backlog:
+          - Visão Geral: backlog/overview.md
+          - Release Major 1: backlog/release-major-1.md
+          - Release Major 2: backlog/release-major-2.md
+          - Release Major 3: backlog/release-major-3.md
+      - Acompanhamento por Sprint:
+          - Visão Geral das Sprints: processo/sprints.md
+          - Sprint 1:
+              - EVM: processo/evm-sprint1.md
+      - Controle:
+          - Matriz de Riscos: processo/riscos.md
+
   - Arquitetura:
-    - Visão Geral: arquitetura/visao_geral.md
-    - Tecnologias: arquitetura/tecnologias.md
-    - Decisões Arquiteturais: arquitetura/decisoes.md
-    - Visões Arquiteturais:
-      - Visão Lógica: arquitetura/visoes/logica.md
-      - Visão de Processos: arquitetura/visoes/processos.md
-      - Visão de Implementação: arquitetura/visoes/implementacao.md
-      - Visão de Implantação: arquitetura/visoes/implantacao.md
-    - Banco de Dados:
-      - Versão 1: arquitetura/banco-de-dados/v1.md
-  - Protótipos: prototipo/figma.md
-  - Projeto e Processo:
-    - Roadmap e Releases: processo/roadmap.md
-    - Datas Importantes: processo/datas-importantes.md
-    - Comunicação: processo/comunicacao.md
-    - Sprints: processo/sprints.md
-    - EVM Sprint 1: processo/evm-sprint1.md
-    - Quadro de Conhecimento: processo/quadro-conhecimento.md
-    - Matriz de Riscos: processo/riscos.md
-    - Reuniões: processo/reunioes.md
-    - Atas: processo/atas.md
-    - Metodologia e DoD: processo/metodologia.md
-  - Qualidade e Métricas:
-    - Métricas e Dashboard: qualidade/qualidade.md
-  - Decisões:
-    - Decisões do Projeto: decisoes/decisoes.md
-  - Contribuição: 
-    - Código de Conduta: contribuicao/codigo_conduta.md
-    - Política de Branchs: contribuicao/politica_branchs.md
-    - Política de Commits: contribuicao/politica_commits.md
+      - Visão Geral: arquitetura/visao_geral.md
+      - Tecnologias: arquitetura/tecnologias.md
+      - Decisões Arquiteturais: arquitetura/decisoes.md
+      - Visões Arquiteturais:
+          - Visão Lógica: arquitetura/visoes/logica.md
+          - Visão de Processos: arquitetura/visoes/processos.md
+          - Visão de Implementação: arquitetura/visoes/implementacao.md
+          - Visão de Implantação: arquitetura/visoes/implantacao.md
+      - Banco de Dados:
+          - Modelo V1: arquitetura/banco-de-dados/v1.md
+
+  - Qualidade:
+      - Métricas e Dashboard: qualidade/qualidade.md
+
+  - Gestão:
+      - Metodologia de trabalho: processo/metodologia.md
+      - Comunicação: processo/comunicacao.md
+      - Quadro de Conhecimento: processo/quadro-conhecimento.md
+      - Decisões do Projeto: decisoes/decisoes.md
+
+  - Registro:
+      - Reuniões: processo/reunioes.md
+
+  - Contribuição:
+      - Código de Conduta: contribuicao/codigo_conduta.md
+      - Política de Branchs: contribuicao/politica_branchs.md
+      - Política de Commits: contribuicao/politica_commits.md
 
 markdown_extensions:
   - admonition
