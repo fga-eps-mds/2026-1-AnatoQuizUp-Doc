@@ -2,7 +2,7 @@
 
 ## Objetivo
 
-Este documento centraliza os principais marcos de releases do AnatoQuizUp. A data de referência deste registro é 27/04/2026.
+Este documento centraliza os principais marcos de releases do AnatoQuizUp.
 
 ## Releases Major
 
@@ -16,15 +16,17 @@ Este documento centraliza os principais marcos de releases do AnatoQuizUp. A dat
 
 | Release | Data | Release Major associada |
 |---------|------|--------------------------|
-| Release Minor 1 | 04/05/2026 | Release Major 1 |
-| Release Minor 2 | 11/05/2026 | Release Major 2 |
-| Release Minor 3 | 18/05/2026 | Release Major 2 |
+| Release Minor 1 | 13/04/2026 | Release Major 1 |
+| Release Minor 2 | 04/05/2026 | Release Major 2 |
+| Release Minor 3 | 11/05/2026 | Release Major 2 |
 | Release Minor 4 | 01/06/2026 | Release Major 3 |
-| Release Minor 5 | 08/06/2026 | Release Major 3 |
-| Release Minor 6 | 15/06/2026 | Release Major 3 |
+| Release Minor 5 | 15/06/2026 | Release Major 3 |
+| Release Minor 6 | 06/07/2026 | Release Major 3 |
 
 ## Histórico de Versão
 
 | Data   | Versão | Descrição | Autor(es) |
 |--------|--------|-----------|-----------|
-| 27/04/2026 | 1.0 | Criação do documento com os marcos de releases major e minor | Equipe AnatoQuizUp |
+| 27/04/2026 | 1.0 | Criação do documento com os marcos de releases major e minor | [Bruno Ricardo](https://github.com/EhOBruno) |
+| 27/04/2026 | 1.1 | Correção de datas | [Bruno Ricardo](https://github.com/EhOBruno) |
+
