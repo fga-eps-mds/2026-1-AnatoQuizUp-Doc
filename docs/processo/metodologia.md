@@ -13,6 +13,7 @@ O projeto combina práticas de Scrum, Kanban, Git Flow e integração contínua.
 | Lean Inception | Definição de visão, público, MVP e sequência inicial de entregas |
 | Scrum | Planning, execução por sprint, revisão de entregas e retrospectiva |
 | Kanban | Acompanhamento visual do fluxo de cards e gargalos de revisão |
+| Extreme Programming (XP) | Pareamento (Pair Programming), refatoração contínua e integração contínua (CI) |
 | Git Flow | Organização das branches principais, features, releases e hotfixes |
 | CI/CD | Validação automática de lint, build, testes, cobertura e SonarCloud |
 | EVM ágil | Acompanhamento de valor planejado, valor agregado e custo real por sprint |
@@ -148,3 +149,4 @@ A gestão de riscos fica documentada em [Matriz de Riscos](riscos.md). Durante a
 | Data   | Versão | Descrição | Autor(es) |
 |--------|--------|-----------|-----------|
 | 27/04/2026 | 1.0 | Criação da metodologia, fluxo de desenvolvimento e Definition of Done | [Miguel Moreira](https://github.com/miguelmsoliveira) |
+| 02/05/2026 | 1.1 | Adição do XP nas abordagens de trabalho | [Genilson Junior](https://github.com/GenilsonJrs) |
