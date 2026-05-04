@@ -116,6 +116,32 @@ Reunião de validação dos artefatos do produto, regras de acesso e ajustes nos
 
 **Ata completa:** [reuniao2004-ata.md](../assets/processo/reuniao2004-ata.md)
 
+### 03/05/2026 — Alinhamento com Cliente e Revisão de Tarefas
+
+**Formato da ata:** Markdown
+
+**Objetivo:**
+
+Alinhar as ações para a reunião com o cliente e revisar o andamento das tarefas da equipe.
+
+**Resumo da ata:**
+
+Discussão sobre a preparação para a validação com o cliente, ajustes no fluxo de cadastro de professor e redistribuição de tarefas internas.
+
+**Principais decisões:**
+
+- Cadastro de professor será temporário via *seed* para validação.
+- Painel de administração passou a ser responsabilidade de Genilson.
+- Identificada necessidade de validar inconsistência na "Questão 6".
+
+**Encaminhamentos:**
+
+- Validar fluxo de cadastro e Canvas MVP com o cliente (04/05).
+- Finalizar documentação de endpoints.
+- Avançar na modelagem e protótipo até quarta-feira.
+
+**Ata completa:** [reuniao0305-ata.md](../assets/processo/reuniao0305-ata.md)
+
 ## Histórico de Versão
 
 | Data   | Versão | Descrição | Autor(es) |
@@ -124,3 +150,4 @@ Reunião de validação dos artefatos do produto, regras de acesso e ajustes nos
 | 26/04/2026 | 1.1 | Separação entre reuniões e atas e inclusão dos registros de 19/04 e 20/04 | [Ana Catarina](https://github.com/an4catarina) |
 | 26/04/2026 | 1.2 | Criação da página de atas e organização dos links para os documentos existentes | [Ana Catarina](https://github.com/an4catarina) |
 | 01/05/2026 | 1.3 | Centralização das informações de reuniões e atas em uma única página de reuniões | [Breno Fernandes](https://github.com/BrenoFrds) |
+| 03/05/2026 | 1.4    | Inclusão da ata de alinhamento com cliente (03/05)                        | [Breno Fernandes](https://github.com/BrenoFrds) |
