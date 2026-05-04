@@ -21,6 +21,7 @@ nav:
           - Datas Importantes: processo/datas-importantes.md
       - Backlog:
           - Visão Geral: backlog/overview.md
+          - Requisitos: backlog/requisitos.md
           - Release Major 1: backlog/release-major-1.md
           - Release Major 2: backlog/release-major-2.md
           - Release Major 3: backlog/release-major-3.md

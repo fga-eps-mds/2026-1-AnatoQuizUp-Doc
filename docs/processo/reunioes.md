@@ -13,7 +13,7 @@ Esta página substitui a separação anterior entre `reunioes.md` e `atas.md`, m
 Para manter o alinhamento e o ritmo de desenvolvimento, a equipe realiza reuniões periódicas:
 
 *   **Reunião Semanal (Sprint Planning / Review / Retrospectiva):** Realizada todos os **domingos, às 19h**, via Discord. Este é o encontro principal onde a equipe revisa o que foi entregue na sprint anterior, discute impedimentos e planeja as atividades e pareamentos para a sprint que se inicia.
-*   **Reuniões com os POs (Product Owners):** Realizadas costumeiramente às segundas-feiras, das 10h às 11h30. Este encontro semanal é focado na validação de protótipos, alinhamento de fluxos de usuário e aprovação de critérios de aceitação. (Eventualmente, o formato ou horário pode ser adaptado sob demanda).
+*   **Reuniões com os POs (Product Owners):** Realizadas costumeiramente às segundas-feiras, das 12h30 às 13h30. Este encontro semanal é focado na validação de protótipos, alinhamento de fluxos de usuário e aprovação de critérios de aceitação. (Eventualmente, o formato ou horário pode ser adaptado sob demanda).
 *   **Pareamento (Pair Programming):** Embora não seja uma reunião formal, os desenvolvedores se organizam em duplas durante a semana para programar juntos, garantindo a revisão contínua do código e nivelamento de conhecimento (prática baseada no Extreme Programming).
 
 ---
@@ -88,12 +88,39 @@ O modelo utilizado pelo projeto para registro de pauta e ata pode ser consultado
 
 ---
 
+### 03/05/2026 — Alinhamento com Cliente e Revisão de Tarefas
+
+**Formato da ata:** Markdown
+
+**Objetivo:**
+
+Alinhar as ações para a reunião com o cliente e revisar o andamento das tarefas da equipe.
+
+**Resumo da ata:**
+
+Discussão sobre a preparação para a validação com o cliente, ajustes no fluxo de cadastro de professor e redistribuição de tarefas internas.
+
+**Principais decisões:**
+
+- Cadastro de professor será temporário via *seed* para validação.
+- Painel de administração passou a ser responsabilidade de Genilson.
+- Identificada necessidade de validar inconsistência na "Questão 6".
+
+**Encaminhamentos:**
+
+- Validar fluxo de cadastro e Canvas MVP com o cliente (04/05).
+- Finalizar documentação de endpoints.
+- Avançar na modelagem e protótipo até quarta-feira.
+
+**Ata completa:** [reuniao0305-ata.md](../assets/processo/reuniao0305-ata.md)
+
 ## Histórico de Versão
 
-| Data   | Versão | Descrição | Autor(es) |
-|--------|--------|-----------|-----------|
+| Data | Versão | Descrição | Autor(es) |
+|---|---|---|---|
 | 11/04/2026 | 1.0 | Criação do documento e inclusão de reuniões | [Victor Hugo](https://github.com/ViictorHugoo) |
 | 26/04/2026 | 1.1 | Separação entre reuniões e atas e inclusão dos registros de 19/04 e 20/04 | [Ana Catarina](https://github.com/an4catarina) |
 | 26/04/2026 | 1.2 | Criação da página de atas e organização dos links para os documentos existentes | [Ana Catarina](https://github.com/an4catarina) |
 | 01/05/2026 | 1.3 | Centralização das informações de reuniões e atas em uma única página de reuniões | [Breno Fernandes](https://github.com/BrenoFrds) |
-| 02/05/2026 | 1.4 | Adição da descrição dos rituais da equipe | [Genilson Junior](https://github.com/GenilsonJrs) |
+| 03/05/2026 | 1.4 | Inclusão da ata de alinhamento com cliente (03/05) | [Breno Fernandes](https://github.com/BrenoFrds) |
+| 04/05/2026 | 1.5 | Adição da descrição dos rituais da equipe | [Genilson Junior](https://github.com/GenilsonJrs) |
