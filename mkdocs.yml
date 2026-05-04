@@ -43,6 +43,14 @@ nav:
           - Visão de Implantação: arquitetura/visoes/implantacao.md
       - Banco de Dados:
           - Modelo V1: arquitetura/banco-de-dados/v1.md
+      - Endpoints e Contratos:
+          - Visão Geral: arquitetura/api/visao-geral.md
+          - Autenticação: arquitetura/api/autenticacao.md
+          - Alunos: arquitetura/api/alunos.md
+          - Localidades: arquitetura/api/localidades.md
+          - Administração: arquitetura/api/admin.md
+          - Exemplos: arquitetura/api/exemplos.md
+          - Erros e Contratos: arquitetura/api/erros.md
 
   - Qualidade:
       - Métricas e Dashboard: qualidade/qualidade.md
