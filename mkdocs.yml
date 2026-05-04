@@ -13,6 +13,8 @@ nav:
   - Produto:
       - Visão do Produto: produto/visao.md
       - Lean Inception: produto/lean_inception.md
+      - EAP: produto/eap.md
+      - Identidade Visual: idv/identidade-visual.md
       - Protótipos: prototipo/figma.md
 
   - Planejamento:
