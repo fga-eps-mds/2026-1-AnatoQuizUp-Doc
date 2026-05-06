@@ -8,7 +8,7 @@ Eles evitam que o frontend mantenha listas próprias e garantem que os valores s
 
 ---
 
-## **GET** /auth/localidades/estados
+## **GET** /autenticacao/alunos/localidades/estados
 
 **Descrição:** lista estados brasileiros.
 
@@ -32,7 +32,7 @@ Este endpoint retorna os estados aceitos pelo backend, com sigla e nome. Ele é 
 
 ---
 
-## **GET** /auth/localidades/estados/:uf/cidades
+## **GET** /autenticacao/alunos/localidades/estados/:uf/cidades
 
 **Descrição:** lista cidades de um estado.
 

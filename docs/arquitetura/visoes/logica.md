@@ -4,11 +4,13 @@ A visão lógica descreve a decomposição funcional do AnatoQuizUp em módulos 
 
 ## Organização geral
 
-O sistema é organizado em três blocos principais:
+O sistema é organizado em quatro blocos principais ativos (mais um reservado):
 
 - **Frontend Web:** interface usada por alunos, professores e administradores.
-- **Backend API:** camada responsável por regras de negócio, autenticação, autorização e exposição dos endpoints.
+- **BFF (Backend-For-Frontend):** ponto de entrada público; valida JWT; injeta token interno; orquestra chamadas para Backend ou AI.
+- **Backend API:** regras de negócio, autenticação, autorização e exposição dos endpoints.
 - **Banco de Dados:** persistência dos dados da aplicação.
+- **AI Service (reservado):** serviço de IA para semestres futuros; vazio nesta release.
 
 ## Frontend
 
@@ -22,6 +24,16 @@ O frontend é organizado em camadas seguindo Feature-Sliced Design. Essa divisã
 | `features` | Funcionalidades do usuário, como login, cadastro, recuperação de senha e gerenciamento. |
 | `entities` | Modelos centrais do domínio, como usuário, perfil e status. |
 | `shared` | Componentes genéricos, cliente HTTP, configurações e utilitários. |
+
+## BFF
+
+O BFF é organizado em camadas mais simples que o Backend, refletindo seu papel de proxy 100% orquestração:
+
+| Componente | Responsabilidade |
+|------------|------------------|
+| Rotas | Definem prefixos públicos (`/api/v1/autenticacao`, `/api/v1/admin`, `/api/v1/exemplos`, `/api/v1/ia`) e quais exigem JWT. |
+| Middlewares | `autenticacao` (validação de JWT no BFF), `proxy` (repassa request com cabeçalhos injetados), `tratamento-erros` (mapeia erros do downstream). |
+| Clientes HTTP | `backend.client` e `ai.client` — instâncias Axios apontadas para os serviços de domínio. |
 
 ## Backend
 
@@ -47,28 +59,33 @@ Os principais módulos lógicos previstos para o sistema são:
 
 ## Relação entre as camadas
 
-O frontend não acessa o banco diretamente. As telas e funcionalidades do cliente chamam a API REST do backend, que valida os dados recebidos, aplica as regras de negócio e acessa o banco por meio do Prisma.
+O frontend não acessa o backend nem o banco diretamente. As telas chamam o **BFF**, que valida o JWT e repassa para o Backend (ou AI) injetando `X-Internal-Token`. O Backend valida os dados recebidos, aplica as regras de negócio e acessa o banco por meio do Prisma.
 
-O backend retorna respostas padronizadas para que o frontend consiga tratar sucesso, erro e paginação de forma consistente.
+Tanto o BFF quanto o Backend usam respostas padronizadas para que o frontend trate sucesso, erro e paginação de forma consistente.
 
 ```mermaid
 sequenceDiagram
     participant F as Frontend
-    participant R as Rotas
+    participant B as BFF
+    participant R as Rotas (Backend)
     participant C as Controller
     participant S as Service
     participant P as Repository
-    participant B as Banco
+    participant DB as Banco
 
-    F->>R: Requisição HTTP
+    F->>B: Requisição HTTP (Bearer JWT)
+    B->>B: Valida JWT (assinatura/expiração)
+    B->>R: Repassa com X-Internal-Token + X-User-*
     R->>C: Encaminha dados validados
     C->>S: Executa caso de uso
     S->>P: Solicita dados
-    P->>B: Consulta ou grava
-    B-->>P: Retorna dados
+    P->>DB: Consulta ou grava
+    DB-->>P: Retorna dados
     P-->>S: Retorna resultado
     S-->>C: Retorna regra aplicada
-    C-->>F: Resposta da API
+    C-->>R: Resposta
+    R-->>B: Resposta
+    B-->>F: Resposta padronizada
 ```
 
 ## Histórico de Versão
@@ -77,3 +94,4 @@ sequenceDiagram
 |--------|--------|-----------|-----------|
 | 27/04/2026 | 1.0 | Criação da visão lógica da arquitetura | [Breno Fernandes](https://github.com/Brenofrds) |
 | 27/04/2026 | 1.1 | Simplificação da visão lógica com foco em módulos, camadas e responsabilidades | [Breno Fernandes](https://github.com/Brenofrds) |
+| 05/05/2026 | 1.2 | Inclusão do BFF como camada lógica entre Frontend e Backend (PRD: Migração para Arquitetura com BFF) | [Miguel Moreira](https://github.com/miguelmsoliveira) |

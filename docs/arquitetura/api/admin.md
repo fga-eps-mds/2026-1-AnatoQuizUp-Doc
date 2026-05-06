@@ -8,7 +8,7 @@ Eles são voltados para operações internas de gestão, principalmente análise
 
 ---
 
-## **GET** /admin/users
+## **GET** /admin/usuarios
 
 **Descrição:** lista usuários cadastrados.
 
@@ -47,7 +47,7 @@ Este endpoint retorna usuários de forma paginada. Ele é usado em telas adminis
 
 ---
 
-## **GET** /admin/users/:id
+## **GET** /admin/usuarios/:id
 
 **Descrição:** busca um usuário pelo id.
 
@@ -79,7 +79,7 @@ Este endpoint retorna os dados detalhados de um usuário específico. Ele é usa
 
 ---
 
-## **PATCH** /admin/users/:id/status
+## **PATCH** /admin/usuarios/:id/status
 
 **Descrição:** altera o status de um usuário.
 

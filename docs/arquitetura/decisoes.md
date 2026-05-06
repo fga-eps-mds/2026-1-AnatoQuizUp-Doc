@@ -19,6 +19,47 @@ Com excessão de `app/` e `shared/`, todas as camadas podem ser divididas em sub
 
 ![Camadas](../assets/arquitetura/diagrama-arquitetura-frontend.png)
 
+### BFF (Backend-For-Frontend)
+
+#### Função e camadas internas
+
+O BFF é um proxy 100% orquestração entre o Frontend e os serviços de domínio (Backend e AI). Não possui regra de negócio nem persistência. Suas responsabilidades:
+
+- Receber todas as chamadas vindas do Frontend (único endereço público da plataforma do lado dos serviços).
+- Validar o JWT (assinatura/expiração) com `JWT_SECRET_KEY`.
+- Injetar `X-Internal-Token` (segredo compartilhado com Backend e AI) e cabeçalhos auxiliares (`X-User-Id`, `X-User-Profile`, `X-User-Status`) nas chamadas downstream.
+- Rotear por path: `/api/v1/autenticacao/*`, `/api/v1/admin/*`, `/api/v1/exemplos/*` → Backend; `/api/v1/ia/*` → AI (atualmente 503 enquanto AI estiver vazio).
+- Padronizar respostas de erro vindas do downstream.
+
+Camadas internas do BFF:
+
+* **`Routes`**: definem prefixos, marcam rotas públicas/autenticadas e despacham para o cliente HTTP correto.
+* **`Middlewares`**: `autenticacao` (validação local de JWT), `proxy` (repasse genérico), `tratamento-erros` (mapeia erros downstream e exceções).
+* **`Clients`**: instâncias Axios para Backend (`backend.client`) e AI (`ai.client`, opcional via `AI_URL`).
+
+#### Estrutura de pastas — BFF
+
+```text
+2026-1-AnatoQuizUp-BFF/
+├── src/
+│   ├── config/
+│   ├── routes/
+│   ├── shared/
+│   │   ├── clients/
+│   │   ├── constants/
+│   │   ├── errors/
+│   │   ├── middlewares/
+│   │   ├── types/
+│   │   └── utils/
+│   └── server.ts
+├── tests/
+├── Dockerfile
+├── eslint.config.js
+├── jest.config.cjs
+├── tsconfig.json
+└── package.json
+```
+
 ### Backend
 
 #### Diagrama de Componentes
@@ -123,3 +164,4 @@ anatoquizup-api/
 | 18/04/2026 | 1.4 | Adicionando estrutura de pastas backend | [Bruno Ricardo](https://github.com/EhOBruno) |
 | 26/04/2026 | 1.5 | Reorganização da seção de arquitetura, concentrando arquiteturais e estruturas adotadas em uma página só| [Ana Catarina](https://github.com/an4catarina) |
 | 27/04/2026 | 1.6 | Adicionando arquitetura de componentes do backend | [Bruno Ricardo](https://github.com/EhOBruno) |
+| 05/05/2026 | 1.7 | Adicionando o BFF como estilo arquitetural separado, com função e estrutura de pastas (PRD: Migração para Arquitetura com BFF) | [Miguel Moreira](https://github.com/miguelmsoliveira) |
