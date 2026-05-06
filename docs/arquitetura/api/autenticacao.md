@@ -8,7 +8,7 @@ Eles são usados pelo frontend para iniciar sessão, manter o usuário autentica
 
 ---
 
-## **POST** /auth/login
+## **POST** /autenticacao/login
 
 **Descrição:** autentica um usuário com email e senha.
 
@@ -37,7 +37,7 @@ Este endpoint verifica as credenciais informadas, valida se a conta pode acessar
 
 ---
 
-## **POST** /auth/refresh
+## **POST** /autenticacao/atualizar-token
 
 **Descrição:** renova a sessão do usuário.
 
@@ -65,7 +65,7 @@ Este endpoint recebe um `refreshToken` válido, revoga o token antigo e retorna 
 
 ---
 
-## **GET** /auth/me
+## **GET** /autenticacao/usuario-atual
 
 **Descrição:** retorna os dados do usuário autenticado.
 
@@ -99,7 +99,7 @@ Authorization: Bearer <accessToken>
 
 ---
 
-## **POST** /auth/logout
+## **POST** /autenticacao/sair
 
 **Descrição:** encerra a sessão atual.
 
@@ -125,7 +125,7 @@ Sem corpo de resposta.
 
 ---
 
-## **POST** /auth/forgot-password
+## **POST** /autenticacao/recuperar-senha
 
 **Descrição:** solicita recuperação de senha.
 
@@ -150,7 +150,7 @@ Este endpoint recebe o email do usuário e dispara o fluxo de recuperação de s
 
 ---
 
-## **POST** /auth/reset-password
+## **POST** /autenticacao/redefinir-senha
 
 **Descrição:** redefine a senha do usuário.
 

@@ -2,20 +2,21 @@
 
 ## Objetivo
 
-Esta seção documenta os endpoints REST disponíveis na API do AnatoQuizUp. A intenção é deixar claro quais contratos o frontend pode consumir, quais dados cada rota espera receber e qual formato de resposta deve ser tratado pela interface.
+Esta seção documenta os endpoints REST públicos do AnatoQuizUp. Do ponto de vista do consumidor (Frontend), **a API pública é o BFF** — ele é o único endereço externo. Os contratos descritos aqui (caminho, payload, status, formato de erro) continuam válidos: o BFF preserva path e contrato; a implementação real fica no Backend (`fga-eps-mds/2026-1-AnatoQuizUp-Backend`).
 
-A API usa versionamento no caminho. Todos os endpoints de negócio documentados aqui partem do prefixo `/api/v1`. Por isso, nas páginas específicas, os títulos omitem esse prefixo para reduzir repetição. Quando a documentação mostra `POST /auth/login`, o caminho completo é `POST /api/v1/auth/login`.
+A API usa versionamento no caminho. Todos os endpoints de negócio documentados aqui partem do prefixo `/api/v1`. Por isso, nas páginas específicas, os títulos omitem esse prefixo para reduzir repetição. Quando a documentação mostra `POST /autenticacao/login`, o caminho completo é `POST /api/v1/autenticacao/login`.
 
-O único endpoint fora desse padrão é `GET /health`, usado apenas para verificar se o servidor está em execução.
+Endpoints `GET /health` (BFF) e `/api/v1/ia/*` ficam fora do padrão geral: o primeiro é o health check do próprio BFF; o segundo é reservado ao serviço de AI e atualmente responde **503 `IA_INDISPONIVEL`** enquanto o serviço estiver vazio (placeholder).
 
 ## Execução local
 
-A API está preparada para rodar localmente com Node.js e PostgreSQL via Docker. O Docker Compose do backend sobe o banco de dados, enquanto a aplicação Express roda em modo de desenvolvimento pelo script do projeto.
+Localmente, sobem três processos: Backend, BFF e Frontend.
 
-O fluxo local esperado é:
+### Backend (`2026-1-AnatoQuizUp-Backend`)
 
 ```bash
 cp .env.example .env
+# Preencher INTERNAL_TOKEN (mesmo valor do BFF)
 npm run db:up
 npm run prisma:generate
 npm run prisma:migrate -- --name init
@@ -23,29 +24,36 @@ npm run prisma:seed
 npm run dev
 ```
 
-Com a API em execução, o servidor fica disponível em:
+Backend disponível em `http://localhost:3333`. Aceita requisições apenas com header `X-Internal-Token` válido (rota `GET /health` é a exceção).
 
-```text
-http://localhost:3333
+### BFF (`2026-1-AnatoQuizUp-BFF`)
+
+```bash
+cp .env.example .env
+# Preencher INTERNAL_TOKEN e JWT_SECRET_KEY (mesmos valores do Backend)
+npm ci
+npm run dev
 ```
 
-A partir disso, os endpoints versionados são acessados com o prefixo:
+BFF disponível em `http://localhost:4000`. É o endereço usado pelo Frontend.
+
+### Caminho público
 
 ```text
-http://localhost:3333/api/v1
+http://localhost:4000/api/v1
 ```
 
 Exemplo completo:
 
 ```http
-POST http://localhost:3333/api/v1/auth/login
+POST http://localhost:4000/api/v1/autenticacao/login
 ```
 
 ## Autenticação
 
 A API usa tokens JWT para controlar sessões autenticadas. JWT é um token assinado pelo backend que carrega informações mínimas do usuário, como identificador e papel. Como ele é assinado, a API consegue validar se o token foi emitido pelo próprio servidor e se ainda pode ser aceito.
 
-O login é feito pelo endpoint [`POST /auth/login`](./autenticacao.md#post-authlogin). Quando as credenciais estão corretas, a API retorna dois tokens:
+O login é feito pelo endpoint [`POST /autenticacao/login`](./autenticacao.md#post-autenticacaologin). Quando as credenciais estão corretas, a API retorna dois tokens:
 
 - `accessToken`: usado nas requisições protegidas;
 - `refreshToken`: usado para renovar a sessão sem exigir novo login.
@@ -56,9 +64,9 @@ Endpoints protegidos exigem o `accessToken` no cabeçalho `Authorization`:
 Authorization: Bearer <accessToken>
 ```
 
-Quando o `accessToken` expira, o frontend deve chamar [`POST /auth/refresh`](./autenticacao.md#post-authrefresh) com o `refreshToken`. Esse endpoint retorna um novo par de tokens e permite manter a sessão ativa de forma controlada.
+Quando o `accessToken` expira, o frontend deve chamar [`POST /autenticacao/atualizar-token`](./autenticacao.md#post-autenticacaoatualizar-token) com o `refreshToken`. Esse endpoint retorna um novo par de tokens e permite manter a sessão ativa de forma controlada.
 
-O encerramento da sessão acontece em [`POST /auth/logout`](./autenticacao.md#post-authlogout), que revoga o `refreshToken` informado.
+O encerramento da sessão acontece em [`POST /autenticacao/sair`](./autenticacao.md#post-autenticacaosair), que revoga o `refreshToken` informado.
 
 ## Contratos de resposta
 
@@ -118,17 +126,17 @@ Endpoints públicos podem ser acessados sem `accessToken`.
 | Método | Endpoint | Documentação |
 |--------|----------|--------------|
 | GET | `/health` | Esta página |
-| POST | `/auth/login` | [Autenticação](./autenticacao.md#post-authlogin) |
-| POST | `/auth/refresh` | [Autenticação](./autenticacao.md#post-authrefresh) |
-| POST | `/auth/register` | [Alunos](./alunos.md#post-authregister) |
-| POST | `/auth/forgot-password` | [Autenticação](./autenticacao.md#post-authforgot-password) |
-| POST | `/auth/reset-password` | [Autenticação](./autenticacao.md#post-authreset-password) |
-| GET | `/auth/alunos/nickname-disponivel` | [Alunos](./alunos.md#get-authalunosnickname-disponivel) |
-| GET | `/auth/alunos/email-disponivel` | [Alunos](./alunos.md#get-authalunosemail-disponivel) |
-| GET | `/auth/alunos/nacionalidades` | [Alunos](./alunos.md#get-authalunosnacionalidades) |
-| GET | `/auth/alunos/opcoes-academicas` | [Alunos](./alunos.md#get-authalunosopcoes-academicas) |
-| GET | `/auth/localidades/estados` | [Localidades](./localidades.md#get-authlocalidadesestados) |
-| GET | `/auth/localidades/estados/:uf/cidades` | [Localidades](./localidades.md#get-authlocalidadesestadosufcidades) |
+| POST | `/autenticacao/login` | [Autenticação](./autenticacao.md#post-autenticacaologin) |
+| POST | `/autenticacao/atualizar-token` | [Autenticação](./autenticacao.md#post-autenticacaoatualizar-token) |
+| POST | `/autenticacao/cadastro` | [Alunos](./alunos.md#post-autenticacaocadastro) |
+| POST | `/autenticacao/recuperar-senha` | [Autenticação](./autenticacao.md#post-autenticacaorecuperar-senha) |
+| POST | `/autenticacao/redefinir-senha` | [Autenticação](./autenticacao.md#post-autenticacaoredefinir-senha) |
+| GET | `/autenticacao/alunos/nickname-disponivel` | [Alunos](./alunos.md#get-autenticacaoalunosnickname-disponivel) |
+| GET | `/autenticacao/alunos/email-disponivel` | [Alunos](./alunos.md#get-autenticacaoalunosemail-disponivel) |
+| GET | `/autenticacao/alunos/nacionalidades` | [Alunos](./alunos.md#get-autenticacaoalunosnacionalidades) |
+| GET | `/autenticacao/alunos/opcoes-academicas` | [Alunos](./alunos.md#get-autenticacaoalunosopcoes-academicas) |
+| GET | `/autenticacao/alunos/localidades/estados` | [Localidades](./localidades.md#get-autenticacaoalunoslocalidadesestados) |
+| GET | `/autenticacao/alunos/localidades/estados/:uf/cidades` | [Localidades](./localidades.md#get-autenticacaoalunoslocalidadesestadosufcidades) |
 
 ## Endpoints autenticados
 
@@ -136,11 +144,11 @@ Endpoints autenticados exigem `Authorization: Bearer <accessToken>`.
 
 | Método | Endpoint | Documentação |
 |--------|----------|--------------|
-| GET | `/auth/me` | [Autenticação](./autenticacao.md#get-authme) |
-| POST | `/auth/logout` | [Autenticação](./autenticacao.md#post-authlogout) |
-| GET | `/admin/users` | [Administração](./admin.md#get-adminusers) |
-| GET | `/admin/users/:id` | [Administração](./admin.md#get-adminusersid) |
-| PATCH | `/admin/users/:id/status` | [Administração](./admin.md#patch-adminusersidstatus) |
+| GET | `/autenticacao/usuario-atual` | [Autenticação](./autenticacao.md#get-autenticacaousuario-atual) |
+| POST | `/autenticacao/sair` | [Autenticação](./autenticacao.md#post-autenticacaosair) |
+| GET | `/admin/usuarios` | [Administração](./admin.md#get-adminusuarios) |
+| GET | `/admin/usuarios/:id` | [Administração](./admin.md#get-adminusuariosid) |
+| PATCH | `/admin/usuarios/:id/status` | [Administração](./admin.md#patch-adminusuariosidstatus) |
 | POST | `/exemplos` | [Exemplos](./exemplos.md#post-exemplos) |
 | GET | `/exemplos` | [Exemplos](./exemplos.md#get-exemplos) |
 | GET | `/exemplos/:id` | [Exemplos](./exemplos.md#get-exemplosid) |
@@ -150,3 +158,4 @@ Endpoints autenticados exigem `Authorization: Bearer <accessToken>`.
 | Data | Versão | Descrição | Autor(es) |
 |------|--------|-----------|-----------|
 | 04/05/2026 | 1.0 | Criação da documentação dos endpoints da API | [Arthur Carneiro](https://github.com/trindadea) |
+| 05/05/2026 | 1.1 | Atualização para refletir o BFF como porta de entrada pública e mencionar o placeholder `/api/v1/ia/*` (PRD: Migração para Arquitetura com BFF) | [Miguel Moreira](https://github.com/miguelmsoliveira) |

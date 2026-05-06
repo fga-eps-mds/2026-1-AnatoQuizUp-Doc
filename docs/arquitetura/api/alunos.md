@@ -8,7 +8,7 @@ Eles permitem registrar um aluno, validar disponibilidade de email e nickname e 
 
 ---
 
-## **POST** /auth/register
+## **POST** /autenticacao/cadastro
 
 **Descrição:** cadastra um novo aluno.
 
@@ -52,7 +52,7 @@ Este endpoint cria a conta de um aluno com os dados pessoais, acadêmicos e cred
 
 ---
 
-## **GET** /auth/alunos/nickname-disponivel
+## **GET** /autenticacao/alunos/nickname-disponivel
 
 **Descrição:** verifica se um nickname pode ser usado.
 
@@ -80,7 +80,7 @@ Este endpoint consulta se já existe usuário usando o nickname informado. Ele �
 
 ---
 
-## **GET** /auth/alunos/email-disponivel
+## **GET** /autenticacao/alunos/email-disponivel
 
 **Descrição:** verifica se um email pode ser usado.
 
@@ -108,7 +108,7 @@ Este endpoint consulta se já existe usuário cadastrado com o email informado. 
 
 ---
 
-## **GET** /auth/alunos/nacionalidades
+## **GET** /autenticacao/alunos/nacionalidades
 
 **Descrição:** lista nacionalidades disponíveis para cadastro.
 
@@ -127,7 +127,7 @@ Este endpoint retorna uma lista de nacionalidades usadas para preencher o campo 
 
 ---
 
-## **GET** /auth/alunos/opcoes-academicas
+## **GET** /autenticacao/alunos/opcoes-academicas
 
 **Descrição:** lista opções acadêmicas usadas no cadastro.
 
