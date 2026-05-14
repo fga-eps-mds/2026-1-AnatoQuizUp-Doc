@@ -4,76 +4,90 @@
 
 ### Frontend
 
-Único responsável pelas interações com o usuário.
+Unico responsavel pelas interacoes com o usuario.
 
-- Realiza chamadas ao **BFF** via API REST (não acessa o Backend diretamente)
-- Gerencia estado da interface e interações do usuário
+- Realiza chamadas ao **BFF** via API REST.
+- Nao acessa Backend/Auth, Quiz-Service, AI ou bancos diretamente.
+- Gerencia estado da interface e interacoes do usuario.
 
-**React**
-
-O React é uma biblioteca que será utilizada como base para a construção da interface da aplicação, permitindo o desenvolvimento de componentes reutilizáveis e dinâmicos. Sua abordagem baseada em componentes facilita a organização do código e melhora a manutenção do sistema em relação ao desenvolvimento tradicional utilizando HTML, CSS e Javascript.
-
-**Vite**
-
-Vite é uma ferramenta de desenvolvimento e build para frontends de aplicações web. Ele possui um sistema que permite um menor tempo de espera durante o desenvolvimento, suporte ao React, server-side rendering (SSR), code-splitting e carregamento assíncrono e pode ter suas capacidades expandidas via plugin-ins. Além disso ele não é opinativo quanto a estrutura de pastas, o que permite maior liberdade na estruturação do código para seguir os padrões escolhidos.
-
-**Tailwind CSS**
-
-O Tailwind CSS será utilizado para a estilização da interface, adotando uma abordagem utilitária que permite a criação ágil de layouts responsivos e consistentes a partir de classes de estilo pequenas e descritivas que permitem controle sobre a identidade visual. Essa ferramenta reduz a necessidade de CSS customizado e facilita a padronização visual do projeto.
+Tecnologias principais: React, Vite e Tailwind CSS.
 
 ---
 
-### BFF (Node JS)
+### BFF (Node.js)
 
-Camada intermediária entre o Frontend e os serviços de domínio (Backend e AI). Atua como proxy 100% orquestração — não possui regras de negócio nem persistência própria.
+Camada intermediaria entre o Frontend e os servicos de dominio. Atua como proxy 100% orquestracao, sem regra de negocio e sem persistencia propria.
 
-- Recebe todas as chamadas do Frontend e é o único endereço público da plataforma do lado dos serviços
-- Valida o JWT (assinatura/expiração) antes de repassar adiante
-- Injeta `X-Internal-Token` (segredo compartilhado) e cabeçalhos auxiliares (`X-User-Id`, `X-User-Profile`) nas chamadas downstream
-- Roteia por path: `/api/v1/autenticacao/*`, `/api/v1/admin/*`, `/api/v1/exemplos/*` → Backend; `/api/v1/ia/*` → AI
-- Padroniza respostas de erro vindas do downstream
+- Recebe todas as chamadas do Frontend.
+- Valida JWT na borda.
+- Injeta `X-Internal-Token` e headers auxiliares (`X-User-Id`, `X-User-Papel`, `X-User-Status`).
+- Roteia `/api/v1/autenticacao/*`, `/api/v1/admin/*` e `/api/v1/exemplos/*` para Backend/Auth.
+- Roteia `/api/v1/questoes/*` para Quiz-Service.
+- Roteia `/api/v1/ia/*` para AI quando o servico existir.
 
-Tecnologias adotadas: Node.js 24, TypeScript, Express 5, Axios (cliente HTTP downstream), Pino (logs), Helmet, CORS, jsonwebtoken (validação local de access token), Zod (validação de variáveis de ambiente).
+Tecnologias adotadas: Node.js 24, TypeScript, Express 5, Axios, Pino, Helmet, CORS, jsonwebtoken, Zod, Jest e ESLint.
 
 ---
 
-### Backend (Node JS)
+### Backend/Auth (Node.js)
 
-Responsável pelas regras de negócio e processamento da aplicação.
+Servico privado responsavel por autenticacao, identidade, administracao de usuarios e persistencia do Auth DB.
 
-- Gerencia autenticação e autorização  
-- Controla o fluxo de criação, validação e resolução de questões  
-- Em produção fica em rede privada e aceita apenas requisições com `X-Internal-Token` válido vindas do BFF
+- Gerencia cadastro, login, refresh token, logout e recuperacao de senha.
+- Gerencia usuarios e aprovacao de professores.
+- Mantem o modulo `exemplo` como referencia tecnica atual.
+- Nao possui mais regras, models ou storage de questoes.
+
+Tecnologias adotadas: Node.js 24, TypeScript, Express 5, Prisma, PostgreSQL, Pino, Helmet, CORS, bcryptjs, jsonwebtoken, Zod, Brevo, Jest e ESLint.
+
+---
+
+### Quiz-Service (Node.js)
+
+Servico privado responsavel pelo dominio de quiz ja existente.
+
+- Gerencia temas, questoes, alternativas e resolucoes.
+- Mantem storage de imagens de questoes via MinIO/S3.
+- Usa banco proprio (`Quiz DB`).
+- Valida JWT localmente com `JWT_SECRET_KEY`.
+- Autoriza fluxos de gestao por `papel` (`PROFESSOR` ou `ADMINISTRADOR`) e `status`.
+
+Tecnologias adotadas: Node.js 24, TypeScript, Express 5, Prisma, PostgreSQL, MinIO/S3, Pino, Helmet, CORS, jsonwebtoken, Zod, Jest, SonarCloud e ESLint.
 
 ---
 
 ### AI Service (reservado)
 
-Serviço reservado para os módulos de inteligência artificial (geração de questões, geração de imagens anatômicas, chatbot educacional). Permanece **vazio** nesta release; será iniciado em semestres futuros. Quando habilitado, ficará em rede privada como o Backend.
+Servico reservado para modulos futuros de inteligencia artificial, como geracao de questoes, imagens anatomicas e chatbot educacional. Permanece sem feature nesta etapa, mas a arquitetura ja reserva banco proprio futuro.
 
 ---
 
-### Banco de Dados (PostgreSQL)
+### Bancos de Dados
 
-- Armazena dados de usuários  
-- Armazena questões e seus estados
-- Registra respostas e desempenho dos estudantes  
+Cada servico de dominio possui banco proprio.
+
+| Banco | Dono | Dados |
+|-------|------|-------|
+| Auth DB | Backend/Auth | Usuarios, refresh tokens, tokens de redefinicao e dados administrativos |
+| Quiz DB | Quiz-Service | Temas, questoes, alternativas, resolucoes e metadados de quiz |
+| AI DB futuro | AI Service | Embeddings, conversas, prompts e metadados de IA quando existir |
 
 ---
 
-## Referências
+## Referencias
 
-> React. Disponível em: <https://react.dev>. Acesso em: 13 abr. 2026.
+> React. Disponivel em: <https://react.dev>. Acesso em: 13 abr. 2026.
 
-> Vite Docs. Disponível em: <https://vite.dev/guide/>. Acesso em: 13 abr. 2026.
+> Vite Docs. Disponivel em: <https://vite.dev/guide/>. Acesso em: 13 abr. 2026.
 
-> O que é Tailwind CSS. Disponível em: <https://tailwindcss.com.br/guia-tailwind/o-que-e-tailwind-css>. Acesso em: 13 abr. 2026. 
+> O que e Tailwind CSS. Disponivel em: <https://tailwindcss.com.br/guia-tailwind/o-que-e-tailwind-css>. Acesso em: 13 abr. 2026.
 
-## Histórico de Versão
+## Historico de Versao
 
-| Data   | Versão | Descrição | Autor(es) |
-|--------|--------|-----------|-----------|
-| 10/04/2026 | 1.0 | Criação do documento de arquitetura | [Caio Santos](https://github.com/caiobsantos) | 
-| 13/04/2026 | 1.1 | Adicionando tecnologias a serem utilizadas no frontend | [João Vitor](https://github.com/Joa0V) | 
-| 26/04/2026 | 1.2 | Reorganização da seção de arquitetura, mantendo em tecnologias apenas o conteúdo relacionado à stack utilizada | [Ana Catarina](https://github.com/an4catarina) |
-| 05/05/2026 | 1.3 | Inclusão do BFF e do AI Service na descrição da stack (PRD: Migração para Arquitetura com BFF) | [Miguel Moreira](https://github.com/miguelmsoliveira) |
+| Data | Versao | Descricao | Autor(es) |
+|------|--------|-----------|-----------|
+| 10/04/2026 | 1.0 | Criacao do documento de arquitetura | [Caio Santos](https://github.com/caiobsantos) |
+| 13/04/2026 | 1.1 | Adicionando tecnologias do frontend | [Joao Vitor](https://github.com/Joa0V) |
+| 26/04/2026 | 1.2 | Reorganizacao da secao de arquitetura | [Ana Catarina](https://github.com/an4catarina) |
+| 05/05/2026 | 1.3 | Inclusao do BFF e do AI Service na stack | [Miguel Moreira](https://github.com/miguelmsoliveira) |
+| 13/05/2026 | 2.0 | Atualizacao para Backend/Auth, Quiz-Service e bancos por servico | Miguel Moreira |

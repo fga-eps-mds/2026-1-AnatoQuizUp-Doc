@@ -1,73 +1,73 @@
 site_name: AnatoQuizUp
-site_description: AnatoQuizUp é um jogo de perguntas e respostas sobre anatomia humana, desenvolvido para ajudar estudantes de medicina a aprenderem de forma divertida e interativa.
+site_description: AnatoQuizUp e um jogo de perguntas e respostas sobre anatomia humana, desenvolvido para ajudar estudantes de medicina a aprenderem de forma divertida e interativa.
 
 theme:
   name: material
   language: pt-BR
   features:
-      - navigation.tabs
-    
+    - navigation.tabs
+
 nav:
-  - Início: index.md
+  - Inicio: index.md
 
   - Produto:
-      - Visão do Produto: produto/visao.md
+      - Visao do Produto: produto/visao.md
       - Lean Inception: produto/lean_inception.md
-      - Protótipos: prototipo/figma.md
+      - Prototipos: prototipo/figma.md
 
   - Planejamento:
-      - Visão Geral:
+      - Visao Geral:
           - Roadmap e Releases: processo/roadmap.md
           - Datas Importantes: processo/datas-importantes.md
       - Backlog:
-          - Visão Geral: backlog/overview.md
+          - Visao Geral: backlog/overview.md
           - Requisitos: backlog/requisitos.md
           - Release Major 1: backlog/release-major-1.md
           - Release Major 2: backlog/release-major-2.md
           - Release Major 3: backlog/release-major-3.md
       - Acompanhamento por Sprint:
-          - Visão Geral das Sprints: processo/sprints.md
+          - Visao Geral das Sprints: processo/sprints.md
           - Sprint 1:
               - EVM: processo/evm-sprint1.md
       - Controle:
           - Matriz de Riscos: processo/riscos.md
 
   - Arquitetura:
-      - Visão Geral: arquitetura/visao_geral.md
+      - Visao Geral: arquitetura/visao_geral.md
       - Tecnologias: arquitetura/tecnologias.md
-      - Decisões Arquiteturais: arquitetura/decisoes.md
-      - Visões Arquiteturais:
-          - Visão Lógica: arquitetura/visoes/logica.md
-          - Visão de Processos: arquitetura/visoes/processos.md
-          - Visão de Implementação: arquitetura/visoes/implementacao.md
-          - Visão de Implantação: arquitetura/visoes/implantacao.md
+      - Decisoes Arquiteturais: arquitetura/decisoes.md
+      - Visoes Arquiteturais:
+          - Visao Logica: arquitetura/visoes/logica.md
+          - Visao de Processos: arquitetura/visoes/processos.md
+          - Visao de Implementacao: arquitetura/visoes/implementacao.md
+          - Visao de Implantacao: arquitetura/visoes/implantacao.md
       - Banco de Dados:
           - Modelo V1: arquitetura/banco-de-dados/v1.md
       - Endpoints e Contratos:
-          - Visão Geral: arquitetura/api/visao-geral.md
-          - Autenticação: arquitetura/api/autenticacao.md
+          - Visao Geral: arquitetura/api/visao-geral.md
+          - Autenticacao: arquitetura/api/autenticacao.md
           - Alunos: arquitetura/api/alunos.md
           - Localidades: arquitetura/api/localidades.md
-          - Administração: arquitetura/api/admin.md
+          - Administracao: arquitetura/api/admin.md
           - Exemplos: arquitetura/api/exemplos.md
           - Erros e Contratos: arquitetura/api/erros.md
 
   - Qualidade:
-      - Métricas e Dashboard: qualidade/qualidade.md
+      - Metricas e Dashboard: qualidade/qualidade.md
 
-  - Gestão:
+  - Gestao:
       - Metodologia de trabalho: processo/metodologia.md
-      - Comunicação: processo/comunicacao.md
+      - Comunicacao: processo/comunicacao.md
       - Quadro de Conhecimento: processo/quadro-conhecimento.md
-      - Decisões do Projeto: decisoes/decisoes.md
+      - Decisoes do Projeto: decisoes/decisoes.md
 
   - Registro:
-      - Reuniões: processo/reunioes.md
+      - Reunioes: processo/reunioes.md
 
-  - Contribuição:
-      - Código de Conduta: contribuicao/codigo_conduta.md
-      - Política de Branchs: contribuicao/politica_branchs.md
-      - Política de Commits: contribuicao/politica_commits.md
+  - Contribuicao:
+      - Codigo de Conduta: contribuicao/codigo_conduta.md
+      - Politica de Branchs: contribuicao/politica_branchs.md
+      - Politica de Commits: contribuicao/politica_commits.md
 
 markdown_extensions:
   - admonition
