@@ -2,40 +2,62 @@
 
 ## Objetivo
 
-Esta seção documenta os endpoints REST públicos do AnatoQuizUp. Do ponto de vista do consumidor (Frontend), **a API pública é o BFF** — ele é o único endereço externo. Os contratos descritos aqui (caminho, payload, status, formato de erro) continuam válidos: o BFF preserva path e contrato; a implementação real fica no Backend (`fga-eps-mds/2026-1-AnatoQuizUp-Backend`).
+Esta seção documenta os endpoints REST públicos do AnatoQuizUp. Do ponto de vista do consumidor, **a API pública é o BFF**. O Frontend chama apenas o BFF; o BFF preserva paths e contratos e encaminha internamente para Backend/Auth, Quiz-Service ou AI.
 
-A API usa versionamento no caminho. Todos os endpoints de negócio documentados aqui partem do prefixo `/api/v1`. Por isso, nas páginas específicas, os títulos omitem esse prefixo para reduzir repetição. Quando a documentação mostra `POST /autenticacao/login`, o caminho completo é `POST /api/v1/autenticacao/login`.
+A API usa versionamento no caminho. Todos os endpoints de negócio partem do prefixo `/api/v1`. Quando uma página específica mostra `POST /autenticacao/login`, o caminho completo é `POST /api/v1/autenticacao/login`.
 
-Endpoints `GET /health` (BFF) e `/api/v1/ia/*` ficam fora do padrão geral: o primeiro é o health check do próprio BFF; o segundo é reservado ao serviço de AI e atualmente responde **503 `IA_INDISPONIVEL`** enquanto o serviço estiver vazio (placeholder).
+## Destinos internos
+
+| Prefixo público | Destino interno | Observação |
+|-----------------|-----------------|------------|
+| `/api/v1/autenticacao/*` | Backend/Auth | Login, cadastro, refresh, senha e usuário atual |
+| `/api/v1/admin/*` | Backend/Auth | Administração de usuários |
+| `/api/v1/exemplos/*` | Backend/Auth | Módulo técnico mantido nesta etapa |
+| `/api/v1/questoes/*` | Quiz-Service | Gestão de questões migrada do Backend |
+| `/api/v1/ia/*` | AI Service futuro | 503 enquanto `AI_URL` estiver vazio |
+| `/health` | BFF | Health check público do BFF |
 
 ## Execução local
 
-Localmente, sobem três processos: Backend, BFF e Frontend.
+Localmente, sobem quatro processos principais: Backend/Auth, Quiz-Service, BFF e Frontend.
 
-### Backend (`2026-1-AnatoQuizUp-Backend`)
+### Backend/Auth (`2026-1-AnatoQuizUp-Backend`)
 
 ```bash
 cp .env.example .env
-# Preencher INTERNAL_TOKEN (mesmo valor do BFF)
+# Preencher INTERNAL_TOKEN e JWT_SECRET_KEY
 npm run db:up
 npm run prisma:generate
-npm run prisma:migrate -- --name init
+npm run prisma:migrate
 npm run prisma:seed
 npm run dev
 ```
 
-Backend disponível em `http://localhost:3333`. Aceita requisições apenas com header `X-Internal-Token` válido (rota `GET /health` é a exceção).
+Backend/Auth disponível em `http://localhost:3333`. Aceita chamadas `/api/*` apenas com `X-Internal-Token` válido.
+
+### Quiz-Service (`2026-1-AnatoQuizUp-Quiz-Service`)
+
+```bash
+cp .env.example .env
+# Preencher INTERNAL_TOKEN e JWT_SECRET_KEY iguais aos do BFF/Backend
+npm run db:up
+npm run prisma:generate
+npm run prisma:migrate
+npm run dev
+```
+
+Quiz-Service disponível em `http://localhost:3334`. Aceita chamadas `/api/*` apenas com `X-Internal-Token` válido e valida o JWT para rotas de questões.
 
 ### BFF (`2026-1-AnatoQuizUp-BFF`)
 
 ```bash
 cp .env.example .env
-# Preencher INTERNAL_TOKEN e JWT_SECRET_KEY (mesmos valores do Backend)
+# Preencher BACKEND_URL, QUIZ_SERVICE_URL, INTERNAL_TOKEN e JWT_SECRET_KEY
 npm ci
 npm run dev
 ```
 
-BFF disponível em `http://localhost:4000`. É o endereço usado pelo Frontend.
+BFF disponível em `http://localhost:4000`. Este é o endereço usado pelo Frontend.
 
 ### Caminho público
 
@@ -43,38 +65,15 @@ BFF disponível em `http://localhost:4000`. É o endereço usado pelo Frontend.
 http://localhost:4000/api/v1
 ```
 
-Exemplo completo:
-
-```http
-POST http://localhost:4000/api/v1/autenticacao/login
-```
-
 ## Autenticação
 
-A API usa tokens JWT para controlar sessões autenticadas. JWT é um token assinado pelo backend que carrega informações mínimas do usuário, como identificador e papel. Como ele é assinado, a API consegue validar se o token foi emitido pelo próprio servidor e se ainda pode ser aceito.
+Endpoints protegidos exigem `Authorization: Bearer <accessToken>`. O access token é assinado pelo Backend/Auth e carrega claims como `sub`, `papel` e `status`.
 
-O login é feito pelo endpoint [`POST /autenticacao/login`](./autenticacao.md#post-autenticacaologin). Quando as credenciais estão corretas, a API retorna dois tokens:
-
-- `accessToken`: usado nas requisições protegidas;
-- `refreshToken`: usado para renovar a sessão sem exigir novo login.
-
-Endpoints protegidos exigem o `accessToken` no cabeçalho `Authorization`:
-
-```http
-Authorization: Bearer <accessToken>
-```
-
-Quando o `accessToken` expira, o frontend deve chamar [`POST /autenticacao/atualizar-token`](./autenticacao.md#post-autenticacaoatualizar-token) com o `refreshToken`. Esse endpoint retorna um novo par de tokens e permite manter a sessão ativa de forma controlada.
-
-O encerramento da sessão acontece em [`POST /autenticacao/sair`](./autenticacao.md#post-autenticacaosair), que revoga o `refreshToken` informado.
+O BFF valida assinatura e expiração antes de repassar. Backend/Auth e Quiz-Service também validam o token localmente nos fluxos protegidos. Os headers `X-User-*` enviados pelo BFF são auxiliares e não substituem o JWT como fonte de autorização.
 
 ## Contratos de resposta
 
-Os endpoints da API usam contratos padronizados para sucesso, paginação e erro. Isso permite que o frontend trate respostas de forma previsível, sem precisar criar um formato diferente para cada tela.
-
 ### Sucesso
-
-Operações que retornam um recurso único usam o formato:
 
 ```json
 {
@@ -83,11 +82,7 @@ Operações que retornam um recurso único usam o formato:
 }
 ```
 
-O campo `mensagem` descreve o resultado da operação. O campo `dados` contém o recurso retornado pela API.
-
 ### Paginação
-
-Listagens paginadas usam o formato:
 
 ```json
 {
@@ -101,11 +96,7 @@ Listagens paginadas usam o formato:
 }
 ```
 
-O campo `dados` contém os itens da página atual. O campo `metadados` informa a página, o limite utilizado, o total de registros encontrados e o total de páginas disponíveis.
-
 ### Erro
-
-Erros usam o formato:
 
 ```json
 {
@@ -117,11 +108,7 @@ Erros usam o formato:
 }
 ```
 
-O campo `codigo` é o valor mais importante para tratamento programático no frontend. A lista completa de códigos e status HTTP está em [Erros e Contratos](./erros.md).
-
 ## Endpoints públicos
-
-Endpoints públicos podem ser acessados sem `accessToken`.
 
 | Método | Endpoint | Documentação |
 |--------|----------|--------------|
@@ -140,22 +127,30 @@ Endpoints públicos podem ser acessados sem `accessToken`.
 
 ## Endpoints autenticados
 
-Endpoints autenticados exigem `Authorization: Bearer <accessToken>`.
+| Método | Endpoint | Destino |
+|--------|----------|---------|
+| GET | `/autenticacao/usuario-atual` | Backend/Auth |
+| POST | `/autenticacao/sair` | Backend/Auth |
+| GET | `/admin/usuarios` | Backend/Auth |
+| GET | `/admin/usuarios/:id` | Backend/Auth |
+| PATCH | `/admin/usuarios/:id/status` | Backend/Auth |
+| POST | `/exemplos` | Backend/Auth |
+| GET | `/exemplos` | Backend/Auth |
+| GET | `/exemplos/:id` | Backend/Auth |
+| GET | `/questoes` | Quiz-Service |
+| GET | `/questoes/busca` | Quiz-Service |
+| GET | `/questoes/:id` | Quiz-Service |
+| POST | `/questoes` | Quiz-Service |
+| PUT | `/questoes/:id` | Quiz-Service |
+| DELETE | `/questoes/:id` | Quiz-Service |
 
-| Método | Endpoint | Documentação |
-|--------|----------|--------------|
-| GET | `/autenticacao/usuario-atual` | [Autenticação](./autenticacao.md#get-autenticacaousuario-atual) |
-| POST | `/autenticacao/sair` | [Autenticação](./autenticacao.md#post-autenticacaosair) |
-| GET | `/admin/usuarios` | [Administração](./admin.md#get-adminusuarios) |
-| GET | `/admin/usuarios/:id` | [Administração](./admin.md#get-adminusuariosid) |
-| PATCH | `/admin/usuarios/:id/status` | [Administração](./admin.md#patch-adminusuariosidstatus) |
-| POST | `/exemplos` | [Exemplos](./exemplos.md#post-exemplos) |
-| GET | `/exemplos` | [Exemplos](./exemplos.md#get-exemplos) |
-| GET | `/exemplos/:id` | [Exemplos](./exemplos.md#get-exemplosid) |
+As rotas de `/questoes` documentam o contrato já usado pelo Web para gestão de banco de questões. Rotas futuras de jogo/resolução por aluno devem ser especificadas separadamente quando forem implementadas.
 
 ## Histórico de Versão
 
 | Data | Versão | Descrição | Autor(es) |
 |------|--------|-----------|-----------|
 | 04/05/2026 | 1.0 | Criação da documentação dos endpoints da API | [Arthur Carneiro](https://github.com/trindadea) |
-| 05/05/2026 | 1.1 | Atualização para refletir o BFF como porta de entrada pública e mencionar o placeholder `/api/v1/ia/*` (PRD: Migração para Arquitetura com BFF) | [Miguel Moreira](https://github.com/miguelmsoliveira) |
+| 05/05/2026 | 1.1 | Atualização para refletir o BFF como porta de entrada pública | [Miguel Moreira](https://github.com/miguelmsoliveira) |
+| 13/05/2026 | 2.0 | Atualização para roteamento Backend/Auth, Quiz-Service e AI futuro | Miguel Moreira |
+| 13/05/2026 | 2.1 | Restauração dos acentos do português brasileiro | Miguel Moreira |

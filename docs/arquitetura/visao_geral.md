@@ -1,53 +1,60 @@
 # Visão Geral da Arquitetura
 
-O AnatoQuizUp é uma plataforma web de quiz de anatomia composta por **quatro contêineres principais**: **frontend**, **BFF (Backend-For-Frontend)**, **backend** e **banco de dados**. Há ainda um quinto serviço, **AI**, reservado para semestres futuros. Essa separação organiza a solução em camadas com responsabilidades claras e permite que interface, ponto de entrada, regras de negócio e persistência evoluam de forma independente.
+O AnatoQuizUp é uma plataforma web de quiz de anatomia organizada em serviços com responsabilidades separadas. O Frontend consome somente o BFF. O BFF é o único endereço público da camada de serviços e roteia chamadas para Backend/Auth, Quiz-Service ou AI conforme o caminho da URL.
 
-O frontend é responsável pela experiência do usuário no navegador. O BFF é o ponto de entrada público da plataforma e roteia chamadas para o backend ou para o serviço de AI conforme o caminho da URL, validando o JWT e injetando um token interno compartilhado. O backend concentra as regras de negócio, autenticação, autorização e exposição da API REST. O banco de dados persiste usuários, sessões, tokens e, nas próximas evoluções, questões, respostas e dados de desempenho.
+A arquitetura atual possui bancos separados por serviço:
+
+- **Backend/Auth DB:** usuários, refresh tokens, tokens de redefinição e dados administrativos.
+- **Quiz DB:** temas, questões, alternativas, resoluções e metadados de quiz.
+- **AI DB futuro:** dados de IA quando o serviço for implementado.
 
 ## Diagrama geral
 
 ```mermaid
 flowchart LR
     user(["Usuário"])
-    web["Frontend Web<br/>React + Vite<br/>(Vercel — público)"]
-    bff["BFF<br/>Node + Express<br/>(Railway — público)"]
-    backend["Backend<br/>Node + Express + Prisma<br/>(Railway — privado)"]
-    ai["AI Service<br/>(reservado, Railway — privado)"]
-    db["PostgreSQL 18<br/>(Railway)"]
+    web["Frontend Web<br/>React + Vite<br/>(público)"]
+    bff["BFF<br/>Node + Express<br/>(público)"]
+    auth["Backend/Auth<br/>Express + Prisma<br/>(privado)"]
+    quiz["Quiz-Service<br/>Express + Prisma<br/>(privado)"]
+    ai["AI Service<br/>(futuro, privado)"]
+    authDb["Auth DB<br/>PostgreSQL"]
+    quizDb["Quiz DB<br/>PostgreSQL"]
+    aiDb["AI DB<br/>futuro"]
+    storage["Storage de imagens<br/>MinIO/S3"]
 
     user --> web
-    web -->|HTTPS REST<br/>Bearer JWT| bff
-    bff -->|HTTP REST<br/>Bearer JWT + X-Internal-Token<br/>(rede privada)| backend
-    bff -.->|HTTP REST<br/>X-Internal-Token<br/>(futuro)| ai
-    backend -->|DATABASE_URL| db
+    web -->|"HTTPS REST<br/>Bearer JWT"| bff
+    bff -->|"/autenticacao, /admin, /exemplos<br/>Bearer JWT + X-Internal-Token"| auth
+    bff -->|"/questoes<br/>Bearer JWT + X-Internal-Token"| quiz
+    bff -.->|"/ia<br/>X-Internal-Token"| ai
+    auth --> authDb
+    quiz --> quizDb
+    quiz --> storage
+    ai -.-> aiDb
 ```
 
-## Contêineres principais
+## Componentes
 
 ### Frontend Web
 
-Aplicação React responsável por telas, formulários, navegação, estado de autenticação no cliente e comunicação com o BFF. A organização interna segue Feature-Sliced Design, separando `app`, `pages`, `widgets`, `features`, `entities` e `shared`. Acessa apenas o BFF — nunca o backend ou o AI diretamente.
+Aplicação React responsável por telas, formulários, navegação e estado de autenticação no cliente. Acessa apenas o BFF, nunca Backend/Auth, Quiz-Service ou AI diretamente.
 
-### BFF (Backend-For-Frontend)
+### BFF
 
-Aplicação Node.js com Express que atua como **proxy 100% orquestração** entre o frontend e os serviços de domínio. Não tem regras de negócio próprias nem persistência. Suas responsabilidades:
+Proxy de orquestração sem banco e sem regra de negócio. Valida JWT na borda, injeta `X-Internal-Token`, repassa `Authorization` e headers auxiliares (`X-User-Id`, `X-User-Papel`, `X-User-Status`) e preserva o contrato público usado pelo Web.
 
-- Validar o JWT (assinatura/expiração) antes de repassar.
-- Injetar o header `X-Internal-Token` (segredo compartilhado) e cabeçalhos auxiliares (`X-User-Id`, `X-User-Profile`, `X-User-Status`) nas chamadas downstream.
-- Rotear por path: `/api/v1/autenticacao/*`, `/api/v1/admin/*`, `/api/v1/exemplos/*` → Backend; `/api/v1/ia/*` → AI.
-- Padronizar respostas de erro vindas do downstream.
+### Backend/Auth
 
-### Backend API
+Serviço privado responsável por autenticação, identidade, administração de usuários, exemplos técnicos e banco de autenticação. Não possui mais lógica, tabelas ou storage de questões.
 
-Aplicação Node.js com Express responsável pelos endpoints REST, validações, autenticação, autorização, regras de negócio e integração com o banco via Prisma. Os módulos de domínio seguem uma estrutura baseada em controller, service, repository, schemas, DTOs e rotas. **Em produção fica em rede privada** e aceita apenas requisições com `X-Internal-Token` válido (defesa em profundidade combinada à validação de JWT).
+### Quiz-Service
+
+Serviço privado responsável pelo domínio de quiz já existente: temas, questões, alternativas, resoluções e infraestrutura de imagens de questões. Valida o JWT localmente com `JWT_SECRET_KEY`; os headers `X-User-*` são apenas informativos.
 
 ### AI Service
 
-Serviço reservado para semestres futuros, responsável por geração de questões, geração de imagens anatômicas e chatbot educacional. **Sem código nesta release** — os endpoints `/api/v1/ia/*` no BFF respondem 503 com código `IA_INDISPONIVEL` enquanto o serviço estiver vazio. Quando habilitado, ficará em rede privada como o backend.
-
-### Banco de Dados
-
-Banco PostgreSQL responsável pela persistência dos dados estruturados do sistema. Na base atual, armazena usuários, refresh tokens e tokens de redefinição de senha; futuramente também armazenará entidades relacionadas a questões, respostas e desempenho.
+Serviço reservado para semestres futuros. Permanece sem funcionalidade nesta etapa, mas a arquitetura já reserva banco próprio e roteamento pelo BFF.
 
 ## Visões detalhadas
 
@@ -61,9 +68,11 @@ Banco PostgreSQL responsável pela persistência dos dados estruturados do siste
 
 ## Histórico de Versão
 
-| Data   | Versão | Descrição | Autor(es) |
-|--------|--------|-----------|-----------|
+| Data | Versão | Descrição | Autor(es) |
+|------|--------|-----------|-----------|
 | 10/04/2026 | 1.0 | Criação do documento de arquitetura | [Caio Santos](https://github.com/caiobsantos) |
-| 26/04/2026 | 1.1 | Reorganização da seção de arquitetura, mantendo apenas a visão geral da solução | [Ana Catarina](https://github.com/an4catarina) |
-| 27/04/2026 | 1.2 | Atualização da visão geral com resumo dos contêineres e links para as visões arquiteturais | [Breno Fernandes](https://github.com/Brenofrds) |
-| 05/05/2026 | 1.3 | Atualização da arquitetura para refletir a introdução do BFF | [Miguel Moreira](https://github.com/miguelmsoliveira) |
+| 26/04/2026 | 1.1 | Reorganização da seção de arquitetura | [Ana Catarina](https://github.com/an4catarina) |
+| 27/04/2026 | 1.2 | Atualização da visão geral com resumo dos contêineres | [Breno Fernandes](https://github.com/Brenofrds) |
+| 05/05/2026 | 1.3 | Atualização para refletir a introdução do BFF | [Miguel Moreira](https://github.com/miguelmsoliveira) |
+| 13/05/2026 | 2.0 | Atualização para Backend/Auth, Quiz-Service e bancos por serviço | Miguel Moreira |
+| 13/05/2026 | 2.1 | Restauração dos acentos do português brasileiro | Miguel Moreira |

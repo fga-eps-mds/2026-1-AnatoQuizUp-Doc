@@ -5,8 +5,8 @@ theme:
   name: material
   language: pt-BR
   features:
-      - navigation.tabs
-    
+    - navigation.tabs
+
 nav:
   - Início: index.md
 
