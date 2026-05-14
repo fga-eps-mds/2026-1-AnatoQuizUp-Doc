@@ -1,20 +1,20 @@
-# Visao de Implantacao
+# Visão de Implantação
 
-A visao de implantacao mostra onde cada parte do sistema roda e como os servicos se comunicam. A topologia atual separa Backend/Auth e Quiz-Service, cada um com banco proprio.
+A visão de implantação mostra onde cada parte do sistema roda e como os serviços se comunicam. A topologia atual separa Backend/Auth e Quiz-Service, cada um com banco próprio.
 
-## Visao geral
+## Visão geral
 
 ```mermaid
 flowchart LR
-    frontend["Frontend<br/>Vercel (publico)"]
-    bff["BFF<br/>Railway (publico)"]
+    frontend["Frontend<br/>Vercel (público)"]
+    bff["BFF<br/>Railway (público)"]
     auth["Backend/Auth<br/>Railway (privado)"]
     quiz["Quiz-Service<br/>Railway (privado)"]
     ai["AI<br/>Railway (futuro, privado)"]
     authDb["Auth DB<br/>PostgreSQL Railway"]
     quizDb["Quiz DB<br/>PostgreSQL Railway"]
     aiDb["AI DB<br/>futuro"]
-    storage["MinIO/S3<br/>imagens de questoes"]
+    storage["MinIO/S3<br/>imagens de questões"]
 
     frontend -->|"API REST<br/>Bearer JWT"| bff
     bff -->|"/autenticacao, /admin, /exemplos<br/>X-Internal-Token"| auth
@@ -42,41 +42,42 @@ flowchart LR
 
 Em desenvolvimento, o Web continua chamando apenas `http://localhost:4000/api/v1`. O BFF decide o destino interno por path.
 
-## Producao planejada
+## Produção planejada
 
-| Parte | Servico planejado |
+| Parte | Serviço planejado |
 |-------|-------------------|
 | Frontend | Vercel |
-| BFF | Railway com dominio publico |
+| BFF | Railway com domínio público |
 | Backend/Auth | Railway em rede privada |
 | Quiz-Service | Railway em rede privada |
 | AI | Railway em rede privada, futuro |
 | Auth DB | PostgreSQL separado |
 | Quiz DB | PostgreSQL separado |
 | AI DB | PostgreSQL separado quando AI existir |
-| Storage de questoes | MinIO/S3 sob responsabilidade do Quiz-Service |
+| Storage de questões | MinIO/S3 sob responsabilidade do Quiz-Service |
 
-O Railway continua sendo a opcao preferida porque permite rede privada entre BFF e servicos internos. O Backend/Auth e o Quiz-Service tambem validam `X-Internal-Token`, entao chamadas diretas sem o token sao rejeitadas.
+O Railway continua sendo a opção preferida porque permite rede privada entre BFF e serviços internos. O Backend/Auth e o Quiz-Service também validam `X-Internal-Token`, então chamadas diretas sem o token são rejeitadas.
 
-## Variaveis essenciais
+## Variáveis essenciais
 
-| Variavel | Usada por | Observacao |
+| Variável | Usada por | Observação |
 |----------|-----------|------------|
 | `BACKEND_URL` | BFF | URL privada do Backend/Auth |
 | `QUIZ_SERVICE_URL` | BFF | URL privada do Quiz-Service |
 | `AI_URL` | BFF | Vazio enquanto AI for placeholder |
 | `JWT_SECRET_KEY` | BFF, Backend/Auth, Quiz-Service | Backend/Auth assina; BFF e Quiz-Service validam |
-| `INTERNAL_TOKEN` | BFF, Backend/Auth, Quiz-Service | BFF injeta; servicos internos validam |
-| `DATABASE_URL` | Backend/Auth, Quiz-Service, AI futuro | Cada servico usa sua propria URL de banco |
+| `INTERNAL_TOKEN` | BFF, Backend/Auth, Quiz-Service | BFF injeta; serviços internos validam |
+| `DATABASE_URL` | Backend/Auth, Quiz-Service, AI futuro | Cada serviço usa sua própria URL de banco |
 
 ## Alternativa
 
-Caso o custo do Railway nao seja aprovado, Render + Supabase continua sendo alternativa, mas com maior complexidade operacional e menor isolamento de rede privada. Nesse caso, `X-Internal-Token` fica ainda mais importante para proteger os servicos privados.
+Caso o custo do Railway não seja aprovado, Render + Supabase continua sendo alternativa, mas com maior complexidade operacional e menor isolamento de rede privada. Nesse caso, `X-Internal-Token` fica ainda mais importante para proteger os serviços privados.
 
-## Historico de Versao
+## Histórico de Versão
 
-| Data | Versao | Descricao | Autor(es) |
+| Data | Versão | Descrição | Autor(es) |
 |------|--------|-----------|-----------|
-| 27/04/2026 | 1.0 | Criacao da visao de implantacao | [Breno Fernandes](https://github.com/Brenofrds) |
-| 05/05/2026 | 1.1 | Atualizacao para refletir BFF publico e Backend/AI privados | [Miguel Moreira](https://github.com/miguelmsoliveira) |
-| 13/05/2026 | 2.0 | Atualizacao para Quiz-Service privado e bancos por servico | Miguel Moreira |
+| 27/04/2026 | 1.0 | Criação da visão de implantação | [Breno Fernandes](https://github.com/Brenofrds) |
+| 05/05/2026 | 1.1 | Atualização para refletir BFF público e Backend/AI privados | [Miguel Moreira](https://github.com/miguelmsoliveira) |
+| 13/05/2026 | 2.0 | Atualização para Quiz-Service privado e bancos por serviço | Miguel Moreira |
+| 13/05/2026 | 2.1 | Restauração dos acentos do português brasileiro | Miguel Moreira |

@@ -1,13 +1,13 @@
-# Visao Logica
+# Visão Lógica
 
-A visao logica descreve a decomposicao funcional do AnatoQuizUp em camadas e servicos de dominio. A regra principal e simples: o Frontend fala somente com o BFF; o BFF roteia; cada servico de dominio aplica suas proprias regras e persiste no seu proprio banco.
+A visão lógica descreve a decomposição funcional do AnatoQuizUp em camadas e serviços de domínio. A regra principal é simples: o Frontend fala somente com o BFF; o BFF roteia; cada serviço de domínio aplica suas próprias regras e persiste no seu próprio banco.
 
-## Organizacao geral
+## Organização geral
 
 - **Frontend Web:** interface usada por alunos, professores e administradores.
-- **BFF:** ponto de entrada publico; valida JWT na borda; injeta token interno; roteia chamadas.
-- **Backend/Auth:** autenticacao, identidade, administracao de usuarios e exemplos tecnicos.
-- **Quiz-Service:** questoes e logica de quiz ja existente.
+- **BFF:** ponto de entrada público; valida JWT na borda; injeta token interno; roteia chamadas.
+- **Backend/Auth:** autenticação, identidade, administração de usuários e exemplos técnicos.
+- **Quiz-Service:** questões e lógica de quiz já existente.
 - **AI Service:** reservado para funcionalidades futuras de IA.
 
 ## Frontend
@@ -16,45 +16,45 @@ O Frontend segue Feature-Sliced Design.
 
 | Camada | Responsabilidade |
 |--------|------------------|
-| `app` | Inicializacao da aplicacao, rotas, providers e estilos globais. |
-| `pages` | Telas acessadas pelo usuario. |
+| `app` | Inicialização da aplicação, rotas, providers e estilos globais. |
+| `pages` | Telas acessadas pelo usuário. |
 | `widgets` | Blocos maiores de interface. |
-| `features` | Funcionalidades do usuario, como login e gerenciamento de questoes. |
-| `entities` | Modelos centrais do dominio. |
-| `shared` | Componentes genericos, cliente HTTP, configuracoes e utilitarios. |
+| `features` | Funcionalidades do usuário, como login e gerenciamento de questões. |
+| `entities` | Modelos centrais do domínio. |
+| `shared` | Componentes genéricos, cliente HTTP, configurações e utilitários. |
 
 ## BFF
 
-O BFF e um proxy de orquestracao, sem persistencia e sem regra de negocio.
+O BFF é um proxy de orquestração, sem persistência e sem regra de negócio.
 
 | Componente | Responsabilidade |
 |------------|------------------|
-| Rotas | Definem prefixos publicos (`/api/v1/autenticacao`, `/api/v1/admin`, `/api/v1/exemplos`, `/api/v1/questoes`, `/api/v1/ia`). |
+| Rotas | Definem prefixos públicos (`/api/v1/autenticacao`, `/api/v1/admin`, `/api/v1/exemplos`, `/api/v1/questoes`, `/api/v1/ia`). |
 | Middlewares | Validam JWT, filtram headers, injetam `X-Internal-Token` e tratam erros. |
 | Clientes HTTP | `backend.client`, `quiz.client` e `ai.client`. |
 
 ## Backend/Auth
 
-O Backend/Auth e privado e concentra identidade.
+O Backend/Auth é privado e concentra identidade.
 
-| Modulo | Responsabilidade |
+| Módulo | Responsabilidade |
 |--------|------------------|
-| `auth` | Cadastro, login, logout, refresh token e recuperacao de senha. |
-| `admin` | Administracao de usuarios e aprovacao de professores. |
-| `exemplo` | Modulo tecnico de referencia mantido nesta etapa. |
+| `auth` | Cadastro, login, logout, refresh token e recuperação de senha. |
+| `admin` | Administração de usuários e aprovação de professores. |
+| `exemplo` | Módulo técnico de referência mantido nesta etapa. |
 
 ## Quiz-Service
 
-O Quiz-Service e privado e concentra o dominio de quiz.
+O Quiz-Service é privado e concentra o domínio de quiz.
 
-| Modulo | Responsabilidade |
+| Módulo | Responsabilidade |
 |--------|------------------|
-| `questoes` | CRUD de questoes, alternativas, temas e resolucoes migradas do Backend. |
-| `storage` | Infraestrutura de imagens de questoes via MinIO/S3. |
+| `questoes` | CRUD de questões, alternativas, temas e resoluções migradas do Backend. |
+| `storage` | Infraestrutura de imagens de questões via MinIO/S3. |
 
-O Quiz-Service valida o JWT localmente com `JWT_SECRET_KEY`. Autorizacao usa `papel` e `status` vindos do JWT assinado; `X-User-*` e apenas apoio para observabilidade.
+O Quiz-Service valida o JWT localmente com `JWT_SECRET_KEY`. Autorização usa `papel` e `status` vindos do JWT assinado; `X-User-*` é apenas apoio para observabilidade.
 
-## Relacao entre as camadas
+## Relação entre as camadas
 
 ```mermaid
 sequenceDiagram
@@ -73,21 +73,22 @@ sequenceDiagram
         A->>DBAuth: Consulta ou grava
         DBAuth-->>A: Retorna dados
         A-->>B: Resposta
-    else rota de questoes
+    else rota de questões
         B->>Q: Repassa com Authorization + X-Internal-Token
         Q->>Q: Valida JWT e papel/status
         Q->>DBQuiz: Consulta ou grava
         DBQuiz-->>Q: Retorna dados
         Q-->>B: Resposta
     end
-    B-->>F: Resposta preservando contrato publico
+    B-->>F: Resposta preservando contrato público
 ```
 
-## Historico de Versao
+## Histórico de Versão
 
-| Data | Versao | Descricao | Autor(es) |
+| Data | Versão | Descrição | Autor(es) |
 |------|--------|-----------|-----------|
-| 27/04/2026 | 1.0 | Criacao da visao logica da arquitetura | [Breno Fernandes](https://github.com/Brenofrds) |
-| 27/04/2026 | 1.1 | Simplificacao da visao logica | [Breno Fernandes](https://github.com/Brenofrds) |
-| 05/05/2026 | 1.2 | Inclusao do BFF como camada logica entre Frontend e Backend | [Miguel Moreira](https://github.com/miguelmsoliveira) |
-| 13/05/2026 | 2.0 | Atualizacao para Backend/Auth, Quiz-Service e bancos separados | Miguel Moreira |
+| 27/04/2026 | 1.0 | Criação da visão lógica da arquitetura | [Breno Fernandes](https://github.com/Brenofrds) |
+| 27/04/2026 | 1.1 | Simplificação da visão lógica | [Breno Fernandes](https://github.com/Brenofrds) |
+| 05/05/2026 | 1.2 | Inclusão do BFF como camada lógica entre Frontend e Backend | [Miguel Moreira](https://github.com/miguelmsoliveira) |
+| 13/05/2026 | 2.0 | Atualização para Backend/Auth, Quiz-Service e bancos separados | Miguel Moreira |
+| 13/05/2026 | 2.1 | Restauração dos acentos do português brasileiro | Miguel Moreira |

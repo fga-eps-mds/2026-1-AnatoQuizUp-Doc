@@ -1,17 +1,17 @@
-# Visao de Implementacao
+# Visão de Implementação
 
-A visao de implementacao descreve como o codigo do AnatoQuizUp esta organizado nos repositorios depois da fragmentacao do dominio de quiz.
+A visão de implementação descreve como o código do AnatoQuizUp está organizado nos repositórios depois da fragmentação do domínio de quiz.
 
-## Repositorios
+## Repositórios
 
-| Repositorio | Responsabilidade |
+| Repositório | Responsabilidade |
 |-------------|------------------|
-| `2026-1-AnatoQuizUp-Web` | Aplicacao frontend React + Vite. |
-| `2026-1-AnatoQuizUp-BFF` | Backend-For-Frontend: ponto de entrada publico, validacao de JWT na borda e proxy para servicos internos. |
-| `2026-1-AnatoQuizUp-Backend` | Backend/Auth: autenticacao, identidade, admin de usuarios, exemplos e Auth DB. |
-| `2026-1-AnatoQuizUp-Quiz-Service` | Dominio de quiz: questoes, alternativas, resolucoes, storage de imagens e Quiz DB. |
-| `2026-1-AnatoQuizUp-AI` | Servico de IA reservado para semestres futuros. |
-| `2026-1-AnatoQuizUp-Doc` | Documentacao do projeto em MkDocs. |
+| `2026-1-AnatoQuizUp-Web` | Aplicação frontend React + Vite. |
+| `2026-1-AnatoQuizUp-BFF` | Backend-For-Frontend: ponto de entrada público, validação de JWT na borda e proxy para serviços internos. |
+| `2026-1-AnatoQuizUp-Backend` | Backend/Auth: autenticação, identidade, admin de usuários, exemplos e Auth DB. |
+| `2026-1-AnatoQuizUp-Quiz-Service` | Domínio de quiz: questões, alternativas, resoluções, storage de imagens e Quiz DB. |
+| `2026-1-AnatoQuizUp-AI` | Serviço de IA reservado para semestres futuros. |
+| `2026-1-AnatoQuizUp-Doc` | Documentação do projeto em MkDocs. |
 
 ## Frontend
 
@@ -34,7 +34,7 @@ A visao de implementacao descreve como o codigo do AnatoQuizUp esta organizado n
 `-- package.json
 ```
 
-O Frontend usa `VITE_API_URL` apontando para o BFF. Features como `manage-questions` continuam chamando `/questoes`; a mudanca de destino interno e invisivel para o Web.
+O Frontend usa `VITE_API_URL` apontando para o BFF. Features como `manage-questions` continuam chamando `/questoes`; a mudança de destino interno é invisível para o Web.
 
 ## BFF
 
@@ -65,7 +65,7 @@ O Frontend usa `VITE_API_URL` apontando para o BFF. Features como `manage-questi
 `-- package.json
 ```
 
-O BFF nao conhece regra de negocio. Ele valida JWT, filtra headers reservados, injeta `X-Internal-Token` e encaminha para o cliente HTTP correto.
+O BFF não conhece regra de negócio. Ele valida JWT, filtra headers reservados, injeta `X-Internal-Token` e encaminha para o cliente HTTP correto.
 
 ## Backend/Auth
 
@@ -92,7 +92,7 @@ O BFF nao conhece regra de negocio. Ele valida JWT, filtra headers reservados, i
 `-- package.json
 ```
 
-O Backend/Auth nao deve conter modulo `question`, models de quiz no Prisma, nem configuracao de storage de imagens de questoes.
+O Backend/Auth não deve conter módulo `question`, models de quiz no Prisma, nem configuração de storage de imagens de questões.
 
 ## Quiz-Service
 
@@ -123,12 +123,13 @@ O Backend/Auth nao deve conter modulo `question`, models de quiz no Prisma, nem 
 `-- package.json
 ```
 
-O Quiz-Service mantem IDs de usuarios como referencias externas (`criadoPorId`, `usuarioId`), sem FK para o banco do Backend/Auth.
+O Quiz-Service mantém IDs de usuários como referências externas (`criadoPorId`, `usuarioId`), sem FK para o banco do Backend/Auth.
 
-## Historico de Versao
+## Histórico de Versão
 
-| Data | Versao | Descricao | Autor(es) |
+| Data | Versão | Descrição | Autor(es) |
 |------|--------|-----------|-----------|
-| 27/04/2026 | 1.0 | Criacao da visao de implementacao | [Breno Fernandes](https://github.com/Brenofrds) |
-| 05/05/2026 | 1.1 | Inclusao do repositorio BFF e renomeacao `-API` para `-Backend` | [Miguel Moreira](https://github.com/miguelmsoliveira) |
-| 13/05/2026 | 2.0 | Inclusao do Quiz-Service e atualizacao das responsabilidades dos repositorios | Miguel Moreira |
+| 27/04/2026 | 1.0 | Criação da visão de implementação | [Breno Fernandes](https://github.com/Brenofrds) |
+| 05/05/2026 | 1.1 | Inclusão do repositório BFF e renomeação `-API` para `-Backend` | [Miguel Moreira](https://github.com/miguelmsoliveira) |
+| 13/05/2026 | 2.0 | Inclusão do Quiz-Service e atualização das responsabilidades dos repositórios | Miguel Moreira |
+| 13/05/2026 | 2.1 | Restauração dos acentos do português brasileiro | Miguel Moreira |
