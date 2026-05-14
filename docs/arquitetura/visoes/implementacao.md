@@ -1,20 +1,19 @@
-# Visão de Implementação
+# Visao de Implementacao
 
-A visão de implementação descreve como o código do AnatoQuizUp está organizado nos repositórios. Ela apresenta a estrutura de pastas, os principais módulos e os padrões usados para manter frontend, backend e documentação organizados.
+A visao de implementacao descreve como o codigo do AnatoQuizUp esta organizado nos repositorios depois da fragmentacao do dominio de quiz.
 
-## Repositórios
+## Repositorios
 
-| Repositório | Responsabilidade |
+| Repositorio | Responsabilidade |
 |-------------|------------------|
-| `2026-1-AnatoQuizUp-Web` | Aplicação frontend web. |
-| `2026-1-AnatoQuizUp-BFF` | Backend-For-Frontend: ponto de entrada público; valida JWT; injeta token interno; orquestra Backend e AI. |
-| `2026-1-AnatoQuizUp-Backend` | Regras de negócio, autenticação e persistência (privado em produção). Anteriormente chamado `-API`. |
-| `2026-1-AnatoQuizUp-AI` | Serviço de IA (reservado para semestres futuros; sem código nesta release). |
-| `2026-1-AnatoQuizUp-Doc` | Documentação do projeto em MkDocs. |
+| `2026-1-AnatoQuizUp-Web` | Aplicacao frontend React + Vite. |
+| `2026-1-AnatoQuizUp-BFF` | Backend-For-Frontend: ponto de entrada publico, validacao de JWT na borda e proxy para servicos internos. |
+| `2026-1-AnatoQuizUp-Backend` | Backend/Auth: autenticacao, identidade, admin de usuarios, exemplos e Auth DB. |
+| `2026-1-AnatoQuizUp-Quiz-Service` | Dominio de quiz: questoes, alternativas, resolucoes, storage de imagens e Quiz DB. |
+| `2026-1-AnatoQuizUp-AI` | Servico de IA reservado para semestres futuros. |
+| `2026-1-AnatoQuizUp-Doc` | Documentacao do projeto em MkDocs. |
 
 ## Frontend
-
-O frontend é organizado com base no Feature-Sliced Design. A estrutura separa inicialização da aplicação, páginas, widgets, features, entidades de domínio e recursos compartilhados.
 
 ```text
 2026-1-AnatoQuizUp-Web/
@@ -35,60 +34,40 @@ O frontend é organizado com base no Feature-Sliced Design. A estrutura separa i
 `-- package.json
 ```
 
-| Pasta | Papel na implementação |
-|-------|-------------------------|
-| `src/app/` | Configuração global, providers, rotas, layouts e estilos globais. |
-| `src/pages/` | Páginas acessadas por rota. |
-| `src/widgets/` | Blocos estruturais de interface, como header e layouts. |
-| `src/features/` | Funcionalidades orientadas ao usuário. |
-| `src/entities/` | Modelos e tipos centrais do domínio. |
-| `src/shared/` | Componentes genéricos, cliente HTTP, assets, configurações e utilitários. |
-
+O Frontend usa `VITE_API_URL` apontando para o BFF. Features como `manage-questions` continuam chamando `/questoes`; a mudanca de destino interno e invisivel para o Web.
 
 ## BFF
-
-O BFF é um repositório separado que atua como ponto de entrada público da plataforma. É um proxy 100% orquestração: valida JWT, injeta o token interno e roteia por path para Backend ou AI.
 
 ```text
 2026-1-AnatoQuizUp-BFF/
 |-- src/
 |   |-- config/
-|   |   |-- app.ts
-|   |   |-- cors.ts
-|   |   |-- env.ts
-|   |   `-- logger.ts
 |   |-- routes/
 |   |   |-- admin.routes.ts
 |   |   |-- auth.routes.ts
 |   |   |-- exemplos.routes.ts
 |   |   |-- ia.routes.ts
+|   |   |-- questoes.routes.ts
 |   |   `-- index.ts
 |   |-- shared/
-|   |   |-- clients/         (backend.client, ai.client)
-|   |   |-- constants/
-|   |   |-- errors/
-|   |   |-- middlewares/     (autenticacao, proxy, tratamento-erros)
+|   |   |-- clients/
+|   |   |   |-- backend.client.ts
+|   |   |   |-- quiz.client.ts
+|   |   |   `-- ai.client.ts
+|   |   |-- middlewares/
 |   |   |-- types/
 |   |   `-- utils/
 |   `-- server.ts
 |-- tests/
 |-- Dockerfile
-|-- eslint.config.js
 |-- jest.config.cjs
 |-- tsconfig.json
 `-- package.json
 ```
 
-| Pasta | Papel na implementação |
-|-------|-------------------------|
-| `src/config/` | Variáveis de ambiente (Zod), montagem do Express, CORS, logger. |
-| `src/routes/` | Roteadores por prefixo, com regras de auth pública/privada e despacho ao cliente HTTP correto. |
-| `src/shared/clients/` | Instâncias Axios para Backend e AI. |
-| `src/shared/middlewares/` | Validação de JWT, proxy genérico, tratamento de erros. |
+O BFF nao conhece regra de negocio. Ele valida JWT, filtra headers reservados, injeta `X-Internal-Token` e encaminha para o cliente HTTP correto.
 
-## Backend
-
-O backend usa uma estrutura modular. Cada módulo de domínio deve agrupar rotas, validações, controllers, services, repositories, DTOs e testes.
+## Backend/Auth
 
 ```text
 2026-1-AnatoQuizUp-Backend/
@@ -99,28 +78,57 @@ O backend usa uma estrutura modular. Cada módulo de domínio deve agrupar rotas
 |-- src/
 |   |-- config/
 |   |-- modules/
+|   |   |-- admin/
+|   |   |-- auth/
+|   |   `-- exemplo/
 |   |-- shared/
 |   `-- server.ts
 |-- tests/
 |-- docker-compose.yml
 |-- Dockerfile
-|-- eslint.config.js
+|-- jest.config.cjs
+|-- prisma.config.ts
 |-- tsconfig.json
 `-- package.json
 ```
 
-| Pasta | Papel na implementação |
-|-------|-------------------------|
-| `prisma/` | Schema, migrations e seed do banco de dados. |
-| `src/config/` | Configuração da aplicação, ambiente, banco, logger e montagem do Express. |
-| `src/modules/` | Módulos de domínio da API. |
-| `src/shared/` | Código compartilhado entre módulos, como erros, middlewares (incluindo `token-interno.middleware.ts`), tipos, constantes e utilitários. |
-| `tests/` | Testes de aplicação e testes e2e. |
+O Backend/Auth nao deve conter modulo `question`, models de quiz no Prisma, nem configuracao de storage de imagens de questoes.
 
+## Quiz-Service
 
-## Histórico de Versão
+```text
+2026-1-AnatoQuizUp-Quiz-Service/
+|-- prisma/
+|   |-- migrations/
+|   |-- schema.prisma
+|   `-- seed.ts
+|-- src/
+|   |-- config/
+|   |   |-- storage.ts
+|   |-- modules/
+|   |   `-- questoes/
+|   |-- shared/
+|   |   |-- middlewares/
+|   |   |-- types/
+|   |   `-- constants/
+|   `-- server.ts
+|-- tests/
+|-- docker-compose.yml
+|-- Dockerfile
+|-- Makefile
+|-- sonar-project.properties
+|-- jest.config.cjs
+|-- prisma.config.ts
+|-- tsconfig.json
+`-- package.json
+```
 
-| Data   | Versão | Descrição | Autor(es) |
-|--------|--------|-----------|-----------|
-| 27/04/2026 | 1.0 | Criação da visão de implementação com estrutura dos repositórios e padrões de módulos | [Breno Fernandes](https://github.com/Brenofrds) |
-| 05/05/2026 | 1.1 | Inclusão do repositório BFF e renomeação `-API` → `-Backend` (PRD: Migração para Arquitetura com BFF) | [Miguel Moreira](https://github.com/miguelmsoliveira) |
+O Quiz-Service mantem IDs de usuarios como referencias externas (`criadoPorId`, `usuarioId`), sem FK para o banco do Backend/Auth.
+
+## Historico de Versao
+
+| Data | Versao | Descricao | Autor(es) |
+|------|--------|-----------|-----------|
+| 27/04/2026 | 1.0 | Criacao da visao de implementacao | [Breno Fernandes](https://github.com/Brenofrds) |
+| 05/05/2026 | 1.1 | Inclusao do repositorio BFF e renomeacao `-API` para `-Backend` | [Miguel Moreira](https://github.com/miguelmsoliveira) |
+| 13/05/2026 | 2.0 | Inclusao do Quiz-Service e atualizacao das responsabilidades dos repositorios | Miguel Moreira |
