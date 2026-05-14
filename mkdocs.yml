@@ -1,5 +1,5 @@
 site_name: AnatoQuizUp
-site_description: AnatoQuizUp e um jogo de perguntas e respostas sobre anatomia humana, desenvolvido para ajudar estudantes de medicina a aprenderem de forma divertida e interativa.
+site_description: AnatoQuizUp é um jogo de perguntas e respostas sobre anatomia humana, desenvolvido para ajudar estudantes de medicina a aprenderem de forma divertida e interativa.
 
 theme:
   name: material
@@ -8,66 +8,66 @@ theme:
     - navigation.tabs
 
 nav:
-  - Inicio: index.md
+  - Início: index.md
 
   - Produto:
-      - Visao do Produto: produto/visao.md
+      - Visão do Produto: produto/visao.md
       - Lean Inception: produto/lean_inception.md
-      - Prototipos: prototipo/figma.md
+      - Protótipos: prototipo/figma.md
 
   - Planejamento:
-      - Visao Geral:
+      - Visão Geral:
           - Roadmap e Releases: processo/roadmap.md
           - Datas Importantes: processo/datas-importantes.md
       - Backlog:
-          - Visao Geral: backlog/overview.md
+          - Visão Geral: backlog/overview.md
           - Requisitos: backlog/requisitos.md
           - Release Major 1: backlog/release-major-1.md
           - Release Major 2: backlog/release-major-2.md
           - Release Major 3: backlog/release-major-3.md
       - Acompanhamento por Sprint:
-          - Visao Geral das Sprints: processo/sprints.md
+          - Visão Geral das Sprints: processo/sprints.md
           - Sprint 1:
               - EVM: processo/evm-sprint1.md
       - Controle:
           - Matriz de Riscos: processo/riscos.md
 
   - Arquitetura:
-      - Visao Geral: arquitetura/visao_geral.md
+      - Visão Geral: arquitetura/visao_geral.md
       - Tecnologias: arquitetura/tecnologias.md
-      - Decisoes Arquiteturais: arquitetura/decisoes.md
-      - Visoes Arquiteturais:
-          - Visao Logica: arquitetura/visoes/logica.md
-          - Visao de Processos: arquitetura/visoes/processos.md
-          - Visao de Implementacao: arquitetura/visoes/implementacao.md
-          - Visao de Implantacao: arquitetura/visoes/implantacao.md
+      - Decisões Arquiteturais: arquitetura/decisoes.md
+      - Visões Arquiteturais:
+          - Visão Lógica: arquitetura/visoes/logica.md
+          - Visão de Processos: arquitetura/visoes/processos.md
+          - Visão de Implementação: arquitetura/visoes/implementacao.md
+          - Visão de Implantação: arquitetura/visoes/implantacao.md
       - Banco de Dados:
           - Modelo V1: arquitetura/banco-de-dados/v1.md
       - Endpoints e Contratos:
-          - Visao Geral: arquitetura/api/visao-geral.md
-          - Autenticacao: arquitetura/api/autenticacao.md
+          - Visão Geral: arquitetura/api/visao-geral.md
+          - Autenticação: arquitetura/api/autenticacao.md
           - Alunos: arquitetura/api/alunos.md
           - Localidades: arquitetura/api/localidades.md
-          - Administracao: arquitetura/api/admin.md
+          - Administração: arquitetura/api/admin.md
           - Exemplos: arquitetura/api/exemplos.md
           - Erros e Contratos: arquitetura/api/erros.md
 
   - Qualidade:
-      - Metricas e Dashboard: qualidade/qualidade.md
+      - Métricas e Dashboard: qualidade/qualidade.md
 
-  - Gestao:
+  - Gestão:
       - Metodologia de trabalho: processo/metodologia.md
-      - Comunicacao: processo/comunicacao.md
+      - Comunicação: processo/comunicacao.md
       - Quadro de Conhecimento: processo/quadro-conhecimento.md
-      - Decisoes do Projeto: decisoes/decisoes.md
+      - Decisões do Projeto: decisoes/decisoes.md
 
   - Registro:
-      - Reunioes: processo/reunioes.md
+      - Reuniões: processo/reunioes.md
 
-  - Contribuicao:
-      - Codigo de Conduta: contribuicao/codigo_conduta.md
-      - Politica de Branchs: contribuicao/politica_branchs.md
-      - Politica de Commits: contribuicao/politica_commits.md
+  - Contribuição:
+      - Código de Conduta: contribuicao/codigo_conduta.md
+      - Política de Branchs: contribuicao/politica_branchs.md
+      - Política de Commits: contribuicao/politica_commits.md
 
 markdown_extensions:
   - admonition
