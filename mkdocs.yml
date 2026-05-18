@@ -31,6 +31,7 @@ nav:
               - EVM: processo/evm-sprint1.md
       - Controle:
           - Matriz de Riscos: processo/riscos.md
+          - Plano de Custos: processo/plano-de-custos.md
 
   - Arquitetura:
       - Visão Geral: arquitetura/visao_geral.md
