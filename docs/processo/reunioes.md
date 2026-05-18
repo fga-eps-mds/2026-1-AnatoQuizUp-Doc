@@ -114,6 +114,33 @@ Discussão sobre a preparação para a validação com o cliente, ajustes no flu
 
 **Ata completa:** [reuniao0305-ata.md](../assets/processo/reuniao0305-ata.md)
 
+### 17/05/2026 — Sprint Review, Planejamento da Sprint e Pauta com PO
+
+**Formato da ata:** Markdown
+
+**Objetivo:**
+
+Acompanhar o desenvolvimento das histórias de usuário da semana anterior, planejar as atividades da próxima sprint e organizar a pauta para a reunião com os POs.
+
+**Resumo da ata:**
+
+Os membros presentes apresentaram o desenvolvimento das histórias de usuário trabalhadas na semana anterior. Em seguida, a equipe planejou a sprint da semana, distribuiu responsáveis e definiu a necessidade de levantar os custos do Railway para o deploy.
+
+**Principais decisões:**
+
+- Planejamento da sprint com foco em recompensas por acertos, visualização de turmas pelo aluno, listas de questões, geração de questões com IA e dashboard analítico.
+- Miguel ficou responsável por verificar os custos do Railway relacionados ao deploy.
+- A equipe organizou a pauta da próxima reunião com os POs.
+
+**Encaminhamentos:**
+
+- Arthur e João Vitor: Sistema de Recompensas por Acertos (Moedas Virtuais).
+- Caio, Miguel e Genilson: Visualização de Turmas (Aluno).
+- Pedro e Breno: Listas de Questões.
+- Bruno e Maria Luisa: Geração de Questões com Inteligência Artificial e Dashboard Analítico.
+
+**Ata completa:** [reuniao1705-ata.md](../assets/processo/reuniao1705-ata.md)
+
 ## Histórico de Versão
 
 | Data | Versão | Descrição | Autor(es) |
@@ -124,3 +151,4 @@ Discussão sobre a preparação para a validação com o cliente, ajustes no flu
 | 01/05/2026 | 1.3 | Centralização das informações de reuniões e atas em uma única página de reuniões | [Breno Fernandes](https://github.com/BrenoFrds) |
 | 03/05/2026 | 1.4 | Inclusão da ata de alinhamento com cliente (03/05) | [Breno Fernandes](https://github.com/BrenoFrds) |
 | 04/05/2026 | 1.5 | Adição da descrição dos rituais da equipe | [Genilson Junior](https://github.com/GenilsonJrs) |
+| 17/05/2026 | 1.6 | Inclusão da ata de Sprint Review e planejamento de sprint (17/05) | [Bruno Ricardo](https://github.com/EhOBruno) |
