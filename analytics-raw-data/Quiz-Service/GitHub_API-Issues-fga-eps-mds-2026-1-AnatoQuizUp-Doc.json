@@ -1486,8 +1486,8 @@
         "active_lock_reason": null,
         "sub_issues_summary": {
             "total": 9,
-            "completed": 3,
-            "percent_completed": 33
+            "completed": 4,
+            "percent_completed": 44
         },
         "issue_dependencies_summary": {
             "blocked_by": 0,
