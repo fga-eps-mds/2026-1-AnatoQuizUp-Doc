@@ -2,7 +2,7 @@
 
 ## Objetivo
 
-Este documento registra o acompanhamento das sprints do AnatoQuizUp, relacionando planejamento, entregas, desvios e ações de melhoria. Ele deve ser lido em conjunto com o [Roadmap](roadmap.md), a [Matriz de Riscos](riscos.md) e o [EVM da Sprint 1](evm-sprint1.md).
+Este documento registra o acompanhamento das sprints do AnatoQuizUp, relacionando planejamento, entregas, desvios e ações de melhoria. Ele deve ser lido em conjunto com o [Roadmap](roadmap.md), a [Matriz de Riscos](riscos.md) e os EVMs de cada sprint.
 
 ## Organização das sprints
 
@@ -87,8 +87,82 @@ Ao mesmo tempo, o CPI de 1,52 indica boa eficiência em relação às horas regi
 3. Melhorar disciplina de registro de horas.
 4. Manter cobertura mínima de 85% desde o início de cada PR.
 
+## Sprint 2
+
+| Campo | Valor |
+|-------|-------|
+| Período | 27/04/2026 a 04/05/2026 |
+| Release associada | Transição Release Major 1 -> Release Major 2 |
+| Foco | Validação pós-Sprint 1, deploy, protótipos e continuidade do fluxo de professor |
+| Pontos planejados | 31 |
+| Pontos entregues | 16 |
+| Custo real estimado | R$ 1.034,46 |
+| SPI | 0,52 |
+| CPI | 0,52 |
+| EVM detalhado | [EVM da Sprint 2](evm-sprint2.md) |
+
+### Análise da sprint
+
+A Sprint 2 teve baixa aderência ao planejamento mensurável, principalmente pela continuidade das pendências de professor e painel administrativo. Foram concluídos protótipos de alta fidelidade, deploy em homologação, login de professor e home do aluno, mas parte do escopo ficou sem estimate ou foi carregada para as sprints seguintes.
+
+## Sprint 3
+
+| Campo | Valor |
+|-------|-------|
+| Período | 05/05/2026 a 11/05/2026 |
+| Release associada | Release Major 2 |
+| Foco | Modelagem e CRUD de questões, protótipos do fluxo de quiz e telas de professor |
+| Pontos planejados | 29 |
+| Pontos entregues | 26 |
+| Custo real estimado | R$ 931,65 |
+| SPI | 0,90 |
+| CPI | 0,90 |
+| EVM detalhado | [EVM da Sprint 3](evm-sprint3.md) |
+
+### Análise da sprint
+
+A Sprint 3 apresentou boa aderência ao planejamento. As entregas avançaram o módulo de questões e a experiência de professor, incluindo protótipos, modelagem, CRUD e interface de criação. A arquitetura distribuída foi discutida e iniciada, mas ficou como pendência para a Sprint 4.
+
+## Sprint 4
+
+| Campo | Valor |
+|-------|-------|
+| Período | 12/05/2026 a 18/05/2026 |
+| Release associada | Release Major 2 |
+| Foco | Arquitetura distribuída, cadastro de professor e início do fluxo de turmas |
+| Pontos planejados | 25 |
+| Pontos entregues | 14 |
+| Custo real estimado | R$ 931,65 |
+| SPI | 0,56 |
+| CPI | 0,56 |
+| EVM detalhado | [EVM da Sprint 4](evm-sprint4.md) |
+
+### Análise da sprint
+
+A Sprint 4 concluiu entregas estruturais importantes, como cadastro de professor e telas de criação/alocação de turmas. Porém, o atraso permaneceu porque backend de turmas, visualização de turmas pelo aluno, quiz dinâmico, listas de questões, IA e dashboard analítico continuaram em aberto ou em andamento.
+
+## Sprint 5
+
+| Campo | Valor |
+|-------|-------|
+| Período | 19/05/2026 a 25/05/2026 |
+| Release associada | Release Major 2 |
+| Foco | Recompensas, turmas do aluno, listas de questões, IA e dashboard analítico |
+| Pontos planejados mensuráveis | 30 |
+| Pontos entregues | 0 |
+| Custo real estimado | R$ 931,65 |
+| SPI parcial | 0,00 |
+| CPI parcial | 0,00 |
+| EVM detalhado | [EVM da Sprint 5](evm-sprint5.md) |
+
+### Análise parcial da sprint
+
+A Sprint 5 ainda está em andamento. Por isso, os indicadores aparecem como leitura parcial, sem representar o fechamento final da sprint. O documento deve ser revisado após a conclusão dos cards e consolidação do Gantt.
+
 ## Histórico de Versão
 
 | Data   | Versão | Descrição | Autor(es) |
 |--------|--------|-----------|-----------|
 | 27/04/2026 | 1.0 | Registro da Sprint 1 com base na Release Major 1, EVM e estado dos repositórios | [Miguel Moreira](https://github.com/miguelmsoliveira) |
+| 20/05/2026 | 1.1 | Inclusão dos resumos das Sprints 2, 3 e 4 com links para seus EVMs | Maria Luisa |
+| 21/05/2026 | 1.2 | Inclusão da Sprint 5 parcial | Maria Luisa |
