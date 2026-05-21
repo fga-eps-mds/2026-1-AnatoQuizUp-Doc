@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="740" viewBox="0 0 1200 740" role="img" aria-labelledby="title desc">
+  <title id="title">EVM Sprint 4</title>
+  <desc id="desc">Gráfico EVM acumulado até a Sprint 4 comparando planejado e realizado em percentual.</desc>
+  <rect width="1200" height="740" fill="#ffffff"/>
+  <text x="38" y="70" font-family="Arial, Helvetica, sans-serif" font-size="42" font-weight="700" fill="#737373">EVM Sprint 4</text>
+
+  <g font-family="Arial, Helvetica, sans-serif" font-size="24" fill="#737373">
+    <line x1="140" y1="620" x2="1040" y2="620" stroke="#222" stroke-width="2"/>
+    <line x1="140" y1="620" x2="1040" y2="620" stroke="#c7c7c7" stroke-width="1"/>
+    <line x1="140" y1="518" x2="1040" y2="518" stroke="#c7c7c7" stroke-width="1"/>
+    <line x1="140" y1="416" x2="1040" y2="416" stroke="#c7c7c7" stroke-width="1"/>
+    <line x1="140" y1="314" x2="1040" y2="314" stroke="#c7c7c7" stroke-width="1"/>
+    <line x1="140" y1="212" x2="1040" y2="212" stroke="#c7c7c7" stroke-width="1"/>
+    <line x1="140" y1="110" x2="1040" y2="110" stroke="#c7c7c7" stroke-width="1"/>
+
+    <text x="65" y="628" text-anchor="middle">0,00%</text>
+    <text x="65" y="526" text-anchor="middle">25,00%</text>
+    <text x="65" y="424" text-anchor="middle">50,00%</text>
+    <text x="65" y="322" text-anchor="middle">75,00%</text>
+    <text x="65" y="220" text-anchor="middle">100,00%</text>
+    <text x="65" y="118" text-anchor="middle">125,00%</text>
+    <text x="240" y="655" text-anchor="middle">Sprint 2</text>
+    <text x="640" y="655" text-anchor="middle">Sprint 3</text>
+    <text x="1040" y="655" text-anchor="middle">Sprint 4</text>
+  </g>
+
+  <polyline points="240,471 640,332 1040,212" fill="none" stroke="#4285f4" stroke-width="4"/>
+  <polyline points="240,543 640,418 1040,351" fill="none" stroke="#db4437" stroke-width="4"/>
+
+  <g font-family="Arial, Helvetica, sans-serif" font-size="24" font-weight="700">
+    <circle cx="240" cy="471" r="11" fill="#4285f4"/>
+    <text x="240" y="435" text-anchor="middle" fill="#4285f4">36,47%</text>
+    <circle cx="640" cy="332" r="11" fill="#4285f4"/>
+    <text x="640" y="296" text-anchor="middle" fill="#4285f4">70,59%</text>
+    <circle cx="1040" cy="212" r="11" fill="#4285f4"/>
+    <text x="1040" y="176" text-anchor="middle" fill="#4285f4">100,00%</text>
+
+    <circle cx="240" cy="543" r="11" fill="#db4437"/>
+    <text x="240" y="583" text-anchor="middle" fill="#db4437">18,82%</text>
+    <circle cx="640" cy="418" r="11" fill="#db4437"/>
+    <text x="640" y="458" text-anchor="middle" fill="#db4437">49,41%</text>
+    <circle cx="1040" cy="351" r="11" fill="#db4437"/>
+    <text x="1040" y="391" text-anchor="middle" fill="#db4437">65,88%</text>
+  </g>
+
+  <g font-family="Arial, Helvetica, sans-serif" font-size="24">
+    <circle cx="1090" cy="116" r="12" fill="#4285f4"/>
+    <text x="1115" y="124" fill="#737373">Planejado</text>
+    <circle cx="1090" cy="162" r="12" fill="#db4437"/>
+    <text x="1115" y="170" fill="#737373">Realizado</text>
+  </g>
+</svg>

@@ -29,6 +29,14 @@ nav:
           - Visão Geral das Sprints: processo/sprints.md
           - Sprint 1:
               - EVM: processo/evm-sprint1.md
+          - Sprint 2:
+              - EVM: processo/evm-sprint2.md
+          - Sprint 3:
+              - EVM: processo/evm-sprint3.md
+          - Sprint 4:
+              - EVM: processo/evm-sprint4.md
+          - Sprint 5:
+              - EVM: processo/evm-sprint5.md
       - Controle:
           - Matriz de Riscos: processo/riscos.md
           - Plano de Custos: processo/plano-de-custos.md
