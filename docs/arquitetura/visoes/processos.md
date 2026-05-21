@@ -9,7 +9,7 @@ sequenceDiagram
     actor Usuario as Usuário
     participant Frontend
     participant BFF
-    participant Auth as Backend/Auth
+    participant Auth as Usuario-Service
     participant Quiz as Quiz-Service
 
     Usuario->>Frontend: Interage com a interface
@@ -35,7 +35,7 @@ sequenceDiagram
     actor Aluno
     participant Frontend
     participant BFF
-    participant Auth as Backend/Auth
+    participant Auth as Usuario-Service
     participant DB as Auth DB
 
     Aluno->>Frontend: Preenche formulário de cadastro
@@ -54,7 +54,7 @@ sequenceDiagram
     actor Usuario as Usuário
     participant Frontend
     participant BFF
-    participant Auth as Backend/Auth
+    participant Auth as Usuario-Service
     participant DB as Auth DB
 
     Usuario->>Frontend: Informa email e senha
@@ -79,7 +79,7 @@ sequenceDiagram
     actor Usuario as Usuário
     participant Frontend
     participant BFF
-    participant Auth as Backend/Auth
+    participant Auth as Usuario-Service
     participant DB as Auth DB
 
     Usuario->>Frontend: Acessa recurso protegido
@@ -117,11 +117,11 @@ sequenceDiagram
 
 ## Observações arquiteturais
 
-- O Frontend não acessa Backend/Auth, Quiz-Service, AI ou bancos diretamente.
+- O Frontend não acessa Usuario-Service, Quiz-Service, AI ou bancos diretamente.
 - O BFF não tem regra de negócio nem banco.
-- Backend/Auth e Quiz-Service validam `X-Internal-Token`.
+- Usuario-Service e Quiz-Service validam `X-Internal-Token`.
 - O nome canônico do papel no JWT é `papel`; `perfil` é legado.
-- O Quiz-Service não acessa a tabela de usuários do Backend/Auth.
+- O Quiz-Service não acessa a tabela de usuários do Usuario-Service.
 - Para nomes/emails de autores em telas futuras, a composição deve ser feita por API, preferencialmente com lookup em lote pelo BFF.
 
 ## Histórico de Versão

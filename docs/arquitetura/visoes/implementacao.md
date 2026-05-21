@@ -8,8 +8,8 @@ A visão de implementação descreve como o código do AnatoQuizUp está organiz
 |-------------|------------------|
 | `2026-1-AnatoQuizUp-Web` | Aplicação frontend React + Vite. |
 | `2026-1-AnatoQuizUp-BFF` | Backend-For-Frontend: ponto de entrada público, validação de JWT na borda e proxy para serviços internos. |
-| `2026-1-AnatoQuizUp-Backend` | Backend/Auth: autenticação, identidade, admin de usuários, exemplos e Auth DB. |
-| `2026-1-AnatoQuizUp-Quiz-Service` | Domínio de quiz: questões, alternativas, resoluções, storage de imagens e Quiz DB. |
+| `2026-1-AnatoQuizUp-Usuario-Service` | Usuario-Service: autenticação, identidade, admin de usuários, exemplos e Auth DB. |
+| `2026-1-AnatoQuizUp-Quiz-Service` | Domínio de quiz e turmas: questões, alternativas, resoluções, turmas, vínculos `TurmaAluno`, storage de imagens e Quiz DB. |
 | `2026-1-AnatoQuizUp-AI` | Serviço de IA reservado para semestres futuros. |
 | `2026-1-AnatoQuizUp-Doc` | Documentação do projeto em MkDocs. |
 
@@ -51,7 +51,7 @@ O Frontend usa `VITE_API_URL` apontando para o BFF. Features como `manage-questi
 |   |   `-- index.ts
 |   |-- shared/
 |   |   |-- clients/
-|   |   |   |-- backend.client.ts
+|   |   |   |-- backend.client.ts  (cliente HTTP para o Usuario-Service)
 |   |   |   |-- quiz.client.ts
 |   |   |   `-- ai.client.ts
 |   |   |-- middlewares/
@@ -67,10 +67,10 @@ O Frontend usa `VITE_API_URL` apontando para o BFF. Features como `manage-questi
 
 O BFF não conhece regra de negócio. Ele valida JWT, filtra headers reservados, injeta `X-Internal-Token` e encaminha para o cliente HTTP correto.
 
-## Backend/Auth
+## Usuario-Service
 
 ```text
-2026-1-AnatoQuizUp-Backend/
+2026-1-AnatoQuizUp-Usuario-Service/
 |-- prisma/
 |   |-- migrations/
 |   |-- schema.prisma
@@ -80,7 +80,8 @@ O BFF não conhece regra de negócio. Ele valida JWT, filtra headers reservados,
 |   |-- modules/
 |   |   |-- admin/
 |   |   |-- auth/
-|   |   `-- exemplo/
+|   |   |-- exemplo/
+|   |   `-- usuarios/
 |   |-- shared/
 |   `-- server.ts
 |-- tests/
@@ -92,7 +93,7 @@ O BFF não conhece regra de negócio. Ele valida JWT, filtra headers reservados,
 `-- package.json
 ```
 
-O Backend/Auth não deve conter módulo `question`, models de quiz no Prisma, nem configuração de storage de imagens de questões.
+O Usuario-Service não deve conter módulo `question`, models de quiz no Prisma, nem configuração de storage de imagens de questões.
 
 ## Quiz-Service
 
@@ -106,7 +107,9 @@ O Backend/Auth não deve conter módulo `question`, models de quiz no Prisma, ne
 |   |-- config/
 |   |   |-- storage.ts
 |   |-- modules/
-|   |   `-- questoes/
+|   |   |-- questoes/
+|   |   |-- quiz/
+|   |   `-- turma/
 |   |-- shared/
 |   |   |-- middlewares/
 |   |   |-- types/
@@ -123,13 +126,13 @@ O Backend/Auth não deve conter módulo `question`, models de quiz no Prisma, ne
 `-- package.json
 ```
 
-O Quiz-Service mantém IDs de usuários como referências externas (`criadoPorId`, `usuarioId`), sem FK para o banco do Backend/Auth.
+O Quiz-Service mantém IDs de usuários como referências externas (`criadoPorId`, `usuarioId`), sem FK para o banco do Usuario-Service.
 
 ## Histórico de Versão
 
 | Data | Versão | Descrição | Autor(es) |
 |------|--------|-----------|-----------|
 | 27/04/2026 | 1.0 | Criação da visão de implementação | [Breno Fernandes](https://github.com/Brenofrds) |
-| 05/05/2026 | 1.1 | Inclusão do repositório BFF e renomeação `-API` para `-Backend` | [Miguel Moreira](https://github.com/miguelmsoliveira) |
+| 05/05/2026 | 1.1 | Inclusão do repositório BFF e renomeação do repo `-API` (histórico) | [Miguel Moreira](https://github.com/miguelmsoliveira) |
 | 13/05/2026 | 2.0 | Inclusão do Quiz-Service e atualização das responsabilidades dos repositórios | Miguel Moreira |
 | 13/05/2026 | 2.1 | Restauração dos acentos do português brasileiro | Miguel Moreira |

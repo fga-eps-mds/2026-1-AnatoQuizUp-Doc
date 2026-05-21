@@ -94,7 +94,7 @@ graph LR
 
 | Repositório | Pontos |
 |-------------|--------|
-| Backend | 36 |
+| Usuario-Service | 36 |
 | Frontend | 30 |
 | Fullstack | 5 |
 | **Total** | **71** |
@@ -283,7 +283,7 @@ graph LR
 ### TASK 01 - Modelagem do banco de dados
 
 > **Estimativa:** 3 pontos
-> **Repo:** Backend
+> **Repo:** Usuario-Service
 > **Tipo:** Infraestrutura
 > **Bloqueia:** todas as US
 
@@ -301,7 +301,7 @@ graph LR
 ### TASK 02 - Seed de administrador
 
 > **Estimativa:** 1 ponto
-> **Repo:** Backend
+> **Repo:** Usuario-Service
 > **Tipo:** Infraestrutura
 > **Bloqueado por:** TASK 01
 
@@ -316,7 +316,7 @@ graph LR
 ### TASK 03 - Setup do módulo de autenticação no backend
 
 > **Estimativa:** 3 pontos
-> **Repo:** Backend
+> **Repo:** Usuario-Service
 > **Tipo:** Infraestrutura
 > **Bloqueado por:** TASK 01, TASK 04
 
@@ -332,7 +332,7 @@ graph LR
 ### TASK 04 - Configuração JWT
 
 > **Estimativa:** 2 pontos
-> **Repo:** Backend
+> **Repo:** Usuario-Service
 > **Tipo:** Infraestrutura
 > **Bloqueado por:** TASK 01
 
@@ -365,7 +365,7 @@ graph LR
 ### TASK 06 - Spike: pesquisa de lib de envio de email
 
 > **Estimativa:** 1 ponto
-> **Repo:** Backend
+> **Repo:** Usuario-Service
 > **Tipo:** Spike
 > **Timebox:** 4 horas
 
@@ -381,7 +381,7 @@ graph LR
 ### TASK 09 - Configuração do serviço de email
 
 > **Estimativa:** 2 pontos
-> **Repo:** Backend
+> **Repo:** Usuario-Service
 > **Tipo:** Infraestrutura
 > **Bloqueado por:** TASK 06
 
@@ -397,7 +397,7 @@ graph LR
 ### TASK 10 - Middleware de autenticação
 
 > **Estimativa:** 3 pontos
-> **Repo:** Backend
+> **Repo:** Usuario-Service
 > **Tipo:** Técnica
 > **Bloqueado por:** TASK 04
 
@@ -413,7 +413,7 @@ graph LR
 ### TASK 11 - Middleware de autorização por papel
 
 > **Estimativa:** 2 pontos
-> **Repo:** Backend
+> **Repo:** Usuario-Service
 > **Tipo:** Técnica
 > **Bloqueado por:** TASK 10
 

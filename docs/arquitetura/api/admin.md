@@ -97,7 +97,7 @@ Este endpoint muda o status de uma conta para ativa, pendente ou inativa. Ele é
 
 | Campo | Tipo | Obrigatório | Valores aceitos |
 |-------|------|-------------|-----------------|
-| `status` | string | Sim | `PENDING`, `ACTIVE`, `INACTIVE` |
+| `status` | string | Sim | `PENDENTE`, `ATIVO`, `INATIVO`, `RECUSADO` |
 
 **Resposta de sucesso — 200**
 

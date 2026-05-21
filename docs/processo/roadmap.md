@@ -44,7 +44,7 @@ O escopo completo está detalhado em [Histórias e Tarefas - Release Major 1](..
 
 | Frente | Entregas observadas nos repositórios | Situação |
 |--------|--------------------------------------|----------|
-| Backend | Modelagem Prisma de usuários, refresh tokens e tokens de redefinição; seed de administrador; JWT; middleware de autenticação; serviço de email com Brevo; cadastro de aluno; endpoints auxiliares de localidades, nacionalidades e opções acadêmicas; testes Jest com cobertura | Parcialmente concluído |
+| Usuario-Service | Modelagem Prisma de usuários, refresh tokens e tokens de redefinição; seed de administrador; JWT; middleware de autenticação; serviço de email com Brevo; cadastro de aluno; endpoints auxiliares de localidades, nacionalidades e opções acadêmicas; testes Jest com cobertura | Parcialmente concluído |
 | Frontend | Estrutura FSD; login; cadastro de aluno em etapas; rotas protegidas; header; home; componentes de formulário; serviços de API para cadastro e opções auxiliares; testes com Testing Library/Jest | Parcialmente concluído |
 | Documentação | Backlog da Release Major 1; visão do produto; Lean Inception; arquitetura; reuniões; EVM Sprint 1; matriz de riscos; quadro de conhecimento | Em consolidação |
 | CI/CD | Pipelines de backend e frontend com lint, build, testes, cobertura mínima e SonarCloud; deploy da documentação via MkDocs/GitHub Pages | Em uso |
@@ -74,7 +74,7 @@ A Release Major 2 deve avançar da fundação de acesso para o fluxo pedagógico
 
 - Usuários e papéis funcionando de forma estável.
 - Painel administrativo validando professores.
-- Backend e frontend integrados com contrato de API estável.
+- Serviços (Usuario-Service, Quiz-Service, BFF) e frontend integrados com contrato de API estável.
 - Base de questões migrada ou preparada para importação.
 
 ## Release Major 3

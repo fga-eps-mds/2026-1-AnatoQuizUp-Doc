@@ -2,7 +2,7 @@
 
 ## Objetivo
 
-Esta seção documenta os endpoints REST públicos do AnatoQuizUp. Do ponto de vista do consumidor, **a API pública é o BFF**. O Frontend chama apenas o BFF; o BFF preserva paths e contratos e encaminha internamente para Backend/Auth, Quiz-Service ou AI.
+Esta seção documenta os endpoints REST públicos do AnatoQuizUp. Do ponto de vista do consumidor, **a API pública é o BFF**. O Frontend chama apenas o BFF; o BFF preserva paths e contratos e encaminha internamente para Usuario-Service, Quiz-Service ou AI.
 
 A API usa versionamento no caminho. Todos os endpoints de negócio partem do prefixo `/api/v1`. Quando uma página específica mostra `POST /autenticacao/login`, o caminho completo é `POST /api/v1/autenticacao/login`.
 
@@ -10,18 +10,20 @@ A API usa versionamento no caminho. Todos os endpoints de negócio partem do pre
 
 | Prefixo público | Destino interno | Observação |
 |-----------------|-----------------|------------|
-| `/api/v1/autenticacao/*` | Backend/Auth | Login, cadastro, refresh, senha e usuário atual |
-| `/api/v1/admin/*` | Backend/Auth | Administração de usuários |
-| `/api/v1/exemplos/*` | Backend/Auth | Módulo técnico mantido nesta etapa |
-| `/api/v1/questoes/*` | Quiz-Service | Gestão de questões migrada do Backend |
+| `/api/v1/autenticacao/*` | Usuario-Service | Login, cadastro, refresh, senha e usuário atual |
+| `/api/v1/admin/*` | Usuario-Service | Administração de usuários |
+| `/api/v1/exemplos/*` | Usuario-Service | Módulo técnico didático |
+| `/api/v1/usuarios/*` | Usuario-Service | Busca de usuários (em lote, paginada de alunos, ou pública por id) |
+| `/api/v1/questoes/*` | Quiz-Service | Gestão de questões |
+| `/api/v1/turmas/*` | Quiz-Service | Turmas e vínculo de alunos; rotas de leitura abertas a ALUNO com filtro por papel |
 | `/api/v1/ia/*` | AI Service futuro | 503 enquanto `AI_URL` estiver vazio |
 | `/health` | BFF | Health check público do BFF |
 
 ## Execução local
 
-Localmente, sobem quatro processos principais: Backend/Auth, Quiz-Service, BFF e Frontend.
+Localmente, sobem quatro processos principais: Usuario-Service, Quiz-Service, BFF e Frontend.
 
-### Backend/Auth (`2026-1-AnatoQuizUp-Backend`)
+### Usuario-Service (`2026-1-AnatoQuizUp-Usuario-Service`)
 
 ```bash
 cp .env.example .env
@@ -33,13 +35,13 @@ npm run prisma:seed
 npm run dev
 ```
 
-Backend/Auth disponível em `http://localhost:3333`. Aceita chamadas `/api/*` apenas com `X-Internal-Token` válido.
+Usuario-Service disponível em `http://localhost:3333`. Aceita chamadas `/api/*` apenas com `X-Internal-Token` válido.
 
 ### Quiz-Service (`2026-1-AnatoQuizUp-Quiz-Service`)
 
 ```bash
 cp .env.example .env
-# Preencher INTERNAL_TOKEN e JWT_SECRET_KEY iguais aos do BFF/Backend
+# Preencher INTERNAL_TOKEN e JWT_SECRET_KEY iguais aos do BFF/Usuario-Service
 npm run db:up
 npm run prisma:generate
 npm run prisma:migrate
@@ -67,9 +69,9 @@ http://localhost:4000/api/v1
 
 ## Autenticação
 
-Endpoints protegidos exigem `Authorization: Bearer <accessToken>`. O access token é assinado pelo Backend/Auth e carrega claims como `sub`, `papel` e `status`.
+Endpoints protegidos exigem `Authorization: Bearer <accessToken>`. O access token é assinado pelo Usuario-Service e carrega claims como `sub`, `papel` e `status`.
 
-O BFF valida assinatura e expiração antes de repassar. Backend/Auth e Quiz-Service também validam o token localmente nos fluxos protegidos. Os headers `X-User-*` enviados pelo BFF são auxiliares e não substituem o JWT como fonte de autorização.
+O BFF valida assinatura e expiração antes de repassar. Usuario-Service e Quiz-Service também validam o token localmente nos fluxos protegidos. Os headers `X-User-*` enviados pelo BFF são auxiliares e não substituem o JWT como fonte de autorização.
 
 ## Contratos de resposta
 
@@ -127,24 +129,37 @@ O BFF valida assinatura e expiração antes de repassar. Backend/Auth e Quiz-Ser
 
 ## Endpoints autenticados
 
-| Método | Endpoint | Destino |
-|--------|----------|---------|
-| GET | `/autenticacao/usuario-atual` | Backend/Auth |
-| POST | `/autenticacao/sair` | Backend/Auth |
-| GET | `/admin/usuarios` | Backend/Auth |
-| GET | `/admin/usuarios/:id` | Backend/Auth |
-| PATCH | `/admin/usuarios/:id/status` | Backend/Auth |
-| POST | `/exemplos` | Backend/Auth |
-| GET | `/exemplos` | Backend/Auth |
-| GET | `/exemplos/:id` | Backend/Auth |
-| GET | `/questoes` | Quiz-Service |
-| GET | `/questoes/busca` | Quiz-Service |
-| GET | `/questoes/:id` | Quiz-Service |
-| POST | `/questoes` | Quiz-Service |
-| PUT | `/questoes/:id` | Quiz-Service |
-| DELETE | `/questoes/:id` | Quiz-Service |
+| Método | Endpoint | Destino | Acesso |
+|--------|----------|---------|--------|
+| GET | `/autenticacao/usuario-atual` | Usuario-Service | Qualquer papel |
+| POST | `/autenticacao/sair` | Usuario-Service | Qualquer papel |
+| GET | `/admin/usuarios` | Usuario-Service | ADMINISTRADOR |
+| GET | `/admin/usuarios/:id` | Usuario-Service | ADMINISTRADOR |
+| PATCH | `/admin/usuarios/:id/status` | Usuario-Service | ADMINISTRADOR |
+| GET | `/usuarios` (com `?ids=`) | Usuario-Service | PROFESSOR / ADMINISTRADOR |
+| GET | `/usuarios/alunos` | Usuario-Service | PROFESSOR / ADMINISTRADOR |
+| GET | `/usuarios/:id` | Usuario-Service | Qualquer papel (payload mínimo `{id, nome, papel}`) |
+| POST | `/exemplos` | Usuario-Service | Qualquer papel |
+| GET | `/exemplos` | Usuario-Service | Qualquer papel |
+| GET | `/exemplos/:id` | Usuario-Service | Qualquer papel |
+| GET | `/questoes` | Quiz-Service | PROFESSOR / ADMINISTRADOR |
+| GET | `/questoes/busca` | Quiz-Service | PROFESSOR / ADMINISTRADOR |
+| GET | `/questoes/:id` | Quiz-Service | PROFESSOR / ADMINISTRADOR |
+| POST | `/questoes` | Quiz-Service | PROFESSOR / ADMINISTRADOR |
+| PUT | `/questoes/:id` | Quiz-Service | PROFESSOR / ADMINISTRADOR |
+| DELETE | `/questoes/:id` | Quiz-Service | PROFESSOR / ADMINISTRADOR |
+| GET | `/turmas` | Quiz-Service | ALUNO / PROFESSOR / ADMINISTRADOR (filtro por papel) |
+| GET | `/turmas/:id` | Quiz-Service | ALUNO (se vinculado e ATIVA) / PROFESSOR criador / ADMINISTRADOR |
+| POST | `/turmas` | Quiz-Service | PROFESSOR / ADMINISTRADOR |
+| PATCH | `/turmas/:id` | Quiz-Service | PROFESSOR criador / ADMINISTRADOR |
+| DELETE | `/turmas/:id` | Quiz-Service | PROFESSOR criador / ADMINISTRADOR |
+| GET | `/turmas/:id/alunos` | Quiz-Service | PROFESSOR criador / ADMINISTRADOR |
+| POST | `/turmas/:id/alunos` | Quiz-Service | PROFESSOR criador / ADMINISTRADOR |
+| DELETE | `/turmas/:id/alunos/:alunoId` | Quiz-Service | PROFESSOR criador / ADMINISTRADOR |
 
-As rotas de `/questoes` documentam o contrato já usado pelo Web para gestão de banco de questões. Rotas futuras de jogo/resolução por aluno devem ser especificadas separadamente quando forem implementadas.
+- **`/usuarios/:id`** é a rota usada pelo Web para resolver o nome do professor responsável na tela de detalhe da turma do aluno. Payload mínimo (sem email, senha, ou dados pessoais).
+- **`/turmas` para ALUNO** sempre filtra por `status=ATIVA` e exibe somente turmas em que o aluno está vinculado. Query `?status=` é rejeitada com **400**.
+- **`/turmas/:id`** para aluno sem vínculo retorna **404** (intencional — não vaza existência).
 
 ## Histórico de Versão
 
@@ -152,5 +167,6 @@ As rotas de `/questoes` documentam o contrato já usado pelo Web para gestão de
 |------|--------|-----------|-----------|
 | 04/05/2026 | 1.0 | Criação da documentação dos endpoints da API | [Arthur Carneiro](https://github.com/trindadea) |
 | 05/05/2026 | 1.1 | Atualização para refletir o BFF como porta de entrada pública | [Miguel Moreira](https://github.com/miguelmsoliveira) |
-| 13/05/2026 | 2.0 | Atualização para roteamento Backend/Auth, Quiz-Service e AI futuro | Miguel Moreira |
+| 13/05/2026 | 2.0 | Atualização para roteamento Usuario-Service, Quiz-Service e AI futuro | Miguel Moreira |
 | 13/05/2026 | 2.1 | Restauração dos acentos do português brasileiro | Miguel Moreira |
+| 21/05/2026 | 2.2 | Inclui endpoints de `/usuarios/*` e `/turmas/*` com regras de acesso por papel | Miguel Moreira |

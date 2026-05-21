@@ -23,19 +23,19 @@ Com excessão de `app/` e `shared/`, todas as camadas podem ser divididas em sub
 
 #### Função e camadas internas
 
-O BFF é um proxy 100% orquestração entre o Frontend e os serviços de domínio (Backend/Auth, Quiz-Service e AI futuro). Não possui regra de negócio nem persistência. Suas responsabilidades:
+O BFF é um proxy 100% orquestração entre o Frontend e os serviços de domínio (Usuario-Service, Quiz-Service e AI futuro). Não possui regra de negócio nem persistência. Suas responsabilidades:
 
 - Receber todas as chamadas vindas do Frontend (único endereço público da plataforma do lado dos serviços).
 - Validar o JWT (assinatura/expiração) com `JWT_SECRET_KEY`.
 - Injetar `X-Internal-Token` (segredo compartilhado com os serviços internos) e cabeçalhos auxiliares (`X-User-Id`, `X-User-Papel`, `X-User-Status`) nas chamadas downstream.
-- Rotear por path: `/api/v1/autenticacao/*`, `/api/v1/admin/*`, `/api/v1/exemplos/*` → Backend/Auth; `/api/v1/questoes/*` → Quiz-Service; `/api/v1/ia/*` → AI (atualmente 503 enquanto AI estiver vazio).
+- Rotear por path: `/api/v1/autenticacao/*`, `/api/v1/admin/*`, `/api/v1/exemplos/*` → Usuario-Service; `/api/v1/questoes/*` → Quiz-Service; `/api/v1/ia/*` → AI (atualmente 503 enquanto AI estiver vazio).
 - Padronizar respostas de erro vindas do downstream.
 
 Camadas internas do BFF:
 
 * **`Routes`**: definem prefixos, marcam rotas públicas/autenticadas e despacham para o cliente HTTP correto.
 * **`Middlewares`**: `autenticacao` (validação local de JWT), `proxy` (repasse genérico), `tratamento-erros` (mapeia erros downstream e exceções).
-* **`Clients`**: instâncias Axios para Backend/Auth (`backend.client`), Quiz-Service (`quiz.client`) e AI (`ai.client`, opcional via `AI_URL`).
+* **`Clients`**: instâncias Axios para Usuario-Service (`backend.client`), Quiz-Service (`quiz.client`) e AI (`ai.client`, opcional via `AI_URL`).
 
 #### Estrutura de pastas — BFF
 
@@ -60,17 +60,17 @@ Camadas internas do BFF:
 └── package.json
 ```
 
-### Fragmentacao Backend/Auth e Quiz-Service
+### Fragmentacao Usuario-Service e Quiz-Service
 
 #### Decisao
 
-O dominio de quiz deixa de pertencer ao Backend principal e passa a ser responsabilidade do repositorio `2026-1-AnatoQuizUp-Quiz-Service`.
+O dominio de quiz deixa de pertencer ao Usuario-Service e passa a ser responsabilidade do repositorio `2026-1-AnatoQuizUp-Quiz-Service`.
 
-- O **Backend/Auth** fica responsavel por autenticacao, identidade, administracao de usuarios e exemplos tecnicos.
+- O **Usuario-Service** fica responsavel por autenticacao, identidade, administracao de usuarios e exemplos tecnicos.
 - O **Quiz-Service** fica responsavel por temas, questoes, alternativas, resolucoes e storage de imagens de questoes.
 - Cada servico de dominio possui banco proprio: Auth DB, Quiz DB e AI DB futuro.
-- O Quiz-Service guarda IDs de usuarios como referencias externas, sem FK para o banco do Backend/Auth.
-- O Quiz-Service valida autorizacao pelo JWT assinado pelo Backend/Auth. Headers `X-User-*` sao informativos e nao sao fonte de verdade.
+- O Quiz-Service guarda IDs de usuarios como referencias externas, sem FK para o banco do Usuario-Service.
+- O Quiz-Service valida autorizacao pelo JWT assinado pelo Usuario-Service. Headers `X-User-*` sao informativos e nao sao fonte de verdade.
 
 #### Consequencias
 
@@ -184,4 +184,4 @@ anatoquizup-api/
 | 26/04/2026 | 1.5 | Reorganização da seção de arquitetura, concentrando arquiteturais e estruturas adotadas em uma página só| [Ana Catarina](https://github.com/an4catarina) |
 | 27/04/2026 | 1.6 | Adicionando arquitetura de componentes do backend | [Bruno Ricardo](https://github.com/EhOBruno) |
 | 05/05/2026 | 1.7 | Adicionando o BFF como estilo arquitetural separado, com função e estrutura de pastas (PRD: Migração para Arquitetura com BFF) | [Miguel Moreira](https://github.com/miguelmsoliveira) |
-| 13/05/2026 | 2.0 | Registra a fragmentacao Backend/Auth e Quiz-Service com bancos separados | Miguel Moreira |
+| 13/05/2026 | 2.0 | Registra a fragmentacao Usuario-Service / Quiz-Service com bancos separados | Miguel Moreira |

@@ -10,8 +10,8 @@ A documentação reúne informações de produto, planejamento, arquitetura, con
 |---|---|
 | [`2026-1-AnatoQuizUp-Web`](https://github.com/fga-eps-mds/2026-1-AnatoQuizUp-Web) | Frontend React + Vite |
 | [`2026-1-AnatoQuizUp-BFF`](https://github.com/fga-eps-mds/2026-1-AnatoQuizUp-BFF) | Backend-For-Frontend (porta de entrada pública) |
-| [`2026-1-AnatoQuizUp-Backend`](https://github.com/fga-eps-mds/2026-1-AnatoQuizUp-Backend) | Backend/Auth: autenticação, identidade e admin |
-| [`2026-1-AnatoQuizUp-Quiz-Service`](https://github.com/fga-eps-mds/2026-1-AnatoQuizUp-Quiz-Service) | Questões, quiz, Quiz DB e storage de imagens |
+| [`2026-1-AnatoQuizUp-Usuario-Service`](https://github.com/fga-eps-mds/2026-1-AnatoQuizUp-Usuario-Service) | Usuario-Service: autenticação, identidade e admin |
+| [`2026-1-AnatoQuizUp-Quiz-Service`](https://github.com/fga-eps-mds/2026-1-AnatoQuizUp-Quiz-Service) | Questões, quiz, turmas, vínculo de alunos, Quiz DB e storage de imagens (MinIO/S3) |
 | [`2026-1-AnatoQuizUp-AI`](https://github.com/fga-eps-mds/2026-1-AnatoQuizUp-AI) | Serviço de IA (placeholder reservado para semestres futuros) |
 | `2026-1-AnatoQuizUp-Doc` (este) | Documentação MkDocs |
 

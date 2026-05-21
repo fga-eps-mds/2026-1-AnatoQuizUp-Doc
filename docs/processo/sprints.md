@@ -54,12 +54,12 @@ Os itens planejados fazem parte da [Release Major 1](../backlog/release-major-1.
 
 | Frente | Entrega | Evidência nos repositórios |
 |--------|---------|----------------------------|
-| Backend | Modelagem de usuários, perfis, status, refresh tokens e tokens de redefinição | `prisma/schema.prisma` e migrations |
-| Backend | Cadastro de aluno | `src/modules/auth/aluno/` |
-| Backend | Endpoints auxiliares de nacionalidades, localidades e opções acadêmicas | `src/modules/auth/aluno/*` e `src/shared/constants/*` |
-| Backend | JWT e middleware de autenticação | `src/shared/utils/jwt.ts` e `src/shared/middlewares/autenticacao.middleware.ts` |
-| Backend | Serviço de email transacional | `src/shared/services/emailService.ts` |
-| Backend | Testes e cobertura com Jest | `tests/unit/` e `jest.config.cjs` |
+| Usuario-Service | Modelagem de usuários, perfis, status, refresh tokens e tokens de redefinição | `prisma/schema.prisma` e migrations |
+| Usuario-Service | Cadastro de aluno | `src/modules/auth/aluno/` |
+| Usuario-Service | Endpoints auxiliares de nacionalidades, localidades e opções acadêmicas | `src/modules/auth/aluno/*` e `src/shared/constants/*` |
+| Usuario-Service | JWT e middleware de autenticação | `src/shared/utils/jwt.ts` e `src/shared/middlewares/autenticacao.middleware.ts` |
+| Usuario-Service | Serviço de email transacional | `src/shared/services/emailService.ts` |
+| Usuario-Service | Testes e cobertura com Jest | `tests/unit/` e `jest.config.cjs` |
 | Frontend | Estrutura FSD e roteamento | `src/app/`, `src/pages/`, `src/features/`, `src/widgets/`, `src/shared/` |
 | Frontend | Cadastro de aluno com formulário em etapas | `src/features/register-student/` e `src/pages/register/` |
 | Frontend | Login, AuthProvider, rotas protegidas, header e home | `src/features/auth-by-credencials/`, `src/app/providers/`, `src/app/router/`, `src/widgets/header/` |
