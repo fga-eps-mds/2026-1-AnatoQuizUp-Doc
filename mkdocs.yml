@@ -72,6 +72,7 @@ nav:
 
   - Registro:
       - Reuniões: processo/reunioes.md
+      - Validação Release Minor 3: processo/validacao-release-minor-3.md
 
   - Contribuição:
       - Código de Conduta: contribuicao/codigo_conduta.md
