@@ -141,6 +141,33 @@ Os membros presentes apresentaram o desenvolvimento das histórias de usuário t
 
 **Ata completa:** [reuniao1705-ata.md](../assets/processo/reuniao1705-ata.md)
 
+### 24/05/2026 — Sprint Review e Planejamento da Entrega da Release Major 2
+
+**Formato da ata:** Markdown
+
+**Objetivo:**
+
+Validar as entregas realizadas pela equipe, planejar a próxima sprint e organizar as ações necessárias para a apresentação da Release Major 2.
+
+**Resumo da ata:**
+
+Os membros presentes apresentaram o que desenvolveram durante a sprint, e foi registrado que todos conseguiram concluir suas respectivas partes. Bruno e Maria Luisa apresentaram definições relacionadas à Inteligência Artificial e ao dashboard analítico. A equipe também dividiu as tarefas da próxima sprint, definiu Genilson e Caio como novas lideranças e alinhou a preparação para a apresentação da Release Major 2, marcada para 28/05/2026 às 19h30.
+
+**Principais decisões:**
+
+- Definição de Genilson e Caio como lideranças do próximo ciclo.
+- Divisão das tarefas da próxima sprint.
+- Continuidade das definições de IA e dashboard analítico com Bruno e Maria Luisa.
+- Realização de reunião em 25/05/2026, às 10h, para resolver pendências da entrega.
+
+**Encaminhamentos:**
+
+- Resolver pendências da entrega da Release Major 2 em reunião no dia 25/05/2026, às 10h.
+- Preparar a apresentação da Release Major 2 para 28/05/2026, às 19h30.
+- Registrar e acompanhar as tarefas planejadas para a próxima sprint.
+
+**Ata completa:** [reuniao2405-ata.md](../assets/processo/reuniao2405-ata.md)
+
 ## Histórico de Versão
 
 | Data | Versão | Descrição | Autor(es) |
@@ -152,3 +179,4 @@ Os membros presentes apresentaram o desenvolvimento das histórias de usuário t
 | 03/05/2026 | 1.4 | Inclusão da ata de alinhamento com cliente (03/05) | [Breno Fernandes](https://github.com/BrenoFrds) |
 | 04/05/2026 | 1.5 | Adição da descrição dos rituais da equipe | [Genilson Junior](https://github.com/GenilsonJrs) |
 | 17/05/2026 | 1.6 | Inclusão da ata de Sprint Review e planejamento de sprint (17/05) | [Bruno Ricardo](https://github.com/EhOBruno) |
+| 24/05/2026 | 1.7 | Inclusão da ata de Sprint Review e planejamento da entrega da Release Major 2 (24/05) | [Breno Fernandes](https://github.com/BrenoFrds), [Genilson Junior](https://github.com/GenilsonJrs), [João Vitor](https://github.com/Joa0V) |
