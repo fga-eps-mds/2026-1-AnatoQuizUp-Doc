@@ -14,8 +14,10 @@ A API usa versionamento no caminho. Todos os endpoints de negócio partem do pre
 | `/api/v1/admin/*` | Usuario-Service | Administração de usuários |
 | `/api/v1/exemplos/*` | Usuario-Service | Módulo técnico didático |
 | `/api/v1/usuarios/*` | Usuario-Service | Busca de usuários (em lote, paginada de alunos, ou pública por id) |
+| `/api/v1/quiz/*` | Quiz-Service | Fluxos de jogo, moedas, histórico e respostas do quiz |
 | `/api/v1/questoes/*` | Quiz-Service | Gestão de questões |
 | `/api/v1/turmas/*` | Quiz-Service | Turmas e vínculo de alunos; rotas de leitura abertas a ALUNO com filtro por papel |
+| `/api/v1/lista/*` | Quiz-Service | Listas de estudo e compartilhamento entre turmas |
 | `/api/v1/ia/*` | AI Service futuro | 503 enquanto `AI_URL` estiver vazio |
 | `/health` | BFF | Health check público do BFF |
 
@@ -156,7 +158,26 @@ O BFF valida assinatura e expiração antes de repassar. Usuario-Service e Quiz-
 | GET | `/turmas/:id/alunos` | Quiz-Service | PROFESSOR criador / ADMINISTRADOR |
 | POST | `/turmas/:id/alunos` | Quiz-Service | PROFESSOR criador / ADMINISTRADOR |
 | DELETE | `/turmas/:id/alunos/:alunoId` | Quiz-Service | PROFESSOR criador / ADMINISTRADOR |
+| GET | `/quiz` | Quiz-Service | ALUNO / PROFESSOR / ADMINISTRADOR |
+| POST | `/quiz/responder` | Quiz-Service | ALUNO / PROFESSOR / ADMINISTRADOR |
+| GET | `/quiz/moedas` | Quiz-Service | ALUNO / PROFESSOR / ADMINISTRADOR |
+| GET | `/quiz/quantidade_por_tema` | Quiz-Service | ALUNO / PROFESSOR / ADMINISTRADOR |
+| GET | `/quiz/historico` | Quiz-Service | ALUNO / PROFESSOR / ADMINISTRADOR |
+| POST | `/lista` | Quiz-Service | ALUNO / PROFESSOR / ADMINISTRADOR |
+| GET | `/lista` | Quiz-Service | ALUNO / PROFESSOR / ADMINISTRADOR |
+| GET | `/lista/turma/:turmaId` | Quiz-Service | ALUNO / PROFESSOR / ADMINISTRADOR |
+| GET | `/lista/:id` | Quiz-Service | ALUNO / PROFESSOR / ADMINISTRADOR |
+| DELETE | `/lista/:id` | Quiz-Service | ALUNO / PROFESSOR / ADMINISTRADOR |
+| GET | `/lista/:id/pdf` | Quiz-Service | ALUNO / PROFESSOR / ADMINISTRADOR |
+| PATCH | `/lista/:id` | Quiz-Service | ALUNO / PROFESSOR / ADMINISTRADOR |
+| POST | `/lista/:id/questoes` | Quiz-Service | ALUNO / PROFESSOR / ADMINISTRADOR |
+| PATCH | `/lista/:id/questoes/ordem` | Quiz-Service | ALUNO / PROFESSOR / ADMINISTRADOR |
+| DELETE | `/lista/:id/questoes/:questaoId` | Quiz-Service | ALUNO / PROFESSOR / ADMINISTRADOR |
+| POST | `/lista/:id/turmas` | Quiz-Service | ALUNO / PROFESSOR / ADMINISTRADOR |
+| DELETE | `/lista/:id/turmas/:turmaId` | Quiz-Service | ALUNO / PROFESSOR / ADMINISTRADOR |
+| GET | `/lista/:id/estatisticas/turma/:turmaId` | Quiz-Service | ALUNO / PROFESSOR / ADMINISTRADOR |
 
+- A documentação detalhada de `/quiz/*`, `/questoes/*`, `/turmas/*` e `/lista/*` está disponível em `arquitetura/api/quiz.md`, `arquitetura/api/questoes.md`, `arquitetura/api/turmas.md` e `arquitetura/api/lista.md`.
 - **`/usuarios/:id`** é a rota usada pelo Web para resolver o nome do professor responsável na tela de detalhe da turma do aluno. Payload mínimo (sem email, senha, ou dados pessoais).
 - **`/turmas` para ALUNO** sempre filtra por `status=ATIVA` e exibe somente turmas em que o aluno está vinculado. Query `?status=` é rejeitada com **400**.
 - **`/turmas/:id`** para aluno sem vínculo retorna **404** (intencional — não vaza existência).
