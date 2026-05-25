@@ -60,6 +60,10 @@ nav:
           - Localidades: arquitetura/api/localidades.md
           - Administração: arquitetura/api/admin.md
           - Exemplos: arquitetura/api/exemplos.md
+          - Quiz: arquitetura/api/quiz.md
+          - Questões: arquitetura/api/questoes.md
+          - Turmas: arquitetura/api/turmas.md
+          - Listas: arquitetura/api/lista.md
           - Erros e Contratos: arquitetura/api/erros.md
 
   - Qualidade:
