@@ -66,16 +66,16 @@ A US Cadastro e Gestão de Questões foi aprovada parcialmente: Hugo aprovou os 
 
 ## Encaminhamentos
 
-| Feedback | Tipo | Prioridade | Ação sugerida | Status |
-|----------|------|------------|---------------|--------|
-| Mensagem inicial do WebApp não evidencia anatomia radiológica. | Produto/UX | Média | Revisar textos da página inicial para explicitar o foco em anatomia radiológica e imaginologia. | Issue a criar |
-| Entradas do cadastro de professor precisam de tratamento mais robusto. | Técnico/UX | Média | Normalizar e validar espaços, sinais gráficos e sensibilidade ao caixa; avaliar mensagens durante preenchimento. | Issue a criar |
-| Palavras-chave das questões não ficam salvas. | Funcional | Alta | Corrigir persistência e retorno das palavras-chave no fluxo de criação/edição de questões. | Issue a criar |
-| Pesquisa de questões bloqueia após busca sem resultados. | Funcional | Alta | Permitir limpar o campo e realizar nova busca sem recarregar a página. | Issue a criar |
-| Comentário da questão deveria ser obrigatório. | Produto/Requisito | Média | Alinhar com PO se o comentário equivale à explicação pedagógica ou se exige novo campo obrigatório. | Issue a criar |
-| Campo Tema está genérico para o modelo esperado. | Produto/Modelagem | Alta | Decompor Tema em modalidade, plano, região anatômica e estrutura alvo. | Issue a criar |
-| Campos de workflow da questão estão ausentes. | Produto/Modelagem | Alta | Incluir status, status_validacao e status_revisao no modelo e na listagem. | Issue a criar |
-| Campos pedagógicos estruturados estão ausentes. | Produto/Modelagem | Média | Avaliar inclusão de nivel_dificuldade, nivel_bloom e justificativa_espacial. | Issue a criar |
+| Feedback | Tipo | Prioridade | Ação sugerida | Issue | Status |
+|----------|------|------------|---------------|-------|--------|
+| Mensagem inicial do WebApp não evidencia anatomia radiológica. | Produto/UX | Média | Revisar textos da página inicial para explicitar o foco em anatomia radiológica e imaginologia. | [#43](https://app.zenhub.com/workspaces/2026-1-anatoquizup-69bc08ebd4e9ec001c0c3229/issues/gh/fga-eps-mds/2026-1-anatoquizup-doc/43) | Issue criada |
+| Entradas dos cadastros de professor e aluno precisam de tratamento mais robusto. | Técnico/UX | Média | Normalizar e validar o campo nome para evitar caracteres especiais indevidos. | [#39](https://app.zenhub.com/workspaces/2026-1-anatoquizup-69bc08ebd4e9ec001c0c3229/issues/gh/fga-eps-mds/2026-1-anatoquizup-doc/39), [#40](https://app.zenhub.com/workspaces/2026-1-anatoquizup-69bc08ebd4e9ec001c0c3229/issues/gh/fga-eps-mds/2026-1-anatoquizup-doc/40) | Issues criadas |
+| Palavras-chave das questões não ficam salvas. | Funcional | Alta | Corrigir persistência e retorno das palavras-chave no fluxo de criação/edição de questões. | [#42](https://app.zenhub.com/workspaces/2026-1-anatoquizup-69bc08ebd4e9ec001c0c3229/issues/gh/fga-eps-mds/2026-1-anatoquizup-doc/42) | Issue criada |
+| Pesquisa de questões bloqueia após busca sem resultados. | Funcional | Alta | Permitir limpar o campo e realizar nova busca sem recarregar a página. | [#41](https://app.zenhub.com/workspaces/2026-1-anatoquizup-69bc08ebd4e9ec001c0c3229/issues/gh/fga-eps-mds/2026-1-anatoquizup-doc/41) | Issue criada |
+| Comentário da questão deveria ser obrigatório. | Produto/Requisito | Média | Alinhar com PO se o comentário equivale à explicação pedagógica ou se exige novo campo obrigatório. | [#44](https://app.zenhub.com/workspaces/2026-1-anatoquizup-69bc08ebd4e9ec001c0c3229/issues/gh/fga-eps-mds/2026-1-anatoquizup-doc/44) | Issue criada |
+| Campo Tema está genérico para o modelo esperado. | Produto/Modelagem | Alta | Analisar se o modelo atual já contempla modalidade, plano, região anatômica e estrutura alvo antes de criar issue. | A definir | Em análise |
+| Campos de workflow da questão estão ausentes. | Produto/Modelagem | Alta | Verificar no modelo atual se já existem status, status_validacao e status_revisao antes de criar issue. | A definir | Em análise |
+| Campos pedagógicos estruturados estão ausentes. | Produto/Modelagem | Média | Verificar se nivel_dificuldade, nivel_bloom e justificativa_espacial já existem ou se devem entrar no backlog. | A definir | Em análise |
 
 ## Histórico de Versão
 
@@ -83,3 +83,4 @@ A US Cadastro e Gestão de Questões foi aprovada parcialmente: Hugo aprovou os 
 |------|--------|-----------|-----------|
 | 25/05/2026 | 1.0 | Registro inicial da validação da Release Minor 3 com resposta de Hugo e estrutura para consolidação da resposta de Chaffin | [Breno Fernandes](https://github.com/BrenoFrds) |
 | 25/05/2026 | 1.1 | Consolidação da resposta de Chaffin e atualização do resultado da validação | [Breno Fernandes](https://github.com/BrenoFrds) |
+| 25/05/2026 | 1.2 | Inclusão dos links das issues criadas e status dos encaminhamentos em análise | [Breno Fernandes](https://github.com/BrenoFrds) |
