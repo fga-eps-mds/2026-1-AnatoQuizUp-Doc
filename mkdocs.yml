@@ -18,6 +18,7 @@ nav:
   - Planejamento:
       - Visão Geral:
           - Roadmap e Releases: processo/roadmap.md
+          - Estrutura Analítica do Projeto: processo/eap.md
           - Datas Importantes: processo/datas-importantes.md
       - Backlog:
           - Visão Geral: backlog/overview.md
