@@ -441,3 +441,9 @@ Content-Type: application/pdf
 Content-Disposition: attachment; filename="lista-1.pdf"
 [Arquivo PDF]
 ```
+
+## Histórico de Versão
+
+| Data | Versão | Descrição | Autor(es) |
+|------|--------|-----------|-----------|
+| 25/05/2026 | 1.0 | Criação da documentação dos endpoints da API de Listas | [Caio Santos](https://github.com/caiobsantos) |

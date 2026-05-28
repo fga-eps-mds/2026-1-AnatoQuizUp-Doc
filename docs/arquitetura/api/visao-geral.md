@@ -191,3 +191,4 @@ O BFF valida assinatura e expiração antes de repassar. Usuario-Service e Quiz-
 | 13/05/2026 | 2.0 | Atualização para roteamento Usuario-Service, Quiz-Service e AI futuro | Miguel Moreira |
 | 13/05/2026 | 2.1 | Restauração dos acentos do português brasileiro | Miguel Moreira |
 | 21/05/2026 | 2.2 | Inclui endpoints de `/usuarios/*` e `/turmas/*` com regras de acesso por papel | Miguel Moreira |
+| 25/05/2026 | 2.3 | Inclui endpoints de `/quiz/*`, `/questoes/*` e `/listas/*`| [Caio Santos](https://github.com/caiobsantos) |
