@@ -275,3 +275,9 @@ Este endpoint remove uma turma do sistema.
 **Resposta de sucesso — 204**
 
 Sem corpo de resposta.
+
+## Histórico de Versão
+
+| Data | Versão | Descrição | Autor(es) |
+|------|--------|-----------|-----------|
+| 25/05/2026 | 1.0 | Criação da documentação dos endpoints da API de Turmas | [Caio Santos](https://github.com/caiobsantos) |

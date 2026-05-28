@@ -218,4 +218,4 @@ A documentação de endpoints do BFF está dividida nas seguintes páginas:
 
 | Data | Versão | Descrição | Autor(es) |
 |------|--------|-----------|-----------|
-| 25/05/2026 | 1.0 | Criação da documentação dos endpoints da API de Quiz | [Seu Nome](https://github.com/seu-usuario) |
+| 25/05/2026 | 1.0 | Criação da documentação dos endpoints da API de Quiz | [Caio Santos](https://github.com/caiobsantos) |
