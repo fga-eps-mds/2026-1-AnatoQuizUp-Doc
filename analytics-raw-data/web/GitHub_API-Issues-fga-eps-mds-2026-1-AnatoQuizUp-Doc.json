@@ -844,7 +844,7 @@
         "milestone": null,
         "comments": 0,
         "created_at": "2026-05-24T18:38:27Z",
-        "updated_at": "2026-05-24T18:38:28Z",
+        "updated_at": "2026-05-25T15:06:02Z",
         "closed_at": null,
         "assignee": null,
         "author_association": "CONTRIBUTOR",
@@ -871,7 +871,7 @@
             "blocking": 0,
             "total_blocking": 0
         },
-        "body": "## [S3] Cria\u00e7\u00e3o dos embeds (vetoriza\u00e7\u00e3o do texto)\n\n**Per\u00edodo:** 07/06 a 13/06/2026 \u00b7 Release 3\n**Labels:** `embeddings` `vetoriza\u00e7\u00e3o`\n\n**Depend\u00eancia:** Semana 2: chunks limpos e normalizados prontos\n\n---\n\n### Objetivo\n\nGerar os vetores de embedding para todos os chunks do dataset e armazen\u00e1-los no banco vetorial escolhido.\n\n---\n\n### Tarefas\n\n- [ ] Configurar modelo de embedding \n- [ ] Implementar script de vetoriza\u00e7\u00e3o em lote dos chunks\n- [ ] Popular o banco vetorial com os embeddings gerados\n- [ ] Validar a qualidade dos embeddings com buscas de similaridade de teste\n- [ ] Versionar os embeddings gerados para reprodutibilidade\n\n### Crit\u00e9rios de aceite\n\n- [ ] Todos os chunks do dataset vetorizados e armazenados\n- [ ] Consulta de similaridade retornando resultados relevantes em ao menos 5 testes\n- [ ] Script de vetoriza\u00e7\u00e3o documentado e reproduz\u00edvel\n- [ ] Custo e tempo de processamento registrados\n",
+        "body": "\n\n### Objetivo\n\nGerar os vetores de embedding para todos os chunks do dataset e armazen\u00e1-los no banco vetorial escolhido.\n\n---\n\n### Tarefas\n\n- [ ] Configurar modelo de embedding \n- [ ] Implementar script de vetoriza\u00e7\u00e3o em lote dos chunks\n- [ ] Popular o banco vetorial com os embeddings gerados\n- [ ] Validar a qualidade dos embeddings com buscas de similaridade de teste\n- [ ] Versionar os embeddings gerados para reprodutibilidade\n\n### Crit\u00e9rios de aceite\n\n- [ ] Todos os chunks do dataset vetorizados e armazenados\n- [ ] Consulta de similaridade retornando resultados relevantes em ao menos 5 testes\n- [ ] Script de vetoriza\u00e7\u00e3o documentado e reproduz\u00edvel\n- [ ] Custo e tempo de processamento registrados\n",
         "closed_by": null,
         "reactions": {
             "url": "https://api.github.com/repos/fga-eps-mds/2026-1-AnatoQuizUp-Doc/issues/36/reactions",
@@ -1114,7 +1114,7 @@
                 "description": "Improvements or additions to documentation"
             }
         ],
-        "state": "open",
+        "state": "closed",
         "locked": false,
         "assignees": [
             {
@@ -1163,8 +1163,8 @@
         "milestone": null,
         "comments": 0,
         "created_at": "2026-05-19T22:59:12Z",
-        "updated_at": "2026-05-24T18:49:14Z",
-        "closed_at": null,
+        "updated_at": "2026-05-30T16:47:44Z",
+        "closed_at": "2026-05-30T16:47:43Z",
         "assignee": {
             "login": "EhOBruno",
             "id": 110112943,
@@ -1202,7 +1202,27 @@
             "total_blocking": 0
         },
         "body": "Evolu\u00e7\u00e3o do artefato DA-R1, incorporando o Notebook Analytics com m\u00e9tricas de qualidade coletadas automaticamente do SonarCloud via pipeline CI/CD. O notebook, versionado no reposit\u00f3rio junto ao c\u00f3digo-fonte, consolida dados de produto (SonarCloud), processo (EVM \u00c1gil, GitHub/ZenHub) e pessoas/riscos em um painel \u00fanico de apoio \u00e0 decis\u00e3o. \u00c9 um artefato vivo, constru\u00eddo sprint a sprint e avaliado em cada release major como evid\u00eancia de gest\u00e3o baseada em dados.\n\nCrit\u00e9rios de aceite\n\n- [x] O Notebook Jupyter est\u00e1 presente no reposit\u00f3rio e versionado junto ao c\u00f3digo-fonte.\n- [x] O notebook consome diretamente o arquivo .json de m\u00e9tricas gerado automaticamente pelo pipeline CI/CD a partir do SonarCloud.\n- [ ] As m\u00e9tricas de qualidade de produto est\u00e3o normalizadas, ponderadas, agregadas e interpretadas pelo time no notebook.\n- [ ] O notebook integra dados de EVM \u00c1gil, GitHub/ZenHub e Riscos em se\u00e7\u00f5es dedicadas.\n- [ ] H\u00e1 rastreabilidade e reprodutibilidade das an\u00e1lises (rodar o notebook gera os mesmos resultados a partir dos dados de origem).\n- [ ] O artefato foi atualizado em cada sprint e est\u00e1 consistente com o estado atual do projeto na release major.\n",
-        "closed_by": null,
+        "closed_by": {
+            "login": "marialuisa214",
+            "id": 91849929,
+            "node_id": "U_kgDOBXmEyQ",
+            "avatar_url": "https://avatars.githubusercontent.com/u/91849929?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/marialuisa214",
+            "html_url": "https://github.com/marialuisa214",
+            "followers_url": "https://api.github.com/users/marialuisa214/followers",
+            "following_url": "https://api.github.com/users/marialuisa214/following{/other_user}",
+            "gists_url": "https://api.github.com/users/marialuisa214/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/marialuisa214/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/marialuisa214/subscriptions",
+            "organizations_url": "https://api.github.com/users/marialuisa214/orgs",
+            "repos_url": "https://api.github.com/users/marialuisa214/repos",
+            "events_url": "https://api.github.com/users/marialuisa214/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/marialuisa214/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+        },
         "reactions": {
             "url": "https://api.github.com/repos/fga-eps-mds/2026-1-AnatoQuizUp-Doc/issues/33/reactions",
             "total_count": 0,
@@ -1217,7 +1237,7 @@
         },
         "timeline_url": "https://api.github.com/repos/fga-eps-mds/2026-1-AnatoQuizUp-Doc/issues/33/timeline",
         "performed_via_github_app": null,
-        "state_reason": null,
+        "state_reason": "completed",
         "pinned_comment": null
     },
     {
@@ -1605,11 +1625,11 @@
                 "user_view_type": "public",
                 "site_admin": false
             },
-            "open_issues": 4,
-            "closed_issues": 7,
+            "open_issues": 1,
+            "closed_issues": 10,
             "state": "open",
             "created_at": "2026-05-01T12:05:54Z",
-            "updated_at": "2026-05-19T23:22:10Z",
+            "updated_at": "2026-05-25T13:56:29Z",
             "due_on": "2026-05-23T00:00:00Z",
             "closed_at": null
         },
@@ -1734,14 +1754,14 @@
             "site_admin": false
         },
         "labels": [],
-        "state": "open",
+        "state": "closed",
         "locked": false,
         "assignees": [],
         "milestone": null,
         "comments": 0,
         "created_at": "2026-05-08T19:36:54Z",
-        "updated_at": "2026-05-08T19:46:32Z",
-        "closed_at": null,
+        "updated_at": "2026-05-25T13:55:33Z",
+        "closed_at": "2026-05-25T13:55:33Z",
         "assignee": null,
         "author_association": "CONTRIBUTOR",
         "issue_field_values": [],
@@ -1760,7 +1780,27 @@
             "total_blocking": 0
         },
         "body": "### Descri\u00e7\u00e3o\n**Crit\u00e9rios de Aceita\u00e7\u00e3o**\n- [ ] Prot\u00f3tipo do Header do Professor contendo o bot\u00e3o de atalho \"Criar Lista\".\n- [ ] Layout de alta fidelidade da tela de montagem com filtros, busca e \u00e1rea de quest\u00f5es selecionadas.\n- [ ] Design da intera\u00e7\u00e3o de reordena\u00e7\u00e3o (Drag-and-Drop) das quest\u00f5es na lista.\n- [ ] Mockup do modal de finaliza\u00e7\u00e3o (Nome da lista, Sele\u00e7\u00e3o de Turmas e Bot\u00f5es de A\u00e7\u00e3o).\n- [ ] Defini\u00e7\u00e3o visual do template de PDF (Cabe\u00e7alho acad\u00eamico, quest\u00f5es e folha de gabarito).\n\n**Tarefas T\u00e9cnicas**\n- [ ] Desenhar o componente de bot\u00e3o \"Criar Lista\" integrado ao Header existente.\n- [ ] Criar a interface de curadoria de quest\u00f5es no Figma (Listagem + Sidebar de sele\u00e7\u00e3o).\n- [ ] Prototipar o fluxo completo desde o clique no Header at\u00e9 a confirma\u00e7\u00e3o de publica\u00e7\u00e3o.\n- [ ] Gerar o guia de estilos para o documento PDF (fontes, margens e tamanhos de imagem)",
-        "closed_by": null,
+        "closed_by": {
+            "login": "pkbceira03",
+            "id": 109092210,
+            "node_id": "U_kgDOBoCdcg",
+            "avatar_url": "https://avatars.githubusercontent.com/u/109092210?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/pkbceira03",
+            "html_url": "https://github.com/pkbceira03",
+            "followers_url": "https://api.github.com/users/pkbceira03/followers",
+            "following_url": "https://api.github.com/users/pkbceira03/following{/other_user}",
+            "gists_url": "https://api.github.com/users/pkbceira03/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/pkbceira03/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/pkbceira03/subscriptions",
+            "organizations_url": "https://api.github.com/users/pkbceira03/orgs",
+            "repos_url": "https://api.github.com/users/pkbceira03/repos",
+            "events_url": "https://api.github.com/users/pkbceira03/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/pkbceira03/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+        },
         "reactions": {
             "url": "https://api.github.com/repos/fga-eps-mds/2026-1-AnatoQuizUp-Doc/issues/28/reactions",
             "total_count": 0,
@@ -1775,7 +1815,7 @@
         },
         "timeline_url": "https://api.github.com/repos/fga-eps-mds/2026-1-AnatoQuizUp-Doc/issues/28/timeline",
         "performed_via_github_app": null,
-        "state_reason": null,
+        "state_reason": "completed",
         "pinned_comment": null
     },
     {
@@ -2002,11 +2042,11 @@
                 "user_view_type": "public",
                 "site_admin": false
             },
-            "open_issues": 4,
-            "closed_issues": 7,
+            "open_issues": 1,
+            "closed_issues": 10,
             "state": "open",
             "created_at": "2026-05-01T12:05:54Z",
-            "updated_at": "2026-05-19T23:22:10Z",
+            "updated_at": "2026-05-25T13:56:29Z",
             "due_on": "2026-05-23T00:00:00Z",
             "closed_at": null
         },
@@ -2093,7 +2133,7 @@
                 "description": null
             }
         ],
-        "state": "open",
+        "state": "closed",
         "locked": false,
         "assignees": [
             {
@@ -2190,18 +2230,18 @@
                 "user_view_type": "public",
                 "site_admin": false
             },
-            "open_issues": 4,
-            "closed_issues": 7,
+            "open_issues": 1,
+            "closed_issues": 10,
             "state": "open",
             "created_at": "2026-05-01T12:05:54Z",
-            "updated_at": "2026-05-19T23:22:10Z",
+            "updated_at": "2026-05-25T13:56:29Z",
             "due_on": "2026-05-23T00:00:00Z",
             "closed_at": null
         },
         "comments": 0,
         "created_at": "2026-05-06T14:36:53Z",
-        "updated_at": "2026-05-17T22:36:55Z",
-        "closed_at": null,
+        "updated_at": "2026-05-25T13:56:24Z",
+        "closed_at": "2026-05-25T13:56:24Z",
         "assignee": {
             "login": "EhOMiguel",
             "id": 98056127,
@@ -2238,8 +2278,8 @@
         "active_lock_reason": null,
         "sub_issues_summary": {
             "total": 4,
-            "completed": 0,
-            "percent_completed": 0
+            "completed": 1,
+            "percent_completed": 25
         },
         "issue_dependencies_summary": {
             "blocked_by": 0,
@@ -2248,7 +2288,27 @@
             "total_blocking": 0
         },
         "body": "**Como** aluno da plataforma  \n**Quero** visualizar a lista de turmas nas quais estou inserido e acessar os detalhes de cada uma  \n**Para** acompanhar as disciplinas em que estou matriculado e ter acesso ao contexto espec\u00edfico de cada grupo\n\n---\n\n### Crit\u00e9rios de Aceita\u00e7\u00e3o\n- [ ] **Acesso Restrito:** P\u00e1gina acess\u00edvel exclusivamente para usu\u00e1rios autenticados com perfil `Aluno`.\n- [ ] **Listagem de Turmas:** Exibir uma grade (grid) ou lista de cards contendo todas as turmas \u00e0s quais o aluno foi vinculado pelo professor. Cada card deve mostrar o Nome da Turma e o Semestre.\n- [ ] **Estado Vazio (Empty State):** Se o aluno n\u00e3o estiver vinculado a nenhuma turma, exibir uma ilustra\u00e7\u00e3o e mensagem amig\u00e1vel (ex: \"Voc\u00ea ainda n\u00e3o foi adicionado a nenhuma turma. Aguarde o convite do seu professor.\").\n- [ ] **Navega\u00e7\u00e3o e Detalhes:** Ao clicar no card de uma turma, o aluno deve ser redirecionado para a visualiza\u00e7\u00e3o detalhada daquele grupo.\n- [ ] **Informa\u00e7\u00f5es Detalhadas:** A tela de detalhes da turma selecionada deve exibir:\n    - Nome da Turma e Semestre.\n    - Descri\u00e7\u00e3o da mat\u00e9ria cadastrada pelo professor.\n    - Nome do professor respons\u00e1vel pela cria\u00e7\u00e3o da turma.\n- [ ] **Responsividade:** A listagem e a tela de detalhes devem adaptar-se corretamente para uso em telas de celulares.\n\n---\n\n### Valor de Neg\u00f3cio\nEsta funcionalidade fecha o ciclo da gest\u00e3o acad\u00eamica do lado do discente. Ao dar visibilidade \u00e0s turmas em que o aluno est\u00e1 inserido, garantimos transpar\u00eancia e criamos o ponto central de navega\u00e7\u00e3o de onde ele poder\u00e1 partir para resolver quest\u00f5es espec\u00edficas ou acompanhar seu rendimento isolado dentro do contexto daquela disciplina.",
-        "closed_by": null,
+        "closed_by": {
+            "login": "pkbceira03",
+            "id": 109092210,
+            "node_id": "U_kgDOBoCdcg",
+            "avatar_url": "https://avatars.githubusercontent.com/u/109092210?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/pkbceira03",
+            "html_url": "https://github.com/pkbceira03",
+            "followers_url": "https://api.github.com/users/pkbceira03/followers",
+            "following_url": "https://api.github.com/users/pkbceira03/following{/other_user}",
+            "gists_url": "https://api.github.com/users/pkbceira03/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/pkbceira03/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/pkbceira03/subscriptions",
+            "organizations_url": "https://api.github.com/users/pkbceira03/orgs",
+            "repos_url": "https://api.github.com/users/pkbceira03/repos",
+            "events_url": "https://api.github.com/users/pkbceira03/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/pkbceira03/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+        },
         "reactions": {
             "url": "https://api.github.com/repos/fga-eps-mds/2026-1-AnatoQuizUp-Doc/issues/25/reactions",
             "total_count": 0,
@@ -2263,7 +2323,7 @@
         },
         "timeline_url": "https://api.github.com/repos/fga-eps-mds/2026-1-AnatoQuizUp-Doc/issues/25/timeline",
         "performed_via_github_app": null,
-        "state_reason": null,
+        "state_reason": "completed",
         "pinned_comment": null
     },
     {
@@ -2299,7 +2359,7 @@
             "site_admin": false
         },
         "labels": [],
-        "state": "open",
+        "state": "closed",
         "locked": false,
         "assignees": [],
         "milestone": {
@@ -2332,18 +2392,18 @@
                 "user_view_type": "public",
                 "site_admin": false
             },
-            "open_issues": 4,
-            "closed_issues": 7,
+            "open_issues": 1,
+            "closed_issues": 10,
             "state": "open",
             "created_at": "2026-05-01T12:05:54Z",
-            "updated_at": "2026-05-19T23:22:10Z",
+            "updated_at": "2026-05-25T13:56:29Z",
             "due_on": "2026-05-23T00:00:00Z",
             "closed_at": null
         },
         "comments": 0,
         "created_at": "2026-05-06T13:32:58Z",
-        "updated_at": "2026-05-06T13:35:02Z",
-        "closed_at": null,
+        "updated_at": "2026-05-25T13:55:55Z",
+        "closed_at": "2026-05-25T13:55:55Z",
         "assignee": null,
         "author_association": "CONTRIBUTOR",
         "issue_field_values": [],
@@ -2362,7 +2422,27 @@
             "total_blocking": 0
         },
         "body": "## Informa\u00e7\u00f5es\n| Campo | Valor |\n|-------|-------|\n| Epic | Gest\u00e3o de Turmas |\n## Crit\u00e9rios de Aceita\u00e7\u00e3o\n- [ ] Criar prot\u00f3tipo da tela/modal de \"Nova Turma\" contendo os campos textuais: Turma, Semestre e Descri\u00e7\u00e3o\n- [ ] Criar prot\u00f3tipo da tela de \"Adicionar Alunos\" (exibida logo ap\u00f3s a cria\u00e7\u00e3o da turma)\n- [ ] Desenhar o componente de busca de alunos (input com \u00edcone de lupa) e a lista de resultados da pesquisa\n- [ ] Desenhar a lista visual de alunos j\u00e1 vinculados \u00e0 turma, com op\u00e7\u00e3o/bot\u00e3o de \"Remover\"\n- [ ] Prever estados de feedback visual: toast de sucesso ao criar turma, toast ao adicionar aluno e estado de carregamento (spinner) na busca\n\n## Tarefas T\u00e9cnicas\n\n### Design\n- [ ] Estruturar o layout do formul\u00e1rio de cria\u00e7\u00e3o no Figma (Desktop e Mobile)\n- [ ] Desenhar o componente de barra de pesquisa com dropdown de resultados\n- [ ] Criar o fluxo de navega\u00e7\u00e3o clic\u00e1vel no prot\u00f3tipo (Criar Turma \u2192 Tela de Aloca\u00e7\u00e3o)\n\n### Valida\u00e7\u00e3o\n- [ ] Revisar usabilidade do fluxo cont\u00ednuo para garantir que o professor entenda que a turma foi criada e agora ele precisa adicionar as pessoas",
-        "closed_by": null,
+        "closed_by": {
+            "login": "pkbceira03",
+            "id": 109092210,
+            "node_id": "U_kgDOBoCdcg",
+            "avatar_url": "https://avatars.githubusercontent.com/u/109092210?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/pkbceira03",
+            "html_url": "https://github.com/pkbceira03",
+            "followers_url": "https://api.github.com/users/pkbceira03/followers",
+            "following_url": "https://api.github.com/users/pkbceira03/following{/other_user}",
+            "gists_url": "https://api.github.com/users/pkbceira03/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/pkbceira03/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/pkbceira03/subscriptions",
+            "organizations_url": "https://api.github.com/users/pkbceira03/orgs",
+            "repos_url": "https://api.github.com/users/pkbceira03/repos",
+            "events_url": "https://api.github.com/users/pkbceira03/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/pkbceira03/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+        },
         "reactions": {
             "url": "https://api.github.com/repos/fga-eps-mds/2026-1-AnatoQuizUp-Doc/issues/24/reactions",
             "total_count": 0,
@@ -2377,7 +2457,7 @@
         },
         "timeline_url": "https://api.github.com/repos/fga-eps-mds/2026-1-AnatoQuizUp-Doc/issues/24/timeline",
         "performed_via_github_app": null,
-        "state_reason": null,
+        "state_reason": "completed",
         "pinned_comment": null
     },
     {
@@ -2423,7 +2503,7 @@
                 "description": null
             }
         ],
-        "state": "open",
+        "state": "closed",
         "locked": false,
         "assignees": [
             {
@@ -2520,18 +2600,18 @@
                 "user_view_type": "public",
                 "site_admin": false
             },
-            "open_issues": 4,
-            "closed_issues": 7,
+            "open_issues": 1,
+            "closed_issues": 10,
             "state": "open",
             "created_at": "2026-05-01T12:05:54Z",
-            "updated_at": "2026-05-19T23:22:10Z",
+            "updated_at": "2026-05-25T13:56:29Z",
             "due_on": "2026-05-23T00:00:00Z",
             "closed_at": null
         },
         "comments": 0,
         "created_at": "2026-05-04T19:44:03Z",
-        "updated_at": "2026-05-23T20:58:22Z",
-        "closed_at": null,
+        "updated_at": "2026-05-25T13:56:29Z",
+        "closed_at": "2026-05-25T13:56:29Z",
         "assignee": {
             "login": "caiobsantos",
             "id": 37780460,
@@ -2568,8 +2648,8 @@
         "active_lock_reason": null,
         "sub_issues_summary": {
             "total": 9,
-            "completed": 8,
-            "percent_completed": 88
+            "completed": 9,
+            "percent_completed": 100
         },
         "issue_dependencies_summary": {
             "blocked_by": 0,
@@ -2578,7 +2658,27 @@
             "total_blocking": 0
         },
         "body": "**Como** aluno da plataforma  \n**Quero** realizar sess\u00f5es de estudo personalizadas com quest\u00f5es aleat\u00f3rias e feedback imediato  \n**Para** testar meus conhecimentos e aprender com meus erros de forma cont\u00ednua e ilimitada\n\n---\n\n### Crit\u00e9rios de Aceita\u00e7\u00e3o\n\n#### **Configura\u00e7\u00e3o e Seguran\u00e7a**\n- [ ] O sistema deve permitir o in\u00edcio de um quiz atrav\u00e9s do endpoint `GET /api/questoes/quiz?categoria=ID`.\n- [ ] O retorno deve ser um *array* de quest\u00f5es filtradas por categoria, considerando apenas quest\u00f5es ativas (filtro por *soft delete*).\n- [ ] **Randomiza\u00e7\u00e3o:** A ordena\u00e7\u00e3o das quest\u00f5es deve ser feita de forma aleat\u00f3ria diretamente no servidor (via PostgreSQL).\n- [ ] **Fluxo Ilimitado:** N\u00e3o deve haver um limite fixo de quest\u00f5es (como 5 ou 10); o aluno pode progredir por todas as quest\u00f5es dispon\u00edveis no tema selecionado.\n- [ ] **Seguran\u00e7a:** Os gabaritos e as explica\u00e7\u00f5es pedag\u00f3gicas **n\u00e3o** devem ser retornados no payload inicial desta requisi\u00e7\u00e3o para evitar que a resposta seja descoberta via inspe\u00e7\u00e3o do navegador.\n\n#### **Intera\u00e7\u00e3o e Feedback**\n- [ ] O aluno deve poder selecionar uma alternativa e clicar em um bot\u00e3o de confirma\u00e7\u00e3o.\n- [ ] Ap\u00f3s a confirma\u00e7\u00e3o, o sistema deve bloquear a troca de resposta para garantir a integridade do teste.\n- [ ] **Valida\u00e7\u00e3o Visual:** O sistema deve destacar a resposta correta em verde e, em caso de erro, a resposta marcada pelo aluno em vermelho.\n- [ ] **Feedback Pedag\u00f3gico:** O sistema deve exibir o `FeedbackCard` contendo a explica\u00e7\u00e3o t\u00e9cnica/pedag\u00f3gica vinda do servidor somente ap\u00f3s a submiss\u00e3o da resposta.\n- [ ] O fluxo deve permitir a transi\u00e7\u00e3o para a pr\u00f3xima quest\u00e3o de forma fluida ap\u00f3s a visualiza\u00e7\u00e3o do feedback.\n\n---\n\n### Valor de Neg\u00f3cio\nEsta funcionalidade unifica a pr\u00e1tica com a teoria em um ciclo de aprendizado cont\u00ednuo. Ao remover limites de quest\u00f5es, permitimos que o aluno dite seu pr\u00f3prio ritmo de estudo. A randomiza\u00e7\u00e3o no banco e a entrega segura de dados garantem que o desafio seja real, enquanto o feedback imediato transforma cada erro em uma oportunidade de consolidar o conhecimento t\u00e9cnico.\n\n---\n\n### Prot\u00f3tipo\n\n<img width=\"1046\" src=\"https://api.zenhub.com/attachedFiles/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBd3IvRFE9PSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--8bdee8d6d83430b36fab16d54226e1d3a6cbaa54/us_quiz_dinamico_1.png\" alt=\"us_quiz_dinamico_1.png\" />\n\n<img width=\"1046\" src=\"https://api.zenhub.com/attachedFiles/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBd3YvRFE9PSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--8d60703f408b1ba119ad2da9ba9e97d31065fbaa/us_quiz_dinamico_2.png\" alt=\"us_quiz_dinamico_2.png\" />\n\n<img width=\"1046\" src=\"https://api.zenhub.com/attachedFiles/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBd3ovRFE9PSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--c5059d0da82cc35491cf34d226315a432a956916/us_quiz_dinamico_3.png\" alt=\"us_quiz_dinamico_3.png\" />\n\n<img width=\"1048\" src=\"https://api.zenhub.com/attachedFiles/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBdzMvRFE9PSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--0d5c7a3fa7c4db53d7314630438f0095775879de/us_quiz_dinamico_4.png\" alt=\"us_quiz_dinamico_4.png\" />\n\n",
-        "closed_by": null,
+        "closed_by": {
+            "login": "pkbceira03",
+            "id": 109092210,
+            "node_id": "U_kgDOBoCdcg",
+            "avatar_url": "https://avatars.githubusercontent.com/u/109092210?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/pkbceira03",
+            "html_url": "https://github.com/pkbceira03",
+            "followers_url": "https://api.github.com/users/pkbceira03/followers",
+            "following_url": "https://api.github.com/users/pkbceira03/following{/other_user}",
+            "gists_url": "https://api.github.com/users/pkbceira03/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/pkbceira03/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/pkbceira03/subscriptions",
+            "organizations_url": "https://api.github.com/users/pkbceira03/orgs",
+            "repos_url": "https://api.github.com/users/pkbceira03/repos",
+            "events_url": "https://api.github.com/users/pkbceira03/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/pkbceira03/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+        },
         "reactions": {
             "url": "https://api.github.com/repos/fga-eps-mds/2026-1-AnatoQuizUp-Doc/issues/23/reactions",
             "total_count": 0,
@@ -2593,7 +2693,7 @@
         },
         "timeline_url": "https://api.github.com/repos/fga-eps-mds/2026-1-AnatoQuizUp-Doc/issues/23/timeline",
         "performed_via_github_app": null,
-        "state_reason": null,
+        "state_reason": "completed",
         "pinned_comment": null
     },
     {
@@ -2736,11 +2836,11 @@
                 "user_view_type": "public",
                 "site_admin": false
             },
-            "open_issues": 4,
-            "closed_issues": 7,
+            "open_issues": 1,
+            "closed_issues": 10,
             "state": "open",
             "created_at": "2026-05-01T12:05:54Z",
-            "updated_at": "2026-05-19T23:22:10Z",
+            "updated_at": "2026-05-25T13:56:29Z",
             "due_on": "2026-05-23T00:00:00Z",
             "closed_at": null
         },
@@ -2951,11 +3051,11 @@
                 "user_view_type": "public",
                 "site_admin": false
             },
-            "open_issues": 4,
-            "closed_issues": 7,
+            "open_issues": 1,
+            "closed_issues": 10,
             "state": "open",
             "created_at": "2026-05-01T12:05:54Z",
-            "updated_at": "2026-05-19T23:22:10Z",
+            "updated_at": "2026-05-25T13:56:29Z",
             "due_on": "2026-05-23T00:00:00Z",
             "closed_at": null
         },
@@ -3548,11 +3648,11 @@
                 "user_view_type": "public",
                 "site_admin": false
             },
-            "open_issues": 4,
-            "closed_issues": 7,
+            "open_issues": 1,
+            "closed_issues": 10,
             "state": "open",
             "created_at": "2026-05-01T12:05:54Z",
-            "updated_at": "2026-05-19T23:22:10Z",
+            "updated_at": "2026-05-25T13:56:29Z",
             "due_on": "2026-05-23T00:00:00Z",
             "closed_at": null
         },
@@ -3743,11 +3843,11 @@
                 "user_view_type": "public",
                 "site_admin": false
             },
-            "open_issues": 4,
-            "closed_issues": 7,
+            "open_issues": 1,
+            "closed_issues": 10,
             "state": "open",
             "created_at": "2026-05-01T12:05:54Z",
-            "updated_at": "2026-05-19T23:22:10Z",
+            "updated_at": "2026-05-25T13:56:29Z",
             "due_on": "2026-05-23T00:00:00Z",
             "closed_at": null
         },
@@ -3959,11 +4059,11 @@
                 "user_view_type": "public",
                 "site_admin": false
             },
-            "open_issues": 4,
-            "closed_issues": 7,
+            "open_issues": 1,
+            "closed_issues": 10,
             "state": "open",
             "created_at": "2026-05-01T12:05:54Z",
-            "updated_at": "2026-05-19T23:22:10Z",
+            "updated_at": "2026-05-25T13:56:29Z",
             "due_on": "2026-05-23T00:00:00Z",
             "closed_at": null
         },
@@ -4175,11 +4275,11 @@
                 "user_view_type": "public",
                 "site_admin": false
             },
-            "open_issues": 4,
-            "closed_issues": 7,
+            "open_issues": 1,
+            "closed_issues": 10,
             "state": "open",
             "created_at": "2026-05-01T12:05:54Z",
-            "updated_at": "2026-05-19T23:22:10Z",
+            "updated_at": "2026-05-25T13:56:29Z",
             "due_on": "2026-05-23T00:00:00Z",
             "closed_at": null
         },
