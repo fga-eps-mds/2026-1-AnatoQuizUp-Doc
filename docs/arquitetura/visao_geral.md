@@ -34,6 +34,54 @@ flowchart LR
     ai -.-> aiDb
 ```
 
+## Evolução da arquitetura
+
+A arquitetura evoluiu de um **backend monolítico** (Release Major 1) para uma **arquitetura distribuída com BFF** e serviços de domínio (Release Major 2). A motivação e as decisões (limit exposure, defense in depth e o padrão Backend-For-Frontend) estão em [Decisões Arquiteturais](decisoes.md).
+
+### Antes (Release Major 1)
+
+Um único backend público concentrava rotas, regra de negócio, persistência e a integração com IA.
+
+```mermaid
+flowchart TB
+    fe["Frontend"]
+    subgraph back["Backend monolítico (público)"]
+        r["Routes"] --> m["Middlewares"] --> c["Controllers"] --> s["Services"]
+        s --> repo["Repositories"]
+        s --> ai["AI"]
+    end
+    db[("PostgreSQL")]
+    airepo["Repositório AI"]
+    fe --> r
+    repo --> db
+    ai -->|HTTP| airepo
+```
+
+### Depois (Release Major 2 em diante)
+
+O Frontend passa a falar apenas com o BFF, que roteia para serviços de domínio privados, cada um com banco próprio (e MinIO/S3 no Quiz-Service).
+
+```mermaid
+flowchart TB
+    fe["Frontend"]
+    bff["Backend For Frontend (público)"]
+    subgraph us["Usuario-Service (privado)"]
+        usl["Routes → Middlewares → Controllers → Services → Repositories"]
+    end
+    subgraph qs["Quiz-Service (privado)"]
+        qsl["Routes → Middlewares → Controllers → Services → Repositories"]
+    end
+    usdb[("PostgreSQL")]
+    qsdb[("PostgreSQL")]
+    minio[("MinIO")]
+    fe --> bff
+    bff --> us
+    bff --> qs
+    us --> usdb
+    qs --> qsdb
+    qs --> minio
+```
+
 ## Componentes
 
 ### Frontend Web
@@ -77,3 +125,4 @@ Serviço reservado para semestres futuros. Permanece sem funcionalidade nesta et
 | 13/05/2026 | 2.0 | Atualização para Usuario-Service, Quiz-Service e bancos por serviço | Miguel Moreira |
 | 13/05/2026 | 2.1 | Restauração dos acentos do português brasileiro | Miguel Moreira |
 | 21/05/2026 | 2.2 | Quiz-Service ganha domínio de turmas e vínculo de alunos; filtro por papel em `/turmas` | Miguel Moreira |
+| 02/06/2026 | 2.3 | Inclusão da seção de evolução da arquitetura (antes/depois) | [Miguel Moreira](https://github.com/EhOMiguel) |

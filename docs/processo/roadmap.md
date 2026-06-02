@@ -11,88 +11,75 @@ O AnatoQuizUp é uma plataforma web educacional voltada ao estudo de anatomia ra
 | Release | Foco | Resultado esperado |
 |---------|------|-------------------|
 | Release Major 1 | Cadastro, autenticação e controle de acesso | Usuários conseguem entrar na plataforma com papéis e permissões definidos |
-| Release Major 2 | Fluxo pedagógico e banco de questões | Professores conseguem organizar questões e alunos conseguem responder quizzes |
-| Release Major 3 | Gamificação, acompanhamento e recursos inteligentes | Plataforma passa a apoiar engajamento, desempenho e personalização do estudo |
+| Release Major 2 | Fluxo pedagógico, banco de questões e quiz | Professores organizam questões/turmas e alunos respondem quizzes e acompanham histórico |
+| Release Major 3 | Gamificação, acompanhamento e recursos inteligentes | Plataforma passa a apoiar engajamento, desempenho, social e personalização do estudo |
 
 ## Linha do tempo
 
-| Período | Marco | Situação | Observações |
-|---------|-------|----------|-------------|
-| 06/04/2026 | Validação da Lean Inception | Concluído | Visão do produto e foco em anatomia radiológica validados com stakeholders |
-| 19/04/2026 a 26/04/2026 | Sprint 1 da Release Major 1 | Concluído com pendências | Base técnica, cadastro de aluno, autenticação parcial e CI/CD avançaram; fluxo de professor foi replanejado |
-| 27/04/2026 | Consolidação da documentação da Release Major 1 | Em andamento | Documentos de roadmap, sprint, riscos, EVM e decisões atualizados |
-| Próxima sprint | Continuação da Release Major 1 | Planejado | Prioridade para fechar fluxo de professor, login, admin e integração de ponta a ponta |
+| Período | Marco | Situação |
+|---------|-------|----------|
+| 06/04/2026 | Validação da Lean Inception | Concluído |
+| 19/04/2026 a 27/04/2026 | Release Major 1 (Sprint 1) | Concluída |
+| 28/04/2026 a 25/05/2026 | Release Major 2 (Sprints 2 a 5) | Concluída |
+| 26/05/2026 a 29/06/2026 | Release Major 3 (Sprints 6 em diante) | Em andamento |
 
-## Release Major 1
+As releases minor associadas a cada major estão registradas em [Datas Importantes](datas-importantes.md), e o acompanhamento detalhado de cada sprint (EVM, planejado × realizado, dificuldades) está em [Sprints](sprints.md).
 
-A Release Major 1 tem como objetivo estabelecer a fundação de usuários do sistema. Ela não busca entregar ainda o jogo de perguntas e respostas, mas sim criar a base necessária para que as próximas releases consigam diferenciar alunos, professores e administradores com segurança.
+## Release Major 1 — Concluída (27/04/2026)
 
-### Escopo planejado
+A Release Major 1 estabeleceu a fundação de usuários do sistema. Ela não entrega ainda o jogo de perguntas e respostas, mas cria a base necessária para diferenciar alunos, professores e administradores com segurança.
 
-O escopo completo está detalhado em [Histórias e Tarefas - Release Major 1](../backlog/release-major-1.md). Em resumo, a release cobre:
+### Escopo
+
+O escopo completo está detalhado em [Histórias e Tarefas - Release Major 1](../backlog/release-major-1.md). Em resumo:
 
 - Cadastro e login de aluno.
-- Cadastro e login de professor.
 - Logout e refresh token.
 - Recuperação de senha por email.
-- Middleware de autenticação e autorização.
+- Middleware de autenticação e autorização por papel.
 - Rotas protegidas no frontend.
-- Painel administrativo para aprovação e gestão de usuários.
+- Base do painel administrativo.
 - Setup de CI/CD, cobertura e SonarCloud.
 
-### Estado ao final da Sprint 1
+### Resultado
 
-| Frente | Entregas observadas nos repositórios | Situação |
-|--------|--------------------------------------|----------|
-| Usuario-Service | Modelagem Prisma de usuários, refresh tokens e tokens de redefinição; seed de administrador; JWT; middleware de autenticação; serviço de email com Brevo; cadastro de aluno; endpoints auxiliares de localidades, nacionalidades e opções acadêmicas; testes Jest com cobertura | Parcialmente concluído |
-| Frontend | Estrutura FSD; login; cadastro de aluno em etapas; rotas protegidas; header; home; componentes de formulário; serviços de API para cadastro e opções auxiliares; testes com Testing Library/Jest | Parcialmente concluído |
-| Documentação | Backlog da Release Major 1; visão do produto; Lean Inception; arquitetura; reuniões; EVM Sprint 1; matriz de riscos; quadro de conhecimento | Em consolidação |
-| CI/CD | Pipelines de backend e frontend com lint, build, testes, cobertura mínima e SonarCloud; deploy da documentação via MkDocs/GitHub Pages | Em uso |
+A release foi concluída em 27/04/2026. O fluxo completo de professor (cadastro com SIAPE, login e aprovação administrativa), o login de ponta a ponta e o painel administrativo, que ficaram parcialmente pendentes na Sprint 1, foram finalizados no início da Release Major 2.
 
-### Pendências principais
+## Release Major 2 — Concluída (25/05/2026)
 
-- Fechar e implementar o fluxo completo de professor com SIAPE e aprovação administrativa.
-- Consolidar login real de aluno/professor/admin de ponta a ponta.
-- Finalizar middleware de autorização por papel e aplicar nas rotas protegidas.
-- Fechar refresh token, logout e recuperação de senha integrados ao frontend.
-- Entregar painel administrativo com busca, filtros, aprovação, rejeição, desativação e reativação.
-- Resolver inconsistências de nomenclatura PT-BR/inglês ainda existentes no frontend.
+A Release Major 2 avançou da fundação de acesso para o fluxo pedagógico principal, permitindo que o sistema comece a funcionar como plataforma de estudo.
 
-## Release Major 2
+### Escopo entregue
 
-A Release Major 2 deve avançar da fundação de acesso para o fluxo pedagógico principal. O objetivo esperado é permitir que o sistema comece a funcionar como plataforma de estudo, ainda que sem todos os recursos avançados de gamificação.
+- **Refatoração arquitetural:** introdução do **BFF** como único ponto de entrada público e fragmentação do backend em **Usuario-Service** e **Quiz-Service**, com banco por serviço e storage de imagens em MinIO/S3.
+- **Cadastro e login de professor** (SIAPE + aprovação administrativa) e **painel administrativo** de usuários.
+- **Gestão de questões** (CRUD com upload de imagem e versionamento).
+- **Quiz dinâmico:** montagem do quiz, resolução de questões, registro de tentativa e **agregação de histórico**.
+- **Recompensa por acerto:** moedas ATP creditadas a cada questão respondida corretamente.
+- **Turmas:** gestão pelo professor e visualização pelo aluno (Minhas Turmas).
+- **Listas de questões** e compartilhamento por turma.
 
-### Escopo previsto
+### Replanejamento
 
-- Cadastro e organização de questões de anatomia.
-- Fluxo de resolução de quizzes por alunos.
-- Associação de questões a temas, turmas ou listas.
-- Visualização básica de resultado após responder.
-- Ferramentas iniciais de acompanhamento para professores.
+O planejamento inicial previa entregar também os dashboards de aluno e professor e a visualização de ranking. Devido a atrasos na resolução de questões e no histórico de tentativas, ao acréscimo da funcionalidade de recompensa por questão, à refatoração da arquitetura e à redução da equipe durante a release, essas três frentes foram **movidas para a Release Major 3**.
 
-### Dependências
+## Release Major 3 — Em andamento (até 29/06/2026)
 
-- Usuários e papéis funcionando de forma estável.
-- Painel administrativo validando professores.
-- Serviços (Usuario-Service, Quiz-Service, BFF) e frontend integrados com contrato de API estável.
-- Base de questões migrada ou preparada para importação.
-
-## Release Major 3
-
-A Release Major 3 deve evoluir a experiência de aprendizagem, adicionando recursos de engajamento e acompanhamento mais ricos.
+A Release Major 3 evolui a experiência de aprendizagem, adicionando recursos de engajamento, acompanhamento e inteligência.
 
 ### Escopo previsto
 
-- Gamificação: pontuação, conquistas, rankings ou progresso.
-- Relatórios de desempenho por aluno e por tema.
-- Melhorias de feedback pedagógico após quizzes.
-- Possíveis recursos de IA para apoio ao estudo, geração de explicações ou recomendação de conteúdo, conforme validação futura.
+- **Dashboard de desempenho do aluno** e **dashboard de rendimento da turma**.
+- **Conquistas** e **loja virtual** (uso das moedas ATP).
+- **Personalização** de perfil e avatar.
+- **Funcionalidades sociais** (amizade entre alunos).
+- **Estrutura de IA/RAG** para geração de questões com validação docente (ver [Inteligência Artificial](../arquitetura/ia.md)).
 
 ## Critérios para avançar entre releases
 
 | Critério | Como verificar |
 |----------|----------------|
-| Build e testes passando | GitHub Actions dos repositórios API e Web |
+| Build e testes passando | GitHub Actions dos repositórios (Usuario-Service, Quiz-Service, BFF e Web) |
 | Cobertura mínima | Gate de 85% nos pipelines e SonarCloud |
 | Documentação atualizada | MkDocs com páginas de backlog, sprint, riscos e decisões revisadas |
 | Riscos revisados | Matriz de riscos atualizada ao final da sprint |
@@ -103,3 +90,4 @@ A Release Major 3 deve evoluir a experiência de aprendizagem, adicionando recur
 | Data   | Versão | Descrição | Autor(es) |
 |--------|--------|-----------|-----------|
 | 27/04/2026 | 1.0 | Criação do roadmap com base na Release Major 1, repos do projeto e documentos de acompanhamento | [Miguel Moreira](https://github.com/miguelmsoliveira) |
+| 02/06/2026 | 1.1 | Atualização da linha do tempo e dos escopos: Release Major 1 e 2 concluídas (com escopo entregue e replanejamento) e Release Major 3 em andamento | [Miguel Moreira](https://github.com/EhOMiguel) |

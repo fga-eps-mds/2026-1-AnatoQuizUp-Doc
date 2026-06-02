@@ -78,6 +78,21 @@ A matriz é revisada semanalmente pela liderança e atualizada conforme novos ri
 
 ---
 
+## Riscos materializados nas Releases Major 2 e 3
+
+Ao longo das Releases Major 2 e 3, alguns riscos previstos na matriz efetivamente se materializaram. A tabela abaixo registra os principais, conectando-os à matriz e à resposta adotada.
+
+| Risco da matriz | O que aconteceu | Resposta adotada |
+|-----------------|-----------------|------------------|
+| R02 / R03 — Saída e ausência de membros | A equipe foi reduzida de 12 para 9 integrantes ao longo das Releases Minor 2 e Major 2, impactando a vazão das sprints | Reforço de pareamento e rotação de papéis; replanejamento de escopo (dashboards movidos para a Release Major 3) |
+| R05 / R13 — Cobertura e Quality Gate no SonarCloud | O quality gate e o gate de cobertura de 85% bloquearam merges em vários momentos, exigindo esforço contínuo de testes | Cobertura tratada desde a abertura do PR; dono de pipeline acompanhando o SonarCloud |
+| R08 — PR parado aguardando review | Identificado como o maior gargalo do fluxo: PRs ficavam parados esperando revisão | Aviso de abertura de PR nos canais do time; board priorizando as reviews (fluxo da direita para a esquerda) |
+| R01 / R15 — Mudanças de escopo e gaps de validação | A validação dos POs reprovou parcialmente a criação de questões por faltarem campos estruturados para a IA, gerando retrabalho | Registro das mudanças como decisão; ajuste do backlog e do modelo de questão nas sprints seguintes |
+
+> **Síntese da apresentação da Release 2:** os maiores desafios envolveram **mudanças de escopo e bloqueios técnicos**, **garantir que a cobertura de testes não caísse no SonarCloud** (quality gate travando) e o **gargalo de PRs parados aguardando revisão**.
+
+---
+
 ## Cadência de monitoramento
 
 | Frequência | O que verificar | Responsável |
@@ -87,3 +102,12 @@ A matriz é revisada semanalmente pela liderança e atualizada conforme novos ri
 | Bi-semanal (seg e qui) | Riscos com score ≥ 12 | Miguel |
 | Semanal (sextas) | Toda a matriz: revisar P, I e score | Miguel + Arthur |
 | Pré-release | Checklist final + estado de riscos críticos | Liderança |
+
+---
+
+## Histórico de Versão
+
+| Data   | Versão | Descrição | Autor(es) |
+|--------|--------|-----------|-----------|
+| 27/04/2026 | 1.0 | Criação da matriz de riscos da Release Major 1 | Equipe AnatoQuizUp |
+| 02/06/2026 | 1.1 | Inclusão da seção de riscos materializados nas Releases Major 2 e 3 | [Miguel Moreira](https://github.com/EhOMiguel) |

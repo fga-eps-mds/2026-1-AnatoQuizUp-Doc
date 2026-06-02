@@ -40,6 +40,8 @@ A solução busca aumentar o engajamento e melhorar a efetividade do aprendizado
 
 ## Equipe do Projeto
 
-| [Ana Catarina](https://github.com/an4catarina) | [Arthur Carneiro](https://github.com/trindadea) | [Breno Soares](https://github.com/Brenofrds) | [Bruno Ricardo](https://github.com/EhOBruno) | [Caio Brandão](https://github.com/caiobsantos) | [Genilson Silva](https://github.com/GenilsonJrs) | [João Vitor](https://github.com/Joa0V) | [Kathlyn Murussi](https://github.com/klmurussi) | [Maria Luisa](https://github.com/marialuisa214) | [Miguel Moreira](https://github.com/EhOMiguel) | [Pedro Cabeceira](https://github.com/pkbceira03) | [Victor Hugo](https://github.com/ViictorHugoo) |
-|------|------|------|------|------|------|------|------|------|------|------|------|
-| ![](https://github.com/an4catarina.png) | ![](https://github.com/trindadea.png) | ![](https://github.com/Brenofrds.png) | ![](https://github.com/EhOBruno.png) | ![](https://github.com/caiobsantos.png) | ![](https://github.com/GenilsonJrs.png) | ![](https://github.com/Joa0V.png) | ![](https://github.com/klmurussi.png) | ![](https://github.com/marialuisa214.png) | ![](https://github.com/EhOMiguel.png) | ![](https://github.com/pkbceira03.png) | ![](https://github.com/ViictorHugoo.png) |
+| [Arthur Carneiro](https://github.com/trindadea) | [Breno Soares](https://github.com/Brenofrds) | [Bruno Ricardo](https://github.com/EhOBruno) | [Caio Brandão](https://github.com/caiobsantos) | [Genilson Silva](https://github.com/GenilsonJrs) | [João Vitor](https://github.com/Joa0V) | [Maria Luisa](https://github.com/marialuisa214) | [Miguel Moreira](https://github.com/EhOMiguel) | [Pedro Cabeceira](https://github.com/pkbceira03) |
+|------|------|------|------|------|------|------|------|------|
+| ![](https://github.com/trindadea.png) | ![](https://github.com/Brenofrds.png) | ![](https://github.com/EhOBruno.png) | ![](https://github.com/caiobsantos.png) | ![](https://github.com/GenilsonJrs.png) | ![](https://github.com/Joa0V.png) | ![](https://github.com/marialuisa214.png) | ![](https://github.com/EhOMiguel.png) | ![](https://github.com/pkbceira03.png) |
+
+> A equipe iniciou o projeto com 12 integrantes e, ao longo das releases, passou a contar com 9 integrantes ativos.

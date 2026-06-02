@@ -18,6 +18,9 @@ A API usa versionamento no caminho. Todos os endpoints de negócio partem do pre
 | `/api/v1/questoes/*` | Quiz-Service | Gestão de questões |
 | `/api/v1/turmas/*` | Quiz-Service | Turmas e vínculo de alunos; rotas de leitura abertas a ALUNO com filtro por papel |
 | `/api/v1/lista/*` | Quiz-Service | Listas de estudo e compartilhamento entre turmas |
+| `/api/v1/amizade/*` | Usuario-Service | Amizades entre alunos (convites, busca e visibilidade) |
+| `/api/v1/dashboardAluno` | Quiz-Service | Desempenho consolidado do aluno |
+| `/api/v1/turmasDashboard/*` | Quiz-Service | Desempenho macro e individual da turma |
 | `/api/v1/ia/*` | AI Service futuro | 503 enquanto `AI_URL` estiver vazio |
 | `/health` | BFF | Health check público do BFF |
 
@@ -176,8 +179,20 @@ O BFF valida assinatura e expiração antes de repassar. Usuario-Service e Quiz-
 | POST | `/lista/:id/turmas` | Quiz-Service | ALUNO / PROFESSOR / ADMINISTRADOR |
 | DELETE | `/lista/:id/turmas/:turmaId` | Quiz-Service | ALUNO / PROFESSOR / ADMINISTRADOR |
 | GET | `/lista/:id/estatisticas/turma/:turmaId` | Quiz-Service | ALUNO / PROFESSOR / ADMINISTRADOR |
+| GET | `/amizade` | Usuario-Service | ALUNO / ADMINISTRADOR |
+| GET | `/amizade/busca` | Usuario-Service | ALUNO / ADMINISTRADOR |
+| POST | `/amizade` | Usuario-Service | ALUNO / ADMINISTRADOR |
+| GET | `/amizade/convites/recebidos` | Usuario-Service | ALUNO / ADMINISTRADOR |
+| GET | `/amizade/convites/enviados` | Usuario-Service | ALUNO / ADMINISTRADOR |
+| PATCH | `/amizade/aceitar` | Usuario-Service | ALUNO / ADMINISTRADOR |
+| PATCH | `/amizade/recusar` | Usuario-Service | ALUNO / ADMINISTRADOR |
+| DELETE | `/amizade` | Usuario-Service | ALUNO / ADMINISTRADOR |
+| PATCH | `/amizade/visibilidade` | Usuario-Service | ALUNO / ADMINISTRADOR |
+| GET | `/dashboardAluno` | Quiz-Service | ALUNO |
+| GET | `/turmasDashboard/:id/macro` | Quiz-Service | PROFESSOR / ADMINISTRADOR |
+| GET | `/turmasDashboard/:id/individual` | Quiz-Service | PROFESSOR / ADMINISTRADOR |
 
-- A documentação detalhada de `/quiz/*`, `/questoes/*`, `/turmas/*` e `/lista/*` está disponível em `arquitetura/api/quiz.md`, `arquitetura/api/questoes.md`, `arquitetura/api/turmas.md` e `arquitetura/api/lista.md`.
+- A documentação detalhada está nas páginas de cada recurso: [Quiz](quiz.md), [Questões](questoes.md), [Turmas](turmas.md), [Listas](lista.md), [Amizade](amizade.md), [Dashboard do Aluno](dashboard-aluno.md) e [Dashboard da Turma](dashboard-turma.md).
 - **`/usuarios/:id`** é a rota usada pelo Web para resolver o nome do professor responsável na tela de detalhe da turma do aluno. Payload mínimo (sem email, senha, ou dados pessoais).
 - **`/turmas` para ALUNO** sempre filtra por `status=ATIVA` e exibe somente turmas em que o aluno está vinculado. Query `?status=` é rejeitada com **400**.
 - **`/turmas/:id`** para aluno sem vínculo retorna **404** (intencional — não vaza existência).
@@ -192,3 +207,4 @@ O BFF valida assinatura e expiração antes de repassar. Usuario-Service e Quiz-
 | 13/05/2026 | 2.1 | Restauração dos acentos do português brasileiro | Miguel Moreira |
 | 21/05/2026 | 2.2 | Inclui endpoints de `/usuarios/*` e `/turmas/*` com regras de acesso por papel | Miguel Moreira |
 | 25/05/2026 | 2.3 | Inclui endpoints de `/quiz/*`, `/questoes/*` e `/listas/*`| [Caio Santos](https://github.com/caiobsantos) |
+| 02/06/2026 | 2.4 | Inclui os grupos `/amizade/*`, `/dashboardAluno` e `/turmasDashboard/*` e links para as páginas detalhadas | [Miguel Moreira](https://github.com/EhOMiguel) |
