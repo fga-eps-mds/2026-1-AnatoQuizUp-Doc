@@ -23,6 +23,59 @@ Também ficou definido que a primeira versão do produto deveria focar em entreg
 
 De forma geral, a Lean Inception ajudou a transformar o planejamento do projeto em algo mais concreto. Ela deu suporte para organizar a visão do produto, entender melhor os usuários, revisar prioridades e construir uma sequência de entregas mais coerente com os objetivos discutidos com o cliente.
 
+## Canvas MVP
+
+O Canvas MVP foi o artefato que consolidou, em uma visão única, as personas, a proposta de validação, as funcionalidades, as jornadas e os resultados esperados do produto. Ele orientou a definição do escopo das releases e as métricas usadas para validar as hipóteses de negócio.
+
+### Personas segmentadas
+
+- **João Guilherme Pereira Junior** — estudante de medicina da UnB.
+- **Dr. João Guilherme Pereira** — professor da área de saúde da UnB.
+
+### Proposta do MVP (hipóteses a validar)
+
+- Validar se **alunos** da UnB da área de saúde utilizariam o webapp para **estudar** anatomia voltada à radiologia.
+- Validar se **professores** da UnB da área de saúde utilizariam o webapp para **criar questões** de anatomia aplicadas à radiologia.
+
+### Funcionalidades mapeadas
+
+- Cadastro de usuários e controle de acesso
+- Realizar questões
+- Ganhar moedas ATP a cada questão acertada
+- Gerenciamento de questões (criar, editar, visualizar e excluir)
+- Gerenciamento de turmas (criar, editar, visualizar e excluir)
+- Gerar questões para validação do professor (IA)
+- Visualizar o próprio rendimento
+- Conquistas
+- Loja de itens
+- Personalizar perfil e avatar
+
+### Jornadas
+
+**Aluno:** se cadastra → entra na conta → resolve questões → ganha ATP ao acertar → participa de turmas → resolve listas de questões atribuídas à turma → acessa e obtém conquistas → compra itens cosméticos na loja → personaliza perfil e avatar.
+
+**Professor:** se cadastra → entra na conta → cria, edita, visualiza e exclui questões → cria, edita, visualiza e exclui turmas → escolhe questões para montar listas para as suas turmas → valida questões geradas por IA.
+
+### Resultado esperado (em até 3 meses)
+
+| Métrica-alvo | Valor |
+|--------------|------:|
+| Contas de estudantes | 100 |
+| Professores cadastrados | 10 |
+| Questões respondidas | 1.000 |
+| Questões criadas | 50 |
+
+### Métricas para validar as hipóteses do negócio
+
+- Número de estudantes cadastrados
+- Número de professores cadastrados
+- Número de questões respondidas
+- Número de questões criadas
+
+### Custo e cronograma
+
+O Canvas estimou o projeto em **17 semanas**, com custo total estimado de **R$ 49.852,38** e três releases major. O detalhamento atualizado está em [Plano de Custos](../processo/plano-de-custos.md) e [Datas Importantes](../processo/datas-importantes.md).
+
 ## Acompanhamento das Etapas
 
 | Etapa | Feito | Validado |
@@ -54,3 +107,4 @@ Se preferir abrir direto no Figma:
 |--------|--------|-----------|-----------|
 | 26/04/2026 | 1.0 | Criação da página da Lean Inception com contextualização do processo e link para o material completo no Figma | [Ana Catarina](https://github.com/an4catarina) |
 | 27/04/2026 | 1.1 | Inclusão da tabela de acompanhamento das etapas da Lean Inception | Equipe AnatoQuizUp |
+| 02/06/2026 | 1.2 | Inclusão do conteúdo textual do Canvas MVP (personas, proposta, funcionalidades, jornadas, resultados esperados e métricas de validação) | [Miguel Moreira](https://github.com/EhOMiguel) |

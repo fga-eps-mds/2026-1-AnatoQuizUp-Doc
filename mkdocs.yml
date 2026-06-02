@@ -46,12 +46,14 @@ nav:
       - Visão Geral: arquitetura/visao_geral.md
       - Tecnologias: arquitetura/tecnologias.md
       - Decisões Arquiteturais: arquitetura/decisoes.md
+      - Inteligência Artificial: arquitetura/ia.md
       - Visões Arquiteturais:
           - Visão Lógica: arquitetura/visoes/logica.md
           - Visão de Processos: arquitetura/visoes/processos.md
           - Visão de Implementação: arquitetura/visoes/implementacao.md
           - Visão de Implantação: arquitetura/visoes/implantacao.md
       - Banco de Dados:
+          - Modelo Atual: arquitetura/banco-de-dados/modelo-atual.md
           - Modelo V1: arquitetura/banco-de-dados/v1.md
       - Endpoints e Contratos:
           - Visão Geral: arquitetura/api/visao-geral.md
@@ -64,13 +66,18 @@ nav:
           - Questões: arquitetura/api/questoes.md
           - Turmas: arquitetura/api/turmas.md
           - Listas: arquitetura/api/lista.md
+          - Amizade: arquitetura/api/amizade.md
+          - Dashboard do Aluno: arquitetura/api/dashboard-aluno.md
+          - Dashboard da Turma: arquitetura/api/dashboard-turma.md
           - Erros e Contratos: arquitetura/api/erros.md
 
   - Qualidade:
       - Métricas e Dashboard: qualidade/qualidade.md
+      - Plano de Testes Funcionais: qualidade/testes.md
 
   - Gestão:
       - Metodologia de trabalho: processo/metodologia.md
+      - Gerência de Configuração e DevOps: processo/gerencia-configuracao.md
       - Comunicação: processo/comunicacao.md
       - Quadro de Conhecimento: processo/quadro-conhecimento.md
       - Decisões do Projeto: decisoes/decisoes.md
@@ -80,6 +87,7 @@ nav:
       - Validação Release Minor 3: processo/validacao-release-minor-3.md
 
   - Contribuição:
+      - Setup Local: contribuicao/setup-local.md
       - Código de Conduta: contribuicao/codigo_conduta.md
       - Política de Branchs: contribuicao/politica_branchs.md
       - Política de Commits: contribuicao/politica_commits.md

@@ -13,8 +13,8 @@ O backlog é dividido em releases major. Cada release agrupa um conjunto coerent
 | Release | Foco | Documento |
 |---------|------|-----------|
 | Release Major 1 | Fundação de cadastro de usuários e controle de acesso | [Release Major 1](./release-major-1.md) |
-| Release Major 2 |  | [Release Major 2](./release-major-2.md) |
-| Release Major 3 |  | [Release Major 3](./release-major-3.md) |
+| Release Major 2 | Fluxo pedagógico: questões, quiz, turmas e listas | [Release Major 2](./release-major-2.md) |
+| Release Major 3 | Acompanhamento, gamificação, social e Inteligência Artificial | [Release Major 3](./release-major-3.md) |
 
 ---
 
@@ -26,7 +26,7 @@ Para garantir a visão completa do escopo mapeado durante o Lean Inception, as f
 Focado em garantir a segurança e a entrada correta dos diferentes atores do sistema.
 *   **US01 - Cadastro de Aluno:** Como estudante, quero me cadastrar na plataforma usando e-mail e senha para poder acessar os quizzes.
 *   **US02 - Login Convencional:** Como estudante, quero fazer login para retomar meu progresso.
-*   **US03 - Login Institucional:** Como professor, quero fazer login via Microsoft com meu e-mail UnB para ter acesso à área de criação de conteúdo.
+*   **US03 - Cadastro/Login de Professor:** Como professor, quero me cadastrar e fazer login com meu e-mail institucional UnB e SIAPE (sujeito à aprovação do administrador) para ter acesso à área de criação de conteúdo.
 *   **US04 - Login Administrativo:** Como administrador, quero acessar o sistema para gerenciar usuários.
 *   **US05 - Recuperação de Senha:** Como usuário, quero redefinir minha senha esquecida via e-mail para não perder minha conta.
 

@@ -19,8 +19,8 @@ O time aplica uma metodologia **híbrida Scrum + Kanban (Scrumban)**:
 
 | Característica do projeto | Implicação na metodologia |
 |---|---|
-| Time acadêmico (12 alunos), 100% remoto, com agendas heterogêneas | O Scrum puro exigiria sincronia diária inviável; o Kanban puro perderia o ritmo necessário para uma disciplina com prazos fechados. Scrumban concilia ritmo previsível com flexibilidade assíncrona. |
-| Quatro frentes paralelas (API, Web, Doc, IA) com dependências cruzadas | Quadro Kanban único dá visibilidade a bloqueios entre frentes; sprints curtas forçam integração frequente. |
+| Time acadêmico (9 integrantes), 100% remoto, com agendas heterogêneas | O Scrum puro exigiria sincronia diária inviável; o Kanban puro perderia o ritmo necessário para uma disciplina com prazos fechados. Scrumban concilia ritmo previsível com flexibilidade assíncrona. |
+| Múltiplas frentes paralelas (backend, frontend, documentação e DevOps) com dependências cruzadas | Quadro Kanban único dá visibilidade a bloqueios entre frentes; sprints curtas forçam integração frequente. |
 | Stakeholders externos (Product Owners) com janelas de validação restritas | Sprints curtas (1 semana) garantem ciclos de feedback rápidos, mantendo o PO próximo do produto. |
 | Objetivo pedagógico de exercitar todos os papéis ágeis | Rotatividade de funções a cada sprint é compatível com o caráter incremental do Scrumban. |
 
@@ -58,7 +58,7 @@ Para complementar a gestão e garantir a qualidade técnica e de código, a equi
 
 ## Estrutura de papéis
 
-### Product Owners (fixos, externos ao time de 12)
+### Product Owners (fixos, externos ao time de desenvolvimento)
 
 São stakeholders externos à equipe de desenvolvimento. Validam o produto, definem prioridades de release e participam das reuniões de revisão. Por serem externos, a comunicação é mediada pelo Scrum Master da sprint.
 
@@ -71,16 +71,18 @@ Um membro do time assume o papel de SM por **duas sprints consecutivas** (≈ 2 
 - Mediar a comunicação com os POs.
 - Garantir que o quadro Kanban (ZenHub) reflita o estado real do trabalho.
 
-### Equipe de desenvolvimento (12 membros, rotação total por sprint)
+### Equipe de desenvolvimento (9 integrantes, rotação total por sprint)
 
-A cada sprint, todos os 12 membros podem migrar entre as frentes técnicas:
+A cada sprint, todos os 9 integrantes podem migrar entre as frentes técnicas:
 
 - **Frente Frontend** (React/Vite/FSD)
 - **Frente Backend** (Node/Express/Prisma)
 - **Frente Documentação** (MkDocs)
 - **Frente DevOps/CI** (GitHub Actions, SonarCloud, deploy)
 
-A rotação total é deliberadamente pedagógica: ao final da release, todos os membros terão tido contato com todas as frentes, evitando silos de conhecimento e cumprindo o objetivo formativo da disciplina EPS.
+A rotação total é deliberadamente pedagógica: ao final da release, todos os integrantes terão tido contato com todas as frentes, evitando silos de conhecimento e cumprindo o objetivo formativo da disciplina EPS.
+
+> A equipe iniciou o projeto com 12 integrantes e atualmente conta com 9 integrantes ativos. A rotação de papéis e o pareamento foram reforçados para absorver a redução sem criar silos de conhecimento.
 
 ---
 
@@ -96,7 +98,7 @@ A unidade de iteração é a **sprint de 1 semana**. As cerimônias são enxutas
 | **Retrospectiva** | Fim da sprint | ~30min | Time + SM | Identificar o que manter, o que mudar e definir 1–2 ações concretas para a próxima sprint. |
 | **Sincronização assíncrona** | Diariamente | Contínua | Time | Substitui a daily formal. Atualizações de progresso e bloqueios via WhatsApp (interna) e Discord (com POs). |
 
-> **Por que sem daily síncrona?** O custo de sincronizar 12 agendas diariamente em um time remoto e acadêmico é alto e o ganho é baixo: o quadro ZenHub e os canais assíncronos já dão visibilidade do progresso. A sincronia é reservada para os momentos de maior valor (planning, review, retro, reunião com PO).
+> **Por que sem daily síncrona?** O custo de sincronizar 9 agendas diariamente em um time remoto e acadêmico é alto e o ganho é baixo: o quadro ZenHub e os canais assíncronos já dão visibilidade do progresso. A sincronia é reservada para os momentos de maior valor (planning, review, retro, reunião com PO). A daily acontece de forma **assíncrona e diária** pelos canais do time.
 
 ---
 
@@ -147,3 +149,4 @@ Os documentos abaixo descrevem **métodos** específicos e padrões técnicos in
 | 27/04/2026 | 1.0 | Criação da metodologia, fluxo de desenvolvimento e Definition of Done | [Miguel Moreira](https://github.com/miguelmsoliveira) |
 | 03/05/2026 | 2.0 | Reescrita com foco em metodologia (Scrumban, valores ágeis, papéis, cadência); práticas operacionais movidas para documentos próprios | [Miguel Moreira](https://github.com/miguelmsoliveira) |
 | 04/05/2026 | 2.1 | Adição do XP nas abordagens de trabalho | [Genilson Junior](https://github.com/GenilsonJrs) |
+| 02/06/2026 | 2.2 | Atualização da composição da equipe (12 → 9 integrantes), ajuste das frentes de trabalho e detalhamento da daily assíncrona | [Miguel Moreira](https://github.com/EhOMiguel) |

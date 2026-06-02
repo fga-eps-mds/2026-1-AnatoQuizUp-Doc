@@ -4,6 +4,14 @@ Os endpoints de turmas gerenciam a criação, edição, listagem e associação 
 
 Eles são usados por professores, administradores e alunos que fazem parte das turmas.
 
+**Acesso por papel (aplicado no service):**
+
+- **ALUNO** vê apenas turmas em que está vinculado e com status `ATIVA`. A query `?status=` é **rejeitada com 400** para o aluno, e o acesso a uma turma sem vínculo retorna **404** (não vaza a existência da turma).
+- **PROFESSOR** vê e gerencia apenas as turmas que criou.
+- **ADMINISTRADOR** vê todas as turmas.
+
+> Os exemplos de payload abaixo são ilustrativos; a paginação segue o padrão `{ "dados": [...], "metadados": { "page", "limit", "total", "totalPages" } }` descrito em [Visão Geral da API](visao-geral.md).
+
 ---
 
 ### **GET** /api/v1/turmas
@@ -18,9 +26,12 @@ Este endpoint retorna as turmas do usuário (ou todas se admin), permitindo filt
 
 | Campo | Tipo | Obrigatório | Regra |
 |-------|------|-------------|-------|
-| `pagina` | number | Não | Número da página (padrão: 1) |
-| `limite` | number | Não | Itens por página (padrão: 20) |
-| `ordenarPor` | string | Não | nome, data, alunos |
+| `busca` | string | Não | Filtra por nome ou código da turma |
+| `semestre` | string | Não | Filtra por semestre |
+| `ano` | number | Não | Filtra por ano |
+| `status` | string | Não | `ATIVA` ou `INATIVA` (apenas PROFESSOR/ADMINISTRADOR; rejeitado com 400 para ALUNO) |
+| `page` | number | Não | Número da página (padrão: 1) |
+| `limit` | number | Não | Itens por página |
 
 **Resposta de sucesso — 200**
 
@@ -240,7 +251,7 @@ Este endpoint atualiza os dados de uma turma.
 |-------|------|-------------|-------|
 | `nome` | string | Não | 3 a 100 caracteres |
 | `descricao` | string | Não | 0 a 500 caracteres |
-| `status` | string | Não | ATIVA, INATIVA, CONCLUIDA |
+| `status` | string | Não | ATIVA, INATIVA |
 
 **Resposta de sucesso — 200**
 
@@ -281,3 +292,4 @@ Sem corpo de resposta.
 | Data | Versão | Descrição | Autor(es) |
 |------|--------|-----------|-----------|
 | 25/05/2026 | 1.0 | Criação da documentação dos endpoints da API de Turmas | [Caio Santos](https://github.com/caiobsantos) |
+| 02/06/2026 | 1.1 | Correção dos query params (`busca`, `semestre`, `ano`, `status`, `page`, `limit`), do enum de status (`ATIVA`/`INATIVA`) e inclusão das regras de acesso por papel | [Miguel Moreira](https://github.com/EhOMiguel) |
