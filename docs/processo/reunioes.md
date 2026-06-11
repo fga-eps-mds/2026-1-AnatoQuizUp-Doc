@@ -191,6 +191,28 @@ A reunião abordou o status das entregas pontuais agendadas para deploy (Sistema
 
 **Ata completa:** [reuniao3105-ata.md](../assets/processo/reuniao3105-ata.md)
 
+### 07/06/2026 — Sprint Review e Planejamento da Pauta com POs
+
+**Formato da ata:** Markdown
+
+**Objetivo:**
+Revisar o status das entregas da semana, preparar a pauta de negociação do escopo do MVP com os clientes e definir a nova liderança do ciclo.
+
+**Resumo da ata:**
+A equipe validou a finalização da US de Listas de Questões e acompanhou o progresso dos Dashboards de Projeto e Processo. A maior parte do encontro foi dedicada a estruturar a abordagem para a reunião com os POs, focando na renegociação do MVP e coleta de feedbacks. Foi acordada a necessidade de modificar o cronograma para acomodar essas mudanças e as exigências da disciplina. Miguel e João assumiram a liderança.
+
+**Principais decisões:**
+- US "Responder Questões - Lista" aprovada internamente para validação externa.
+- Mudanças no cronograma autorizadas para refletir ajustes no escopo do MVP.
+- Liderança repassada para Miguel e João.
+
+**Encaminhamentos:**
+- Executar reunião de alinhamento com os POs na segunda-feira.
+- Dar continuidade aos Dashboards de Projeto (Arthur e Miguel) e Processo (Genilson e João).
+- Atualizar o artefato do cronograma oficial do projeto.
+
+**Ata completa:** [reuniao0706-ata.md](../assets/processo/reuniao0706-ata.md)
+
 ## Histórico de Versão
 
 | Data | Versão | Descrição | Autor(es) |
@@ -204,3 +226,4 @@ A reunião abordou o status das entregas pontuais agendadas para deploy (Sistema
 | 17/05/2026 | 1.6 | Inclusão da ata de Sprint Review e planejamento de sprint (17/05) | [Bruno Ricardo](https://github.com/EhOBruno) |
 | 24/05/2026 | 1.7 | Inclusão da ata de Sprint Review e planejamento da entrega da Release Major 2 (24/05) | [Breno Fernandes](https://github.com/BrenoFrds), [Genilson Junior](https://github.com/GenilsonJrs), [João Vitor](https://github.com/Joa0V) |
 | 02/06/2026 | 1.8 | Inclusão da ata de Sprint Review, feedback Major 2 e planejamento (31/05) | [Genilson Junior](https://github.com/GenilsonJrs) |
+| 11/06/2026 | 1.9 | Inclusão da ata de Sprint Review e preparação de pauta (07/06) | [Genilson Junior](https://github.com/GenilsonJrs) |
