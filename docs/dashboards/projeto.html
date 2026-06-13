@@ -11,7 +11,7 @@
 <body>
 <main>
   <h1>Dashboard eixo Projeto — Agile EVM, sprints e releases</h1>
-  <p class="subtitulo">EVM-Ágil cumulativo (AgileEVM, Sulaiman/Barton/Blackburn): cronograma medido em story points e custo medido em R$ a partir do Plano de Custos — PV usa a equipe baseline e AC usa a equipe efetiva de cada sprint, por isso SPI e CPI são independentes.</p>
+  <p class="subtitulo">EVM-Ágil cumulativo no modelo canônico do AgileEVM (Sulaiman/Barton/Blackburn): PPC = sprints decorridas/PS define o PV; APC = pontos entregues/PRP define o EV; AC é o custo real incorrido (equipe efetiva por sprint, via Plano de Custos). SPI = EV/PV · CPI = EV/AC · EAC = BAC/CPI.</p>
   <nav class="abas">
     <a href="produto.html">Produto</a>
     <a href="processo.html">Processo</a>
@@ -66,9 +66,10 @@
   <div class="nota">
     <h3>Nota metodológica — correção do modelo EVM</h3>
     <ul>
-      <li><strong>Modelo anterior (sprints 2–5):</strong> EVM isolado por sprint com AC = orçamento integral da sprint, o que forçava SPI ≡ CPI e impedia projeção de término.</li>
-      <li><strong>Modelo corrigido (AgileEVM):</strong> série <em>cumulativa</em>; cronograma em SP (SPI = EVpts/PVpts) e custo em R$ com PV na equipe baseline do Plano de Custos (9 pessoas, 4 h/sem ⇒ R$ 931,65/sprint) e AC na equipe efetiva de cada sprint (12 → 10 → 9 → 8). CPI = EV/AC, EAC = BAC/CPI, VAC = BAC − EAC.</li>
-      <li><strong>Fontes:</strong> S1–S4 dos relatórios de sprint publicados; S5+ medido do ZenHub (sprints e fechamentos com estimate na janela). Sprints com baixa disciplina de estimativa estão sinalizadas na tabela.</li>
+      <li><strong>Modelo anterior (sprints 2–5):</strong> EVM isolado por sprint com PPC = 100% e AC = orçamento integral da sprint — forçava SPI ≡ CPI (o índice de custo não trazia informação) e impedia projeção de término.</li>
+      <li><strong>Modelo canônico (AgileEVM, Sulaiman/Barton/Blackburn 2006):</strong> série <em>cumulativa</em> na release. <code>PPC = sprints decorridas / PS</code> (PS = 10); <code>APC = SP entregues acum. / PRP</code> (PRP ajustado por escopo a cada sprint); <code>PV = PPC × BAC</code>; <code>EV = APC × BAC</code>; <code>AC = custo real incorrido</code> (equipe efetiva 12 → 10 → 9 → 8 × regime de 4 h/sem do Plano de Custos); <code>SPI = EV/PV</code>; <code>CPI = EV/AC</code>; <code>EAC = BAC/CPI</code>; <code>ETC = EAC − AC</code>; <code>VAC = BAC − EAC</code>.</li>
+      <li><strong>Leitura conjunta:</strong> o SPI próximo de 1 indica aderência ao <em>tempo</em>; a redução do escopo planejado por sprint (91 → 7 SP) aparece no burnup e na velocity — os três gráficos devem ser lidos juntos.</li>
+      <li><strong>Fontes:</strong> S1–S4 dos relatórios de sprint publicados; S5+ medido do ZenHub (sprints e fechamentos com estimate na janela). O time não registra horas reais desde a S1 — AC usa a aproximação de equipe efetiva; com registro de horas, basta substituir no consolidador. Sprints com baixa disciplina de estimativa estão sinalizadas na tabela.</li>
     </ul>
   </div>
 
@@ -95,10 +96,10 @@ document.getElementById("meta-projeto").textContent =
 
 // ---- cartões
 const cartoes = [
-  { nome: "PV acumulado (SP planejados)", valor: ultimaFechada.pvPts, cls: "azul", sub: `até ${ultimaFechada.sprint} (última sprint fechada)` },
-  { nome: "EV acumulado (SP entregues)", valor: ultimaFechada.evPts, cls: "azul", sub: `${Math.round(100 * ultimaFechada.evPts / ultimaFechada.pvPts)}% do planejado` },
-  { nome: "SPI", valor: fmt(ultimaFechada.spi), cls: clsIndice(ultimaFechada.spi), sub: "EVpts / PVpts (acumulado)" },
-  { nome: "CPI", valor: fmt(ultimaFechada.cpi), cls: clsIndice(ultimaFechada.cpi), sub: "EV R$ / AC R$ (acumulado)" },
+  { nome: "PRP — SP planejados da release", valor: ultimaFechada.prp, cls: "azul", sub: `escopo ajustado até ${ultimaFechada.sprint} (última sprint fechada)` },
+  { nome: "EV acumulado (SP entregues)", valor: ultimaFechada.evPts, cls: "azul", sub: `APC = ${Math.round(100 * ultimaFechada.apc)}% do escopo · PPC = ${Math.round(100 * ultimaFechada.ppc)}% do tempo` },
+  { nome: "SPI", valor: fmt(ultimaFechada.spi), cls: clsIndice(ultimaFechada.spi), sub: "EV/PV · PV = PPC × BAC" },
+  { nome: "CPI", valor: fmt(ultimaFechada.cpi), cls: clsIndice(ultimaFechada.cpi), sub: "EV/AC · AC = custo real incorrido" },
   { nome: "EAC (projeção de custo)", valor: reais(ultimaFechada.eac), cls: ultimaFechada.eac <= J.parametros.bac ? "verde" : "vermelho", sub: `BAC ${reais(J.parametros.bac)} · VAC ${reais(ultimaFechada.vac)}` },
   { nome: "Velocity (mediana)", valor: `${fmt(J.previsao.velocidadeMedianaSP, 0)} SP`, cls: "azul", sub: "por sprint fechada" },
 ];

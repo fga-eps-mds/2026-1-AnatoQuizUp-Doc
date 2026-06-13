@@ -200,20 +200,22 @@ cells.append(md("""## 3. Eixo Projeto — AgileEVM com correção metodológica
 
 **O que estava errado nos EVMs das releases anteriores:** o cálculo era feito **por sprint isolada**, com `PV = BAC da sprint` e `AC = BAC da sprint` (o orçamento inteiro era dado como consumido). Consequências: **SPI ≡ CPI** sempre (o índice de custo não trazia informação nova), nenhuma visão acumulada e nenhuma projeção de término (EAC) possível — exatamente os pontos apontados pelo professor.
 
-**Modelo corrigido (AgileEVM, Sulaiman/Barton/Blackburn 2006), em onda rolante:**
+**Modelo canônico (AgileEVM, Sulaiman/Barton/Blackburn 2006), aplicado cumulativamente à release:**
 
-| Grandeza | Definição | Fonte |
-|----------|-----------|-------|
-| PVpts, EVpts | SP planejados / entregues **acumulados** | Relatórios de sprint (S1–S4); ZenHub medido (S5+) |
-| **SPI** | EVpts / PVpts | — |
-| PV(R$) | custo semanal da **equipe baseline** (9 pessoas × 4 h/sem ⇒ R$ 931,65/sprint, Plano de Custos) acumulado | Plano de Custos |
-| AC(R$) | custo semanal da **equipe efetiva** de cada sprint (12 → 10 → 9 → 8 pessoas) acumulado | Plano de Custos + composição real do time |
-| EV(R$) | (entregue/planejado da sprint) × orçamento baseline da sprint, acumulado | — |
-| **CPI** | EV(R$) / AC(R$) | — |
-| **BAC** | R$ 931,65 × 10 sprints (S1 19/04 → S10 29/06) = **R$ 9.316,50** | Plano de Custos |
-| **EAC** | BAC / CPI · **VAC** = BAC − EAC | — |
+| Grandeza | Definição (fórmula do AgileEVM) | Fonte no nosso projeto |
+|----------|----------------------------------|------------------------|
+| **PS** | sprints planejadas da release | 10 (S1 19/04 → S10 29/06) |
+| **BAC** | orçamento da release | R$ 931,63/sprint (equipe baseline de 9 pessoas, 4 h/sem) × 10 = **R$ 9.316,30** |
+| **PRP** | *planned release points*, ajustado pelas mudanças de escopo a cada sprint | escopo planejado por sprint: relatórios publicados (S1–S4); ZenHub medido (S5+) |
+| **PPC** | percentual planejado completo = `n / PS` (n = sprints decorridas) | — |
+| **APC** | percentual real completo = `SP entregues acumulados / PRP` | fechamentos com estimate por janela de sprint |
+| **PV** | `PPC × BAC` | — |
+| **EV** | `APC × BAC` | — |
+| **AC** | custo **real** incorrido acumulado | equipe efetiva por sprint (12 → 10 → 9 → 8) × regime de 4 h/sem do Plano de Custos |
+| **SPI / CPI** | `EV / PV` · `EV / AC` | — |
+| **EAC / ETC / VAC** | `BAC / CPI` · `EAC − AC` · `BAC − EAC` | — |
 
-Como PV usa a equipe planejada e AC a equipe real, **SPI e CPI tornam-se independentes**: SPI mede aderência ao cronograma de escopo; CPI mede eficiência do custo realmente incorrido."""))
+Dois pontos do livro que o modelo antigo violava: (1) **PPC mede tempo decorrido**, não orçamento da sprint — por isso o EVM é da *release*, acumulado; (2) **AC é o custo realmente incorrido** — como o time só registrou horas na S1, usamos a melhor aproximação disponível (equipe efetiva × regime do Plano de Custos), declarada como premissa; se o registro de horas voltar, basta substituir o AC no consolidador."""))
 
 cells.append(code("""J = consolidado["projeto"]
 evm = pd.DataFrame(J["evm"])
@@ -262,10 +264,11 @@ print(f"Previsão de ritmo: velocity mediana {prev['velocidadeMedianaSP']} SP ×
 
 cells.append(md("""### Interpretação — Projeto (planejado × realizado)
 
-- **Escopo/tempo (SPI ≈ 0,68):** o time entregou ~2/3 do que planejou, de forma consistente — o problema não foi uma sprint ruim, foi **planejamento sistematicamente acima da capacidade** (S1 planejou 91 SP; a velocity mediana real do semestre é ~16 SP/sprint). O burnup mostra o descolamento abrindo cedo e nunca fechando.
-- **Custo (CPI ≈ 0,53):** com AC medido pela equipe efetiva, o custo incorrido supera o valor agregado: o semestre teve mais gente alocada no início (12 → 10) do que o baseline (9) entregando menos que o planejado, e o **EAC projeta ~R$ 17,6 mil contra BAC de R$ 9,3 mil (VAC negativo)**. Leitura gerencial: ao preço atual de entrega, o escopo originalmente sonhado custaria quase o dobro do orçamento de tempo do time.
-- **S6–S8 com SPI degradado é em parte artefato de medição**: a disciplina de estimates caiu (73% das issues sem estimate) — trabalho real (PRs de listas, amizades, dashboards de aluno) não aparece como SP entregue. Isso é tratado como ação de processo (decisão D7), e é o motivo de sinalizarmos a fonte `medido (zenhub)` na tabela de sprints.
-- **Releases:** RM1 e RM2 entregues nos marcos; para a R3 final (29/06), a capacidade restante (~3 sprints × 16 SP ≈ 48 SP) comporta o backlog aberto **estimado** (12 SP) — mas **67 issues abertas não têm estimate**, ou seja, o escopo real é desconhecido. A decisão D6 trata exatamente disso: estimar o que entra na R3 final e cortar o que exceder a capacidade."""))
+- **Tempo (SPI ≈ 0,98 na última sprint fechada):** com 70% do tempo decorrido, ~68% do escopo corrente está entregue — **em dia pelo relógio**. Mas o SPI sozinho engana aqui, e é por isso que o AgileEVM manda ler os três gráficos juntos: o escopo planejado por sprint **caiu de 91 SP (S1) para 7 SP (S7/S8)**. O projeto está "no prazo" em grande parte porque o time foi cortando o que planejava — o burnup e a velocity mostram a ambição encolhendo até caber na capacidade real (velocity mediana ~16 SP/sprint).
+- **Custo (CPI ≈ 0,95):** o custo real incorrido (equipe efetiva, que começou em 12 pessoas contra baseline de 9) corre um pouco acima do valor agregado; **EAC ≈ R$ 9,9 mil contra BAC de R$ 9,3 mil (VAC ≈ −R$ 0,5 mil)** — desvio de custo pequeno e estável.
+- **A leitura gerencial honesta:** o risco do projeto nunca foi prazo nem custo — foi **gestão de escopo**. A correção do EVM torna isso visível: no modelo antigo (SPI=CPI por sprint), as sprints pareciam simplesmente "atrasadas"; no modelo do livro, vê-se que o time entrega num ritmo constante e que o problema é planejar acima dele.
+- **S6–S8 com entrega ≈ 0 SP é em parte artefato de medição**: a disciplina de estimates caiu (73% das issues sem estimate) — trabalho real (PRs de listas, amizades, dashboards de aluno) não aparece como SP entregue. Tratado como ação de processo (decisão D7) e sinalizado como fonte `medido (zenhub)` na tabela de sprints.
+- **Releases:** RM1 e RM2 entregues nos marcos; para a R3 final (29/06), a capacidade restante (~3 sprints × 16 SP ≈ 48 SP) comporta o backlog aberto **estimado** (12 SP) — mas **67 issues abertas não têm estimate**, ou seja, o escopo real é desconhecido. A decisão D6 trata disso: estimar o que entra na R3 final e cortar o que exceder a capacidade."""))
 
 cells.append(md("""## 4. Qualidade dos dados — análise crítica
 
@@ -311,6 +314,7 @@ cells.append(md("""## 6. Uso crítico de IA na construção e interpretação
 - Cálculo dos limites WIP pela Lei de Little a partir dos eventos reais do board.
 
 **Rejeitado / corrigido pelo time:**
+- **Primeira versão do EVM proposta pela IA** usava PV por "orçamento de sprint" (onda rolante própria) em vez do PPC = sprints decorridas/PS do livro — produzia SPI ≈ 0,66 e CPI ≈ 0,47. Ao confrontar com o AgileEVM canônico, o time exigiu fidelidade às fórmulas (PPC, APC, PRP) e o modelo foi refeito — os índices corretos são SPI ≈ 0,98 e CPI ≈ 0,95, e a história de "atraso" virou, corretamente, uma história de **corte de escopo**. Exemplo concreto de por que output de IA não se aceita sem verificação contra a fonte.
 - Usar `totalPoints/completedPoints` prontos do ZenHub (dupla contagem no rollover — recalculado por issue).
 - Usar o lead time de *todas* as issues (a limpeza de board de 12/06 distorcia as medianas — criado o recorte "fluxo de código").
 - Chave SonarCloud `-Front` sugerida pela documentação interna (real: `-Web`).
@@ -319,7 +323,7 @@ cells.append(md("""## 6. Uso crítico de IA na construção e interpretação
 
 cells.append(md("""## 7. Conclusão
 
-O semestre fecha com **produto saudável** (Qualidade do Produto 0,86; 0 bugs abertos no SonarCloud; cobertura ponderada ~90%), **processo com fluxo curto e estável** (cycle time ~2 dias; WIP dentro dos limites da Lei de Little) e **projeto com lição clara de planejamento**: SPI ~0,68 e CPI ~0,53 mostram que o time entrega com qualidade, porém planeja sistematicamente acima da capacidade — e a resposta gerencial correta (D6/D7) é estimar e cortar o escopo da R3 final para caber na capacidade medida, não esticar o time.
+O semestre fecha com **produto saudável** (Qualidade do Produto 0,86; 0 bugs abertos no SonarCloud; cobertura ponderada ~90%), **processo com fluxo curto e estável** (cycle time ~2 dias; WIP dentro dos limites da Lei de Little) e **projeto com lição clara de gestão de escopo**: pelo AgileEVM canônico, prazo (SPI ≈ 0,98) e custo (CPI ≈ 0,95, VAC ≈ −R$ 0,5 mil) estão sob controle, mas o burnup e a velocity revelam *como*: o escopo planejado por sprint caiu de 91 para 7 SP até caber na capacidade real (~16 SP/sprint). A resposta gerencial correta (D6/D7) é planejar a R3 final já dentro dessa capacidade — estimar tudo e cortar o excedente, não esticar o time.
 
 **Artefatos desta entrega:** [Dashboard Produto](https://fga-eps-mds.github.io/2026-1-AnatoQuizUp-Doc/dashboards/produto.html) · [Dashboard Processo](https://fga-eps-mds.github.io/2026-1-AnatoQuizUp-Doc/dashboards/processo.html) · [Dashboard Projeto](https://fga-eps-mds.github.io/2026-1-AnatoQuizUp-Doc/dashboards/projeto.html) · [Canvas Analytics](https://fga-eps-mds.github.io/2026-1-AnatoQuizUp-Doc/dashboards/canvas.html) · dados brutos e scripts em `DA-R3/`."""))
 

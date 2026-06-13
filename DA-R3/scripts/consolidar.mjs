@@ -372,26 +372,39 @@ const sprintsCalc = SPRINTS.map((s) => {
   return { ...s, decorrida, emAndamento, planejadoSP: planejado, entregueSP: entregue, fontePlanejado, fonteEntregue, entregueMedidoSP: entregueMedidoJanela, custoPlanejado: arred(custoSemana(EQUIPE_BASELINE), 2), custoReal: arred(custoSemana(s.equipe), 2) };
 });
 
-// Série EVM cumulativa (AgileEVM em onda rolante)
-const BAC = arred(custoSemana(EQUIPE_BASELINE) * SPRINTS.length, 2);
-let pvPts = 0, evPts = 0, pvR = 0, evR = 0, acR = 0;
+// Série EVM cumulativa — AgileEVM canônico (Sulaiman/Barton/Blackburn 2006):
+//   PS  = sprints planejadas da release (10)
+//   PRP = planned release points, ajustado a cada sprint pelo escopo planejado
+//         (mudança de escopo = pontos planejados adicionados na sprint)
+//   PPC = n / PS                     (percentual planejado = tempo decorrido)
+//   APC = pontos entregues acum / PRP (percentual realizado = escopo concluído)
+//   PV = PPC × BAC · EV = APC × BAC · AC = custo real incorrido acumulado
+//   SPI = EV/PV · CPI = EV/AC · EAC = BAC/CPI · ETC = EAC − AC · VAC = BAC − EAC
+const PS = SPRINTS.length;
+const BAC = arred(custoSemana(EQUIPE_BASELINE) * PS, 2);
+let prp = 0, evPts = 0, acR = 0, n = 0;
 const serieEvm = [];
 for (const s of sprintsCalc) {
   if (!s.decorrida && !s.emAndamento) continue;
-  pvPts += s.planejadoSP ?? 0;
+  n += 1;
+  prp += s.planejadoSP ?? 0;
   evPts += s.entregueSP ?? 0;
-  const apc = s.planejadoSP ? (s.entregueSP ?? 0) / s.planejadoSP : 0;
-  pvR += custoSemana(EQUIPE_BASELINE);
-  evR += apc * custoSemana(EQUIPE_BASELINE);
   acR += custoSemana(s.equipe);
-  const spi = pvPts ? evPts / pvPts : null;
+  const ppc = n / PS;
+  const apc = prp ? evPts / prp : 0;
+  const pvR = ppc * BAC;
+  const evR = apc * BAC;
+  const spi = pvR ? evR / pvR : null;
   const cpi = acR ? evR / acR : null;
   serieEvm.push({
     sprint: s.id, fim: s.fim, emAndamento: s.emAndamento,
-    pvPts, evPts, spiSprint: s.planejadoSP ? arred((s.entregueSP ?? 0) / s.planejadoSP, 2) : null,
+    prp, pvPts: prp, evPts,
+    ppc: arred(ppc, 3), apc: arred(apc, 3),
+    spiSprint: s.planejadoSP ? arred((s.entregueSP ?? 0) / s.planejadoSP, 2) : null,
     pvReais: arred(pvR, 2), evReais: arred(evR, 2), acReais: arred(acR, 2),
     spi: arred(spi, 2), cpi: arred(cpi, 2),
     eac: cpi ? arred(BAC / cpi, 2) : null,
+    etc: cpi ? arred(BAC / cpi - acR, 2) : null,
     vac: cpi ? arred(BAC - BAC / cpi, 2) : null,
   });
 }
@@ -409,6 +422,7 @@ const projeto = {
     equipeBaseline: EQUIPE_BASELINE,
     custoSemanaBaseline: arred(custoSemana(EQUIPE_BASELINE), 2),
     bac: BAC,
+    ps: PS,
     totalSprints: SPRINTS.length,
   },
   sprints: sprintsCalc,
@@ -433,9 +447,10 @@ const consolidado = {
     "Processo: linha do tempo de cada issue reconstruída dos eventos transferIssue do ZenHub; issues sem eventos permanecem no pipeline de criação até fechar.",
     "Processo: lead time = criação→fechamento; cycle time = 1ª entrada em In Progress→fechamento; 'fluxo de código' = issues que passaram por In Progress.",
     "Processo: limites WIP pela Lei de Little (WIP = TP × LT) com TP das últimas 4 semanas e margem de 50% (Brechner).",
-    "Projeto: AgileEVM em onda rolante — planejado/entregue S1–S4 dos relatórios de sprint publicados; S5+ medido do ZenHub (sprints e fechamentos na janela).",
-    "Projeto: PV usa equipe baseline do plano de custos (9 pessoas, 4 h/sem); AC usa equipe efetiva por sprint (12, 10, 9, 9, 9, 8, 8, 8) — por isso CPI ≠ SPI.",
-    "Projeto: BAC = custo semanal baseline × 10 sprints (S1 19/04 → S10 29/06).",
+    "Projeto: AgileEVM canônico (Sulaiman/Barton/Blackburn 2006) — PPC = sprints decorridas/PS; APC = pontos entregues acumulados/PRP; PV = PPC×BAC; EV = APC×BAC; SPI = EV/PV; CPI = EV/AC; EAC = BAC/CPI.",
+    "Projeto: PRP em onda rolante — o escopo planejado de cada sprint entra como ajuste de escopo da release (planejado/entregue S1–S4 dos relatórios de sprint publicados; S5+ medido do ZenHub).",
+    "Projeto: AC = custo real incorrido, aproximado pela equipe efetiva de cada sprint (12, 10, 9, 9, 9, 8, 8, 8) × regime de 4 h/sem do plano de custos — o time não registra horas reais desde a S1; substituir por horas reais se voltarem a ser registradas.",
+    "Projeto: BAC = custo semanal baseline (9 pessoas) × PS = 10 sprints (S1 19/04 → S10 29/06).",
     `Qualidade dos dados: ${higiene.semEstimate}/${higiene.totalIssues} issues sem estimate; ${higiene.semResponsavel} sem responsável; ${higiene.fechadasEmLote1206} fechadas em lote em 12/06 (limpeza de board) — análise crítica no notebook.`,
   ],
   produto,
