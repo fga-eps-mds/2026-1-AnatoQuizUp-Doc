@@ -1,0 +1,4237 @@
+{
+ "extraidoEm": "2026-06-13T00:07:30.490Z",
+ "2026-1-AnatoQuizUp-Doc": [
+  {
+   "numero": 46,
+   "titulo": "[Task] Alteração Dos Campos das Questões",
+   "estado": "open",
+   "ehPr": false,
+   "criadaEm": "2026-06-08T14:19:37Z",
+   "fechadaEm": null,
+   "mergeadaEm": null,
+   "labels": [
+    "enhancement"
+   ],
+   "responsaveis": [
+    "pkbceira03",
+    "Brenofrds"
+   ],
+   "autor": "Joa0V",
+   "milestone": null,
+   "temDescricao": true,
+   "comentarios": 0
+  },
+  {
+   "numero": 45,
+   "titulo": "docs: atualiza documentacao da Release 2",
+   "estado": "closed",
+   "ehPr": true,
+   "criadaEm": "2026-06-02T18:34:47Z",
+   "fechadaEm": "2026-06-02T23:59:34Z",
+   "mergeadaEm": "2026-06-02T23:59:34Z",
+   "labels": [],
+   "responsaveis": [],
+   "autor": "EhOMiguel",
+   "milestone": null,
+   "temDescricao": false,
+   "comentarios": 0
+  },
+  {
+   "numero": 44,
+   "titulo": "Comentário da Questão Obrigatório",
+   "estado": "open",
+   "ehPr": false,
+   "criadaEm": "2026-05-25T02:16:05Z",
+   "fechadaEm": null,
+   "mergeadaEm": null,
+   "labels": [
+    "enhancement"
+   ],
+   "responsaveis": [],
+   "autor": "Joa0V",
+   "milestone": null,
+   "temDescricao": true,
+   "comentarios": 0
+  },
+  {
+   "numero": 43,
+   "titulo": "Mensagem Inicial do WebApp",
+   "estado": "open",
+   "ehPr": false,
+   "criadaEm": "2026-05-25T02:13:56Z",
+   "fechadaEm": null,
+   "mergeadaEm": null,
+   "labels": [
+    "enhancement"
+   ],
+   "responsaveis": [],
+   "autor": "Joa0V",
+   "milestone": null,
+   "temDescricao": true,
+   "comentarios": 0
+  },
+  {
+   "numero": 42,
+   "titulo": "[BUG] Palavras-chave das Questões Não Ficam Salvas",
+   "estado": "open",
+   "ehPr": false,
+   "criadaEm": "2026-05-25T02:08:57Z",
+   "fechadaEm": null,
+   "mergeadaEm": null,
+   "labels": [
+    "bug"
+   ],
+   "responsaveis": [],
+   "autor": "Joa0V",
+   "milestone": null,
+   "temDescricao": true,
+   "comentarios": 0
+  },
+  {
+   "numero": 41,
+   "titulo": "[BUG] Pesquisa de Questões Bloqueada",
+   "estado": "open",
+   "ehPr": false,
+   "criadaEm": "2026-05-25T02:06:12Z",
+   "fechadaEm": null,
+   "mergeadaEm": null,
+   "labels": [
+    "bug"
+   ],
+   "responsaveis": [],
+   "autor": "Joa0V",
+   "milestone": null,
+   "temDescricao": true,
+   "comentarios": 0
+  },
+  {
+   "numero": 40,
+   "titulo": "[BUG] Cadastro Aluno - Campo \"nome\" aceitando caracteres especiais",
+   "estado": "open",
+   "ehPr": false,
+   "criadaEm": "2026-05-24T23:29:27Z",
+   "fechadaEm": null,
+   "mergeadaEm": null,
+   "labels": [
+    "bug"
+   ],
+   "responsaveis": [
+    "EhOBruno"
+   ],
+   "autor": "EhOBruno",
+   "milestone": null,
+   "temDescricao": false,
+   "comentarios": 0
+  },
+  {
+   "numero": 39,
+   "titulo": "[BUG] Cadastro Professor - Campo \"nome\" aceitando caracteres especiais",
+   "estado": "open",
+   "ehPr": false,
+   "criadaEm": "2026-05-24T23:29:05Z",
+   "fechadaEm": null,
+   "mergeadaEm": null,
+   "labels": [
+    "bug"
+   ],
+   "responsaveis": [
+    "EhOBruno"
+   ],
+   "autor": "EhOBruno",
+   "milestone": null,
+   "temDescricao": false,
+   "comentarios": 0
+  },
+  {
+   "numero": 38,
+   "titulo": "[AI] Documentação, débitos e roadmap para continuidade do RAG",
+   "estado": "open",
+   "ehPr": false,
+   "criadaEm": "2026-05-24T18:48:47Z",
+   "fechadaEm": null,
+   "mergeadaEm": null,
+   "labels": [],
+   "responsaveis": [],
+   "autor": "marialuisa214",
+   "milestone": null,
+   "temDescricao": true,
+   "comentarios": 0
+  },
+  {
+   "numero": 37,
+   "titulo": "[AI] Integração do pipeline de ingestão contínua ao banco vetorial do RAG",
+   "estado": "open",
+   "ehPr": false,
+   "criadaEm": "2026-05-24T18:44:47Z",
+   "fechadaEm": null,
+   "mergeadaEm": null,
+   "labels": [],
+   "responsaveis": [],
+   "autor": "marialuisa214",
+   "milestone": null,
+   "temDescricao": true,
+   "comentarios": 0
+  },
+  {
+   "numero": 36,
+   "titulo": "[AI] Criação dos embeds (vetorização do texto)",
+   "estado": "open",
+   "ehPr": false,
+   "criadaEm": "2026-05-24T18:38:27Z",
+   "fechadaEm": null,
+   "mergeadaEm": null,
+   "labels": [],
+   "responsaveis": [],
+   "autor": "marialuisa214",
+   "milestone": null,
+   "temDescricao": true,
+   "comentarios": 0
+  },
+  {
+   "numero": 35,
+   "titulo": "[AI] Limpeza, normalização e chunking das questões; finalização do RAG",
+   "estado": "open",
+   "ehPr": false,
+   "criadaEm": "2026-05-24T18:35:23Z",
+   "fechadaEm": null,
+   "mergeadaEm": null,
+   "labels": [],
+   "responsaveis": [],
+   "autor": "marialuisa214",
+   "milestone": null,
+   "temDescricao": true,
+   "comentarios": 0
+  },
+  {
+   "numero": 34,
+   "titulo": "[US] Lista de Questões (Aluno)",
+   "estado": "open",
+   "ehPr": false,
+   "criadaEm": "2026-05-24T14:32:17Z",
+   "fechadaEm": null,
+   "mergeadaEm": null,
+   "labels": [
+    "US"
+   ],
+   "responsaveis": [
+    "pkbceira03",
+    "Brenofrds"
+   ],
+   "autor": "Joa0V",
+   "milestone": null,
+   "temDescricao": true,
+   "comentarios": 0
+  },
+  {
+   "numero": 33,
+   "titulo": "[DOCS] Dashboard Gerencial e Analítico — Notebook Analytics ",
+   "estado": "closed",
+   "ehPr": false,
+   "criadaEm": "2026-05-19T22:59:12Z",
+   "fechadaEm": "2026-05-30T16:47:43Z",
+   "mergeadaEm": null,
+   "labels": [
+    "documentation"
+   ],
+   "responsaveis": [
+    "marialuisa214",
+    "EhOBruno"
+   ],
+   "autor": "marialuisa214",
+   "milestone": null,
+   "temDescricao": true,
+   "comentarios": 0
+  },
+  {
+   "numero": 32,
+   "titulo": "Feature/migracao quiz service",
+   "estado": "closed",
+   "ehPr": true,
+   "criadaEm": "2026-05-14T12:34:32Z",
+   "fechadaEm": "2026-05-14T12:34:39Z",
+   "mergeadaEm": "2026-05-14T12:34:39Z",
+   "labels": [],
+   "responsaveis": [],
+   "autor": "EhOMiguel",
+   "milestone": null,
+   "temDescricao": false,
+   "comentarios": 0
+  },
+  {
+   "numero": 31,
+   "titulo": "Feature/migracao quiz service",
+   "estado": "closed",
+   "ehPr": true,
+   "criadaEm": "2026-05-14T12:15:36Z",
+   "fechadaEm": "2026-05-14T12:22:45Z",
+   "mergeadaEm": null,
+   "labels": [],
+   "responsaveis": [],
+   "autor": "EhOMiguel",
+   "milestone": null,
+   "temDescricao": false,
+   "comentarios": 0
+  },
+  {
+   "numero": 30,
+   "titulo": "Feature/migracao quiz service",
+   "estado": "closed",
+   "ehPr": true,
+   "criadaEm": "2026-05-14T00:23:49Z",
+   "fechadaEm": "2026-05-14T12:02:46Z",
+   "mergeadaEm": null,
+   "labels": [],
+   "responsaveis": [],
+   "autor": "EhOMiguel",
+   "milestone": null,
+   "temDescricao": false,
+   "comentarios": 0
+  },
+  {
+   "numero": 29,
+   "titulo": "[Task] Implementação de Arquitetura Distribuída (BFF, Auth, Quiz, AI) e Deploy",
+   "estado": "closed",
+   "ehPr": false,
+   "criadaEm": "2026-05-11T11:57:33Z",
+   "fechadaEm": "2026-05-19T23:22:09Z",
+   "mergeadaEm": null,
+   "labels": [],
+   "responsaveis": [
+    "EhOMiguel",
+    "trindadea"
+   ],
+   "autor": "pkbceira03",
+   "milestone": "Milestone 2: Módulo de questão",
+   "temDescricao": true,
+   "comentarios": 0
+  },
+  {
+   "numero": 28,
+   "titulo": "[Protótipo] Fluxo de Criação e Exportação de Listas",
+   "estado": "closed",
+   "ehPr": false,
+   "criadaEm": "2026-05-08T19:36:54Z",
+   "fechadaEm": "2026-05-25T13:55:33Z",
+   "mergeadaEm": null,
+   "labels": [],
+   "responsaveis": [],
+   "autor": "pkbceira03",
+   "milestone": null,
+   "temDescricao": true,
+   "comentarios": 0
+  },
+  {
+   "numero": 27,
+   "titulo": "[US] Geração de Questões com Inteligência Artificial",
+   "estado": "open",
+   "ehPr": false,
+   "criadaEm": "2026-05-06T15:20:17Z",
+   "fechadaEm": null,
+   "mergeadaEm": null,
+   "labels": [
+    "US"
+   ],
+   "responsaveis": [
+    "marialuisa214",
+    "EhOBruno"
+   ],
+   "autor": "pkbceira03",
+   "milestone": null,
+   "temDescricao": true,
+   "comentarios": 0
+  },
+  {
+   "numero": 26,
+   "titulo": "[Protótipo] Listagem e Detalhes de Turmas (Aluno)",
+   "estado": "open",
+   "ehPr": false,
+   "criadaEm": "2026-05-06T14:57:43Z",
+   "fechadaEm": null,
+   "mergeadaEm": null,
+   "labels": [],
+   "responsaveis": [],
+   "autor": "pkbceira03",
+   "milestone": "Milestone 2: Módulo de questão",
+   "temDescricao": true,
+   "comentarios": 0
+  },
+  {
+   "numero": 25,
+   "titulo": "[US] Visualização de Turmas (Aluno)",
+   "estado": "closed",
+   "ehPr": false,
+   "criadaEm": "2026-05-06T14:36:53Z",
+   "fechadaEm": "2026-05-25T13:56:24Z",
+   "mergeadaEm": null,
+   "labels": [
+    "US"
+   ],
+   "responsaveis": [
+    "caiobsantos",
+    "GenilsonJrs",
+    "EhOMiguel"
+   ],
+   "autor": "pkbceira03",
+   "milestone": "Milestone 2: Módulo de questão",
+   "temDescricao": true,
+   "comentarios": 0
+  },
+  {
+   "numero": 24,
+   "titulo": "[Protótipo] Fluxo de Criação de Turmas e Alocação",
+   "estado": "closed",
+   "ehPr": false,
+   "criadaEm": "2026-05-06T13:32:58Z",
+   "fechadaEm": "2026-05-25T13:55:55Z",
+   "mergeadaEm": null,
+   "labels": [],
+   "responsaveis": [],
+   "autor": "pkbceira03",
+   "milestone": "Milestone 2: Módulo de questão",
+   "temDescricao": true,
+   "comentarios": 0
+  },
+  {
+   "numero": 23,
+   "titulo": "[US] Quiz dinâmico",
+   "estado": "closed",
+   "ehPr": false,
+   "criadaEm": "2026-05-04T19:44:03Z",
+   "fechadaEm": "2026-05-25T13:56:29Z",
+   "mergeadaEm": null,
+   "labels": [
+    "US"
+   ],
+   "responsaveis": [
+    "caiobsantos",
+    "GenilsonJrs",
+    "Joa0V"
+   ],
+   "autor": "pkbceira03",
+   "milestone": "Milestone 2: Módulo de questão",
+   "temDescricao": true,
+   "comentarios": 0
+  },
+  {
+   "numero": 22,
+   "titulo": "[US] Cadastro e gestão de questão",
+   "estado": "closed",
+   "ehPr": false,
+   "criadaEm": "2026-05-04T19:32:39Z",
+   "fechadaEm": "2026-05-15T18:21:39Z",
+   "mergeadaEm": null,
+   "labels": [
+    "US"
+   ],
+   "responsaveis": [
+    "marialuisa214",
+    "pkbceira03",
+    "Brenofrds"
+   ],
+   "autor": "pkbceira03",
+   "milestone": "Milestone 2: Módulo de questão",
+   "temDescricao": true,
+   "comentarios": 0
+  },
+  {
+   "numero": 21,
+   "titulo": "[US] Cadastro de Professor",
+   "estado": "closed",
+   "ehPr": false,
+   "criadaEm": "2026-05-04T19:13:52Z",
+   "fechadaEm": "2026-05-14T00:15:30Z",
+   "mergeadaEm": null,
+   "labels": [
+    "US"
+   ],
+   "responsaveis": [
+    "EhOMiguel",
+    "EhOBruno"
+   ],
+   "autor": "pkbceira03",
+   "milestone": "Milestone 2: Módulo de questão",
+   "temDescricao": true,
+   "comentarios": 0
+  },
+  {
+   "numero": 20,
+   "titulo": "docs(produto): adiciona guia de identidade visual e atualiza yml",
+   "estado": "open",
+   "ehPr": true,
+   "criadaEm": "2026-05-04T15:55:59Z",
+   "fechadaEm": null,
+   "mergeadaEm": null,
+   "labels": [],
+   "responsaveis": [
+    "GenilsonJrs",
+    "marialuisa214"
+   ],
+   "autor": "GenilsonJrs",
+   "milestone": null,
+   "temDescricao": true,
+   "comentarios": 0
+  },
+  {
+   "numero": 19,
+   "titulo": "docs(produto): adiciona EAP e detalha backlog completo",
+   "estado": "closed",
+   "ehPr": true,
+   "criadaEm": "2026-05-03T03:37:32Z",
+   "fechadaEm": "2026-05-04T11:27:47Z",
+   "mergeadaEm": "2026-05-04T11:27:46Z",
+   "labels": [],
+   "responsaveis": [
+    "GenilsonJrs"
+   ],
+   "autor": "GenilsonJrs",
+   "milestone": null,
+   "temDescricao": true,
+   "comentarios": 0
+  },
+  {
+   "numero": 18,
+   "titulo": "docs(processo): detalha rituais da equipe e inclui praticas de xp",
+   "estado": "closed",
+   "ehPr": true,
+   "criadaEm": "2026-05-03T01:58:28Z",
+   "fechadaEm": "2026-05-04T15:56:41Z",
+   "mergeadaEm": "2026-05-04T15:56:41Z",
+   "labels": [],
+   "responsaveis": [
+    "GenilsonJrs"
+   ],
+   "autor": "GenilsonJrs",
+   "milestone": null,
+   "temDescricao": true,
+   "comentarios": 0
+  },
+  {
+   "numero": 17,
+   "titulo": "[TASK] Protótipo das Telas de Histórico e Revisão",
+   "estado": "closed",
+   "ehPr": false,
+   "criadaEm": "2026-05-01T02:12:03Z",
+   "fechadaEm": "2026-05-08T18:41:50Z",
+   "mergeadaEm": null,
+   "labels": [
+    "FEATURE"
+   ],
+   "responsaveis": [
+    "caiobsantos"
+   ],
+   "autor": "ViictorHugoo",
+   "milestone": "Milestone 2: Módulo de questão",
+   "temDescricao": true,
+   "comentarios": 0
+  },
+  {
+   "numero": 13,
+   "titulo": "[TASK] Protótipo do Painel de Criação de Questões do Professor",
+   "estado": "closed",
+   "ehPr": false,
+   "criadaEm": "2026-04-30T15:02:35Z",
+   "fechadaEm": "2026-05-07T23:43:11Z",
+   "mergeadaEm": null,
+   "labels": [
+    "FEATURE"
+   ],
+   "responsaveis": [
+    "marialuisa214"
+   ],
+   "autor": "pkbceira03",
+   "milestone": "Milestone 2: Módulo de questão",
+   "temDescricao": true,
+   "comentarios": 0
+  },
+  {
+   "numero": 11,
+   "titulo": "[TASK] Protótipo de Seleção de Tema e Configuração de Quiz",
+   "estado": "closed",
+   "ehPr": false,
+   "criadaEm": "2026-04-30T14:22:40Z",
+   "fechadaEm": "2026-05-08T18:41:38Z",
+   "mergeadaEm": null,
+   "labels": [
+    "FEATURE"
+   ],
+   "responsaveis": [
+    "GenilsonJrs",
+    "Joa0V"
+   ],
+   "autor": "pkbceira03",
+   "milestone": "Milestone 2: Módulo de questão",
+   "temDescricao": true,
+   "comentarios": 0
+  },
+  {
+   "numero": 7,
+   "titulo": "[TASK] Protótipo da Interface Dinâmica de Resolução e Feedback",
+   "estado": "closed",
+   "ehPr": false,
+   "criadaEm": "2026-04-30T13:29:56Z",
+   "fechadaEm": "2026-05-08T18:41:28Z",
+   "mergeadaEm": null,
+   "labels": [
+    "FEATURE"
+   ],
+   "responsaveis": [
+    "GenilsonJrs",
+    "Joa0V"
+   ],
+   "autor": "pkbceira03",
+   "milestone": "Milestone 2: Módulo de questão",
+   "temDescricao": true,
+   "comentarios": 0
+  },
+  {
+   "numero": 5,
+   "titulo": "[TASK] Roteiro de testes",
+   "estado": "closed",
+   "ehPr": false,
+   "criadaEm": "2026-04-29T23:23:04Z",
+   "fechadaEm": "2026-05-06T12:46:29Z",
+   "mergeadaEm": null,
+   "labels": [
+    "Documentação"
+   ],
+   "responsaveis": [
+    "pkbceira03"
+   ],
+   "autor": "ViictorHugoo",
+   "milestone": null,
+   "temDescricao": false,
+   "comentarios": 0
+  },
+  {
+   "numero": 4,
+   "titulo": " docs: reorganiza arquitetura e atualiza documentação do projeto",
+   "estado": "closed",
+   "ehPr": true,
+   "criadaEm": "2026-04-27T01:31:56Z",
+   "fechadaEm": "2026-04-27T01:34:04Z",
+   "mergeadaEm": "2026-04-27T01:34:04Z",
+   "labels": [],
+   "responsaveis": [],
+   "autor": "an4catarina",
+   "milestone": null,
+   "temDescricao": true,
+   "comentarios": 0
+  },
+  {
+   "numero": 2,
+   "titulo": "[TASK] [Design] Protótipos de alta fidelidade",
+   "estado": "closed",
+   "ehPr": false,
+   "criadaEm": "2026-04-19T15:31:45Z",
+   "fechadaEm": "2026-05-01T01:32:58Z",
+   "mergeadaEm": null,
+   "labels": [],
+   "responsaveis": [
+    "caiobsantos",
+    "GenilsonJrs",
+    "marialuisa214",
+    "ViictorHugoo"
+   ],
+   "autor": "EhOMiguel",
+   "milestone": null,
+   "temDescricao": true,
+   "comentarios": 6
+  },
+  {
+   "numero": 1,
+   "titulo": "[TASK] [Spike] Pesquisa e configuração de deploy",
+   "estado": "closed",
+   "ehPr": false,
+   "criadaEm": "2026-04-18T14:47:21Z",
+   "fechadaEm": "2026-04-27T00:57:11Z",
+   "mergeadaEm": null,
+   "labels": [
+    "Documentação",
+    "Treinamento"
+   ],
+   "responsaveis": [
+    "an4catarina"
+   ],
+   "autor": "EhOMiguel",
+   "milestone": null,
+   "temDescricao": true,
+   "comentarios": 0
+  }
+ ],
+ "2026-1-AnatoQuizUp-Web": [
+  {
+   "numero": 68,
+   "titulo": "Feat/listas aluno",
+   "estado": "closed",
+   "ehPr": true,
+   "criadaEm": "2026-06-06T13:05:49Z",
+   "fechadaEm": "2026-06-07T13:49:13Z",
+   "mergeadaEm": "2026-06-07T13:49:13Z",
+   "labels": [],
+   "responsaveis": [],
+   "autor": "pkbceira03",
+   "milestone": null,
+   "temDescricao": true,
+   "comentarios": 2
+  },
+  {
+   "numero": 67,
+   "titulo": "Feat/sistema amizade",
+   "estado": "closed",
+   "ehPr": true,
+   "criadaEm": "2026-06-02T02:24:46Z",
+   "fechadaEm": "2026-06-02T03:04:19Z",
+   "mergeadaEm": "2026-06-02T03:04:19Z",
+   "labels": [],
+   "responsaveis": [],
+   "autor": "trindadea",
+   "milestone": null,
+   "temDescricao": true,
+   "comentarios": 2
+  },
+  {
+   "numero": 66,
+   "titulo": "Adiciona tela de dashboard de evolução do aluno",
+   "estado": "closed",
+   "ehPr": true,
+   "criadaEm": "2026-06-02T00:23:56Z",
+   "fechadaEm": "2026-06-02T00:53:33Z",
+   "mergeadaEm": "2026-06-02T00:53:33Z",
+   "labels": [],
+   "responsaveis": [],
+   "autor": "GenilsonJrs",
+   "milestone": null,
+   "temDescricao": true,
+   "comentarios": 2
+  },
+  {
+   "numero": 65,
+   "titulo": "Feat/dashboard turma",
+   "estado": "closed",
+   "ehPr": true,
+   "criadaEm": "2026-06-01T14:23:52Z",
+   "fechadaEm": "2026-06-01T15:08:43Z",
+   "mergeadaEm": "2026-06-01T15:08:43Z",
+   "labels": [],
+   "responsaveis": [],
+   "autor": "Brenofrds",
+   "milestone": null,
+   "temDescricao": true,
+   "comentarios": 2
+  },
+  {
+   "numero": 64,
+   "titulo": "Implementação do painel de administração e fluxo de roteamento protegido",
+   "estado": "closed",
+   "ehPr": true,
+   "criadaEm": "2026-05-25T02:25:17Z",
+   "fechadaEm": "2026-05-25T02:47:08Z",
+   "mergeadaEm": "2026-05-25T02:47:08Z",
+   "labels": [],
+   "responsaveis": [
+    "GenilsonJrs"
+   ],
+   "autor": "GenilsonJrs",
+   "milestone": null,
+   "temDescricao": true,
+   "comentarios": 2
+  },
+  {
+   "numero": 63,
+   "titulo": "Criação da tela de histórico e revisão de resultados completa",
+   "estado": "closed",
+   "ehPr": true,
+   "criadaEm": "2026-05-24T22:07:45Z",
+   "fechadaEm": "2026-05-24T23:33:20Z",
+   "mergeadaEm": "2026-05-24T23:33:20Z",
+   "labels": [],
+   "responsaveis": [
+    "GenilsonJrs",
+    "Joa0V"
+   ],
+   "autor": "GenilsonJrs",
+   "milestone": null,
+   "temDescricao": true,
+   "comentarios": 2
+  },
+  {
+   "numero": 62,
+   "titulo": "Feat/lista",
+   "estado": "closed",
+   "ehPr": true,
+   "criadaEm": "2026-05-24T17:46:59Z",
+   "fechadaEm": "2026-05-24T23:39:42Z",
+   "mergeadaEm": "2026-05-24T23:39:42Z",
+   "labels": [],
+   "responsaveis": [],
+   "autor": "pkbceira03",
+   "milestone": null,
+   "temDescricao": true,
+   "comentarios": 2
+  },
+  {
+   "numero": 61,
+   "titulo": "Feat/moedas atp",
+   "estado": "closed",
+   "ehPr": true,
+   "criadaEm": "2026-05-24T04:41:43Z",
+   "fechadaEm": "2026-05-25T01:07:06Z",
+   "mergeadaEm": "2026-05-25T01:07:06Z",
+   "labels": [],
+   "responsaveis": [],
+   "autor": "trindadea",
+   "milestone": null,
+   "temDescricao": true,
+   "comentarios": 2
+  },
+  {
+   "numero": 60,
+   "titulo": "Feature/minhas turmas aluno",
+   "estado": "closed",
+   "ehPr": true,
+   "criadaEm": "2026-05-21T10:28:36Z",
+   "fechadaEm": "2026-05-25T00:03:47Z",
+   "mergeadaEm": "2026-05-25T00:03:47Z",
+   "labels": [],
+   "responsaveis": [
+    "GenilsonJrs",
+    "EhOMiguel"
+   ],
+   "autor": "EhOMiguel",
+   "milestone": null,
+   "temDescricao": true,
+   "comentarios": 2
+  },
+  {
+   "numero": 59,
+   "titulo": "Task: [Web] Interface Dinâmica de Questionário",
+   "estado": "closed",
+   "ehPr": true,
+   "criadaEm": "2026-05-21T03:00:50Z",
+   "fechadaEm": "2026-05-21T12:22:04Z",
+   "mergeadaEm": "2026-05-21T12:22:03Z",
+   "labels": [],
+   "responsaveis": [
+    "GenilsonJrs",
+    "Joa0V"
+   ],
+   "autor": "GenilsonJrs",
+   "milestone": null,
+   "temDescricao": true,
+   "comentarios": 2
+  },
+  {
+   "numero": 58,
+   "titulo": "Feat/turma",
+   "estado": "closed",
+   "ehPr": true,
+   "criadaEm": "2026-05-18T00:42:55Z",
+   "fechadaEm": "2026-05-18T13:22:19Z",
+   "mergeadaEm": "2026-05-18T13:22:19Z",
+   "labels": [],
+   "responsaveis": [],
+   "autor": "Brenofrds",
+   "milestone": null,
+   "temDescricao": true,
+   "comentarios": 1
+  },
+  {
+   "numero": 57,
+   "titulo": "Feat/turma",
+   "estado": "closed",
+   "ehPr": true,
+   "criadaEm": "2026-05-18T00:19:18Z",
+   "fechadaEm": "2026-05-18T00:20:10Z",
+   "mergeadaEm": null,
+   "labels": [],
+   "responsaveis": [],
+   "autor": "Brenofrds",
+   "milestone": null,
+   "temDescricao": true,
+   "comentarios": 3
+  },
+  {
+   "numero": 56,
+   "titulo": "docs: atualiza contexto da migracao quiz-service",
+   "estado": "closed",
+   "ehPr": true,
+   "criadaEm": "2026-05-14T00:22:34Z",
+   "fechadaEm": "2026-05-14T00:23:18Z",
+   "mergeadaEm": null,
+   "labels": [],
+   "responsaveis": [],
+   "autor": "EhOMiguel",
+   "milestone": null,
+   "temDescricao": true,
+   "comentarios": 2
+  },
+  {
+   "numero": 55,
+   "titulo": "feat: adiciona upload de imagem",
+   "estado": "closed",
+   "ehPr": true,
+   "criadaEm": "2026-05-12T18:38:11Z",
+   "fechadaEm": "2026-05-16T18:00:32Z",
+   "mergeadaEm": "2026-05-16T18:00:32Z",
+   "labels": [],
+   "responsaveis": [],
+   "autor": "pkbceira03",
+   "milestone": null,
+   "temDescricao": true,
+   "comentarios": 2
+  },
+  {
+   "numero": 54,
+   "titulo": "feat: adiciona link para cadstro do professor",
+   "estado": "closed",
+   "ehPr": true,
+   "criadaEm": "2026-05-12T00:40:13Z",
+   "fechadaEm": "2026-05-12T00:49:37Z",
+   "mergeadaEm": "2026-05-12T00:49:37Z",
+   "labels": [],
+   "responsaveis": [],
+   "autor": "pkbceira03",
+   "milestone": null,
+   "temDescricao": true,
+   "comentarios": 2
+  },
+  {
+   "numero": 53,
+   "titulo": "fix: normaliza alternativas sem callback direto",
+   "estado": "closed",
+   "ehPr": true,
+   "criadaEm": "2026-05-11T21:42:22Z",
+   "fechadaEm": "2026-05-11T21:42:29Z",
+   "mergeadaEm": "2026-05-11T21:42:29Z",
+   "labels": [],
+   "responsaveis": [],
+   "autor": "EhOMiguel",
+   "milestone": null,
+   "temDescricao": false,
+   "comentarios": 2
+  },
+  {
+   "numero": 52,
+   "titulo": "test: amplia cobertura dos mocks do frontend",
+   "estado": "closed",
+   "ehPr": true,
+   "criadaEm": "2026-05-11T21:28:17Z",
+   "fechadaEm": "2026-05-11T21:28:25Z",
+   "mergeadaEm": "2026-05-11T21:28:25Z",
+   "labels": [],
+   "responsaveis": [],
+   "autor": "EhOMiguel",
+   "milestone": null,
+   "temDescricao": false,
+   "comentarios": 2
+  },
+  {
+   "numero": 51,
+   "titulo": "fix: remove handler nao utilizado do login",
+   "estado": "closed",
+   "ehPr": true,
+   "criadaEm": "2026-05-11T20:52:22Z",
+   "fechadaEm": "2026-05-11T21:03:59Z",
+   "mergeadaEm": "2026-05-11T21:03:59Z",
+   "labels": [],
+   "responsaveis": [],
+   "autor": "EhOMiguel",
+   "milestone": null,
+   "temDescricao": false,
+   "comentarios": 2
+  },
+  {
+   "numero": 50,
+   "titulo": "Integrate/editar questao com cadastro",
+   "estado": "closed",
+   "ehPr": true,
+   "criadaEm": "2026-05-11T12:55:25Z",
+   "fechadaEm": "2026-05-11T15:02:48Z",
+   "mergeadaEm": "2026-05-11T15:02:47Z",
+   "labels": [],
+   "responsaveis": [],
+   "autor": "marialuisa214",
+   "milestone": null,
+   "temDescricao": true,
+   "comentarios": 1
+  },
+  {
+   "numero": 49,
+   "titulo": "Feature/cadastro professor",
+   "estado": "closed",
+   "ehPr": true,
+   "criadaEm": "2026-05-11T00:34:05Z",
+   "fechadaEm": "2026-05-11T13:33:53Z",
+   "mergeadaEm": "2026-05-11T13:33:53Z",
+   "labels": [],
+   "responsaveis": [],
+   "autor": "EhOMiguel",
+   "milestone": null,
+   "temDescricao": true,
+   "comentarios": 2
+  },
+  {
+   "numero": 48,
+   "titulo": "[Web] Tela de Listas",
+   "estado": "closed",
+   "ehPr": false,
+   "criadaEm": "2026-05-08T19:38:01Z",
+   "fechadaEm": "2026-05-25T13:55:40Z",
+   "mergeadaEm": null,
+   "labels": [
+    "frontend"
+   ],
+   "responsaveis": [],
+   "autor": "pkbceira03",
+   "milestone": null,
+   "temDescricao": true,
+   "comentarios": 0
+  },
+  {
+   "numero": 47,
+   "titulo": "feat: Mudança de arquitetura",
+   "estado": "closed",
+   "ehPr": true,
+   "criadaEm": "2026-05-06T15:49:21Z",
+   "fechadaEm": "2026-05-10T22:59:58Z",
+   "mergeadaEm": "2026-05-10T22:59:58Z",
+   "labels": [],
+   "responsaveis": [],
+   "autor": "EhOMiguel",
+   "milestone": null,
+   "temDescricao": false,
+   "comentarios": 2
+  },
+  {
+   "numero": 46,
+   "titulo": "[Web] Detalhes da Turma (Aluno)",
+   "estado": "open",
+   "ehPr": false,
+   "criadaEm": "2026-05-06T15:01:22Z",
+   "fechadaEm": null,
+   "mergeadaEm": null,
+   "labels": [
+    "frontend"
+   ],
+   "responsaveis": [],
+   "autor": "pkbceira03",
+   "milestone": "Milestone 2: Módulo de questão",
+   "temDescricao": true,
+   "comentarios": 0
+  },
+  {
+   "numero": 45,
+   "titulo": "[Web] Listagem de Turmas do Aluno",
+   "estado": "open",
+   "ehPr": false,
+   "criadaEm": "2026-05-06T15:00:11Z",
+   "fechadaEm": null,
+   "mergeadaEm": null,
+   "labels": [
+    "frontend"
+   ],
+   "responsaveis": [],
+   "autor": "pkbceira03",
+   "milestone": "Milestone 2: Módulo de questão",
+   "temDescricao": true,
+   "comentarios": 0
+  },
+  {
+   "numero": 44,
+   "titulo": "[Frontend] Tela de Alocação de Alunos",
+   "estado": "closed",
+   "ehPr": false,
+   "criadaEm": "2026-05-06T13:41:40Z",
+   "fechadaEm": "2026-05-18T13:22:21Z",
+   "mergeadaEm": null,
+   "labels": [
+    "frontend"
+   ],
+   "responsaveis": [],
+   "autor": "pkbceira03",
+   "milestone": "Milestone 2: Módulo de questão",
+   "temDescricao": true,
+   "comentarios": 0
+  },
+  {
+   "numero": 43,
+   "titulo": "[Web] Formulário de Criação de Turma",
+   "estado": "closed",
+   "ehPr": false,
+   "criadaEm": "2026-05-06T13:38:27Z",
+   "fechadaEm": "2026-05-18T13:22:21Z",
+   "mergeadaEm": null,
+   "labels": [
+    "frontend"
+   ],
+   "responsaveis": [],
+   "autor": "pkbceira03",
+   "milestone": "Milestone 2: Módulo de questão",
+   "temDescricao": true,
+   "comentarios": 0
+  },
+  {
+   "numero": 42,
+   "titulo": "Feature/home aluno",
+   "estado": "closed",
+   "ehPr": true,
+   "criadaEm": "2026-05-03T21:56:23Z",
+   "fechadaEm": "2026-05-04T11:44:26Z",
+   "mergeadaEm": "2026-05-04T11:44:26Z",
+   "labels": [],
+   "responsaveis": [],
+   "autor": "pkbceira03",
+   "milestone": null,
+   "temDescricao": true,
+   "comentarios": 2
+  },
+  {
+   "numero": 41,
+   "titulo": "Feature/home professor",
+   "estado": "closed",
+   "ehPr": true,
+   "criadaEm": "2026-05-03T13:17:45Z",
+   "fechadaEm": "2026-05-03T16:36:09Z",
+   "mergeadaEm": "2026-05-03T16:36:09Z",
+   "labels": [],
+   "responsaveis": [],
+   "autor": "marialuisa214",
+   "milestone": null,
+   "temDescricao": true,
+   "comentarios": 2
+  },
+  {
+   "numero": 40,
+   "titulo": "Fix/security hotspots",
+   "estado": "closed",
+   "ehPr": true,
+   "criadaEm": "2026-05-02T20:31:25Z",
+   "fechadaEm": "2026-05-03T21:44:45Z",
+   "mergeadaEm": "2026-05-03T21:44:45Z",
+   "labels": [],
+   "responsaveis": [
+    "Joa0V"
+   ],
+   "autor": "Joa0V",
+   "milestone": null,
+   "temDescricao": true,
+   "comentarios": 2
+  },
+  {
+   "numero": 39,
+   "titulo": "[TASK] [Frontend] Análise e correção de Security Hotspots",
+   "estado": "closed",
+   "ehPr": false,
+   "criadaEm": "2026-05-02T19:50:31Z",
+   "fechadaEm": "2026-05-03T21:44:46Z",
+   "mergeadaEm": null,
+   "labels": [
+    "frontend"
+   ],
+   "responsaveis": [
+    "Joa0V"
+   ],
+   "autor": "Joa0V",
+   "milestone": null,
+   "temDescricao": true,
+   "comentarios": 0
+  },
+  {
+   "numero": 34,
+   "titulo": "[Web] Aba de Histórico e Revisão",
+   "estado": "closed",
+   "ehPr": false,
+   "criadaEm": "2026-05-01T02:16:34Z",
+   "fechadaEm": "2026-05-24T23:33:21Z",
+   "mergeadaEm": null,
+   "labels": [
+    "frontend"
+   ],
+   "responsaveis": [
+    "caiobsantos",
+    "GenilsonJrs"
+   ],
+   "autor": "ViictorHugoo",
+   "milestone": "Milestone 2: Módulo de questão",
+   "temDescricao": true,
+   "comentarios": 0
+  },
+  {
+   "numero": 33,
+   "titulo": "[Web] Interface Dinâmica de Questionário",
+   "estado": "closed",
+   "ehPr": false,
+   "criadaEm": "2026-05-01T02:10:54Z",
+   "fechadaEm": "2026-05-22T23:46:19Z",
+   "mergeadaEm": null,
+   "labels": [
+    "frontend"
+   ],
+   "responsaveis": [
+    "GenilsonJrs"
+   ],
+   "autor": "ViictorHugoo",
+   "milestone": "Milestone 2: Módulo de questão",
+   "temDescricao": true,
+   "comentarios": 0
+  },
+  {
+   "numero": 38,
+   "titulo": "[US][Frontend] Home aluno",
+   "estado": "closed",
+   "ehPr": false,
+   "criadaEm": "2026-04-30T15:11:49Z",
+   "fechadaEm": "2026-05-04T11:44:27Z",
+   "mergeadaEm": null,
+   "labels": [
+    "frontend",
+    "US"
+   ],
+   "responsaveis": [
+    "pkbceira03"
+   ],
+   "autor": "pkbceira03",
+   "milestone": "Milestone 2: Módulo de questão",
+   "temDescricao": true,
+   "comentarios": 0
+  },
+  {
+   "numero": 37,
+   "titulo": "[US][Frontend] Home professor",
+   "estado": "closed",
+   "ehPr": false,
+   "criadaEm": "2026-04-30T15:06:41Z",
+   "fechadaEm": "2026-05-07T23:43:38Z",
+   "mergeadaEm": null,
+   "labels": [
+    "frontend",
+    "US"
+   ],
+   "responsaveis": [
+    "marialuisa214"
+   ],
+   "autor": "pkbceira03",
+   "milestone": "Milestone 2: Módulo de questão",
+   "temDescricao": true,
+   "comentarios": 0
+  },
+  {
+   "numero": 36,
+   "titulo": "[Web] Interface do Painel de Criação de Questões",
+   "estado": "closed",
+   "ehPr": false,
+   "criadaEm": "2026-04-30T14:30:24Z",
+   "fechadaEm": "2026-05-11T15:02:49Z",
+   "mergeadaEm": null,
+   "labels": [
+    "frontend"
+   ],
+   "responsaveis": [
+    "marialuisa214",
+    "Brenofrds"
+   ],
+   "autor": "pkbceira03",
+   "milestone": "Milestone 2: Módulo de questão",
+   "temDescricao": true,
+   "comentarios": 0
+  },
+  {
+   "numero": 35,
+   "titulo": " [Web]Interface de Seleção e Setup do Quiz",
+   "estado": "closed",
+   "ehPr": false,
+   "criadaEm": "2026-04-30T14:11:52Z",
+   "fechadaEm": "2026-05-21T12:22:05Z",
+   "mergeadaEm": null,
+   "labels": [
+    "frontend"
+   ],
+   "responsaveis": [
+    "GenilsonJrs",
+    "Joa0V"
+   ],
+   "autor": "pkbceira03",
+   "milestone": "Milestone 2: Módulo de questão",
+   "temDescricao": true,
+   "comentarios": 0
+  },
+  {
+   "numero": 32,
+   "titulo": "fix(ci): update SonarCloud project key from Front to WEB",
+   "estado": "closed",
+   "ehPr": true,
+   "criadaEm": "2026-04-28T00:18:44Z",
+   "fechadaEm": "2026-04-29T23:19:04Z",
+   "mergeadaEm": "2026-04-29T23:19:04Z",
+   "labels": [],
+   "responsaveis": [],
+   "autor": "ViictorHugoo",
+   "milestone": null,
+   "temDescricao": false,
+   "comentarios": 2
+  },
+  {
+   "numero": 31,
+   "titulo": "Feature/deploy",
+   "estado": "closed",
+   "ehPr": true,
+   "criadaEm": "2026-04-27T11:42:44Z",
+   "fechadaEm": "2026-04-27T12:37:11Z",
+   "mergeadaEm": "2026-04-27T12:37:11Z",
+   "labels": [],
+   "responsaveis": [],
+   "autor": "trindadea",
+   "milestone": null,
+   "temDescricao": false,
+   "comentarios": 2
+  },
+  {
+   "numero": 30,
+   "titulo": "feat: implementa fluxo de recuperacao de senha no frontend",
+   "estado": "closed",
+   "ehPr": true,
+   "criadaEm": "2026-04-27T11:12:14Z",
+   "fechadaEm": "2026-04-27T12:36:38Z",
+   "mergeadaEm": "2026-04-27T12:36:38Z",
+   "labels": [],
+   "responsaveis": [],
+   "autor": "trindadea",
+   "milestone": null,
+   "temDescricao": true,
+   "comentarios": 2
+  },
+  {
+   "numero": 29,
+   "titulo": "Feature/logout sessao",
+   "estado": "closed",
+   "ehPr": true,
+   "criadaEm": "2026-04-27T10:19:34Z",
+   "fechadaEm": "2026-04-27T10:27:20Z",
+   "mergeadaEm": "2026-04-27T10:27:20Z",
+   "labels": [],
+   "responsaveis": [],
+   "autor": "trindadea",
+   "milestone": null,
+   "temDescricao": true,
+   "comentarios": 2
+  },
+  {
+   "numero": 28,
+   "titulo": "feat: adiciona renovacao automatica de sessao",
+   "estado": "closed",
+   "ehPr": true,
+   "criadaEm": "2026-04-27T09:31:34Z",
+   "fechadaEm": "2026-04-27T10:26:44Z",
+   "mergeadaEm": "2026-04-27T10:26:43Z",
+   "labels": [],
+   "responsaveis": [],
+   "autor": "trindadea",
+   "milestone": null,
+   "temDescricao": true,
+   "comentarios": 2
+  },
+  {
+   "numero": 27,
+   "titulo": "Feature/login real front",
+   "estado": "closed",
+   "ehPr": true,
+   "criadaEm": "2026-04-27T05:20:20Z",
+   "fechadaEm": "2026-04-27T07:55:36Z",
+   "mergeadaEm": "2026-04-27T07:55:36Z",
+   "labels": [],
+   "responsaveis": [],
+   "autor": "trindadea",
+   "milestone": null,
+   "temDescricao": true,
+   "comentarios": 2
+  },
+  {
+   "numero": 26,
+   "titulo": "chore(ci): update branches for push and pull_request triggers to incl…",
+   "estado": "closed",
+   "ehPr": true,
+   "criadaEm": "2026-04-27T02:16:23Z",
+   "fechadaEm": "2026-04-27T02:17:44Z",
+   "mergeadaEm": "2026-04-27T02:17:44Z",
+   "labels": [],
+   "responsaveis": [],
+   "autor": "ViictorHugoo",
+   "milestone": null,
+   "temDescricao": true,
+   "comentarios": 2
+  },
+  {
+   "numero": 25,
+   "titulo": "Feature/us01 cadastro de aluno",
+   "estado": "closed",
+   "ehPr": true,
+   "criadaEm": "2026-04-27T01:36:25Z",
+   "fechadaEm": "2026-04-27T02:15:27Z",
+   "mergeadaEm": "2026-04-27T02:15:27Z",
+   "labels": [],
+   "responsaveis": [],
+   "autor": "EhOBruno",
+   "milestone": null,
+   "temDescricao": true,
+   "comentarios": 2
+  },
+  {
+   "numero": 24,
+   "titulo": "Feature/ci cd",
+   "estado": "closed",
+   "ehPr": true,
+   "criadaEm": "2026-04-27T01:25:47Z",
+   "fechadaEm": "2026-04-27T01:27:20Z",
+   "mergeadaEm": "2026-04-27T01:27:19Z",
+   "labels": [],
+   "responsaveis": [],
+   "autor": "ViictorHugoo",
+   "milestone": null,
+   "temDescricao": true,
+   "comentarios": 2
+  },
+  {
+   "numero": 23,
+   "titulo": "Feature/rotas protegidas",
+   "estado": "closed",
+   "ehPr": true,
+   "criadaEm": "2026-04-26T13:46:18Z",
+   "fechadaEm": "2026-04-27T01:04:29Z",
+   "mergeadaEm": "2026-04-27T01:04:29Z",
+   "labels": [],
+   "responsaveis": [
+    "trindadea"
+   ],
+   "autor": "pkbceira03",
+   "milestone": null,
+   "temDescricao": true,
+   "comentarios": 2
+  },
+  {
+   "numero": 22,
+   "titulo": "Feature/us02 login api",
+   "estado": "closed",
+   "ehPr": true,
+   "criadaEm": "2026-04-23T13:01:14Z",
+   "fechadaEm": "2026-04-23T15:52:55Z",
+   "mergeadaEm": "2026-04-23T15:52:55Z",
+   "labels": [],
+   "responsaveis": [],
+   "autor": "EhOMiguel",
+   "milestone": null,
+   "temDescricao": true,
+   "comentarios": 2
+  },
+  {
+   "numero": 21,
+   "titulo": "Feature/us02 login",
+   "estado": "closed",
+   "ehPr": true,
+   "criadaEm": "2026-04-19T23:45:06Z",
+   "fechadaEm": "2026-04-23T15:52:57Z",
+   "mergeadaEm": "2026-04-23T15:52:57Z",
+   "labels": [],
+   "responsaveis": [],
+   "autor": "pkbceira03",
+   "milestone": null,
+   "temDescricao": true,
+   "comentarios": 3
+  },
+  {
+   "numero": 20,
+   "titulo": "[US] [Frontend] Painel de administração de usuários — Tela",
+   "estado": "closed",
+   "ehPr": false,
+   "criadaEm": "2026-04-18T12:37:05Z",
+   "fechadaEm": "2026-05-25T02:47:09Z",
+   "mergeadaEm": null,
+   "labels": [
+    "FEATURE",
+    "frontend",
+    "US"
+   ],
+   "responsaveis": [
+    "caiobsantos",
+    "GenilsonJrs"
+   ],
+   "autor": "EhOMiguel",
+   "milestone": "Milestone 1: Base de Usuários",
+   "temDescricao": true,
+   "comentarios": 0
+  },
+  {
+   "numero": 19,
+   "titulo": "[US] [Frontend] Professor com visão de aluno",
+   "estado": "open",
+   "ehPr": false,
+   "criadaEm": "2026-04-18T12:36:04Z",
+   "fechadaEm": null,
+   "mergeadaEm": null,
+   "labels": [
+    "FEATURE",
+    "frontend",
+    "US"
+   ],
+   "responsaveis": [],
+   "autor": "EhOMiguel",
+   "milestone": "Milestone 2: Módulo de questão",
+   "temDescricao": true,
+   "comentarios": 0
+  },
+  {
+   "numero": 18,
+   "titulo": "[Frontend] Tela de erro 404 e fallback",
+   "estado": "open",
+   "ehPr": false,
+   "criadaEm": "2026-04-18T12:35:43Z",
+   "fechadaEm": null,
+   "mergeadaEm": null,
+   "labels": [
+    "frontend",
+    "US"
+   ],
+   "responsaveis": [
+    "Brenofrds"
+   ],
+   "autor": "EhOMiguel",
+   "milestone": "Milestone 2: Módulo de questão",
+   "temDescricao": true,
+   "comentarios": 0
+  },
+  {
+   "numero": 17,
+   "titulo": "[TASK15] [Frontend] Página Home (placeholder)",
+   "estado": "closed",
+   "ehPr": false,
+   "criadaEm": "2026-04-18T12:35:27Z",
+   "fechadaEm": "2026-04-27T00:29:32Z",
+   "mergeadaEm": null,
+   "labels": [
+    "frontend"
+   ],
+   "responsaveis": [
+    "pkbceira03"
+   ],
+   "autor": "EhOMiguel",
+   "milestone": null,
+   "temDescricao": true,
+   "comentarios": 0
+  },
+  {
+   "numero": 16,
+   "titulo": "[TASK14] [Frontend] Widget de navegação (Header/Navbar)",
+   "estado": "closed",
+   "ehPr": false,
+   "criadaEm": "2026-04-18T12:35:11Z",
+   "fechadaEm": "2026-04-23T15:53:29Z",
+   "mergeadaEm": null,
+   "labels": [
+    "frontend"
+   ],
+   "responsaveis": [
+    "EhOMiguel"
+   ],
+   "autor": "EhOMiguel",
+   "milestone": null,
+   "temDescricao": true,
+   "comentarios": 0
+  },
+  {
+   "numero": 15,
+   "titulo": "[TASK13] [Frontend] Rotas protegidas",
+   "estado": "closed",
+   "ehPr": false,
+   "criadaEm": "2026-04-18T12:34:20Z",
+   "fechadaEm": "2026-04-27T01:04:30Z",
+   "mergeadaEm": null,
+   "labels": [
+    "frontend"
+   ],
+   "responsaveis": [
+    "pkbceira03"
+   ],
+   "autor": "EhOMiguel",
+   "milestone": null,
+   "temDescricao": true,
+   "comentarios": 0
+  },
+  {
+   "numero": 14,
+   "titulo": "[US] [Frontend] Recuperação de senha — Telas",
+   "estado": "closed",
+   "ehPr": false,
+   "criadaEm": "2026-04-18T12:34:05Z",
+   "fechadaEm": "2026-04-27T12:36:39Z",
+   "mergeadaEm": null,
+   "labels": [
+    "FEATURE",
+    "frontend"
+   ],
+   "responsaveis": [
+    "EhOMiguel",
+    "trindadea"
+   ],
+   "autor": "EhOMiguel",
+   "milestone": null,
+   "temDescricao": true,
+   "comentarios": 0
+  },
+  {
+   "numero": 13,
+   "titulo": "[US04] [Backend] Login de professor — API",
+   "estado": "closed",
+   "ehPr": false,
+   "criadaEm": "2026-04-18T12:32:54Z",
+   "fechadaEm": "2026-05-01T12:25:03Z",
+   "mergeadaEm": null,
+   "labels": [],
+   "responsaveis": [],
+   "autor": "EhOMiguel",
+   "milestone": null,
+   "temDescricao": true,
+   "comentarios": 0
+  },
+  {
+   "numero": 12,
+   "titulo": "[Frontend] Cadastro de professor — Tela",
+   "estado": "closed",
+   "ehPr": false,
+   "criadaEm": "2026-04-18T12:32:12Z",
+   "fechadaEm": "2026-05-14T00:15:36Z",
+   "mergeadaEm": null,
+   "labels": [
+    "frontend"
+   ],
+   "responsaveis": [
+    "EhOMiguel",
+    "EhOBruno"
+   ],
+   "autor": "EhOMiguel",
+   "milestone": "Milestone 1: Base de Usuários",
+   "temDescricao": true,
+   "comentarios": 0
+  },
+  {
+   "numero": 11,
+   "titulo": "[US] [Frontend] Logout — Ação no frontend",
+   "estado": "closed",
+   "ehPr": false,
+   "criadaEm": "2026-04-18T12:30:55Z",
+   "fechadaEm": "2026-04-27T10:27:22Z",
+   "mergeadaEm": null,
+   "labels": [
+    "FEATURE",
+    "frontend"
+   ],
+   "responsaveis": [
+    "EhOMiguel",
+    "Brenofrds"
+   ],
+   "autor": "EhOMiguel",
+   "milestone": null,
+   "temDescricao": true,
+   "comentarios": 0
+  },
+  {
+   "numero": 10,
+   "titulo": "[TASK] [Frontend] Interceptor de refresh token",
+   "estado": "closed",
+   "ehPr": false,
+   "criadaEm": "2026-04-18T12:30:12Z",
+   "fechadaEm": "2026-04-27T10:26:45Z",
+   "mergeadaEm": null,
+   "labels": [
+    "FEATURE",
+    "frontend"
+   ],
+   "responsaveis": [
+    "trindadea"
+   ],
+   "autor": "EhOMiguel",
+   "milestone": null,
+   "temDescricao": true,
+   "comentarios": 0
+  },
+  {
+   "numero": 9,
+   "titulo": "[US02] [Frontend] Login de aluno — Tela",
+   "estado": "closed",
+   "ehPr": false,
+   "criadaEm": "2026-04-18T12:29:34Z",
+   "fechadaEm": "2026-04-23T15:52:58Z",
+   "mergeadaEm": null,
+   "labels": [
+    "FEATURE",
+    "frontend",
+    "US"
+   ],
+   "responsaveis": [
+    "pkbceira03"
+   ],
+   "autor": "EhOMiguel",
+   "milestone": null,
+   "temDescricao": true,
+   "comentarios": 0
+  },
+  {
+   "numero": 8,
+   "titulo": "[US01] [Frontend] Cadastro de aluno — Tela",
+   "estado": "closed",
+   "ehPr": false,
+   "criadaEm": "2026-04-18T12:28:56Z",
+   "fechadaEm": "2026-04-27T03:04:43Z",
+   "mergeadaEm": null,
+   "labels": [
+    "FEATURE",
+    "frontend",
+    "US"
+   ],
+   "responsaveis": [
+    "EhOBruno"
+   ],
+   "autor": "EhOMiguel",
+   "milestone": null,
+   "temDescricao": true,
+   "comentarios": 0
+  },
+  {
+   "numero": 3,
+   "titulo": "[TASK05] [Frontend] Setup da estrutura FSD",
+   "estado": "closed",
+   "ehPr": false,
+   "criadaEm": "2026-04-18T12:18:04Z",
+   "fechadaEm": "2026-04-23T15:52:59Z",
+   "mergeadaEm": null,
+   "labels": [
+    "frontend"
+   ],
+   "responsaveis": [
+    "pkbceira03"
+   ],
+   "autor": "EhOMiguel",
+   "milestone": null,
+   "temDescricao": true,
+   "comentarios": 0
+  },
+  {
+   "numero": 2,
+   "titulo": "chore: Atualiza templates",
+   "estado": "closed",
+   "ehPr": true,
+   "criadaEm": "2026-04-18T12:10:42Z",
+   "fechadaEm": "2026-04-18T14:55:42Z",
+   "mergeadaEm": "2026-04-18T14:55:42Z",
+   "labels": [],
+   "responsaveis": [],
+   "autor": "EhOMiguel",
+   "milestone": null,
+   "temDescricao": false,
+   "comentarios": 1
+  },
+  {
+   "numero": 1,
+   "titulo": "chore(ci): configurar workflow e sonar; adicionar templates do projeto",
+   "estado": "closed",
+   "ehPr": true,
+   "criadaEm": "2026-04-17T00:51:01Z",
+   "fechadaEm": "2026-04-17T19:29:10Z",
+   "mergeadaEm": "2026-04-17T19:29:10Z",
+   "labels": [],
+   "responsaveis": [],
+   "autor": "ViictorHugoo",
+   "milestone": null,
+   "temDescricao": true,
+   "comentarios": 1
+  }
+ ],
+ "2026-1-AnatoQuizUp-BFF": [
+  {
+   "numero": 19,
+   "titulo": "fdeat: adiciona rotas para resolução de lista",
+   "estado": "closed",
+   "ehPr": true,
+   "criadaEm": "2026-06-06T13:46:21Z",
+   "fechadaEm": "2026-06-07T13:49:25Z",
+   "mergeadaEm": "2026-06-07T13:49:25Z",
+   "labels": [],
+   "responsaveis": [],
+   "autor": "pkbceira03",
+   "milestone": null,
+   "temDescricao": false,
+   "comentarios": 1
+  },
+  {
+   "numero": 18,
+   "titulo": "Feat/sistema amizade",
+   "estado": "closed",
+   "ehPr": true,
+   "criadaEm": "2026-06-02T02:24:35Z",
+   "fechadaEm": "2026-06-02T02:47:52Z",
+   "mergeadaEm": "2026-06-02T02:47:52Z",
+   "labels": [],
+   "responsaveis": [],
+   "autor": "trindadea",
+   "milestone": null,
+   "temDescricao": false,
+   "comentarios": 2
+  },
+  {
+   "numero": 17,
+   "titulo": "feat: dashboard de evolução do aluno (US#82) — backend",
+   "estado": "closed",
+   "ehPr": true,
+   "criadaEm": "2026-06-01T23:48:27Z",
+   "fechadaEm": "2026-06-01T23:56:45Z",
+   "mergeadaEm": "2026-06-01T23:56:45Z",
+   "labels": [],
+   "responsaveis": [],
+   "autor": "EhOMiguel",
+   "milestone": null,
+   "temDescricao": true,
+   "comentarios": 1
+  },
+  {
+   "numero": 16,
+   "titulo": "Feat/dashboard turma",
+   "estado": "closed",
+   "ehPr": true,
+   "criadaEm": "2026-06-01T14:07:04Z",
+   "fechadaEm": "2026-06-01T15:19:40Z",
+   "mergeadaEm": "2026-06-01T15:19:40Z",
+   "labels": [],
+   "responsaveis": [],
+   "autor": "Brenofrds",
+   "milestone": null,
+   "temDescricao": true,
+   "comentarios": 1
+  },
+  {
+   "numero": 15,
+   "titulo": "feat: adiciona endpoint de lista",
+   "estado": "closed",
+   "ehPr": true,
+   "criadaEm": "2026-05-24T18:05:56Z",
+   "fechadaEm": "2026-05-24T23:40:45Z",
+   "mergeadaEm": "2026-05-24T23:40:45Z",
+   "labels": [],
+   "responsaveis": [],
+   "autor": "pkbceira03",
+   "milestone": null,
+   "temDescricao": false,
+   "comentarios": 1
+  },
+  {
+   "numero": 14,
+   "titulo": "test(turmas): valida proxy de /turmas e /usuarios/:id com perfil aluno",
+   "estado": "closed",
+   "ehPr": true,
+   "criadaEm": "2026-05-21T10:28:39Z",
+   "fechadaEm": "2026-05-24T23:58:40Z",
+   "mergeadaEm": "2026-05-24T23:58:40Z",
+   "labels": [],
+   "responsaveis": [],
+   "autor": "EhOMiguel",
+   "milestone": null,
+   "temDescricao": true,
+   "comentarios": 1
+  },
+  {
+   "numero": 13,
+   "titulo": "Proxy de roteamento do quiz",
+   "estado": "closed",
+   "ehPr": true,
+   "criadaEm": "2026-05-21T04:07:53Z",
+   "fechadaEm": "2026-05-21T12:23:00Z",
+   "mergeadaEm": "2026-05-21T12:22:59Z",
+   "labels": [],
+   "responsaveis": [
+    "GenilsonJrs"
+   ],
+   "autor": "GenilsonJrs",
+   "milestone": null,
+   "temDescricao": true,
+   "comentarios": 1
+  },
+  {
+   "numero": 12,
+   "titulo": "Feat/turmas",
+   "estado": "closed",
+   "ehPr": true,
+   "criadaEm": "2026-05-18T00:29:11Z",
+   "fechadaEm": "2026-05-18T13:22:56Z",
+   "mergeadaEm": "2026-05-18T13:22:56Z",
+   "labels": [],
+   "responsaveis": [],
+   "autor": "Brenofrds",
+   "milestone": null,
+   "temDescricao": true,
+   "comentarios": 1
+  },
+  {
+   "numero": 11,
+   "titulo": "Feature/migracao quiz service",
+   "estado": "closed",
+   "ehPr": true,
+   "criadaEm": "2026-05-14T00:22:11Z",
+   "fechadaEm": "2026-05-14T11:24:31Z",
+   "mergeadaEm": "2026-05-14T11:24:31Z",
+   "labels": [],
+   "responsaveis": [],
+   "autor": "EhOMiguel",
+   "milestone": null,
+   "temDescricao": true,
+   "comentarios": 1
+  },
+  {
+   "numero": 10,
+   "titulo": "feat: adiciona upload de imagem",
+   "estado": "closed",
+   "ehPr": true,
+   "criadaEm": "2026-05-12T21:43:51Z",
+   "fechadaEm": "2026-05-16T12:52:02Z",
+   "mergeadaEm": "2026-05-16T12:52:02Z",
+   "labels": [],
+   "responsaveis": [],
+   "autor": "pkbceira03",
+   "milestone": null,
+   "temDescricao": true,
+   "comentarios": 1
+  },
+  {
+   "numero": 9,
+   "titulo": "fix: nao repassa origin ao backend",
+   "estado": "closed",
+   "ehPr": true,
+   "criadaEm": "2026-05-11T21:41:47Z",
+   "fechadaEm": "2026-05-11T21:41:55Z",
+   "mergeadaEm": "2026-05-11T21:41:54Z",
+   "labels": [],
+   "responsaveis": [],
+   "autor": "EhOMiguel",
+   "milestone": null,
+   "temDescricao": false,
+   "comentarios": 1
+  },
+  {
+   "numero": 8,
+   "titulo": "test: alinha token interno nos testes de auth",
+   "estado": "closed",
+   "ehPr": true,
+   "criadaEm": "2026-05-11T20:52:19Z",
+   "fechadaEm": "2026-05-11T20:54:17Z",
+   "mergeadaEm": "2026-05-11T20:54:17Z",
+   "labels": [],
+   "responsaveis": [],
+   "autor": "EhOMiguel",
+   "milestone": null,
+   "temDescricao": false,
+   "comentarios": 1
+  },
+  {
+   "numero": 7,
+   "titulo": "feat: adiciona rota de questões professor",
+   "estado": "closed",
+   "ehPr": true,
+   "criadaEm": "2026-05-11T14:15:28Z",
+   "fechadaEm": "2026-05-11T14:47:25Z",
+   "mergeadaEm": "2026-05-11T14:47:25Z",
+   "labels": [],
+   "responsaveis": [],
+   "autor": "marialuisa214",
+   "milestone": null,
+   "temDescricao": false,
+   "comentarios": 1
+  },
+  {
+   "numero": 6,
+   "titulo": "feat: libera cadastro de professor no bff",
+   "estado": "closed",
+   "ehPr": true,
+   "criadaEm": "2026-05-11T00:32:51Z",
+   "fechadaEm": "2026-05-11T14:52:08Z",
+   "mergeadaEm": "2026-05-11T14:52:08Z",
+   "labels": [],
+   "responsaveis": [],
+   "autor": "EhOMiguel",
+   "milestone": null,
+   "temDescricao": true,
+   "comentarios": 2
+  },
+  {
+   "numero": 5,
+   "titulo": "ajusta docker para deploy",
+   "estado": "closed",
+   "ehPr": true,
+   "criadaEm": "2026-05-09T02:06:37Z",
+   "fechadaEm": "2026-05-09T02:06:46Z",
+   "mergeadaEm": "2026-05-09T02:06:46Z",
+   "labels": [],
+   "responsaveis": [],
+   "autor": "ViictorHugoo",
+   "milestone": null,
+   "temDescricao": false,
+   "comentarios": 0
+  },
+  {
+   "numero": 4,
+   "titulo": "ajusta package para deploy",
+   "estado": "closed",
+   "ehPr": true,
+   "criadaEm": "2026-05-09T01:56:12Z",
+   "fechadaEm": "2026-05-09T01:56:21Z",
+   "mergeadaEm": "2026-05-09T01:56:21Z",
+   "labels": [],
+   "responsaveis": [],
+   "autor": "ViictorHugoo",
+   "milestone": null,
+   "temDescricao": false,
+   "comentarios": 0
+  },
+  {
+   "numero": 3,
+   "titulo": "ajusta package para deploy",
+   "estado": "closed",
+   "ehPr": true,
+   "criadaEm": "2026-05-09T01:54:14Z",
+   "fechadaEm": "2026-05-09T01:54:24Z",
+   "mergeadaEm": "2026-05-09T01:54:24Z",
+   "labels": [],
+   "responsaveis": [],
+   "autor": "ViictorHugoo",
+   "milestone": null,
+   "temDescricao": false,
+   "comentarios": 0
+  },
+  {
+   "numero": 2,
+   "titulo": "ajusta package para deploy",
+   "estado": "closed",
+   "ehPr": true,
+   "criadaEm": "2026-05-09T01:50:03Z",
+   "fechadaEm": "2026-05-09T01:50:24Z",
+   "mergeadaEm": "2026-05-09T01:50:24Z",
+   "labels": [],
+   "responsaveis": [],
+   "autor": "ViictorHugoo",
+   "milestone": null,
+   "temDescricao": false,
+   "comentarios": 0
+  },
+  {
+   "numero": 1,
+   "titulo": "ajusta package para deploy",
+   "estado": "closed",
+   "ehPr": true,
+   "criadaEm": "2026-05-09T01:47:07Z",
+   "fechadaEm": "2026-05-09T01:47:19Z",
+   "mergeadaEm": "2026-05-09T01:47:19Z",
+   "labels": [],
+   "responsaveis": [],
+   "autor": "ViictorHugoo",
+   "milestone": null,
+   "temDescricao": false,
+   "comentarios": 0
+  }
+ ],
+ "2026-1-AnatoQuizUp-Usuario-Service": [
+  {
+   "numero": 117,
+   "titulo": "Feat/sistema amizade",
+   "estado": "closed",
+   "ehPr": true,
+   "criadaEm": "2026-06-02T02:24:51Z",
+   "fechadaEm": "2026-06-02T02:47:42Z",
+   "mergeadaEm": "2026-06-02T02:47:42Z",
+   "labels": [],
+   "responsaveis": [],
+   "autor": "trindadea",
+   "milestone": null,
+   "temDescricao": true,
+   "comentarios": 2
+  },
+  {
+   "numero": 116,
+   "titulo": "Feature/minhas turmas aluno",
+   "estado": "closed",
+   "ehPr": true,
+   "criadaEm": "2026-05-21T10:28:46Z",
+   "fechadaEm": "2026-05-25T01:21:33Z",
+   "mergeadaEm": "2026-05-25T01:21:33Z",
+   "labels": [],
+   "responsaveis": [],
+   "autor": "EhOMiguel",
+   "milestone": null,
+   "temDescricao": true,
+   "comentarios": 1
+  },
+  {
+   "numero": 115,
+   "titulo": "Feature/migracao quiz service",
+   "estado": "closed",
+   "ehPr": true,
+   "criadaEm": "2026-05-14T00:22:15Z",
+   "fechadaEm": "2026-05-14T11:37:30Z",
+   "mergeadaEm": "2026-05-14T11:37:30Z",
+   "labels": [],
+   "responsaveis": [],
+   "autor": "EhOMiguel",
+   "milestone": null,
+   "temDescricao": true,
+   "comentarios": 1
+  },
+  {
+   "numero": 114,
+   "titulo": "Feature/migracao quiz service",
+   "estado": "closed",
+   "ehPr": true,
+   "criadaEm": "2026-05-14T00:10:19Z",
+   "fechadaEm": "2026-05-14T00:18:10Z",
+   "mergeadaEm": null,
+   "labels": [],
+   "responsaveis": [],
+   "autor": "EhOMiguel",
+   "milestone": null,
+   "temDescricao": true,
+   "comentarios": 0
+  },
+  {
+   "numero": 113,
+   "titulo": "feat: adiciona upload de imagem",
+   "estado": "closed",
+   "ehPr": true,
+   "criadaEm": "2026-05-12T21:41:42Z",
+   "fechadaEm": "2026-05-14T12:22:45Z",
+   "mergeadaEm": null,
+   "labels": [],
+   "responsaveis": [],
+   "autor": "pkbceira03",
+   "milestone": null,
+   "temDescricao": true,
+   "comentarios": 1
+  },
+  {
+   "numero": 112,
+   "titulo": "fix: usa porta de api no storage",
+   "estado": "closed",
+   "ehPr": true,
+   "criadaEm": "2026-05-11T20:52:17Z",
+   "fechadaEm": "2026-05-11T21:02:35Z",
+   "mergeadaEm": "2026-05-11T21:02:35Z",
+   "labels": [],
+   "responsaveis": [],
+   "autor": "EhOMiguel",
+   "milestone": null,
+   "temDescricao": false,
+   "comentarios": 1
+  },
+  {
+   "numero": 111,
+   "titulo": "Feature/cadastro professor",
+   "estado": "closed",
+   "ehPr": true,
+   "criadaEm": "2026-05-11T00:32:49Z",
+   "fechadaEm": "2026-05-11T13:33:13Z",
+   "mergeadaEm": "2026-05-11T13:33:13Z",
+   "labels": [],
+   "responsaveis": [],
+   "autor": "EhOMiguel",
+   "milestone": null,
+   "temDescricao": true,
+   "comentarios": 1
+  },
+  {
+   "numero": 110,
+   "titulo": "Feature/questoes professor",
+   "estado": "closed",
+   "ehPr": true,
+   "criadaEm": "2026-05-10T17:14:29Z",
+   "fechadaEm": "2026-05-10T23:01:38Z",
+   "mergeadaEm": "2026-05-10T23:01:38Z",
+   "labels": [],
+   "responsaveis": [],
+   "autor": "pkbceira03",
+   "milestone": null,
+   "temDescricao": true,
+   "comentarios": 1
+  },
+  {
+   "numero": 109,
+   "titulo": "[Back-end] Gerenciamento de Listas",
+   "estado": "open",
+   "ehPr": false,
+   "criadaEm": "2026-05-08T19:45:21Z",
+   "fechadaEm": null,
+   "mergeadaEm": null,
+   "labels": [
+    "backend"
+   ],
+   "responsaveis": [],
+   "autor": "pkbceira03",
+   "milestone": null,
+   "temDescricao": true,
+   "comentarios": 0
+  },
+  {
+   "numero": 108,
+   "titulo": "[Backend] Modelagem do Banco de Dados",
+   "estado": "closed",
+   "ehPr": false,
+   "criadaEm": "2026-05-08T19:44:16Z",
+   "fechadaEm": "2026-05-25T13:55:47Z",
+   "mergeadaEm": null,
+   "labels": [
+    "backend",
+    "Documentação"
+   ],
+   "responsaveis": [],
+   "autor": "pkbceira03",
+   "milestone": null,
+   "temDescricao": true,
+   "comentarios": 0
+  },
+  {
+   "numero": 107,
+   "titulo": "muda a config do banco de imagem",
+   "estado": "closed",
+   "ehPr": true,
+   "criadaEm": "2026-05-07T19:59:52Z",
+   "fechadaEm": "2026-05-09T18:18:50Z",
+   "mergeadaEm": "2026-05-09T18:18:50Z",
+   "labels": [],
+   "responsaveis": [],
+   "autor": "pkbceira03",
+   "milestone": null,
+   "temDescricao": true,
+   "comentarios": 1
+  },
+  {
+   "numero": 106,
+   "titulo": "feat: Mudança de arquitetura",
+   "estado": "closed",
+   "ehPr": true,
+   "criadaEm": "2026-05-06T15:50:38Z",
+   "fechadaEm": "2026-05-08T19:18:09Z",
+   "mergeadaEm": "2026-05-08T19:18:09Z",
+   "labels": [],
+   "responsaveis": [],
+   "autor": "EhOMiguel",
+   "milestone": null,
+   "temDescricao": false,
+   "comentarios": 1
+  },
+  {
+   "numero": 105,
+   "titulo": "[IA] Construção e Treinamento do Modelo Generativo",
+   "estado": "open",
+   "ehPr": false,
+   "criadaEm": "2026-05-06T15:23:59Z",
+   "fechadaEm": null,
+   "mergeadaEm": null,
+   "labels": [
+    "backend"
+   ],
+   "responsaveis": [],
+   "autor": "pkbceira03",
+   "milestone": null,
+   "temDescricao": true,
+   "comentarios": 0
+  },
+  {
+   "numero": 104,
+   "titulo": "[Backend] Modelagem do banco",
+   "estado": "closed",
+   "ehPr": false,
+   "criadaEm": "2026-05-06T15:13:26Z",
+   "fechadaEm": "2026-05-25T13:54:42Z",
+   "mergeadaEm": null,
+   "labels": [
+    "backend",
+    "Documentação"
+   ],
+   "responsaveis": [],
+   "autor": "pkbceira03",
+   "milestone": "Milestone 2: Módulo de questão",
+   "temDescricao": true,
+   "comentarios": 0
+  },
+  {
+   "numero": 103,
+   "titulo": "[Backend] Backend de Turmas do Aluno",
+   "estado": "closed",
+   "ehPr": false,
+   "criadaEm": "2026-05-06T15:03:43Z",
+   "fechadaEm": "2026-05-25T13:54:55Z",
+   "mergeadaEm": null,
+   "labels": [
+    "backend"
+   ],
+   "responsaveis": [],
+   "autor": "pkbceira03",
+   "milestone": "Milestone 2: Módulo de questão",
+   "temDescricao": true,
+   "comentarios": 0
+  },
+  {
+   "numero": 102,
+   "titulo": "[Backend] API Dashboard de Evolução (Aluno)",
+   "estado": "open",
+   "ehPr": false,
+   "criadaEm": "2026-05-06T13:14:31Z",
+   "fechadaEm": null,
+   "mergeadaEm": null,
+   "labels": [
+    "backend"
+   ],
+   "responsaveis": [],
+   "autor": "pkbceira03",
+   "milestone": "Milestone 2: Módulo de questão",
+   "temDescricao": true,
+   "comentarios": 0
+  },
+  {
+   "numero": 101,
+   "titulo": "chore: configura banco de imagem",
+   "estado": "closed",
+   "ehPr": true,
+   "criadaEm": "2026-05-06T12:03:16Z",
+   "fechadaEm": "2026-05-06T14:19:31Z",
+   "mergeadaEm": "2026-05-06T14:19:31Z",
+   "labels": [],
+   "responsaveis": [],
+   "autor": "pkbceira03",
+   "milestone": null,
+   "temDescricao": true,
+   "comentarios": 2
+  },
+  {
+   "numero": 100,
+   "titulo": "feat: adiciona modelagem de questões",
+   "estado": "closed",
+   "ehPr": true,
+   "criadaEm": "2026-05-05T17:04:11Z",
+   "fechadaEm": "2026-05-05T17:17:05Z",
+   "mergeadaEm": "2026-05-05T17:17:05Z",
+   "labels": [],
+   "responsaveis": [],
+   "autor": "Brenofrds",
+   "milestone": null,
+   "temDescricao": true,
+   "comentarios": 1
+  },
+  {
+   "numero": 99,
+   "titulo": "[Web] Dashboard de Evolução (Aluno)",
+   "estado": "open",
+   "ehPr": false,
+   "criadaEm": "2026-05-04T19:19:59Z",
+   "fechadaEm": null,
+   "mergeadaEm": null,
+   "labels": [
+    "frontend"
+   ],
+   "responsaveis": [],
+   "autor": "pkbceira03",
+   "milestone": "Milestone 2: Módulo de questão",
+   "temDescricao": true,
+   "comentarios": 0
+  },
+  {
+   "numero": 98,
+   "titulo": "chore: executa seed ao iniciar container",
+   "estado": "closed",
+   "ehPr": true,
+   "criadaEm": "2026-05-04T12:56:26Z",
+   "fechadaEm": "2026-05-04T13:15:25Z",
+   "mergeadaEm": "2026-05-04T13:15:25Z",
+   "labels": [],
+   "responsaveis": [],
+   "autor": "Brenofrds",
+   "milestone": null,
+   "temDescricao": true,
+   "comentarios": 1
+  },
+  {
+   "numero": 97,
+   "titulo": "feat: adiciona seed de usuário professor",
+   "estado": "closed",
+   "ehPr": true,
+   "criadaEm": "2026-05-04T00:48:53Z",
+   "fechadaEm": "2026-05-04T01:06:29Z",
+   "mergeadaEm": "2026-05-04T01:06:29Z",
+   "labels": [],
+   "responsaveis": [],
+   "autor": "Brenofrds",
+   "milestone": null,
+   "temDescricao": true,
+   "comentarios": 1
+  },
+  {
+   "numero": 96,
+   "titulo": "[US] Envio de Feedback Personalizado ao Aluno",
+   "estado": "open",
+   "ehPr": false,
+   "criadaEm": "2026-05-03T18:42:45Z",
+   "fechadaEm": null,
+   "mergeadaEm": null,
+   "labels": [
+    "US"
+   ],
+   "responsaveis": [],
+   "autor": "ViictorHugoo",
+   "milestone": null,
+   "temDescricao": true,
+   "comentarios": 0
+  },
+  {
+   "numero": 95,
+   "titulo": "[US] Envio de Reporte de Erros e Sugestões (Feedback Geral)",
+   "estado": "open",
+   "ehPr": false,
+   "criadaEm": "2026-05-03T18:42:43Z",
+   "fechadaEm": null,
+   "mergeadaEm": null,
+   "labels": [
+    "US"
+   ],
+   "responsaveis": [],
+   "autor": "ViictorHugoo",
+   "milestone": null,
+   "temDescricao": true,
+   "comentarios": 0
+  },
+  {
+   "numero": 94,
+   "titulo": "[US] Criação de Turmas e Alocação de Alunos",
+   "estado": "closed",
+   "ehPr": false,
+   "criadaEm": "2026-05-03T18:42:42Z",
+   "fechadaEm": "2026-05-25T13:56:36Z",
+   "mergeadaEm": null,
+   "labels": [
+    "US"
+   ],
+   "responsaveis": [
+    "pkbceira03",
+    "Brenofrds"
+   ],
+   "autor": "ViictorHugoo",
+   "milestone": "Milestone 2: Módulo de questão",
+   "temDescricao": true,
+   "comentarios": 0
+  },
+  {
+   "numero": 93,
+   "titulo": "[US] Listas de Questões",
+   "estado": "closed",
+   "ehPr": false,
+   "criadaEm": "2026-05-03T18:42:40Z",
+   "fechadaEm": "2026-05-25T13:56:22Z",
+   "mergeadaEm": null,
+   "labels": [
+    "US"
+   ],
+   "responsaveis": [
+    "pkbceira03",
+    "Brenofrds"
+   ],
+   "autor": "ViictorHugoo",
+   "milestone": null,
+   "temDescricao": true,
+   "comentarios": 0
+  },
+  {
+   "numero": 92,
+   "titulo": "[US] [Web] Relatório de Engajamento",
+   "estado": "open",
+   "ehPr": false,
+   "criadaEm": "2026-05-03T18:42:38Z",
+   "fechadaEm": null,
+   "mergeadaEm": null,
+   "labels": [
+    "US"
+   ],
+   "responsaveis": [],
+   "autor": "ViictorHugoo",
+   "milestone": null,
+   "temDescricao": true,
+   "comentarios": 0
+  },
+  {
+   "numero": 91,
+   "titulo": "[US] Gerenciamento e Configuração dos Modelos de IA (Admin)",
+   "estado": "open",
+   "ehPr": false,
+   "criadaEm": "2026-05-03T18:42:37Z",
+   "fechadaEm": null,
+   "mergeadaEm": null,
+   "labels": [
+    "US"
+   ],
+   "responsaveis": [],
+   "autor": "ViictorHugoo",
+   "milestone": null,
+   "temDescricao": true,
+   "comentarios": 0
+  },
+  {
+   "numero": 90,
+   "titulo": "[US] [Web] Sistema de Amigos",
+   "estado": "open",
+   "ehPr": false,
+   "criadaEm": "2026-05-03T18:42:36Z",
+   "fechadaEm": null,
+   "mergeadaEm": null,
+   "labels": [
+    "US"
+   ],
+   "responsaveis": [],
+   "autor": "ViictorHugoo",
+   "milestone": null,
+   "temDescricao": true,
+   "comentarios": 0
+  },
+  {
+   "numero": 89,
+   "titulo": "[US] [Web] Desafio Direto (Duelo)",
+   "estado": "open",
+   "ehPr": false,
+   "criadaEm": "2026-05-03T18:42:34Z",
+   "fechadaEm": null,
+   "mergeadaEm": null,
+   "labels": [
+    "US"
+   ],
+   "responsaveis": [],
+   "autor": "ViictorHugoo",
+   "milestone": null,
+   "temDescricao": true,
+   "comentarios": 0
+  },
+  {
+   "numero": 88,
+   "titulo": "[US] Loja Virtual",
+   "estado": "open",
+   "ehPr": false,
+   "criadaEm": "2026-05-03T18:42:32Z",
+   "fechadaEm": null,
+   "mergeadaEm": null,
+   "labels": [
+    "US"
+   ],
+   "responsaveis": [],
+   "autor": "ViictorHugoo",
+   "milestone": null,
+   "temDescricao": true,
+   "comentarios": 0
+  },
+  {
+   "numero": 87,
+   "titulo": "[US] [Web] Ajuste Dinâmico de Dificuldade",
+   "estado": "open",
+   "ehPr": false,
+   "criadaEm": "2026-05-03T18:42:31Z",
+   "fechadaEm": null,
+   "mergeadaEm": null,
+   "labels": [
+    "US"
+   ],
+   "responsaveis": [],
+   "autor": "ViictorHugoo",
+   "milestone": null,
+   "temDescricao": true,
+   "comentarios": 0
+  },
+  {
+   "numero": 86,
+   "titulo": "[US] [Web] Reporte de Erro de IA",
+   "estado": "open",
+   "ehPr": false,
+   "criadaEm": "2026-05-03T18:42:30Z",
+   "fechadaEm": null,
+   "mergeadaEm": null,
+   "labels": [
+    "US"
+   ],
+   "responsaveis": [],
+   "autor": "ViictorHugoo",
+   "milestone": null,
+   "temDescricao": true,
+   "comentarios": 0
+  },
+  {
+   "numero": 85,
+   "titulo": "[US] [Web] Exclusão de Conta (LGPD)",
+   "estado": "open",
+   "ehPr": false,
+   "criadaEm": "2026-05-03T18:42:28Z",
+   "fechadaEm": null,
+   "mergeadaEm": null,
+   "labels": [
+    "US"
+   ],
+   "responsaveis": [],
+   "autor": "ViictorHugoo",
+   "milestone": null,
+   "temDescricao": true,
+   "comentarios": 0
+  },
+  {
+   "numero": 84,
+   "titulo": "[US] Personalização e Decoração do Quarto (Perfil)",
+   "estado": "open",
+   "ehPr": false,
+   "criadaEm": "2026-05-03T18:42:27Z",
+   "fechadaEm": null,
+   "mergeadaEm": null,
+   "labels": [
+    "US"
+   ],
+   "responsaveis": [],
+   "autor": "ViictorHugoo",
+   "milestone": null,
+   "temDescricao": true,
+   "comentarios": 0
+  },
+  {
+   "numero": 83,
+   "titulo": "[US] Curadoria de Dados e Refinamento do Modelo de IA (Admin)",
+   "estado": "open",
+   "ehPr": false,
+   "criadaEm": "2026-05-03T18:42:25Z",
+   "fechadaEm": null,
+   "mergeadaEm": null,
+   "labels": [
+    "US"
+   ],
+   "responsaveis": [],
+   "autor": "ViictorHugoo",
+   "milestone": null,
+   "temDescricao": true,
+   "comentarios": 0
+  },
+  {
+   "numero": 82,
+   "titulo": "[US] Dashboard de Evolução (Aluno)",
+   "estado": "closed",
+   "ehPr": false,
+   "criadaEm": "2026-05-03T18:42:23Z",
+   "fechadaEm": "2026-06-08T13:26:44Z",
+   "mergeadaEm": null,
+   "labels": [
+    "US"
+   ],
+   "responsaveis": [
+    "caiobsantos",
+    "GenilsonJrs",
+    "EhOMiguel"
+   ],
+   "autor": "ViictorHugoo",
+   "milestone": null,
+   "temDescricao": true,
+   "comentarios": 0
+  },
+  {
+   "numero": 81,
+   "titulo": "[US] Grupos de Estudo com Amigos",
+   "estado": "open",
+   "ehPr": false,
+   "criadaEm": "2026-05-03T18:42:21Z",
+   "fechadaEm": null,
+   "mergeadaEm": null,
+   "labels": [
+    "US"
+   ],
+   "responsaveis": [],
+   "autor": "ViictorHugoo",
+   "milestone": null,
+   "temDescricao": true,
+   "comentarios": 0
+  },
+  {
+   "numero": 80,
+   "titulo": "[US] Duelo Síncrono de Questões em Tempo Real",
+   "estado": "open",
+   "ehPr": false,
+   "criadaEm": "2026-05-03T18:42:19Z",
+   "fechadaEm": null,
+   "mergeadaEm": null,
+   "labels": [
+    "US"
+   ],
+   "responsaveis": [],
+   "autor": "ViictorHugoo",
+   "milestone": null,
+   "temDescricao": true,
+   "comentarios": 0
+  },
+  {
+   "numero": 79,
+   "titulo": " [US] Personalização e Inventário do Avatar",
+   "estado": "open",
+   "ehPr": false,
+   "criadaEm": "2026-05-03T18:42:18Z",
+   "fechadaEm": null,
+   "mergeadaEm": null,
+   "labels": [
+    "US"
+   ],
+   "responsaveis": [],
+   "autor": "ViictorHugoo",
+   "milestone": null,
+   "temDescricao": true,
+   "comentarios": 0
+  },
+  {
+   "numero": 78,
+   "titulo": "[US] [Web] Ranking de Desempenho",
+   "estado": "open",
+   "ehPr": false,
+   "criadaEm": "2026-05-03T18:42:16Z",
+   "fechadaEm": null,
+   "mergeadaEm": null,
+   "labels": [
+    "US"
+   ],
+   "responsaveis": [],
+   "autor": "ViictorHugoo",
+   "milestone": null,
+   "temDescricao": true,
+   "comentarios": 0
+  },
+  {
+   "numero": 77,
+   "titulo": "[US] Sistema de Recompensas por Acertos (Moedas Virtuais)",
+   "estado": "closed",
+   "ehPr": false,
+   "criadaEm": "2026-05-03T18:42:15Z",
+   "fechadaEm": "2026-05-25T13:56:33Z",
+   "mergeadaEm": null,
+   "labels": [
+    "US"
+   ],
+   "responsaveis": [
+    "trindadea",
+    "Joa0V"
+   ],
+   "autor": "ViictorHugoo",
+   "milestone": null,
+   "temDescricao": true,
+   "comentarios": 1
+  },
+  {
+   "numero": 76,
+   "titulo": "[US] Sistema de Conquistas e Marcos (Badges e Troféus)",
+   "estado": "open",
+   "ehPr": false,
+   "criadaEm": "2026-05-03T18:42:13Z",
+   "fechadaEm": null,
+   "mergeadaEm": null,
+   "labels": [
+    "US"
+   ],
+   "responsaveis": [
+    "trindadea",
+    "Joa0V"
+   ],
+   "autor": "ViictorHugoo",
+   "milestone": null,
+   "temDescricao": true,
+   "comentarios": 0
+  },
+  {
+   "numero": 75,
+   "titulo": "[US] [Web] Mapa de Lacunas",
+   "estado": "open",
+   "ehPr": false,
+   "criadaEm": "2026-05-03T18:42:11Z",
+   "fechadaEm": null,
+   "mergeadaEm": null,
+   "labels": [
+    "US"
+   ],
+   "responsaveis": [],
+   "autor": "ViictorHugoo",
+   "milestone": null,
+   "temDescricao": true,
+   "comentarios": 0
+  },
+  {
+   "numero": 74,
+   "titulo": "[US] [Web] Chatbot Tutorial Interativo",
+   "estado": "open",
+   "ehPr": false,
+   "criadaEm": "2026-05-03T18:42:10Z",
+   "fechadaEm": null,
+   "mergeadaEm": null,
+   "labels": [
+    "US"
+   ],
+   "responsaveis": [],
+   "autor": "ViictorHugoo",
+   "milestone": null,
+   "temDescricao": true,
+   "comentarios": 0
+  },
+  {
+   "numero": 73,
+   "titulo": "[US] [Web] Curadoria de Especialista",
+   "estado": "open",
+   "ehPr": false,
+   "criadaEm": "2026-05-03T18:42:08Z",
+   "fechadaEm": null,
+   "mergeadaEm": null,
+   "labels": [
+    "US"
+   ],
+   "responsaveis": [],
+   "autor": "ViictorHugoo",
+   "milestone": null,
+   "temDescricao": true,
+   "comentarios": 0
+  },
+  {
+   "numero": 72,
+   "titulo": " [US] Gestão e Visualização de Feedbacks (Painel do Admin)",
+   "estado": "open",
+   "ehPr": false,
+   "criadaEm": "2026-05-03T18:42:07Z",
+   "fechadaEm": null,
+   "mergeadaEm": null,
+   "labels": [
+    "US"
+   ],
+   "responsaveis": [],
+   "autor": "ViictorHugoo",
+   "milestone": null,
+   "temDescricao": true,
+   "comentarios": 0
+  },
+  {
+   "numero": 71,
+   "titulo": "[US] [Web] Geração Dinâmica de Questões",
+   "estado": "open",
+   "ehPr": false,
+   "criadaEm": "2026-05-03T18:42:05Z",
+   "fechadaEm": null,
+   "mergeadaEm": null,
+   "labels": [
+    "US"
+   ],
+   "responsaveis": [],
+   "autor": "ViictorHugoo",
+   "milestone": null,
+   "temDescricao": true,
+   "comentarios": 0
+  },
+  {
+   "numero": 70,
+   "titulo": "[Backend] Backend de Turmas e Alocação",
+   "estado": "closed",
+   "ehPr": false,
+   "criadaEm": "2026-05-03T18:39:19Z",
+   "fechadaEm": "2026-05-25T13:55:16Z",
+   "mergeadaEm": null,
+   "labels": [
+    "backend"
+   ],
+   "responsaveis": [],
+   "autor": "ViictorHugoo",
+   "milestone": "Milestone 2: Módulo de questão",
+   "temDescricao": true,
+   "comentarios": 0
+  },
+  {
+   "numero": 69,
+   "titulo": "[US] Dashboard de Estatísticas Gerais da Plataforma (Admin)",
+   "estado": "open",
+   "ehPr": false,
+   "criadaEm": "2026-05-03T18:39:18Z",
+   "fechadaEm": null,
+   "mergeadaEm": null,
+   "labels": [
+    "US"
+   ],
+   "responsaveis": [],
+   "autor": "ViictorHugoo",
+   "milestone": null,
+   "temDescricao": true,
+   "comentarios": 0
+  },
+  {
+   "numero": 68,
+   "titulo": "[US] [API] Relatório de Engajamento",
+   "estado": "open",
+   "ehPr": false,
+   "criadaEm": "2026-05-03T18:39:17Z",
+   "fechadaEm": null,
+   "mergeadaEm": null,
+   "labels": [
+    "US"
+   ],
+   "responsaveis": [],
+   "autor": "ViictorHugoo",
+   "milestone": null,
+   "temDescricao": true,
+   "comentarios": 0
+  },
+  {
+   "numero": 67,
+   "titulo": "[US] Dashboard de Desempenho da Turma (Professor)",
+   "estado": "closed",
+   "ehPr": false,
+   "criadaEm": "2026-05-03T18:39:15Z",
+   "fechadaEm": "2026-06-02T13:41:15Z",
+   "mergeadaEm": null,
+   "labels": [
+    "US"
+   ],
+   "responsaveis": [
+    "pkbceira03",
+    "Brenofrds"
+   ],
+   "autor": "ViictorHugoo",
+   "milestone": null,
+   "temDescricao": true,
+   "comentarios": 0
+  },
+  {
+   "numero": 66,
+   "titulo": "[US] Sistema de Amizades (Gestão de Contatos)",
+   "estado": "closed",
+   "ehPr": false,
+   "criadaEm": "2026-05-03T18:39:14Z",
+   "fechadaEm": "2026-06-07T20:07:27Z",
+   "mergeadaEm": null,
+   "labels": [
+    "US"
+   ],
+   "responsaveis": [
+    "trindadea",
+    "Joa0V"
+   ],
+   "autor": "ViictorHugoo",
+   "milestone": null,
+   "temDescricao": true,
+   "comentarios": 0
+  },
+  {
+   "numero": 65,
+   "titulo": " [US] Duelo de Questões entre Amigos (Modo Assíncrono)",
+   "estado": "open",
+   "ehPr": false,
+   "criadaEm": "2026-05-03T18:39:12Z",
+   "fechadaEm": null,
+   "mergeadaEm": null,
+   "labels": [
+    "US"
+   ],
+   "responsaveis": [],
+   "autor": "ViictorHugoo",
+   "milestone": null,
+   "temDescricao": true,
+   "comentarios": 0
+  },
+  {
+   "numero": 64,
+   "titulo": "[US] [API] Ajuste Dinâmico de Dificuldade",
+   "estado": "open",
+   "ehPr": false,
+   "criadaEm": "2026-05-03T18:39:10Z",
+   "fechadaEm": null,
+   "mergeadaEm": null,
+   "labels": [
+    "US"
+   ],
+   "responsaveis": [],
+   "autor": "ViictorHugoo",
+   "milestone": null,
+   "temDescricao": true,
+   "comentarios": 0
+  },
+  {
+   "numero": 63,
+   "titulo": "[US] Chatbot Tutor Assistente e Coleta de Feedback (Aluno)",
+   "estado": "open",
+   "ehPr": false,
+   "criadaEm": "2026-05-03T18:39:09Z",
+   "fechadaEm": null,
+   "mergeadaEm": null,
+   "labels": [
+    "US"
+   ],
+   "responsaveis": [],
+   "autor": "ViictorHugoo",
+   "milestone": null,
+   "temDescricao": true,
+   "comentarios": 0
+  },
+  {
+   "numero": 62,
+   "titulo": "[US] [API] Exclusão de Conta (LGPD)",
+   "estado": "open",
+   "ehPr": false,
+   "criadaEm": "2026-05-03T18:39:08Z",
+   "fechadaEm": null,
+   "mergeadaEm": null,
+   "labels": [
+    "US"
+   ],
+   "responsaveis": [],
+   "autor": "ViictorHugoo",
+   "milestone": null,
+   "temDescricao": true,
+   "comentarios": 0
+  },
+  {
+   "numero": 61,
+   "titulo": "[US] [API] Edição de Perfil",
+   "estado": "open",
+   "ehPr": false,
+   "criadaEm": "2026-05-03T18:39:06Z",
+   "fechadaEm": null,
+   "mergeadaEm": null,
+   "labels": [
+    "US"
+   ],
+   "responsaveis": [],
+   "autor": "ViictorHugoo",
+   "milestone": null,
+   "temDescricao": true,
+   "comentarios": 0
+  },
+  {
+   "numero": 60,
+   "titulo": "[Protótipo] Protótipo do Dashboard de Evolução (Aluno)",
+   "estado": "open",
+   "ehPr": false,
+   "criadaEm": "2026-05-03T18:39:04Z",
+   "fechadaEm": null,
+   "mergeadaEm": null,
+   "labels": [],
+   "responsaveis": [],
+   "autor": "ViictorHugoo",
+   "milestone": null,
+   "temDescricao": true,
+   "comentarios": 0
+  },
+  {
+   "numero": 59,
+   "titulo": "[US] [API] Salas de Estudo em Grupo",
+   "estado": "open",
+   "ehPr": false,
+   "criadaEm": "2026-05-03T18:39:03Z",
+   "fechadaEm": null,
+   "mergeadaEm": null,
+   "labels": [
+    "US"
+   ],
+   "responsaveis": [],
+   "autor": "ViictorHugoo",
+   "milestone": null,
+   "temDescricao": true,
+   "comentarios": 0
+  },
+  {
+   "numero": 58,
+   "titulo": "[US] [API] Desafio Multiplayer Aleatório",
+   "estado": "open",
+   "ehPr": false,
+   "criadaEm": "2026-05-03T18:39:01Z",
+   "fechadaEm": null,
+   "mergeadaEm": null,
+   "labels": [
+    "US"
+   ],
+   "responsaveis": [],
+   "autor": "ViictorHugoo",
+   "milestone": null,
+   "temDescricao": true,
+   "comentarios": 0
+  },
+  {
+   "numero": 57,
+   "titulo": "[US] [API] Customização de Avatar",
+   "estado": "open",
+   "ehPr": false,
+   "criadaEm": "2026-05-03T18:39:00Z",
+   "fechadaEm": null,
+   "mergeadaEm": null,
+   "labels": [
+    "US"
+   ],
+   "responsaveis": [],
+   "autor": "ViictorHugoo",
+   "milestone": null,
+   "temDescricao": true,
+   "comentarios": 0
+  },
+  {
+   "numero": 56,
+   "titulo": "[US] Visualização de Rankings (Geral por Temas e por Turmas)",
+   "estado": "open",
+   "ehPr": false,
+   "criadaEm": "2026-05-03T18:38:58Z",
+   "fechadaEm": null,
+   "mergeadaEm": null,
+   "labels": [
+    "US"
+   ],
+   "responsaveis": [
+    "GenilsonJrs",
+    "EhOMiguel"
+   ],
+   "autor": "ViictorHugoo",
+   "milestone": null,
+   "temDescricao": true,
+   "comentarios": 0
+  },
+  {
+   "numero": 55,
+   "titulo": "[US] [API] Sistema de Moedas",
+   "estado": "open",
+   "ehPr": false,
+   "criadaEm": "2026-05-03T18:38:56Z",
+   "fechadaEm": null,
+   "mergeadaEm": null,
+   "labels": [
+    "US"
+   ],
+   "responsaveis": [],
+   "autor": "ViictorHugoo",
+   "milestone": null,
+   "temDescricao": true,
+   "comentarios": 0
+  },
+  {
+   "numero": 54,
+   "titulo": "[US] [API] Mapa de Conquistas e Níveis",
+   "estado": "open",
+   "ehPr": false,
+   "criadaEm": "2026-05-03T18:38:55Z",
+   "fechadaEm": null,
+   "mergeadaEm": null,
+   "labels": [
+    "US"
+   ],
+   "responsaveis": [],
+   "autor": "ViictorHugoo",
+   "milestone": null,
+   "temDescricao": true,
+   "comentarios": 0
+  },
+  {
+   "numero": 53,
+   "titulo": "[US] [API] Chatbot Tutorial Interativo",
+   "estado": "open",
+   "ehPr": false,
+   "criadaEm": "2026-05-03T18:38:53Z",
+   "fechadaEm": null,
+   "mergeadaEm": null,
+   "labels": [
+    "US"
+   ],
+   "responsaveis": [],
+   "autor": "ViictorHugoo",
+   "milestone": null,
+   "temDescricao": true,
+   "comentarios": 0
+  },
+  {
+   "numero": 52,
+   "titulo": "[US] Criação de Imagens por IA",
+   "estado": "open",
+   "ehPr": false,
+   "criadaEm": "2026-05-03T18:38:51Z",
+   "fechadaEm": null,
+   "mergeadaEm": null,
+   "labels": [
+    "US"
+   ],
+   "responsaveis": [],
+   "autor": "ViictorHugoo",
+   "milestone": null,
+   "temDescricao": true,
+   "comentarios": 0
+  },
+  {
+   "numero": 51,
+   "titulo": "[US] [API] Geração Dinâmica de Questões",
+   "estado": "open",
+   "ehPr": false,
+   "criadaEm": "2026-05-03T18:38:50Z",
+   "fechadaEm": null,
+   "mergeadaEm": null,
+   "labels": [
+    "US"
+   ],
+   "responsaveis": [],
+   "autor": "ViictorHugoo",
+   "milestone": null,
+   "temDescricao": true,
+   "comentarios": 0
+  },
+  {
+   "numero": 46,
+   "titulo": "[API] Agregação de Histórico",
+   "estado": "closed",
+   "ehPr": false,
+   "criadaEm": "2026-05-01T02:13:21Z",
+   "fechadaEm": "2026-05-25T13:56:31Z",
+   "mergeadaEm": null,
+   "labels": [
+    "backend"
+   ],
+   "responsaveis": [
+    "Joa0V"
+   ],
+   "autor": "ViictorHugoo",
+   "milestone": "Milestone 2: Módulo de questão",
+   "temDescricao": true,
+   "comentarios": 0
+  },
+  {
+   "numero": 48,
+   "titulo": "[API] Validação e Registro de Tentativa",
+   "estado": "closed",
+   "ehPr": false,
+   "criadaEm": "2026-05-01T02:03:42Z",
+   "fechadaEm": "2026-05-22T23:46:14Z",
+   "mergeadaEm": null,
+   "labels": [
+    "backend"
+   ],
+   "responsaveis": [
+    "Joa0V"
+   ],
+   "autor": "ViictorHugoo",
+   "milestone": "Milestone 2: Módulo de questão",
+   "temDescricao": true,
+   "comentarios": 0
+  },
+  {
+   "numero": 50,
+   "titulo": "[API]Gerenciamento de Questões (CRUD)",
+   "estado": "closed",
+   "ehPr": false,
+   "criadaEm": "2026-04-30T14:02:22Z",
+   "fechadaEm": "2026-05-10T23:01:39Z",
+   "mergeadaEm": null,
+   "labels": [
+    "backend"
+   ],
+   "responsaveis": [
+    "marialuisa214",
+    "pkbceira03",
+    "Brenofrds"
+   ],
+   "autor": "pkbceira03",
+   "milestone": "Milestone 2: Módulo de questão",
+   "temDescricao": true,
+   "comentarios": 0
+  },
+  {
+   "numero": 49,
+   "titulo": "[API] Filtro e Randomização de Quiz",
+   "estado": "closed",
+   "ehPr": false,
+   "criadaEm": "2026-04-30T13:58:31Z",
+   "fechadaEm": "2026-05-22T23:46:12Z",
+   "mergeadaEm": null,
+   "labels": [
+    "backend"
+   ],
+   "responsaveis": [
+    "Joa0V"
+   ],
+   "autor": "pkbceira03",
+   "milestone": "Milestone 2: Módulo de questão",
+   "temDescricao": true,
+   "comentarios": 0
+  },
+  {
+   "numero": 47,
+   "titulo": "[TASK] [Backend] Modelagem do banco de dados para as questões (Prisma)",
+   "estado": "closed",
+   "ehPr": false,
+   "criadaEm": "2026-04-30T13:17:57Z",
+   "fechadaEm": "2026-05-06T12:47:14Z",
+   "mergeadaEm": null,
+   "labels": [
+    "backend",
+    "Documentação"
+   ],
+   "responsaveis": [
+    "pkbceira03",
+    "Brenofrds"
+   ],
+   "autor": "pkbceira03",
+   "milestone": "Milestone 2: Módulo de questão",
+   "temDescricao": true,
+   "comentarios": 0
+  },
+  {
+   "numero": 45,
+   "titulo": "fix(ci): update project key and repository name for SonarCloud integr…",
+   "estado": "closed",
+   "ehPr": true,
+   "criadaEm": "2026-04-28T00:18:19Z",
+   "fechadaEm": "2026-05-01T01:13:24Z",
+   "mergeadaEm": "2026-05-01T01:13:23Z",
+   "labels": [],
+   "responsaveis": [],
+   "autor": "ViictorHugoo",
+   "milestone": null,
+   "temDescricao": false,
+   "comentarios": 1
+  },
+  {
+   "numero": 44,
+   "titulo": "Feature/deploy",
+   "estado": "closed",
+   "ehPr": true,
+   "criadaEm": "2026-04-27T11:42:27Z",
+   "fechadaEm": "2026-04-27T12:35:48Z",
+   "mergeadaEm": "2026-04-27T12:35:48Z",
+   "labels": [],
+   "responsaveis": [],
+   "autor": "trindadea",
+   "milestone": null,
+   "temDescricao": false,
+   "comentarios": 1
+  },
+  {
+   "numero": 43,
+   "titulo": "feat: implementa logout com revogacao de refresh token",
+   "estado": "closed",
+   "ehPr": true,
+   "criadaEm": "2026-04-27T10:05:20Z",
+   "fechadaEm": "2026-04-27T10:26:27Z",
+   "mergeadaEm": "2026-04-27T10:26:27Z",
+   "labels": [],
+   "responsaveis": [],
+   "autor": "trindadea",
+   "milestone": null,
+   "temDescricao": true,
+   "comentarios": 1
+  },
+  {
+   "numero": 42,
+   "titulo": "Feature/task refresh token",
+   "estado": "closed",
+   "ehPr": true,
+   "criadaEm": "2026-04-27T07:00:43Z",
+   "fechadaEm": "2026-04-27T08:15:48Z",
+   "mergeadaEm": "2026-04-27T08:15:48Z",
+   "labels": [],
+   "responsaveis": [],
+   "autor": "trindadea",
+   "milestone": null,
+   "temDescricao": true,
+   "comentarios": 1
+  },
+  {
+   "numero": 41,
+   "titulo": "Feature/login aluno",
+   "estado": "closed",
+   "ehPr": true,
+   "criadaEm": "2026-04-27T06:52:44Z",
+   "fechadaEm": "2026-04-27T07:57:41Z",
+   "mergeadaEm": "2026-04-27T07:57:41Z",
+   "labels": [],
+   "responsaveis": [],
+   "autor": "trindadea",
+   "milestone": null,
+   "temDescricao": true,
+   "comentarios": 1
+  },
+  {
+   "numero": 40,
+   "titulo": "Feature/us06 recuperacao de senha",
+   "estado": "closed",
+   "ehPr": true,
+   "criadaEm": "2026-04-27T06:42:44Z",
+   "fechadaEm": "2026-04-27T07:37:07Z",
+   "mergeadaEm": "2026-04-27T07:37:07Z",
+   "labels": [],
+   "responsaveis": [],
+   "autor": "EhOBruno",
+   "milestone": null,
+   "temDescricao": true,
+   "comentarios": 1
+  },
+  {
+   "numero": 39,
+   "titulo": "Feat/task08 admin users",
+   "estado": "closed",
+   "ehPr": true,
+   "criadaEm": "2026-04-27T04:49:03Z",
+   "fechadaEm": "2026-04-27T07:30:49Z",
+   "mergeadaEm": "2026-04-27T07:30:49Z",
+   "labels": [],
+   "responsaveis": [],
+   "autor": "marialuisa214",
+   "milestone": null,
+   "temDescricao": true,
+   "comentarios": 1
+  },
+  {
+   "numero": 38,
+   "titulo": "Feat/task11 role auth middleware",
+   "estado": "closed",
+   "ehPr": true,
+   "criadaEm": "2026-04-27T04:36:10Z",
+   "fechadaEm": "2026-04-27T04:52:12Z",
+   "mergeadaEm": "2026-04-27T04:52:12Z",
+   "labels": [],
+   "responsaveis": [],
+   "autor": "Joa0V",
+   "milestone": null,
+   "temDescricao": true,
+   "comentarios": 1
+  },
+  {
+   "numero": 37,
+   "titulo": "test(config): usa glob para cobertura do jest (#36)",
+   "estado": "closed",
+   "ehPr": true,
+   "criadaEm": "2026-04-27T02:52:40Z",
+   "fechadaEm": "2026-04-27T02:56:15Z",
+   "mergeadaEm": "2026-04-27T02:56:15Z",
+   "labels": [],
+   "responsaveis": [],
+   "autor": "EhOMiguel",
+   "milestone": null,
+   "temDescricao": false,
+   "comentarios": 1
+  },
+  {
+   "numero": 36,
+   "titulo": "test(config): usa glob para cobertura do jest",
+   "estado": "closed",
+   "ehPr": true,
+   "criadaEm": "2026-04-27T02:37:23Z",
+   "fechadaEm": "2026-04-27T02:38:15Z",
+   "mergeadaEm": "2026-04-27T02:38:15Z",
+   "labels": [],
+   "responsaveis": [],
+   "autor": "EhOMiguel",
+   "milestone": null,
+   "temDescricao": false,
+   "comentarios": 0
+  },
+  {
+   "numero": 35,
+   "titulo": "Feature/ci cd",
+   "estado": "closed",
+   "ehPr": true,
+   "criadaEm": "2026-04-27T02:34:07Z",
+   "fechadaEm": "2026-04-27T02:37:24Z",
+   "mergeadaEm": "2026-04-27T02:37:24Z",
+   "labels": [],
+   "responsaveis": [],
+   "autor": "ViictorHugoo",
+   "milestone": null,
+   "temDescricao": true,
+   "comentarios": 0
+  },
+  {
+   "numero": 34,
+   "titulo": "test(auth): alinha cobertura do cadastro ao sonar",
+   "estado": "closed",
+   "ehPr": true,
+   "criadaEm": "2026-04-27T02:26:40Z",
+   "fechadaEm": "2026-04-27T02:31:48Z",
+   "mergeadaEm": "2026-04-27T02:31:48Z",
+   "labels": [],
+   "responsaveis": [],
+   "autor": "EhOMiguel",
+   "milestone": null,
+   "temDescricao": false,
+   "comentarios": 1
+  },
+  {
+   "numero": 33,
+   "titulo": "Feature/ci cd",
+   "estado": "closed",
+   "ehPr": true,
+   "criadaEm": "2026-04-27T01:56:14Z",
+   "fechadaEm": "2026-04-27T02:16:52Z",
+   "mergeadaEm": "2026-04-27T02:16:52Z",
+   "labels": [],
+   "responsaveis": [],
+   "autor": "ViictorHugoo",
+   "milestone": null,
+   "temDescricao": true,
+   "comentarios": 1
+  },
+  {
+   "numero": 32,
+   "titulo": "chore(ci): update CI workflow to include develop branch for push and …",
+   "estado": "closed",
+   "ehPr": true,
+   "criadaEm": "2026-04-27T01:49:19Z",
+   "fechadaEm": "2026-04-27T01:50:42Z",
+   "mergeadaEm": "2026-04-27T01:50:42Z",
+   "labels": [],
+   "responsaveis": [],
+   "autor": "ViictorHugoo",
+   "milestone": null,
+   "temDescricao": true,
+   "comentarios": 0
+  },
+  {
+   "numero": 31,
+   "titulo": "Develop",
+   "estado": "closed",
+   "ehPr": true,
+   "criadaEm": "2026-04-27T01:40:51Z",
+   "fechadaEm": "2026-04-27T04:44:01Z",
+   "mergeadaEm": "2026-04-27T04:44:01Z",
+   "labels": [],
+   "responsaveis": [],
+   "autor": "EhOMiguel",
+   "milestone": null,
+   "temDescricao": true,
+   "comentarios": 1
+  },
+  {
+   "numero": 30,
+   "titulo": "Feature/us01 cadastro de aluno",
+   "estado": "closed",
+   "ehPr": true,
+   "criadaEm": "2026-04-27T01:31:55Z",
+   "fechadaEm": "2026-04-27T02:04:10Z",
+   "mergeadaEm": "2026-04-27T02:04:10Z",
+   "labels": [],
+   "responsaveis": [],
+   "autor": "EhOBruno",
+   "milestone": null,
+   "temDescricao": true,
+   "comentarios": 1
+  },
+  {
+   "numero": 29,
+   "titulo": "Feature/ci cd",
+   "estado": "closed",
+   "ehPr": true,
+   "criadaEm": "2026-04-27T01:22:41Z",
+   "fechadaEm": "2026-04-27T01:26:20Z",
+   "mergeadaEm": "2026-04-27T01:26:20Z",
+   "labels": [],
+   "responsaveis": [],
+   "autor": "ViictorHugoo",
+   "milestone": null,
+   "temDescricao": true,
+   "comentarios": 1
+  },
+  {
+   "numero": 28,
+   "titulo": "Feat/task10 auth middleware",
+   "estado": "closed",
+   "ehPr": true,
+   "criadaEm": "2026-04-26T23:10:40Z",
+   "fechadaEm": "2026-04-27T01:35:13Z",
+   "mergeadaEm": "2026-04-27T01:35:13Z",
+   "labels": [],
+   "responsaveis": [
+    "Joa0V"
+   ],
+   "autor": "Joa0V",
+   "milestone": null,
+   "temDescricao": true,
+   "comentarios": 0
+  },
+  {
+   "numero": 27,
+   "titulo": "Feat/email service",
+   "estado": "closed",
+   "ehPr": true,
+   "criadaEm": "2026-04-26T21:45:20Z",
+   "fechadaEm": "2026-04-27T01:06:30Z",
+   "mergeadaEm": "2026-04-27T01:06:30Z",
+   "labels": [],
+   "responsaveis": [],
+   "autor": "trindadea",
+   "milestone": null,
+   "temDescricao": true,
+   "comentarios": 2
+  },
+  {
+   "numero": 26,
+   "titulo": "Feat/task04 configuracao jwt",
+   "estado": "closed",
+   "ehPr": true,
+   "criadaEm": "2026-04-25T22:08:10Z",
+   "fechadaEm": "2026-04-26T18:07:24Z",
+   "mergeadaEm": "2026-04-26T18:07:24Z",
+   "labels": [],
+   "responsaveis": [
+    "Joa0V"
+   ],
+   "autor": "Joa0V",
+   "milestone": null,
+   "temDescricao": true,
+   "comentarios": 1
+  },
+  {
+   "numero": 25,
+   "titulo": "Feature/seed admin",
+   "estado": "closed",
+   "ehPr": true,
+   "criadaEm": "2026-04-25T17:15:09Z",
+   "fechadaEm": "2026-04-25T17:17:02Z",
+   "mergeadaEm": "2026-04-25T17:17:01Z",
+   "labels": [],
+   "responsaveis": [],
+   "autor": "Brenofrds",
+   "milestone": null,
+   "temDescricao": true,
+   "comentarios": 1
+  },
+  {
+   "numero": 24,
+   "titulo": "feat(auth): adiciona modelagem de usuarios e autenticacao",
+   "estado": "closed",
+   "ehPr": true,
+   "criadaEm": "2026-04-25T16:19:58Z",
+   "fechadaEm": "2026-04-25T16:24:06Z",
+   "mergeadaEm": "2026-04-25T16:24:06Z",
+   "labels": [],
+   "responsaveis": [],
+   "autor": "Brenofrds",
+   "milestone": null,
+   "temDescricao": true,
+   "comentarios": 1
+  },
+  {
+   "numero": 23,
+   "titulo": "[TASK] [Backend] Implementação do deploy em homologação",
+   "estado": "closed",
+   "ehPr": false,
+   "criadaEm": "2026-04-19T16:23:34Z",
+   "fechadaEm": "2026-04-29T00:19:04Z",
+   "mergeadaEm": null,
+   "labels": [],
+   "responsaveis": [
+    "EhOMiguel",
+    "EhOBruno"
+   ],
+   "autor": "EhOMiguel",
+   "milestone": null,
+   "temDescricao": true,
+   "comentarios": 0
+  },
+  {
+   "numero": 22,
+   "titulo": "[US08] [Backend] Painel de administração de usuários — API",
+   "estado": "closed",
+   "ehPr": false,
+   "criadaEm": "2026-04-18T12:36:47Z",
+   "fechadaEm": "2026-04-27T08:17:55Z",
+   "mergeadaEm": null,
+   "labels": [
+    "backend",
+    "FEATURE"
+   ],
+   "responsaveis": [
+    "marialuisa214"
+   ],
+   "autor": "EhOMiguel",
+   "milestone": null,
+   "temDescricao": true,
+   "comentarios": 0
+  },
+  {
+   "numero": 20,
+   "titulo": "[US06] [Backend] Recuperação de senha — API",
+   "estado": "closed",
+   "ehPr": false,
+   "criadaEm": "2026-04-18T12:33:42Z",
+   "fechadaEm": "2026-04-27T07:59:45Z",
+   "mergeadaEm": null,
+   "labels": [
+    "backend",
+    "FEATURE",
+    "US"
+   ],
+   "responsaveis": [
+    "EhOBruno"
+   ],
+   "autor": "EhOMiguel",
+   "milestone": null,
+   "temDescricao": true,
+   "comentarios": 0
+  },
+  {
+   "numero": 19,
+   "titulo": "[TASK09] [Backend] Configuração do serviço de email",
+   "estado": "closed",
+   "ehPr": false,
+   "criadaEm": "2026-04-18T12:33:18Z",
+   "fechadaEm": "2026-04-27T04:46:35Z",
+   "mergeadaEm": null,
+   "labels": [
+    "backend",
+    "FEATURE",
+    "US"
+   ],
+   "responsaveis": [
+    "trindadea"
+   ],
+   "autor": "EhOMiguel",
+   "milestone": null,
+   "temDescricao": true,
+   "comentarios": 0
+  },
+  {
+   "numero": 18,
+   "titulo": "[US04] [Frontend] Login de professor — Tela",
+   "estado": "closed",
+   "ehPr": false,
+   "criadaEm": "2026-04-18T12:32:33Z",
+   "fechadaEm": "2026-05-01T12:25:04Z",
+   "mergeadaEm": null,
+   "labels": [],
+   "responsaveis": [],
+   "autor": "EhOMiguel",
+   "milestone": null,
+   "temDescricao": true,
+   "comentarios": 0
+  },
+  {
+   "numero": 17,
+   "titulo": "[Backend] Cadastro de professor — API",
+   "estado": "closed",
+   "ehPr": false,
+   "criadaEm": "2026-04-18T12:31:52Z",
+   "fechadaEm": "2026-05-14T00:15:42Z",
+   "mergeadaEm": null,
+   "labels": [
+    "backend"
+   ],
+   "responsaveis": [
+    "EhOMiguel",
+    "EhOBruno"
+   ],
+   "autor": "EhOMiguel",
+   "milestone": "Milestone 1: Base de Usuários",
+   "temDescricao": true,
+   "comentarios": 0
+  },
+  {
+   "numero": 16,
+   "titulo": "[TASK08] [Backend] Registro do app no Azure AD (Microsoft SSO)",
+   "estado": "closed",
+   "ehPr": false,
+   "criadaEm": "2026-04-18T12:31:32Z",
+   "fechadaEm": "2026-04-25T15:06:25Z",
+   "mergeadaEm": null,
+   "labels": [],
+   "responsaveis": [],
+   "autor": "EhOMiguel",
+   "milestone": null,
+   "temDescricao": true,
+   "comentarios": 0
+  },
+  {
+   "numero": 15,
+   "titulo": "[US05] [Backend] Logout — API",
+   "estado": "closed",
+   "ehPr": false,
+   "criadaEm": "2026-04-18T12:30:33Z",
+   "fechadaEm": "2026-04-27T10:26:28Z",
+   "mergeadaEm": null,
+   "labels": [
+    "backend",
+    "FEATURE"
+   ],
+   "responsaveis": [
+    "trindadea",
+    "Brenofrds"
+   ],
+   "autor": "EhOMiguel",
+   "milestone": null,
+   "temDescricao": true,
+   "comentarios": 0
+  },
+  {
+   "numero": 14,
+   "titulo": "[TASK12] [Backend] Renovação automática de sessão (refresh token)",
+   "estado": "closed",
+   "ehPr": false,
+   "criadaEm": "2026-04-18T12:29:52Z",
+   "fechadaEm": "2026-04-27T08:15:49Z",
+   "mergeadaEm": null,
+   "labels": [
+    "backend"
+   ],
+   "responsaveis": [
+    "trindadea"
+   ],
+   "autor": "EhOMiguel",
+   "milestone": null,
+   "temDescricao": true,
+   "comentarios": 0
+  },
+  {
+   "numero": 13,
+   "titulo": "[US02] [Backend] Login de aluno — API",
+   "estado": "closed",
+   "ehPr": false,
+   "criadaEm": "2026-04-18T12:29:13Z",
+   "fechadaEm": "2026-04-27T07:57:42Z",
+   "mergeadaEm": null,
+   "labels": [
+    "backend",
+    "FEATURE",
+    "US"
+   ],
+   "responsaveis": [
+    "EhOMiguel",
+    "trindadea",
+    "Brenofrds"
+   ],
+   "autor": "EhOMiguel",
+   "milestone": null,
+   "temDescricao": true,
+   "comentarios": 0
+  },
+  {
+   "numero": 12,
+   "titulo": "[US01] [Backend] Cadastro de aluno — API",
+   "estado": "closed",
+   "ehPr": false,
+   "criadaEm": "2026-04-18T12:27:45Z",
+   "fechadaEm": "2026-04-27T03:04:35Z",
+   "mergeadaEm": null,
+   "labels": [
+    "backend",
+    "FEATURE",
+    "US"
+   ],
+   "responsaveis": [
+    "EhOBruno"
+   ],
+   "autor": "EhOMiguel",
+   "milestone": null,
+   "temDescricao": true,
+   "comentarios": 0
+  },
+  {
+   "numero": 11,
+   "titulo": "[TASK11] [Backend] Middleware de autorização por role",
+   "estado": "closed",
+   "ehPr": false,
+   "criadaEm": "2026-04-18T12:27:23Z",
+   "fechadaEm": "2026-04-27T04:52:13Z",
+   "mergeadaEm": null,
+   "labels": [
+    "backend"
+   ],
+   "responsaveis": [
+    "Joa0V"
+   ],
+   "autor": "EhOMiguel",
+   "milestone": null,
+   "temDescricao": true,
+   "comentarios": 0
+  },
+  {
+   "numero": 10,
+   "titulo": "[TASK10] [Backend] Middleware de autenticação",
+   "estado": "closed",
+   "ehPr": false,
+   "criadaEm": "2026-04-18T12:27:04Z",
+   "fechadaEm": "2026-04-27T03:04:25Z",
+   "mergeadaEm": null,
+   "labels": [
+    "backend"
+   ],
+   "responsaveis": [
+    "Joa0V"
+   ],
+   "autor": "EhOMiguel",
+   "milestone": null,
+   "temDescricao": true,
+   "comentarios": 0
+  },
+  {
+   "numero": 9,
+   "titulo": "[TASK07] [Spike] Pesquisa e configuração do SSO Microsoft (Azure AD)",
+   "estado": "closed",
+   "ehPr": false,
+   "criadaEm": "2026-04-18T12:26:34Z",
+   "fechadaEm": "2026-04-25T15:06:14Z",
+   "mergeadaEm": null,
+   "labels": [
+    "Documentação",
+    "Treinamento"
+   ],
+   "responsaveis": [
+    "an4catarina"
+   ],
+   "autor": "EhOMiguel",
+   "milestone": null,
+   "temDescricao": true,
+   "comentarios": 0
+  },
+  {
+   "numero": 8,
+   "titulo": "[TASK06] [Spike] Pesquisa de lib de envio de email",
+   "estado": "closed",
+   "ehPr": false,
+   "criadaEm": "2026-04-18T12:25:50Z",
+   "fechadaEm": "2026-04-27T00:51:58Z",
+   "mergeadaEm": null,
+   "labels": [
+    "Documentação",
+    "Treinamento"
+   ],
+   "responsaveis": [
+    "trindadea"
+   ],
+   "autor": "EhOMiguel",
+   "milestone": null,
+   "temDescricao": true,
+   "comentarios": 1
+  },
+  {
+   "numero": 7,
+   "titulo": "[TASK03] [Backend] Setup do módulo de autenticação",
+   "estado": "closed",
+   "ehPr": false,
+   "criadaEm": "2026-04-18T12:22:44Z",
+   "fechadaEm": "2026-04-27T03:59:11Z",
+   "mergeadaEm": null,
+   "labels": [
+    "backend"
+   ],
+   "responsaveis": [
+    "EhOMiguel"
+   ],
+   "autor": "EhOMiguel",
+   "milestone": null,
+   "temDescricao": true,
+   "comentarios": 0
+  },
+  {
+   "numero": 6,
+   "titulo": "[TASK04] [Backend] Configuração JWT (access + refresh token)",
+   "estado": "closed",
+   "ehPr": false,
+   "criadaEm": "2026-04-18T12:21:41Z",
+   "fechadaEm": "2026-04-26T18:07:47Z",
+   "mergeadaEm": null,
+   "labels": [
+    "backend"
+   ],
+   "responsaveis": [
+    "Joa0V"
+   ],
+   "autor": "EhOMiguel",
+   "milestone": null,
+   "temDescricao": true,
+   "comentarios": 1
+  },
+  {
+   "numero": 5,
+   "titulo": "[TASK02] [Backend] Seed de administrador e usario teste",
+   "estado": "closed",
+   "ehPr": false,
+   "criadaEm": "2026-04-18T12:20:52Z",
+   "fechadaEm": "2026-04-25T17:49:52Z",
+   "mergeadaEm": null,
+   "labels": [
+    "backend"
+   ],
+   "responsaveis": [
+    "Brenofrds"
+   ],
+   "autor": "EhOMiguel",
+   "milestone": null,
+   "temDescricao": true,
+   "comentarios": 0
+  },
+  {
+   "numero": 4,
+   "titulo": "[TASK01] [Backend] Modelagem do banco de dados (Prisma)",
+   "estado": "closed",
+   "ehPr": false,
+   "criadaEm": "2026-04-18T12:19:52Z",
+   "fechadaEm": "2026-04-25T16:24:07Z",
+   "mergeadaEm": null,
+   "labels": [
+    "backend"
+   ],
+   "responsaveis": [
+    "Brenofrds"
+   ],
+   "autor": "EhOMiguel",
+   "milestone": null,
+   "temDescricao": true,
+   "comentarios": 0
+  },
+  {
+   "numero": 3,
+   "titulo": "chore: Atualiza templates",
+   "estado": "closed",
+   "ehPr": true,
+   "criadaEm": "2026-04-18T12:12:31Z",
+   "fechadaEm": "2026-04-23T14:13:26Z",
+   "mergeadaEm": "2026-04-23T14:13:26Z",
+   "labels": [],
+   "responsaveis": [],
+   "autor": "EhOMiguel",
+   "milestone": null,
+   "temDescricao": false,
+   "comentarios": 1
+  },
+  {
+   "numero": 1,
+   "titulo": "chore: configurar workflow e sonar; adicionar templates do projeto",
+   "estado": "closed",
+   "ehPr": true,
+   "criadaEm": "2026-04-17T00:48:39Z",
+   "fechadaEm": "2026-04-17T19:30:05Z",
+   "mergeadaEm": "2026-04-17T19:30:05Z",
+   "labels": [],
+   "responsaveis": [],
+   "autor": "ViictorHugoo",
+   "milestone": null,
+   "temDescricao": true,
+   "comentarios": 1
+  }
+ ],
+ "2026-1-AnatoQuizUp-Quiz-Service": [
+  {
+   "numero": 14,
+   "titulo": "Feat/listas aluno",
+   "estado": "closed",
+   "ehPr": true,
+   "criadaEm": "2026-06-06T13:59:25Z",
+   "fechadaEm": "2026-06-07T13:48:56Z",
+   "mergeadaEm": "2026-06-07T13:48:56Z",
+   "labels": [],
+   "responsaveis": [],
+   "autor": "pkbceira03",
+   "milestone": null,
+   "temDescricao": true,
+   "comentarios": 1
+  },
+  {
+   "numero": 13,
+   "titulo": "feat: dashboard de evolução do aluno (US#82) — backend",
+   "estado": "closed",
+   "ehPr": true,
+   "criadaEm": "2026-06-01T23:56:48Z",
+   "fechadaEm": "2026-06-02T00:04:10Z",
+   "mergeadaEm": "2026-06-02T00:04:09Z",
+   "labels": [],
+   "responsaveis": [],
+   "autor": "EhOMiguel",
+   "milestone": null,
+   "temDescricao": true,
+   "comentarios": 1
+  },
+  {
+   "numero": 12,
+   "titulo": "Feat/dashboard turma",
+   "estado": "closed",
+   "ehPr": true,
+   "criadaEm": "2026-06-01T13:51:19Z",
+   "fechadaEm": "2026-06-01T14:07:13Z",
+   "mergeadaEm": "2026-06-01T14:07:13Z",
+   "labels": [],
+   "responsaveis": [],
+   "autor": "Brenofrds",
+   "milestone": null,
+   "temDescricao": true,
+   "comentarios": 1
+  },
+  {
+   "numero": 11,
+   "titulo": "Task/agregacao historico",
+   "estado": "closed",
+   "ehPr": true,
+   "criadaEm": "2026-05-24T21:39:16Z",
+   "fechadaEm": "2026-05-25T00:13:01Z",
+   "mergeadaEm": "2026-05-25T00:13:01Z",
+   "labels": [],
+   "responsaveis": [],
+   "autor": "Joa0V",
+   "milestone": null,
+   "temDescricao": true,
+   "comentarios": 1
+  },
+  {
+   "numero": 10,
+   "titulo": "Feat/lista",
+   "estado": "closed",
+   "ehPr": true,
+   "criadaEm": "2026-05-24T17:43:44Z",
+   "fechadaEm": "2026-05-24T23:40:15Z",
+   "mergeadaEm": "2026-05-24T23:40:15Z",
+   "labels": [],
+   "responsaveis": [],
+   "autor": "pkbceira03",
+   "milestone": null,
+   "temDescricao": true,
+   "comentarios": 1
+  },
+  {
+   "numero": 9,
+   "titulo": "Feat/moedas atp",
+   "estado": "closed",
+   "ehPr": true,
+   "criadaEm": "2026-05-24T04:44:07Z",
+   "fechadaEm": "2026-05-25T01:07:11Z",
+   "mergeadaEm": "2026-05-25T01:07:11Z",
+   "labels": [],
+   "responsaveis": [],
+   "autor": "trindadea",
+   "milestone": null,
+   "temDescricao": true,
+   "comentarios": 1
+  },
+  {
+   "numero": 8,
+   "titulo": "Feature/minhas turmas aluno",
+   "estado": "closed",
+   "ehPr": true,
+   "criadaEm": "2026-05-21T10:28:49Z",
+   "fechadaEm": "2026-05-24T23:58:12Z",
+   "mergeadaEm": "2026-05-24T23:58:12Z",
+   "labels": [],
+   "responsaveis": [],
+   "autor": "EhOMiguel",
+   "milestone": null,
+   "temDescricao": true,
+   "comentarios": 1
+  },
+  {
+   "numero": 7,
+   "titulo": "Task/Validacao e Registro de Tentativa",
+   "estado": "closed",
+   "ehPr": true,
+   "criadaEm": "2026-05-21T02:33:46Z",
+   "fechadaEm": "2026-05-21T12:22:50Z",
+   "mergeadaEm": "2026-05-21T12:22:50Z",
+   "labels": [],
+   "responsaveis": [],
+   "autor": "Joa0V",
+   "milestone": null,
+   "temDescricao": true,
+   "comentarios": 1
+  },
+  {
+   "numero": 6,
+   "titulo": "Feat/turmas",
+   "estado": "closed",
+   "ehPr": true,
+   "criadaEm": "2026-05-18T00:22:03Z",
+   "fechadaEm": "2026-05-18T13:21:46Z",
+   "mergeadaEm": "2026-05-18T13:21:45Z",
+   "labels": [],
+   "responsaveis": [],
+   "autor": "Brenofrds",
+   "milestone": null,
+   "temDescricao": true,
+   "comentarios": 1
+  },
+  {
+   "numero": 5,
+   "titulo": "Feat/quiz dinamico",
+   "estado": "closed",
+   "ehPr": true,
+   "criadaEm": "2026-05-17T19:52:58Z",
+   "fechadaEm": "2026-05-20T16:58:49Z",
+   "mergeadaEm": "2026-05-20T16:58:49Z",
+   "labels": [],
+   "responsaveis": [],
+   "autor": "Joa0V",
+   "milestone": null,
+   "temDescricao": true,
+   "comentarios": 1
+  },
+  {
+   "numero": 4,
+   "titulo": "feat: adicionar tabelas de turma e migration",
+   "estado": "closed",
+   "ehPr": true,
+   "criadaEm": "2026-05-15T13:11:06Z",
+   "fechadaEm": "2026-05-18T00:06:45Z",
+   "mergeadaEm": null,
+   "labels": [],
+   "responsaveis": [],
+   "autor": "Brenofrds",
+   "milestone": null,
+   "temDescricao": true,
+   "comentarios": 1
+  },
+  {
+   "numero": 3,
+   "titulo": "feat: adiciona upload de imagem",
+   "estado": "closed",
+   "ehPr": true,
+   "criadaEm": "2026-05-15T12:06:53Z",
+   "fechadaEm": "2026-05-17T15:56:15Z",
+   "mergeadaEm": "2026-05-17T15:56:15Z",
+   "labels": [],
+   "responsaveis": [],
+   "autor": "pkbceira03",
+   "milestone": null,
+   "temDescricao": true,
+   "comentarios": 1
+  },
+  {
+   "numero": 2,
+   "titulo": "Feature/migracao quiz service",
+   "estado": "closed",
+   "ehPr": true,
+   "criadaEm": "2026-05-14T00:20:34Z",
+   "fechadaEm": "2026-05-14T11:22:06Z",
+   "mergeadaEm": "2026-05-14T11:22:06Z",
+   "labels": [],
+   "responsaveis": [],
+   "autor": "EhOMiguel",
+   "milestone": null,
+   "temDescricao": true,
+   "comentarios": 0
+  },
+  {
+   "numero": 1,
+   "titulo": "Feature/migracao quiz service",
+   "estado": "closed",
+   "ehPr": true,
+   "criadaEm": "2026-05-14T00:10:07Z",
+   "fechadaEm": "2026-05-14T00:18:00Z",
+   "mergeadaEm": null,
+   "labels": [],
+   "responsaveis": [],
+   "autor": "EhOMiguel",
+   "milestone": null,
+   "temDescricao": true,
+   "comentarios": 0
+  }
+ ],
+ "2026-1-AnatoQuizUp-AI": [
+  {
+   "numero": 1,
+   "titulo": "[AI] Definir arquitetura inicial do RAG, ingestão de PDFs e estruturação do dataset",
+   "estado": "open",
+   "ehPr": false,
+   "criadaEm": "2026-05-24T18:29:50Z",
+   "fechadaEm": null,
+   "mergeadaEm": null,
+   "labels": [],
+   "responsaveis": [
+    "marialuisa214",
+    "EhOBruno"
+   ],
+   "autor": "marialuisa214",
+   "milestone": null,
+   "temDescricao": true,
+   "comentarios": 1
+  }
+ ]
+}
