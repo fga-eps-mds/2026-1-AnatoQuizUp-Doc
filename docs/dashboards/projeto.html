@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dashboard Eixo Projeto — AnatoQuizUp</title>
+<link rel="stylesheet" href="dashboards.css">
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.7/dist/chart.umd.min.js"></script>
+<script src="dados-consolidados.js"></script>
+</head>
+<body>
+<main>
+  <h1>Dashboard eixo Projeto — Agile EVM, sprints e releases</h1>
+  <p class="subtitulo">EVM-Ágil cumulativo (AgileEVM, Sulaiman/Barton/Blackburn): cronograma medido em story points e custo medido em R$ a partir do Plano de Custos — PV usa a equipe baseline e AC usa a equipe efetiva de cada sprint, por isso SPI e CPI são independentes.</p>
+  <nav class="abas">
+    <a href="produto.html">Produto</a>
+    <a href="processo.html">Processo</a>
+    <a href="projeto.html" class="ativa">Projeto</a>
+  </nav>
+
+  <div class="faixa-titulo">
+    <h2>Eixo Projeto — Agile EVM &amp; acompanhamento de releases</h2>
+    <span class="meta" id="meta-projeto"></span>
+  </div>
+
+  <div class="cartoes" id="cartoes-evm"></div>
+
+  <div class="grade-2">
+    <div>
+      <h3>Burnup — story points planejados × entregues (acumulado)</h3>
+      <div class="grafico"><canvas id="grafico-burnup"></canvas></div>
+    </div>
+    <div>
+      <h3>Velocity por sprint — planejado × entregue (SP)</h3>
+      <div class="grafico"><canvas id="grafico-velocity"></canvas></div>
+    </div>
+  </div>
+
+  <div class="grade-2">
+    <div>
+      <h3>SPI e CPI acumulados por sprint</h3>
+      <div class="grafico"><canvas id="grafico-indices"></canvas></div>
+    </div>
+    <div>
+      <h3>Curvas EVM em R$ — PV × EV × AC (acumulado)</h3>
+      <div class="grafico"><canvas id="grafico-curvas"></canvas></div>
+    </div>
+  </div>
+
+  <div class="grade-2">
+    <div>
+      <h3>Sprints — planejado × entregue × custo</h3>
+      <table class="tabela" id="tabela-sprints"></table>
+    </div>
+    <div>
+      <h3>Milestones / releases — status</h3>
+      <table class="tabela" id="tabela-releases"></table>
+      <div class="nota">
+        <h3>Previsão de ritmo (escopo)</h3>
+        <p id="previsao-texto" style="margin:4px 0"></p>
+      </div>
+    </div>
+  </div>
+
+  <div class="nota">
+    <h3>Nota metodológica — correção do modelo EVM</h3>
+    <ul>
+      <li><strong>Modelo anterior (sprints 2–5):</strong> EVM isolado por sprint com AC = orçamento integral da sprint, o que forçava SPI ≡ CPI e impedia projeção de término.</li>
+      <li><strong>Modelo corrigido (AgileEVM):</strong> série <em>cumulativa</em>; cronograma em SP (SPI = EVpts/PVpts) e custo em R$ com PV na equipe baseline do Plano de Custos (9 pessoas, 4 h/sem ⇒ R$ 931,65/sprint) e AC na equipe efetiva de cada sprint (12 → 10 → 9 → 8). CPI = EV/AC, EAC = BAC/CPI, VAC = BAC − EAC.</li>
+      <li><strong>Fontes:</strong> S1–S4 dos relatórios de sprint publicados; S5+ medido do ZenHub (sprints e fechamentos com estimate na janela). Sprints com baixa disciplina de estimativa estão sinalizadas na tabela.</li>
+    </ul>
+  </div>
+
+  <p class="rodape" id="rodape"></p>
+</main>
+
+<script>
+const D = window.DADOS;
+const J = D.projeto;
+const VERDE = "#2e7d32", AMARELO = "#f9a825", VERMELHO = "#c62828", AZUL = "#3f51b5", AZUL_CLARO = "#9fa8da";
+const fmt = (v, c = 2) => v == null ? "—" : v.toLocaleString("pt-BR", { minimumFractionDigits: c, maximumFractionDigits: c });
+const reais = (v) => v == null ? "—" : `R$ ${fmt(v)}`;
+const clsIndice = (v) => v == null ? "cinza" : v >= 0.9 ? "verde" : v >= 0.7 ? "amarelo" : "vermelho";
+
+const decorridas = J.sprints.filter((s) => s.decorrida);
+const sprintAtual = J.sprints.find((s) => s.emAndamento);
+const serie = J.evm;
+const fechadaIdx = serie.findLastIndex((p) => !p.emAndamento);
+const ultimaFechada = serie[fechadaIdx];
+const atual = serie.at(-1);
+
+document.getElementById("meta-projeto").textContent =
+  `Sprint atual: ${sprintAtual ? `${sprintAtual.id} (${sprintAtual.inicio.slice(5)} → ${sprintAtual.fim.slice(5)})` : "—"} · ${D.geradoEm.slice(0, 10)}`;
+
+// ---- cartões
+const cartoes = [
+  { nome: "PV acumulado (SP planejados)", valor: ultimaFechada.pvPts, cls: "azul", sub: `até ${ultimaFechada.sprint} (última sprint fechada)` },
+  { nome: "EV acumulado (SP entregues)", valor: ultimaFechada.evPts, cls: "azul", sub: `${Math.round(100 * ultimaFechada.evPts / ultimaFechada.pvPts)}% do planejado` },
+  { nome: "SPI", valor: fmt(ultimaFechada.spi), cls: clsIndice(ultimaFechada.spi), sub: "EVpts / PVpts (acumulado)" },
+  { nome: "CPI", valor: fmt(ultimaFechada.cpi), cls: clsIndice(ultimaFechada.cpi), sub: "EV R$ / AC R$ (acumulado)" },
+  { nome: "EAC (projeção de custo)", valor: reais(ultimaFechada.eac), cls: ultimaFechada.eac <= J.parametros.bac ? "verde" : "vermelho", sub: `BAC ${reais(J.parametros.bac)} · VAC ${reais(ultimaFechada.vac)}` },
+  { nome: "Velocity (mediana)", valor: `${fmt(J.previsao.velocidadeMedianaSP, 0)} SP`, cls: "azul", sub: "por sprint fechada" },
+];
+document.getElementById("cartoes-evm").innerHTML = cartoes.map((c) => `
+  <div class="cartao">
+    <div class="nome">${c.nome}</div>
+    <div class="valor ${c.cls}" style="font-size:1.7rem">${c.valor}</div>
+    <div class="rotulo">${c.sub}</div>
+  </div>`).join("");
+
+// ---- burnup
+new Chart(document.getElementById("grafico-burnup"), {
+  type: "line",
+  data: {
+    labels: serie.map((p) => p.sprint + (p.emAndamento ? "*" : "")),
+    datasets: [
+      { label: "PV (planejado acumulado)", data: serie.map((p) => p.pvPts), borderColor: AZUL_CLARO, backgroundColor: AZUL_CLARO, tension: .15, pointRadius: 4 },
+      { label: "EV (entregue acumulado)", data: serie.map((p) => p.evPts), borderColor: AZUL, backgroundColor: AZUL, tension: .15, pointRadius: 4, borderWidth: 3 },
+    ],
+  },
+  options: { maintainAspectRatio: false, scales: { y: { title: { display: true, text: "Story points" } } }, plugins: { legend: { position: "bottom" } } },
+});
+
+// ---- velocity
+new Chart(document.getElementById("grafico-velocity"), {
+  type: "bar",
+  data: {
+    labels: J.velocity.map((v) => v.sprint + (v.emAndamento ? "*" : "")),
+    datasets: [
+      { label: "Planejado (SP)", data: J.velocity.map((v) => v.planejado), backgroundColor: AZUL_CLARO },
+      { label: "Entregue (SP)", data: J.velocity.map((v) => v.entregue), backgroundColor: AZUL },
+    ],
+  },
+  options: { maintainAspectRatio: false, plugins: { legend: { position: "bottom" } } },
+});
+
+// ---- SPI / CPI
+new Chart(document.getElementById("grafico-indices"), {
+  type: "line",
+  data: {
+    labels: serie.map((p) => p.sprint + (p.emAndamento ? "*" : "")),
+    datasets: [
+      { label: "SPI acumulado", data: serie.map((p) => p.spi), borderColor: AZUL, backgroundColor: AZUL, tension: .15, pointRadius: 4, borderWidth: 3 },
+      { label: "CPI acumulado", data: serie.map((p) => p.cpi), borderColor: "#00897b", backgroundColor: "#00897b", tension: .15, pointRadius: 4, borderWidth: 3 },
+      { label: "Referência 1,0", data: serie.map(() => 1), borderColor: "#bbb", borderDash: [6, 4], pointRadius: 0 },
+    ],
+  },
+  options: { maintainAspectRatio: false, scales: { y: { min: 0, max: 1.2 } }, plugins: { legend: { position: "bottom" } } },
+});
+
+// ---- curvas R$
+new Chart(document.getElementById("grafico-curvas"), {
+  type: "line",
+  data: {
+    labels: serie.map((p) => p.sprint + (p.emAndamento ? "*" : "")),
+    datasets: [
+      { label: "PV (R$)", data: serie.map((p) => p.pvReais), borderColor: AZUL_CLARO, backgroundColor: AZUL_CLARO, tension: .15, pointRadius: 3 },
+      { label: "EV (R$)", data: serie.map((p) => p.evReais), borderColor: AZUL, backgroundColor: AZUL, tension: .15, pointRadius: 3, borderWidth: 3 },
+      { label: "AC (R$)", data: serie.map((p) => p.acReais), borderColor: VERMELHO, backgroundColor: VERMELHO, tension: .15, pointRadius: 3 },
+      { label: `BAC ${reais(J.parametros.bac)}`, data: serie.map(() => J.parametros.bac), borderColor: "#bbb", borderDash: [6, 4], pointRadius: 0 },
+    ],
+  },
+  options: { maintainAspectRatio: false, scales: { y: { title: { display: true, text: "R$" } } }, plugins: { legend: { position: "bottom" } } },
+});
+
+// ---- tabela de sprints
+const linhas = J.sprints.filter((s) => s.decorrida || s.emAndamento).map((s) => {
+  const spi = s.planejadoSP ? (s.entregueSP ?? 0) / s.planejadoSP : null;
+  const aviso = String(s.fontePlanejado).startsWith("zenhub") || String(s.fonteEntregue).startsWith("medido");
+  return `<tr>
+    <td><strong>${s.id}</strong>${s.emAndamento ? " <span class='selo amarelo'>em andamento</span>" : ""}${aviso ? " <span title='medido do ZenHub — baixa disciplina de estimates' style='cursor:help'>†</span>" : ""}</td>
+    <td>${s.inicio.slice(5).replace("-", "/")}–${s.fim.slice(5).replace("-", "/")}</td>
+    <td class="num">${s.equipe}</td>
+    <td class="num">${s.planejadoSP ?? "—"}</td>
+    <td class="num">${s.entregueSP ?? "—"}</td>
+    <td class="num">${spi == null ? "—" : fmt(spi)}</td>
+    <td class="num">${reais(s.custoReal)}</td>
+  </tr>`;
+}).join("");
+document.getElementById("tabela-sprints").innerHTML = `
+  <thead><tr><th>Sprint</th><th>Período</th><th class="num">Equipe</th><th class="num">Plan. SP</th><th class="num">Entr. SP</th><th class="num">SPI sprint</th><th class="num">AC sprint</th></tr></thead>
+  <tbody>${linhas}</tbody>
+  <tfoot><tr><td colspan="7" style="color:var(--cinza);font-size:.8rem">† valores medidos do ZenHub (sprints/fechamentos na janela) — sujeitos à baixa disciplina de estimates do período.</td></tr></tfoot>`;
+
+// ---- releases
+const hoje = D.geradoEm.slice(0, 10);
+const statusRelease = (r) => {
+  if (r.prazo < hoje) return `<span class="selo verde">Entregue</span>`;
+  if (r.nome.includes("Major 3")) return `<span class="selo amarelo">Em andamento</span>`;
+  return `<span class="selo cinza">Planejada</span>`;
+};
+document.getElementById("tabela-releases").innerHTML = `
+  <thead><tr><th>Milestone / Release</th><th>Prazo</th><th>Status</th></tr></thead>
+  <tbody>${J.releases.map((r) => `<tr>
+    <td>${r.tipo === "major" ? `<strong>${r.nome}</strong>` : r.nome}</td>
+    <td>${r.prazo.split("-").reverse().join("/")}</td>
+    <td>${statusRelease(r)}</td>
+  </tr>`).join("")}</tbody>`;
+
+// ---- previsão
+const prev = J.previsao;
+document.getElementById("previsao-texto").innerHTML =
+  `Velocity mediana de <strong>${fmt(prev.velocidadeMedianaSP, 0)} SP/sprint</strong> × <strong>${prev.sprintsRestantes} sprints restantes</strong> ⇒ capacidade de ` +
+  `<strong>≈ ${prev.capacidadeRestanteSP} SP</strong> até 29/06. Backlog aberto com estimate: <strong>${prev.backlogAbertoEstimadoSP} SP</strong>` +
+  (prev.backlogAbertoEstimadoSP > prev.capacidadeRestanteSP
+    ? " — <span style='color:var(--vermelho)'>escopo aberto excede a capacidade; repriorizar para a R3 final</span>."
+    : " — escopo aberto cabe na capacidade restante, <em>desde que</em> os itens sem estimate sejam estimados.");
+
+document.getElementById("rodape").textContent =
+  `Gerado em ${D.geradoEm.slice(0, 16).replace("T", " ")} · BAC = ${reais(J.parametros.bac)} (custo semanal baseline ${reais(J.parametros.custoSemanaBaseline)} × ${J.parametros.totalSprints} sprints) · Fontes: relatórios de sprint (docs), ZenHub e Plano de Custos. * sprint em andamento.`;
+</script>
+</body>
+</html>
