@@ -1,0 +1,6720 @@
+{
+ "extraidoEm": "2026-06-13T00:10:19.903Z",
+ "totalConsultadas": 133,
+ "comEventos": 126,
+ "eventos": [
+  {
+   "repo": "2026-1-AnatoQuizUp-Usuario-Service",
+   "numero": 82,
+   "eventos": [
+    {
+     "user_id": 61212256,
+     "type": "transferIssue",
+     "created_at": "2026-06-02T15:49:10.446Z",
+     "from_pipeline": {
+      "name": "In Progress"
+     },
+     "to_pipeline": {
+      "name": "Review/QA"
+     },
+     "workspace_id": "69bc08ebd4e9ec001c0c3229"
+    },
+    {
+     "user_id": 37780460,
+     "type": "transferIssue",
+     "created_at": "2026-05-31T23:57:04.392Z",
+     "from_pipeline": {
+      "name": "Sprint Backlog"
+     },
+     "to_pipeline": {
+      "name": "In Progress"
+     },
+     "workspace_id": "69bc08ebd4e9ec001c0c3229"
+    },
+    {
+     "user_id": 118488366,
+     "type": "transferIssue",
+     "created_at": "2026-05-24T23:00:28.460Z",
+     "from_pipeline": {
+      "name": "Product Backlog"
+     },
+     "to_pipeline": {
+      "name": "Sprint Backlog"
+     },
+     "workspace_id": "69bc08ebd4e9ec001c0c3229"
+    },
+    {
+     "user_id": 109092210,
+     "type": "transferIssue",
+     "created_at": "2026-05-11T11:57:13.601Z",
+     "from_pipeline": {
+      "name": "Sprint Backlog"
+     },
+     "to_pipeline": {
+      "name": "Product Backlog"
+     },
+     "workspace_id": "69bc08ebd4e9ec001c0c3229"
+    },
+    {
+     "user_id": 109092210,
+     "type": "transferIssue",
+     "created_at": "2026-05-11T11:57:08.866Z",
+     "from_pipeline": {
+      "name": "Product Backlog"
+     },
+     "to_pipeline": {
+      "name": "Sprint Backlog"
+     },
+     "workspace_id": "69bc08ebd4e9ec001c0c3229"
+    },
+    {
+     "user_id": 109092210,
+     "type": "transferIssue",
+     "created_at": "2026-05-06T13:04:34.380Z",
+     "from_pipeline": {
+      "name": "Icebox"
+     },
+     "to_pipeline": {
+      "name": "Product Backlog"
+     },
+     "workspace_id": "69bc08ebd4e9ec001c0c3229"
+    },
+    {
+     "user_id": 109092210,
+     "type": "transferIssue",
+     "created_at": "2026-05-06T12:54:22.196Z",
+     "from_pipeline": {
+      "name": "Project Backlog"
+     },
+     "to_pipeline": {
+      "name": "Icebox"
+     },
+     "workspace_id": "69bc08ebd4e9ec001c0c3229"
+    },
+    {
+     "user_id": 109092210,
+     "type": "transferIssue",
+     "created_at": "2026-05-06T12:05:57.525Z",
+     "from_pipeline": {
+      "name": "New Issues"
+     },
+     "to_pipeline": {
+      "name": "Project Backlog"
+     },
+     "workspace_id": "69bc08ebd4e9ec001c0c3229"
+    }
+   ]
+  },
+  {
+   "repo": "2026-1-AnatoQuizUp-Usuario-Service",
+   "numero": 66,
+   "eventos": [
+    {
+     "user_id": 116747171,
+     "type": "transferIssue",
+     "created_at": "2026-06-02T02:20:21.437Z",
+     "from_pipeline": {
+      "name": "In Progress"
+     },
+     "to_pipeline": {
+      "name": "Review/QA"
+     },
+     "workspace_id": "69bc08ebd4e9ec001c0c3229"
+    },
+    {
+     "user_id": 118488366,
+     "type": "transferIssue",
+     "created_at": "2026-05-30T20:09:35.280Z",
+     "from_pipeline": {
+      "name": "Sprint Backlog"
+     },
+     "to_pipeline": {
+      "name": "In Progress"
+     },
+     "workspace_id": "69bc08ebd4e9ec001c0c3229"
+    },
+    {
+     "user_id": 118488366,
+     "type": "transferIssue",
+     "created_at": "2026-05-24T22:57:55.771Z",
+     "from_pipeline": {
+      "name": "Product Backlog"
+     },
+     "to_pipeline": {
+      "name": "Sprint Backlog"
+     },
+     "workspace_id": "69bc08ebd4e9ec001c0c3229"
+    },
+    {
+     "user_id": 109092210,
+     "type": "transferIssue",
+     "created_at": "2026-05-11T12:27:02.498Z",
+     "from_pipeline": {
+      "name": "Project Backlog"
+     },
+     "to_pipeline": {
+      "name": "Product Backlog"
+     },
+     "workspace_id": "69bc08ebd4e9ec001c0c3229"
+    },
+    {
+     "user_id": 109092210,
+     "type": "transferIssue",
+     "created_at": "2026-05-08T19:02:47.126Z",
+     "from_pipeline": {
+      "name": "Icebox"
+     },
+     "to_pipeline": {
+      "name": "Project Backlog"
+     },
+     "workspace_id": "69bc08ebd4e9ec001c0c3229"
+    },
+    {
+     "user_id": 109092210,
+     "type": "transferIssue",
+     "created_at": "2026-05-08T18:39:25.401Z",
+     "from_pipeline": {
+      "name": "Project Backlog"
+     },
+     "to_pipeline": {
+      "name": "Icebox"
+     },
+     "workspace_id": "69bc08ebd4e9ec001c0c3229"
+    },
+    {
+     "user_id": 109092210,
+     "type": "transferIssue",
+     "created_at": "2026-05-08T17:45:58.700Z",
+     "from_pipeline": {
+      "name": "New Issues"
+     },
+     "to_pipeline": {
+      "name": "Project Backlog"
+     },
+     "workspace_id": "69bc08ebd4e9ec001c0c3229"
+    }
+   ]
+  },
+  {
+   "repo": "2026-1-AnatoQuizUp-Usuario-Service",
+   "numero": 67,
+   "eventos": [
+    {
+     "user_id": 132412607,
+     "type": "transferIssue",
+     "created_at": "2026-06-01T13:46:51.584Z",
+     "from_pipeline": {
+      "name": "Blocked"
+     },
+     "to_pipeline": {
+      "name": "In Progress"
+     },
+     "workspace_id": "69bc08ebd4e9ec001c0c3229"
+    },
+    {
+     "user_id": 132412607,
+     "type": "transferIssue",
+     "created_at": "2026-06-01T13:46:48.320Z",
+     "from_pipeline": {
+      "name": "Sprint Backlog"
+     },
+     "to_pipeline": {
+      "name": "Blocked"
+     },
+     "workspace_id": "69bc08ebd4e9ec001c0c3229"
+    },
+    {
+     "user_id": 109092210,
+     "type": "transferIssue",
+     "created_at": "2026-05-25T13:47:00.317Z",
+     "from_pipeline": {
+      "name": "Product Backlog"
+     },
+     "to_pipeline": {
+      "name": "Sprint Backlog"
+     },
+     "workspace_id": "69bc08ebd4e9ec001c0c3229"
+    },
+    {
+     "user_id": 109092210,
+     "type": "transferIssue",
+     "created_at": "2026-05-11T12:00:40.676Z",
+     "from_pipeline": {
+      "name": "Project Backlog"
+     },
+     "to_pipeline": {
+      "name": "Product Backlog"
+     },
+     "workspace_id": "69bc08ebd4e9ec001c0c3229"
+    },
+    {
+     "user_id": 109092210,
+     "type": "transferIssue",
+     "created_at": "2026-05-08T17:44:50.965Z",
+     "from_pipeline": {
+      "name": "New Issues"
+     },
+     "to_pipeline": {
+      "name": "Project Backlog"
+     },
+     "workspace_id": "69bc08ebd4e9ec001c0c3229"
+    },
+    {
+     "user_id": 109092210,
+     "type": "transferIssue",
+     "created_at": "2026-05-06T12:43:21.994Z",
+     "from_pipeline": {
+      "name": "Project Backlog"
+     },
+     "to_pipeline": {
+      "name": "New Issues"
+     },
+     "workspace_id": "69bc08ebd4e9ec001c0c3229"
+    },
+    {
+     "user_id": 109092210,
+     "type": "transferIssue",
+     "created_at": "2026-05-06T12:05:00.330Z",
+     "from_pipeline": {
+      "name": "New Issues"
+     },
+     "to_pipeline": {
+      "name": "Project Backlog"
+     },
+     "workspace_id": "69bc08ebd4e9ec001c0c3229"
+    }
+   ]
+  },
+  {
+   "repo": "2026-1-AnatoQuizUp-Doc",
+   "numero": 33,
+   "eventos": [
+    {
+     "user_id": 91849929,
+     "type": "transferIssue",
+     "created_at": "2026-05-20T00:54:32.202Z",
+     "from_pipeline": {
+      "name": "Sprint Backlog"
+     },
+     "to_pipeline": {
+      "name": "In Progress"
+     },
+     "workspace_id": "69bc08ebd4e9ec001c0c3229"
+    },
+    {
+     "user_id": 91849929,
+     "type": "transferIssue",
+     "created_at": "2026-05-19T22:59:44.257Z",
+     "from_pipeline": {
+      "name": "New Issues"
+     },
+     "to_pipeline": {
+      "name": "Sprint Backlog"
+     },
+     "workspace_id": "69bc08ebd4e9ec001c0c3229"
+    },
+    {
+     "user_id": 91849929,
+     "type": "estimateIssue",
+     "created_at": "2026-05-19T22:59:13.501Z",
+     "to_estimate": {
+      "value": 3
+     }
+    }
+   ]
+  },
+  {
+   "repo": "2026-1-AnatoQuizUp-Usuario-Service",
+   "numero": 94,
+   "eventos": [
+    {
+     "user_id": 118488366,
+     "type": "transferIssue",
+     "created_at": "2026-05-17T22:28:36.595Z",
+     "from_pipeline": {
+      "name": "In Progress"
+     },
+     "to_pipeline": {
+      "name": "Review/QA"
+     },
+     "workspace_id": "69bc08ebd4e9ec001c0c3229"
+    },
+    {
+     "user_id": 110112943,
+     "type": "transferIssue",
+     "created_at": "2026-05-15T01:28:41.090Z",
+     "from_pipeline": {
+      "name": "Sprint Backlog"
+     },
+     "to_pipeline": {
+      "name": "In Progress"
+     },
+     "workspace_id": "69bc08ebd4e9ec001c0c3229"
+    },
+    {
+     "user_id": 110112943,
+     "type": "transferIssue",
+     "created_at": "2026-05-10T22:57:25.529Z",
+     "from_pipeline": {
+      "name": "Product Backlog"
+     },
+     "to_pipeline": {
+      "name": "Sprint Backlog"
+     },
+     "workspace_id": "69bc08ebd4e9ec001c0c3229"
+    },
+    {
+     "user_id": 109092210,
+     "type": "transferIssue",
+     "created_at": "2026-05-06T13:32:19.963Z",
+     "from_pipeline": {
+      "name": "Project Backlog"
+     },
+     "to_pipeline": {
+      "name": "Product Backlog"
+     },
+     "workspace_id": "69bc08ebd4e9ec001c0c3229"
+    },
+    {
+     "user_id": 109092210,
+     "type": "transferIssue",
+     "created_at": "2026-05-06T12:06:15.982Z",
+     "from_pipeline": {
+      "name": "New Issues"
+     },
+     "to_pipeline": {
+      "name": "Project Backlog"
+     },
+     "workspace_id": "69bc08ebd4e9ec001c0c3229"
+    }
+   ]
+  },
+  {
+   "repo": "2026-1-AnatoQuizUp-Usuario-Service",
+   "numero": 77,
+   "eventos": [
+    {
+     "user_id": 116747171,
+     "type": "transferIssue",
+     "created_at": "2026-05-24T04:53:33.295Z",
+     "from_pipeline": {
+      "name": "In Progress"
+     },
+     "to_pipeline": {
+      "name": "Review/QA"
+     },
+     "workspace_id": "69bc08ebd4e9ec001c0c3229"
+    },
+    {
+     "user_id": 116747171,
+     "type": "transferIssue",
+     "created_at": "2026-05-24T00:17:00.724Z",
+     "from_pipeline": {
+      "name": "Sprint Backlog"
+     },
+     "to_pipeline": {
+      "name": "In Progress"
+     },
+     "workspace_id": "69bc08ebd4e9ec001c0c3229"
+    },
+    {
+     "user_id": 118488366,
+     "type": "transferIssue",
+     "created_at": "2026-05-17T22:41:08.789Z",
+     "from_pipeline": {
+      "name": "Product Backlog"
+     },
+     "to_pipeline": {
+      "name": "Sprint Backlog"
+     },
+     "workspace_id": "69bc08ebd4e9ec001c0c3229"
+    },
+    {
+     "user_id": 109092210,
+     "type": "transferIssue",
+     "created_at": "2026-05-11T12:01:04.117Z",
+     "from_pipeline": {
+      "name": "Project Backlog"
+     },
+     "to_pipeline": {
+      "name": "Product Backlog"
+     },
+     "workspace_id": "69bc08ebd4e9ec001c0c3229"
+    },
+    {
+     "user_id": 109092210,
+     "type": "transferIssue",
+     "created_at": "2026-05-08T18:46:24.576Z",
+     "from_pipeline": {
+      "name": "Icebox"
+     },
+     "to_pipeline": {
+      "name": "Project Backlog"
+     },
+     "workspace_id": "69bc08ebd4e9ec001c0c3229"
+    },
+    {
+     "user_id": 109092210,
+     "type": "transferIssue",
+     "created_at": "2026-05-08T18:39:31.525Z",
+     "from_pipeline": {
+      "name": "Project Backlog"
+     },
+     "to_pipeline": {
+      "name": "Icebox"
+     },
+     "workspace_id": "69bc08ebd4e9ec001c0c3229"
+    },
+    {
+     "user_id": 109092210,
+     "type": "transferIssue",
+     "created_at": "2026-05-08T17:46:16.754Z",
+     "from_pipeline": {
+      "name": "New Issues"
+     },
+     "to_pipeline": {
+      "name": "Project Backlog"
+     },
+     "workspace_id": "69bc08ebd4e9ec001c0c3229"
+    }
+   ]
+  },
+  {
+   "repo": "2026-1-AnatoQuizUp-Usuario-Service",
+   "numero": 46,
+   "eventos": [
+    {
+     "user_id": 118488366,
+     "type": "transferIssue",
+     "created_at": "2026-05-24T21:41:58.454Z",
+     "from_pipeline": {
+      "name": "In Progress"
+     },
+     "to_pipeline": {
+      "name": "Review/QA"
+     },
+     "workspace_id": "69bc08ebd4e9ec001c0c3229"
+    },
+    {
+     "user_id": 118488366,
+     "type": "transferIssue",
+     "created_at": "2026-05-23T17:40:04.375Z",
+     "from_pipeline": {
+      "name": "Sprint Backlog"
+     },
+     "to_pipeline": {
+      "name": "In Progress"
+     },
+     "workspace_id": "69bc08ebd4e9ec001c0c3229"
+    },
+    {
+     "user_id": 109092210,
+     "type": "transferIssue",
+     "created_at": "2026-05-04T20:02:49.979Z",
+     "from_pipeline": {
+      "name": "Product Backlog"
+     },
+     "to_pipeline": {
+      "name": "Sprint Backlog"
+     },
+     "workspace_id": "69bc08ebd4e9ec001c0c3229"
+    },
+    {
+     "user_id": 109092210,
+     "type": "transferIssue",
+     "created_at": "2026-05-04T19:59:27.357Z",
+     "from_pipeline": {
+      "name": "Project Backlog"
+     },
+     "to_pipeline": {
+      "name": "Product Backlog"
+     },
+     "workspace_id": "69bc08ebd4e9ec001c0c3229"
+    },
+    {
+     "user_id": 109092210,
+     "type": "transferIssue",
+     "created_at": "2026-05-04T19:54:26.261Z",
+     "from_pipeline": {
+      "name": "Product Backlog"
+     },
+     "to_pipeline": {
+      "name": "Project Backlog"
+     },
+     "workspace_id": "69bc08ebd4e9ec001c0c3229"
+    },
+    {
+     "user_id": 109092210,
+     "type": "transferIssue",
+     "created_at": "2026-05-04T19:07:47.115Z",
+     "from_pipeline": {
+      "name": "Sprint Backlog"
+     },
+     "to_pipeline": {
+      "name": "Product Backlog"
+     },
+     "workspace_id": "69bc08ebd4e9ec001c0c3229"
+    },
+    {
+     "user_id": 99771740,
+     "type": "transferIssue",
+     "created_at": "2026-05-03T23:04:46.754Z",
+     "from_pipeline": {
+      "name": "Product Backlog"
+     },
+     "to_pipeline": {
+      "name": "Sprint Backlog"
+     },
+     "workspace_id": "69bc08ebd4e9ec001c0c3229"
+    },
+    {
+     "user_id": 99771740,
+     "type": "transferIssue",
+     "created_at": "2026-05-01T02:17:32.027Z",
+     "from_pipeline": {
+      "name": "New Issues"
+     },
+     "to_pipeline": {
+      "name": "Product Backlog"
+     },
+     "workspace_id": "69bc08ebd4e9ec001c0c3229"
+    },
+    {
+     "user_id": 99771740,
+     "type": "estimateIssue",
+     "created_at": "2026-05-01T02:13:22.759Z",
+     "to_estimate": {
+      "value": 4
+     }
+    }
+   ]
+  },
+  {
+   "repo": "2026-1-AnatoQuizUp-Doc",
+   "numero": 23,
+   "eventos": [
+    {
+     "user_id": 118488366,
+     "type": "transferIssue",
+     "created_at": "2026-05-24T21:43:45.376Z",
+     "from_pipeline": {
+      "name": "In Progress"
+     },
+     "to_pipeline": {
+      "name": "Review/QA"
+     },
+     "workspace_id": "69bc08ebd4e9ec001c0c3229"
+    },
+    {
+     "user_id": 118488366,
+     "type": "transferIssue",
+     "created_at": "2026-05-14T03:18:35.683Z",
+     "from_pipeline": {
+      "name": "Sprint Backlog"
+     },
+     "to_pipeline": {
+      "name": "In Progress"
+     },
+     "workspace_id": "69bc08ebd4e9ec001c0c3229"
+    },
+    {
+     "user_id": 109092210,
+     "type": "transferIssue",
+     "created_at": "2026-05-04T19:44:04.294Z",
+     "from_pipeline": {
+      "name": "New Issues"
+     },
+     "to_pipeline": {
+      "name": "Sprint Backlog"
+     },
+     "workspace_id": "69bc08ebd4e9ec001c0c3229"
+    }
+   ]
+  },
+  {
+   "repo": "2026-1-AnatoQuizUp-Doc",
+   "numero": 25,
+   "eventos": [
+    {
+     "user_id": 61212256,
+     "type": "transferIssue",
+     "created_at": "2026-05-24T21:34:27.915Z",
+     "from_pipeline": {
+      "name": "Sprint Backlog"
+     },
+     "to_pipeline": {
+      "name": "Review/QA"
+     },
+     "workspace_id": "69bc08ebd4e9ec001c0c3229"
+    },
+    {
+     "user_id": 118488366,
+     "type": "transferIssue",
+     "created_at": "2026-05-17T22:41:05.455Z",
+     "from_pipeline": {
+      "name": "Product Backlog"
+     },
+     "to_pipeline": {
+      "name": "Sprint Backlog"
+     },
+     "workspace_id": "69bc08ebd4e9ec001c0c3229"
+    },
+    {
+     "user_id": 109092210,
+     "type": "transferIssue",
+     "created_at": "2026-05-06T14:36:54.202Z",
+     "from_pipeline": {
+      "name": "New Issues"
+     },
+     "to_pipeline": {
+      "name": "Product Backlog"
+     },
+     "workspace_id": "69bc08ebd4e9ec001c0c3229"
+    }
+   ]
+  },
+  {
+   "repo": "2026-1-AnatoQuizUp-Usuario-Service",
+   "numero": 93,
+   "eventos": [
+    {
+     "user_id": 118488366,
+     "type": "transferIssue",
+     "created_at": "2026-05-24T22:20:47.064Z",
+     "from_pipeline": {
+      "name": "In Progress"
+     },
+     "to_pipeline": {
+      "name": "Review/QA"
+     },
+     "workspace_id": "69bc08ebd4e9ec001c0c3229"
+    },
+    {
+     "user_id": 132412607,
+     "type": "transferIssue",
+     "created_at": "2026-05-23T02:48:38.276Z",
+     "from_pipeline": {
+      "name": "Sprint Backlog"
+     },
+     "to_pipeline": {
+      "name": "In Progress"
+     },
+     "workspace_id": "69bc08ebd4e9ec001c0c3229"
+    },
+    {
+     "user_id": 118488366,
+     "type": "transferIssue",
+     "created_at": "2026-05-17T22:36:02.966Z",
+     "from_pipeline": {
+      "name": "Product Backlog"
+     },
+     "to_pipeline": {
+      "name": "Sprint Backlog"
+     },
+     "workspace_id": "69bc08ebd4e9ec001c0c3229"
+    },
+    {
+     "user_id": 109092210,
+     "type": "transferIssue",
+     "created_at": "2026-05-11T12:00:34.126Z",
+     "from_pipeline": {
+      "name": "Project Backlog"
+     },
+     "to_pipeline": {
+      "name": "Product Backlog"
+     },
+     "workspace_id": "69bc08ebd4e9ec001c0c3229"
+    },
+    {
+     "user_id": 109092210,
+     "type": "transferIssue",
+     "created_at": "2026-05-08T17:46:55.490Z",
+     "from_pipeline": {
+      "name": "New Issues"
+     },
+     "to_pipeline": {
+      "name": "Project Backlog"
+     },
+     "workspace_id": "69bc08ebd4e9ec001c0c3229"
+    }
+   ]
+  },
+  {
+   "repo": "2026-1-AnatoQuizUp-Doc",
+   "numero": 24,
+   "eventos": [
+    {
+     "user_id": 109092210,
+     "type": "transferIssue",
+     "created_at": "2026-05-06T13:40:57.687Z",
+     "from_pipeline": {
+      "name": "Project Backlog"
+     },
+     "to_pipeline": {
+      "name": "Product Backlog"
+     },
+     "workspace_id": "69bc08ebd4e9ec001c0c3229"
+    },
+    {
+     "user_id": 109092210,
+     "type": "transferIssue",
+     "created_at": "2026-05-06T13:40:33.303Z",
+     "from_pipeline": {
+      "name": "New Issues"
+     },
+     "to_pipeline": {
+      "name": "Project Backlog"
+     },
+     "workspace_id": "69bc08ebd4e9ec001c0c3229"
+    }
+   ]
+  },
+  {
+   "repo": "2026-1-AnatoQuizUp-Usuario-Service",
+   "numero": 108,
+   "eventos": [
+    {
+     "user_id": 109092210,
+     "type": "transferIssue",
+     "created_at": "2026-05-11T12:01:57.192Z",
+     "from_pipeline": {
+      "name": "New Issues"
+     },
+     "to_pipeline": {
+      "name": "Product Backlog"
+     },
+     "workspace_id": "69bc08ebd4e9ec001c0c3229"
+    }
+   ]
+  },
+  {
+   "repo": "2026-1-AnatoQuizUp-Web",
+   "numero": 48,
+   "eventos": [
+    {
+     "user_id": 109092210,
+     "type": "transferIssue",
+     "created_at": "2026-05-11T12:01:50.938Z",
+     "from_pipeline": {
+      "name": "New Issues"
+     },
+     "to_pipeline": {
+      "name": "Product Backlog"
+     },
+     "workspace_id": "69bc08ebd4e9ec001c0c3229"
+    }
+   ]
+  },
+  {
+   "repo": "2026-1-AnatoQuizUp-Doc",
+   "numero": 28,
+   "eventos": [
+    {
+     "user_id": 109092210,
+     "type": "transferIssue",
+     "created_at": "2026-05-11T12:01:43.676Z",
+     "from_pipeline": {
+      "name": "New Issues"
+     },
+     "to_pipeline": {
+      "name": "Product Backlog"
+     },
+     "workspace_id": "69bc08ebd4e9ec001c0c3229"
+    }
+   ]
+  },
+  {
+   "repo": "2026-1-AnatoQuizUp-Usuario-Service",
+   "numero": 70,
+   "eventos": [
+    {
+     "user_id": 109092210,
+     "type": "transferIssue",
+     "created_at": "2026-05-06T13:37:46.850Z",
+     "from_pipeline": {
+      "name": "Project Backlog"
+     },
+     "to_pipeline": {
+      "name": "Product Backlog"
+     },
+     "workspace_id": "69bc08ebd4e9ec001c0c3229"
+    },
+    {
+     "user_id": 109092210,
+     "type": "transferIssue",
+     "created_at": "2026-05-06T12:05:04.207Z",
+     "from_pipeline": {
+      "name": "New Issues"
+     },
+     "to_pipeline": {
+      "name": "Project Backlog"
+     },
+     "workspace_id": "69bc08ebd4e9ec001c0c3229"
+    }
+   ]
+  },
+  {
+   "repo": "2026-1-AnatoQuizUp-Usuario-Service",
+   "numero": 103,
+   "eventos": [
+    {
+     "user_id": 109092210,
+     "type": "transferIssue",
+     "created_at": "2026-05-06T15:04:58.147Z",
+     "from_pipeline": {
+      "name": "New Issues"
+     },
+     "to_pipeline": {
+      "name": "Product Backlog"
+     },
+     "workspace_id": "69bc08ebd4e9ec001c0c3229"
+    }
+   ]
+  },
+  {
+   "repo": "2026-1-AnatoQuizUp-Usuario-Service",
+   "numero": 104,
+   "eventos": [
+    {
+     "user_id": 109092210,
+     "type": "transferIssue",
+     "created_at": "2026-05-06T15:13:39.230Z",
+     "from_pipeline": {
+      "name": "New Issues"
+     },
+     "to_pipeline": {
+      "name": "Product Backlog"
+     },
+     "workspace_id": "69bc08ebd4e9ec001c0c3229"
+    }
+   ]
+  },
+  {
+   "repo": "2026-1-AnatoQuizUp-Web",
+   "numero": 20,
+   "eventos": [
+    {
+     "user_id": 99771740,
+     "type": "transferIssue",
+     "created_at": "2026-05-03T23:03:46.788Z",
+     "from_pipeline": {
+      "name": "Sprint Backlog"
+     },
+     "to_pipeline": {
+      "name": "In Progress"
+     },
+     "workspace_id": "69bc08ebd4e9ec001c0c3229"
+    },
+    {
+     "user_id": 98056127,
+     "type": "estimateIssue",
+     "created_at": "2026-04-18T14:36:08.738Z",
+     "to_estimate": {
+      "value": 3
+     }
+    },
+    {
+     "user_id": 98056127,
+     "type": "transferIssue",
+     "created_at": "2026-04-18T12:50:34.623Z",
+     "from_pipeline": {
+      "name": "New Issues"
+     },
+     "to_pipeline": {
+      "name": "Sprint Backlog"
+     },
+     "workspace_id": "69bc08ebd4e9ec001c0c3229"
+    }
+   ]
+  },
+  {
+   "repo": "2026-1-AnatoQuizUp-Web",
+   "numero": 34,
+   "eventos": [
+    {
+     "user_id": 61212256,
+     "type": "transferIssue",
+     "created_at": "2026-05-24T21:34:19.242Z",
+     "from_pipeline": {
+      "name": "Sprint Backlog"
+     },
+     "to_pipeline": {
+      "name": "Review/QA"
+     },
+     "workspace_id": "69bc08ebd4e9ec001c0c3229"
+    },
+    {
+     "user_id": 61212256,
+     "type": "transferIssue",
+     "created_at": "2026-05-21T04:20:51.548Z",
+     "from_pipeline": {
+      "name": "Product Backlog"
+     },
+     "to_pipeline": {
+      "name": "Sprint Backlog"
+     },
+     "workspace_id": "69bc08ebd4e9ec001c0c3229"
+    },
+    {
+     "user_id": 61212256,
+     "type": "transferIssue",
+     "created_at": "2026-05-21T04:20:48.616Z",
+     "from_pipeline": {
+      "name": "Sprint Backlog"
+     },
+     "to_pipeline": {
+      "name": "Product Backlog"
+     },
+     "workspace_id": "69bc08ebd4e9ec001c0c3229"
+    },
+    {
+     "user_id": 109092210,
+     "type": "transferIssue",
+     "created_at": "2026-05-04T20:02:51.451Z",
+     "from_pipeline": {
+      "name": "Product Backlog"
+     },
+     "to_pipeline": {
+      "name": "Sprint Backlog"
+     },
+     "workspace_id": "69bc08ebd4e9ec001c0c3229"
+    },
+    {
+     "user_id": 109092210,
+     "type": "transferIssue",
+     "created_at": "2026-05-04T19:59:25.495Z",
+     "from_pipeline": {
+      "name": "Project Backlog"
+     },
+     "to_pipeline": {
+      "name": "Product Backlog"
+     },
+     "workspace_id": "69bc08ebd4e9ec001c0c3229"
+    },
+    {
+     "user_id": 109092210,
+     "type": "transferIssue",
+     "created_at": "2026-05-04T19:54:55.797Z",
+     "from_pipeline": {
+      "name": "Product Backlog"
+     },
+     "to_pipeline": {
+      "name": "Project Backlog"
+     },
+     "workspace_id": "69bc08ebd4e9ec001c0c3229"
+    },
+    {
+     "user_id": 109092210,
+     "type": "transferIssue",
+     "created_at": "2026-05-04T19:07:45.439Z",
+     "from_pipeline": {
+      "name": "Sprint Backlog"
+     },
+     "to_pipeline": {
+      "name": "Product Backlog"
+     },
+     "workspace_id": "69bc08ebd4e9ec001c0c3229"
+    },
+    {
+     "user_id": 99771740,
+     "type": "transferIssue",
+     "created_at": "2026-05-03T23:04:49.051Z",
+     "from_pipeline": {
+      "name": "Product Backlog"
+     },
+     "to_pipeline": {
+      "name": "Sprint Backlog"
+     },
+     "workspace_id": "69bc08ebd4e9ec001c0c3229"
+    },
+    {
+     "user_id": 99771740,
+     "type": "transferIssue",
+     "created_at": "2026-05-01T02:17:25.715Z",
+     "from_pipeline": {
+      "name": "New Issues"
+     },
+     "to_pipeline": {
+      "name": "Product Backlog"
+     },
+     "workspace_id": "69bc08ebd4e9ec001c0c3229"
+    },
+    {
+     "user_id": 99771740,
+     "type": "estimateIssue",
+     "created_at": "2026-05-01T02:16:35.737Z",
+     "to_estimate": {
+      "value": 4
+     }
+    }
+   ]
+  },
+  {
+   "repo": "2026-1-AnatoQuizUp-Web",
+   "numero": 33,
+   "eventos": [
+    {
+     "user_id": 61212256,
+     "type": "transferIssue",
+     "created_at": "2026-05-21T04:09:18.141Z",
+     "from_pipeline": {
+      "name": "In Progress"
+     },
+     "to_pipeline": {
+      "name": "Review/QA"
+     },
+     "workspace_id": "69bc08ebd4e9ec001c0c3229"
+    },
+    {
+     "user_id": 91849929,
+     "type": "transferIssue",
+     "created_at": "2026-05-17T21:32:55.486Z",
+     "from_pipeline": {
+      "name": "Sprint Backlog"
+     },
+     "to_pipeline": {
+      "name": "In Progress"
+     },
+     "workspace_id": "69bc08ebd4e9ec001c0c3229"
+    },
+    {
+     "user_id": 109092210,
+     "type": "transferIssue",
+     "created_at": "2026-05-04T20:03:28.845Z",
+     "from_pipeline": {
+      "name": "Product Backlog"
+     },
+     "to_pipeline": {
+      "name": "Sprint Backlog"
+     },
+     "workspace_id": "69bc08ebd4e9ec001c0c3229"
+    },
+    {
+     "user_id": 109092210,
+     "type": "transferIssue",
+     "created_at": "2026-05-04T19:58:52.357Z",
+     "from_pipeline": {
+      "name": "Project Backlog"
+     },
+     "to_pipeline": {
+      "name": "Product Backlog"
+     },
+     "workspace_id": "69bc08ebd4e9ec001c0c3229"
+    },
+    {
+     "user_id": 109092210,
+     "type": "transferIssue",
+     "created_at": "2026-05-04T19:58:37.179Z",
+     "from_pipeline": {
+      "name": "Product Backlog"
+     },
+     "to_pipeline": {
+      "name": "Project Backlog"
+     },
+     "workspace_id": "69bc08ebd4e9ec001c0c3229"
+    },
+    {
+     "user_id": 109092210,
+     "type": "transferIssue",
+     "created_at": "2026-05-04T19:07:49.424Z",
+     "from_pipeline": {
+      "name": "Sprint Backlog"
+     },
+     "to_pipeline": {
+      "name": "Product Backlog"
+     },
+     "workspace_id": "69bc08ebd4e9ec001c0c3229"
+    },
+    {
+     "user_id": 99771740,
+     "type": "transferIssue",
+     "created_at": "2026-05-03T23:04:43.016Z",
+     "from_pipeline": {
+      "name": "Product Backlog"
+     },
+     "to_pipeline": {
+      "name": "Sprint Backlog"
+     },
+     "workspace_id": "69bc08ebd4e9ec001c0c3229"
+    },
+    {
+     "user_id": 99771740,
+     "type": "transferIssue",
+     "created_at": "2026-05-01T02:17:05.047Z",
+     "from_pipeline": {
+      "name": "New Issues"
+     },
+     "to_pipeline": {
+      "name": "Product Backlog"
+     },
+     "workspace_id": "69bc08ebd4e9ec001c0c3229"
+    },
+    {
+     "user_id": 99771740,
+     "type": "estimateIssue",
+     "created_at": "2026-05-01T02:10:55.556Z",
+     "to_estimate": {
+      "value": 5
+     }
+    }
+   ]
+  },
+  {
+   "repo": "2026-1-AnatoQuizUp-Usuario-Service",
+   "numero": 48,
+   "eventos": [
+    {
+     "user_id": 118488366,
+     "type": "transferIssue",
+     "created_at": "2026-05-17T22:27:56.251Z",
+     "from_pipeline": {
+      "name": "In Progress"
+     },
+     "to_pipeline": {
+      "name": "Review/QA"
+     },
+     "workspace_id": "69bc08ebd4e9ec001c0c3229"
+    },
+    {
+     "user_id": 118488366,
+     "type": "transferIssue",
+     "created_at": "2026-05-16T16:51:05.342Z",
+     "from_pipeline": {
+      "name": "Sprint Backlog"
+     },
+     "to_pipeline": {
+      "name": "In Progress"
+     },
+     "workspace_id": "69bc08ebd4e9ec001c0c3229"
+    },
+    {
+     "user_id": 109092210,
+     "type": "transferIssue",
+     "created_at": "2026-05-04T20:02:44.824Z",
+     "from_pipeline": {
+      "name": "Product Backlog"
+     },
+     "to_pipeline": {
+      "name": "Sprint Backlog"
+     },
+     "workspace_id": "69bc08ebd4e9ec001c0c3229"
+    },
+    {
+     "user_id": 109092210,
+     "type": "transferIssue",
+     "created_at": "2026-05-04T19:07:50.868Z",
+     "from_pipeline": {
+      "name": "Sprint Backlog"
+     },
+     "to_pipeline": {
+      "name": "Product Backlog"
+     },
+     "workspace_id": "69bc08ebd4e9ec001c0c3229"
+    },
+    {
+     "user_id": 99771740,
+     "type": "transferIssue",
+     "created_at": "2026-05-03T23:04:40.193Z",
+     "from_pipeline": {
+      "name": "Product Backlog"
+     },
+     "to_pipeline": {
+      "name": "Sprint Backlog"
+     },
+     "workspace_id": "69bc08ebd4e9ec001c0c3229"
+    },
+    {
+     "user_id": 99771740,
+     "type": "estimateIssue",
+     "created_at": "2026-05-01T02:04:53.467Z",
+     "to_estimate": {
+      "value": 4
+     }
+    },
+    {
+     "user_id": 99771740,
+     "type": "transferIssue",
+     "created_at": "2026-05-01T02:03:43.388Z",
+     "from_pipeline": {
+      "name": "New Issues"
+     },
+     "to_pipeline": {
+      "name": "Product Backlog"
+     },
+     "workspace_id": "69bc08ebd4e9ec001c0c3229"
+    }
+   ]
+  },
+  {
+   "repo": "2026-1-AnatoQuizUp-Usuario-Service",
+   "numero": 49,
+   "eventos": [
+    {
+     "user_id": 118488366,
+     "type": "transferIssue",
+     "created_at": "2026-05-16T16:50:35.547Z",
+     "from_pipeline": {
+      "name": "In Progress"
+     },
+     "to_pipeline": {
+      "name": "Review/QA"
+     },
+     "workspace_id": "69bc08ebd4e9ec001c0c3229"
+    },
+    {
+     "user_id": 118488366,
+     "type": "transferIssue",
+     "created_at": "2026-05-14T03:20:50.490Z",
+     "from_pipeline": {
+      "name": "Sprint Backlog"
+     },
+     "to_pipeline": {
+      "name": "In Progress"
+     },
+     "workspace_id": "69bc08ebd4e9ec001c0c3229"
+    },
+    {
+     "user_id": 109092210,
+     "type": "transferIssue",
+     "created_at": "2026-05-04T20:02:48.236Z",
+     "from_pipeline": {
+      "name": "Product Backlog"
+     },
+     "to_pipeline": {
+      "name": "Sprint Backlog"
+     },
+     "workspace_id": "69bc08ebd4e9ec001c0c3229"
+    },
+    {
+     "user_id": 109092210,
+     "type": "transferIssue",
+     "created_at": "2026-05-04T19:59:29.404Z",
+     "from_pipeline": {
+      "name": "Project Backlog"
+     },
+     "to_pipeline": {
+      "name": "Product Backlog"
+     },
+     "workspace_id": "69bc08ebd4e9ec001c0c3229"
+    },
+    {
+     "user_id": 109092210,
+     "type": "transferIssue",
+     "created_at": "2026-05-04T19:54:23.879Z",
+     "from_pipeline": {
+      "name": "Product Backlog"
+     },
+     "to_pipeline": {
+      "name": "Project Backlog"
+     },
+     "workspace_id": "69bc08ebd4e9ec001c0c3229"
+    },
+    {
+     "user_id": 109092210,
+     "type": "transferIssue",
+     "created_at": "2026-05-04T19:07:55.943Z",
+     "from_pipeline": {
+      "name": "Sprint Backlog"
+     },
+     "to_pipeline": {
+      "name": "Product Backlog"
+     },
+     "workspace_id": "69bc08ebd4e9ec001c0c3229"
+    },
+    {
+     "user_id": 99771740,
+     "type": "transferIssue",
+     "created_at": "2026-05-03T23:04:35.610Z",
+     "from_pipeline": {
+      "name": "Product Backlog"
+     },
+     "to_pipeline": {
+      "name": "Sprint Backlog"
+     },
+     "workspace_id": "69bc08ebd4e9ec001c0c3229"
+    },
+    {
+     "user_id": 99771740,
+     "type": "estimateIssue",
+     "created_at": "2026-05-01T01:58:22.204Z",
+     "to_estimate": {
+      "value": 4
+     }
+    },
+    {
+     "user_id": 109092210,
+     "type": "transferIssue",
+     "created_at": "2026-04-30T13:58:31.838Z",
+     "from_pipeline": {
+      "name": "New Issues"
+     },
+     "to_pipeline": {
+      "name": "Product Backlog"
+     },
+     "workspace_id": "69bc08ebd4e9ec001c0c3229"
+    }
+   ]
+  },
+  {
+   "repo": "2026-1-AnatoQuizUp-Web",
+   "numero": 35,
+   "eventos": [
+    {
+     "user_id": 61212256,
+     "type": "transferIssue",
+     "created_at": "2026-05-21T04:09:21.824Z",
+     "from_pipeline": {
+      "name": "In Progress"
+     },
+     "to_pipeline": {
+      "name": "Review/QA"
+     },
+     "workspace_id": "69bc08ebd4e9ec001c0c3229"
+    },
+    {
+     "user_id": 91849929,
+     "type": "transferIssue",
+     "created_at": "2026-05-17T21:32:48.350Z",
+     "from_pipeline": {
+      "name": "Sprint Backlog"
+     },
+     "to_pipeline": {
+      "name": "In Progress"
+     },
+     "workspace_id": "69bc08ebd4e9ec001c0c3229"
+    },
+    {
+     "user_id": 91849929,
+     "type": "transferIssue",
+     "created_at": "2026-05-07T23:44:53.709Z",
+     "from_pipeline": {
+      "name": "In Progress"
+     },
+     "to_pipeline": {
+      "name": "Sprint Backlog"
+     },
+     "workspace_id": "69bc08ebd4e9ec001c0c3229"
+    },
+    {
+     "user_id": 91849929,
+     "type": "transferIssue",
+     "created_at": "2026-05-03T13:17:06.226Z",
+     "from_pipeline": {
+      "name": "Product Backlog"
+     },
+     "to_pipeline": {
+      "name": "In Progress"
+     },
+     "workspace_id": "69bc08ebd4e9ec001c0c3229"
+    },
+    {
+     "user_id": 99771740,
+     "type": "estimateIssue",
+     "created_at": "2026-05-01T02:00:40.371Z",
+     "to_estimate": {
+      "value": 3
+     }
+    },
+    {
+     "user_id": 109092210,
+     "type": "transferIssue",
+     "created_at": "2026-04-30T14:11:53.286Z",
+     "from_pipeline": {
+      "name": "New Issues"
+     },
+     "to_pipeline": {
+      "name": "Product Backlog"
+     },
+     "workspace_id": "69bc08ebd4e9ec001c0c3229"
+    }
+   ]
+  },
+  {
+   "repo": "2026-1-AnatoQuizUp-Doc",
+   "numero": 29,
+   "eventos": [
+    {
+     "user_id": 118488366,
+     "type": "transferIssue",
+     "created_at": "2026-05-17T22:25:32.076Z",
+     "from_pipeline": {
+      "name": "In Progress"
+     },
+     "to_pipeline": {
+      "name": "Done"
+     },
+     "workspace_id": "69bc08ebd4e9ec001c0c3229"
+    },
+    {
+     "user_id": 98056127,
+     "type": "transferIssue",
+     "created_at": "2026-05-14T00:16:07.382Z",
+     "from_pipeline": {
+      "name": "Sprint Backlog"
+     },
+     "to_pipeline": {
+      "name": "In Progress"
+     },
+     "workspace_id": "69bc08ebd4e9ec001c0c3229"
+    },
+    {
+     "user_id": 109092210,
+     "type": "transferIssue",
+     "created_at": "2026-05-11T11:57:34.482Z",
+     "from_pipeline": {
+      "name": "New Issues"
+     },
+     "to_pipeline": {
+      "name": "Sprint Backlog"
+     },
+     "workspace_id": "69bc08ebd4e9ec001c0c3229"
+    }
+   ]
+  },
+  {
+   "repo": "2026-1-AnatoQuizUp-Web",
+   "numero": 43,
+   "eventos": [
+    {
+     "user_id": 109092210,
+     "type": "transferIssue",
+     "created_at": "2026-05-06T13:40:56.019Z",
+     "from_pipeline": {
+      "name": "Project Backlog"
+     },
+     "to_pipeline": {
+      "name": "Product Backlog"
+     },
+     "workspace_id": "69bc08ebd4e9ec001c0c3229"
+    },
+    {
+     "user_id": 109092210,
+     "type": "transferIssue",
+     "created_at": "2026-05-06T13:40:28.992Z",
+     "from_pipeline": {
+      "name": "New Issues"
+     },
+     "to_pipeline": {
+      "name": "Project Backlog"
+     },
+     "workspace_id": "69bc08ebd4e9ec001c0c3229"
+    }
+   ]
+  },
+  {
+   "repo": "2026-1-AnatoQuizUp-Web",
+   "numero": 44,
+   "eventos": [
+    {
+     "user_id": 109092210,
+     "type": "transferIssue",
+     "created_at": "2026-05-06T13:42:34.759Z",
+     "from_pipeline": {
+      "name": "New Issues"
+     },
+     "to_pipeline": {
+      "name": "Product Backlog"
+     },
+     "workspace_id": "69bc08ebd4e9ec001c0c3229"
+    }
+   ]
+  },
+  {
+   "repo": "2026-1-AnatoQuizUp-Doc",
+   "numero": 22,
+   "eventos": [
+    {
+     "user_id": 109092210,
+     "type": "transferIssue",
+     "created_at": "2026-05-10T14:03:56.570Z",
+     "from_pipeline": {
+      "name": "Sprint Backlog"
+     },
+     "to_pipeline": {
+      "name": "In Progress"
+     },
+     "workspace_id": "69bc08ebd4e9ec001c0c3229"
+    },
+    {
+     "user_id": 91849929,
+     "type": "transferIssue",
+     "created_at": "2026-05-05T12:48:25.389Z",
+     "from_pipeline": {
+      "name": "In Progress"
+     },
+     "to_pipeline": {
+      "name": "Sprint Backlog"
+     },
+     "workspace_id": "69bc08ebd4e9ec001c0c3229"
+    },
+    {
+     "user_id": 91849929,
+     "type": "transferIssue",
+     "created_at": "2026-05-05T12:46:52.961Z",
+     "from_pipeline": {
+      "name": "Sprint Backlog"
+     },
+     "to_pipeline": {
+      "name": "In Progress"
+     },
+     "workspace_id": "69bc08ebd4e9ec001c0c3229"
+    },
+    {
+     "user_id": 109092210,
+     "type": "transferIssue",
+     "created_at": "2026-05-04T19:32:40.426Z",
+     "from_pipeline": {
+      "name": "New Issues"
+     },
+     "to_pipeline": {
+      "name": "Sprint Backlog"
+     },
+     "workspace_id": "69bc08ebd4e9ec001c0c3229"
+    }
+   ]
+  },
+  {
+   "repo": "2026-1-AnatoQuizUp-Usuario-Service",
+   "numero": 17,
+   "eventos": [
+    {
+     "user_id": 110112943,
+     "type": "transferIssue",
+     "created_at": "2026-05-10T22:56:16.871Z",
+     "from_pipeline": {
+      "name": "Sprint Backlog"
+     },
+     "to_pipeline": {
+      "name": "In Progress"
+     },
+     "workspace_id": "69bc08ebd4e9ec001c0c3229"
+    },
+    {
+     "user_id": 109092210,
+     "type": "transferIssue",
+     "created_at": "2026-05-04T20:02:46.408Z",
+     "from_pipeline": {
+      "name": "Product Backlog"
+     },
+     "to_pipeline": {
+      "name": "Sprint Backlog"
+     },
+     "workspace_id": "69bc08ebd4e9ec001c0c3229"
+    },
+    {
+     "user_id": 109092210,
+     "type": "transferIssue",
+     "created_at": "2026-05-04T19:59:31.744Z",
+     "from_pipeline": {
+      "name": "Project Backlog"
+     },
+     "to_pipeline": {
+      "name": "Product Backlog"
+     },
+     "workspace_id": "69bc08ebd4e9ec001c0c3229"
+    },
+    {
+     "user_id": 109092210,
+     "type": "transferIssue",
+     "created_at": "2026-05-04T19:30:23.046Z",
+     "from_pipeline": {
+      "name": "Product Backlog"
+     },
+     "to_pipeline": {
+      "name": "Project Backlog"
+     },
+     "workspace_id": "69bc08ebd4e9ec001c0c3229"
+    },
+    {
+     "user_id": 109092210,
+     "type": "transferIssue",
+     "created_at": "2026-05-04T19:08:08.312Z",
+     "from_pipeline": {
+      "name": "Sprint Backlog"
+     },
+     "to_pipeline": {
+      "name": "Product Backlog"
+     },
+     "workspace_id": "69bc08ebd4e9ec001c0c3229"
+    },
+    {
+     "user_id": 99771740,
+     "type": "transferIssue",
+     "created_at": "2026-05-03T23:04:09.844Z",
+     "from_pipeline": {
+      "name": "Product Backlog"
+     },
+     "to_pipeline": {
+      "name": "Sprint Backlog"
+     },
+     "workspace_id": "69bc08ebd4e9ec001c0c3229"
+    },
+    {
+     "user_id": 109092210,
+     "type": "transferIssue",
+     "created_at": "2026-04-30T12:08:44.736Z",
+     "from_pipeline": {
+      "name": "Icebox"
+     },
+     "to_pipeline": {
+      "name": "Product Backlog"
+     },
+     "workspace_id": "69bc08ebd4e9ec001c0c3229"
+    },
+    {
+     "user_id": 98056127,
+     "type": "transferIssue",
+     "created_at": "2026-04-18T14:17:17.062Z",
+     "from_pipeline": {
+      "name": "Sprint Backlog"
+     },
+     "to_pipeline": {
+      "name": "Icebox"
+     },
+     "workspace_id": "69bc08ebd4e9ec001c0c3229"
+    },
+    {
+     "user_id": 98056127,
+     "type": "transferIssue",
+     "created_at": "2026-04-18T12:50:34.623Z",
+     "from_pipeline": {
+      "name": "New Issues"
+     },
+     "to_pipeline": {
+      "name": "Sprint Backlog"
+     },
+     "workspace_id": "69bc08ebd4e9ec001c0c3229"
+    }
+   ]
+  },
+  {
+   "repo": "2026-1-AnatoQuizUp-Web",
+   "numero": 12,
+   "eventos": [
+    {
+     "user_id": 110112943,
+     "type": "transferIssue",
+     "created_at": "2026-05-09T23:05:23.731Z",
+     "from_pipeline": {
+      "name": "Sprint Backlog"
+     },
+     "to_pipeline": {
+      "name": "In Progress"
+     },
+     "workspace_id": "69bc08ebd4e9ec001c0c3229"
+    },
+    {
+     "user_id": 109092210,
+     "type": "transferIssue",
+     "created_at": "2026-05-04T20:03:09.804Z",
+     "from_pipeline": {
+      "name": "Product Backlog"
+     },
+     "to_pipeline": {
+      "name": "Sprint Backlog"
+     },
+     "workspace_id": "69bc08ebd4e9ec001c0c3229"
+    },
+    {
+     "user_id": 109092210,
+     "type": "transferIssue",
+     "created_at": "2026-05-04T19:59:33.864Z",
+     "from_pipeline": {
+      "name": "Project Backlog"
+     },
+     "to_pipeline": {
+      "name": "Product Backlog"
+     },
+     "workspace_id": "69bc08ebd4e9ec001c0c3229"
+    },
+    {
+     "user_id": 109092210,
+     "type": "transferIssue",
+     "created_at": "2026-05-04T19:30:26.236Z",
+     "from_pipeline": {
+      "name": "Product Backlog"
+     },
+     "to_pipeline": {
+      "name": "Project Backlog"
+     },
+     "workspace_id": "69bc08ebd4e9ec001c0c3229"
+    },
+    {
+     "user_id": 109092210,
+     "type": "transferIssue",
+     "created_at": "2026-05-04T19:08:06.427Z",
+     "from_pipeline": {
+      "name": "Sprint Backlog"
+     },
+     "to_pipeline": {
+      "name": "Product Backlog"
+     },
+     "workspace_id": "69bc08ebd4e9ec001c0c3229"
+    },
+    {
+     "user_id": 99771740,
+     "type": "transferIssue",
+     "created_at": "2026-05-03T23:04:06.078Z",
+     "from_pipeline": {
+      "name": "Product Backlog"
+     },
+     "to_pipeline": {
+      "name": "Sprint Backlog"
+     },
+     "workspace_id": "69bc08ebd4e9ec001c0c3229"
+    },
+    {
+     "user_id": 109092210,
+     "type": "transferIssue",
+     "created_at": "2026-04-30T12:08:50.145Z",
+     "from_pipeline": {
+      "name": "Icebox"
+     },
+     "to_pipeline": {
+      "name": "Product Backlog"
+     },
+     "workspace_id": "69bc08ebd4e9ec001c0c3229"
+    },
+    {
+     "user_id": 98056127,
+     "type": "transferIssue",
+     "created_at": "2026-04-18T14:17:19.533Z",
+     "from_pipeline": {
+      "name": "Sprint Backlog"
+     },
+     "to_pipeline": {
+      "name": "Icebox"
+     },
+     "workspace_id": "69bc08ebd4e9ec001c0c3229"
+    },
+    {
+     "user_id": 98056127,
+     "type": "transferIssue",
+     "created_at": "2026-04-18T12:50:34.623Z",
+     "from_pipeline": {
+      "name": "New Issues"
+     },
+     "to_pipeline": {
+      "name": "Sprint Backlog"
+     },
+     "workspace_id": "69bc08ebd4e9ec001c0c3229"
+    }
+   ]
+  },
+  {
+   "repo": "2026-1-AnatoQuizUp-Doc",
+   "numero": 21,
+   "eventos": [
+    {
+     "user_id": 110112943,
+     "type": "transferIssue",
+     "created_at": "2026-05-09T23:06:06.289Z",
+     "from_pipeline": {
+      "name": "Sprint Backlog"
+     },
+     "to_pipeline": {
+      "name": "In Progress"
+     },
+     "workspace_id": "69bc08ebd4e9ec001c0c3229"
+    },
+    {
+     "user_id": 110112943,
+     "type": "transferIssue",
+     "created_at": "2026-05-09T23:05:51.201Z",
+     "from_pipeline": {
+      "name": "In Progress"
+     },
+     "to_pipeline": {
+      "name": "Sprint Backlog"
+     },
+     "workspace_id": "69bc08ebd4e9ec001c0c3229"
+    },
+    {
+     "user_id": 110112943,
+     "type": "transferIssue",
+     "created_at": "2026-05-08T23:06:54.868Z",
+     "from_pipeline": {
+      "name": "Sprint Backlog"
+     },
+     "to_pipeline": {
+      "name": "In Progress"
+     },
+     "workspace_id": "69bc08ebd4e9ec001c0c3229"
+    },
+    {
+     "user_id": 109092210,
+     "type": "transferIssue",
+     "created_at": "2026-05-04T19:13:53.016Z",
+     "from_pipeline": {
+      "name": "New Issues"
+     },
+     "to_pipeline": {
+      "name": "Sprint Backlog"
+     },
+     "workspace_id": "69bc08ebd4e9ec001c0c3229"
+    }
+   ]
+  },
+  {
+   "repo": "2026-1-AnatoQuizUp-Web",
+   "numero": 36,
+   "eventos": [
+    {
+     "user_id": 91849929,
+     "type": "transferIssue",
+     "created_at": "2026-05-07T23:45:45.507Z",
+     "from_pipeline": {
+      "name": "Sprint Backlog"
+     },
+     "to_pipeline": {
+      "name": "In Progress"
+     },
+     "workspace_id": "69bc08ebd4e9ec001c0c3229"
+    },
+    {
+     "user_id": 109092210,
+     "type": "transferIssue",
+     "created_at": "2026-05-04T20:03:13.565Z",
+     "from_pipeline": {
+      "name": "Product Backlog"
+     },
+     "to_pipeline": {
+      "name": "Sprint Backlog"
+     },
+     "workspace_id": "69bc08ebd4e9ec001c0c3229"
+    },
+    {
+     "user_id": 109092210,
+     "type": "transferIssue",
+     "created_at": "2026-05-04T19:58:55.404Z",
+     "from_pipeline": {
+      "name": "Project Backlog"
+     },
+     "to_pipeline": {
+      "name": "Product Backlog"
+     },
+     "workspace_id": "69bc08ebd4e9ec001c0c3229"
+    },
+    {
+     "user_id": 109092210,
+     "type": "transferIssue",
+     "created_at": "2026-05-04T19:39:15.713Z",
+     "from_pipeline": {
+      "name": "Product Backlog"
+     },
+     "to_pipeline": {
+      "name": "Project Backlog"
+     },
+     "workspace_id": "69bc08ebd4e9ec001c0c3229"
+    },
+    {
+     "user_id": 109092210,
+     "type": "transferIssue",
+     "created_at": "2026-05-04T19:07:54.318Z",
+     "from_pipeline": {
+      "name": "Sprint Backlog"
+     },
+     "to_pipeline": {
+      "name": "Product Backlog"
+     },
+     "workspace_id": "69bc08ebd4e9ec001c0c3229"
+    },
+    {
+     "user_id": 99771740,
+     "type": "transferIssue",
+     "created_at": "2026-05-03T23:04:30.662Z",
+     "from_pipeline": {
+      "name": "Product Backlog"
+     },
+     "to_pipeline": {
+      "name": "Sprint Backlog"
+     },
+     "workspace_id": "69bc08ebd4e9ec001c0c3229"
+    },
+    {
+     "user_id": 99771740,
+     "type": "estimateIssue",
+     "created_at": "2026-05-01T01:54:50.676Z",
+     "to_estimate": {
+      "value": 5
+     }
+    },
+    {
+     "user_id": 109092210,
+     "type": "transferIssue",
+     "created_at": "2026-04-30T14:30:25.245Z",
+     "from_pipeline": {
+      "name": "New Issues"
+     },
+     "to_pipeline": {
+      "name": "Product Backlog"
+     },
+     "workspace_id": "69bc08ebd4e9ec001c0c3229"
+    }
+   ]
+  },
+  {
+   "repo": "2026-1-AnatoQuizUp-Usuario-Service",
+   "numero": 50,
+   "eventos": [
+    {
+     "user_id": 91849929,
+     "type": "transferIssue",
+     "created_at": "2026-05-10T03:22:05.622Z",
+     "from_pipeline": {
+      "name": "In Progress"
+     },
+     "to_pipeline": {
+      "name": "Review/QA"
+     },
+     "workspace_id": "69bc08ebd4e9ec001c0c3229"
+    },
+    {
+     "user_id": 91849929,
+     "type": "transferIssue",
+     "created_at": "2026-05-08T01:08:02.078Z",
+     "from_pipeline": {
+      "name": "Sprint Backlog"
+     },
+     "to_pipeline": {
+      "name": "In Progress"
+     },
+     "workspace_id": "69bc08ebd4e9ec001c0c3229"
+    },
+    {
+     "user_id": 109092210,
+     "type": "transferIssue",
+     "created_at": "2026-05-04T20:02:56.458Z",
+     "from_pipeline": {
+      "name": "Product Backlog"
+     },
+     "to_pipeline": {
+      "name": "Sprint Backlog"
+     },
+     "workspace_id": "69bc08ebd4e9ec001c0c3229"
+    },
+    {
+     "user_id": 109092210,
+     "type": "transferIssue",
+     "created_at": "2026-05-04T19:58:58.692Z",
+     "from_pipeline": {
+      "name": "Project Backlog"
+     },
+     "to_pipeline": {
+      "name": "Product Backlog"
+     },
+     "workspace_id": "69bc08ebd4e9ec001c0c3229"
+    },
+    {
+     "user_id": 109092210,
+     "type": "transferIssue",
+     "created_at": "2026-05-04T19:39:11.174Z",
+     "from_pipeline": {
+      "name": "Product Backlog"
+     },
+     "to_pipeline": {
+      "name": "Project Backlog"
+     },
+     "workspace_id": "69bc08ebd4e9ec001c0c3229"
+    },
+    {
+     "user_id": 109092210,
+     "type": "transferIssue",
+     "created_at": "2026-05-04T19:07:59.314Z",
+     "from_pipeline": {
+      "name": "Sprint Backlog"
+     },
+     "to_pipeline": {
+      "name": "Product Backlog"
+     },
+     "workspace_id": "69bc08ebd4e9ec001c0c3229"
+    },
+    {
+     "user_id": 99771740,
+     "type": "transferIssue",
+     "created_at": "2026-05-03T23:04:27.511Z",
+     "from_pipeline": {
+      "name": "Product Backlog"
+     },
+     "to_pipeline": {
+      "name": "Sprint Backlog"
+     },
+     "workspace_id": "69bc08ebd4e9ec001c0c3229"
+    },
+    {
+     "user_id": 99771740,
+     "type": "estimateIssue",
+     "created_at": "2026-05-01T01:53:23.721Z",
+     "to_estimate": {
+      "value": 5
+     }
+    },
+    {
+     "user_id": 109092210,
+     "type": "transferIssue",
+     "created_at": "2026-04-30T14:02:23.570Z",
+     "from_pipeline": {
+      "name": "New Issues"
+     },
+     "to_pipeline": {
+      "name": "Product Backlog"
+     },
+     "workspace_id": "69bc08ebd4e9ec001c0c3229"
+    }
+   ]
+  },
+  {
+   "repo": "2026-1-AnatoQuizUp-Doc",
+   "numero": 17,
+   "eventos": [
+    {
+     "user_id": 109092210,
+     "type": "transferIssue",
+     "created_at": "2026-05-04T20:02:43.086Z",
+     "from_pipeline": {
+      "name": "Product Backlog"
+     },
+     "to_pipeline": {
+      "name": "Sprint Backlog"
+     },
+     "workspace_id": "69bc08ebd4e9ec001c0c3229"
+    },
+    {
+     "user_id": 109092210,
+     "type": "transferIssue",
+     "created_at": "2026-05-04T20:00:04.350Z",
+     "from_pipeline": {
+      "name": "Project Backlog"
+     },
+     "to_pipeline": {
+      "name": "Product Backlog"
+     },
+     "workspace_id": "69bc08ebd4e9ec001c0c3229"
+    },
+    {
+     "user_id": 109092210,
+     "type": "transferIssue",
+     "created_at": "2026-05-04T19:54:45.097Z",
+     "from_pipeline": {
+      "name": "Product Backlog"
+     },
+     "to_pipeline": {
+      "name": "Project Backlog"
+     },
+     "workspace_id": "69bc08ebd4e9ec001c0c3229"
+    },
+    {
+     "user_id": 109092210,
+     "type": "transferIssue",
+     "created_at": "2026-05-04T19:07:44.157Z",
+     "from_pipeline": {
+      "name": "Sprint Backlog"
+     },
+     "to_pipeline": {
+      "name": "Product Backlog"
+     },
+     "workspace_id": "69bc08ebd4e9ec001c0c3229"
+    },
+    {
+     "user_id": 99771740,
+     "type": "transferIssue",
+     "created_at": "2026-05-03T23:04:51.386Z",
+     "from_pipeline": {
+      "name": "Product Backlog"
+     },
+     "to_pipeline": {
+      "name": "Sprint Backlog"
+     },
+     "workspace_id": "69bc08ebd4e9ec001c0c3229"
+    },
+    {
+     "user_id": 99771740,
+     "type": "transferIssue",
+     "created_at": "2026-05-01T02:17:14.465Z",
+     "from_pipeline": {
+      "name": "New Issues"
+     },
+     "to_pipeline": {
+      "name": "Product Backlog"
+     },
+     "workspace_id": "69bc08ebd4e9ec001c0c3229"
+    },
+    {
+     "user_id": 99771740,
+     "type": "estimateIssue",
+     "created_at": "2026-05-01T02:12:04.280Z",
+     "to_estimate": {
+      "value": 2
+     }
+    }
+   ]
+  },
+  {
+   "repo": "2026-1-AnatoQuizUp-Doc",
+   "numero": 11,
+   "eventos": [
+    {
+     "user_id": 118488366,
+     "type": "transferIssue",
+     "created_at": "2026-05-07T02:46:38.914Z",
+     "from_pipeline": {
+      "name": "Sprint Backlog"
+     },
+     "to_pipeline": {
+      "name": "Review/QA"
+     },
+     "workspace_id": "69bc08ebd4e9ec001c0c3229"
+    },
+    {
+     "user_id": 109092210,
+     "type": "transferIssue",
+     "created_at": "2026-05-04T20:02:52.933Z",
+     "from_pipeline": {
+      "name": "Product Backlog"
+     },
+     "to_pipeline": {
+      "name": "Sprint Backlog"
+     },
+     "workspace_id": "69bc08ebd4e9ec001c0c3229"
+    },
+    {
+     "user_id": 109092210,
+     "type": "transferIssue",
+     "created_at": "2026-05-04T19:59:02.206Z",
+     "from_pipeline": {
+      "name": "Project Backlog"
+     },
+     "to_pipeline": {
+      "name": "Product Backlog"
+     },
+     "workspace_id": "69bc08ebd4e9ec001c0c3229"
+    },
+    {
+     "user_id": 109092210,
+     "type": "transferIssue",
+     "created_at": "2026-05-04T19:55:03.071Z",
+     "from_pipeline": {
+      "name": "Product Backlog"
+     },
+     "to_pipeline": {
+      "name": "Project Backlog"
+     },
+     "workspace_id": "69bc08ebd4e9ec001c0c3229"
+    },
+    {
+     "user_id": 109092210,
+     "type": "transferIssue",
+     "created_at": "2026-05-04T19:07:52.587Z",
+     "from_pipeline": {
+      "name": "Sprint Backlog"
+     },
+     "to_pipeline": {
+      "name": "Product Backlog"
+     },
+     "workspace_id": "69bc08ebd4e9ec001c0c3229"
+    },
+    {
+     "user_id": 99771740,
+     "type": "transferIssue",
+     "created_at": "2026-05-03T23:04:33.170Z",
+     "from_pipeline": {
+      "name": "Product Backlog"
+     },
+     "to_pipeline": {
+      "name": "Sprint Backlog"
+     },
+     "workspace_id": "69bc08ebd4e9ec001c0c3229"
+    },
+    {
+     "user_id": 99771740,
+     "type": "estimateIssue",
+     "created_at": "2026-05-01T01:56:00.599Z",
+     "to_estimate": {
+      "value": 2
+     }
+    },
+    {
+     "user_id": 109092210,
+     "type": "transferIssue",
+     "created_at": "2026-04-30T14:22:41.561Z",
+     "from_pipeline": {
+      "name": "New Issues"
+     },
+     "to_pipeline": {
+      "name": "Product Backlog"
+     },
+     "workspace_id": "69bc08ebd4e9ec001c0c3229"
+    }
+   ]
+  },
+  {
+   "repo": "2026-1-AnatoQuizUp-Doc",
+   "numero": 7,
+   "eventos": [
+    {
+     "user_id": 118488366,
+     "type": "transferIssue",
+     "created_at": "2026-05-07T02:46:36.223Z",
+     "from_pipeline": {
+      "name": "Sprint Backlog"
+     },
+     "to_pipeline": {
+      "name": "Review/QA"
+     },
+     "workspace_id": "69bc08ebd4e9ec001c0c3229"
+    },
+    {
+     "user_id": 109092210,
+     "type": "transferIssue",
+     "created_at": "2026-05-04T20:03:14.928Z",
+     "from_pipeline": {
+      "name": "Product Backlog"
+     },
+     "to_pipeline": {
+      "name": "Sprint Backlog"
+     },
+     "workspace_id": "69bc08ebd4e9ec001c0c3229"
+    },
+    {
+     "user_id": 109092210,
+     "type": "transferIssue",
+     "created_at": "2026-05-04T19:58:53.965Z",
+     "from_pipeline": {
+      "name": "Project Backlog"
+     },
+     "to_pipeline": {
+      "name": "Product Backlog"
+     },
+     "workspace_id": "69bc08ebd4e9ec001c0c3229"
+    },
+    {
+     "user_id": 109092210,
+     "type": "transferIssue",
+     "created_at": "2026-05-04T19:58:39.435Z",
+     "from_pipeline": {
+      "name": "Product Backlog"
+     },
+     "to_pipeline": {
+      "name": "Project Backlog"
+     },
+     "workspace_id": "69bc08ebd4e9ec001c0c3229"
+    },
+    {
+     "user_id": 109092210,
+     "type": "transferIssue",
+     "created_at": "2026-05-04T19:07:48.316Z",
+     "from_pipeline": {
+      "name": "Sprint Backlog"
+     },
+     "to_pipeline": {
+      "name": "Product Backlog"
+     },
+     "workspace_id": "69bc08ebd4e9ec001c0c3229"
+    },
+    {
+     "user_id": 99771740,
+     "type": "transferIssue",
+     "created_at": "2026-05-03T23:04:37.988Z",
+     "from_pipeline": {
+      "name": "Product Backlog"
+     },
+     "to_pipeline": {
+      "name": "Sprint Backlog"
+     },
+     "workspace_id": "69bc08ebd4e9ec001c0c3229"
+    },
+    {
+     "user_id": 99771740,
+     "type": "estimateIssue",
+     "created_at": "2026-05-01T02:02:09.763Z",
+     "to_estimate": {
+      "value": 3
+     }
+    },
+    {
+     "user_id": 109092210,
+     "type": "transferIssue",
+     "created_at": "2026-04-30T13:29:57.153Z",
+     "from_pipeline": {
+      "name": "New Issues"
+     },
+     "to_pipeline": {
+      "name": "Product Backlog"
+     },
+     "workspace_id": "69bc08ebd4e9ec001c0c3229"
+    }
+   ]
+  },
+  {
+   "repo": "2026-1-AnatoQuizUp-Web",
+   "numero": 37,
+   "eventos": [
+    {
+     "user_id": 91849929,
+     "type": "transferIssue",
+     "created_at": "2026-05-02T13:16:57.205Z",
+     "from_pipeline": {
+      "name": "Sprint Backlog"
+     },
+     "to_pipeline": {
+      "name": "In Progress"
+     },
+     "workspace_id": "69bc08ebd4e9ec001c0c3229"
+    },
+    {
+     "user_id": 99771740,
+     "type": "transferIssue",
+     "created_at": "2026-05-01T02:48:37.277Z",
+     "from_pipeline": {
+      "name": "Product Backlog"
+     },
+     "to_pipeline": {
+      "name": "Sprint Backlog"
+     },
+     "workspace_id": "69bc08ebd4e9ec001c0c3229"
+    },
+    {
+     "user_id": 109092210,
+     "type": "transferIssue",
+     "created_at": "2026-04-30T15:06:42.223Z",
+     "from_pipeline": {
+      "name": "New Issues"
+     },
+     "to_pipeline": {
+      "name": "Product Backlog"
+     },
+     "workspace_id": "69bc08ebd4e9ec001c0c3229"
+    }
+   ]
+  },
+  {
+   "repo": "2026-1-AnatoQuizUp-Doc",
+   "numero": 13,
+   "eventos": [
+    {
+     "user_id": 91849929,
+     "type": "transferIssue",
+     "created_at": "2026-05-05T12:48:43.523Z",
+     "from_pipeline": {
+      "name": "Sprint Backlog"
+     },
+     "to_pipeline": {
+      "name": "In Progress"
+     },
+     "workspace_id": "69bc08ebd4e9ec001c0c3229"
+    },
+    {
+     "user_id": 109092210,
+     "type": "transferIssue",
+     "created_at": "2026-05-04T20:03:11.697Z",
+     "from_pipeline": {
+      "name": "Product Backlog"
+     },
+     "to_pipeline": {
+      "name": "Sprint Backlog"
+     },
+     "workspace_id": "69bc08ebd4e9ec001c0c3229"
+    },
+    {
+     "user_id": 109092210,
+     "type": "transferIssue",
+     "created_at": "2026-05-04T19:58:57.129Z",
+     "from_pipeline": {
+      "name": "Project Backlog"
+     },
+     "to_pipeline": {
+      "name": "Product Backlog"
+     },
+     "workspace_id": "69bc08ebd4e9ec001c0c3229"
+    },
+    {
+     "user_id": 109092210,
+     "type": "transferIssue",
+     "created_at": "2026-05-04T19:39:12.922Z",
+     "from_pipeline": {
+      "name": "Product Backlog"
+     },
+     "to_pipeline": {
+      "name": "Project Backlog"
+     },
+     "workspace_id": "69bc08ebd4e9ec001c0c3229"
+    },
+    {
+     "user_id": 109092210,
+     "type": "transferIssue",
+     "created_at": "2026-05-04T19:07:57.666Z",
+     "from_pipeline": {
+      "name": "Sprint Backlog"
+     },
+     "to_pipeline": {
+      "name": "Product Backlog"
+     },
+     "workspace_id": "69bc08ebd4e9ec001c0c3229"
+    },
+    {
+     "user_id": 99771740,
+     "type": "transferIssue",
+     "created_at": "2026-05-03T23:04:23.944Z",
+     "from_pipeline": {
+      "name": "Product Backlog"
+     },
+     "to_pipeline": {
+      "name": "Sprint Backlog"
+     },
+     "workspace_id": "69bc08ebd4e9ec001c0c3229"
+    },
+    {
+     "user_id": 99771740,
+     "type": "estimateIssue",
+     "created_at": "2026-05-01T01:47:54.271Z",
+     "to_estimate": {
+      "value": 3
+     }
+    },
+    {
+     "user_id": 109092210,
+     "type": "transferIssue",
+     "created_at": "2026-04-30T15:02:36.188Z",
+     "from_pipeline": {
+      "name": "New Issues"
+     },
+     "to_pipeline": {
+      "name": "Product Backlog"
+     },
+     "workspace_id": "69bc08ebd4e9ec001c0c3229"
+    }
+   ]
+  },
+  {
+   "repo": "2026-1-AnatoQuizUp-Usuario-Service",
+   "numero": 47,
+   "eventos": [
+    {
+     "user_id": 109092210,
+     "type": "transferIssue",
+     "created_at": "2026-05-06T12:47:11.029Z",
+     "from_pipeline": {
+      "name": "Sprint Backlog"
+     },
+     "to_pipeline": {
+      "name": "Review/QA"
+     },
+     "workspace_id": "69bc08ebd4e9ec001c0c3229"
+    },
+    {
+     "user_id": 109092210,
+     "type": "transferIssue",
+     "created_at": "2026-05-04T20:02:54.744Z",
+     "from_pipeline": {
+      "name": "Product Backlog"
+     },
+     "to_pipeline": {
+      "name": "Sprint Backlog"
+     },
+     "workspace_id": "69bc08ebd4e9ec001c0c3229"
+    },
+    {
+     "user_id": 109092210,
+     "type": "transferIssue",
+     "created_at": "2026-05-04T19:59:00.519Z",
+     "from_pipeline": {
+      "name": "Project Backlog"
+     },
+     "to_pipeline": {
+      "name": "Product Backlog"
+     },
+     "workspace_id": "69bc08ebd4e9ec001c0c3229"
+    },
+    {
+     "user_id": 109092210,
+     "type": "transferIssue",
+     "created_at": "2026-05-04T19:39:08.572Z",
+     "from_pipeline": {
+      "name": "Product Backlog"
+     },
+     "to_pipeline": {
+      "name": "Project Backlog"
+     },
+     "workspace_id": "69bc08ebd4e9ec001c0c3229"
+    },
+    {
+     "user_id": 109092210,
+     "type": "transferIssue",
+     "created_at": "2026-05-04T19:08:01.181Z",
+     "from_pipeline": {
+      "name": "Sprint Backlog"
+     },
+     "to_pipeline": {
+      "name": "Product Backlog"
+     },
+     "workspace_id": "69bc08ebd4e9ec001c0c3229"
+    },
+    {
+     "user_id": 99771740,
+     "type": "transferIssue",
+     "created_at": "2026-05-03T23:04:20.614Z",
+     "from_pipeline": {
+      "name": "Product Backlog"
+     },
+     "to_pipeline": {
+      "name": "Sprint Backlog"
+     },
+     "workspace_id": "69bc08ebd4e9ec001c0c3229"
+    },
+    {
+     "user_id": 109092210,
+     "type": "transferIssue",
+     "created_at": "2026-04-30T13:17:58.712Z",
+     "from_pipeline": {
+      "name": "New Issues"
+     },
+     "to_pipeline": {
+      "name": "Product Backlog"
+     },
+     "workspace_id": "69bc08ebd4e9ec001c0c3229"
+    }
+   ]
+  },
+  {
+   "repo": "2026-1-AnatoQuizUp-Doc",
+   "numero": 5,
+   "eventos": [
+    {
+     "user_id": 99771740,
+     "type": "transferIssue",
+     "created_at": "2026-05-03T23:03:16.993Z",
+     "from_pipeline": {
+      "name": "Sprint Backlog"
+     },
+     "to_pipeline": {
+      "name": "In Progress"
+     },
+     "workspace_id": "69bc08ebd4e9ec001c0c3229"
+    },
+    {
+     "user_id": 109092210,
+     "type": "transferIssue",
+     "created_at": "2026-04-30T12:32:57.471Z",
+     "from_pipeline": {
+      "name": "Icebox"
+     },
+     "to_pipeline": {
+      "name": "Sprint Backlog"
+     },
+     "workspace_id": "69bc08ebd4e9ec001c0c3229"
+    },
+    {
+     "user_id": 99771740,
+     "type": "transferIssue",
+     "created_at": "2026-04-29T23:23:06.022Z",
+     "from_pipeline": {
+      "name": "New Issues"
+     },
+     "to_pipeline": {
+      "name": "Icebox"
+     },
+     "workspace_id": "69bc08ebd4e9ec001c0c3229"
+    }
+   ]
+  },
+  {
+   "repo": "2026-1-AnatoQuizUp-Web",
+   "numero": 38,
+   "eventos": [
+    {
+     "user_id": 99771740,
+     "type": "transferIssue",
+     "created_at": "2026-05-03T23:03:15.924Z",
+     "from_pipeline": {
+      "name": "Sprint Backlog"
+     },
+     "to_pipeline": {
+      "name": "In Progress"
+     },
+     "workspace_id": "69bc08ebd4e9ec001c0c3229"
+    },
+    {
+     "user_id": 99771740,
+     "type": "transferIssue",
+     "created_at": "2026-05-01T02:48:34.861Z",
+     "from_pipeline": {
+      "name": "Product Backlog"
+     },
+     "to_pipeline": {
+      "name": "Sprint Backlog"
+     },
+     "workspace_id": "69bc08ebd4e9ec001c0c3229"
+    },
+    {
+     "user_id": 109092210,
+     "type": "transferIssue",
+     "created_at": "2026-04-30T15:11:50.856Z",
+     "from_pipeline": {
+      "name": "New Issues"
+     },
+     "to_pipeline": {
+      "name": "Product Backlog"
+     },
+     "workspace_id": "69bc08ebd4e9ec001c0c3229"
+    }
+   ]
+  },
+  {
+   "repo": "2026-1-AnatoQuizUp-Web",
+   "numero": 39,
+   "eventos": [
+    {
+     "type": "transferIssue",
+     "created_at": "2026-05-02T20:35:39.235Z",
+     "from_pipeline": {
+      "name": "In Progress"
+     },
+     "to_pipeline": {
+      "name": "Review/QA"
+     },
+     "workspace_id": "69bc08ebd4e9ec001c0c3229"
+    },
+    {
+     "user_id": 118488366,
+     "type": "transferIssue",
+     "created_at": "2026-05-02T19:51:03.751Z",
+     "from_pipeline": {
+      "name": "New Issues"
+     },
+     "to_pipeline": {
+      "name": "In Progress"
+     },
+     "workspace_id": "69bc08ebd4e9ec001c0c3229"
+    }
+   ]
+  },
+  {
+   "repo": "2026-1-AnatoQuizUp-Usuario-Service",
+   "numero": 18,
+   "eventos": [
+    {
+     "user_id": 109092210,
+     "type": "transferIssue",
+     "created_at": "2026-05-01T12:24:46.976Z",
+     "from_pipeline": {
+      "name": "Icebox"
+     },
+     "to_pipeline": {
+      "name": "Rejected"
+     },
+     "workspace_id": "69bc08ebd4e9ec001c0c3229"
+    },
+    {
+     "user_id": 110112943,
+     "type": "transferIssue",
+     "created_at": "2026-04-26T22:57:06.697Z",
+     "from_pipeline": {
+      "name": "Sprint Backlog"
+     },
+     "to_pipeline": {
+      "name": "Icebox"
+     },
+     "workspace_id": "69bc08ebd4e9ec001c0c3229"
+    },
+    {
+     "user_id": 98056127,
+     "type": "estimateIssue",
+     "created_at": "2026-04-18T14:19:01.552Z",
+     "to_estimate": {
+      "value": 3
+     }
+    },
+    {
+     "user_id": 98056127,
+     "type": "transferIssue",
+     "created_at": "2026-04-18T12:50:34.623Z",
+     "from_pipeline": {
+      "name": "New Issues"
+     },
+     "to_pipeline": {
+      "name": "Sprint Backlog"
+     },
+     "workspace_id": "69bc08ebd4e9ec001c0c3229"
+    }
+   ]
+  },
+  {
+   "repo": "2026-1-AnatoQuizUp-Web",
+   "numero": 13,
+   "eventos": [
+    {
+     "user_id": 109092210,
+     "type": "transferIssue",
+     "created_at": "2026-05-01T12:24:49.247Z",
+     "from_pipeline": {
+      "name": "Icebox"
+     },
+     "to_pipeline": {
+      "name": "Rejected"
+     },
+     "workspace_id": "69bc08ebd4e9ec001c0c3229"
+    },
+    {
+     "user_id": 110112943,
+     "type": "transferIssue",
+     "created_at": "2026-04-26T22:57:04.620Z",
+     "from_pipeline": {
+      "name": "Sprint Backlog"
+     },
+     "to_pipeline": {
+      "name": "Icebox"
+     },
+     "workspace_id": "69bc08ebd4e9ec001c0c3229"
+    },
+    {
+     "user_id": 98056127,
+     "type": "estimateIssue",
+     "created_at": "2026-04-18T14:19:25.970Z",
+     "to_estimate": {
+      "value": 3
+     }
+    },
+    {
+     "user_id": 98056127,
+     "type": "transferIssue",
+     "created_at": "2026-04-18T12:50:34.623Z",
+     "from_pipeline": {
+      "name": "New Issues"
+     },
+     "to_pipeline": {
+      "name": "Sprint Backlog"
+     },
+     "workspace_id": "69bc08ebd4e9ec001c0c3229"
+    }
+   ]
+  },
+  {
+   "repo": "2026-1-AnatoQuizUp-Doc",
+   "numero": 2,
+   "eventos": [
+    {
+     "user_id": 99771740,
+     "type": "transferIssue",
+     "created_at": "2026-05-01T01:32:51.709Z",
+     "from_pipeline": {
+      "name": "Rejected"
+     },
+     "to_pipeline": {
+      "name": "Done"
+     },
+     "workspace_id": "69bc08ebd4e9ec001c0c3229"
+    },
+    {
+     "user_id": 99771740,
+     "type": "transferIssue",
+     "created_at": "2026-05-01T01:31:30.699Z",
+     "from_pipeline": {
+      "name": "Review/QA"
+     },
+     "to_pipeline": {
+      "name": "Rejected"
+     },
+     "workspace_id": "69bc08ebd4e9ec001c0c3229"
+    },
+    {
+     "user_id": 98056127,
+     "type": "transferIssue",
+     "created_at": "2026-04-27T09:00:04.631Z",
+     "from_pipeline": {
+      "name": "In Progress"
+     },
+     "to_pipeline": {
+      "name": "Review/QA"
+     },
+     "workspace_id": "69bc08ebd4e9ec001c0c3229"
+    },
+    {
+     "user_id": 98056127,
+     "type": "estimateIssue",
+     "created_at": "2026-04-19T15:58:45.226Z",
+     "from_estimate": {
+      "value": 21
+     },
+     "to_estimate": {
+      "value": 8
+     }
+    },
+    {
+     "user_id": 98056127,
+     "type": "estimateIssue",
+     "created_at": "2026-04-19T15:31:55.470Z",
+     "to_estimate": {
+      "value": 21
+     }
+    },
+    {
+     "user_id": 91849929,
+     "type": "transferIssue",
+     "created_at": "2026-04-12T12:47:23.442Z",
+     "from_pipeline": {
+      "name": "Project Backlog"
+     },
+     "to_pipeline": {
+      "name": "In Progress"
+     },
+     "workspace_id": "69bc08ebd4e9ec001c0c3229"
+    },
+    {
+     "user_id": 110112943,
+     "type": "transferIssue",
+     "created_at": "2026-04-09T00:27:18.159Z",
+     "from_pipeline": {
+      "name": "Product Backlog"
+     },
+     "to_pipeline": {
+      "name": "Project Backlog"
+     },
+     "workspace_id": "69bc08ebd4e9ec001c0c3229"
+    },
+    {
+     "user_id": 110112943,
+     "type": "transferIssue",
+     "created_at": "2026-04-04T00:22:56.627Z",
+     "from_pipeline": {
+      "name": "In Progress"
+     },
+     "to_pipeline": {
+      "name": "Product Backlog"
+     },
+     "workspace_id": "69bc08ebd4e9ec001c0c3229"
+    },
+    {
+     "user_id": 110112943,
+     "type": "transferIssue",
+     "created_at": "2026-04-04T00:21:12.154Z",
+     "from_pipeline": {
+      "name": "New Issues"
+     },
+     "to_pipeline": {
+      "name": "In Progress"
+     },
+     "workspace_id": "69bc08ebd4e9ec001c0c3229"
+    }
+   ]
+  },
+  {
+   "repo": "2026-1-AnatoQuizUp-Usuario-Service",
+   "numero": 23,
+   "eventos": [
+    {
+     "user_id": 116747171,
+     "type": "transferIssue",
+     "created_at": "2026-04-27T13:18:56.459Z",
+     "from_pipeline": {
+      "name": "In Progress"
+     },
+     "to_pipeline": {
+      "name": "Review/QA"
+     },
+     "workspace_id": "69bc08ebd4e9ec001c0c3229"
+    },
+    {
+     "user_id": 116747171,
+     "type": "transferIssue",
+     "created_at": "2026-04-27T11:28:29.921Z",
+     "from_pipeline": {
+      "name": "Sprint Backlog"
+     },
+     "to_pipeline": {
+      "name": "In Progress"
+     },
+     "workspace_id": "69bc08ebd4e9ec001c0c3229"
+    },
+    {
+     "user_id": 98056127,
+     "type": "estimateIssue",
+     "created_at": "2026-04-19T16:25:19.248Z",
+     "to_estimate": {
+      "value": 2
+     }
+    },
+    {
+     "user_id": 98056127,
+     "type": "transferIssue",
+     "created_at": "2026-04-19T16:24:37.492Z",
+     "from_pipeline": {
+      "name": "Project Backlog"
+     },
+     "to_pipeline": {
+      "name": "Sprint Backlog"
+     },
+     "workspace_id": "69bc08ebd4e9ec001c0c3229"
+    },
+    {
+     "user_id": 98056127,
+     "type": "transferIssue",
+     "created_at": "2026-04-19T16:23:35.435Z",
+     "from_pipeline": {
+      "name": "New Issues"
+     },
+     "to_pipeline": {
+      "name": "Project Backlog"
+     },
+     "workspace_id": "69bc08ebd4e9ec001c0c3229"
+    }
+   ]
+  },
+  {
+   "repo": "2026-1-AnatoQuizUp-Web",
+   "numero": 14,
+   "eventos": [
+    {
+     "type": "transferIssue",
+     "created_at": "2026-04-27T11:12:28.480Z",
+     "from_pipeline": {
+      "name": "In Progress"
+     },
+     "to_pipeline": {
+      "name": "Review/QA"
+     },
+     "workspace_id": "69bc08ebd4e9ec001c0c3229"
+    },
+    {
+     "user_id": 116747171,
+     "type": "transferIssue",
+     "created_at": "2026-04-27T10:27:41.542Z",
+     "from_pipeline": {
+      "name": "Sprint Backlog"
+     },
+     "to_pipeline": {
+      "name": "In Progress"
+     },
+     "workspace_id": "69bc08ebd4e9ec001c0c3229"
+    },
+    {
+     "user_id": 98056127,
+     "type": "estimateIssue",
+     "created_at": "2026-04-18T14:25:56.551Z",
+     "to_estimate": {
+      "value": 3
+     }
+    },
+    {
+     "user_id": 98056127,
+     "type": "transferIssue",
+     "created_at": "2026-04-18T12:50:34.623Z",
+     "from_pipeline": {
+      "name": "New Issues"
+     },
+     "to_pipeline": {
+      "name": "Sprint Backlog"
+     },
+     "workspace_id": "69bc08ebd4e9ec001c0c3229"
+    }
+   ]
+  },
+  {
+   "repo": "2026-1-AnatoQuizUp-Web",
+   "numero": 11,
+   "eventos": [
+    {
+     "type": "transferIssue",
+     "created_at": "2026-04-27T10:19:47.555Z",
+     "from_pipeline": {
+      "name": "In Progress"
+     },
+     "to_pipeline": {
+      "name": "Review/QA"
+     },
+     "workspace_id": "69bc08ebd4e9ec001c0c3229"
+    },
+    {
+     "user_id": 116747171,
+     "type": "transferIssue",
+     "created_at": "2026-04-27T10:05:58.860Z",
+     "from_pipeline": {
+      "name": "Sprint Backlog"
+     },
+     "to_pipeline": {
+      "name": "In Progress"
+     },
+     "workspace_id": "69bc08ebd4e9ec001c0c3229"
+    },
+    {
+     "user_id": 98056127,
+     "type": "estimateIssue",
+     "created_at": "2026-04-18T14:16:03.974Z",
+     "to_estimate": {
+      "value": 2
+     }
+    },
+    {
+     "user_id": 98056127,
+     "type": "transferIssue",
+     "created_at": "2026-04-18T12:50:34.623Z",
+     "from_pipeline": {
+      "name": "New Issues"
+     },
+     "to_pipeline": {
+      "name": "Sprint Backlog"
+     },
+     "workspace_id": "69bc08ebd4e9ec001c0c3229"
+    }
+   ]
+  },
+  {
+   "repo": "2026-1-AnatoQuizUp-Web",
+   "numero": 10,
+   "eventos": [
+    {
+     "type": "transferIssue",
+     "created_at": "2026-04-27T09:31:53.109Z",
+     "from_pipeline": {
+      "name": "In Progress"
+     },
+     "to_pipeline": {
+      "name": "Review/QA"
+     },
+     "workspace_id": "69bc08ebd4e9ec001c0c3229"
+    },
+    {
+     "user_id": 116747171,
+     "type": "transferIssue",
+     "created_at": "2026-04-27T07:23:07.866Z",
+     "from_pipeline": {
+      "name": "Sprint Backlog"
+     },
+     "to_pipeline": {
+      "name": "In Progress"
+     },
+     "workspace_id": "69bc08ebd4e9ec001c0c3229"
+    },
+    {
+     "user_id": 98056127,
+     "type": "estimateIssue",
+     "created_at": "2026-04-18T14:14:42.438Z",
+     "to_estimate": {
+      "value": 2
+     }
+    },
+    {
+     "user_id": 98056127,
+     "type": "transferIssue",
+     "created_at": "2026-04-18T12:50:34.623Z",
+     "from_pipeline": {
+      "name": "New Issues"
+     },
+     "to_pipeline": {
+      "name": "Sprint Backlog"
+     },
+     "workspace_id": "69bc08ebd4e9ec001c0c3229"
+    }
+   ]
+  },
+  {
+   "repo": "2026-1-AnatoQuizUp-Usuario-Service",
+   "numero": 15,
+   "eventos": [
+    {
+     "type": "transferIssue",
+     "created_at": "2026-04-27T10:05:43.770Z",
+     "from_pipeline": {
+      "name": "In Progress"
+     },
+     "to_pipeline": {
+      "name": "Review/QA"
+     },
+     "workspace_id": "69bc08ebd4e9ec001c0c3229"
+    },
+    {
+     "user_id": 132412607,
+     "type": "transferIssue",
+     "created_at": "2026-04-25T18:09:14.957Z",
+     "from_pipeline": {
+      "name": "Sprint Backlog"
+     },
+     "to_pipeline": {
+      "name": "In Progress"
+     },
+     "workspace_id": "69bc08ebd4e9ec001c0c3229"
+    },
+    {
+     "user_id": 98056127,
+     "type": "estimateIssue",
+     "created_at": "2026-04-18T14:15:15.287Z",
+     "to_estimate": {
+      "value": 3
+     }
+    },
+    {
+     "user_id": 98056127,
+     "type": "transferIssue",
+     "created_at": "2026-04-18T12:50:34.623Z",
+     "from_pipeline": {
+      "name": "New Issues"
+     },
+     "to_pipeline": {
+      "name": "Sprint Backlog"
+     },
+     "workspace_id": "69bc08ebd4e9ec001c0c3229"
+    }
+   ]
+  },
+  {
+   "repo": "2026-1-AnatoQuizUp-Usuario-Service",
+   "numero": 22,
+   "eventos": [
+    {
+     "type": "transferIssue",
+     "created_at": "2026-04-27T07:24:11.968Z",
+     "from_pipeline": {
+      "name": "In Progress"
+     },
+     "to_pipeline": {
+      "name": "Done"
+     },
+     "workspace_id": "69bc08ebd4e9ec001c0c3229"
+    },
+    {
+     "user_id": 91849929,
+     "type": "transferIssue",
+     "created_at": "2026-04-27T00:33:12.429Z",
+     "from_pipeline": {
+      "name": "Sprint Backlog"
+     },
+     "to_pipeline": {
+      "name": "In Progress"
+     },
+     "workspace_id": "69bc08ebd4e9ec001c0c3229"
+    },
+    {
+     "user_id": 110112943,
+     "type": "transferIssue",
+     "created_at": "2026-04-26T22:58:11.312Z",
+     "from_pipeline": {
+      "name": "Icebox"
+     },
+     "to_pipeline": {
+      "name": "Sprint Backlog"
+     },
+     "workspace_id": "69bc08ebd4e9ec001c0c3229"
+    },
+    {
+     "user_id": 110112943,
+     "type": "transferIssue",
+     "created_at": "2026-04-26T22:58:07.974Z",
+     "from_pipeline": {
+      "name": "Sprint Backlog"
+     },
+     "to_pipeline": {
+      "name": "Icebox"
+     },
+     "workspace_id": "69bc08ebd4e9ec001c0c3229"
+    },
+    {
+     "user_id": 98056127,
+     "type": "estimateIssue",
+     "created_at": "2026-04-18T14:35:59.436Z",
+     "to_estimate": {
+      "value": 3
+     }
+    },
+    {
+     "user_id": 98056127,
+     "type": "transferIssue",
+     "created_at": "2026-04-18T12:50:34.623Z",
+     "from_pipeline": {
+      "name": "New Issues"
+     },
+     "to_pipeline": {
+      "name": "Sprint Backlog"
+     },
+     "workspace_id": "69bc08ebd4e9ec001c0c3229"
+    }
+   ]
+  },
+  {
+   "repo": "2026-1-AnatoQuizUp-Usuario-Service",
+   "numero": 14,
+   "eventos": [
+    {
+     "type": "transferIssue",
+     "created_at": "2026-04-27T07:00:52.040Z",
+     "from_pipeline": {
+      "name": "In Progress"
+     },
+     "to_pipeline": {
+      "name": "Review/QA"
+     },
+     "workspace_id": "69bc08ebd4e9ec001c0c3229"
+    },
+    {
+     "user_id": 116747171,
+     "type": "transferIssue",
+     "created_at": "2026-04-27T06:42:17.464Z",
+     "from_pipeline": {
+      "name": "Rework"
+     },
+     "to_pipeline": {
+      "name": "In Progress"
+     },
+     "workspace_id": "69bc08ebd4e9ec001c0c3229"
+    },
+    {
+     "user_id": 116747171,
+     "type": "transferIssue",
+     "created_at": "2026-04-27T05:34:12.424Z",
+     "from_pipeline": {
+      "name": "Sprint Backlog"
+     },
+     "to_pipeline": {
+      "name": "Rework"
+     },
+     "workspace_id": "69bc08ebd4e9ec001c0c3229"
+    },
+    {
+     "user_id": 116747171,
+     "type": "transferIssue",
+     "created_at": "2026-04-27T03:34:57.121Z",
+     "from_pipeline": {
+      "name": "In Progress"
+     },
+     "to_pipeline": {
+      "name": "Sprint Backlog"
+     },
+     "workspace_id": "69bc08ebd4e9ec001c0c3229"
+    },
+    {
+     "user_id": 116747171,
+     "type": "transferIssue",
+     "created_at": "2026-04-27T00:57:23.927Z",
+     "from_pipeline": {
+      "name": "Rework"
+     },
+     "to_pipeline": {
+      "name": "In Progress"
+     },
+     "workspace_id": "69bc08ebd4e9ec001c0c3229"
+    },
+    {
+     "user_id": 116747171,
+     "type": "transferIssue",
+     "created_at": "2026-04-27T00:57:20.741Z",
+     "from_pipeline": {
+      "name": "Sprint Backlog"
+     },
+     "to_pipeline": {
+      "name": "Rework"
+     },
+     "workspace_id": "69bc08ebd4e9ec001c0c3229"
+    },
+    {
+     "user_id": 98056127,
+     "type": "estimateIssue",
+     "created_at": "2026-04-18T14:13:25.822Z",
+     "to_estimate": {
+      "value": 3
+     }
+    },
+    {
+     "user_id": 98056127,
+     "type": "transferIssue",
+     "created_at": "2026-04-18T12:50:34.623Z",
+     "from_pipeline": {
+      "name": "New Issues"
+     },
+     "to_pipeline": {
+      "name": "Sprint Backlog"
+     },
+     "workspace_id": "69bc08ebd4e9ec001c0c3229"
+    }
+   ]
+  },
+  {
+   "repo": "2026-1-AnatoQuizUp-Usuario-Service",
+   "numero": 20,
+   "eventos": [
+    {
+     "user_id": 110112943,
+     "type": "transferIssue",
+     "created_at": "2026-04-27T07:59:33.026Z",
+     "from_pipeline": {
+      "name": "Review/QA"
+     },
+     "to_pipeline": {
+      "name": "Done"
+     },
+     "workspace_id": "69bc08ebd4e9ec001c0c3229"
+    },
+    {
+     "type": "transferIssue",
+     "created_at": "2026-04-27T06:42:48.263Z",
+     "from_pipeline": {
+      "name": "In Progress"
+     },
+     "to_pipeline": {
+      "name": "Review/QA"
+     },
+     "workspace_id": "69bc08ebd4e9ec001c0c3229"
+    },
+    {
+     "user_id": 110112943,
+     "type": "transferIssue",
+     "created_at": "2026-04-27T04:05:11.763Z",
+     "from_pipeline": {
+      "name": "Sprint Backlog"
+     },
+     "to_pipeline": {
+      "name": "In Progress"
+     },
+     "workspace_id": "69bc08ebd4e9ec001c0c3229"
+    },
+    {
+     "user_id": 98056127,
+     "type": "estimateIssue",
+     "created_at": "2026-04-18T14:23:59.396Z",
+     "to_estimate": {
+      "value": 3
+     }
+    },
+    {
+     "user_id": 98056127,
+     "type": "transferIssue",
+     "created_at": "2026-04-18T12:50:34.623Z",
+     "from_pipeline": {
+      "name": "New Issues"
+     },
+     "to_pipeline": {
+      "name": "Sprint Backlog"
+     },
+     "workspace_id": "69bc08ebd4e9ec001c0c3229"
+    }
+   ]
+  },
+  {
+   "repo": "2026-1-AnatoQuizUp-Usuario-Service",
+   "numero": 13,
+   "eventos": [
+    {
+     "user_id": 116747171,
+     "type": "transferIssue",
+     "created_at": "2026-04-27T05:29:50.171Z",
+     "from_pipeline": {
+      "name": "In Progress"
+     },
+     "to_pipeline": {
+      "name": "Review/QA"
+     },
+     "workspace_id": "69bc08ebd4e9ec001c0c3229"
+    },
+    {
+     "user_id": 116747171,
+     "type": "transferIssue",
+     "created_at": "2026-04-27T03:34:49.796Z",
+     "from_pipeline": {
+      "name": "Sprint Backlog"
+     },
+     "to_pipeline": {
+      "name": "In Progress"
+     },
+     "workspace_id": "69bc08ebd4e9ec001c0c3229"
+    },
+    {
+     "user_id": 98056127,
+     "type": "estimateIssue",
+     "created_at": "2026-04-18T14:07:37.166Z",
+     "to_estimate": {
+      "value": 3
+     }
+    },
+    {
+     "user_id": 98056127,
+     "type": "transferIssue",
+     "created_at": "2026-04-18T12:50:34.623Z",
+     "from_pipeline": {
+      "name": "New Issues"
+     },
+     "to_pipeline": {
+      "name": "Sprint Backlog"
+     },
+     "workspace_id": "69bc08ebd4e9ec001c0c3229"
+    }
+   ]
+  },
+  {
+   "repo": "2026-1-AnatoQuizUp-Usuario-Service",
+   "numero": 11,
+   "eventos": [
+    {
+     "user_id": 118488366,
+     "type": "transferIssue",
+     "created_at": "2026-04-27T04:39:24.413Z",
+     "from_pipeline": {
+      "name": "In Progress"
+     },
+     "to_pipeline": {
+      "name": "Review/QA"
+     },
+     "workspace_id": "69bc08ebd4e9ec001c0c3229"
+    },
+    {
+     "user_id": 118488366,
+     "type": "transferIssue",
+     "created_at": "2026-04-27T00:56:35.783Z",
+     "from_pipeline": {
+      "name": "Sprint Backlog"
+     },
+     "to_pipeline": {
+      "name": "In Progress"
+     },
+     "workspace_id": "69bc08ebd4e9ec001c0c3229"
+    },
+    {
+     "user_id": 118488366,
+     "type": "transferIssue",
+     "created_at": "2026-04-25T22:10:30.688Z",
+     "from_pipeline": {
+      "name": "In Progress"
+     },
+     "to_pipeline": {
+      "name": "Sprint Backlog"
+     },
+     "workspace_id": "69bc08ebd4e9ec001c0c3229"
+    },
+    {
+     "user_id": 118488366,
+     "type": "transferIssue",
+     "created_at": "2026-04-25T22:10:17.253Z",
+     "from_pipeline": {
+      "name": "Sprint Backlog"
+     },
+     "to_pipeline": {
+      "name": "In Progress"
+     },
+     "workspace_id": "69bc08ebd4e9ec001c0c3229"
+    },
+    {
+     "user_id": 98056127,
+     "type": "estimateIssue",
+     "created_at": "2026-04-18T13:58:20.485Z",
+     "to_estimate": {
+      "value": 3
+     }
+    },
+    {
+     "user_id": 98056127,
+     "type": "transferIssue",
+     "created_at": "2026-04-18T12:50:34.623Z",
+     "from_pipeline": {
+      "name": "New Issues"
+     },
+     "to_pipeline": {
+      "name": "Sprint Backlog"
+     },
+     "workspace_id": "69bc08ebd4e9ec001c0c3229"
+    }
+   ]
+  },
+  {
+   "repo": "2026-1-AnatoQuizUp-Usuario-Service",
+   "numero": 19,
+   "eventos": [
+    {
+     "user_id": 116747171,
+     "type": "transferIssue",
+     "created_at": "2026-04-26T22:02:29.215Z",
+     "from_pipeline": {
+      "name": "In Progress"
+     },
+     "to_pipeline": {
+      "name": "Review/QA"
+     },
+     "workspace_id": "69bc08ebd4e9ec001c0c3229"
+    },
+    {
+     "user_id": 116747171,
+     "type": "transferIssue",
+     "created_at": "2026-04-26T17:49:44.644Z",
+     "from_pipeline": {
+      "name": "Sprint Backlog"
+     },
+     "to_pipeline": {
+      "name": "In Progress"
+     },
+     "workspace_id": "69bc08ebd4e9ec001c0c3229"
+    },
+    {
+     "user_id": 98056127,
+     "type": "estimateIssue",
+     "created_at": "2026-04-18T14:20:58.639Z",
+     "to_estimate": {
+      "value": 2
+     }
+    },
+    {
+     "user_id": 98056127,
+     "type": "transferIssue",
+     "created_at": "2026-04-18T12:50:34.623Z",
+     "from_pipeline": {
+      "name": "New Issues"
+     },
+     "to_pipeline": {
+      "name": "Sprint Backlog"
+     },
+     "workspace_id": "69bc08ebd4e9ec001c0c3229"
+    }
+   ]
+  },
+  {
+   "repo": "2026-1-AnatoQuizUp-Usuario-Service",
+   "numero": 7,
+   "eventos": [
+    {
+     "user_id": 98056127,
+     "type": "transferIssue",
+     "created_at": "2026-04-27T03:59:05.039Z",
+     "from_pipeline": {
+      "name": "Sprint Backlog"
+     },
+     "to_pipeline": {
+      "name": "In Progress"
+     },
+     "workspace_id": "69bc08ebd4e9ec001c0c3229"
+    },
+    {
+     "user_id": 98056127,
+     "type": "estimateIssue",
+     "created_at": "2026-04-18T13:44:14.357Z",
+     "to_estimate": {
+      "value": 2
+     }
+    },
+    {
+     "user_id": 98056127,
+     "type": "transferIssue",
+     "created_at": "2026-04-18T12:50:34.623Z",
+     "from_pipeline": {
+      "name": "New Issues"
+     },
+     "to_pipeline": {
+      "name": "Sprint Backlog"
+     },
+     "workspace_id": "69bc08ebd4e9ec001c0c3229"
+    }
+   ]
+  },
+  {
+   "repo": "2026-1-AnatoQuizUp-Web",
+   "numero": 8,
+   "eventos": [
+    {
+     "type": "transferIssue",
+     "created_at": "2026-04-27T01:36:48.030Z",
+     "from_pipeline": {
+      "name": "In Progress"
+     },
+     "to_pipeline": {
+      "name": "Review/QA"
+     },
+     "workspace_id": "69bc08ebd4e9ec001c0c3229"
+    },
+    {
+     "user_id": 110112943,
+     "type": "transferIssue",
+     "created_at": "2026-04-26T16:12:52.580Z",
+     "from_pipeline": {
+      "name": "Sprint Backlog"
+     },
+     "to_pipeline": {
+      "name": "In Progress"
+     },
+     "workspace_id": "69bc08ebd4e9ec001c0c3229"
+    },
+    {
+     "user_id": 110112943,
+     "type": "transferIssue",
+     "created_at": "2026-04-26T16:11:40.539Z",
+     "from_pipeline": {
+      "name": "Rework"
+     },
+     "to_pipeline": {
+      "name": "Sprint Backlog"
+     },
+     "workspace_id": "69bc08ebd4e9ec001c0c3229"
+    },
+    {
+     "user_id": 110112943,
+     "type": "transferIssue",
+     "created_at": "2026-04-26T16:11:33.356Z",
+     "from_pipeline": {
+      "name": "Sprint Backlog"
+     },
+     "to_pipeline": {
+      "name": "Rework"
+     },
+     "workspace_id": "69bc08ebd4e9ec001c0c3229"
+    },
+    {
+     "user_id": 98056127,
+     "type": "estimateIssue",
+     "created_at": "2026-04-18T14:05:33.086Z",
+     "to_estimate": {
+      "value": 3
+     }
+    },
+    {
+     "user_id": 98056127,
+     "type": "transferIssue",
+     "created_at": "2026-04-18T12:50:34.623Z",
+     "from_pipeline": {
+      "name": "New Issues"
+     },
+     "to_pipeline": {
+      "name": "Sprint Backlog"
+     },
+     "workspace_id": "69bc08ebd4e9ec001c0c3229"
+    }
+   ]
+  },
+  {
+   "repo": "2026-1-AnatoQuizUp-Usuario-Service",
+   "numero": 12,
+   "eventos": [
+    {
+     "type": "transferIssue",
+     "created_at": "2026-04-27T01:31:58.925Z",
+     "from_pipeline": {
+      "name": "Blocked"
+     },
+     "to_pipeline": {
+      "name": "Review/QA"
+     },
+     "workspace_id": "69bc08ebd4e9ec001c0c3229"
+    },
+    {
+     "user_id": 110112943,
+     "type": "transferIssue",
+     "created_at": "2026-04-26T16:11:22.681Z",
+     "from_pipeline": {
+      "name": "Done"
+     },
+     "to_pipeline": {
+      "name": "Blocked"
+     },
+     "workspace_id": "69bc08ebd4e9ec001c0c3229"
+    },
+    {
+     "user_id": 110112943,
+     "type": "transferIssue",
+     "created_at": "2026-04-26T16:11:11.381Z",
+     "from_pipeline": {
+      "name": "Review/QA"
+     },
+     "to_pipeline": {
+      "name": "Done"
+     },
+     "workspace_id": "69bc08ebd4e9ec001c0c3229"
+    },
+    {
+     "user_id": 110112943,
+     "type": "transferIssue",
+     "created_at": "2026-04-26T16:09:27.034Z",
+     "from_pipeline": {
+      "name": "In Progress"
+     },
+     "to_pipeline": {
+      "name": "Review/QA"
+     },
+     "workspace_id": "69bc08ebd4e9ec001c0c3229"
+    },
+    {
+     "user_id": 110112943,
+     "type": "transferIssue",
+     "created_at": "2026-04-25T13:14:08.285Z",
+     "from_pipeline": {
+      "name": "Sprint Backlog"
+     },
+     "to_pipeline": {
+      "name": "In Progress"
+     },
+     "workspace_id": "69bc08ebd4e9ec001c0c3229"
+    },
+    {
+     "user_id": 110112943,
+     "type": "estimateIssue",
+     "created_at": "2026-04-19T20:47:19.401Z",
+     "from_estimate": {
+      "value": 2
+     },
+     "to_estimate": {
+      "value": 3
+     }
+    },
+    {
+     "user_id": 98056127,
+     "type": "estimateIssue",
+     "created_at": "2026-04-18T14:04:30.787Z",
+     "to_estimate": {
+      "value": 2
+     }
+    },
+    {
+     "user_id": 98056127,
+     "type": "estimateIssue",
+     "created_at": "2026-04-18T14:04:29.462Z",
+     "from_estimate": {
+      "value": 3
+     }
+    },
+    {
+     "user_id": 98056127,
+     "type": "estimateIssue",
+     "created_at": "2026-04-18T14:04:16.975Z",
+     "to_estimate": {
+      "value": 3
+     }
+    },
+    {
+     "user_id": 98056127,
+     "type": "transferIssue",
+     "created_at": "2026-04-18T12:50:34.623Z",
+     "from_pipeline": {
+      "name": "New Issues"
+     },
+     "to_pipeline": {
+      "name": "Sprint Backlog"
+     },
+     "workspace_id": "69bc08ebd4e9ec001c0c3229"
+    }
+   ]
+  },
+  {
+   "repo": "2026-1-AnatoQuizUp-Usuario-Service",
+   "numero": 10,
+   "eventos": [
+    {
+     "type": "transferIssue",
+     "created_at": "2026-04-26T23:11:41.751Z",
+     "from_pipeline": {
+      "name": "In Progress"
+     },
+     "to_pipeline": {
+      "name": "Review/QA"
+     },
+     "workspace_id": "69bc08ebd4e9ec001c0c3229"
+    },
+    {
+     "user_id": 118488366,
+     "type": "transferIssue",
+     "created_at": "2026-04-25T22:10:34.150Z",
+     "from_pipeline": {
+      "name": "Sprint Backlog"
+     },
+     "to_pipeline": {
+      "name": "In Progress"
+     },
+     "workspace_id": "69bc08ebd4e9ec001c0c3229"
+    },
+    {
+     "user_id": 98056127,
+     "type": "estimateIssue",
+     "created_at": "2026-04-18T13:56:18.188Z",
+     "to_estimate": {
+      "value": 3
+     }
+    },
+    {
+     "user_id": 98056127,
+     "type": "transferIssue",
+     "created_at": "2026-04-18T12:50:34.623Z",
+     "from_pipeline": {
+      "name": "New Issues"
+     },
+     "to_pipeline": {
+      "name": "Sprint Backlog"
+     },
+     "workspace_id": "69bc08ebd4e9ec001c0c3229"
+    }
+   ]
+  },
+  {
+   "repo": "2026-1-AnatoQuizUp-Web",
+   "numero": 15,
+   "eventos": [
+    {
+     "user_id": 109092210,
+     "type": "transferIssue",
+     "created_at": "2026-04-26T13:50:34.742Z",
+     "from_pipeline": {
+      "name": "In Progress"
+     },
+     "to_pipeline": {
+      "name": "Review/QA"
+     },
+     "workspace_id": "69bc08ebd4e9ec001c0c3229"
+    },
+    {
+     "user_id": 109092210,
+     "type": "transferIssue",
+     "created_at": "2026-04-25T17:19:36.648Z",
+     "from_pipeline": {
+      "name": "Sprint Backlog"
+     },
+     "to_pipeline": {
+      "name": "In Progress"
+     },
+     "workspace_id": "69bc08ebd4e9ec001c0c3229"
+    },
+    {
+     "user_id": 98056127,
+     "type": "estimateIssue",
+     "created_at": "2026-04-18T14:27:12.214Z",
+     "to_estimate": {
+      "value": 3
+     }
+    },
+    {
+     "user_id": 98056127,
+     "type": "transferIssue",
+     "created_at": "2026-04-18T12:50:34.623Z",
+     "from_pipeline": {
+      "name": "New Issues"
+     },
+     "to_pipeline": {
+      "name": "Sprint Backlog"
+     },
+     "workspace_id": "69bc08ebd4e9ec001c0c3229"
+    }
+   ]
+  },
+  {
+   "repo": "2026-1-AnatoQuizUp-Doc",
+   "numero": 1,
+   "eventos": [
+    {
+     "type": "transferIssue",
+     "created_at": "2026-04-27T00:56:56.802Z",
+     "from_pipeline": {
+      "name": "Sprint Backlog"
+     },
+     "to_pipeline": {
+      "name": "Done"
+     },
+     "workspace_id": "69bc08ebd4e9ec001c0c3229"
+    },
+    {
+     "user_id": 98056127,
+     "type": "transferIssue",
+     "created_at": "2026-04-19T16:23:02.261Z",
+     "from_pipeline": {
+      "name": "Project Backlog"
+     },
+     "to_pipeline": {
+      "name": "Sprint Backlog"
+     },
+     "workspace_id": "69bc08ebd4e9ec001c0c3229"
+    },
+    {
+     "user_id": 98056127,
+     "type": "estimateIssue",
+     "created_at": "2026-04-19T16:00:49.423Z",
+     "to_estimate": {
+      "value": 3
+     }
+    },
+    {
+     "user_id": 110112943,
+     "type": "transferIssue",
+     "created_at": "2026-04-18T14:50:05.062Z",
+     "from_pipeline": {
+      "name": "Product Backlog"
+     },
+     "to_pipeline": {
+      "name": "Project Backlog"
+     },
+     "workspace_id": "69bc08ebd4e9ec001c0c3229"
+    },
+    {
+     "user_id": 110112943,
+     "type": "transferIssue",
+     "created_at": "2026-04-18T14:50:02.197Z",
+     "from_pipeline": {
+      "name": "Project Backlog"
+     },
+     "to_pipeline": {
+      "name": "Product Backlog"
+     },
+     "workspace_id": "69bc08ebd4e9ec001c0c3229"
+    },
+    {
+     "user_id": 98056127,
+     "type": "transferIssue",
+     "created_at": "2026-04-18T14:47:22.656Z",
+     "from_pipeline": {
+      "name": "New Issues"
+     },
+     "to_pipeline": {
+      "name": "Project Backlog"
+     },
+     "workspace_id": "69bc08ebd4e9ec001c0c3229"
+    }
+   ]
+  },
+  {
+   "repo": "2026-1-AnatoQuizUp-Usuario-Service",
+   "numero": 8,
+   "eventos": [
+    {
+     "user_id": 110112943,
+     "type": "transferIssue",
+     "created_at": "2026-04-26T23:07:13.816Z",
+     "from_pipeline": {
+      "name": "Review/QA"
+     },
+     "to_pipeline": {
+      "name": "Done"
+     },
+     "workspace_id": "69bc08ebd4e9ec001c0c3229"
+    },
+    {
+     "user_id": 116747171,
+     "type": "transferIssue",
+     "created_at": "2026-04-26T17:34:10.392Z",
+     "from_pipeline": {
+      "name": "In Progress"
+     },
+     "to_pipeline": {
+      "name": "Review/QA"
+     },
+     "workspace_id": "69bc08ebd4e9ec001c0c3229"
+    },
+    {
+     "user_id": 116747171,
+     "type": "transferIssue",
+     "created_at": "2026-04-25T16:11:28.868Z",
+     "from_pipeline": {
+      "name": "Sprint Backlog"
+     },
+     "to_pipeline": {
+      "name": "In Progress"
+     },
+     "workspace_id": "69bc08ebd4e9ec001c0c3229"
+    },
+    {
+     "user_id": 98056127,
+     "type": "estimateIssue",
+     "created_at": "2026-04-18T13:51:39.867Z",
+     "to_estimate": {
+      "value": 2
+     }
+    },
+    {
+     "user_id": 98056127,
+     "type": "estimateIssue",
+     "created_at": "2026-04-18T13:50:24.292Z",
+     "from_estimate": {
+      "value": 2
+     }
+    },
+    {
+     "user_id": 98056127,
+     "type": "estimateIssue",
+     "created_at": "2026-04-18T13:50:20.491Z",
+     "to_estimate": {
+      "value": 2
+     }
+    },
+    {
+     "user_id": 98056127,
+     "type": "transferIssue",
+     "created_at": "2026-04-18T12:50:34.623Z",
+     "from_pipeline": {
+      "name": "New Issues"
+     },
+     "to_pipeline": {
+      "name": "Sprint Backlog"
+     },
+     "workspace_id": "69bc08ebd4e9ec001c0c3229"
+    }
+   ]
+  },
+  {
+   "repo": "2026-1-AnatoQuizUp-Web",
+   "numero": 17,
+   "eventos": [
+    {
+     "user_id": 116747171,
+     "type": "transferIssue",
+     "created_at": "2026-04-26T22:34:43.091Z",
+     "from_pipeline": {
+      "name": "Sprint Backlog"
+     },
+     "to_pipeline": {
+      "name": "Done"
+     },
+     "workspace_id": "69bc08ebd4e9ec001c0c3229"
+    },
+    {
+     "user_id": 98056127,
+     "type": "estimateIssue",
+     "created_at": "2026-04-18T14:29:11.425Z",
+     "to_estimate": {
+      "value": 1
+     }
+    },
+    {
+     "user_id": 98056127,
+     "type": "transferIssue",
+     "created_at": "2026-04-18T12:50:34.623Z",
+     "from_pipeline": {
+      "name": "New Issues"
+     },
+     "to_pipeline": {
+      "name": "Sprint Backlog"
+     },
+     "workspace_id": "69bc08ebd4e9ec001c0c3229"
+    }
+   ]
+  },
+  {
+   "repo": "2026-1-AnatoQuizUp-Usuario-Service",
+   "numero": 6,
+   "eventos": [
+    {
+     "user_id": 118488366,
+     "type": "transferIssue",
+     "created_at": "2026-04-25T22:09:02.971Z",
+     "from_pipeline": {
+      "name": "In Progress"
+     },
+     "to_pipeline": {
+      "name": "Review/QA"
+     },
+     "workspace_id": "69bc08ebd4e9ec001c0c3229"
+    },
+    {
+     "user_id": 118488366,
+     "type": "transferIssue",
+     "created_at": "2026-04-24T15:56:05.079Z",
+     "from_pipeline": {
+      "name": "Sprint Backlog"
+     },
+     "to_pipeline": {
+      "name": "In Progress"
+     },
+     "workspace_id": "69bc08ebd4e9ec001c0c3229"
+    },
+    {
+     "user_id": 98056127,
+     "type": "estimateIssue",
+     "created_at": "2026-04-18T13:38:57.377Z",
+     "to_estimate": {
+      "value": 3
+     }
+    },
+    {
+     "user_id": 98056127,
+     "type": "transferIssue",
+     "created_at": "2026-04-18T12:50:34.623Z",
+     "from_pipeline": {
+      "name": "New Issues"
+     },
+     "to_pipeline": {
+      "name": "Sprint Backlog"
+     },
+     "workspace_id": "69bc08ebd4e9ec001c0c3229"
+    }
+   ]
+  },
+  {
+   "repo": "2026-1-AnatoQuizUp-Usuario-Service",
+   "numero": 5,
+   "eventos": [
+    {
+     "user_id": 98056127,
+     "type": "transferIssue",
+     "created_at": "2026-04-25T17:49:47.252Z",
+     "from_pipeline": {
+      "name": "Sprint Backlog"
+     },
+     "to_pipeline": {
+      "name": "In Progress"
+     },
+     "workspace_id": "69bc08ebd4e9ec001c0c3229"
+    },
+    {
+     "user_id": 98056127,
+     "type": "estimateIssue",
+     "created_at": "2026-04-18T13:34:59.592Z",
+     "to_estimate": {
+      "value": 1
+     }
+    },
+    {
+     "user_id": 98056127,
+     "type": "transferIssue",
+     "created_at": "2026-04-18T12:50:34.623Z",
+     "from_pipeline": {
+      "name": "New Issues"
+     },
+     "to_pipeline": {
+      "name": "Sprint Backlog"
+     },
+     "workspace_id": "69bc08ebd4e9ec001c0c3229"
+    }
+   ]
+  },
+  {
+   "repo": "2026-1-AnatoQuizUp-Usuario-Service",
+   "numero": 4,
+   "eventos": [
+    {
+     "user_id": 132412607,
+     "type": "transferIssue",
+     "created_at": "2026-04-25T16:22:50.044Z",
+     "from_pipeline": {
+      "name": "In Progress"
+     },
+     "to_pipeline": {
+      "name": "Review/QA"
+     },
+     "workspace_id": "69bc08ebd4e9ec001c0c3229"
+    },
+    {
+     "user_id": 132412607,
+     "type": "transferIssue",
+     "created_at": "2026-04-25T15:22:27.550Z",
+     "from_pipeline": {
+      "name": "Sprint Backlog"
+     },
+     "to_pipeline": {
+      "name": "In Progress"
+     },
+     "workspace_id": "69bc08ebd4e9ec001c0c3229"
+    },
+    {
+     "user_id": 98056127,
+     "type": "estimateIssue",
+     "created_at": "2026-04-18T13:34:23.964Z",
+     "to_estimate": {
+      "value": 2
+     }
+    },
+    {
+     "user_id": 98056127,
+     "type": "estimateIssue",
+     "created_at": "2026-04-18T12:51:31.670Z",
+     "from_estimate": {
+      "value": 5
+     }
+    },
+    {
+     "user_id": 98056127,
+     "type": "estimateIssue",
+     "created_at": "2026-04-18T12:51:28.915Z",
+     "to_estimate": {
+      "value": 5
+     }
+    },
+    {
+     "user_id": 98056127,
+     "type": "transferIssue",
+     "created_at": "2026-04-18T12:50:34.623Z",
+     "from_pipeline": {
+      "name": "New Issues"
+     },
+     "to_pipeline": {
+      "name": "Sprint Backlog"
+     },
+     "workspace_id": "69bc08ebd4e9ec001c0c3229"
+    }
+   ]
+  },
+  {
+   "repo": "2026-1-AnatoQuizUp-Usuario-Service",
+   "numero": 16,
+   "eventos": [
+    {
+     "user_id": 98056127,
+     "type": "transferIssue",
+     "created_at": "2026-04-18T14:17:09.307Z",
+     "from_pipeline": {
+      "name": "Sprint Backlog"
+     },
+     "to_pipeline": {
+      "name": "Icebox"
+     },
+     "workspace_id": "69bc08ebd4e9ec001c0c3229"
+    },
+    {
+     "user_id": 98056127,
+     "type": "transferIssue",
+     "created_at": "2026-04-18T12:50:34.623Z",
+     "from_pipeline": {
+      "name": "New Issues"
+     },
+     "to_pipeline": {
+      "name": "Sprint Backlog"
+     },
+     "workspace_id": "69bc08ebd4e9ec001c0c3229"
+    }
+   ]
+  },
+  {
+   "repo": "2026-1-AnatoQuizUp-Usuario-Service",
+   "numero": 9,
+   "eventos": [
+    {
+     "type": "transferIssue",
+     "created_at": "2026-04-25T02:09:29.007Z",
+     "from_pipeline": {
+      "name": "Sprint Backlog"
+     },
+     "to_pipeline": {
+      "name": "In Progress"
+     },
+     "workspace_id": "69bc08ebd4e9ec001c0c3229"
+    },
+    {
+     "user_id": 98056127,
+     "type": "estimateIssue",
+     "created_at": "2026-04-18T13:54:40.964Z",
+     "to_estimate": {
+      "value": 3
+     }
+    },
+    {
+     "user_id": 98056127,
+     "type": "transferIssue",
+     "created_at": "2026-04-18T12:50:34.623Z",
+     "from_pipeline": {
+      "name": "New Issues"
+     },
+     "to_pipeline": {
+      "name": "Sprint Backlog"
+     },
+     "workspace_id": "69bc08ebd4e9ec001c0c3229"
+    }
+   ]
+  },
+  {
+   "repo": "2026-1-AnatoQuizUp-Web",
+   "numero": 16,
+   "eventos": [
+    {
+     "user_id": 98056127,
+     "type": "transferIssue",
+     "created_at": "2026-04-23T13:01:25.338Z",
+     "from_pipeline": {
+      "name": "In Progress"
+     },
+     "to_pipeline": {
+      "name": "Review/QA"
+     },
+     "workspace_id": "69bc08ebd4e9ec001c0c3229"
+    },
+    {
+     "user_id": 98056127,
+     "type": "transferIssue",
+     "created_at": "2026-04-23T11:39:02.159Z",
+     "from_pipeline": {
+      "name": "Sprint Backlog"
+     },
+     "to_pipeline": {
+      "name": "In Progress"
+     },
+     "workspace_id": "69bc08ebd4e9ec001c0c3229"
+    },
+    {
+     "user_id": 98056127,
+     "type": "estimateIssue",
+     "created_at": "2026-04-18T14:28:18.978Z",
+     "to_estimate": {
+      "value": 2
+     }
+    },
+    {
+     "user_id": 98056127,
+     "type": "transferIssue",
+     "created_at": "2026-04-18T12:50:34.623Z",
+     "from_pipeline": {
+      "name": "New Issues"
+     },
+     "to_pipeline": {
+      "name": "Sprint Backlog"
+     },
+     "workspace_id": "69bc08ebd4e9ec001c0c3229"
+    }
+   ]
+  },
+  {
+   "repo": "2026-1-AnatoQuizUp-Web",
+   "numero": 3,
+   "eventos": [
+    {
+     "user_id": 98056127,
+     "type": "transferIssue",
+     "created_at": "2026-04-23T11:41:35.946Z",
+     "from_pipeline": {
+      "name": "Review/QA"
+     },
+     "to_pipeline": {
+      "name": "Done"
+     },
+     "workspace_id": "69bc08ebd4e9ec001c0c3229"
+    },
+    {
+     "user_id": 109092210,
+     "type": "transferIssue",
+     "created_at": "2026-04-20T16:16:25.639Z",
+     "from_pipeline": {
+      "name": "In Progress"
+     },
+     "to_pipeline": {
+      "name": "Review/QA"
+     },
+     "workspace_id": "69bc08ebd4e9ec001c0c3229"
+    },
+    {
+     "user_id": 109092210,
+     "type": "transferIssue",
+     "created_at": "2026-04-20T15:26:05.452Z",
+     "from_pipeline": {
+      "name": "Sprint Backlog"
+     },
+     "to_pipeline": {
+      "name": "In Progress"
+     },
+     "workspace_id": "69bc08ebd4e9ec001c0c3229"
+    },
+    {
+     "user_id": 98056127,
+     "type": "estimateIssue",
+     "created_at": "2026-04-18T13:49:08.942Z",
+     "to_estimate": {
+      "value": 2
+     }
+    },
+    {
+     "user_id": 98056127,
+     "type": "transferIssue",
+     "created_at": "2026-04-18T12:50:34.623Z",
+     "from_pipeline": {
+      "name": "New Issues"
+     },
+     "to_pipeline": {
+      "name": "Sprint Backlog"
+     },
+     "workspace_id": "69bc08ebd4e9ec001c0c3229"
+    }
+   ]
+  },
+  {
+   "repo": "2026-1-AnatoQuizUp-Web",
+   "numero": 9,
+   "eventos": [
+    {
+     "user_id": 98056127,
+     "type": "transferIssue",
+     "created_at": "2026-04-23T13:01:28.883Z",
+     "from_pipeline": {
+      "name": "Rework"
+     },
+     "to_pipeline": {
+      "name": "Review/QA"
+     },
+     "workspace_id": "69bc08ebd4e9ec001c0c3229"
+    },
+    {
+     "user_id": 98056127,
+     "type": "transferIssue",
+     "created_at": "2026-04-23T11:41:21.721Z",
+     "from_pipeline": {
+      "name": "Review/QA"
+     },
+     "to_pipeline": {
+      "name": "Rework"
+     },
+     "workspace_id": "69bc08ebd4e9ec001c0c3229"
+    },
+    {
+     "user_id": 109092210,
+     "type": "transferIssue",
+     "created_at": "2026-04-20T16:16:28.832Z",
+     "from_pipeline": {
+      "name": "In Progress"
+     },
+     "to_pipeline": {
+      "name": "Review/QA"
+     },
+     "workspace_id": "69bc08ebd4e9ec001c0c3229"
+    },
+    {
+     "user_id": 98056127,
+     "type": "transferIssue",
+     "created_at": "2026-04-19T22:25:48.237Z",
+     "from_pipeline": {
+      "name": "Review/QA"
+     },
+     "to_pipeline": {
+      "name": "In Progress"
+     },
+     "workspace_id": "69bc08ebd4e9ec001c0c3229"
+    },
+    {
+     "user_id": 98056127,
+     "type": "transferIssue",
+     "created_at": "2026-04-19T22:25:17.176Z",
+     "from_pipeline": {
+      "name": "In Progress"
+     },
+     "to_pipeline": {
+      "name": "Review/QA"
+     },
+     "workspace_id": "69bc08ebd4e9ec001c0c3229"
+    },
+    {
+     "user_id": 109092210,
+     "type": "transferIssue",
+     "created_at": "2026-04-19T15:53:49.299Z",
+     "from_pipeline": {
+      "name": "Sprint Backlog"
+     },
+     "to_pipeline": {
+      "name": "In Progress"
+     },
+     "workspace_id": "69bc08ebd4e9ec001c0c3229"
+    },
+    {
+     "user_id": 98056127,
+     "type": "estimateIssue",
+     "created_at": "2026-04-18T14:08:06.899Z",
+     "to_estimate": {
+      "value": 3
+     }
+    },
+    {
+     "user_id": 98056127,
+     "type": "transferIssue",
+     "created_at": "2026-04-18T12:50:34.623Z",
+     "from_pipeline": {
+      "name": "New Issues"
+     },
+     "to_pipeline": {
+      "name": "Sprint Backlog"
+     },
+     "workspace_id": "69bc08ebd4e9ec001c0c3229"
+    }
+   ]
+  },
+  {
+   "repo": "2026-1-AnatoQuizUp-Doc",
+   "numero": 35,
+   "eventos": [
+    {
+     "user_id": 91849929,
+     "type": "estimateIssue",
+     "created_at": "2026-05-24T18:35:24.256Z",
+     "to_estimate": {
+      "value": 4
+     }
+    }
+   ]
+  },
+  {
+   "repo": "2026-1-AnatoQuizUp-Web",
+   "numero": 19,
+   "eventos": [
+    {
+     "user_id": 110112943,
+     "type": "transferIssue",
+     "created_at": "2026-05-12T22:15:50.390Z",
+     "from_pipeline": {
+      "name": "Icebox"
+     },
+     "to_pipeline": {
+      "name": "New Issues"
+     },
+     "workspace_id": "69bc08ebd4e9ec001c0c3229"
+    },
+    {
+     "user_id": 109092210,
+     "type": "transferIssue",
+     "created_at": "2026-05-11T11:56:27.179Z",
+     "from_pipeline": {
+      "name": "Sprint Backlog"
+     },
+     "to_pipeline": {
+      "name": "Icebox"
+     },
+     "workspace_id": "69bc08ebd4e9ec001c0c3229"
+    },
+    {
+     "user_id": 109092210,
+     "type": "transferIssue",
+     "created_at": "2026-05-04T20:03:30.718Z",
+     "from_pipeline": {
+      "name": "Product Backlog"
+     },
+     "to_pipeline": {
+      "name": "Sprint Backlog"
+     },
+     "workspace_id": "69bc08ebd4e9ec001c0c3229"
+    },
+    {
+     "user_id": 109092210,
+     "type": "transferIssue",
+     "created_at": "2026-05-04T19:08:04.667Z",
+     "from_pipeline": {
+      "name": "Sprint Backlog"
+     },
+     "to_pipeline": {
+      "name": "Product Backlog"
+     },
+     "workspace_id": "69bc08ebd4e9ec001c0c3229"
+    },
+    {
+     "user_id": 99771740,
+     "type": "transferIssue",
+     "created_at": "2026-05-03T23:04:11.102Z",
+     "from_pipeline": {
+      "name": "Product Backlog"
+     },
+     "to_pipeline": {
+      "name": "Sprint Backlog"
+     },
+     "workspace_id": "69bc08ebd4e9ec001c0c3229"
+    },
+    {
+     "user_id": 109092210,
+     "type": "transferIssue",
+     "created_at": "2026-04-30T12:08:56.104Z",
+     "from_pipeline": {
+      "name": "Icebox"
+     },
+     "to_pipeline": {
+      "name": "Product Backlog"
+     },
+     "workspace_id": "69bc08ebd4e9ec001c0c3229"
+    },
+    {
+     "user_id": 110112943,
+     "type": "transferIssue",
+     "created_at": "2026-04-26T23:01:25.085Z",
+     "from_pipeline": {
+      "name": "Sprint Backlog"
+     },
+     "to_pipeline": {
+      "name": "Icebox"
+     },
+     "workspace_id": "69bc08ebd4e9ec001c0c3229"
+    },
+    {
+     "user_id": 98056127,
+     "type": "estimateIssue",
+     "created_at": "2026-04-18T14:33:21.546Z",
+     "to_estimate": {
+      "value": 2
+     }
+    },
+    {
+     "user_id": 98056127,
+     "type": "transferIssue",
+     "created_at": "2026-04-18T12:50:34.623Z",
+     "from_pipeline": {
+      "name": "New Issues"
+     },
+     "to_pipeline": {
+      "name": "Sprint Backlog"
+     },
+     "workspace_id": "69bc08ebd4e9ec001c0c3229"
+    }
+   ]
+  },
+  {
+   "repo": "2026-1-AnatoQuizUp-Web",
+   "numero": 18,
+   "eventos": [
+    {
+     "user_id": 109092210,
+     "type": "transferIssue",
+     "created_at": "2026-05-11T11:56:17.188Z",
+     "from_pipeline": {
+      "name": "Sprint Backlog"
+     },
+     "to_pipeline": {
+      "name": "Icebox"
+     },
+     "workspace_id": "69bc08ebd4e9ec001c0c3229"
+    },
+    {
+     "user_id": 98056127,
+     "type": "estimateIssue",
+     "created_at": "2026-04-18T14:30:42.567Z",
+     "to_estimate": {
+      "value": 1
+     }
+    },
+    {
+     "user_id": 98056127,
+     "type": "transferIssue",
+     "created_at": "2026-04-18T12:50:34.623Z",
+     "from_pipeline": {
+      "name": "New Issues"
+     },
+     "to_pipeline": {
+      "name": "Sprint Backlog"
+     },
+     "workspace_id": "69bc08ebd4e9ec001c0c3229"
+    }
+   ]
+  },
+  {
+   "repo": "2026-1-AnatoQuizUp-Usuario-Service",
+   "numero": 58,
+   "eventos": [
+    {
+     "user_id": 109092210,
+     "type": "transferIssue",
+     "created_at": "2026-05-08T18:39:48.047Z",
+     "from_pipeline": {
+      "name": "Project Backlog"
+     },
+     "to_pipeline": {
+      "name": "Icebox"
+     },
+     "workspace_id": "69bc08ebd4e9ec001c0c3229"
+    },
+    {
+     "user_id": 109092210,
+     "type": "transferIssue",
+     "created_at": "2026-05-08T17:45:44.272Z",
+     "from_pipeline": {
+      "name": "New Issues"
+     },
+     "to_pipeline": {
+      "name": "Project Backlog"
+     },
+     "workspace_id": "69bc08ebd4e9ec001c0c3229"
+    }
+   ]
+  },
+  {
+   "repo": "2026-1-AnatoQuizUp-Usuario-Service",
+   "numero": 90,
+   "eventos": [
+    {
+     "user_id": 109092210,
+     "type": "transferIssue",
+     "created_at": "2026-05-08T18:39:44.019Z",
+     "from_pipeline": {
+      "name": "Project Backlog"
+     },
+     "to_pipeline": {
+      "name": "Icebox"
+     },
+     "workspace_id": "69bc08ebd4e9ec001c0c3229"
+    },
+    {
+     "user_id": 109092210,
+     "type": "transferIssue",
+     "created_at": "2026-05-08T17:46:49.144Z",
+     "from_pipeline": {
+      "name": "New Issues"
+     },
+     "to_pipeline": {
+      "name": "Project Backlog"
+     },
+     "workspace_id": "69bc08ebd4e9ec001c0c3229"
+    }
+   ]
+  },
+  {
+   "repo": "2026-1-AnatoQuizUp-Usuario-Service",
+   "numero": 89,
+   "eventos": [
+    {
+     "user_id": 109092210,
+     "type": "transferIssue",
+     "created_at": "2026-05-08T18:39:42.757Z",
+     "from_pipeline": {
+      "name": "Project Backlog"
+     },
+     "to_pipeline": {
+      "name": "Icebox"
+     },
+     "workspace_id": "69bc08ebd4e9ec001c0c3229"
+    },
+    {
+     "user_id": 109092210,
+     "type": "transferIssue",
+     "created_at": "2026-05-08T17:46:47.190Z",
+     "from_pipeline": {
+      "name": "New Issues"
+     },
+     "to_pipeline": {
+      "name": "Project Backlog"
+     },
+     "workspace_id": "69bc08ebd4e9ec001c0c3229"
+    }
+   ]
+  },
+  {
+   "repo": "2026-1-AnatoQuizUp-Usuario-Service",
+   "numero": 54,
+   "eventos": [
+    {
+     "user_id": 109092210,
+     "type": "transferIssue",
+     "created_at": "2026-05-08T18:39:51.783Z",
+     "from_pipeline": {
+      "name": "Project Backlog"
+     },
+     "to_pipeline": {
+      "name": "Icebox"
+     },
+     "workspace_id": "69bc08ebd4e9ec001c0c3229"
+    },
+    {
+     "user_id": 109092210,
+     "type": "transferIssue",
+     "created_at": "2026-05-08T17:45:34.547Z",
+     "from_pipeline": {
+      "name": "New Issues"
+     },
+     "to_pipeline": {
+      "name": "Project Backlog"
+     },
+     "workspace_id": "69bc08ebd4e9ec001c0c3229"
+    }
+   ]
+  },
+  {
+   "repo": "2026-1-AnatoQuizUp-Usuario-Service",
+   "numero": 61,
+   "eventos": [
+    {
+     "user_id": 109092210,
+     "type": "transferIssue",
+     "created_at": "2026-05-08T18:39:46.140Z",
+     "from_pipeline": {
+      "name": "Project Backlog"
+     },
+     "to_pipeline": {
+      "name": "Icebox"
+     },
+     "workspace_id": "69bc08ebd4e9ec001c0c3229"
+    },
+    {
+     "user_id": 109092210,
+     "type": "transferIssue",
+     "created_at": "2026-05-08T17:45:48.736Z",
+     "from_pipeline": {
+      "name": "New Issues"
+     },
+     "to_pipeline": {
+      "name": "Project Backlog"
+     },
+     "workspace_id": "69bc08ebd4e9ec001c0c3229"
+    }
+   ]
+  },
+  {
+   "repo": "2026-1-AnatoQuizUp-Usuario-Service",
+   "numero": 57,
+   "eventos": [
+    {
+     "user_id": 109092210,
+     "type": "transferIssue",
+     "created_at": "2026-05-08T18:39:49.039Z",
+     "from_pipeline": {
+      "name": "Project Backlog"
+     },
+     "to_pipeline": {
+      "name": "Icebox"
+     },
+     "workspace_id": "69bc08ebd4e9ec001c0c3229"
+    },
+    {
+     "user_id": 109092210,
+     "type": "transferIssue",
+     "created_at": "2026-05-08T17:45:42.003Z",
+     "from_pipeline": {
+      "name": "New Issues"
+     },
+     "to_pipeline": {
+      "name": "Project Backlog"
+     },
+     "workspace_id": "69bc08ebd4e9ec001c0c3229"
+    }
+   ]
+  },
+  {
+   "repo": "2026-1-AnatoQuizUp-Usuario-Service",
+   "numero": 55,
+   "eventos": [
+    {
+     "user_id": 109092210,
+     "type": "transferIssue",
+     "created_at": "2026-05-08T18:39:50.837Z",
+     "from_pipeline": {
+      "name": "Project Backlog"
+     },
+     "to_pipeline": {
+      "name": "Icebox"
+     },
+     "workspace_id": "69bc08ebd4e9ec001c0c3229"
+    },
+    {
+     "user_id": 109092210,
+     "type": "transferIssue",
+     "created_at": "2026-05-08T17:45:36.847Z",
+     "from_pipeline": {
+      "name": "New Issues"
+     },
+     "to_pipeline": {
+      "name": "Project Backlog"
+     },
+     "workspace_id": "69bc08ebd4e9ec001c0c3229"
+    }
+   ]
+  },
+  {
+   "repo": "2026-1-AnatoQuizUp-Usuario-Service",
+   "numero": 59,
+   "eventos": [
+    {
+     "user_id": 109092210,
+     "type": "transferIssue",
+     "created_at": "2026-05-08T18:39:47.039Z",
+     "from_pipeline": {
+      "name": "Project Backlog"
+     },
+     "to_pipeline": {
+      "name": "Icebox"
+     },
+     "workspace_id": "69bc08ebd4e9ec001c0c3229"
+    },
+    {
+     "user_id": 109092210,
+     "type": "transferIssue",
+     "created_at": "2026-05-08T17:45:46.726Z",
+     "from_pipeline": {
+      "name": "New Issues"
+     },
+     "to_pipeline": {
+      "name": "Project Backlog"
+     },
+     "workspace_id": "69bc08ebd4e9ec001c0c3229"
+    }
+   ]
+  },
+  {
+   "repo": "2026-1-AnatoQuizUp-Usuario-Service",
+   "numero": 92,
+   "eventos": [
+    {
+     "user_id": 109092210,
+     "type": "transferIssue",
+     "created_at": "2026-05-08T18:39:45.240Z",
+     "from_pipeline": {
+      "name": "Project Backlog"
+     },
+     "to_pipeline": {
+      "name": "Icebox"
+     },
+     "workspace_id": "69bc08ebd4e9ec001c0c3229"
+    },
+    {
+     "user_id": 109092210,
+     "type": "transferIssue",
+     "created_at": "2026-05-08T17:46:51.222Z",
+     "from_pipeline": {
+      "name": "New Issues"
+     },
+     "to_pipeline": {
+      "name": "Project Backlog"
+     },
+     "workspace_id": "69bc08ebd4e9ec001c0c3229"
+    }
+   ]
+  },
+  {
+   "repo": "2026-1-AnatoQuizUp-Usuario-Service",
+   "numero": 87,
+   "eventos": [
+    {
+     "user_id": 109092210,
+     "type": "transferIssue",
+     "created_at": "2026-05-08T18:39:37.748Z",
+     "from_pipeline": {
+      "name": "Project Backlog"
+     },
+     "to_pipeline": {
+      "name": "Icebox"
+     },
+     "workspace_id": "69bc08ebd4e9ec001c0c3229"
+    },
+    {
+     "user_id": 109092210,
+     "type": "transferIssue",
+     "created_at": "2026-05-08T17:46:42.800Z",
+     "from_pipeline": {
+      "name": "New Issues"
+     },
+     "to_pipeline": {
+      "name": "Project Backlog"
+     },
+     "workspace_id": "69bc08ebd4e9ec001c0c3229"
+    }
+   ]
+  },
+  {
+   "repo": "2026-1-AnatoQuizUp-Usuario-Service",
+   "numero": 85,
+   "eventos": [
+    {
+     "user_id": 109092210,
+     "type": "transferIssue",
+     "created_at": "2026-05-08T18:39:36.783Z",
+     "from_pipeline": {
+      "name": "Project Backlog"
+     },
+     "to_pipeline": {
+      "name": "Icebox"
+     },
+     "workspace_id": "69bc08ebd4e9ec001c0c3229"
+    },
+    {
+     "user_id": 109092210,
+     "type": "transferIssue",
+     "created_at": "2026-05-08T17:46:38.191Z",
+     "from_pipeline": {
+      "name": "New Issues"
+     },
+     "to_pipeline": {
+      "name": "Project Backlog"
+     },
+     "workspace_id": "69bc08ebd4e9ec001c0c3229"
+    }
+   ]
+  },
+  {
+   "repo": "2026-1-AnatoQuizUp-Usuario-Service",
+   "numero": 78,
+   "eventos": [
+    {
+     "user_id": 109092210,
+     "type": "transferIssue",
+     "created_at": "2026-05-08T18:39:32.438Z",
+     "from_pipeline": {
+      "name": "Project Backlog"
+     },
+     "to_pipeline": {
+      "name": "Icebox"
+     },
+     "workspace_id": "69bc08ebd4e9ec001c0c3229"
+    },
+    {
+     "user_id": 109092210,
+     "type": "transferIssue",
+     "created_at": "2026-05-08T17:46:18.437Z",
+     "from_pipeline": {
+      "name": "New Issues"
+     },
+     "to_pipeline": {
+      "name": "Project Backlog"
+     },
+     "workspace_id": "69bc08ebd4e9ec001c0c3229"
+    }
+   ]
+  },
+  {
+   "repo": "2026-1-AnatoQuizUp-Usuario-Service",
+   "numero": 75,
+   "eventos": [
+    {
+     "user_id": 109092210,
+     "type": "transferIssue",
+     "created_at": "2026-05-08T18:39:28.901Z",
+     "from_pipeline": {
+      "name": "Project Backlog"
+     },
+     "to_pipeline": {
+      "name": "Icebox"
+     },
+     "workspace_id": "69bc08ebd4e9ec001c0c3229"
+    },
+    {
+     "user_id": 109092210,
+     "type": "transferIssue",
+     "created_at": "2026-05-08T17:46:13.485Z",
+     "from_pipeline": {
+      "name": "New Issues"
+     },
+     "to_pipeline": {
+      "name": "Project Backlog"
+     },
+     "workspace_id": "69bc08ebd4e9ec001c0c3229"
+    }
+   ]
+  },
+  {
+   "repo": "2026-1-AnatoQuizUp-Usuario-Service",
+   "numero": 73,
+   "eventos": [
+    {
+     "user_id": 109092210,
+     "type": "transferIssue",
+     "created_at": "2026-05-08T18:39:27.802Z",
+     "from_pipeline": {
+      "name": "Project Backlog"
+     },
+     "to_pipeline": {
+      "name": "Icebox"
+     },
+     "workspace_id": "69bc08ebd4e9ec001c0c3229"
+    },
+    {
+     "user_id": 109092210,
+     "type": "transferIssue",
+     "created_at": "2026-05-08T17:46:10.141Z",
+     "from_pipeline": {
+      "name": "New Issues"
+     },
+     "to_pipeline": {
+      "name": "Project Backlog"
+     },
+     "workspace_id": "69bc08ebd4e9ec001c0c3229"
+    }
+   ]
+  },
+  {
+   "repo": "2026-1-AnatoQuizUp-Usuario-Service",
+   "numero": 68,
+   "eventos": [
+    {
+     "user_id": 109092210,
+     "type": "transferIssue",
+     "created_at": "2026-05-08T18:39:26.851Z",
+     "from_pipeline": {
+      "name": "Project Backlog"
+     },
+     "to_pipeline": {
+      "name": "Icebox"
+     },
+     "workspace_id": "69bc08ebd4e9ec001c0c3229"
+    },
+    {
+     "user_id": 109092210,
+     "type": "transferIssue",
+     "created_at": "2026-05-08T17:46:01.787Z",
+     "from_pipeline": {
+      "name": "New Issues"
+     },
+     "to_pipeline": {
+      "name": "Project Backlog"
+     },
+     "workspace_id": "69bc08ebd4e9ec001c0c3229"
+    }
+   ]
+  },
+  {
+   "repo": "2026-1-AnatoQuizUp-Usuario-Service",
+   "numero": 62,
+   "eventos": [
+    {
+     "user_id": 109092210,
+     "type": "transferIssue",
+     "created_at": "2026-05-08T18:39:22.586Z",
+     "from_pipeline": {
+      "name": "Project Backlog"
+     },
+     "to_pipeline": {
+      "name": "Icebox"
+     },
+     "workspace_id": "69bc08ebd4e9ec001c0c3229"
+    },
+    {
+     "user_id": 109092210,
+     "type": "transferIssue",
+     "created_at": "2026-05-08T17:45:50.850Z",
+     "from_pipeline": {
+      "name": "New Issues"
+     },
+     "to_pipeline": {
+      "name": "Project Backlog"
+     },
+     "workspace_id": "69bc08ebd4e9ec001c0c3229"
+    }
+   ]
+  },
+  {
+   "repo": "2026-1-AnatoQuizUp-Usuario-Service",
+   "numero": 64,
+   "eventos": [
+    {
+     "user_id": 109092210,
+     "type": "transferIssue",
+     "created_at": "2026-05-08T18:39:21.339Z",
+     "from_pipeline": {
+      "name": "Project Backlog"
+     },
+     "to_pipeline": {
+      "name": "Icebox"
+     },
+     "workspace_id": "69bc08ebd4e9ec001c0c3229"
+    },
+    {
+     "user_id": 109092210,
+     "type": "transferIssue",
+     "created_at": "2026-05-08T17:45:54.635Z",
+     "from_pipeline": {
+      "name": "New Issues"
+     },
+     "to_pipeline": {
+      "name": "Project Backlog"
+     },
+     "workspace_id": "69bc08ebd4e9ec001c0c3229"
+    }
+   ]
+  },
+  {
+   "repo": "2026-1-AnatoQuizUp-Usuario-Service",
+   "numero": 86,
+   "eventos": [
+    {
+     "user_id": 109092210,
+     "type": "transferIssue",
+     "created_at": "2026-05-08T18:32:59.486Z",
+     "from_pipeline": {
+      "name": "Project Backlog"
+     },
+     "to_pipeline": {
+      "name": "Icebox"
+     },
+     "workspace_id": "69bc08ebd4e9ec001c0c3229"
+    },
+    {
+     "user_id": 109092210,
+     "type": "transferIssue",
+     "created_at": "2026-05-08T17:46:40.241Z",
+     "from_pipeline": {
+      "name": "New Issues"
+     },
+     "to_pipeline": {
+      "name": "Project Backlog"
+     },
+     "workspace_id": "69bc08ebd4e9ec001c0c3229"
+    }
+   ]
+  },
+  {
+   "repo": "2026-1-AnatoQuizUp-Usuario-Service",
+   "numero": 53,
+   "eventos": [
+    {
+     "user_id": 109092210,
+     "type": "transferIssue",
+     "created_at": "2026-05-08T18:32:47.594Z",
+     "from_pipeline": {
+      "name": "Project Backlog"
+     },
+     "to_pipeline": {
+      "name": "Icebox"
+     },
+     "workspace_id": "69bc08ebd4e9ec001c0c3229"
+    },
+    {
+     "user_id": 109092210,
+     "type": "transferIssue",
+     "created_at": "2026-05-08T17:45:31.659Z",
+     "from_pipeline": {
+      "name": "New Issues"
+     },
+     "to_pipeline": {
+      "name": "Project Backlog"
+     },
+     "workspace_id": "69bc08ebd4e9ec001c0c3229"
+    }
+   ]
+  },
+  {
+   "repo": "2026-1-AnatoQuizUp-Usuario-Service",
+   "numero": 74,
+   "eventos": [
+    {
+     "user_id": 109092210,
+     "type": "transferIssue",
+     "created_at": "2026-05-08T18:32:49.379Z",
+     "from_pipeline": {
+      "name": "Project Backlog"
+     },
+     "to_pipeline": {
+      "name": "Icebox"
+     },
+     "workspace_id": "69bc08ebd4e9ec001c0c3229"
+    },
+    {
+     "user_id": 109092210,
+     "type": "transferIssue",
+     "created_at": "2026-05-08T17:46:12.122Z",
+     "from_pipeline": {
+      "name": "New Issues"
+     },
+     "to_pipeline": {
+      "name": "Project Backlog"
+     },
+     "workspace_id": "69bc08ebd4e9ec001c0c3229"
+    }
+   ]
+  },
+  {
+   "repo": "2026-1-AnatoQuizUp-Usuario-Service",
+   "numero": 51,
+   "eventos": [
+    {
+     "user_id": 109092210,
+     "type": "transferIssue",
+     "created_at": "2026-05-08T18:38:04.532Z",
+     "from_pipeline": {
+      "name": "Project Backlog"
+     },
+     "to_pipeline": {
+      "name": "Icebox"
+     },
+     "workspace_id": "69bc08ebd4e9ec001c0c3229"
+    },
+    {
+     "user_id": 109092210,
+     "type": "transferIssue",
+     "created_at": "2026-05-08T17:45:21.674Z",
+     "from_pipeline": {
+      "name": "New Issues"
+     },
+     "to_pipeline": {
+      "name": "Project Backlog"
+     },
+     "workspace_id": "69bc08ebd4e9ec001c0c3229"
+    }
+   ]
+  },
+  {
+   "repo": "2026-1-AnatoQuizUp-Usuario-Service",
+   "numero": 71,
+   "eventos": [
+    {
+     "user_id": 109092210,
+     "type": "transferIssue",
+     "created_at": "2026-05-08T18:38:05.841Z",
+     "from_pipeline": {
+      "name": "Project Backlog"
+     },
+     "to_pipeline": {
+      "name": "Icebox"
+     },
+     "workspace_id": "69bc08ebd4e9ec001c0c3229"
+    },
+    {
+     "user_id": 109092210,
+     "type": "transferIssue",
+     "created_at": "2026-05-08T17:46:06.469Z",
+     "from_pipeline": {
+      "name": "New Issues"
+     },
+     "to_pipeline": {
+      "name": "Project Backlog"
+     },
+     "workspace_id": "69bc08ebd4e9ec001c0c3229"
+    }
+   ]
+  },
+  {
+   "repo": "2026-1-AnatoQuizUp-Usuario-Service",
+   "numero": 56,
+   "eventos": [
+    {
+     "user_id": 132412607,
+     "type": "transferIssue",
+     "created_at": "2026-06-08T15:21:38.535Z",
+     "from_pipeline": {
+      "name": "Sprint Backlog"
+     },
+     "to_pipeline": {
+      "name": "Product Backlog"
+     },
+     "workspace_id": "69bc08ebd4e9ec001c0c3229"
+    },
+    {
+     "user_id": 118488366,
+     "type": "transferIssue",
+     "created_at": "2026-06-08T13:27:44.273Z",
+     "from_pipeline": {
+      "name": "Product Backlog"
+     },
+     "to_pipeline": {
+      "name": "Sprint Backlog"
+     },
+     "workspace_id": "69bc08ebd4e9ec001c0c3229"
+    },
+    {
+     "user_id": 109092210,
+     "type": "transferIssue",
+     "created_at": "2026-05-25T13:47:02.350Z",
+     "from_pipeline": {
+      "name": "Sprint Backlog"
+     },
+     "to_pipeline": {
+      "name": "Product Backlog"
+     },
+     "workspace_id": "69bc08ebd4e9ec001c0c3229"
+    },
+    {
+     "user_id": 118488366,
+     "type": "transferIssue",
+     "created_at": "2026-05-24T22:59:36.789Z",
+     "from_pipeline": {
+      "name": "Product Backlog"
+     },
+     "to_pipeline": {
+      "name": "Sprint Backlog"
+     },
+     "workspace_id": "69bc08ebd4e9ec001c0c3229"
+    },
+    {
+     "user_id": 109092210,
+     "type": "transferIssue",
+     "created_at": "2026-05-11T12:00:31.864Z",
+     "from_pipeline": {
+      "name": "Project Backlog"
+     },
+     "to_pipeline": {
+      "name": "Product Backlog"
+     },
+     "workspace_id": "69bc08ebd4e9ec001c0c3229"
+    },
+    {
+     "user_id": 109092210,
+     "type": "transferIssue",
+     "created_at": "2026-05-08T19:21:50.100Z",
+     "from_pipeline": {
+      "name": "Icebox"
+     },
+     "to_pipeline": {
+      "name": "Project Backlog"
+     },
+     "workspace_id": "69bc08ebd4e9ec001c0c3229"
+    },
+    {
+     "user_id": 109092210,
+     "type": "transferIssue",
+     "created_at": "2026-05-08T18:39:49.909Z",
+     "from_pipeline": {
+      "name": "Project Backlog"
+     },
+     "to_pipeline": {
+      "name": "Icebox"
+     },
+     "workspace_id": "69bc08ebd4e9ec001c0c3229"
+    },
+    {
+     "user_id": 109092210,
+     "type": "transferIssue",
+     "created_at": "2026-05-08T17:45:39.181Z",
+     "from_pipeline": {
+      "name": "New Issues"
+     },
+     "to_pipeline": {
+      "name": "Project Backlog"
+     },
+     "workspace_id": "69bc08ebd4e9ec001c0c3229"
+    }
+   ]
+  },
+  {
+   "repo": "2026-1-AnatoQuizUp-Doc",
+   "numero": 40,
+   "eventos": [
+    {
+     "user_id": 132412607,
+     "type": "transferIssue",
+     "created_at": "2026-06-08T15:14:22.403Z",
+     "from_pipeline": {
+      "name": "New Issues"
+     },
+     "to_pipeline": {
+      "name": "Product Backlog"
+     },
+     "workspace_id": "69bc08ebd4e9ec001c0c3229"
+    },
+    {
+     "user_id": 110112943,
+     "type": "estimateIssue",
+     "created_at": "2026-05-24T23:29:51.369Z",
+     "to_estimate": {
+      "value": 1
+     }
+    }
+   ]
+  },
+  {
+   "repo": "2026-1-AnatoQuizUp-Doc",
+   "numero": 39,
+   "eventos": [
+    {
+     "user_id": 132412607,
+     "type": "transferIssue",
+     "created_at": "2026-06-08T15:14:18.368Z",
+     "from_pipeline": {
+      "name": "New Issues"
+     },
+     "to_pipeline": {
+      "name": "Product Backlog"
+     },
+     "workspace_id": "69bc08ebd4e9ec001c0c3229"
+    },
+    {
+     "user_id": 110112943,
+     "type": "estimateIssue",
+     "created_at": "2026-05-24T23:29:53.532Z",
+     "to_estimate": {
+      "value": 1
+     }
+    }
+   ]
+  },
+  {
+   "repo": "2026-1-AnatoQuizUp-Usuario-Service",
+   "numero": 88,
+   "eventos": [
+    {
+     "user_id": 109092210,
+     "type": "transferIssue",
+     "created_at": "2026-05-11T12:01:04.200Z",
+     "from_pipeline": {
+      "name": "Project Backlog"
+     },
+     "to_pipeline": {
+      "name": "Product Backlog"
+     },
+     "workspace_id": "69bc08ebd4e9ec001c0c3229"
+    },
+    {
+     "user_id": 109092210,
+     "type": "transferIssue",
+     "created_at": "2026-05-08T18:50:24.524Z",
+     "from_pipeline": {
+      "name": "Icebox"
+     },
+     "to_pipeline": {
+      "name": "Project Backlog"
+     },
+     "workspace_id": "69bc08ebd4e9ec001c0c3229"
+    },
+    {
+     "user_id": 109092210,
+     "type": "transferIssue",
+     "created_at": "2026-05-08T18:39:39.572Z",
+     "from_pipeline": {
+      "name": "Project Backlog"
+     },
+     "to_pipeline": {
+      "name": "Icebox"
+     },
+     "workspace_id": "69bc08ebd4e9ec001c0c3229"
+    },
+    {
+     "user_id": 109092210,
+     "type": "transferIssue",
+     "created_at": "2026-05-08T17:46:45.323Z",
+     "from_pipeline": {
+      "name": "New Issues"
+     },
+     "to_pipeline": {
+      "name": "Project Backlog"
+     },
+     "workspace_id": "69bc08ebd4e9ec001c0c3229"
+    }
+   ]
+  },
+  {
+   "repo": "2026-1-AnatoQuizUp-Usuario-Service",
+   "numero": 79,
+   "eventos": [
+    {
+     "user_id": 109092210,
+     "type": "transferIssue",
+     "created_at": "2026-05-11T12:01:04.066Z",
+     "from_pipeline": {
+      "name": "Project Backlog"
+     },
+     "to_pipeline": {
+      "name": "Product Backlog"
+     },
+     "workspace_id": "69bc08ebd4e9ec001c0c3229"
+    },
+    {
+     "user_id": 109092210,
+     "type": "transferIssue",
+     "created_at": "2026-05-08T18:55:01.583Z",
+     "from_pipeline": {
+      "name": "Icebox"
+     },
+     "to_pipeline": {
+      "name": "Project Backlog"
+     },
+     "workspace_id": "69bc08ebd4e9ec001c0c3229"
+    },
+    {
+     "user_id": 109092210,
+     "type": "transferIssue",
+     "created_at": "2026-05-08T18:39:33.988Z",
+     "from_pipeline": {
+      "name": "Project Backlog"
+     },
+     "to_pipeline": {
+      "name": "Icebox"
+     },
+     "workspace_id": "69bc08ebd4e9ec001c0c3229"
+    },
+    {
+     "user_id": 109092210,
+     "type": "transferIssue",
+     "created_at": "2026-05-08T17:46:20.357Z",
+     "from_pipeline": {
+      "name": "New Issues"
+     },
+     "to_pipeline": {
+      "name": "Project Backlog"
+     },
+     "workspace_id": "69bc08ebd4e9ec001c0c3229"
+    }
+   ]
+  },
+  {
+   "repo": "2026-1-AnatoQuizUp-Usuario-Service",
+   "numero": 69,
+   "eventos": [
+    {
+     "user_id": 109092210,
+     "type": "transferIssue",
+     "created_at": "2026-05-11T12:01:15.737Z",
+     "from_pipeline": {
+      "name": "Project Backlog"
+     },
+     "to_pipeline": {
+      "name": "Product Backlog"
+     },
+     "workspace_id": "69bc08ebd4e9ec001c0c3229"
+    },
+    {
+     "user_id": 109092210,
+     "type": "transferIssue",
+     "created_at": "2026-05-08T18:26:00.407Z",
+     "from_pipeline": {
+      "name": "Icebox"
+     },
+     "to_pipeline": {
+      "name": "Project Backlog"
+     },
+     "workspace_id": "69bc08ebd4e9ec001c0c3229"
+    },
+    {
+     "user_id": 109092210,
+     "type": "transferIssue",
+     "created_at": "2026-05-08T18:12:41.013Z",
+     "from_pipeline": {
+      "name": "Project Backlog"
+     },
+     "to_pipeline": {
+      "name": "Icebox"
+     },
+     "workspace_id": "69bc08ebd4e9ec001c0c3229"
+    },
+    {
+     "user_id": 109092210,
+     "type": "transferIssue",
+     "created_at": "2026-05-08T17:46:04.811Z",
+     "from_pipeline": {
+      "name": "New Issues"
+     },
+     "to_pipeline": {
+      "name": "Project Backlog"
+     },
+     "workspace_id": "69bc08ebd4e9ec001c0c3229"
+    }
+   ]
+  },
+  {
+   "repo": "2026-1-AnatoQuizUp-Usuario-Service",
+   "numero": 95,
+   "eventos": [
+    {
+     "user_id": 109092210,
+     "type": "transferIssue",
+     "created_at": "2026-05-11T12:00:44.111Z",
+     "from_pipeline": {
+      "name": "Project Backlog"
+     },
+     "to_pipeline": {
+      "name": "Product Backlog"
+     },
+     "workspace_id": "69bc08ebd4e9ec001c0c3229"
+    },
+    {
+     "user_id": 109092210,
+     "type": "transferIssue",
+     "created_at": "2026-05-08T18:18:01.931Z",
+     "from_pipeline": {
+      "name": "New Issues"
+     },
+     "to_pipeline": {
+      "name": "Project Backlog"
+     },
+     "workspace_id": "69bc08ebd4e9ec001c0c3229"
+    },
+    {
+     "user_id": 109092210,
+     "type": "transferIssue",
+     "created_at": "2026-05-08T18:11:09.329Z",
+     "from_pipeline": {
+      "name": "Icebox"
+     },
+     "to_pipeline": {
+      "name": "New Issues"
+     },
+     "workspace_id": "69bc08ebd4e9ec001c0c3229"
+    },
+    {
+     "user_id": 109092210,
+     "type": "transferIssue",
+     "created_at": "2026-05-08T18:03:50.591Z",
+     "from_pipeline": {
+      "name": "Project Backlog"
+     },
+     "to_pipeline": {
+      "name": "Icebox"
+     },
+     "workspace_id": "69bc08ebd4e9ec001c0c3229"
+    },
+    {
+     "user_id": 109092210,
+     "type": "transferIssue",
+     "created_at": "2026-05-08T17:46:57.494Z",
+     "from_pipeline": {
+      "name": "New Issues"
+     },
+     "to_pipeline": {
+      "name": "Project Backlog"
+     },
+     "workspace_id": "69bc08ebd4e9ec001c0c3229"
+    }
+   ]
+  },
+  {
+   "repo": "2026-1-AnatoQuizUp-Usuario-Service",
+   "numero": 72,
+   "eventos": [
+    {
+     "user_id": 109092210,
+     "type": "transferIssue",
+     "created_at": "2026-05-11T12:01:17.420Z",
+     "from_pipeline": {
+      "name": "Project Backlog"
+     },
+     "to_pipeline": {
+      "name": "Product Backlog"
+     },
+     "workspace_id": "69bc08ebd4e9ec001c0c3229"
+    },
+    {
+     "user_id": 109092210,
+     "type": "transferIssue",
+     "created_at": "2026-05-08T18:20:11.662Z",
+     "from_pipeline": {
+      "name": "Icebox"
+     },
+     "to_pipeline": {
+      "name": "Project Backlog"
+     },
+     "workspace_id": "69bc08ebd4e9ec001c0c3229"
+    },
+    {
+     "user_id": 109092210,
+     "type": "transferIssue",
+     "created_at": "2026-05-08T18:00:46.962Z",
+     "from_pipeline": {
+      "name": "Project Backlog"
+     },
+     "to_pipeline": {
+      "name": "Icebox"
+     },
+     "workspace_id": "69bc08ebd4e9ec001c0c3229"
+    },
+    {
+     "user_id": 109092210,
+     "type": "transferIssue",
+     "created_at": "2026-05-08T17:46:08.188Z",
+     "from_pipeline": {
+      "name": "New Issues"
+     },
+     "to_pipeline": {
+      "name": "Project Backlog"
+     },
+     "workspace_id": "69bc08ebd4e9ec001c0c3229"
+    }
+   ]
+  },
+  {
+   "repo": "2026-1-AnatoQuizUp-Usuario-Service",
+   "numero": 81,
+   "eventos": [
+    {
+     "user_id": 109092210,
+     "type": "transferIssue",
+     "created_at": "2026-05-11T12:01:09.380Z",
+     "from_pipeline": {
+      "name": "Project Backlog"
+     },
+     "to_pipeline": {
+      "name": "Product Backlog"
+     },
+     "workspace_id": "69bc08ebd4e9ec001c0c3229"
+    },
+    {
+     "user_id": 109092210,
+     "type": "transferIssue",
+     "created_at": "2026-05-08T19:19:29.414Z",
+     "from_pipeline": {
+      "name": "Icebox"
+     },
+     "to_pipeline": {
+      "name": "Project Backlog"
+     },
+     "workspace_id": "69bc08ebd4e9ec001c0c3229"
+    },
+    {
+     "user_id": 109092210,
+     "type": "transferIssue",
+     "created_at": "2026-05-08T18:39:35.892Z",
+     "from_pipeline": {
+      "name": "Project Backlog"
+     },
+     "to_pipeline": {
+      "name": "Icebox"
+     },
+     "workspace_id": "69bc08ebd4e9ec001c0c3229"
+    },
+    {
+     "user_id": 109092210,
+     "type": "transferIssue",
+     "created_at": "2026-05-08T17:46:24.667Z",
+     "from_pipeline": {
+      "name": "New Issues"
+     },
+     "to_pipeline": {
+      "name": "Project Backlog"
+     },
+     "workspace_id": "69bc08ebd4e9ec001c0c3229"
+    }
+   ]
+  },
+  {
+   "repo": "2026-1-AnatoQuizUp-Usuario-Service",
+   "numero": 80,
+   "eventos": [
+    {
+     "user_id": 109092210,
+     "type": "transferIssue",
+     "created_at": "2026-05-11T12:27:04.450Z",
+     "from_pipeline": {
+      "name": "Project Backlog"
+     },
+     "to_pipeline": {
+      "name": "Product Backlog"
+     },
+     "workspace_id": "69bc08ebd4e9ec001c0c3229"
+    },
+    {
+     "user_id": 109092210,
+     "type": "transferIssue",
+     "created_at": "2026-05-08T19:16:37.819Z",
+     "from_pipeline": {
+      "name": "Icebox"
+     },
+     "to_pipeline": {
+      "name": "Project Backlog"
+     },
+     "workspace_id": "69bc08ebd4e9ec001c0c3229"
+    },
+    {
+     "user_id": 109092210,
+     "type": "transferIssue",
+     "created_at": "2026-05-08T18:39:34.962Z",
+     "from_pipeline": {
+      "name": "Project Backlog"
+     },
+     "to_pipeline": {
+      "name": "Icebox"
+     },
+     "workspace_id": "69bc08ebd4e9ec001c0c3229"
+    },
+    {
+     "user_id": 109092210,
+     "type": "transferIssue",
+     "created_at": "2026-05-08T17:46:22.324Z",
+     "from_pipeline": {
+      "name": "New Issues"
+     },
+     "to_pipeline": {
+      "name": "Project Backlog"
+     },
+     "workspace_id": "69bc08ebd4e9ec001c0c3229"
+    }
+   ]
+  },
+  {
+   "repo": "2026-1-AnatoQuizUp-Usuario-Service",
+   "numero": 84,
+   "eventos": [
+    {
+     "user_id": 109092210,
+     "type": "transferIssue",
+     "created_at": "2026-05-11T12:01:04.003Z",
+     "from_pipeline": {
+      "name": "Project Backlog"
+     },
+     "to_pipeline": {
+      "name": "Product Backlog"
+     },
+     "workspace_id": "69bc08ebd4e9ec001c0c3229"
+    },
+    {
+     "user_id": 109092210,
+     "type": "transferIssue",
+     "created_at": "2026-05-08T18:56:24.848Z",
+     "from_pipeline": {
+      "name": "Icebox"
+     },
+     "to_pipeline": {
+      "name": "Project Backlog"
+     },
+     "workspace_id": "69bc08ebd4e9ec001c0c3229"
+    },
+    {
+     "user_id": 109092210,
+     "type": "transferIssue",
+     "created_at": "2026-05-08T18:39:41.332Z",
+     "from_pipeline": {
+      "name": "Project Backlog"
+     },
+     "to_pipeline": {
+      "name": "Icebox"
+     },
+     "workspace_id": "69bc08ebd4e9ec001c0c3229"
+    },
+    {
+     "user_id": 109092210,
+     "type": "transferIssue",
+     "created_at": "2026-05-08T17:46:29.474Z",
+     "from_pipeline": {
+      "name": "New Issues"
+     },
+     "to_pipeline": {
+      "name": "Project Backlog"
+     },
+     "workspace_id": "69bc08ebd4e9ec001c0c3229"
+    }
+   ]
+  },
+  {
+   "repo": "2026-1-AnatoQuizUp-Usuario-Service",
+   "numero": 65,
+   "eventos": [
+    {
+     "user_id": 109092210,
+     "type": "transferIssue",
+     "created_at": "2026-05-11T12:01:07.573Z",
+     "from_pipeline": {
+      "name": "Project Backlog"
+     },
+     "to_pipeline": {
+      "name": "Product Backlog"
+     },
+     "workspace_id": "69bc08ebd4e9ec001c0c3229"
+    },
+    {
+     "user_id": 109092210,
+     "type": "transferIssue",
+     "created_at": "2026-05-08T19:05:37.009Z",
+     "from_pipeline": {
+      "name": "Icebox"
+     },
+     "to_pipeline": {
+      "name": "Project Backlog"
+     },
+     "workspace_id": "69bc08ebd4e9ec001c0c3229"
+    },
+    {
+     "user_id": 109092210,
+     "type": "transferIssue",
+     "created_at": "2026-05-08T18:39:23.767Z",
+     "from_pipeline": {
+      "name": "Project Backlog"
+     },
+     "to_pipeline": {
+      "name": "Icebox"
+     },
+     "workspace_id": "69bc08ebd4e9ec001c0c3229"
+    },
+    {
+     "user_id": 109092210,
+     "type": "transferIssue",
+     "created_at": "2026-05-08T17:45:56.968Z",
+     "from_pipeline": {
+      "name": "New Issues"
+     },
+     "to_pipeline": {
+      "name": "Project Backlog"
+     },
+     "workspace_id": "69bc08ebd4e9ec001c0c3229"
+    }
+   ]
+  },
+  {
+   "repo": "2026-1-AnatoQuizUp-Usuario-Service",
+   "numero": 96,
+   "eventos": [
+    {
+     "user_id": 109092210,
+     "type": "transferIssue",
+     "created_at": "2026-05-11T12:00:46.120Z",
+     "from_pipeline": {
+      "name": "Project Backlog"
+     },
+     "to_pipeline": {
+      "name": "Product Backlog"
+     },
+     "workspace_id": "69bc08ebd4e9ec001c0c3229"
+    },
+    {
+     "user_id": 109092210,
+     "type": "transferIssue",
+     "created_at": "2026-05-08T18:14:22.743Z",
+     "from_pipeline": {
+      "name": "New Issues"
+     },
+     "to_pipeline": {
+      "name": "Project Backlog"
+     },
+     "workspace_id": "69bc08ebd4e9ec001c0c3229"
+    },
+    {
+     "user_id": 109092210,
+     "type": "transferIssue",
+     "created_at": "2026-05-08T18:11:07.735Z",
+     "from_pipeline": {
+      "name": "Icebox"
+     },
+     "to_pipeline": {
+      "name": "New Issues"
+     },
+     "workspace_id": "69bc08ebd4e9ec001c0c3229"
+    },
+    {
+     "user_id": 109092210,
+     "type": "transferIssue",
+     "created_at": "2026-05-08T18:03:46.995Z",
+     "from_pipeline": {
+      "name": "Project Backlog"
+     },
+     "to_pipeline": {
+      "name": "Icebox"
+     },
+     "workspace_id": "69bc08ebd4e9ec001c0c3229"
+    },
+    {
+     "user_id": 109092210,
+     "type": "transferIssue",
+     "created_at": "2026-05-08T17:46:59.836Z",
+     "from_pipeline": {
+      "name": "New Issues"
+     },
+     "to_pipeline": {
+      "name": "Project Backlog"
+     },
+     "workspace_id": "69bc08ebd4e9ec001c0c3229"
+    }
+   ]
+  },
+  {
+   "repo": "2026-1-AnatoQuizUp-Usuario-Service",
+   "numero": 91,
+   "eventos": [
+    {
+     "user_id": 109092210,
+     "type": "transferIssue",
+     "created_at": "2026-05-11T12:01:14.363Z",
+     "from_pipeline": {
+      "name": "Project Backlog"
+     },
+     "to_pipeline": {
+      "name": "Product Backlog"
+     },
+     "workspace_id": "69bc08ebd4e9ec001c0c3229"
+    },
+    {
+     "user_id": 109092210,
+     "type": "transferIssue",
+     "created_at": "2026-05-08T18:28:39.811Z",
+     "from_pipeline": {
+      "name": "Icebox"
+     },
+     "to_pipeline": {
+      "name": "Project Backlog"
+     },
+     "workspace_id": "69bc08ebd4e9ec001c0c3229"
+    },
+    {
+     "user_id": 109092210,
+     "type": "transferIssue",
+     "created_at": "2026-05-08T17:56:06.505Z",
+     "from_pipeline": {
+      "name": "Project Backlog"
+     },
+     "to_pipeline": {
+      "name": "Icebox"
+     },
+     "workspace_id": "69bc08ebd4e9ec001c0c3229"
+    },
+    {
+     "user_id": 109092210,
+     "type": "transferIssue",
+     "created_at": "2026-05-08T17:44:53.380Z",
+     "from_pipeline": {
+      "name": "New Issues"
+     },
+     "to_pipeline": {
+      "name": "Project Backlog"
+     },
+     "workspace_id": "69bc08ebd4e9ec001c0c3229"
+    },
+    {
+     "user_id": 109092210,
+     "type": "transferIssue",
+     "created_at": "2026-05-06T12:43:16.862Z",
+     "from_pipeline": {
+      "name": "Project Backlog"
+     },
+     "to_pipeline": {
+      "name": "New Issues"
+     },
+     "workspace_id": "69bc08ebd4e9ec001c0c3229"
+    },
+    {
+     "user_id": 109092210,
+     "type": "transferIssue",
+     "created_at": "2026-05-06T12:06:09.847Z",
+     "from_pipeline": {
+      "name": "New Issues"
+     },
+     "to_pipeline": {
+      "name": "Project Backlog"
+     },
+     "workspace_id": "69bc08ebd4e9ec001c0c3229"
+    }
+   ]
+  },
+  {
+   "repo": "2026-1-AnatoQuizUp-Usuario-Service",
+   "numero": 83,
+   "eventos": [
+    {
+     "user_id": 109092210,
+     "type": "transferIssue",
+     "created_at": "2026-05-11T12:01:13.063Z",
+     "from_pipeline": {
+      "name": "Project Backlog"
+     },
+     "to_pipeline": {
+      "name": "Product Backlog"
+     },
+     "workspace_id": "69bc08ebd4e9ec001c0c3229"
+    },
+    {
+     "user_id": 109092210,
+     "type": "transferIssue",
+     "created_at": "2026-05-08T18:32:19.398Z",
+     "from_pipeline": {
+      "name": "Icebox"
+     },
+     "to_pipeline": {
+      "name": "Project Backlog"
+     },
+     "workspace_id": "69bc08ebd4e9ec001c0c3229"
+    },
+    {
+     "user_id": 109092210,
+     "type": "transferIssue",
+     "created_at": "2026-05-08T18:29:11.922Z",
+     "from_pipeline": {
+      "name": "Project Backlog"
+     },
+     "to_pipeline": {
+      "name": "Icebox"
+     },
+     "workspace_id": "69bc08ebd4e9ec001c0c3229"
+    },
+    {
+     "user_id": 109092210,
+     "type": "transferIssue",
+     "created_at": "2026-05-08T17:46:26.896Z",
+     "from_pipeline": {
+      "name": "New Issues"
+     },
+     "to_pipeline": {
+      "name": "Project Backlog"
+     },
+     "workspace_id": "69bc08ebd4e9ec001c0c3229"
+    }
+   ]
+  },
+  {
+   "repo": "2026-1-AnatoQuizUp-Usuario-Service",
+   "numero": 63,
+   "eventos": [
+    {
+     "user_id": 109092210,
+     "type": "transferIssue",
+     "created_at": "2026-05-11T12:01:11.077Z",
+     "from_pipeline": {
+      "name": "Project Backlog"
+     },
+     "to_pipeline": {
+      "name": "Product Backlog"
+     },
+     "workspace_id": "69bc08ebd4e9ec001c0c3229"
+    },
+    {
+     "user_id": 109092210,
+     "type": "transferIssue",
+     "created_at": "2026-05-08T18:37:11.826Z",
+     "from_pipeline": {
+      "name": "Icebox"
+     },
+     "to_pipeline": {
+      "name": "Project Backlog"
+     },
+     "workspace_id": "69bc08ebd4e9ec001c0c3229"
+    },
+    {
+     "user_id": 109092210,
+     "type": "transferIssue",
+     "created_at": "2026-05-08T18:32:58.524Z",
+     "from_pipeline": {
+      "name": "Project Backlog"
+     },
+     "to_pipeline": {
+      "name": "Icebox"
+     },
+     "workspace_id": "69bc08ebd4e9ec001c0c3229"
+    },
+    {
+     "user_id": 109092210,
+     "type": "transferIssue",
+     "created_at": "2026-05-08T17:45:53.122Z",
+     "from_pipeline": {
+      "name": "New Issues"
+     },
+     "to_pipeline": {
+      "name": "Project Backlog"
+     },
+     "workspace_id": "69bc08ebd4e9ec001c0c3229"
+    }
+   ]
+  },
+  {
+   "repo": "2026-1-AnatoQuizUp-Usuario-Service",
+   "numero": 52,
+   "eventos": [
+    {
+     "user_id": 109092210,
+     "type": "transferIssue",
+     "created_at": "2026-05-11T12:01:03.954Z",
+     "from_pipeline": {
+      "name": "Project Backlog"
+     },
+     "to_pipeline": {
+      "name": "Product Backlog"
+     },
+     "workspace_id": "69bc08ebd4e9ec001c0c3229"
+    },
+    {
+     "user_id": 109092210,
+     "type": "transferIssue",
+     "created_at": "2026-05-08T17:45:28.214Z",
+     "from_pipeline": {
+      "name": "New Issues"
+     },
+     "to_pipeline": {
+      "name": "Project Backlog"
+     },
+     "workspace_id": "69bc08ebd4e9ec001c0c3229"
+    }
+   ]
+  },
+  {
+   "repo": "2026-1-AnatoQuizUp-Doc",
+   "numero": 26,
+   "eventos": [
+    {
+     "user_id": 109092210,
+     "type": "transferIssue",
+     "created_at": "2026-05-06T14:59:22.733Z",
+     "from_pipeline": {
+      "name": "New Issues"
+     },
+     "to_pipeline": {
+      "name": "Product Backlog"
+     },
+     "workspace_id": "69bc08ebd4e9ec001c0c3229"
+    }
+   ]
+  },
+  {
+   "repo": "2026-1-AnatoQuizUp-Web",
+   "numero": 45,
+   "eventos": [
+    {
+     "user_id": 109092210,
+     "type": "transferIssue",
+     "created_at": "2026-05-06T15:04:31.427Z",
+     "from_pipeline": {
+      "name": "New Issues"
+     },
+     "to_pipeline": {
+      "name": "Product Backlog"
+     },
+     "workspace_id": "69bc08ebd4e9ec001c0c3229"
+    }
+   ]
+  },
+  {
+   "repo": "2026-1-AnatoQuizUp-Usuario-Service",
+   "numero": 105,
+   "eventos": [
+    {
+     "user_id": 109092210,
+     "type": "transferIssue",
+     "created_at": "2026-05-06T15:24:15.058Z",
+     "from_pipeline": {
+      "name": "New Issues"
+     },
+     "to_pipeline": {
+      "name": "Product Backlog"
+     },
+     "workspace_id": "69bc08ebd4e9ec001c0c3229"
+    }
+   ]
+  },
+  {
+   "repo": "2026-1-AnatoQuizUp-Web",
+   "numero": 46,
+   "eventos": [
+    {
+     "user_id": 109092210,
+     "type": "transferIssue",
+     "created_at": "2026-05-06T15:04:39.785Z",
+     "from_pipeline": {
+      "name": "New Issues"
+     },
+     "to_pipeline": {
+      "name": "Product Backlog"
+     },
+     "workspace_id": "69bc08ebd4e9ec001c0c3229"
+    }
+   ]
+  },
+  {
+   "repo": "2026-1-AnatoQuizUp-Usuario-Service",
+   "numero": 102,
+   "eventos": [
+    {
+     "user_id": 109092210,
+     "type": "transferIssue",
+     "created_at": "2026-05-06T13:40:59.532Z",
+     "from_pipeline": {
+      "name": "Project Backlog"
+     },
+     "to_pipeline": {
+      "name": "Product Backlog"
+     },
+     "workspace_id": "69bc08ebd4e9ec001c0c3229"
+    },
+    {
+     "user_id": 109092210,
+     "type": "transferIssue",
+     "created_at": "2026-05-06T13:40:36.851Z",
+     "from_pipeline": {
+      "name": "New Issues"
+     },
+     "to_pipeline": {
+      "name": "Project Backlog"
+     },
+     "workspace_id": "69bc08ebd4e9ec001c0c3229"
+    }
+   ]
+  },
+  {
+   "repo": "2026-1-AnatoQuizUp-Usuario-Service",
+   "numero": 99,
+   "eventos": [
+    {
+     "user_id": 109092210,
+     "type": "transferIssue",
+     "created_at": "2026-05-06T13:13:01.206Z",
+     "from_pipeline": {
+      "name": "Icebox"
+     },
+     "to_pipeline": {
+      "name": "Product Backlog"
+     },
+     "workspace_id": "69bc08ebd4e9ec001c0c3229"
+    },
+    {
+     "user_id": 109092210,
+     "type": "transferIssue",
+     "created_at": "2026-05-06T13:04:48.604Z",
+     "from_pipeline": {
+      "name": "New Issues"
+     },
+     "to_pipeline": {
+      "name": "Icebox"
+     },
+     "workspace_id": "69bc08ebd4e9ec001c0c3229"
+    }
+   ]
+  },
+  {
+   "repo": "2026-1-AnatoQuizUp-Usuario-Service",
+   "numero": 109,
+   "eventos": [
+    {
+     "user_id": 109092210,
+     "type": "transferIssue",
+     "created_at": "2026-05-11T12:02:05.263Z",
+     "from_pipeline": {
+      "name": "New Issues"
+     },
+     "to_pipeline": {
+      "name": "Product Backlog"
+     },
+     "workspace_id": "69bc08ebd4e9ec001c0c3229"
+    }
+   ]
+  },
+  {
+   "repo": "2026-1-AnatoQuizUp-Usuario-Service",
+   "numero": 60,
+   "eventos": [
+    {
+     "user_id": 109092210,
+     "type": "transferIssue",
+     "created_at": "2026-05-06T13:04:40.900Z",
+     "from_pipeline": {
+      "name": "Icebox"
+     },
+     "to_pipeline": {
+      "name": "Product Backlog"
+     },
+     "workspace_id": "69bc08ebd4e9ec001c0c3229"
+    },
+    {
+     "user_id": 109092210,
+     "type": "transferIssue",
+     "created_at": "2026-05-06T13:04:35.959Z",
+     "from_pipeline": {
+      "name": "Project Backlog"
+     },
+     "to_pipeline": {
+      "name": "Icebox"
+     },
+     "workspace_id": "69bc08ebd4e9ec001c0c3229"
+    },
+    {
+     "user_id": 109092210,
+     "type": "transferIssue",
+     "created_at": "2026-05-06T12:04:43.080Z",
+     "from_pipeline": {
+      "name": "New Issues"
+     },
+     "to_pipeline": {
+      "name": "Project Backlog"
+     },
+     "workspace_id": "69bc08ebd4e9ec001c0c3229"
+    }
+   ]
+  },
+  {
+   "repo": "2026-1-AnatoQuizUp-Usuario-Service",
+   "numero": 76,
+   "eventos": [
+    {
+     "user_id": 118488366,
+     "type": "transferIssue",
+     "created_at": "2026-06-08T13:27:04.096Z",
+     "from_pipeline": {
+      "name": "Product Backlog"
+     },
+     "to_pipeline": {
+      "name": "Sprint Backlog"
+     },
+     "workspace_id": "69bc08ebd4e9ec001c0c3229"
+    },
+    {
+     "user_id": 109092210,
+     "type": "transferIssue",
+     "created_at": "2026-05-11T12:26:59.591Z",
+     "from_pipeline": {
+      "name": "Project Backlog"
+     },
+     "to_pipeline": {
+      "name": "Product Backlog"
+     },
+     "workspace_id": "69bc08ebd4e9ec001c0c3229"
+    },
+    {
+     "user_id": 109092210,
+     "type": "transferIssue",
+     "created_at": "2026-05-08T18:59:11.863Z",
+     "from_pipeline": {
+      "name": "Icebox"
+     },
+     "to_pipeline": {
+      "name": "Project Backlog"
+     },
+     "workspace_id": "69bc08ebd4e9ec001c0c3229"
+    },
+    {
+     "user_id": 109092210,
+     "type": "transferIssue",
+     "created_at": "2026-05-08T18:39:29.989Z",
+     "from_pipeline": {
+      "name": "Project Backlog"
+     },
+     "to_pipeline": {
+      "name": "Icebox"
+     },
+     "workspace_id": "69bc08ebd4e9ec001c0c3229"
+    },
+    {
+     "user_id": 109092210,
+     "type": "transferIssue",
+     "created_at": "2026-05-08T17:46:15.123Z",
+     "from_pipeline": {
+      "name": "New Issues"
+     },
+     "to_pipeline": {
+      "name": "Project Backlog"
+     },
+     "workspace_id": "69bc08ebd4e9ec001c0c3229"
+    }
+   ]
+  },
+  {
+   "repo": "2026-1-AnatoQuizUp-Doc",
+   "numero": 46,
+   "eventos": [
+    {
+     "user_id": 118488366,
+     "type": "transferIssue",
+     "created_at": "2026-06-08T14:22:23.523Z",
+     "from_pipeline": {
+      "name": "Product Backlog"
+     },
+     "to_pipeline": {
+      "name": "Sprint Backlog"
+     },
+     "workspace_id": "69bc08ebd4e9ec001c0c3229"
+    },
+    {
+     "user_id": 118488366,
+     "type": "transferIssue",
+     "created_at": "2026-06-08T14:19:38.175Z",
+     "from_pipeline": {
+      "name": "New Issues"
+     },
+     "to_pipeline": {
+      "name": "Product Backlog"
+     },
+     "workspace_id": "69bc08ebd4e9ec001c0c3229"
+    }
+   ]
+  },
+  {
+   "repo": "2026-1-AnatoQuizUp-Doc",
+   "numero": 34,
+   "eventos": [
+    {
+     "user_id": 118488366,
+     "type": "transferIssue",
+     "created_at": "2026-06-08T13:26:29.301Z",
+     "from_pipeline": {
+      "name": "In Progress"
+     },
+     "to_pipeline": {
+      "name": "Review/QA"
+     },
+     "workspace_id": "69bc08ebd4e9ec001c0c3229"
+    },
+    {
+     "user_id": 61212256,
+     "type": "transferIssue",
+     "created_at": "2026-06-02T15:49:26.597Z",
+     "from_pipeline": {
+      "name": "Product Backlog"
+     },
+     "to_pipeline": {
+      "name": "In Progress"
+     },
+     "workspace_id": "69bc08ebd4e9ec001c0c3229"
+    },
+    {
+     "user_id": 118488366,
+     "type": "transferIssue",
+     "created_at": "2026-05-24T14:32:18.412Z",
+     "from_pipeline": {
+      "name": "New Issues"
+     },
+     "to_pipeline": {
+      "name": "Product Backlog"
+     },
+     "workspace_id": "69bc08ebd4e9ec001c0c3229"
+    }
+   ]
+  },
+  {
+   "repo": "2026-1-AnatoQuizUp-AI",
+   "numero": 1,
+   "eventos": [
+    {
+     "user_id": 91849929,
+     "type": "transferIssue",
+     "created_at": "2026-05-30T19:20:40.968Z",
+     "from_pipeline": {
+      "name": "In Progress"
+     },
+     "to_pipeline": {
+      "name": "Review/QA"
+     },
+     "workspace_id": "69bc08ebd4e9ec001c0c3229"
+    },
+    {
+     "user_id": 91849929,
+     "type": "transferIssue",
+     "created_at": "2026-05-30T16:47:24.744Z",
+     "from_pipeline": {
+      "name": "Sprint Backlog"
+     },
+     "to_pipeline": {
+      "name": "In Progress"
+     },
+     "workspace_id": "69bc08ebd4e9ec001c0c3229"
+    },
+    {
+     "user_id": 118488366,
+     "type": "transferIssue",
+     "created_at": "2026-05-24T22:54:10.624Z",
+     "from_pipeline": {
+      "name": "Product Backlog"
+     },
+     "to_pipeline": {
+      "name": "Sprint Backlog"
+     },
+     "workspace_id": "69bc08ebd4e9ec001c0c3229"
+    },
+    {
+     "user_id": 91849929,
+     "type": "transferIssue",
+     "created_at": "2026-05-24T22:53:31.330Z",
+     "from_pipeline": {
+      "name": "New Issues"
+     },
+     "to_pipeline": {
+      "name": "Product Backlog"
+     },
+     "workspace_id": "69bc08ebd4e9ec001c0c3229"
+    },
+    {
+     "user_id": 91849929,
+     "type": "estimateIssue",
+     "created_at": "2026-05-24T18:29:52.336Z",
+     "to_estimate": {
+      "value": 3
+     }
+    }
+   ]
+  },
+  {
+   "repo": "2026-1-AnatoQuizUp-Doc",
+   "numero": 27,
+   "eventos": [
+    {
+     "user_id": 91849929,
+     "type": "transferIssue",
+     "created_at": "2026-05-24T18:20:46.574Z",
+     "from_pipeline": {
+      "name": "Sprint Backlog"
+     },
+     "to_pipeline": {
+      "name": "Rejected"
+     },
+     "workspace_id": "69bc08ebd4e9ec001c0c3229"
+    },
+    {
+     "user_id": 110112943,
+     "type": "transferIssue",
+     "created_at": "2026-05-10T22:57:17.601Z",
+     "from_pipeline": {
+      "name": "Product Backlog"
+     },
+     "to_pipeline": {
+      "name": "Sprint Backlog"
+     },
+     "workspace_id": "69bc08ebd4e9ec001c0c3229"
+    },
+    {
+     "user_id": 109092210,
+     "type": "transferIssue",
+     "created_at": "2026-05-06T15:26:02.878Z",
+     "from_pipeline": {
+      "name": "Project Backlog"
+     },
+     "to_pipeline": {
+      "name": "Product Backlog"
+     },
+     "workspace_id": "69bc08ebd4e9ec001c0c3229"
+    },
+    {
+     "user_id": 109092210,
+     "type": "transferIssue",
+     "created_at": "2026-05-06T15:25:47.767Z",
+     "from_pipeline": {
+      "name": "Product Backlog"
+     },
+     "to_pipeline": {
+      "name": "Project Backlog"
+     },
+     "workspace_id": "69bc08ebd4e9ec001c0c3229"
+    },
+    {
+     "user_id": 109092210,
+     "type": "transferIssue",
+     "created_at": "2026-05-06T15:20:17.927Z",
+     "from_pipeline": {
+      "name": "New Issues"
+     },
+     "to_pipeline": {
+      "name": "Product Backlog"
+     },
+     "workspace_id": "69bc08ebd4e9ec001c0c3229"
+    }
+   ]
+  }
+ ]
+}

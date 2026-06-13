@@ -28,7 +28,7 @@ const SONAR_PROJETOS = [
   "fga-eps-mds_2026-1-AnatoQuizUp-Usuario-Service",
   "fga-eps-mds_2026-1-AnatoQuizUp-Quiz-Service",
   "fga-eps-mds_2026-1-AnatoQuizUp-BFF",
-  "fga-eps-mds_2026-1-AnatoQuizUp-Front",
+  "fga-eps-mds_2026-1-AnatoQuizUp-Web",
 ];
 const SONAR_METRICAS = [
   "coverage", "bugs", "code_smells", "vulnerabilities", "duplicated_lines_density",
@@ -233,6 +233,30 @@ async function faseSonarcloud() {
   await salvar("sonarcloud.json", resultado);
 }
 
+async function faseSonarcloudArquivos() {
+  // Medidas por arquivo — base das densidades Q-Rapids (% de arquivos dentro do ideal)
+  const METRICAS_ARQ = "complexity,functions,coverage,duplicated_lines_density,comment_lines_density,ncloc";
+  const resultado = { extraidoEm: new Date().toISOString(), projetos: {} };
+  for (const proj of SONAR_PROJETOS) {
+    const arquivos = [];
+    for (let p = 1; p <= 10; p++) {
+      const r = await fetch(
+        `https://sonarcloud.io/api/measures/component_tree?component=${proj}&metricKeys=${METRICAS_ARQ}&qualifiers=FIL&ps=500&p=${p}`,
+        { headers: { "User-Agent": "anatoquizup-dashboards" } },
+      ).then((x) => x.json());
+      const comps = r.components ?? [];
+      arquivos.push(...comps.map((c) => ({
+        caminho: c.path,
+        medidas: Object.fromEntries((c.measures ?? []).map((m) => [m.metric, Number(m.value)])),
+      })));
+      if (comps.length < 500) break;
+    }
+    resultado.projetos[proj] = arquivos;
+    console.log(`  ${proj}: ${arquivos.length} arquivos`);
+  }
+  await salvar("sonarcloud-arquivos.json", resultado);
+}
+
 // ---------------------------------------------------------------- main
 
 const pedidas = process.argv.slice(2);
@@ -266,6 +290,12 @@ if (querFase("sonarcloud")) {
   console.log("== sonarcloud ==");
   if (await existe(join(RAIZ, "sonarcloud.json"))) console.log("  já existe, pulando");
   else await faseSonarcloud();
+}
+
+if (querFase("sonarcloud-arquivos")) {
+  console.log("== sonarcloud-arquivos ==");
+  if (await existe(join(RAIZ, "sonarcloud-arquivos.json"))) console.log("  já existe, pulando");
+  else await faseSonarcloudArquivos();
 }
 
 if (querFase("zenhub-eventos")) {
