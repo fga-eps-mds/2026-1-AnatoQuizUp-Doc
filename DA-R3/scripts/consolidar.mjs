@@ -372,34 +372,34 @@ const sprintsCalc = SPRINTS.map((s) => {
   return { ...s, decorrida, emAndamento, planejadoSP: planejado, entregueSP: entregue, fontePlanejado, fonteEntregue, entregueMedidoSP: entregueMedidoJanela, custoPlanejado: arred(custoSemana(EQUIPE_BASELINE), 2), custoReal: arred(custoSemana(s.equipe), 2) };
 });
 
-// Série EVM cumulativa — AgileEVM canônico (Sulaiman/Barton/Blackburn 2006):
-//   PS  = sprints planejadas da release (10)
-//   PRP = planned release points, ajustado a cada sprint pelo escopo planejado
-//         (mudança de escopo = pontos planejados adicionados na sprint)
-//   PPC = n / PS                     (percentual planejado = tempo decorrido)
-//   APC = pontos entregues acum / PRP (percentual realizado = escopo concluído)
-//   PV = PPC × BAC · EV = APC × BAC · AC = custo real incorrido acumulado
-//   SPI = EV/PV · CPI = EV/AC · EAC = BAC/CPI · ETC = EAC − AC · VAC = BAC − EAC
+// Série EVM cumulativa — EVM ágil em story points (mesmo enquadramento do
+// exemplo do professor: BAC/EV/SPI em SP), com o custo em R$ derivado do
+// Plano de Custos para o CPI exigido:
+//   PV(SP) = Σ planejado acumulado      EV(SP) = Σ entregue acumulado
+//   SPI    = EV(SP) / PV(SP)            (aderência de escopo ao plano)
+//   PV(R$) = custo baseline × n         (orçamento previsto acumulado)
+//   EV(R$) = SPI × PV(R$)               (valor agregado em R$)
+//   AC(R$) = custo real incorrido acumulado (equipe efetiva por sprint)
+//   CPI    = EV(R$) / AC(R$)            (eficiência de custo)
+//   BAC    = custo baseline × PS (release inteira) · EAC = BAC/CPI
+//   ETC    = EAC − AC · VAC = BAC − EAC
 const PS = SPRINTS.length;
 const BAC = arred(custoSemana(EQUIPE_BASELINE) * PS, 2);
-let prp = 0, evPts = 0, acR = 0, n = 0;
+let pvSp = 0, evSp = 0, acR = 0, n = 0;
 const serieEvm = [];
 for (const s of sprintsCalc) {
   if (!s.decorrida && !s.emAndamento) continue;
   n += 1;
-  prp += s.planejadoSP ?? 0;
-  evPts += s.entregueSP ?? 0;
+  pvSp += s.planejadoSP ?? 0;
+  evSp += s.entregueSP ?? 0;
   acR += custoSemana(s.equipe);
-  const ppc = n / PS;
-  const apc = prp ? evPts / prp : 0;
-  const pvR = ppc * BAC;
-  const evR = apc * BAC;
-  const spi = pvR ? evR / pvR : null;
+  const spi = pvSp ? evSp / pvSp : null;
+  const pvR = custoSemana(EQUIPE_BASELINE) * n;
+  const evR = (spi ?? 0) * pvR;
   const cpi = acR ? evR / acR : null;
   serieEvm.push({
     sprint: s.id, fim: s.fim, emAndamento: s.emAndamento,
-    prp, pvPts: prp, evPts,
-    ppc: arred(ppc, 3), apc: arred(apc, 3),
+    prp: pvSp, pvPts: pvSp, evPts: evSp,
     spiSprint: s.planejadoSP ? arred((s.entregueSP ?? 0) / s.planejadoSP, 2) : null,
     pvReais: arred(pvR, 2), evReais: arred(evR, 2), acReais: arred(acR, 2),
     spi: arred(spi, 2), cpi: arred(cpi, 2),
@@ -447,10 +447,10 @@ const consolidado = {
     "Processo: linha do tempo de cada issue reconstruída dos eventos transferIssue do ZenHub; issues sem eventos permanecem no pipeline de criação até fechar.",
     "Processo: lead time = criação→fechamento; cycle time = 1ª entrada em In Progress→fechamento; 'fluxo de código' = issues que passaram por In Progress.",
     "Processo: limites WIP pela Lei de Little (WIP = TP × LT) com TP das últimas 4 semanas e margem de 50% (Brechner).",
-    "Projeto: AgileEVM canônico (Sulaiman/Barton/Blackburn 2006) — PPC = sprints decorridas/PS; APC = pontos entregues acumulados/PRP; PV = PPC×BAC; EV = APC×BAC; SPI = EV/PV; CPI = EV/AC; EAC = BAC/CPI.",
-    "Projeto: PRP em onda rolante — o escopo planejado de cada sprint entra como ajuste de escopo da release (planejado/entregue S1–S4 dos relatórios de sprint publicados; S5+ medido do ZenHub).",
-    "Projeto: AC = custo real incorrido, aproximado pela equipe efetiva de cada sprint (12, 10, 9, 9, 9, 8, 8, 8) × regime de 4 h/sem do plano de custos — o time não registra horas reais desde a S1; substituir por horas reais se voltarem a ser registradas.",
-    "Projeto: BAC = custo semanal baseline (9 pessoas) × PS = 10 sprints (S1 19/04 → S10 29/06).",
+    "Projeto: EVM ágil em story points (mesmo enquadramento do exemplo do professor) — PV(SP) = planejado acumulado; EV(SP) = entregue acumulado; SPI = EV/PV em SP. Planejado/entregue S1–S4 dos relatórios de sprint publicados; S5+ medido do ZenHub.",
+    "Projeto: custo em R$ derivado do Plano de Custos para o CPI — PV(R$) = custo baseline (9 pessoas) × sprints decorridas; EV(R$) = SPI × PV(R$); AC(R$) = custo real incorrido (equipe efetiva 12,10,9,9,9,8,8,8 × regime de 4 h/sem); CPI = EV(R$)/AC(R$).",
+    "Projeto: o time não registra horas reais desde a S1, então AC é aproximado pela equipe efetiva — substituir por horas reais se voltarem a ser registradas. SPI e CPI ficam próximos porque a equipe efetiva (média ~9,3) acompanhou o baseline de 9; o desvio de 1,0 é quase todo de escopo, não de custo.",
+    "Projeto: BAC = custo semanal baseline (9 pessoas, R$ 931,63) × PS = 10 sprints (S1 19/04 → S10 29/06) = R$ 9.316,30; EAC = BAC/CPI; VAC = BAC − EAC.",
     `Qualidade dos dados: ${higiene.semEstimate}/${higiene.totalIssues} issues sem estimate; ${higiene.semResponsavel} sem responsável; ${higiene.fechadasEmLote1206} fechadas em lote em 12/06 (limpeza de board) — análise crítica no notebook.`,
   ],
   produto,
