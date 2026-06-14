@@ -74,6 +74,52 @@
     </ul>
   </div>
 
+  <div class="faixa-titulo"><h2>Glossário — siglas do EVM (Gestão de Valor Agregado)</h2></div>
+  <div class="glossario">
+    <div class="grupo-gloss">Valores base (o professor usa VP / VA / CR em português)</div>
+    <table class="tabela">
+      <thead><tr><th>Sigla</th><th>Inglês (por extenso)</th><th>Em português — o que é</th></tr></thead>
+      <tbody>
+        <tr><td>EVM</td><td>Earned Value Management</td><td>Gestão de Valor Agregado — método que cruza escopo, prazo e custo</td></tr>
+        <tr><td>PV (= VP)</td><td>Planned Value</td><td>Valor Planejado — quanto de trabalho <em>deveria</em> estar feito até agora</td></tr>
+        <tr><td>EV (= VA)</td><td>Earned Value</td><td>Valor Agregado — quanto <em>de fato</em> foi entregue (medido)</td></tr>
+        <tr><td>AC (= CR)</td><td>Actual Cost</td><td>Custo Real — quanto custou de verdade o que foi feito</td></tr>
+        <tr><td>BAC</td><td>Budget At Completion</td><td>Orçamento No Término — orçamento total previsto da release (aqui R$ 9.316,30)</td></tr>
+      </tbody>
+    </table>
+    <div class="grupo-gloss">Índices de desempenho</div>
+    <table class="tabela">
+      <thead><tr><th>Sigla</th><th>Inglês (por extenso)</th><th>Em português — o que é</th></tr></thead>
+      <tbody>
+        <tr><td>SPI</td><td>Schedule Performance Index</td><td>Índice de Desempenho de Cronograma = EV/PV. <strong>1,0</strong> = no prazo · <strong>&lt; 1</strong> = atrasado · <strong>&gt; 1</strong> = adiantado</td></tr>
+        <tr><td>CPI</td><td>Cost Performance Index</td><td>Índice de Desempenho de Custo = EV/AC. <strong>1,0</strong> = no orçamento · <strong>&lt; 1</strong> = acima do custo · <strong>&gt; 1</strong> = abaixo do custo</td></tr>
+        <tr><td>SV</td><td>Schedule Variance</td><td>Variância de Cronograma = EV − PV (negativo = atrasado)</td></tr>
+        <tr><td>CV</td><td>Cost Variance</td><td>Variância de Custo = EV − AC (negativo = gastou mais que o agregado)</td></tr>
+      </tbody>
+    </table>
+    <div class="grupo-gloss">Projeções de término</div>
+    <table class="tabela">
+      <thead><tr><th>Sigla</th><th>Inglês (por extenso)</th><th>Em português — o que é</th></tr></thead>
+      <tbody>
+        <tr><td>EAC</td><td>Estimate At Completion</td><td>Estimativa No Término = BAC/CPI — quanto o projeto inteiro deve custar no ritmo atual</td></tr>
+        <tr><td>ETC</td><td>Estimate To Complete</td><td>Estimativa Para Terminar = EAC − AC — quanto ainda falta gastar</td></tr>
+        <tr><td>VAC</td><td>Variance At Completion</td><td>Variância No Término = BAC − EAC. Negativo = projeção de <strong>estouro</strong> de orçamento</td></tr>
+      </tbody>
+    </table>
+    <div class="grupo-gloss">Termos ágeis</div>
+    <table class="tabela">
+      <thead><tr><th>Sigla / termo</th><th>Inglês (por extenso)</th><th>Em português — o que é</th></tr></thead>
+      <tbody>
+        <tr><td>SP</td><td>Story Points</td><td>Pontos de História — medida relativa de esforço de uma tarefa</td></tr>
+        <tr><td>Velocity</td><td>Velocity</td><td>Velocidade — story points entregues por sprint (mede a capacidade real do time)</td></tr>
+        <tr><td>Burnup</td><td>Burnup Chart</td><td>Gráfico de acúmulo — mostra o planejado e o entregue subindo ao longo das sprints</td></tr>
+        <tr><td>AgileEVM</td><td>Agile Earned Value Management</td><td>EVM adaptado ao ágil — usa story points e sprints no lugar de horas e cronograma fixo</td></tr>
+        <tr><td>Milestone</td><td>Milestone</td><td>Marco — entrega/data importante (ex.: uma release)</td></tr>
+        <tr><td>Release</td><td>Release</td><td>Versão entregue do produto (Major = grande, Minor = incremental)</td></tr>
+      </tbody>
+    </table>
+  </div>
+
   <p class="rodape" id="rodape"></p>
 </main>
 

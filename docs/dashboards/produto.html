@@ -88,6 +88,50 @@
     </ul>
   </div>
 
+  <div class="faixa-titulo"><h2>Glossário — siglas e termos em inglês</h2></div>
+  <div class="glossario">
+    <div class="grupo-gloss">Modelo de qualidade</div>
+    <table class="tabela">
+      <thead><tr><th>Sigla / termo</th><th>Inglês (por extenso)</th><th>Em português</th></tr></thead>
+      <tbody>
+        <tr><td>Q-Rapids</td><td>Quality, Rapid feedback</td><td>Modelo que transforma métricas brutas em indicadores de qualidade normalizados de 0 a 1</td></tr>
+        <tr><td>MeasureSoftGram</td><td>—</td><td>Ferramenta/método de medição de qualidade usado na disciplina (aplica o Q-Rapids)</td></tr>
+        <tr><td>Quality Gate</td><td>Quality Gate</td><td>"Portão de qualidade": regra que bloqueia o merge se a qualidade não atingir o mínimo (ex.: cobertura ≥ 85%)</td></tr>
+        <tr><td>Product Quality</td><td>Product Quality</td><td>Qualidade do Produto (indicador estratégico)</td></tr>
+        <tr><td>Blocking</td><td>Blocking</td><td>Bloqueios (indicador estratégico)</td></tr>
+        <tr><td>Product Readiness</td><td>Product Readiness</td><td>Prontidão do Produto (indicador estratégico)</td></tr>
+      </tbody>
+    </table>
+    <div class="grupo-gloss">Métricas do SonarCloud</div>
+    <table class="tabela">
+      <thead><tr><th>Sigla / termo</th><th>Inglês (por extenso)</th><th>Em português</th></tr></thead>
+      <tbody>
+        <tr><td>Coverage</td><td>Test Coverage</td><td>Cobertura de testes — % do código exercitado pelos testes automatizados</td></tr>
+        <tr><td>Complexity</td><td>Cyclomatic Complexity</td><td>Complexidade ciclomática — nº de caminhos de decisão de uma função (quanto menor, mais simples)</td></tr>
+        <tr><td>Duplication</td><td>Duplicated Lines Density</td><td>Densidade de linhas duplicadas — % de código repetido</td></tr>
+        <tr><td>Comments</td><td>Comment Lines Density</td><td>Densidade de comentários — % de linhas comentadas</td></tr>
+        <tr><td>Code Smell</td><td>Code Smell</td><td>"Mau cheiro de código" — indício de código difícil de manter (não é um defeito/bug)</td></tr>
+        <tr><td>Bug</td><td>Bug</td><td>Defeito — pode causar comportamento errado em produção</td></tr>
+        <tr><td>Vulnerability</td><td>Vulnerability</td><td>Vulnerabilidade — brecha de segurança</td></tr>
+        <tr><td>Reliability</td><td>Reliability Rating</td><td>Confiabilidade — nota A–E baseada na quantidade de bugs</td></tr>
+        <tr><td>Security</td><td>Security Rating</td><td>Segurança — nota A–E baseada em vulnerabilidades</td></tr>
+        <tr><td>Maintainability</td><td>Maintainability Rating</td><td>Manutenibilidade — nota A–E baseada em code smells / dívida técnica</td></tr>
+        <tr><td>ncloc</td><td>Non-Comment Lines of Code</td><td>Linhas de código sem contar comentários (tamanho do código)</td></tr>
+        <tr><td>Rating A–E</td><td>Rating</td><td>Nota de A (melhor) a E (pior)</td></tr>
+      </tbody>
+    </table>
+    <div class="grupo-gloss">Processo / integração</div>
+    <table class="tabela">
+      <thead><tr><th>Sigla / termo</th><th>Inglês (por extenso)</th><th>Em português</th></tr></thead>
+      <tbody>
+        <tr><td>Build</td><td>Build</td><td>Compilação/empacotamento automático do código a cada alteração</td></tr>
+        <tr><td>Build Stability</td><td>Build Stability</td><td>Estabilidade de build — % de execuções de CI que terminam com sucesso</td></tr>
+        <tr><td>CI</td><td>Continuous Integration</td><td>Integração Contínua — pipeline que roda lint, testes e build automaticamente</td></tr>
+        <tr><td>Issue</td><td>Issue</td><td>Item de trabalho (tarefa, história ou bug) registrado no GitHub/ZenHub</td></tr>
+      </tbody>
+    </table>
+  </div>
+
   <p class="rodape" id="rodape"></p>
 </main>
 
