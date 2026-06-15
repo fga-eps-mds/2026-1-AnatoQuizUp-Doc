@@ -30,7 +30,9 @@
    "fechadaEm": "2026-06-12T23:42:30Z",
    "estimate": null,
    "labels": [],
-   "responsaveis": [],
+   "responsaveis": [
+    "ViictorHugoo"
+   ],
    "sprints": [],
    "pipeline": null
   },
@@ -46,7 +48,10 @@
    "fechadaEm": "2026-06-12T23:42:00Z",
    "estimate": null,
    "labels": [],
-   "responsaveis": [],
+   "responsaveis": [
+    "EhOMiguel",
+    "Brenofrds"
+   ],
    "sprints": [
     "Sprint: Apr 2 - Apr 15, 2026",
     "Sprint: Apr 19 - Apr 25, 2026",
@@ -509,7 +514,9 @@
    "fechadaEm": "2026-05-25T13:55:55Z",
    "estimate": null,
    "labels": [],
-   "responsaveis": [],
+   "responsaveis": [
+    "marialuisa214"
+   ],
    "sprints": [
     "Sprint: May 10 - May 16, 2026",
     "Sprint: May 17 - May 23, 2026",
@@ -532,7 +539,9 @@
     "Documentação",
     "backend"
    ],
-   "responsaveis": [],
+   "responsaveis": [
+    "Brenofrds"
+   ],
    "sprints": [
     "Sprint: May 24 - May 30, 2026"
    ],
@@ -552,7 +561,10 @@
    "labels": [
     "frontend"
    ],
-   "responsaveis": [],
+   "responsaveis": [
+    "EhOMiguel",
+    "trindadea"
+   ],
    "sprints": [
     "Sprint: May 24 - May 30, 2026"
    ],
@@ -570,7 +582,9 @@
    "fechadaEm": "2026-05-25T13:55:33Z",
    "estimate": null,
    "labels": [],
-   "responsaveis": [],
+   "responsaveis": [
+    "marialuisa214"
+   ],
    "sprints": [
     "Sprint: May 24 - May 30, 2026"
    ],
@@ -590,7 +604,9 @@
    "labels": [
     "backend"
    ],
-   "responsaveis": [],
+   "responsaveis": [
+    "GenilsonJrs"
+   ],
    "sprints": [
     "Sprint: May 10 - May 16, 2026",
     "Sprint: May 17 - May 23, 2026",
@@ -612,7 +628,9 @@
    "labels": [
     "backend"
    ],
-   "responsaveis": [],
+   "responsaveis": [
+    "trindadea"
+   ],
    "sprints": [
     "Sprint: May 10 - May 16, 2026",
     "Sprint: May 17 - May 23, 2026",
@@ -635,7 +653,9 @@
     "Documentação",
     "backend"
    ],
-   "responsaveis": [],
+   "responsaveis": [
+    "Brenofrds"
+   ],
    "sprints": [
     "Sprint: May 10 - May 16, 2026",
     "Sprint: May 17 - May 23, 2026",
@@ -971,7 +991,9 @@
    "labels": [
     "frontend"
    ],
-   "responsaveis": [],
+   "responsaveis": [
+    "pkbceira03"
+   ],
    "sprints": [
     "Sprint: May 10 - May 16, 2026",
     "Sprint: May 17 - May 23, 2026"
@@ -992,7 +1014,10 @@
    "labels": [
     "frontend"
    ],
-   "responsaveis": [],
+   "responsaveis": [
+    "Joa0V",
+    "trindadea"
+   ],
    "sprints": [
     "Sprint: May 10 - May 16, 2026",
     "Sprint: May 17 - May 23, 2026"
@@ -1971,7 +1996,10 @@
    "fechadaEm": "2026-05-01T12:25:04Z",
    "estimate": 3,
    "labels": [],
-   "responsaveis": [],
+   "responsaveis": [
+    "Brenofrds",
+    "EhOMiguel"
+   ],
    "sprints": [
     "Sprint: Apr 26 - May 2, 2026"
    ],
@@ -1989,7 +2017,9 @@
    "fechadaEm": "2026-05-01T12:25:03Z",
    "estimate": 3,
    "labels": [],
-   "responsaveis": [],
+   "responsaveis": [
+    "EhOMiguel"
+   ],
    "sprints": [
     "Sprint: Apr 26 - May 2, 2026"
    ],
@@ -2900,7 +2930,9 @@
    "fechadaEm": "2026-04-25T15:06:25Z",
    "estimate": null,
    "labels": [],
-   "responsaveis": [],
+   "responsaveis": [
+    "an4catarina"
+   ],
    "sprints": [
     "Sprint: Apr 19 - Apr 25, 2026"
    ],
@@ -3045,7 +3077,9 @@
    "fechadaEm": "2026-04-23T14:13:58Z",
    "estimate": null,
    "labels": [],
-   "responsaveis": [],
+   "responsaveis": [
+    "ViictorHugoo"
+   ],
    "sprints": [
     "Sprint: Apr 2 - Apr 15, 2026",
     "Sprint: Apr 19 - Apr 25, 2026"
@@ -3253,7 +3287,9 @@
    "fechadaEm": "2026-04-18T12:49:30Z",
    "estimate": null,
    "labels": [],
-   "responsaveis": [],
+   "responsaveis": [
+    "EhOBruno"
+   ],
    "sprints": [
     "Sprint: Apr 2 - Apr 15, 2026",
     "Sprint: Apr 19 - Apr 25, 2026"
@@ -4996,5 +5032,10 @@
   "aplicadoEm": "2026-06-15T01:35:57.583Z",
   "criterio": "data de fechamento; exclui repo de planejamento e bulk 12/06",
   "total": 4
+ },
+ "patchResponsaveis": {
+  "aplicadoEm": "2026-06-15T01:56:31.797Z",
+  "criterio": "donos decididos pela equipe em 14/06/2026",
+  "total": 16
  }
 }
