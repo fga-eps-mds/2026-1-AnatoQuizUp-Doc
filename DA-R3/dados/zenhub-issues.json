@@ -148,7 +148,7 @@
    "url": "https://github.com/fga-eps-mds/2026-1-AnatoQuizUp-Usuario-Service/issues/82",
    "criadaEm": "2026-05-03T18:42:23Z",
    "fechadaEm": "2026-06-08T13:26:44Z",
-   "estimate": null,
+   "estimate": 5,
    "labels": [
     "US"
    ],
@@ -174,7 +174,7 @@
    "url": "https://github.com/fga-eps-mds/2026-1-AnatoQuizUp-Usuario-Service/issues/66",
    "criadaEm": "2026-05-03T18:39:14Z",
    "fechadaEm": "2026-06-07T20:07:27Z",
-   "estimate": null,
+   "estimate": 5,
    "labels": [
     "US"
    ],
@@ -236,7 +236,7 @@
    "url": "https://github.com/fga-eps-mds/2026-1-AnatoQuizUp-Usuario-Service/issues/67",
    "criadaEm": "2026-05-03T18:39:15Z",
    "fechadaEm": "2026-06-02T13:41:15Z",
-   "estimate": null,
+   "estimate": 5,
    "labels": [
     "US"
    ],
@@ -356,7 +356,7 @@
    "url": "https://github.com/fga-eps-mds/2026-1-AnatoQuizUp-Usuario-Service/issues/94",
    "criadaEm": "2026-05-03T18:42:42Z",
    "fechadaEm": "2026-05-25T13:56:36Z",
-   "estimate": null,
+   "estimate": 5,
    "labels": [
     "US"
    ],
@@ -381,7 +381,7 @@
    "url": "https://github.com/fga-eps-mds/2026-1-AnatoQuizUp-Usuario-Service/issues/77",
    "criadaEm": "2026-05-03T18:42:15Z",
    "fechadaEm": "2026-05-25T13:56:33Z",
-   "estimate": null,
+   "estimate": 5,
    "labels": [
     "US"
    ],
@@ -483,7 +483,7 @@
    "url": "https://github.com/fga-eps-mds/2026-1-AnatoQuizUp-Usuario-Service/issues/93",
    "criadaEm": "2026-05-03T18:42:40Z",
    "fechadaEm": "2026-05-25T13:56:22Z",
-   "estimate": null,
+   "estimate": 5,
    "labels": [
     "US"
    ],
@@ -580,7 +580,7 @@
    "url": "https://github.com/fga-eps-mds/2026-1-AnatoQuizUp-Usuario-Service/issues/70",
    "criadaEm": "2026-05-03T18:39:19Z",
    "fechadaEm": "2026-05-25T13:55:16Z",
-   "estimate": null,
+   "estimate": 3,
    "labels": [
     "backend"
    ],
@@ -602,7 +602,7 @@
    "url": "https://github.com/fga-eps-mds/2026-1-AnatoQuizUp-Usuario-Service/issues/103",
    "criadaEm": "2026-05-06T15:03:43Z",
    "fechadaEm": "2026-05-25T13:54:55Z",
-   "estimate": null,
+   "estimate": 3,
    "labels": [
     "backend"
    ],
@@ -4969,5 +4969,19 @@
    ],
    "pipeline": "Rejected"
   }
- ]
+ ],
+ "patchEstimativas": {
+  "aplicadoEm": "2026-06-15T01:08:27.975Z",
+  "motivo": "Débito de registro: cards entregues sem estimate, pontuados pela equipe em 14/06/2026. Valores também gravados no ZenHub.",
+  "cards": {
+   "66": 5,
+   "67": 5,
+   "70": 3,
+   "77": 5,
+   "82": 5,
+   "93": 5,
+   "94": 5,
+   "103": 3
+  }
+ }
 }

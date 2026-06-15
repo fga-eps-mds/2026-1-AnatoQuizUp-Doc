@@ -59,7 +59,7 @@
     <div class="bloco largo">
       <h3>Planejado × realizado (semestre)</h3>
       <ul style="columns:2;column-gap:32px">
-        <li><strong>Escopo:</strong> SPI <span id="v-spi"></span> — ~70% do planejado entregue, de forma consistente; o escopo planejado por sprint caiu de 91 → 7 SP até caber na velocity real (mediana <span id="v-vel"></span> SP/sprint). A lição do semestre é gestão de escopo, não atraso.</li>
+        <li><strong>Escopo:</strong> SPI <span id="v-spi"></span> — ~81% do planejado entregue (subiu de 0,66 após quitar o débito de estimativa: ~36 SP de entrega real sem ponto no board). Escopo planejado por sprint caiu 91 → 7 SP até caber na velocity real (mediana <span id="v-vel"></span> SP/sprint).</li>
         <li><strong>Custo:</strong> CPI <span id="v-cpi"></span> — custo real (equipe efetiva 12→8) acima do valor agregado; EAC <span id="v-eac"></span> × BAC <span id="v-bac"></span> (VAC negativo).</li>
         <li><strong>Tempo:</strong> RM1 (27/04) e RM2 (25/05) entregues nos marcos; minors semanais cumpridas; R3 final em 29/06.</li>
         <li><strong>Qualidade:</strong> meta de cobertura ≥ 85% mantida por quality gate em todos os repositórios; 0 bugs abertos no SonarCloud na coleta.</li>
@@ -112,7 +112,7 @@ document.getElementById("kpis-projeto").innerHTML =
   kpi("CPI acumulado", fmt(ult.cpi), cls(ult.cpi, 0.9, 0.7)) +
   kpi("VAC (BAC − EAC)", `R$ ${fmt(ult.vac)}`, ult.vac >= 0 ? "verde" : "vermelho");
 document.getElementById("notas-projeto").innerHTML =
-  `<li>Entrega consistente (~70%); ajuste feito cortando escopo.</li>
+  `<li>Entrega ~81% do planejado (após quitar débito de estimativa).</li>
    <li>EVM ágil em SP: SPI = entregue/planejado; CPI com AC real (R$).</li>`;
 
 document.getElementById("v-spi").textContent = fmt(ult.spi);
