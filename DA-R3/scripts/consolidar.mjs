@@ -348,7 +348,8 @@ const processo = {
 function entregueMedido(inicio, fim) {
   const ini = new Date(inicio), f = new Date(new Date(fim).getTime() + DIA_MS - 1);
   return naoPr
-    .filter((i) => i.estimate != null && i.fechadaEm && new Date(i.fechadaEm) >= ini && new Date(i.fechadaEm) <= f)
+    // exclui trackers de US no Doc que duplicam trabalho já contado no código (sem dupla contagem)
+    .filter((i) => i.estimate != null && !i.possivelDuplicata && i.fechadaEm && new Date(i.fechadaEm) >= ini && new Date(i.fechadaEm) <= f)
     .reduce((s, i) => s + i.estimate, 0);
 }
 

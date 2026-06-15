@@ -1,5 +1,5 @@
 {
- "geradoEm": "2026-06-15T02:02:57.542Z",
+ "geradoEm": "2026-06-15T02:26:21.715Z",
  "premissas": [
   "Produto: densidades Q-Rapids calculadas por arquivo (SonarCloud component_tree) com faixas ideais e pesos do Plano de Qualidade (complexidade 35%, comentários 10%, duplicação 25%, cobertura 30%).",
   "Produto: Bloqueios = issues com descrição / total (GitHub, repos públicos); Prontidão = builds com sucesso / concluídas (último export de runs por repo).",
@@ -10,7 +10,7 @@
   "Projeto: custo em R$ derivado do Plano de Custos para o CPI — PV(R$) = custo baseline (9 pessoas) × sprints decorridas; EV(R$) = SPI × PV(R$); AC(R$) = custo real incorrido (equipe efetiva 12,10,9,9,9,8,8,8 × regime de 4 h/sem); CPI = EV(R$)/AC(R$).",
   "Projeto: o time não registra horas reais desde a S1, então AC é aproximado pela equipe efetiva — substituir por horas reais se voltarem a ser registradas. SPI e CPI ficam próximos porque a equipe efetiva (média ~9,3) acompanhou o baseline de 9; o desvio de 1,0 é quase todo de escopo, não de custo.",
   "Projeto: BAC = custo semanal baseline (9 pessoas, R$ 931,63) × PS = 10 sprints (S1 19/04 → S10 29/06) = R$ 9.316,30; EAC = BAC/CPI; VAC = BAC − EAC.",
-  "Qualidade dos dados: 124/181 issues sem estimate; 64 sem responsável; 6 fechadas em lote em 12/06 (limpeza de board) — análise crítica no notebook."
+  "Qualidade dos dados: 101/181 issues sem estimate; 64 sem responsável; 6 fechadas em lote em 12/06 (limpeza de board) — análise crítica no notebook."
  ],
  "produto": {
   "porRepo": {
@@ -3964,11 +3964,11 @@
   },
   "higiene": {
    "totalIssues": 181,
-   "semEstimate": 124,
+   "semEstimate": 101,
    "semResponsavel": 64,
    "semSprint": 72,
    "totalTrabalhadas": 112,
-   "semEstimateTrab": 60,
+   "semEstimateTrab": 37,
    "semResponsavelTrab": 0,
    "semSprintTrab": 16,
    "fechadasEmLote1206": 6,
@@ -4043,7 +4043,7 @@
     "fonteEntregue": "doc",
     "decorrida": true,
     "emAndamento": false,
-    "entregueMedidoSP": 16,
+    "entregueMedidoSP": 17,
     "custoPlanejado": 931.63,
     "custoReal": 1240.06
    },
@@ -4058,7 +4058,7 @@
     "fonteEntregue": "doc",
     "decorrida": true,
     "emAndamento": false,
-    "entregueMedidoSP": 63,
+    "entregueMedidoSP": 68,
     "custoPlanejado": 931.63,
     "custoReal": 1034.44
    },
@@ -4073,7 +4073,7 @@
     "fonteEntregue": "doc",
     "decorrida": true,
     "emAndamento": false,
-    "entregueMedidoSP": 20,
+    "entregueMedidoSP": 28,
     "custoPlanejado": 931.63,
     "custoReal": 931.63
    },
@@ -4088,7 +4088,7 @@
     "fonteEntregue": "doc",
     "decorrida": true,
     "emAndamento": false,
-    "entregueMedidoSP": 0,
+    "entregueMedidoSP": 11,
     "custoPlanejado": 931.63,
     "custoReal": 931.63
    },
@@ -4098,12 +4098,12 @@
     "fim": "2026-05-25",
     "equipe": 9,
     "planejadoSP": 30,
-    "entregueSP": 48,
+    "entregueSP": 66,
     "fontePlanejado": "doc",
     "fonteEntregue": "medido (issues fechadas na janela com estimate)",
     "decorrida": true,
     "emAndamento": false,
-    "entregueMedidoSP": 48,
+    "entregueMedidoSP": 66,
     "custoPlanejado": 931.63,
     "custoReal": 931.63
    },
@@ -4258,16 +4258,16 @@
     "emAndamento": false,
     "prp": 206,
     "pvPts": 206,
-    "evPts": 175,
-    "spiSprint": 1.6,
+    "evPts": 193,
+    "spiSprint": 2.2,
     "pvReais": 4658.15,
-    "evReais": 3957.17,
+    "evReais": 4364.19,
     "acReais": 5069.39,
-    "spi": 0.85,
-    "cpi": 0.78,
-    "eac": 11934.79,
-    "etc": 6865.4,
-    "vac": -2618.49
+    "spi": 0.94,
+    "cpi": 0.86,
+    "eac": 10821.7,
+    "etc": 5752.31,
+    "vac": -1505.4
    },
    {
     "sprint": "S6",
@@ -4275,16 +4275,16 @@
     "emAndamento": false,
     "prp": 223,
     "pvPts": 223,
-    "evPts": 178,
+    "evPts": 196,
     "spiSprint": 0.18,
     "pvReais": 5589.78,
-    "evReais": 4461.8,
+    "evReais": 4912.99,
     "acReais": 5898.21,
-    "spi": 0.8,
-    "cpi": 0.76,
-    "eac": 12315.55,
-    "etc": 6417.34,
-    "vac": -2999.25
+    "spi": 0.88,
+    "cpi": 0.83,
+    "eac": 11184.53,
+    "etc": 5286.32,
+    "vac": -1868.23
    },
    {
     "sprint": "S7",
@@ -4292,16 +4292,16 @@
     "emAndamento": false,
     "prp": 230,
     "pvPts": 230,
-    "evPts": 193,
+    "evPts": 211,
     "spiSprint": 2.14,
     "pvReais": 6521.41,
-    "evReais": 5472.31,
+    "evReais": 5982.68,
     "acReais": 6727.03,
-    "spi": 0.84,
-    "cpi": 0.81,
-    "eac": 11452.38,
-    "etc": 4725.35,
-    "vac": -2136.08
+    "spi": 0.92,
+    "cpi": 0.89,
+    "eac": 10475.4,
+    "etc": 3748.37,
+    "vac": -1159.1
    },
    {
     "sprint": "S8",
@@ -4309,16 +4309,16 @@
     "emAndamento": false,
     "prp": 237,
     "pvPts": 237,
-    "evPts": 193,
+    "evPts": 211,
     "spiSprint": 0,
     "pvReais": 7453.04,
-    "evReais": 6069.35,
+    "evReais": 6635.41,
     "acReais": 7555.85,
-    "spi": 0.81,
-    "cpi": 0.8,
-    "eac": 11598.03,
-    "etc": 4042.18,
-    "vac": -2281.73
+    "spi": 0.89,
+    "cpi": 0.88,
+    "eac": 10608.63,
+    "etc": 3052.78,
+    "vac": -1292.33
    }
   ],
   "velocity": [
@@ -4349,7 +4349,7 @@
    {
     "sprint": "S5",
     "planejado": 30,
-    "entregue": 48,
+    "entregue": 66,
     "emAndamento": false
    },
    {
@@ -4373,7 +4373,7 @@
   ],
   "previsao": {
    "velocidadeMedianaSP": 15.5,
-   "backlogAbertoEstimadoSP": 12,
+   "backlogAbertoEstimadoSP": 20,
    "sprintsRestantes": 2,
    "capacidadeRestanteSP": 31
   },

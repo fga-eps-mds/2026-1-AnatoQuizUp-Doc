@@ -471,7 +471,7 @@
    "url": "https://github.com/fga-eps-mds/2026-1-AnatoQuizUp-Doc/issues/23",
    "criadaEm": "2026-05-04T19:44:03Z",
    "fechadaEm": "2026-05-25T13:56:29Z",
-   "estimate": null,
+   "estimate": 4,
    "labels": [
     "US"
    ],
@@ -486,7 +486,8 @@
     "Sprint: May 17 - May 23, 2026",
     "Sprint: May 24 - May 30, 2026"
    ],
-   "pipeline": null
+   "pipeline": null,
+   "possivelDuplicata": true
   },
   {
    "repo": "2026-1-AnatoQuizUp-Doc",
@@ -498,7 +499,7 @@
    "url": "https://github.com/fga-eps-mds/2026-1-AnatoQuizUp-Doc/issues/25",
    "criadaEm": "2026-05-06T14:36:53Z",
    "fechadaEm": "2026-05-25T13:56:24Z",
-   "estimate": null,
+   "estimate": 2,
    "labels": [
     "US"
    ],
@@ -512,7 +513,8 @@
     "Sprint: May 17 - May 23, 2026",
     "Sprint: May 24 - May 30, 2026"
    ],
-   "pipeline": null
+   "pipeline": null,
+   "possivelDuplicata": true
   },
   {
    "repo": "2026-1-AnatoQuizUp-Usuario-Service",
@@ -548,7 +550,7 @@
    "url": "https://github.com/fga-eps-mds/2026-1-AnatoQuizUp-Doc/issues/24",
    "criadaEm": "2026-05-06T13:32:58Z",
    "fechadaEm": "2026-05-25T13:55:55Z",
-   "estimate": null,
+   "estimate": 2,
    "labels": [],
    "responsaveis": [
     "marialuisa214"
@@ -570,7 +572,7 @@
    "url": "https://github.com/fga-eps-mds/2026-1-AnatoQuizUp-Usuario-Service/issues/108",
    "criadaEm": "2026-05-08T19:44:16Z",
    "fechadaEm": "2026-05-25T13:55:47Z",
-   "estimate": null,
+   "estimate": 3,
    "labels": [
     "Documentação",
     "backend"
@@ -593,7 +595,7 @@
    "url": "https://github.com/fga-eps-mds/2026-1-AnatoQuizUp-Web/issues/48",
    "criadaEm": "2026-05-08T19:38:01Z",
    "fechadaEm": "2026-05-25T13:55:40Z",
-   "estimate": null,
+   "estimate": 3,
    "labels": [
     "frontend"
    ],
@@ -616,7 +618,7 @@
    "url": "https://github.com/fga-eps-mds/2026-1-AnatoQuizUp-Doc/issues/28",
    "criadaEm": "2026-05-08T19:36:54Z",
    "fechadaEm": "2026-05-25T13:55:33Z",
-   "estimate": null,
+   "estimate": 2,
    "labels": [],
    "responsaveis": [
     "marialuisa214"
@@ -684,7 +686,7 @@
    "url": "https://github.com/fga-eps-mds/2026-1-AnatoQuizUp-Usuario-Service/issues/104",
    "criadaEm": "2026-05-06T15:13:26Z",
    "fechadaEm": "2026-05-25T13:54:42Z",
-   "estimate": null,
+   "estimate": 3,
    "labels": [
     "Documentação",
     "backend"
@@ -1001,7 +1003,7 @@
    "url": "https://github.com/fga-eps-mds/2026-1-AnatoQuizUp-Doc/issues/29",
    "criadaEm": "2026-05-11T11:57:33Z",
    "fechadaEm": "2026-05-19T23:22:09Z",
-   "estimate": null,
+   "estimate": 5,
    "labels": [],
    "responsaveis": [
     "EhOMiguel",
@@ -1023,7 +1025,7 @@
    "url": "https://github.com/fga-eps-mds/2026-1-AnatoQuizUp-Web/issues/43",
    "criadaEm": "2026-05-06T13:38:27Z",
    "fechadaEm": "2026-05-18T13:22:21Z",
-   "estimate": null,
+   "estimate": 3,
    "labels": [
     "frontend"
    ],
@@ -1046,7 +1048,7 @@
    "url": "https://github.com/fga-eps-mds/2026-1-AnatoQuizUp-Web/issues/44",
    "criadaEm": "2026-05-06T13:41:40Z",
    "fechadaEm": "2026-05-18T13:22:21Z",
-   "estimate": null,
+   "estimate": 2,
    "labels": [
     "frontend"
    ],
@@ -1124,7 +1126,7 @@
    "url": "https://github.com/fga-eps-mds/2026-1-AnatoQuizUp-Doc/issues/22",
    "criadaEm": "2026-05-04T19:32:39Z",
    "fechadaEm": "2026-05-15T18:21:39Z",
-   "estimate": null,
+   "estimate": 3,
    "labels": [
     "US"
    ],
@@ -1137,7 +1139,8 @@
     "Sprint: May 3 - May 9, 2026",
     "Sprint: May 10 - May 16, 2026"
    ],
-   "pipeline": null
+   "pipeline": null,
+   "possivelDuplicata": true
   },
   {
    "repo": "2026-1-AnatoQuizUp-Doc",
@@ -1273,7 +1276,7 @@
    "url": "https://github.com/fga-eps-mds/2026-1-AnatoQuizUp-Usuario-Service/issues/17",
    "criadaEm": "2026-04-18T12:31:52Z",
    "fechadaEm": "2026-05-14T00:15:42Z",
-   "estimate": null,
+   "estimate": 3,
    "labels": [
     "backend"
    ],
@@ -1297,7 +1300,7 @@
    "url": "https://github.com/fga-eps-mds/2026-1-AnatoQuizUp-Web/issues/12",
    "criadaEm": "2026-04-18T12:32:12Z",
    "fechadaEm": "2026-05-14T00:15:36Z",
-   "estimate": null,
+   "estimate": 3,
    "labels": [
     "frontend"
    ],
@@ -1321,7 +1324,7 @@
    "url": "https://github.com/fga-eps-mds/2026-1-AnatoQuizUp-Doc/issues/21",
    "criadaEm": "2026-05-04T19:13:52Z",
    "fechadaEm": "2026-05-14T00:15:30Z",
-   "estimate": null,
+   "estimate": 3,
    "labels": [
     "US"
    ],
@@ -1333,7 +1336,8 @@
     "Sprint: May 3 - May 9, 2026",
     "Sprint: May 10 - May 16, 2026"
    ],
-   "pipeline": null
+   "pipeline": null,
+   "possivelDuplicata": true
   },
   {
    "repo": "2026-1-AnatoQuizUp-Web",
@@ -1779,7 +1783,7 @@
    "url": "https://github.com/fga-eps-mds/2026-1-AnatoQuizUp-Web/issues/37",
    "criadaEm": "2026-04-30T15:06:41Z",
    "fechadaEm": "2026-05-07T23:43:38Z",
-   "estimate": null,
+   "estimate": 2,
    "labels": [
     "US",
     "frontend"
@@ -1843,7 +1847,7 @@
    "url": "https://github.com/fga-eps-mds/2026-1-AnatoQuizUp-Usuario-Service/issues/47",
    "criadaEm": "2026-04-30T13:17:57Z",
    "fechadaEm": "2026-05-06T12:47:14Z",
-   "estimate": null,
+   "estimate": 3,
    "labels": [
     "Documentação",
     "backend"
@@ -1867,7 +1871,7 @@
    "url": "https://github.com/fga-eps-mds/2026-1-AnatoQuizUp-Doc/issues/5",
    "criadaEm": "2026-04-29T23:23:04Z",
    "fechadaEm": "2026-05-06T12:46:29Z",
-   "estimate": null,
+   "estimate": 3,
    "labels": [
     "Documentação"
    ],
@@ -1947,7 +1951,7 @@
    "url": "https://github.com/fga-eps-mds/2026-1-AnatoQuizUp-Web/issues/38",
    "criadaEm": "2026-04-30T15:11:49Z",
    "fechadaEm": "2026-05-04T11:44:27Z",
-   "estimate": null,
+   "estimate": 2,
    "labels": [
     "US",
     "frontend"
@@ -2025,7 +2029,7 @@
    "url": "https://github.com/fga-eps-mds/2026-1-AnatoQuizUp-Web/issues/39",
    "criadaEm": "2026-05-02T19:50:31Z",
    "fechadaEm": "2026-05-03T21:44:46Z",
-   "estimate": null,
+   "estimate": 3,
    "labels": [
     "frontend"
    ],
@@ -3000,7 +3004,7 @@
    "url": "https://github.com/fga-eps-mds/2026-1-AnatoQuizUp-Usuario-Service/issues/16",
    "criadaEm": "2026-04-18T12:31:32Z",
    "fechadaEm": "2026-04-25T15:06:25Z",
-   "estimate": null,
+   "estimate": 1,
    "labels": [],
    "responsaveis": [
     "an4catarina"
@@ -5174,7 +5178,7 @@
    "url": "https://github.com/fga-eps-mds/2026-1-AnatoQuizUp-Usuario-Service/issues/76",
    "criadaEm": "2026-05-03T18:42:13Z",
    "fechadaEm": null,
-   "estimate": null,
+   "estimate": 3,
    "labels": [
     "US"
    ],
@@ -5197,7 +5201,7 @@
    "url": "https://github.com/fga-eps-mds/2026-1-AnatoQuizUp-Doc/issues/46",
    "criadaEm": "2026-06-08T14:19:37Z",
    "fechadaEm": null,
-   "estimate": null,
+   "estimate": 2,
    "labels": [
     "enhancement"
    ],
@@ -5220,7 +5224,7 @@
    "url": "https://github.com/fga-eps-mds/2026-1-AnatoQuizUp-Doc/issues/34",
    "criadaEm": "2026-05-24T14:32:17Z",
    "fechadaEm": null,
-   "estimate": null,
+   "estimate": 3,
    "labels": [
     "US"
    ],
@@ -5232,7 +5236,8 @@
     "Sprint: May 31 - Jun 6, 2026",
     "Sprint: Jun 7 - Jun 13, 2026"
    ],
-   "pipeline": "Review/QA"
+   "pipeline": "Review/QA",
+   "possivelDuplicata": true
   },
   {
    "repo": "2026-1-AnatoQuizUp-AI",
@@ -5349,5 +5354,10 @@
   ],
   "total": 33,
   "motivo": "cerimônias coletivas da R1 (Lean Inception, arquitetura, setup) — decisão do time 14/06"
+ },
+ "patchEstimativas23": {
+  "aplicadoEm": "2026-06-15T02:23:47.513Z",
+  "total": 23,
+  "motivo": "2ª leva de estimativas (código/doc) decidida pelo time 14/06"
  }
 }
