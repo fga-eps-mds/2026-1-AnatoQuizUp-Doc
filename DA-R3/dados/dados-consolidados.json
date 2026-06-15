@@ -1,5 +1,5 @@
 {
- "geradoEm": "2026-06-15T01:57:20.054Z",
+ "geradoEm": "2026-06-15T02:02:57.542Z",
  "premissas": [
   "Produto: densidades Q-Rapids calculadas por arquivo (SonarCloud component_tree) com faixas ideais e pesos do Plano de Qualidade (complexidade 35%, comentários 10%, duplicação 25%, cobertura 30%).",
   "Produto: Bloqueios = issues com descrição / total (GitHub, repos públicos); Prontidão = builds com sucesso / concluídas (último export de runs por repo).",
@@ -10,7 +10,7 @@
   "Projeto: custo em R$ derivado do Plano de Custos para o CPI — PV(R$) = custo baseline (9 pessoas) × sprints decorridas; EV(R$) = SPI × PV(R$); AC(R$) = custo real incorrido (equipe efetiva 12,10,9,9,9,8,8,8 × regime de 4 h/sem); CPI = EV(R$)/AC(R$).",
   "Projeto: o time não registra horas reais desde a S1, então AC é aproximado pela equipe efetiva — substituir por horas reais se voltarem a ser registradas. SPI e CPI ficam próximos porque a equipe efetiva (média ~9,3) acompanhou o baseline de 9; o desvio de 1,0 é quase todo de escopo, não de custo.",
   "Projeto: BAC = custo semanal baseline (9 pessoas, R$ 931,63) × PS = 10 sprints (S1 19/04 → S10 29/06) = R$ 9.316,30; EAC = BAC/CPI; VAC = BAC − EAC.",
-  "Qualidade dos dados: 124/181 issues sem estimate; 97 sem responsável; 6 fechadas em lote em 12/06 (limpeza de board) — análise crítica no notebook."
+  "Qualidade dos dados: 124/181 issues sem estimate; 64 sem responsável; 6 fechadas em lote em 12/06 (limpeza de board) — análise crítica no notebook."
  ],
  "produto": {
   "porRepo": {
@@ -3965,55 +3965,55 @@
   "higiene": {
    "totalIssues": 181,
    "semEstimate": 124,
-   "semResponsavel": 97,
+   "semResponsavel": 64,
    "semSprint": 72,
    "totalTrabalhadas": 112,
    "semEstimateTrab": 60,
-   "semResponsavelTrab": 33,
+   "semResponsavelTrab": 0,
    "semSprintTrab": 16,
    "fechadasEmLote1206": 6,
    "paradasMais14d": 3
   },
   "porMembro": {
+   "EhOMiguel": {
+    "issuesFechadas": 49,
+    "prs": 34
+   },
+   "trindadea": {
+    "issuesFechadas": 46,
+    "prs": 15
+   },
+   "GenilsonJrs": {
+    "issuesFechadas": 44,
+    "prs": 8
+   },
+   "Brenofrds": {
+    "issuesFechadas": 49,
+    "prs": 13
+   },
+   "EhOBruno": {
+    "issuesFechadas": 42,
+    "prs": 3
+   },
+   "Joa0V": {
+    "issuesFechadas": 47,
+    "prs": 7
+   },
+   "marialuisa214": {
+    "issuesFechadas": 43,
+    "prs": 4
+   },
+   "pkbceira03": {
+    "issuesFechadas": 46,
+    "prs": 17
+   },
    "ViictorHugoo": {
     "issuesFechadas": 3,
     "prs": 15
    },
-   "EhOMiguel": {
-    "issuesFechadas": 16,
-    "prs": 34
-   },
-   "Brenofrds": {
-    "issuesFechadas": 16,
-    "prs": 13
-   },
    "caiobsantos": {
     "issuesFechadas": 7,
     "prs": 0
-   },
-   "GenilsonJrs": {
-    "issuesFechadas": 11,
-    "prs": 8
-   },
-   "trindadea": {
-    "issuesFechadas": 13,
-    "prs": 15
-   },
-   "Joa0V": {
-    "issuesFechadas": 14,
-    "prs": 7
-   },
-   "pkbceira03": {
-    "issuesFechadas": 13,
-    "prs": 17
-   },
-   "marialuisa214": {
-    "issuesFechadas": 10,
-    "prs": 4
-   },
-   "EhOBruno": {
-    "issuesFechadas": 9,
-    "prs": 3
    },
    "an4catarina": {
     "issuesFechadas": 3,
