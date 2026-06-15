@@ -255,11 +255,14 @@ new Chart(document.getElementById("grafico-membros"), {
 
 // ---- higiene
 const H = P.higiene;
-const pct = (n) => `${Math.round(100 * n / H.totalIssues)}%`;
+// Débito medido sobre itens TRABALHADOS (fechados + em sprint ativa). Itens de
+// Icebox/Backlog ficam de fora — não ter estimate/sprint no backlog é normal.
+const pctT = (n) => `${Math.round(100 * n / H.totalTrabalhadas)}%`;
+const clsT = (n) => n / H.totalTrabalhadas > 0.4 ? "vermelho" : n / H.totalTrabalhadas > 0.15 ? "amarelo" : "verde";
 const cartoesHigiene = [
-  { nome: "Issues sem estimate", valor: `${H.semEstimate} (${pct(H.semEstimate)})`, cls: H.semEstimate / H.totalIssues > 0.4 ? "vermelho" : "amarelo", sub: "impacta velocity e EVM" },
-  { nome: "Issues sem responsável", valor: `${H.semResponsavel} (${pct(H.semResponsavel)})`, cls: H.semResponsavel / H.totalIssues > 0.4 ? "vermelho" : "amarelo", sub: "impacta distribuição por membro" },
-  { nome: "Issues sem sprint", valor: `${H.semSprint} (${pct(H.semSprint)})`, cls: H.semSprint / H.totalIssues > 0.4 ? "vermelho" : "amarelo", sub: "impacta planejado × realizado" },
+  { nome: "Sem estimate (itens trabalhados)", valor: `${H.semEstimateTrab} (${pctT(H.semEstimateTrab)})`, cls: clsT(H.semEstimateTrab), sub: `de ${H.totalTrabalhadas} trabalhados · impacta velocity/EVM · ${H.semEstimate} no total c/ backlog` },
+  { nome: "Sem responsável (trabalhados)", valor: `${H.semResponsavelTrab} (${pctT(H.semResponsavelTrab)})`, cls: clsT(H.semResponsavelTrab), sub: `impacta distribuição por membro · ${H.semResponsavel} no total c/ backlog` },
+  { nome: "Sem sprint (trabalhados)", valor: `${H.semSprintTrab} (${pctT(H.semSprintTrab)})`, cls: clsT(H.semSprintTrab), sub: `impacta planejado × realizado · ${H.semSprint} no total c/ backlog` },
   { nome: "Issues paradas > 14 dias", valor: H.paradasMais14d, cls: H.paradasMais14d > 5 ? "vermelho" : H.paradasMais14d > 0 ? "amarelo" : "verde", sub: "abertas em etapas de trabalho" },
   { nome: "Fechadas em lote (12/06)", valor: H.fechadasEmLote1206, cls: "amarelo", sub: "limpeza de board — excluídas do lead time de fluxo" },
 ];

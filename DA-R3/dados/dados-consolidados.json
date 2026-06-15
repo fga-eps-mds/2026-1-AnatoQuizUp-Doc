@@ -1,5 +1,5 @@
 {
- "geradoEm": "2026-06-15T01:09:44.808Z",
+ "geradoEm": "2026-06-15T01:37:04.227Z",
  "premissas": [
   "Produto: densidades Q-Rapids calculadas por arquivo (SonarCloud component_tree) com faixas ideais e pesos do Plano de Qualidade (complexidade 35%, comentários 10%, duplicação 25%, cobertura 30%).",
   "Produto: Bloqueios = issues com descrição / total (GitHub, repos públicos); Prontidão = builds com sucesso / concluídas (último export de runs por repo).",
@@ -3966,7 +3966,11 @@
    "totalIssues": 181,
    "semEstimate": 124,
    "semResponsavel": 113,
-   "semSprint": 76,
+   "semSprint": 72,
+   "totalTrabalhadas": 112,
+   "semEstimateTrab": 60,
+   "semResponsavelTrab": 49,
+   "semSprintTrab": 16,
    "fechadasEmLote1206": 6,
    "paradasMais14d": 3
   },

@@ -284,14 +284,25 @@ for (const p of prsFechados) {
 }
 const tempoRevisaoPr = prsFechados.map((p) => dias(p.criadaEm, p.fechadaEm));
 
-// Higiene de dados do board
+// Higiene de dados do board.
+// Distingue o débito REAL (itens trabalhados: fechados ou em pipeline ativa) do
+// backlog normal (Icebox/Product/Project Backlog/New Issues), que legitimamente
+// pode não ter estimate/sprint/responsável por ainda não ter sido planejado.
+const PIPELINES_ATIVAS = ["Sprint Backlog", "In Progress", "Review/QA", "Blocked", "Rework"];
+const trabalhada = (i) => Boolean(i.fechadaEm) || PIPELINES_ATIVAS.includes(i.pipeline);
+const trab = naoPr.filter(trabalhada);
 const higiene = {
   totalIssues: naoPr.length,
   semEstimate: naoPr.filter((i) => i.estimate == null).length,
   semResponsavel: naoPr.filter((i) => i.responsaveis.length === 0).length,
   semSprint: naoPr.filter((i) => i.sprints.length === 0).length,
+  // débito real, só em itens trabalhados (é o que de fato compromete velocity/EVM)
+  totalTrabalhadas: trab.length,
+  semEstimateTrab: trab.filter((i) => i.estimate == null).length,
+  semResponsavelTrab: trab.filter((i) => i.responsaveis.length === 0).length,
+  semSprintTrab: trab.filter((i) => i.sprints.length === 0).length,
   fechadasEmLote1206: fechadas.filter((i) => i.fechadaEm.startsWith("2026-06-12T23:4")).length,
-  paradasMais14d: naoPr.filter((i) => !i.fechadaEm && ["In Progress", "Review/QA", "Sprint Backlog", "Blocked", "Rework"].includes(i.pipeline) && dias(i.criadaEm, new Date().toISOString()) > 14).length,
+  paradasMais14d: naoPr.filter((i) => !i.fechadaEm && PIPELINES_ATIVAS.includes(i.pipeline) && dias(i.criadaEm, new Date().toISOString()) > 14).length,
 };
 
 // Distribuição por membro (issues fechadas + PRs de autoria)

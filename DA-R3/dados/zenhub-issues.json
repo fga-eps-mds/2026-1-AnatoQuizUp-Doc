@@ -533,7 +533,9 @@
     "backend"
    ],
    "responsaveis": [],
-   "sprints": [],
+   "sprints": [
+    "Sprint: May 24 - May 30, 2026"
+   ],
    "pipeline": null
   },
   {
@@ -551,7 +553,9 @@
     "frontend"
    ],
    "responsaveis": [],
-   "sprints": [],
+   "sprints": [
+    "Sprint: May 24 - May 30, 2026"
+   ],
    "pipeline": null
   },
   {
@@ -567,7 +571,9 @@
    "estimate": null,
    "labels": [],
    "responsaveis": [],
-   "sprints": [],
+   "sprints": [
+    "Sprint: May 24 - May 30, 2026"
+   ],
    "pipeline": null
   },
   {
@@ -2895,7 +2901,9 @@
    "estimate": null,
    "labels": [],
    "responsaveis": [],
-   "sprints": [],
+   "sprints": [
+    "Sprint: Apr 19 - Apr 25, 2026"
+   ],
    "pipeline": null
   },
   {
@@ -4983,5 +4991,10 @@
    "94": 5,
    "103": 3
   }
+ },
+ "patchSprints": {
+  "aplicadoEm": "2026-06-15T01:35:57.583Z",
+  "criterio": "data de fechamento; exclui repo de planejamento e bulk 12/06",
+  "total": 4
  }
 }
