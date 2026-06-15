@@ -75,6 +75,9 @@ nav:
       - Métricas e Dashboard: qualidade/qualidade.md
       - Plano de Testes Funcionais: qualidade/testes.md
 
+  - Dashboards:
+      - Visão Geral: dashboards/index.md
+
   - Gestão:
       - Metodologia de trabalho: processo/metodologia.md
       - Gerência de Configuração e DevOps: processo/gerencia-configuracao.md
@@ -94,6 +97,7 @@ nav:
 
 markdown_extensions:
   - admonition
+  - attr_list
   - pymdownx.details
   - pymdownx.superfences:
       custom_fences:

@@ -1,0 +1,5363 @@
+{
+ "extraidoEm": "2026-06-13T00:07:26.648Z",
+ "total": 251,
+ "issues": [
+  {
+   "repo": "2026-1-AnatoQuizUp",
+   "repoGhId": 0,
+   "numero": 137,
+   "titulo": "Dashboard Gerencial e Analítico R1",
+   "estado": "CLOSED",
+   "ehPr": false,
+   "url": "",
+   "criadaEm": "1970-01-01T00:00:00Z",
+   "fechadaEm": "2026-06-12T23:42:45Z",
+   "estimate": null,
+   "labels": [],
+   "responsaveis": [
+    "EhOMiguel",
+    "trindadea",
+    "GenilsonJrs",
+    "Brenofrds",
+    "EhOBruno",
+    "Joa0V",
+    "marialuisa214",
+    "pkbceira03"
+   ],
+   "sprints": [],
+   "pipeline": null
+  },
+  {
+   "repo": "2026-1-AnatoQuizUp",
+   "repoGhId": 0,
+   "numero": 131,
+   "titulo": "Pipeline Inicial e Testes Unitários Implantados",
+   "estado": "CLOSED",
+   "ehPr": false,
+   "url": "",
+   "criadaEm": "1970-01-01T00:00:00Z",
+   "fechadaEm": "2026-06-12T23:42:30Z",
+   "estimate": null,
+   "labels": [],
+   "responsaveis": [
+    "ViictorHugoo"
+   ],
+   "sprints": [],
+   "pipeline": null
+  },
+  {
+   "repo": "2026-1-AnatoQuizUp",
+   "repoGhId": 0,
+   "numero": 115,
+   "titulo": "Documento de Arquitetura",
+   "estado": "CLOSED",
+   "ehPr": false,
+   "url": "",
+   "criadaEm": "1970-01-01T00:00:00Z",
+   "fechadaEm": "2026-06-12T23:42:00Z",
+   "estimate": null,
+   "labels": [],
+   "responsaveis": [
+    "EhOMiguel",
+    "Brenofrds"
+   ],
+   "sprints": [
+    "Sprint: Apr 2 - Apr 15, 2026",
+    "Sprint: Apr 19 - Apr 25, 2026",
+    "Sprint: Apr 26 - May 2, 2026",
+    "Sprint: May 3 - May 9, 2026",
+    "Sprint: May 10 - May 16, 2026",
+    "Sprint: May 17 - May 23, 2026",
+    "Sprint: May 24 - May 30, 2026",
+    "Sprint: May 31 - Jun 6, 2026",
+    "Sprint: Jun 7 - Jun 13, 2026"
+   ],
+   "pipeline": null
+  },
+  {
+   "repo": "2026-1-AnatoQuizUp",
+   "repoGhId": 0,
+   "numero": 146,
+   "titulo": "Lean Inception — Atividade 8: Sequenciador",
+   "estado": "CLOSED",
+   "ehPr": false,
+   "url": "",
+   "criadaEm": "1970-01-01T00:00:00Z",
+   "fechadaEm": "2026-06-12T23:41:43Z",
+   "estimate": null,
+   "labels": [],
+   "responsaveis": [
+    "EhOMiguel",
+    "trindadea",
+    "GenilsonJrs",
+    "Brenofrds",
+    "EhOBruno",
+    "Joa0V",
+    "marialuisa214",
+    "pkbceira03"
+   ],
+   "sprints": [
+    "Sprint: Apr 2 - Apr 15, 2026",
+    "Sprint: Apr 19 - Apr 25, 2026",
+    "Sprint: Apr 26 - May 2, 2026",
+    "Sprint: May 3 - May 9, 2026",
+    "Sprint: May 10 - May 16, 2026",
+    "Sprint: May 17 - May 23, 2026",
+    "Sprint: May 24 - May 30, 2026",
+    "Sprint: May 31 - Jun 6, 2026",
+    "Sprint: Jun 7 - Jun 13, 2026"
+   ],
+   "pipeline": null
+  },
+  {
+   "repo": "2026-1-AnatoQuizUp",
+   "repoGhId": 0,
+   "numero": 147,
+   "titulo": "Lean Inception — Atividade 9: MVP Canvas",
+   "estado": "CLOSED",
+   "ehPr": false,
+   "url": "",
+   "criadaEm": "1970-01-01T00:00:00Z",
+   "fechadaEm": "2026-06-12T23:41:42Z",
+   "estimate": null,
+   "labels": [],
+   "responsaveis": [
+    "EhOMiguel",
+    "trindadea",
+    "GenilsonJrs",
+    "Brenofrds",
+    "EhOBruno",
+    "Joa0V",
+    "marialuisa214",
+    "pkbceira03"
+   ],
+   "sprints": [
+    "Sprint: Apr 2 - Apr 15, 2026",
+    "Sprint: Apr 19 - Apr 25, 2026",
+    "Sprint: Apr 26 - May 2, 2026",
+    "Sprint: May 3 - May 9, 2026",
+    "Sprint: May 10 - May 16, 2026",
+    "Sprint: May 17 - May 23, 2026",
+    "Sprint: May 24 - May 30, 2026",
+    "Sprint: May 31 - Jun 6, 2026",
+    "Sprint: Jun 7 - Jun 13, 2026"
+   ],
+   "pipeline": null
+  },
+  {
+   "repo": "2026-1-AnatoQuizUp",
+   "repoGhId": 0,
+   "numero": 148,
+   "titulo": "Validação da Lean Inception com cliente/parceiro",
+   "estado": "CLOSED",
+   "ehPr": false,
+   "url": "",
+   "criadaEm": "1970-01-01T00:00:00Z",
+   "fechadaEm": "2026-06-12T23:41:41Z",
+   "estimate": null,
+   "labels": [],
+   "responsaveis": [
+    "EhOMiguel",
+    "trindadea",
+    "GenilsonJrs",
+    "Brenofrds",
+    "EhOBruno",
+    "Joa0V",
+    "marialuisa214",
+    "pkbceira03"
+   ],
+   "sprints": [
+    "Sprint: Apr 2 - Apr 15, 2026",
+    "Sprint: Apr 19 - Apr 25, 2026",
+    "Sprint: Apr 26 - May 2, 2026",
+    "Sprint: May 3 - May 9, 2026",
+    "Sprint: May 10 - May 16, 2026",
+    "Sprint: May 17 - May 23, 2026",
+    "Sprint: May 24 - May 30, 2026",
+    "Sprint: May 31 - Jun 6, 2026",
+    "Sprint: Jun 7 - Jun 13, 2026"
+   ],
+   "pipeline": null
+  },
+  {
+   "repo": "2026-1-AnatoQuizUp-Usuario-Service",
+   "repoGhId": 1208046400,
+   "numero": 82,
+   "titulo": "[US] Dashboard de Evolução (Aluno)",
+   "estado": "CLOSED",
+   "ehPr": false,
+   "url": "https://github.com/fga-eps-mds/2026-1-AnatoQuizUp-Usuario-Service/issues/82",
+   "criadaEm": "2026-05-03T18:42:23Z",
+   "fechadaEm": "2026-06-08T13:26:44Z",
+   "estimate": 5,
+   "labels": [
+    "US"
+   ],
+   "responsaveis": [
+    "caiobsantos",
+    "EhOMiguel",
+    "GenilsonJrs"
+   ],
+   "sprints": [
+    "Sprint: May 24 - May 30, 2026",
+    "Sprint: May 31 - Jun 6, 2026",
+    "Sprint: Jun 7 - Jun 13, 2026"
+   ],
+   "pipeline": null
+  },
+  {
+   "repo": "2026-1-AnatoQuizUp-Usuario-Service",
+   "repoGhId": 1208046400,
+   "numero": 66,
+   "titulo": "[US] Sistema de Amizades (Gestão de Contatos)",
+   "estado": "CLOSED",
+   "ehPr": false,
+   "url": "https://github.com/fga-eps-mds/2026-1-AnatoQuizUp-Usuario-Service/issues/66",
+   "criadaEm": "2026-05-03T18:39:14Z",
+   "fechadaEm": "2026-06-07T20:07:27Z",
+   "estimate": 5,
+   "labels": [
+    "US"
+   ],
+   "responsaveis": [
+    "trindadea",
+    "Joa0V"
+   ],
+   "sprints": [
+    "Sprint: May 24 - May 30, 2026",
+    "Sprint: May 31 - Jun 6, 2026",
+    "Sprint: Jun 7 - Jun 13, 2026"
+   ],
+   "pipeline": null
+  },
+  {
+   "repo": "2026-1-AnatoQuizUp-Web",
+   "repoGhId": 1208045099,
+   "numero": 68,
+   "titulo": "Feat/listas aluno",
+   "estado": "CLOSED",
+   "ehPr": true,
+   "url": "https://github.com/fga-eps-mds/2026-1-AnatoQuizUp-Web/pull/68",
+   "criadaEm": "2026-06-06T13:05:49Z",
+   "fechadaEm": "2026-06-07T13:49:13Z",
+   "estimate": null,
+   "labels": [],
+   "responsaveis": [],
+   "sprints": [
+    "Sprint: May 31 - Jun 6, 2026",
+    "Sprint: Jun 7 - Jun 13, 2026"
+   ],
+   "pipeline": null
+  },
+  {
+   "repo": "2026-1-AnatoQuizUp-Doc",
+   "repoGhId": 1200510400,
+   "numero": 45,
+   "titulo": "docs: atualiza documentacao da Release 2",
+   "estado": "CLOSED",
+   "ehPr": true,
+   "url": "https://github.com/fga-eps-mds/2026-1-AnatoQuizUp-Doc/pull/45",
+   "criadaEm": "2026-06-02T18:34:47Z",
+   "fechadaEm": "2026-06-02T23:59:34Z",
+   "estimate": null,
+   "labels": [],
+   "responsaveis": [],
+   "sprints": [
+    "Sprint: May 31 - Jun 6, 2026"
+   ],
+   "pipeline": null
+  },
+  {
+   "repo": "2026-1-AnatoQuizUp-Usuario-Service",
+   "repoGhId": 1208046400,
+   "numero": 67,
+   "titulo": "[US] Dashboard de Desempenho da Turma (Professor)",
+   "estado": "CLOSED",
+   "ehPr": false,
+   "url": "https://github.com/fga-eps-mds/2026-1-AnatoQuizUp-Usuario-Service/issues/67",
+   "criadaEm": "2026-05-03T18:39:15Z",
+   "fechadaEm": "2026-06-02T13:41:15Z",
+   "estimate": 5,
+   "labels": [
+    "US"
+   ],
+   "responsaveis": [
+    "pkbceira03",
+    "Brenofrds"
+   ],
+   "sprints": [
+    "Sprint: May 24 - May 30, 2026",
+    "Sprint: May 31 - Jun 6, 2026"
+   ],
+   "pipeline": null
+  },
+  {
+   "repo": "2026-1-AnatoQuizUp-Web",
+   "repoGhId": 1208045099,
+   "numero": 67,
+   "titulo": "Feat/sistema amizade",
+   "estado": "CLOSED",
+   "ehPr": true,
+   "url": "https://github.com/fga-eps-mds/2026-1-AnatoQuizUp-Web/pull/67",
+   "criadaEm": "2026-06-02T02:24:46Z",
+   "fechadaEm": "2026-06-02T03:04:19Z",
+   "estimate": null,
+   "labels": [],
+   "responsaveis": [],
+   "sprints": [
+    "Sprint: May 31 - Jun 6, 2026"
+   ],
+   "pipeline": null
+  },
+  {
+   "repo": "2026-1-AnatoQuizUp-Usuario-Service",
+   "repoGhId": 1208046400,
+   "numero": 117,
+   "titulo": "Feat/sistema amizade",
+   "estado": "CLOSED",
+   "ehPr": true,
+   "url": "https://github.com/fga-eps-mds/2026-1-AnatoQuizUp-Usuario-Service/pull/117",
+   "criadaEm": "2026-06-02T02:24:51Z",
+   "fechadaEm": "2026-06-02T02:47:42Z",
+   "estimate": null,
+   "labels": [],
+   "responsaveis": [],
+   "sprints": [
+    "Sprint: May 31 - Jun 6, 2026"
+   ],
+   "pipeline": null
+  },
+  {
+   "repo": "2026-1-AnatoQuizUp-Web",
+   "repoGhId": 1208045099,
+   "numero": 66,
+   "titulo": "Adiciona tela de dashboard de evolução do aluno",
+   "estado": "CLOSED",
+   "ehPr": true,
+   "url": "https://github.com/fga-eps-mds/2026-1-AnatoQuizUp-Web/pull/66",
+   "criadaEm": "2026-06-02T00:23:56Z",
+   "fechadaEm": "2026-06-02T00:53:33Z",
+   "estimate": null,
+   "labels": [],
+   "responsaveis": [],
+   "sprints": [
+    "Sprint: May 31 - Jun 6, 2026"
+   ],
+   "pipeline": null
+  },
+  {
+   "repo": "2026-1-AnatoQuizUp-Web",
+   "repoGhId": 1208045099,
+   "numero": 65,
+   "titulo": "Feat/dashboard turma",
+   "estado": "CLOSED",
+   "ehPr": true,
+   "url": "https://github.com/fga-eps-mds/2026-1-AnatoQuizUp-Web/pull/65",
+   "criadaEm": "2026-06-01T14:23:52Z",
+   "fechadaEm": "2026-06-01T15:08:43Z",
+   "estimate": null,
+   "labels": [],
+   "responsaveis": [],
+   "sprints": [
+    "Sprint: May 31 - Jun 6, 2026"
+   ],
+   "pipeline": null
+  },
+  {
+   "repo": "2026-1-AnatoQuizUp-Doc",
+   "repoGhId": 1200510400,
+   "numero": 33,
+   "titulo": "[DOCS] Dashboard Gerencial e Analítico — Notebook Analytics ",
+   "estado": "CLOSED",
+   "ehPr": false,
+   "url": "https://github.com/fga-eps-mds/2026-1-AnatoQuizUp-Doc/issues/33",
+   "criadaEm": "2026-05-19T22:59:12Z",
+   "fechadaEm": "2026-05-30T16:47:43Z",
+   "estimate": 3,
+   "labels": [
+    "documentation"
+   ],
+   "responsaveis": [
+    "marialuisa214",
+    "EhOBruno"
+   ],
+   "sprints": [
+    "Sprint: May 17 - May 23, 2026",
+    "Sprint: May 24 - May 30, 2026"
+   ],
+   "pipeline": null
+  },
+  {
+   "repo": "2026-1-AnatoQuizUp-Usuario-Service",
+   "repoGhId": 1208046400,
+   "numero": 94,
+   "titulo": "[US] Criação de Turmas e Alocação de Alunos",
+   "estado": "CLOSED",
+   "ehPr": false,
+   "url": "https://github.com/fga-eps-mds/2026-1-AnatoQuizUp-Usuario-Service/issues/94",
+   "criadaEm": "2026-05-03T18:42:42Z",
+   "fechadaEm": "2026-05-25T13:56:36Z",
+   "estimate": 5,
+   "labels": [
+    "US"
+   ],
+   "responsaveis": [
+    "pkbceira03",
+    "Brenofrds"
+   ],
+   "sprints": [
+    "Sprint: May 10 - May 16, 2026",
+    "Sprint: May 17 - May 23, 2026",
+    "Sprint: May 24 - May 30, 2026"
+   ],
+   "pipeline": null
+  },
+  {
+   "repo": "2026-1-AnatoQuizUp-Usuario-Service",
+   "repoGhId": 1208046400,
+   "numero": 77,
+   "titulo": "[US] Sistema de Recompensas por Acertos (Moedas Virtuais)",
+   "estado": "CLOSED",
+   "ehPr": false,
+   "url": "https://github.com/fga-eps-mds/2026-1-AnatoQuizUp-Usuario-Service/issues/77",
+   "criadaEm": "2026-05-03T18:42:15Z",
+   "fechadaEm": "2026-05-25T13:56:33Z",
+   "estimate": 5,
+   "labels": [
+    "US"
+   ],
+   "responsaveis": [
+    "trindadea",
+    "Joa0V"
+   ],
+   "sprints": [
+    "Sprint: May 17 - May 23, 2026",
+    "Sprint: May 24 - May 30, 2026"
+   ],
+   "pipeline": null
+  },
+  {
+   "repo": "2026-1-AnatoQuizUp-Usuario-Service",
+   "repoGhId": 1208046400,
+   "numero": 46,
+   "titulo": "[API] Agregação de Histórico",
+   "estado": "CLOSED",
+   "ehPr": false,
+   "url": "https://github.com/fga-eps-mds/2026-1-AnatoQuizUp-Usuario-Service/issues/46",
+   "criadaEm": "2026-05-01T02:13:21Z",
+   "fechadaEm": "2026-05-25T13:56:31Z",
+   "estimate": 4,
+   "labels": [
+    "backend"
+   ],
+   "responsaveis": [
+    "Joa0V"
+   ],
+   "sprints": [
+    "Sprint: May 3 - May 9, 2026",
+    "Sprint: May 10 - May 16, 2026",
+    "Sprint: May 17 - May 23, 2026",
+    "Sprint: May 24 - May 30, 2026"
+   ],
+   "pipeline": null
+  },
+  {
+   "repo": "2026-1-AnatoQuizUp-Doc",
+   "repoGhId": 1200510400,
+   "numero": 23,
+   "titulo": "[US] Quiz dinâmico",
+   "estado": "CLOSED",
+   "ehPr": false,
+   "url": "https://github.com/fga-eps-mds/2026-1-AnatoQuizUp-Doc/issues/23",
+   "criadaEm": "2026-05-04T19:44:03Z",
+   "fechadaEm": "2026-05-25T13:56:29Z",
+   "estimate": 4,
+   "labels": [
+    "US"
+   ],
+   "responsaveis": [
+    "caiobsantos",
+    "GenilsonJrs",
+    "Joa0V"
+   ],
+   "sprints": [
+    "Sprint: May 3 - May 9, 2026",
+    "Sprint: May 10 - May 16, 2026",
+    "Sprint: May 17 - May 23, 2026",
+    "Sprint: May 24 - May 30, 2026"
+   ],
+   "pipeline": null,
+   "possivelDuplicata": true
+  },
+  {
+   "repo": "2026-1-AnatoQuizUp-Doc",
+   "repoGhId": 1200510400,
+   "numero": 25,
+   "titulo": "[US] Visualização de Turmas (Aluno)",
+   "estado": "CLOSED",
+   "ehPr": false,
+   "url": "https://github.com/fga-eps-mds/2026-1-AnatoQuizUp-Doc/issues/25",
+   "criadaEm": "2026-05-06T14:36:53Z",
+   "fechadaEm": "2026-05-25T13:56:24Z",
+   "estimate": 2,
+   "labels": [
+    "US"
+   ],
+   "responsaveis": [
+    "caiobsantos",
+    "EhOMiguel",
+    "GenilsonJrs"
+   ],
+   "sprints": [
+    "Sprint: May 10 - May 16, 2026",
+    "Sprint: May 17 - May 23, 2026",
+    "Sprint: May 24 - May 30, 2026"
+   ],
+   "pipeline": null,
+   "possivelDuplicata": true
+  },
+  {
+   "repo": "2026-1-AnatoQuizUp-Usuario-Service",
+   "repoGhId": 1208046400,
+   "numero": 93,
+   "titulo": "[US] Listas de Questões",
+   "estado": "CLOSED",
+   "ehPr": false,
+   "url": "https://github.com/fga-eps-mds/2026-1-AnatoQuizUp-Usuario-Service/issues/93",
+   "criadaEm": "2026-05-03T18:42:40Z",
+   "fechadaEm": "2026-05-25T13:56:22Z",
+   "estimate": 5,
+   "labels": [
+    "US"
+   ],
+   "responsaveis": [
+    "pkbceira03",
+    "Brenofrds"
+   ],
+   "sprints": [
+    "Sprint: May 17 - May 23, 2026",
+    "Sprint: May 24 - May 30, 2026"
+   ],
+   "pipeline": null
+  },
+  {
+   "repo": "2026-1-AnatoQuizUp-Doc",
+   "repoGhId": 1200510400,
+   "numero": 24,
+   "titulo": "[Protótipo] Fluxo de Criação de Turmas e Alocação",
+   "estado": "CLOSED",
+   "ehPr": false,
+   "url": "https://github.com/fga-eps-mds/2026-1-AnatoQuizUp-Doc/issues/24",
+   "criadaEm": "2026-05-06T13:32:58Z",
+   "fechadaEm": "2026-05-25T13:55:55Z",
+   "estimate": 2,
+   "labels": [],
+   "responsaveis": [
+    "marialuisa214"
+   ],
+   "sprints": [
+    "Sprint: May 10 - May 16, 2026",
+    "Sprint: May 17 - May 23, 2026",
+    "Sprint: May 24 - May 30, 2026"
+   ],
+   "pipeline": null
+  },
+  {
+   "repo": "2026-1-AnatoQuizUp-Usuario-Service",
+   "repoGhId": 1208046400,
+   "numero": 108,
+   "titulo": "[Backend] Modelagem do Banco de Dados",
+   "estado": "CLOSED",
+   "ehPr": false,
+   "url": "https://github.com/fga-eps-mds/2026-1-AnatoQuizUp-Usuario-Service/issues/108",
+   "criadaEm": "2026-05-08T19:44:16Z",
+   "fechadaEm": "2026-05-25T13:55:47Z",
+   "estimate": 3,
+   "labels": [
+    "Documentação",
+    "backend"
+   ],
+   "responsaveis": [
+    "Brenofrds"
+   ],
+   "sprints": [
+    "Sprint: May 24 - May 30, 2026"
+   ],
+   "pipeline": null
+  },
+  {
+   "repo": "2026-1-AnatoQuizUp-Web",
+   "repoGhId": 1208045099,
+   "numero": 48,
+   "titulo": "[Web] Tela de Listas",
+   "estado": "CLOSED",
+   "ehPr": false,
+   "url": "https://github.com/fga-eps-mds/2026-1-AnatoQuizUp-Web/issues/48",
+   "criadaEm": "2026-05-08T19:38:01Z",
+   "fechadaEm": "2026-05-25T13:55:40Z",
+   "estimate": 3,
+   "labels": [
+    "frontend"
+   ],
+   "responsaveis": [
+    "EhOMiguel",
+    "trindadea"
+   ],
+   "sprints": [
+    "Sprint: May 24 - May 30, 2026"
+   ],
+   "pipeline": null
+  },
+  {
+   "repo": "2026-1-AnatoQuizUp-Doc",
+   "repoGhId": 1200510400,
+   "numero": 28,
+   "titulo": "[Protótipo] Fluxo de Criação e Exportação de Listas",
+   "estado": "CLOSED",
+   "ehPr": false,
+   "url": "https://github.com/fga-eps-mds/2026-1-AnatoQuizUp-Doc/issues/28",
+   "criadaEm": "2026-05-08T19:36:54Z",
+   "fechadaEm": "2026-05-25T13:55:33Z",
+   "estimate": 2,
+   "labels": [],
+   "responsaveis": [
+    "marialuisa214"
+   ],
+   "sprints": [
+    "Sprint: May 24 - May 30, 2026"
+   ],
+   "pipeline": null
+  },
+  {
+   "repo": "2026-1-AnatoQuizUp-Usuario-Service",
+   "repoGhId": 1208046400,
+   "numero": 70,
+   "titulo": "[Backend] Backend de Turmas e Alocação",
+   "estado": "CLOSED",
+   "ehPr": false,
+   "url": "https://github.com/fga-eps-mds/2026-1-AnatoQuizUp-Usuario-Service/issues/70",
+   "criadaEm": "2026-05-03T18:39:19Z",
+   "fechadaEm": "2026-05-25T13:55:16Z",
+   "estimate": 3,
+   "labels": [
+    "backend"
+   ],
+   "responsaveis": [
+    "GenilsonJrs"
+   ],
+   "sprints": [
+    "Sprint: May 10 - May 16, 2026",
+    "Sprint: May 17 - May 23, 2026",
+    "Sprint: May 24 - May 30, 2026"
+   ],
+   "pipeline": null
+  },
+  {
+   "repo": "2026-1-AnatoQuizUp-Usuario-Service",
+   "repoGhId": 1208046400,
+   "numero": 103,
+   "titulo": "[Backend] Backend de Turmas do Aluno",
+   "estado": "CLOSED",
+   "ehPr": false,
+   "url": "https://github.com/fga-eps-mds/2026-1-AnatoQuizUp-Usuario-Service/issues/103",
+   "criadaEm": "2026-05-06T15:03:43Z",
+   "fechadaEm": "2026-05-25T13:54:55Z",
+   "estimate": 3,
+   "labels": [
+    "backend"
+   ],
+   "responsaveis": [
+    "trindadea"
+   ],
+   "sprints": [
+    "Sprint: May 10 - May 16, 2026",
+    "Sprint: May 17 - May 23, 2026",
+    "Sprint: May 24 - May 30, 2026"
+   ],
+   "pipeline": null
+  },
+  {
+   "repo": "2026-1-AnatoQuizUp-Usuario-Service",
+   "repoGhId": 1208046400,
+   "numero": 104,
+   "titulo": "[Backend] Modelagem do banco",
+   "estado": "CLOSED",
+   "ehPr": false,
+   "url": "https://github.com/fga-eps-mds/2026-1-AnatoQuizUp-Usuario-Service/issues/104",
+   "criadaEm": "2026-05-06T15:13:26Z",
+   "fechadaEm": "2026-05-25T13:54:42Z",
+   "estimate": 3,
+   "labels": [
+    "Documentação",
+    "backend"
+   ],
+   "responsaveis": [
+    "Brenofrds"
+   ],
+   "sprints": [
+    "Sprint: May 10 - May 16, 2026",
+    "Sprint: May 17 - May 23, 2026",
+    "Sprint: May 24 - May 30, 2026"
+   ],
+   "pipeline": null
+  },
+  {
+   "repo": "2026-1-AnatoQuizUp-Web",
+   "repoGhId": 1208045099,
+   "numero": 20,
+   "titulo": "[US] [Frontend] Painel de administração de usuários — Tela",
+   "estado": "CLOSED",
+   "ehPr": false,
+   "url": "https://github.com/fga-eps-mds/2026-1-AnatoQuizUp-Web/issues/20",
+   "criadaEm": "2026-04-18T12:37:05Z",
+   "fechadaEm": "2026-05-25T02:47:09Z",
+   "estimate": 3,
+   "labels": [
+    "FEATURE",
+    "US",
+    "frontend"
+   ],
+   "responsaveis": [
+    "caiobsantos",
+    "GenilsonJrs"
+   ],
+   "sprints": [
+    "Sprint: Apr 19 - Apr 25, 2026",
+    "Sprint: Apr 26 - May 2, 2026",
+    "Sprint: May 3 - May 9, 2026",
+    "Sprint: May 10 - May 16, 2026",
+    "Sprint: May 17 - May 23, 2026",
+    "Sprint: May 24 - May 30, 2026"
+   ],
+   "pipeline": null
+  },
+  {
+   "repo": "2026-1-AnatoQuizUp-Web",
+   "repoGhId": 1208045099,
+   "numero": 64,
+   "titulo": "Implementação do painel de administração e fluxo de roteamento protegido",
+   "estado": "CLOSED",
+   "ehPr": true,
+   "url": "https://github.com/fga-eps-mds/2026-1-AnatoQuizUp-Web/pull/64",
+   "criadaEm": "2026-05-25T02:25:17Z",
+   "fechadaEm": "2026-05-25T02:47:08Z",
+   "estimate": null,
+   "labels": [],
+   "responsaveis": [
+    "GenilsonJrs"
+   ],
+   "sprints": [
+    "Sprint: May 24 - May 30, 2026"
+   ],
+   "pipeline": null
+  },
+  {
+   "repo": "2026-1-AnatoQuizUp-Usuario-Service",
+   "repoGhId": 1208046400,
+   "numero": 116,
+   "titulo": "Feature/minhas turmas aluno",
+   "estado": "CLOSED",
+   "ehPr": true,
+   "url": "https://github.com/fga-eps-mds/2026-1-AnatoQuizUp-Usuario-Service/pull/116",
+   "criadaEm": "2026-05-21T10:28:46Z",
+   "fechadaEm": "2026-05-25T01:21:33Z",
+   "estimate": null,
+   "labels": [],
+   "responsaveis": [],
+   "sprints": [
+    "Sprint: May 17 - May 23, 2026",
+    "Sprint: May 24 - May 30, 2026"
+   ],
+   "pipeline": null
+  },
+  {
+   "repo": "2026-1-AnatoQuizUp-Web",
+   "repoGhId": 1208045099,
+   "numero": 61,
+   "titulo": "Feat/moedas atp",
+   "estado": "CLOSED",
+   "ehPr": true,
+   "url": "https://github.com/fga-eps-mds/2026-1-AnatoQuizUp-Web/pull/61",
+   "criadaEm": "2026-05-24T04:41:43Z",
+   "fechadaEm": "2026-05-25T01:07:06Z",
+   "estimate": null,
+   "labels": [],
+   "responsaveis": [],
+   "sprints": [
+    "Sprint: May 24 - May 30, 2026"
+   ],
+   "pipeline": null
+  },
+  {
+   "repo": "2026-1-AnatoQuizUp-Web",
+   "repoGhId": 1208045099,
+   "numero": 60,
+   "titulo": "Feature/minhas turmas aluno",
+   "estado": "CLOSED",
+   "ehPr": true,
+   "url": "https://github.com/fga-eps-mds/2026-1-AnatoQuizUp-Web/pull/60",
+   "criadaEm": "2026-05-21T10:28:36Z",
+   "fechadaEm": "2026-05-25T00:03:47Z",
+   "estimate": null,
+   "labels": [],
+   "responsaveis": [
+    "EhOMiguel",
+    "GenilsonJrs"
+   ],
+   "sprints": [
+    "Sprint: May 17 - May 23, 2026",
+    "Sprint: May 24 - May 30, 2026"
+   ],
+   "pipeline": null
+  },
+  {
+   "repo": "2026-1-AnatoQuizUp-Web",
+   "repoGhId": 1208045099,
+   "numero": 62,
+   "titulo": "Feat/lista",
+   "estado": "CLOSED",
+   "ehPr": true,
+   "url": "https://github.com/fga-eps-mds/2026-1-AnatoQuizUp-Web/pull/62",
+   "criadaEm": "2026-05-24T17:46:59Z",
+   "fechadaEm": "2026-05-24T23:39:42Z",
+   "estimate": null,
+   "labels": [],
+   "responsaveis": [],
+   "sprints": [
+    "Sprint: May 24 - May 30, 2026"
+   ],
+   "pipeline": null
+  },
+  {
+   "repo": "2026-1-AnatoQuizUp-Web",
+   "repoGhId": 1208045099,
+   "numero": 34,
+   "titulo": "[Web] Aba de Histórico e Revisão",
+   "estado": "CLOSED",
+   "ehPr": false,
+   "url": "https://github.com/fga-eps-mds/2026-1-AnatoQuizUp-Web/issues/34",
+   "criadaEm": "2026-05-01T02:16:34Z",
+   "fechadaEm": "2026-05-24T23:33:21Z",
+   "estimate": 4,
+   "labels": [
+    "frontend"
+   ],
+   "responsaveis": [
+    "caiobsantos",
+    "GenilsonJrs"
+   ],
+   "sprints": [
+    "Sprint: May 3 - May 9, 2026",
+    "Sprint: May 10 - May 16, 2026",
+    "Sprint: May 17 - May 23, 2026",
+    "Sprint: May 24 - May 30, 2026"
+   ],
+   "pipeline": null
+  },
+  {
+   "repo": "2026-1-AnatoQuizUp-Web",
+   "repoGhId": 1208045099,
+   "numero": 63,
+   "titulo": "Criação da tela de histórico e revisão de resultados completa",
+   "estado": "CLOSED",
+   "ehPr": true,
+   "url": "https://github.com/fga-eps-mds/2026-1-AnatoQuizUp-Web/pull/63",
+   "criadaEm": "2026-05-24T22:07:45Z",
+   "fechadaEm": "2026-05-24T23:33:20Z",
+   "estimate": null,
+   "labels": [],
+   "responsaveis": [
+    "GenilsonJrs",
+    "Joa0V"
+   ],
+   "sprints": [
+    "Sprint: May 24 - May 30, 2026"
+   ],
+   "pipeline": null
+  },
+  {
+   "repo": "2026-1-AnatoQuizUp-Web",
+   "repoGhId": 1208045099,
+   "numero": 33,
+   "titulo": "[Web] Interface Dinâmica de Questionário",
+   "estado": "CLOSED",
+   "ehPr": false,
+   "url": "https://github.com/fga-eps-mds/2026-1-AnatoQuizUp-Web/issues/33",
+   "criadaEm": "2026-05-01T02:10:54Z",
+   "fechadaEm": "2026-05-22T23:46:19Z",
+   "estimate": 5,
+   "labels": [
+    "frontend"
+   ],
+   "responsaveis": [
+    "GenilsonJrs"
+   ],
+   "sprints": [
+    "Sprint: May 3 - May 9, 2026",
+    "Sprint: May 10 - May 16, 2026",
+    "Sprint: May 17 - May 23, 2026"
+   ],
+   "pipeline": null
+  },
+  {
+   "repo": "2026-1-AnatoQuizUp-Usuario-Service",
+   "repoGhId": 1208046400,
+   "numero": 48,
+   "titulo": "[API] Validação e Registro de Tentativa",
+   "estado": "CLOSED",
+   "ehPr": false,
+   "url": "https://github.com/fga-eps-mds/2026-1-AnatoQuizUp-Usuario-Service/issues/48",
+   "criadaEm": "2026-05-01T02:03:42Z",
+   "fechadaEm": "2026-05-22T23:46:14Z",
+   "estimate": 4,
+   "labels": [
+    "backend"
+   ],
+   "responsaveis": [
+    "Joa0V"
+   ],
+   "sprints": [
+    "Sprint: May 3 - May 9, 2026",
+    "Sprint: May 10 - May 16, 2026",
+    "Sprint: May 17 - May 23, 2026"
+   ],
+   "pipeline": null
+  },
+  {
+   "repo": "2026-1-AnatoQuizUp-Usuario-Service",
+   "repoGhId": 1208046400,
+   "numero": 49,
+   "titulo": "[API] Filtro e Randomização de Quiz",
+   "estado": "CLOSED",
+   "ehPr": false,
+   "url": "https://github.com/fga-eps-mds/2026-1-AnatoQuizUp-Usuario-Service/issues/49",
+   "criadaEm": "2026-04-30T13:58:31Z",
+   "fechadaEm": "2026-05-22T23:46:12Z",
+   "estimate": 4,
+   "labels": [
+    "backend"
+   ],
+   "responsaveis": [
+    "Joa0V"
+   ],
+   "sprints": [
+    "Sprint: May 3 - May 9, 2026",
+    "Sprint: May 10 - May 16, 2026",
+    "Sprint: May 17 - May 23, 2026"
+   ],
+   "pipeline": null
+  },
+  {
+   "repo": "2026-1-AnatoQuizUp-Web",
+   "repoGhId": 1208045099,
+   "numero": 35,
+   "titulo": " [Web]Interface de Seleção e Setup do Quiz",
+   "estado": "CLOSED",
+   "ehPr": false,
+   "url": "https://github.com/fga-eps-mds/2026-1-AnatoQuizUp-Web/issues/35",
+   "criadaEm": "2026-04-30T14:11:52Z",
+   "fechadaEm": "2026-05-21T12:22:05Z",
+   "estimate": 3,
+   "labels": [
+    "frontend"
+   ],
+   "responsaveis": [
+    "GenilsonJrs",
+    "Joa0V"
+   ],
+   "sprints": [
+    "Sprint: May 3 - May 9, 2026",
+    "Sprint: May 10 - May 16, 2026",
+    "Sprint: May 17 - May 23, 2026"
+   ],
+   "pipeline": null
+  },
+  {
+   "repo": "2026-1-AnatoQuizUp-Web",
+   "repoGhId": 1208045099,
+   "numero": 59,
+   "titulo": "Task: [Web] Interface Dinâmica de Questionário",
+   "estado": "CLOSED",
+   "ehPr": true,
+   "url": "https://github.com/fga-eps-mds/2026-1-AnatoQuizUp-Web/pull/59",
+   "criadaEm": "2026-05-21T03:00:50Z",
+   "fechadaEm": "2026-05-21T12:22:04Z",
+   "estimate": null,
+   "labels": [],
+   "responsaveis": [
+    "GenilsonJrs",
+    "Joa0V"
+   ],
+   "sprints": [
+    "Sprint: May 17 - May 23, 2026"
+   ],
+   "pipeline": null
+  },
+  {
+   "repo": "2026-1-AnatoQuizUp-Doc",
+   "repoGhId": 1200510400,
+   "numero": 29,
+   "titulo": "[Task] Implementação de Arquitetura Distribuída (BFF, Auth, Quiz, AI) e Deploy",
+   "estado": "CLOSED",
+   "ehPr": false,
+   "url": "https://github.com/fga-eps-mds/2026-1-AnatoQuizUp-Doc/issues/29",
+   "criadaEm": "2026-05-11T11:57:33Z",
+   "fechadaEm": "2026-05-19T23:22:09Z",
+   "estimate": 5,
+   "labels": [],
+   "responsaveis": [
+    "EhOMiguel",
+    "trindadea"
+   ],
+   "sprints": [
+    "Sprint: May 10 - May 16, 2026",
+    "Sprint: May 17 - May 23, 2026"
+   ],
+   "pipeline": null
+  },
+  {
+   "repo": "2026-1-AnatoQuizUp-Web",
+   "repoGhId": 1208045099,
+   "numero": 43,
+   "titulo": "[Web] Formulário de Criação de Turma",
+   "estado": "CLOSED",
+   "ehPr": false,
+   "url": "https://github.com/fga-eps-mds/2026-1-AnatoQuizUp-Web/issues/43",
+   "criadaEm": "2026-05-06T13:38:27Z",
+   "fechadaEm": "2026-05-18T13:22:21Z",
+   "estimate": 3,
+   "labels": [
+    "frontend"
+   ],
+   "responsaveis": [
+    "pkbceira03"
+   ],
+   "sprints": [
+    "Sprint: May 10 - May 16, 2026",
+    "Sprint: May 17 - May 23, 2026"
+   ],
+   "pipeline": null
+  },
+  {
+   "repo": "2026-1-AnatoQuizUp-Web",
+   "repoGhId": 1208045099,
+   "numero": 44,
+   "titulo": "[Frontend] Tela de Alocação de Alunos",
+   "estado": "CLOSED",
+   "ehPr": false,
+   "url": "https://github.com/fga-eps-mds/2026-1-AnatoQuizUp-Web/issues/44",
+   "criadaEm": "2026-05-06T13:41:40Z",
+   "fechadaEm": "2026-05-18T13:22:21Z",
+   "estimate": 2,
+   "labels": [
+    "frontend"
+   ],
+   "responsaveis": [
+    "Joa0V",
+    "trindadea"
+   ],
+   "sprints": [
+    "Sprint: May 10 - May 16, 2026",
+    "Sprint: May 17 - May 23, 2026"
+   ],
+   "pipeline": null
+  },
+  {
+   "repo": "2026-1-AnatoQuizUp-Web",
+   "repoGhId": 1208045099,
+   "numero": 58,
+   "titulo": "Feat/turma",
+   "estado": "CLOSED",
+   "ehPr": true,
+   "url": "https://github.com/fga-eps-mds/2026-1-AnatoQuizUp-Web/pull/58",
+   "criadaEm": "2026-05-18T00:42:55Z",
+   "fechadaEm": "2026-05-18T13:22:19Z",
+   "estimate": null,
+   "labels": [],
+   "responsaveis": [],
+   "sprints": [
+    "Sprint: May 17 - May 23, 2026"
+   ],
+   "pipeline": null
+  },
+  {
+   "repo": "2026-1-AnatoQuizUp-Web",
+   "repoGhId": 1208045099,
+   "numero": 57,
+   "titulo": "Feat/turma",
+   "estado": "CLOSED",
+   "ehPr": true,
+   "url": "https://github.com/fga-eps-mds/2026-1-AnatoQuizUp-Web/pull/57",
+   "criadaEm": "2026-05-18T00:19:18Z",
+   "fechadaEm": "2026-05-18T00:20:10Z",
+   "estimate": null,
+   "labels": [],
+   "responsaveis": [],
+   "sprints": [
+    "Sprint: May 17 - May 23, 2026"
+   ],
+   "pipeline": null
+  },
+  {
+   "repo": "2026-1-AnatoQuizUp-Web",
+   "repoGhId": 1208045099,
+   "numero": 55,
+   "titulo": "feat: adiciona upload de imagem",
+   "estado": "CLOSED",
+   "ehPr": true,
+   "url": "https://github.com/fga-eps-mds/2026-1-AnatoQuizUp-Web/pull/55",
+   "criadaEm": "2026-05-12T18:38:11Z",
+   "fechadaEm": "2026-05-16T18:00:32Z",
+   "estimate": null,
+   "labels": [],
+   "responsaveis": [],
+   "sprints": [
+    "Sprint: May 10 - May 16, 2026"
+   ],
+   "pipeline": null
+  },
+  {
+   "repo": "2026-1-AnatoQuizUp-Doc",
+   "repoGhId": 1200510400,
+   "numero": 22,
+   "titulo": "[US] Cadastro e gestão de questão",
+   "estado": "CLOSED",
+   "ehPr": false,
+   "url": "https://github.com/fga-eps-mds/2026-1-AnatoQuizUp-Doc/issues/22",
+   "criadaEm": "2026-05-04T19:32:39Z",
+   "fechadaEm": "2026-05-15T18:21:39Z",
+   "estimate": 3,
+   "labels": [
+    "US"
+   ],
+   "responsaveis": [
+    "marialuisa214",
+    "pkbceira03",
+    "Brenofrds"
+   ],
+   "sprints": [
+    "Sprint: May 3 - May 9, 2026",
+    "Sprint: May 10 - May 16, 2026"
+   ],
+   "pipeline": null,
+   "possivelDuplicata": true
+  },
+  {
+   "repo": "2026-1-AnatoQuizUp-Doc",
+   "repoGhId": 1200510400,
+   "numero": 32,
+   "titulo": "Feature/migracao quiz service",
+   "estado": "CLOSED",
+   "ehPr": true,
+   "url": "https://github.com/fga-eps-mds/2026-1-AnatoQuizUp-Doc/pull/32",
+   "criadaEm": "2026-05-14T12:34:32Z",
+   "fechadaEm": "2026-05-14T12:34:39Z",
+   "estimate": null,
+   "labels": [],
+   "responsaveis": [],
+   "sprints": [],
+   "pipeline": null
+  },
+  {
+   "repo": "2026-1-AnatoQuizUp-Usuario-Service",
+   "repoGhId": 1208046400,
+   "numero": 113,
+   "titulo": "feat: adiciona upload de imagem",
+   "estado": "CLOSED",
+   "ehPr": true,
+   "url": "https://github.com/fga-eps-mds/2026-1-AnatoQuizUp-Usuario-Service/pull/113",
+   "criadaEm": "2026-05-12T21:41:42Z",
+   "fechadaEm": "2026-05-14T12:22:45Z",
+   "estimate": null,
+   "labels": [],
+   "responsaveis": [],
+   "sprints": [
+    "Sprint: May 10 - May 16, 2026"
+   ],
+   "pipeline": null
+  },
+  {
+   "repo": "2026-1-AnatoQuizUp-Doc",
+   "repoGhId": 1200510400,
+   "numero": 31,
+   "titulo": "Feature/migracao quiz service",
+   "estado": "CLOSED",
+   "ehPr": true,
+   "url": "https://github.com/fga-eps-mds/2026-1-AnatoQuizUp-Doc/pull/31",
+   "criadaEm": "2026-05-14T12:15:36Z",
+   "fechadaEm": "2026-05-14T12:22:45Z",
+   "estimate": null,
+   "labels": [],
+   "responsaveis": [],
+   "sprints": [
+    "Sprint: May 10 - May 16, 2026"
+   ],
+   "pipeline": null
+  },
+  {
+   "repo": "2026-1-AnatoQuizUp-Doc",
+   "repoGhId": 1200510400,
+   "numero": 30,
+   "titulo": "Feature/migracao quiz service",
+   "estado": "CLOSED",
+   "ehPr": true,
+   "url": "https://github.com/fga-eps-mds/2026-1-AnatoQuizUp-Doc/pull/30",
+   "criadaEm": "2026-05-14T00:23:49Z",
+   "fechadaEm": "2026-05-14T12:02:46Z",
+   "estimate": null,
+   "labels": [],
+   "responsaveis": [],
+   "sprints": [
+    "Sprint: May 10 - May 16, 2026"
+   ],
+   "pipeline": null
+  },
+  {
+   "repo": "2026-1-AnatoQuizUp-Usuario-Service",
+   "repoGhId": 1208046400,
+   "numero": 115,
+   "titulo": "Feature/migracao quiz service",
+   "estado": "CLOSED",
+   "ehPr": true,
+   "url": "https://github.com/fga-eps-mds/2026-1-AnatoQuizUp-Usuario-Service/pull/115",
+   "criadaEm": "2026-05-14T00:22:15Z",
+   "fechadaEm": "2026-05-14T11:37:30Z",
+   "estimate": null,
+   "labels": [],
+   "responsaveis": [],
+   "sprints": [
+    "Sprint: May 10 - May 16, 2026"
+   ],
+   "pipeline": null
+  },
+  {
+   "repo": "2026-1-AnatoQuizUp-Web",
+   "repoGhId": 1208045099,
+   "numero": 56,
+   "titulo": "docs: atualiza contexto da migracao quiz-service",
+   "estado": "CLOSED",
+   "ehPr": true,
+   "url": "https://github.com/fga-eps-mds/2026-1-AnatoQuizUp-Web/pull/56",
+   "criadaEm": "2026-05-14T00:22:34Z",
+   "fechadaEm": "2026-05-14T00:23:18Z",
+   "estimate": null,
+   "labels": [],
+   "responsaveis": [],
+   "sprints": [
+    "Sprint: May 10 - May 16, 2026"
+   ],
+   "pipeline": null
+  },
+  {
+   "repo": "2026-1-AnatoQuizUp-Usuario-Service",
+   "repoGhId": 1208046400,
+   "numero": 114,
+   "titulo": "Feature/migracao quiz service",
+   "estado": "CLOSED",
+   "ehPr": true,
+   "url": "https://github.com/fga-eps-mds/2026-1-AnatoQuizUp-Usuario-Service/pull/114",
+   "criadaEm": "2026-05-14T00:10:19Z",
+   "fechadaEm": "2026-05-14T00:18:10Z",
+   "estimate": null,
+   "labels": [],
+   "responsaveis": [],
+   "sprints": [
+    "Sprint: May 10 - May 16, 2026"
+   ],
+   "pipeline": null
+  },
+  {
+   "repo": "2026-1-AnatoQuizUp-Usuario-Service",
+   "repoGhId": 1208046400,
+   "numero": 17,
+   "titulo": "[Backend] Cadastro de professor — API",
+   "estado": "CLOSED",
+   "ehPr": false,
+   "url": "https://github.com/fga-eps-mds/2026-1-AnatoQuizUp-Usuario-Service/issues/17",
+   "criadaEm": "2026-04-18T12:31:52Z",
+   "fechadaEm": "2026-05-14T00:15:42Z",
+   "estimate": 3,
+   "labels": [
+    "backend"
+   ],
+   "responsaveis": [
+    "EhOMiguel",
+    "EhOBruno"
+   ],
+   "sprints": [
+    "Sprint: May 3 - May 9, 2026",
+    "Sprint: May 10 - May 16, 2026"
+   ],
+   "pipeline": null
+  },
+  {
+   "repo": "2026-1-AnatoQuizUp-Web",
+   "repoGhId": 1208045099,
+   "numero": 12,
+   "titulo": "[Frontend] Cadastro de professor — Tela",
+   "estado": "CLOSED",
+   "ehPr": false,
+   "url": "https://github.com/fga-eps-mds/2026-1-AnatoQuizUp-Web/issues/12",
+   "criadaEm": "2026-04-18T12:32:12Z",
+   "fechadaEm": "2026-05-14T00:15:36Z",
+   "estimate": 3,
+   "labels": [
+    "frontend"
+   ],
+   "responsaveis": [
+    "EhOMiguel",
+    "EhOBruno"
+   ],
+   "sprints": [
+    "Sprint: May 3 - May 9, 2026",
+    "Sprint: May 10 - May 16, 2026"
+   ],
+   "pipeline": null
+  },
+  {
+   "repo": "2026-1-AnatoQuizUp-Doc",
+   "repoGhId": 1200510400,
+   "numero": 21,
+   "titulo": "[US] Cadastro de Professor",
+   "estado": "CLOSED",
+   "ehPr": false,
+   "url": "https://github.com/fga-eps-mds/2026-1-AnatoQuizUp-Doc/issues/21",
+   "criadaEm": "2026-05-04T19:13:52Z",
+   "fechadaEm": "2026-05-14T00:15:30Z",
+   "estimate": 3,
+   "labels": [
+    "US"
+   ],
+   "responsaveis": [
+    "EhOMiguel",
+    "EhOBruno"
+   ],
+   "sprints": [
+    "Sprint: May 3 - May 9, 2026",
+    "Sprint: May 10 - May 16, 2026"
+   ],
+   "pipeline": null,
+   "possivelDuplicata": true
+  },
+  {
+   "repo": "2026-1-AnatoQuizUp-Web",
+   "repoGhId": 1208045099,
+   "numero": 54,
+   "titulo": "feat: adiciona link para cadstro do professor",
+   "estado": "CLOSED",
+   "ehPr": true,
+   "url": "https://github.com/fga-eps-mds/2026-1-AnatoQuizUp-Web/pull/54",
+   "criadaEm": "2026-05-12T00:40:13Z",
+   "fechadaEm": "2026-05-12T00:49:37Z",
+   "estimate": null,
+   "labels": [],
+   "responsaveis": [],
+   "sprints": [
+    "Sprint: May 10 - May 16, 2026"
+   ],
+   "pipeline": null
+  },
+  {
+   "repo": "2026-1-AnatoQuizUp-Web",
+   "repoGhId": 1208045099,
+   "numero": 53,
+   "titulo": "fix: normaliza alternativas sem callback direto",
+   "estado": "CLOSED",
+   "ehPr": true,
+   "url": "https://github.com/fga-eps-mds/2026-1-AnatoQuizUp-Web/pull/53",
+   "criadaEm": "2026-05-11T21:42:22Z",
+   "fechadaEm": "2026-05-11T21:42:29Z",
+   "estimate": null,
+   "labels": [],
+   "responsaveis": [],
+   "sprints": [
+    "Sprint: May 10 - May 16, 2026"
+   ],
+   "pipeline": null
+  },
+  {
+   "repo": "2026-1-AnatoQuizUp-Web",
+   "repoGhId": 1208045099,
+   "numero": 52,
+   "titulo": "test: amplia cobertura dos mocks do frontend",
+   "estado": "CLOSED",
+   "ehPr": true,
+   "url": "https://github.com/fga-eps-mds/2026-1-AnatoQuizUp-Web/pull/52",
+   "criadaEm": "2026-05-11T21:28:17Z",
+   "fechadaEm": "2026-05-11T21:28:25Z",
+   "estimate": null,
+   "labels": [],
+   "responsaveis": [],
+   "sprints": [
+    "Sprint: May 10 - May 16, 2026"
+   ],
+   "pipeline": null
+  },
+  {
+   "repo": "2026-1-AnatoQuizUp-Web",
+   "repoGhId": 1208045099,
+   "numero": 51,
+   "titulo": "fix: remove handler nao utilizado do login",
+   "estado": "CLOSED",
+   "ehPr": true,
+   "url": "https://github.com/fga-eps-mds/2026-1-AnatoQuizUp-Web/pull/51",
+   "criadaEm": "2026-05-11T20:52:22Z",
+   "fechadaEm": "2026-05-11T21:03:59Z",
+   "estimate": null,
+   "labels": [],
+   "responsaveis": [],
+   "sprints": [
+    "Sprint: May 10 - May 16, 2026"
+   ],
+   "pipeline": null
+  },
+  {
+   "repo": "2026-1-AnatoQuizUp-Usuario-Service",
+   "repoGhId": 1208046400,
+   "numero": 112,
+   "titulo": "fix: usa porta de api no storage",
+   "estado": "CLOSED",
+   "ehPr": true,
+   "url": "https://github.com/fga-eps-mds/2026-1-AnatoQuizUp-Usuario-Service/pull/112",
+   "criadaEm": "2026-05-11T20:52:17Z",
+   "fechadaEm": "2026-05-11T21:02:35Z",
+   "estimate": null,
+   "labels": [],
+   "responsaveis": [],
+   "sprints": [
+    "Sprint: May 10 - May 16, 2026"
+   ],
+   "pipeline": null
+  },
+  {
+   "repo": "2026-1-AnatoQuizUp-Web",
+   "repoGhId": 1208045099,
+   "numero": 36,
+   "titulo": "[Web] Interface do Painel de Criação de Questões",
+   "estado": "CLOSED",
+   "ehPr": false,
+   "url": "https://github.com/fga-eps-mds/2026-1-AnatoQuizUp-Web/issues/36",
+   "criadaEm": "2026-04-30T14:30:24Z",
+   "fechadaEm": "2026-05-11T15:02:49Z",
+   "estimate": 5,
+   "labels": [
+    "frontend"
+   ],
+   "responsaveis": [
+    "marialuisa214",
+    "Brenofrds"
+   ],
+   "sprints": [
+    "Sprint: May 3 - May 9, 2026",
+    "Sprint: May 10 - May 16, 2026"
+   ],
+   "pipeline": null
+  },
+  {
+   "repo": "2026-1-AnatoQuizUp-Web",
+   "repoGhId": 1208045099,
+   "numero": 50,
+   "titulo": "Integrate/editar questao com cadastro",
+   "estado": "CLOSED",
+   "ehPr": true,
+   "url": "https://github.com/fga-eps-mds/2026-1-AnatoQuizUp-Web/pull/50",
+   "criadaEm": "2026-05-11T12:55:25Z",
+   "fechadaEm": "2026-05-11T15:02:48Z",
+   "estimate": null,
+   "labels": [],
+   "responsaveis": [],
+   "sprints": [
+    "Sprint: May 10 - May 16, 2026"
+   ],
+   "pipeline": null
+  },
+  {
+   "repo": "2026-1-AnatoQuizUp-Web",
+   "repoGhId": 1208045099,
+   "numero": 49,
+   "titulo": "Feature/cadastro professor",
+   "estado": "CLOSED",
+   "ehPr": true,
+   "url": "https://github.com/fga-eps-mds/2026-1-AnatoQuizUp-Web/pull/49",
+   "criadaEm": "2026-05-11T00:34:05Z",
+   "fechadaEm": "2026-05-11T13:33:53Z",
+   "estimate": null,
+   "labels": [],
+   "responsaveis": [],
+   "sprints": [
+    "Sprint: May 10 - May 16, 2026"
+   ],
+   "pipeline": null
+  },
+  {
+   "repo": "2026-1-AnatoQuizUp-Usuario-Service",
+   "repoGhId": 1208046400,
+   "numero": 111,
+   "titulo": "Feature/cadastro professor",
+   "estado": "CLOSED",
+   "ehPr": true,
+   "url": "https://github.com/fga-eps-mds/2026-1-AnatoQuizUp-Usuario-Service/pull/111",
+   "criadaEm": "2026-05-11T00:32:49Z",
+   "fechadaEm": "2026-05-11T13:33:13Z",
+   "estimate": null,
+   "labels": [],
+   "responsaveis": [],
+   "sprints": [
+    "Sprint: May 10 - May 16, 2026"
+   ],
+   "pipeline": null
+  },
+  {
+   "repo": "2026-1-AnatoQuizUp-Usuario-Service",
+   "repoGhId": 1208046400,
+   "numero": 50,
+   "titulo": "[API]Gerenciamento de Questões (CRUD)",
+   "estado": "CLOSED",
+   "ehPr": false,
+   "url": "https://github.com/fga-eps-mds/2026-1-AnatoQuizUp-Usuario-Service/issues/50",
+   "criadaEm": "2026-04-30T14:02:22Z",
+   "fechadaEm": "2026-05-10T23:01:39Z",
+   "estimate": 5,
+   "labels": [
+    "backend"
+   ],
+   "responsaveis": [
+    "marialuisa214",
+    "pkbceira03",
+    "Brenofrds"
+   ],
+   "sprints": [
+    "Sprint: May 3 - May 9, 2026",
+    "Sprint: May 10 - May 16, 2026"
+   ],
+   "pipeline": null
+  },
+  {
+   "repo": "2026-1-AnatoQuizUp-Usuario-Service",
+   "repoGhId": 1208046400,
+   "numero": 110,
+   "titulo": "Feature/questoes professor",
+   "estado": "CLOSED",
+   "ehPr": true,
+   "url": "https://github.com/fga-eps-mds/2026-1-AnatoQuizUp-Usuario-Service/pull/110",
+   "criadaEm": "2026-05-10T17:14:29Z",
+   "fechadaEm": "2026-05-10T23:01:38Z",
+   "estimate": null,
+   "labels": [],
+   "responsaveis": [],
+   "sprints": [
+    "Sprint: May 10 - May 16, 2026"
+   ],
+   "pipeline": null
+  },
+  {
+   "repo": "2026-1-AnatoQuizUp-Web",
+   "repoGhId": 1208045099,
+   "numero": 47,
+   "titulo": "feat: Mudança de arquitetura",
+   "estado": "CLOSED",
+   "ehPr": true,
+   "url": "https://github.com/fga-eps-mds/2026-1-AnatoQuizUp-Web/pull/47",
+   "criadaEm": "2026-05-06T15:49:21Z",
+   "fechadaEm": "2026-05-10T22:59:58Z",
+   "estimate": null,
+   "labels": [],
+   "responsaveis": [],
+   "sprints": [
+    "Sprint: May 3 - May 9, 2026",
+    "Sprint: May 10 - May 16, 2026"
+   ],
+   "pipeline": null
+  },
+  {
+   "repo": "2026-1-AnatoQuizUp-Usuario-Service",
+   "repoGhId": 1208046400,
+   "numero": 107,
+   "titulo": "muda a config do banco de imagem",
+   "estado": "CLOSED",
+   "ehPr": true,
+   "url": "https://github.com/fga-eps-mds/2026-1-AnatoQuizUp-Usuario-Service/pull/107",
+   "criadaEm": "2026-05-07T19:59:52Z",
+   "fechadaEm": "2026-05-09T18:18:50Z",
+   "estimate": null,
+   "labels": [],
+   "responsaveis": [],
+   "sprints": [
+    "Sprint: May 3 - May 9, 2026"
+   ],
+   "pipeline": null
+  },
+  {
+   "repo": "2026-1-AnatoQuizUp-Usuario-Service",
+   "repoGhId": 1208046400,
+   "numero": 106,
+   "titulo": "feat: Mudança de arquitetura",
+   "estado": "CLOSED",
+   "ehPr": true,
+   "url": "https://github.com/fga-eps-mds/2026-1-AnatoQuizUp-Usuario-Service/pull/106",
+   "criadaEm": "2026-05-06T15:50:38Z",
+   "fechadaEm": "2026-05-08T19:18:09Z",
+   "estimate": null,
+   "labels": [],
+   "responsaveis": [],
+   "sprints": [
+    "Sprint: May 3 - May 9, 2026"
+   ],
+   "pipeline": null
+  },
+  {
+   "repo": "2026-1-AnatoQuizUp-Doc",
+   "repoGhId": 1200510400,
+   "numero": 17,
+   "titulo": "[TASK] Protótipo das Telas de Histórico e Revisão",
+   "estado": "CLOSED",
+   "ehPr": false,
+   "url": "https://github.com/fga-eps-mds/2026-1-AnatoQuizUp-Doc/issues/17",
+   "criadaEm": "2026-05-01T02:12:03Z",
+   "fechadaEm": "2026-05-08T18:41:50Z",
+   "estimate": 2,
+   "labels": [
+    "FEATURE"
+   ],
+   "responsaveis": [
+    "caiobsantos"
+   ],
+   "sprints": [
+    "Sprint: May 3 - May 9, 2026"
+   ],
+   "pipeline": null
+  },
+  {
+   "repo": "2026-1-AnatoQuizUp-Doc",
+   "repoGhId": 1200510400,
+   "numero": 11,
+   "titulo": "[TASK] Protótipo de Seleção de Tema e Configuração de Quiz",
+   "estado": "CLOSED",
+   "ehPr": false,
+   "url": "https://github.com/fga-eps-mds/2026-1-AnatoQuizUp-Doc/issues/11",
+   "criadaEm": "2026-04-30T14:22:40Z",
+   "fechadaEm": "2026-05-08T18:41:38Z",
+   "estimate": 2,
+   "labels": [
+    "FEATURE"
+   ],
+   "responsaveis": [
+    "GenilsonJrs",
+    "Joa0V"
+   ],
+   "sprints": [
+    "Sprint: May 3 - May 9, 2026"
+   ],
+   "pipeline": null
+  },
+  {
+   "repo": "2026-1-AnatoQuizUp-Doc",
+   "repoGhId": 1200510400,
+   "numero": 7,
+   "titulo": "[TASK] Protótipo da Interface Dinâmica de Resolução e Feedback",
+   "estado": "CLOSED",
+   "ehPr": false,
+   "url": "https://github.com/fga-eps-mds/2026-1-AnatoQuizUp-Doc/issues/7",
+   "criadaEm": "2026-04-30T13:29:56Z",
+   "fechadaEm": "2026-05-08T18:41:28Z",
+   "estimate": 3,
+   "labels": [
+    "FEATURE"
+   ],
+   "responsaveis": [
+    "GenilsonJrs",
+    "Joa0V"
+   ],
+   "sprints": [
+    "Sprint: May 3 - May 9, 2026"
+   ],
+   "pipeline": null
+  },
+  {
+   "repo": "2026-1-AnatoQuizUp",
+   "repoGhId": 0,
+   "numero": 154,
+   "titulo": "Definir arquitetura de alto nível do produto",
+   "estado": "CLOSED",
+   "ehPr": false,
+   "url": "",
+   "criadaEm": "1970-01-01T00:00:00Z",
+   "fechadaEm": "2026-05-08T17:47:42Z",
+   "estimate": null,
+   "labels": [],
+   "responsaveis": [
+    "EhOMiguel",
+    "trindadea",
+    "GenilsonJrs",
+    "Brenofrds",
+    "EhOBruno",
+    "Joa0V",
+    "marialuisa214",
+    "pkbceira03"
+   ],
+   "sprints": [],
+   "pipeline": null
+  },
+  {
+   "repo": "2026-1-AnatoQuizUp",
+   "repoGhId": 0,
+   "numero": 149,
+   "titulo": "Evidências da Lean Inception registradas no repositório",
+   "estado": "CLOSED",
+   "ehPr": false,
+   "url": "",
+   "criadaEm": "1970-01-01T00:00:00Z",
+   "fechadaEm": "2026-05-08T17:47:37Z",
+   "estimate": null,
+   "labels": [],
+   "responsaveis": [
+    "EhOMiguel",
+    "trindadea",
+    "GenilsonJrs",
+    "Brenofrds",
+    "EhOBruno",
+    "Joa0V",
+    "marialuisa214",
+    "pkbceira03"
+   ],
+   "sprints": [],
+   "pipeline": null
+  },
+  {
+   "repo": "2026-1-AnatoQuizUp",
+   "repoGhId": 0,
+   "numero": 157,
+   "titulo": "Definir modelagem do banco de dados",
+   "estado": "CLOSED",
+   "ehPr": false,
+   "url": "",
+   "criadaEm": "1970-01-01T00:00:00Z",
+   "fechadaEm": "2026-05-08T17:47:34Z",
+   "estimate": null,
+   "labels": [],
+   "responsaveis": [
+    "EhOMiguel",
+    "trindadea",
+    "GenilsonJrs",
+    "Brenofrds",
+    "EhOBruno",
+    "Joa0V",
+    "marialuisa214",
+    "pkbceira03"
+   ],
+   "sprints": [],
+   "pipeline": null
+  },
+  {
+   "repo": "2026-1-AnatoQuizUp",
+   "repoGhId": 0,
+   "numero": 166,
+   "titulo": "Configurar repositório de AI no GitHub",
+   "estado": "CLOSED",
+   "ehPr": false,
+   "url": "",
+   "criadaEm": "1970-01-01T00:00:00Z",
+   "fechadaEm": "2026-05-08T17:47:30Z",
+   "estimate": null,
+   "labels": [],
+   "responsaveis": [
+    "EhOMiguel",
+    "trindadea",
+    "GenilsonJrs",
+    "Brenofrds",
+    "EhOBruno",
+    "Joa0V",
+    "marialuisa214",
+    "pkbceira03"
+   ],
+   "sprints": [],
+   "pipeline": null
+  },
+  {
+   "repo": "2026-1-AnatoQuizUp-Web",
+   "repoGhId": 1208045099,
+   "numero": 37,
+   "titulo": "[US][Frontend] Home professor",
+   "estado": "CLOSED",
+   "ehPr": false,
+   "url": "https://github.com/fga-eps-mds/2026-1-AnatoQuizUp-Web/issues/37",
+   "criadaEm": "2026-04-30T15:06:41Z",
+   "fechadaEm": "2026-05-07T23:43:38Z",
+   "estimate": 2,
+   "labels": [
+    "US",
+    "frontend"
+   ],
+   "responsaveis": [
+    "marialuisa214"
+   ],
+   "sprints": [
+    "Sprint: Apr 26 - May 2, 2026",
+    "Sprint: May 3 - May 9, 2026"
+   ],
+   "pipeline": null
+  },
+  {
+   "repo": "2026-1-AnatoQuizUp-Doc",
+   "repoGhId": 1200510400,
+   "numero": 13,
+   "titulo": "[TASK] Protótipo do Painel de Criação de Questões do Professor",
+   "estado": "CLOSED",
+   "ehPr": false,
+   "url": "https://github.com/fga-eps-mds/2026-1-AnatoQuizUp-Doc/issues/13",
+   "criadaEm": "2026-04-30T15:02:35Z",
+   "fechadaEm": "2026-05-07T23:43:11Z",
+   "estimate": 3,
+   "labels": [
+    "FEATURE"
+   ],
+   "responsaveis": [
+    "marialuisa214"
+   ],
+   "sprints": [
+    "Sprint: May 3 - May 9, 2026"
+   ],
+   "pipeline": null
+  },
+  {
+   "repo": "2026-1-AnatoQuizUp-Usuario-Service",
+   "repoGhId": 1208046400,
+   "numero": 101,
+   "titulo": "chore: configura banco de imagem",
+   "estado": "CLOSED",
+   "ehPr": true,
+   "url": "https://github.com/fga-eps-mds/2026-1-AnatoQuizUp-Usuario-Service/pull/101",
+   "criadaEm": "2026-05-06T12:03:16Z",
+   "fechadaEm": "2026-05-06T14:19:31Z",
+   "estimate": null,
+   "labels": [],
+   "responsaveis": [],
+   "sprints": [
+    "Sprint: May 3 - May 9, 2026"
+   ],
+   "pipeline": null
+  },
+  {
+   "repo": "2026-1-AnatoQuizUp-Usuario-Service",
+   "repoGhId": 1208046400,
+   "numero": 47,
+   "titulo": "[TASK] [Backend] Modelagem do banco de dados para as questões (Prisma)",
+   "estado": "CLOSED",
+   "ehPr": false,
+   "url": "https://github.com/fga-eps-mds/2026-1-AnatoQuizUp-Usuario-Service/issues/47",
+   "criadaEm": "2026-04-30T13:17:57Z",
+   "fechadaEm": "2026-05-06T12:47:14Z",
+   "estimate": 3,
+   "labels": [
+    "Documentação",
+    "backend"
+   ],
+   "responsaveis": [
+    "pkbceira03",
+    "Brenofrds"
+   ],
+   "sprints": [
+    "Sprint: May 3 - May 9, 2026"
+   ],
+   "pipeline": null
+  },
+  {
+   "repo": "2026-1-AnatoQuizUp-Doc",
+   "repoGhId": 1200510400,
+   "numero": 5,
+   "titulo": "[TASK] Roteiro de testes",
+   "estado": "CLOSED",
+   "ehPr": false,
+   "url": "https://github.com/fga-eps-mds/2026-1-AnatoQuizUp-Doc/issues/5",
+   "criadaEm": "2026-04-29T23:23:04Z",
+   "fechadaEm": "2026-05-06T12:46:29Z",
+   "estimate": 3,
+   "labels": [
+    "Documentação"
+   ],
+   "responsaveis": [
+    "pkbceira03"
+   ],
+   "sprints": [
+    "Sprint: Apr 26 - May 2, 2026",
+    "Sprint: May 3 - May 9, 2026"
+   ],
+   "pipeline": null
+  },
+  {
+   "repo": "2026-1-AnatoQuizUp-Usuario-Service",
+   "repoGhId": 1208046400,
+   "numero": 100,
+   "titulo": "feat: adiciona modelagem de questões",
+   "estado": "CLOSED",
+   "ehPr": true,
+   "url": "https://github.com/fga-eps-mds/2026-1-AnatoQuizUp-Usuario-Service/pull/100",
+   "criadaEm": "2026-05-05T17:04:11Z",
+   "fechadaEm": "2026-05-05T17:17:05Z",
+   "estimate": null,
+   "labels": [],
+   "responsaveis": [],
+   "sprints": [
+    "Sprint: May 3 - May 9, 2026"
+   ],
+   "pipeline": null
+  },
+  {
+   "repo": "2026-1-AnatoQuizUp-Doc",
+   "repoGhId": 1200510400,
+   "numero": 18,
+   "titulo": "docs(processo): detalha rituais da equipe e inclui praticas de xp",
+   "estado": "CLOSED",
+   "ehPr": true,
+   "url": "https://github.com/fga-eps-mds/2026-1-AnatoQuizUp-Doc/pull/18",
+   "criadaEm": "2026-05-03T01:58:28Z",
+   "fechadaEm": "2026-05-04T15:56:41Z",
+   "estimate": null,
+   "labels": [],
+   "responsaveis": [
+    "GenilsonJrs"
+   ],
+   "sprints": [
+    "Sprint: Apr 26 - May 2, 2026",
+    "Sprint: May 3 - May 9, 2026"
+   ],
+   "pipeline": null
+  },
+  {
+   "repo": "2026-1-AnatoQuizUp-Usuario-Service",
+   "repoGhId": 1208046400,
+   "numero": 98,
+   "titulo": "chore: executa seed ao iniciar container",
+   "estado": "CLOSED",
+   "ehPr": true,
+   "url": "https://github.com/fga-eps-mds/2026-1-AnatoQuizUp-Usuario-Service/pull/98",
+   "criadaEm": "2026-05-04T12:56:26Z",
+   "fechadaEm": "2026-05-04T13:15:25Z",
+   "estimate": null,
+   "labels": [],
+   "responsaveis": [],
+   "sprints": [
+    "Sprint: May 3 - May 9, 2026"
+   ],
+   "pipeline": null
+  },
+  {
+   "repo": "2026-1-AnatoQuizUp-Web",
+   "repoGhId": 1208045099,
+   "numero": 38,
+   "titulo": "[US][Frontend] Home aluno",
+   "estado": "CLOSED",
+   "ehPr": false,
+   "url": "https://github.com/fga-eps-mds/2026-1-AnatoQuizUp-Web/issues/38",
+   "criadaEm": "2026-04-30T15:11:49Z",
+   "fechadaEm": "2026-05-04T11:44:27Z",
+   "estimate": 2,
+   "labels": [
+    "US",
+    "frontend"
+   ],
+   "responsaveis": [
+    "pkbceira03"
+   ],
+   "sprints": [
+    "Sprint: Apr 26 - May 2, 2026",
+    "Sprint: May 3 - May 9, 2026"
+   ],
+   "pipeline": null
+  },
+  {
+   "repo": "2026-1-AnatoQuizUp-Web",
+   "repoGhId": 1208045099,
+   "numero": 42,
+   "titulo": "Feature/home aluno",
+   "estado": "CLOSED",
+   "ehPr": true,
+   "url": "https://github.com/fga-eps-mds/2026-1-AnatoQuizUp-Web/pull/42",
+   "criadaEm": "2026-05-03T21:56:23Z",
+   "fechadaEm": "2026-05-04T11:44:26Z",
+   "estimate": null,
+   "labels": [],
+   "responsaveis": [],
+   "sprints": [
+    "Sprint: May 3 - May 9, 2026"
+   ],
+   "pipeline": null
+  },
+  {
+   "repo": "2026-1-AnatoQuizUp-Doc",
+   "repoGhId": 1200510400,
+   "numero": 19,
+   "titulo": "docs(produto): adiciona EAP e detalha backlog completo",
+   "estado": "CLOSED",
+   "ehPr": true,
+   "url": "https://github.com/fga-eps-mds/2026-1-AnatoQuizUp-Doc/pull/19",
+   "criadaEm": "2026-05-03T03:37:32Z",
+   "fechadaEm": "2026-05-04T11:27:47Z",
+   "estimate": null,
+   "labels": [],
+   "responsaveis": [
+    "GenilsonJrs"
+   ],
+   "sprints": [],
+   "pipeline": null
+  },
+  {
+   "repo": "2026-1-AnatoQuizUp-Usuario-Service",
+   "repoGhId": 1208046400,
+   "numero": 97,
+   "titulo": "feat: adiciona seed de usuário professor",
+   "estado": "CLOSED",
+   "ehPr": true,
+   "url": "https://github.com/fga-eps-mds/2026-1-AnatoQuizUp-Usuario-Service/pull/97",
+   "criadaEm": "2026-05-04T00:48:53Z",
+   "fechadaEm": "2026-05-04T01:06:29Z",
+   "estimate": null,
+   "labels": [],
+   "responsaveis": [],
+   "sprints": [
+    "Sprint: May 3 - May 9, 2026"
+   ],
+   "pipeline": null
+  },
+  {
+   "repo": "2026-1-AnatoQuizUp-Web",
+   "repoGhId": 1208045099,
+   "numero": 39,
+   "titulo": "[TASK] [Frontend] Análise e correção de Security Hotspots",
+   "estado": "CLOSED",
+   "ehPr": false,
+   "url": "https://github.com/fga-eps-mds/2026-1-AnatoQuizUp-Web/issues/39",
+   "criadaEm": "2026-05-02T19:50:31Z",
+   "fechadaEm": "2026-05-03T21:44:46Z",
+   "estimate": 3,
+   "labels": [
+    "frontend"
+   ],
+   "responsaveis": [
+    "Joa0V"
+   ],
+   "sprints": [
+    "Sprint: Apr 26 - May 2, 2026",
+    "Sprint: May 3 - May 9, 2026"
+   ],
+   "pipeline": null
+  },
+  {
+   "repo": "2026-1-AnatoQuizUp-Web",
+   "repoGhId": 1208045099,
+   "numero": 41,
+   "titulo": "Feature/home professor",
+   "estado": "CLOSED",
+   "ehPr": true,
+   "url": "https://github.com/fga-eps-mds/2026-1-AnatoQuizUp-Web/pull/41",
+   "criadaEm": "2026-05-03T13:17:45Z",
+   "fechadaEm": "2026-05-03T16:36:09Z",
+   "estimate": null,
+   "labels": [],
+   "responsaveis": [],
+   "sprints": [
+    "Sprint: May 3 - May 9, 2026"
+   ],
+   "pipeline": null
+  },
+  {
+   "repo": "2026-1-AnatoQuizUp-Usuario-Service",
+   "repoGhId": 1208046400,
+   "numero": 18,
+   "titulo": "[US04] [Frontend] Login de professor — Tela",
+   "estado": "CLOSED",
+   "ehPr": false,
+   "url": "https://github.com/fga-eps-mds/2026-1-AnatoQuizUp-Usuario-Service/issues/18",
+   "criadaEm": "2026-04-18T12:32:33Z",
+   "fechadaEm": "2026-05-01T12:25:04Z",
+   "estimate": 3,
+   "labels": [],
+   "responsaveis": [
+    "Brenofrds",
+    "EhOMiguel"
+   ],
+   "sprints": [
+    "Sprint: Apr 26 - May 2, 2026"
+   ],
+   "pipeline": null
+  },
+  {
+   "repo": "2026-1-AnatoQuizUp-Web",
+   "repoGhId": 1208045099,
+   "numero": 13,
+   "titulo": "[US04] [Backend] Login de professor — API",
+   "estado": "CLOSED",
+   "ehPr": false,
+   "url": "https://github.com/fga-eps-mds/2026-1-AnatoQuizUp-Web/issues/13",
+   "criadaEm": "2026-04-18T12:32:54Z",
+   "fechadaEm": "2026-05-01T12:25:03Z",
+   "estimate": 3,
+   "labels": [],
+   "responsaveis": [
+    "EhOMiguel"
+   ],
+   "sprints": [
+    "Sprint: Apr 26 - May 2, 2026"
+   ],
+   "pipeline": null
+  },
+  {
+   "repo": "2026-1-AnatoQuizUp-Doc",
+   "repoGhId": 1200510400,
+   "numero": 2,
+   "titulo": "[TASK] [Design] Protótipos de alta fidelidade",
+   "estado": "CLOSED",
+   "ehPr": false,
+   "url": "https://github.com/fga-eps-mds/2026-1-AnatoQuizUp-Doc/issues/2",
+   "criadaEm": "2026-04-19T15:31:45Z",
+   "fechadaEm": "2026-05-01T01:32:58Z",
+   "estimate": 8,
+   "labels": [],
+   "responsaveis": [
+    "caiobsantos",
+    "marialuisa214",
+    "ViictorHugoo",
+    "GenilsonJrs"
+   ],
+   "sprints": [
+    "Sprint: Apr 2 - Apr 15, 2026",
+    "Sprint: Apr 19 - Apr 25, 2026",
+    "Sprint: Apr 26 - May 2, 2026"
+   ],
+   "pipeline": null
+  },
+  {
+   "repo": "2026-1-AnatoQuizUp-Usuario-Service",
+   "repoGhId": 1208046400,
+   "numero": 45,
+   "titulo": "fix(ci): update project key and repository name for SonarCloud integr…",
+   "estado": "CLOSED",
+   "ehPr": true,
+   "url": "https://github.com/fga-eps-mds/2026-1-AnatoQuizUp-Usuario-Service/pull/45",
+   "criadaEm": "2026-04-28T00:18:19Z",
+   "fechadaEm": "2026-05-01T01:13:24Z",
+   "estimate": null,
+   "labels": [],
+   "responsaveis": [],
+   "sprints": [
+    "Sprint: Apr 26 - May 2, 2026"
+   ],
+   "pipeline": null
+  },
+  {
+   "repo": "2026-1-AnatoQuizUp-Web",
+   "repoGhId": 1208045099,
+   "numero": 32,
+   "titulo": "fix(ci): update SonarCloud project key from Front to WEB",
+   "estado": "CLOSED",
+   "ehPr": true,
+   "url": "https://github.com/fga-eps-mds/2026-1-AnatoQuizUp-Web/pull/32",
+   "criadaEm": "2026-04-28T00:18:44Z",
+   "fechadaEm": "2026-04-29T23:19:04Z",
+   "estimate": null,
+   "labels": [],
+   "responsaveis": [],
+   "sprints": [
+    "Sprint: Apr 26 - May 2, 2026"
+   ],
+   "pipeline": null
+  },
+  {
+   "repo": "2026-1-AnatoQuizUp-Usuario-Service",
+   "repoGhId": 1208046400,
+   "numero": 23,
+   "titulo": "[TASK] [Backend] Implementação do deploy em homologação",
+   "estado": "CLOSED",
+   "ehPr": false,
+   "url": "https://github.com/fga-eps-mds/2026-1-AnatoQuizUp-Usuario-Service/issues/23",
+   "criadaEm": "2026-04-19T16:23:34Z",
+   "fechadaEm": "2026-04-29T00:19:04Z",
+   "estimate": 2,
+   "labels": [],
+   "responsaveis": [
+    "EhOMiguel",
+    "EhOBruno"
+   ],
+   "sprints": [
+    "Sprint: Apr 19 - Apr 25, 2026",
+    "Sprint: Apr 26 - May 2, 2026"
+   ],
+   "pipeline": null
+  },
+  {
+   "repo": "2026-1-AnatoQuizUp-Web",
+   "repoGhId": 1208045099,
+   "numero": 31,
+   "titulo": "Feature/deploy",
+   "estado": "CLOSED",
+   "ehPr": true,
+   "url": "https://github.com/fga-eps-mds/2026-1-AnatoQuizUp-Web/pull/31",
+   "criadaEm": "2026-04-27T11:42:44Z",
+   "fechadaEm": "2026-04-27T12:37:11Z",
+   "estimate": null,
+   "labels": [],
+   "responsaveis": [],
+   "sprints": [
+    "Sprint: Apr 19 - Apr 25, 2026"
+   ],
+   "pipeline": null
+  },
+  {
+   "repo": "2026-1-AnatoQuizUp-Web",
+   "repoGhId": 1208045099,
+   "numero": 14,
+   "titulo": "[US] [Frontend] Recuperação de senha — Telas",
+   "estado": "CLOSED",
+   "ehPr": false,
+   "url": "https://github.com/fga-eps-mds/2026-1-AnatoQuizUp-Web/issues/14",
+   "criadaEm": "2026-04-18T12:34:05Z",
+   "fechadaEm": "2026-04-27T12:36:39Z",
+   "estimate": 3,
+   "labels": [
+    "FEATURE",
+    "frontend"
+   ],
+   "responsaveis": [
+    "EhOMiguel",
+    "trindadea"
+   ],
+   "sprints": [
+    "Sprint: Apr 19 - Apr 25, 2026"
+   ],
+   "pipeline": null
+  },
+  {
+   "repo": "2026-1-AnatoQuizUp-Usuario-Service",
+   "repoGhId": 1208046400,
+   "numero": 44,
+   "titulo": "Feature/deploy",
+   "estado": "CLOSED",
+   "ehPr": true,
+   "url": "https://github.com/fga-eps-mds/2026-1-AnatoQuizUp-Usuario-Service/pull/44",
+   "criadaEm": "2026-04-27T11:42:27Z",
+   "fechadaEm": "2026-04-27T12:35:48Z",
+   "estimate": null,
+   "labels": [],
+   "responsaveis": [],
+   "sprints": [
+    "Sprint: Apr 19 - Apr 25, 2026"
+   ],
+   "pipeline": null
+  },
+  {
+   "repo": "2026-1-AnatoQuizUp-Web",
+   "repoGhId": 1208045099,
+   "numero": 11,
+   "titulo": "[US] [Frontend] Logout — Ação no frontend",
+   "estado": "CLOSED",
+   "ehPr": false,
+   "url": "https://github.com/fga-eps-mds/2026-1-AnatoQuizUp-Web/issues/11",
+   "criadaEm": "2026-04-18T12:30:55Z",
+   "fechadaEm": "2026-04-27T10:27:22Z",
+   "estimate": 2,
+   "labels": [
+    "FEATURE",
+    "frontend"
+   ],
+   "responsaveis": [
+    "EhOMiguel",
+    "Brenofrds"
+   ],
+   "sprints": [
+    "Sprint: Apr 19 - Apr 25, 2026"
+   ],
+   "pipeline": null
+  },
+  {
+   "repo": "2026-1-AnatoQuizUp-Web",
+   "repoGhId": 1208045099,
+   "numero": 10,
+   "titulo": "[TASK] [Frontend] Interceptor de refresh token",
+   "estado": "CLOSED",
+   "ehPr": false,
+   "url": "https://github.com/fga-eps-mds/2026-1-AnatoQuizUp-Web/issues/10",
+   "criadaEm": "2026-04-18T12:30:12Z",
+   "fechadaEm": "2026-04-27T10:26:45Z",
+   "estimate": 2,
+   "labels": [
+    "FEATURE",
+    "frontend"
+   ],
+   "responsaveis": [
+    "trindadea"
+   ],
+   "sprints": [
+    "Sprint: Apr 19 - Apr 25, 2026"
+   ],
+   "pipeline": null
+  },
+  {
+   "repo": "2026-1-AnatoQuizUp-Usuario-Service",
+   "repoGhId": 1208046400,
+   "numero": 15,
+   "titulo": "[US05] [Backend] Logout — API",
+   "estado": "CLOSED",
+   "ehPr": false,
+   "url": "https://github.com/fga-eps-mds/2026-1-AnatoQuizUp-Usuario-Service/issues/15",
+   "criadaEm": "2026-04-18T12:30:33Z",
+   "fechadaEm": "2026-04-27T10:26:28Z",
+   "estimate": 3,
+   "labels": [
+    "FEATURE",
+    "backend"
+   ],
+   "responsaveis": [
+    "trindadea",
+    "Brenofrds"
+   ],
+   "sprints": [
+    "Sprint: Apr 19 - Apr 25, 2026"
+   ],
+   "pipeline": null
+  },
+  {
+   "repo": "2026-1-AnatoQuizUp-Usuario-Service",
+   "repoGhId": 1208046400,
+   "numero": 22,
+   "titulo": "[US08] [Backend] Painel de administração de usuários — API",
+   "estado": "CLOSED",
+   "ehPr": false,
+   "url": "https://github.com/fga-eps-mds/2026-1-AnatoQuizUp-Usuario-Service/issues/22",
+   "criadaEm": "2026-04-18T12:36:47Z",
+   "fechadaEm": "2026-04-27T08:17:55Z",
+   "estimate": 3,
+   "labels": [
+    "FEATURE",
+    "backend"
+   ],
+   "responsaveis": [
+    "marialuisa214"
+   ],
+   "sprints": [
+    "Sprint: Apr 19 - Apr 25, 2026"
+   ],
+   "pipeline": null
+  },
+  {
+   "repo": "2026-1-AnatoQuizUp-Usuario-Service",
+   "repoGhId": 1208046400,
+   "numero": 14,
+   "titulo": "[TASK12] [Backend] Renovação automática de sessão (refresh token)",
+   "estado": "CLOSED",
+   "ehPr": false,
+   "url": "https://github.com/fga-eps-mds/2026-1-AnatoQuizUp-Usuario-Service/issues/14",
+   "criadaEm": "2026-04-18T12:29:52Z",
+   "fechadaEm": "2026-04-27T08:15:49Z",
+   "estimate": 3,
+   "labels": [
+    "backend"
+   ],
+   "responsaveis": [
+    "trindadea"
+   ],
+   "sprints": [
+    "Sprint: Apr 19 - Apr 25, 2026"
+   ],
+   "pipeline": null
+  },
+  {
+   "repo": "2026-1-AnatoQuizUp-Usuario-Service",
+   "repoGhId": 1208046400,
+   "numero": 20,
+   "titulo": "[US06] [Backend] Recuperação de senha — API",
+   "estado": "CLOSED",
+   "ehPr": false,
+   "url": "https://github.com/fga-eps-mds/2026-1-AnatoQuizUp-Usuario-Service/issues/20",
+   "criadaEm": "2026-04-18T12:33:42Z",
+   "fechadaEm": "2026-04-27T07:59:45Z",
+   "estimate": 3,
+   "labels": [
+    "FEATURE",
+    "US",
+    "backend"
+   ],
+   "responsaveis": [
+    "EhOBruno"
+   ],
+   "sprints": [
+    "Sprint: Apr 19 - Apr 25, 2026"
+   ],
+   "pipeline": null
+  },
+  {
+   "repo": "2026-1-AnatoQuizUp-Usuario-Service",
+   "repoGhId": 1208046400,
+   "numero": 13,
+   "titulo": "[US02] [Backend] Login de aluno — API",
+   "estado": "CLOSED",
+   "ehPr": false,
+   "url": "https://github.com/fga-eps-mds/2026-1-AnatoQuizUp-Usuario-Service/issues/13",
+   "criadaEm": "2026-04-18T12:29:13Z",
+   "fechadaEm": "2026-04-27T07:57:42Z",
+   "estimate": 3,
+   "labels": [
+    "FEATURE",
+    "US",
+    "backend"
+   ],
+   "responsaveis": [
+    "EhOMiguel",
+    "trindadea",
+    "Brenofrds"
+   ],
+   "sprints": [
+    "Sprint: Apr 19 - Apr 25, 2026"
+   ],
+   "pipeline": null
+  },
+  {
+   "repo": "2026-1-AnatoQuizUp-Web",
+   "repoGhId": 1208045099,
+   "numero": 27,
+   "titulo": "Feature/login real front",
+   "estado": "CLOSED",
+   "ehPr": true,
+   "url": "https://github.com/fga-eps-mds/2026-1-AnatoQuizUp-Web/pull/27",
+   "criadaEm": "2026-04-27T05:20:20Z",
+   "fechadaEm": "2026-04-27T07:55:36Z",
+   "estimate": null,
+   "labels": [],
+   "responsaveis": [],
+   "sprints": [
+    "Sprint: Apr 19 - Apr 25, 2026"
+   ],
+   "pipeline": null
+  },
+  {
+   "repo": "2026-1-AnatoQuizUp-Usuario-Service",
+   "repoGhId": 1208046400,
+   "numero": 11,
+   "titulo": "[TASK11] [Backend] Middleware de autorização por role",
+   "estado": "CLOSED",
+   "ehPr": false,
+   "url": "https://github.com/fga-eps-mds/2026-1-AnatoQuizUp-Usuario-Service/issues/11",
+   "criadaEm": "2026-04-18T12:27:23Z",
+   "fechadaEm": "2026-04-27T04:52:13Z",
+   "estimate": 3,
+   "labels": [
+    "backend"
+   ],
+   "responsaveis": [
+    "Joa0V"
+   ],
+   "sprints": [
+    "Sprint: Apr 19 - Apr 25, 2026"
+   ],
+   "pipeline": null
+  },
+  {
+   "repo": "2026-1-AnatoQuizUp-Usuario-Service",
+   "repoGhId": 1208046400,
+   "numero": 19,
+   "titulo": "[TASK09] [Backend] Configuração do serviço de email",
+   "estado": "CLOSED",
+   "ehPr": false,
+   "url": "https://github.com/fga-eps-mds/2026-1-AnatoQuizUp-Usuario-Service/issues/19",
+   "criadaEm": "2026-04-18T12:33:18Z",
+   "fechadaEm": "2026-04-27T04:46:35Z",
+   "estimate": 2,
+   "labels": [
+    "FEATURE",
+    "US",
+    "backend"
+   ],
+   "responsaveis": [
+    "trindadea"
+   ],
+   "sprints": [
+    "Sprint: Apr 19 - Apr 25, 2026"
+   ],
+   "pipeline": null
+  },
+  {
+   "repo": "2026-1-AnatoQuizUp-Usuario-Service",
+   "repoGhId": 1208046400,
+   "numero": 31,
+   "titulo": "Develop",
+   "estado": "CLOSED",
+   "ehPr": true,
+   "url": "https://github.com/fga-eps-mds/2026-1-AnatoQuizUp-Usuario-Service/pull/31",
+   "criadaEm": "2026-04-27T01:40:51Z",
+   "fechadaEm": "2026-04-27T04:44:01Z",
+   "estimate": null,
+   "labels": [],
+   "responsaveis": [],
+   "sprints": [
+    "Sprint: Apr 19 - Apr 25, 2026"
+   ],
+   "pipeline": null
+  },
+  {
+   "repo": "2026-1-AnatoQuizUp-Usuario-Service",
+   "repoGhId": 1208046400,
+   "numero": 7,
+   "titulo": "[TASK03] [Backend] Setup do módulo de autenticação",
+   "estado": "CLOSED",
+   "ehPr": false,
+   "url": "https://github.com/fga-eps-mds/2026-1-AnatoQuizUp-Usuario-Service/issues/7",
+   "criadaEm": "2026-04-18T12:22:44Z",
+   "fechadaEm": "2026-04-27T03:59:11Z",
+   "estimate": 2,
+   "labels": [
+    "backend"
+   ],
+   "responsaveis": [
+    "EhOMiguel"
+   ],
+   "sprints": [
+    "Sprint: Apr 19 - Apr 25, 2026"
+   ],
+   "pipeline": null
+  },
+  {
+   "repo": "2026-1-AnatoQuizUp-Web",
+   "repoGhId": 1208045099,
+   "numero": 8,
+   "titulo": "[US01] [Frontend] Cadastro de aluno — Tela",
+   "estado": "CLOSED",
+   "ehPr": false,
+   "url": "https://github.com/fga-eps-mds/2026-1-AnatoQuizUp-Web/issues/8",
+   "criadaEm": "2026-04-18T12:28:56Z",
+   "fechadaEm": "2026-04-27T03:04:43Z",
+   "estimate": 3,
+   "labels": [
+    "FEATURE",
+    "US",
+    "frontend"
+   ],
+   "responsaveis": [
+    "EhOBruno"
+   ],
+   "sprints": [
+    "Sprint: Apr 19 - Apr 25, 2026"
+   ],
+   "pipeline": null
+  },
+  {
+   "repo": "2026-1-AnatoQuizUp-Usuario-Service",
+   "repoGhId": 1208046400,
+   "numero": 12,
+   "titulo": "[US01] [Backend] Cadastro de aluno — API",
+   "estado": "CLOSED",
+   "ehPr": false,
+   "url": "https://github.com/fga-eps-mds/2026-1-AnatoQuizUp-Usuario-Service/issues/12",
+   "criadaEm": "2026-04-18T12:27:45Z",
+   "fechadaEm": "2026-04-27T03:04:35Z",
+   "estimate": 3,
+   "labels": [
+    "FEATURE",
+    "US",
+    "backend"
+   ],
+   "responsaveis": [
+    "EhOBruno"
+   ],
+   "sprints": [
+    "Sprint: Apr 19 - Apr 25, 2026"
+   ],
+   "pipeline": null
+  },
+  {
+   "repo": "2026-1-AnatoQuizUp-Usuario-Service",
+   "repoGhId": 1208046400,
+   "numero": 10,
+   "titulo": "[TASK10] [Backend] Middleware de autenticação",
+   "estado": "CLOSED",
+   "ehPr": false,
+   "url": "https://github.com/fga-eps-mds/2026-1-AnatoQuizUp-Usuario-Service/issues/10",
+   "criadaEm": "2026-04-18T12:27:04Z",
+   "fechadaEm": "2026-04-27T03:04:25Z",
+   "estimate": 3,
+   "labels": [
+    "backend"
+   ],
+   "responsaveis": [
+    "Joa0V"
+   ],
+   "sprints": [
+    "Sprint: Apr 19 - Apr 25, 2026"
+   ],
+   "pipeline": null
+  },
+  {
+   "repo": "2026-1-AnatoQuizUp-Usuario-Service",
+   "repoGhId": 1208046400,
+   "numero": 37,
+   "titulo": "test(config): usa glob para cobertura do jest (#36)",
+   "estado": "CLOSED",
+   "ehPr": true,
+   "url": "https://github.com/fga-eps-mds/2026-1-AnatoQuizUp-Usuario-Service/pull/37",
+   "criadaEm": "2026-04-27T02:52:40Z",
+   "fechadaEm": "2026-04-27T02:56:15Z",
+   "estimate": null,
+   "labels": [],
+   "responsaveis": [],
+   "sprints": [
+    "Sprint: Apr 19 - Apr 25, 2026"
+   ],
+   "pipeline": null
+  },
+  {
+   "repo": "2026-1-AnatoQuizUp-Usuario-Service",
+   "repoGhId": 1208046400,
+   "numero": 36,
+   "titulo": "test(config): usa glob para cobertura do jest",
+   "estado": "CLOSED",
+   "ehPr": true,
+   "url": "https://github.com/fga-eps-mds/2026-1-AnatoQuizUp-Usuario-Service/pull/36",
+   "criadaEm": "2026-04-27T02:37:23Z",
+   "fechadaEm": "2026-04-27T02:38:15Z",
+   "estimate": null,
+   "labels": [],
+   "responsaveis": [],
+   "sprints": [
+    "Sprint: Apr 19 - Apr 25, 2026"
+   ],
+   "pipeline": null
+  },
+  {
+   "repo": "2026-1-AnatoQuizUp-Usuario-Service",
+   "repoGhId": 1208046400,
+   "numero": 35,
+   "titulo": "Feature/ci cd",
+   "estado": "CLOSED",
+   "ehPr": true,
+   "url": "https://github.com/fga-eps-mds/2026-1-AnatoQuizUp-Usuario-Service/pull/35",
+   "criadaEm": "2026-04-27T02:34:07Z",
+   "fechadaEm": "2026-04-27T02:37:24Z",
+   "estimate": null,
+   "labels": [],
+   "responsaveis": [],
+   "sprints": [
+    "Sprint: Apr 19 - Apr 25, 2026"
+   ],
+   "pipeline": null
+  },
+  {
+   "repo": "2026-1-AnatoQuizUp-Usuario-Service",
+   "repoGhId": 1208046400,
+   "numero": 34,
+   "titulo": "test(auth): alinha cobertura do cadastro ao sonar",
+   "estado": "CLOSED",
+   "ehPr": true,
+   "url": "https://github.com/fga-eps-mds/2026-1-AnatoQuizUp-Usuario-Service/pull/34",
+   "criadaEm": "2026-04-27T02:26:40Z",
+   "fechadaEm": "2026-04-27T02:31:48Z",
+   "estimate": null,
+   "labels": [],
+   "responsaveis": [],
+   "sprints": [
+    "Sprint: Apr 19 - Apr 25, 2026"
+   ],
+   "pipeline": null
+  },
+  {
+   "repo": "2026-1-AnatoQuizUp-Web",
+   "repoGhId": 1208045099,
+   "numero": 26,
+   "titulo": "chore(ci): update branches for push and pull_request triggers to incl…",
+   "estado": "CLOSED",
+   "ehPr": true,
+   "url": "https://github.com/fga-eps-mds/2026-1-AnatoQuizUp-Web/pull/26",
+   "criadaEm": "2026-04-27T02:16:23Z",
+   "fechadaEm": "2026-04-27T02:17:44Z",
+   "estimate": null,
+   "labels": [],
+   "responsaveis": [],
+   "sprints": [
+    "Sprint: Apr 19 - Apr 25, 2026"
+   ],
+   "pipeline": null
+  },
+  {
+   "repo": "2026-1-AnatoQuizUp-Usuario-Service",
+   "repoGhId": 1208046400,
+   "numero": 33,
+   "titulo": "Feature/ci cd",
+   "estado": "CLOSED",
+   "ehPr": true,
+   "url": "https://github.com/fga-eps-mds/2026-1-AnatoQuizUp-Usuario-Service/pull/33",
+   "criadaEm": "2026-04-27T01:56:14Z",
+   "fechadaEm": "2026-04-27T02:16:52Z",
+   "estimate": null,
+   "labels": [],
+   "responsaveis": [],
+   "sprints": [
+    "Sprint: Apr 19 - Apr 25, 2026"
+   ],
+   "pipeline": null
+  },
+  {
+   "repo": "2026-1-AnatoQuizUp-Usuario-Service",
+   "repoGhId": 1208046400,
+   "numero": 32,
+   "titulo": "chore(ci): update CI workflow to include develop branch for push and …",
+   "estado": "CLOSED",
+   "ehPr": true,
+   "url": "https://github.com/fga-eps-mds/2026-1-AnatoQuizUp-Usuario-Service/pull/32",
+   "criadaEm": "2026-04-27T01:49:19Z",
+   "fechadaEm": "2026-04-27T01:50:42Z",
+   "estimate": null,
+   "labels": [],
+   "responsaveis": [],
+   "sprints": [
+    "Sprint: Apr 19 - Apr 25, 2026"
+   ],
+   "pipeline": null
+  },
+  {
+   "repo": "2026-1-AnatoQuizUp-Doc",
+   "repoGhId": 1200510400,
+   "numero": 4,
+   "titulo": " docs: reorganiza arquitetura e atualiza documentação do projeto",
+   "estado": "CLOSED",
+   "ehPr": true,
+   "url": "https://github.com/fga-eps-mds/2026-1-AnatoQuizUp-Doc/pull/4",
+   "criadaEm": "2026-04-27T01:31:56Z",
+   "fechadaEm": "2026-04-27T01:34:04Z",
+   "estimate": null,
+   "labels": [],
+   "responsaveis": [],
+   "sprints": [
+    "Sprint: Apr 19 - Apr 25, 2026"
+   ],
+   "pipeline": null
+  },
+  {
+   "repo": "2026-1-AnatoQuizUp-Web",
+   "repoGhId": 1208045099,
+   "numero": 24,
+   "titulo": "Feature/ci cd",
+   "estado": "CLOSED",
+   "ehPr": true,
+   "url": "https://github.com/fga-eps-mds/2026-1-AnatoQuizUp-Web/pull/24",
+   "criadaEm": "2026-04-27T01:25:47Z",
+   "fechadaEm": "2026-04-27T01:27:20Z",
+   "estimate": null,
+   "labels": [],
+   "responsaveis": [],
+   "sprints": [
+    "Sprint: Apr 19 - Apr 25, 2026"
+   ],
+   "pipeline": null
+  },
+  {
+   "repo": "2026-1-AnatoQuizUp-Usuario-Service",
+   "repoGhId": 1208046400,
+   "numero": 29,
+   "titulo": "Feature/ci cd",
+   "estado": "CLOSED",
+   "ehPr": true,
+   "url": "https://github.com/fga-eps-mds/2026-1-AnatoQuizUp-Usuario-Service/pull/29",
+   "criadaEm": "2026-04-27T01:22:41Z",
+   "fechadaEm": "2026-04-27T01:26:20Z",
+   "estimate": null,
+   "labels": [],
+   "responsaveis": [],
+   "sprints": [
+    "Sprint: Apr 19 - Apr 25, 2026"
+   ],
+   "pipeline": null
+  },
+  {
+   "repo": "2026-1-AnatoQuizUp-Usuario-Service",
+   "repoGhId": 1208046400,
+   "numero": 27,
+   "titulo": "Feat/email service",
+   "estado": "CLOSED",
+   "ehPr": true,
+   "url": "https://github.com/fga-eps-mds/2026-1-AnatoQuizUp-Usuario-Service/pull/27",
+   "criadaEm": "2026-04-26T21:45:20Z",
+   "fechadaEm": "2026-04-27T01:06:30Z",
+   "estimate": null,
+   "labels": [],
+   "responsaveis": [],
+   "sprints": [
+    "Sprint: Apr 19 - Apr 25, 2026"
+   ],
+   "pipeline": null
+  },
+  {
+   "repo": "2026-1-AnatoQuizUp-Web",
+   "repoGhId": 1208045099,
+   "numero": 15,
+   "titulo": "[TASK13] [Frontend] Rotas protegidas",
+   "estado": "CLOSED",
+   "ehPr": false,
+   "url": "https://github.com/fga-eps-mds/2026-1-AnatoQuizUp-Web/issues/15",
+   "criadaEm": "2026-04-18T12:34:20Z",
+   "fechadaEm": "2026-04-27T01:04:30Z",
+   "estimate": 3,
+   "labels": [
+    "frontend"
+   ],
+   "responsaveis": [
+    "pkbceira03"
+   ],
+   "sprints": [
+    "Sprint: Apr 19 - Apr 25, 2026"
+   ],
+   "pipeline": null
+  },
+  {
+   "repo": "2026-1-AnatoQuizUp-Web",
+   "repoGhId": 1208045099,
+   "numero": 23,
+   "titulo": "Feature/rotas protegidas",
+   "estado": "CLOSED",
+   "ehPr": true,
+   "url": "https://github.com/fga-eps-mds/2026-1-AnatoQuizUp-Web/pull/23",
+   "criadaEm": "2026-04-26T13:46:18Z",
+   "fechadaEm": "2026-04-27T01:04:29Z",
+   "estimate": null,
+   "labels": [],
+   "responsaveis": [
+    "trindadea"
+   ],
+   "sprints": [
+    "Sprint: Apr 19 - Apr 25, 2026"
+   ],
+   "pipeline": null
+  },
+  {
+   "repo": "2026-1-AnatoQuizUp-Doc",
+   "repoGhId": 1200510400,
+   "numero": 1,
+   "titulo": "[TASK] [Spike] Pesquisa e configuração de deploy",
+   "estado": "CLOSED",
+   "ehPr": false,
+   "url": "https://github.com/fga-eps-mds/2026-1-AnatoQuizUp-Doc/issues/1",
+   "criadaEm": "2026-04-18T14:47:21Z",
+   "fechadaEm": "2026-04-27T00:57:11Z",
+   "estimate": 3,
+   "labels": [
+    "Documentação",
+    "Treinamento"
+   ],
+   "responsaveis": [
+    "an4catarina"
+   ],
+   "sprints": [
+    "Sprint: Apr 19 - Apr 25, 2026"
+   ],
+   "pipeline": null
+  },
+  {
+   "repo": "2026-1-AnatoQuizUp-Usuario-Service",
+   "repoGhId": 1208046400,
+   "numero": 8,
+   "titulo": "[TASK06] [Spike] Pesquisa de lib de envio de email",
+   "estado": "CLOSED",
+   "ehPr": false,
+   "url": "https://github.com/fga-eps-mds/2026-1-AnatoQuizUp-Usuario-Service/issues/8",
+   "criadaEm": "2026-04-18T12:25:50Z",
+   "fechadaEm": "2026-04-27T00:51:58Z",
+   "estimate": 2,
+   "labels": [
+    "Documentação",
+    "Treinamento"
+   ],
+   "responsaveis": [
+    "trindadea"
+   ],
+   "sprints": [
+    "Sprint: Apr 19 - Apr 25, 2026"
+   ],
+   "pipeline": null
+  },
+  {
+   "repo": "2026-1-AnatoQuizUp-Web",
+   "repoGhId": 1208045099,
+   "numero": 17,
+   "titulo": "[TASK15] [Frontend] Página Home (placeholder)",
+   "estado": "CLOSED",
+   "ehPr": false,
+   "url": "https://github.com/fga-eps-mds/2026-1-AnatoQuizUp-Web/issues/17",
+   "criadaEm": "2026-04-18T12:35:27Z",
+   "fechadaEm": "2026-04-27T00:29:32Z",
+   "estimate": 1,
+   "labels": [
+    "frontend"
+   ],
+   "responsaveis": [
+    "pkbceira03"
+   ],
+   "sprints": [
+    "Sprint: Apr 19 - Apr 25, 2026"
+   ],
+   "pipeline": null
+  },
+  {
+   "repo": "2026-1-AnatoQuizUp-Usuario-Service",
+   "repoGhId": 1208046400,
+   "numero": 6,
+   "titulo": "[TASK04] [Backend] Configuração JWT (access + refresh token)",
+   "estado": "CLOSED",
+   "ehPr": false,
+   "url": "https://github.com/fga-eps-mds/2026-1-AnatoQuizUp-Usuario-Service/issues/6",
+   "criadaEm": "2026-04-18T12:21:41Z",
+   "fechadaEm": "2026-04-26T18:07:47Z",
+   "estimate": 3,
+   "labels": [
+    "backend"
+   ],
+   "responsaveis": [
+    "Joa0V"
+   ],
+   "sprints": [
+    "Sprint: Apr 19 - Apr 25, 2026"
+   ],
+   "pipeline": null
+  },
+  {
+   "repo": "2026-1-AnatoQuizUp-Usuario-Service",
+   "repoGhId": 1208046400,
+   "numero": 5,
+   "titulo": "[TASK02] [Backend] Seed de administrador e usario teste",
+   "estado": "CLOSED",
+   "ehPr": false,
+   "url": "https://github.com/fga-eps-mds/2026-1-AnatoQuizUp-Usuario-Service/issues/5",
+   "criadaEm": "2026-04-18T12:20:52Z",
+   "fechadaEm": "2026-04-25T17:49:52Z",
+   "estimate": 1,
+   "labels": [
+    "backend"
+   ],
+   "responsaveis": [
+    "Brenofrds"
+   ],
+   "sprints": [
+    "Sprint: Apr 19 - Apr 25, 2026"
+   ],
+   "pipeline": null
+  },
+  {
+   "repo": "2026-1-AnatoQuizUp-Usuario-Service",
+   "repoGhId": 1208046400,
+   "numero": 25,
+   "titulo": "Feature/seed admin",
+   "estado": "CLOSED",
+   "ehPr": true,
+   "url": "https://github.com/fga-eps-mds/2026-1-AnatoQuizUp-Usuario-Service/pull/25",
+   "criadaEm": "2026-04-25T17:15:09Z",
+   "fechadaEm": "2026-04-25T17:17:02Z",
+   "estimate": null,
+   "labels": [],
+   "responsaveis": [],
+   "sprints": [
+    "Sprint: Apr 19 - Apr 25, 2026"
+   ],
+   "pipeline": null
+  },
+  {
+   "repo": "2026-1-AnatoQuizUp-Usuario-Service",
+   "repoGhId": 1208046400,
+   "numero": 4,
+   "titulo": "[TASK01] [Backend] Modelagem do banco de dados (Prisma)",
+   "estado": "CLOSED",
+   "ehPr": false,
+   "url": "https://github.com/fga-eps-mds/2026-1-AnatoQuizUp-Usuario-Service/issues/4",
+   "criadaEm": "2026-04-18T12:19:52Z",
+   "fechadaEm": "2026-04-25T16:24:07Z",
+   "estimate": 2,
+   "labels": [
+    "backend"
+   ],
+   "responsaveis": [
+    "Brenofrds"
+   ],
+   "sprints": [
+    "Sprint: Apr 19 - Apr 25, 2026"
+   ],
+   "pipeline": null
+  },
+  {
+   "repo": "2026-1-AnatoQuizUp-Usuario-Service",
+   "repoGhId": 1208046400,
+   "numero": 24,
+   "titulo": "feat(auth): adiciona modelagem de usuarios e autenticacao",
+   "estado": "CLOSED",
+   "ehPr": true,
+   "url": "https://github.com/fga-eps-mds/2026-1-AnatoQuizUp-Usuario-Service/pull/24",
+   "criadaEm": "2026-04-25T16:19:58Z",
+   "fechadaEm": "2026-04-25T16:24:06Z",
+   "estimate": null,
+   "labels": [],
+   "responsaveis": [],
+   "sprints": [
+    "Sprint: Apr 19 - Apr 25, 2026"
+   ],
+   "pipeline": null
+  },
+  {
+   "repo": "2026-1-AnatoQuizUp-Usuario-Service",
+   "repoGhId": 1208046400,
+   "numero": 16,
+   "titulo": "[TASK08] [Backend] Registro do app no Azure AD (Microsoft SSO)",
+   "estado": "CLOSED",
+   "ehPr": false,
+   "url": "https://github.com/fga-eps-mds/2026-1-AnatoQuizUp-Usuario-Service/issues/16",
+   "criadaEm": "2026-04-18T12:31:32Z",
+   "fechadaEm": "2026-04-25T15:06:25Z",
+   "estimate": 1,
+   "labels": [],
+   "responsaveis": [
+    "an4catarina"
+   ],
+   "sprints": [
+    "Sprint: Apr 19 - Apr 25, 2026"
+   ],
+   "pipeline": null
+  },
+  {
+   "repo": "2026-1-AnatoQuizUp-Usuario-Service",
+   "repoGhId": 1208046400,
+   "numero": 9,
+   "titulo": "[TASK07] [Spike] Pesquisa e configuração do SSO Microsoft (Azure AD)",
+   "estado": "CLOSED",
+   "ehPr": false,
+   "url": "https://github.com/fga-eps-mds/2026-1-AnatoQuizUp-Usuario-Service/issues/9",
+   "criadaEm": "2026-04-18T12:26:34Z",
+   "fechadaEm": "2026-04-25T15:06:14Z",
+   "estimate": 3,
+   "labels": [
+    "Documentação",
+    "Treinamento"
+   ],
+   "responsaveis": [
+    "an4catarina"
+   ],
+   "sprints": [
+    "Sprint: Apr 19 - Apr 25, 2026"
+   ],
+   "pipeline": null
+  },
+  {
+   "repo": "2026-1-AnatoQuizUp-Web",
+   "repoGhId": 1208045099,
+   "numero": 16,
+   "titulo": "[TASK14] [Frontend] Widget de navegação (Header/Navbar)",
+   "estado": "CLOSED",
+   "ehPr": false,
+   "url": "https://github.com/fga-eps-mds/2026-1-AnatoQuizUp-Web/issues/16",
+   "criadaEm": "2026-04-18T12:35:11Z",
+   "fechadaEm": "2026-04-23T15:53:29Z",
+   "estimate": 2,
+   "labels": [
+    "frontend"
+   ],
+   "responsaveis": [
+    "EhOMiguel"
+   ],
+   "sprints": [
+    "Sprint: Apr 19 - Apr 25, 2026"
+   ],
+   "pipeline": null
+  },
+  {
+   "repo": "2026-1-AnatoQuizUp-Web",
+   "repoGhId": 1208045099,
+   "numero": 3,
+   "titulo": "[TASK05] [Frontend] Setup da estrutura FSD",
+   "estado": "CLOSED",
+   "ehPr": false,
+   "url": "https://github.com/fga-eps-mds/2026-1-AnatoQuizUp-Web/issues/3",
+   "criadaEm": "2026-04-18T12:18:04Z",
+   "fechadaEm": "2026-04-23T15:52:59Z",
+   "estimate": 2,
+   "labels": [
+    "frontend"
+   ],
+   "responsaveis": [
+    "pkbceira03"
+   ],
+   "sprints": [
+    "Sprint: Apr 19 - Apr 25, 2026"
+   ],
+   "pipeline": null
+  },
+  {
+   "repo": "2026-1-AnatoQuizUp-Web",
+   "repoGhId": 1208045099,
+   "numero": 9,
+   "titulo": "[US02] [Frontend] Login de aluno — Tela",
+   "estado": "CLOSED",
+   "ehPr": false,
+   "url": "https://github.com/fga-eps-mds/2026-1-AnatoQuizUp-Web/issues/9",
+   "criadaEm": "2026-04-18T12:29:34Z",
+   "fechadaEm": "2026-04-23T15:52:58Z",
+   "estimate": 3,
+   "labels": [
+    "FEATURE",
+    "US",
+    "frontend"
+   ],
+   "responsaveis": [
+    "pkbceira03"
+   ],
+   "sprints": [
+    "Sprint: Apr 19 - Apr 25, 2026"
+   ],
+   "pipeline": null
+  },
+  {
+   "repo": "2026-1-AnatoQuizUp-Web",
+   "repoGhId": 1208045099,
+   "numero": 21,
+   "titulo": "Feature/us02 login",
+   "estado": "CLOSED",
+   "ehPr": true,
+   "url": "https://github.com/fga-eps-mds/2026-1-AnatoQuizUp-Web/pull/21",
+   "criadaEm": "2026-04-19T23:45:06Z",
+   "fechadaEm": "2026-04-23T15:52:57Z",
+   "estimate": null,
+   "labels": [],
+   "responsaveis": [],
+   "sprints": [
+    "Sprint: Apr 19 - Apr 25, 2026"
+   ],
+   "pipeline": null
+  },
+  {
+   "repo": "2026-1-AnatoQuizUp-Web",
+   "repoGhId": 1208045099,
+   "numero": 22,
+   "titulo": "Feature/us02 login api",
+   "estado": "CLOSED",
+   "ehPr": true,
+   "url": "https://github.com/fga-eps-mds/2026-1-AnatoQuizUp-Web/pull/22",
+   "criadaEm": "2026-04-23T13:01:14Z",
+   "fechadaEm": "2026-04-23T15:52:55Z",
+   "estimate": null,
+   "labels": [],
+   "responsaveis": [],
+   "sprints": [
+    "Sprint: Apr 19 - Apr 25, 2026"
+   ],
+   "pipeline": null
+  },
+  {
+   "repo": "2026-1-AnatoQuizUp",
+   "repoGhId": 0,
+   "numero": 119,
+   "titulo": "Repositório configurado: licença, código de conduta, como contribuir, templates de PR,Tarefa/Defeito/US",
+   "estado": "CLOSED",
+   "ehPr": false,
+   "url": "",
+   "criadaEm": "1970-01-01T00:00:00Z",
+   "fechadaEm": "2026-04-23T14:13:58Z",
+   "estimate": null,
+   "labels": [],
+   "responsaveis": [
+    "ViictorHugoo"
+   ],
+   "sprints": [
+    "Sprint: Apr 2 - Apr 15, 2026",
+    "Sprint: Apr 19 - Apr 25, 2026"
+   ],
+   "pipeline": null
+  },
+  {
+   "repo": "2026-1-AnatoQuizUp",
+   "repoGhId": 0,
+   "numero": 113,
+   "titulo": "GitPages - Estruturar",
+   "estado": "CLOSED",
+   "ehPr": false,
+   "url": "",
+   "criadaEm": "1970-01-01T00:00:00Z",
+   "fechadaEm": "2026-04-23T14:13:57Z",
+   "estimate": null,
+   "labels": [],
+   "responsaveis": [
+    "EhOMiguel",
+    "trindadea",
+    "GenilsonJrs",
+    "Brenofrds",
+    "EhOBruno",
+    "Joa0V",
+    "marialuisa214",
+    "pkbceira03"
+   ],
+   "sprints": [
+    "Sprint: Apr 2 - Apr 15, 2026",
+    "Sprint: Apr 19 - Apr 25, 2026"
+   ],
+   "pipeline": null
+  },
+  {
+   "repo": "2026-1-AnatoQuizUp-Usuario-Service",
+   "repoGhId": 1208046400,
+   "numero": 3,
+   "titulo": "chore: Atualiza templates",
+   "estado": "CLOSED",
+   "ehPr": true,
+   "url": "https://github.com/fga-eps-mds/2026-1-AnatoQuizUp-Usuario-Service/pull/3",
+   "criadaEm": "2026-04-18T12:12:31Z",
+   "fechadaEm": "2026-04-23T14:13:26Z",
+   "estimate": null,
+   "labels": [],
+   "responsaveis": [],
+   "sprints": [
+    "Sprint: Apr 19 - Apr 25, 2026"
+   ],
+   "pipeline": null
+  },
+  {
+   "repo": "2026-1-AnatoQuizUp",
+   "repoGhId": 0,
+   "numero": 167,
+   "titulo": "Criar prototipo de alta fidelidade da tela de login",
+   "estado": "CLOSED",
+   "ehPr": false,
+   "url": "",
+   "criadaEm": "1970-01-01T00:00:00Z",
+   "fechadaEm": "2026-04-18T14:55:42Z",
+   "estimate": null,
+   "labels": [],
+   "responsaveis": [
+    "EhOMiguel",
+    "trindadea",
+    "GenilsonJrs",
+    "Brenofrds",
+    "EhOBruno",
+    "Joa0V",
+    "marialuisa214",
+    "pkbceira03"
+   ],
+   "sprints": [
+    "Sprint: Apr 19 - Apr 25, 2026"
+   ],
+   "pipeline": null
+  },
+  {
+   "repo": "2026-1-AnatoQuizUp-Web",
+   "repoGhId": 1208045099,
+   "numero": 2,
+   "titulo": "chore: Atualiza templates",
+   "estado": "CLOSED",
+   "ehPr": true,
+   "url": "https://github.com/fga-eps-mds/2026-1-AnatoQuizUp-Web/pull/2",
+   "criadaEm": "2026-04-18T12:10:42Z",
+   "fechadaEm": "2026-04-18T14:55:42Z",
+   "estimate": null,
+   "labels": [],
+   "responsaveis": [],
+   "sprints": [
+    "Sprint: Apr 19 - Apr 25, 2026"
+   ],
+   "pipeline": null
+  },
+  {
+   "repo": "2026-1-AnatoQuizUp",
+   "repoGhId": 0,
+   "numero": 170,
+   "titulo": "Definir cores, tipografia, botões e logo no design",
+   "estado": "CLOSED",
+   "ehPr": false,
+   "url": "",
+   "criadaEm": "1970-01-01T00:00:00Z",
+   "fechadaEm": "2026-04-18T14:55:39Z",
+   "estimate": null,
+   "labels": [],
+   "responsaveis": [
+    "EhOMiguel",
+    "trindadea",
+    "GenilsonJrs",
+    "Brenofrds",
+    "EhOBruno",
+    "Joa0V",
+    "marialuisa214",
+    "pkbceira03"
+   ],
+   "sprints": [
+    "Sprint: Apr 19 - Apr 25, 2026"
+   ],
+   "pipeline": null
+  },
+  {
+   "repo": "2026-1-AnatoQuizUp",
+   "repoGhId": 0,
+   "numero": 155,
+   "titulo": "Definir arquitetura do frontend",
+   "estado": "CLOSED",
+   "ehPr": false,
+   "url": "",
+   "criadaEm": "1970-01-01T00:00:00Z",
+   "fechadaEm": "2026-04-18T14:53:58Z",
+   "estimate": null,
+   "labels": [],
+   "responsaveis": [
+    "EhOMiguel",
+    "trindadea",
+    "GenilsonJrs",
+    "Brenofrds",
+    "EhOBruno",
+    "Joa0V",
+    "marialuisa214",
+    "pkbceira03"
+   ],
+   "sprints": [
+    "Sprint: Apr 19 - Apr 25, 2026"
+   ],
+   "pipeline": null
+  },
+  {
+   "repo": "2026-1-AnatoQuizUp",
+   "repoGhId": 0,
+   "numero": 156,
+   "titulo": "Definir arquitetura do backend",
+   "estado": "CLOSED",
+   "ehPr": false,
+   "url": "",
+   "criadaEm": "1970-01-01T00:00:00Z",
+   "fechadaEm": "2026-04-18T13:19:09Z",
+   "estimate": null,
+   "labels": [],
+   "responsaveis": [
+    "EhOMiguel",
+    "trindadea",
+    "GenilsonJrs",
+    "Brenofrds",
+    "EhOBruno",
+    "Joa0V",
+    "marialuisa214",
+    "pkbceira03"
+   ],
+   "sprints": [],
+   "pipeline": null
+  },
+  {
+   "repo": "2026-1-AnatoQuizUp",
+   "repoGhId": 0,
+   "numero": 161,
+   "titulo": "Priorizar backlog do MVP com o cliente",
+   "estado": "CLOSED",
+   "ehPr": false,
+   "url": "",
+   "criadaEm": "1970-01-01T00:00:00Z",
+   "fechadaEm": "2026-04-18T13:18:57Z",
+   "estimate": null,
+   "labels": [],
+   "responsaveis": [
+    "EhOMiguel",
+    "trindadea",
+    "GenilsonJrs",
+    "Brenofrds",
+    "EhOBruno",
+    "Joa0V",
+    "marialuisa214",
+    "pkbceira03"
+   ],
+   "sprints": [],
+   "pipeline": null
+  },
+  {
+   "repo": "2026-1-AnatoQuizUp",
+   "repoGhId": 0,
+   "numero": 162,
+   "titulo": "Estimar e organizar backlog inicial no ZenHub",
+   "estado": "CLOSED",
+   "ehPr": false,
+   "url": "",
+   "criadaEm": "1970-01-01T00:00:00Z",
+   "fechadaEm": "2026-04-18T13:18:40Z",
+   "estimate": null,
+   "labels": [],
+   "responsaveis": [
+    "EhOMiguel",
+    "trindadea",
+    "GenilsonJrs",
+    "Brenofrds",
+    "EhOBruno",
+    "Joa0V",
+    "marialuisa214",
+    "pkbceira03"
+   ],
+   "sprints": [],
+   "pipeline": null
+  },
+  {
+   "repo": "2026-1-AnatoQuizUp",
+   "repoGhId": 0,
+   "numero": 169,
+   "titulo": "Documentar Prototipo de Alta Fidelidade da tela de login",
+   "estado": "CLOSED",
+   "ehPr": false,
+   "url": "",
+   "criadaEm": "1970-01-01T00:00:00Z",
+   "fechadaEm": "2026-04-18T13:18:25Z",
+   "estimate": null,
+   "labels": [],
+   "responsaveis": [
+    "EhOMiguel",
+    "trindadea",
+    "GenilsonJrs",
+    "Brenofrds",
+    "EhOBruno",
+    "Joa0V",
+    "marialuisa214",
+    "pkbceira03"
+   ],
+   "sprints": [],
+   "pipeline": null
+  },
+  {
+   "repo": "2026-1-AnatoQuizUp",
+   "repoGhId": 0,
+   "numero": 168,
+   "titulo": "Validar o prototipo de alta fidelidade da tela de login",
+   "estado": "CLOSED",
+   "ehPr": false,
+   "url": "",
+   "criadaEm": "1970-01-01T00:00:00Z",
+   "fechadaEm": "2026-04-18T13:18:17Z",
+   "estimate": null,
+   "labels": [],
+   "responsaveis": [
+    "EhOMiguel",
+    "trindadea",
+    "GenilsonJrs",
+    "Brenofrds",
+    "EhOBruno",
+    "Joa0V",
+    "marialuisa214",
+    "pkbceira03"
+   ],
+   "sprints": [],
+   "pipeline": null
+  },
+  {
+   "repo": "2026-1-AnatoQuizUp",
+   "repoGhId": 0,
+   "numero": 121,
+   "titulo": "Configuração do repositório - Backend",
+   "estado": "CLOSED",
+   "ehPr": false,
+   "url": "",
+   "criadaEm": "1970-01-01T00:00:00Z",
+   "fechadaEm": "2026-04-18T12:49:30Z",
+   "estimate": null,
+   "labels": [],
+   "responsaveis": [
+    "EhOBruno"
+   ],
+   "sprints": [
+    "Sprint: Apr 2 - Apr 15, 2026",
+    "Sprint: Apr 19 - Apr 25, 2026"
+   ],
+   "pipeline": null
+  },
+  {
+   "repo": "2026-1-AnatoQuizUp",
+   "repoGhId": 0,
+   "numero": 111,
+   "titulo": "Desenvolvimento do Lean Inception",
+   "estado": "CLOSED",
+   "ehPr": false,
+   "url": "",
+   "criadaEm": "1970-01-01T00:00:00Z",
+   "fechadaEm": "2026-04-18T12:49:23Z",
+   "estimate": null,
+   "labels": [],
+   "responsaveis": [
+    "EhOMiguel",
+    "trindadea",
+    "GenilsonJrs",
+    "Brenofrds",
+    "EhOBruno",
+    "Joa0V",
+    "marialuisa214",
+    "pkbceira03"
+   ],
+   "sprints": [
+    "Sprint: Mar 19 - Apr 1, 2026",
+    "Sprint: Apr 2 - Apr 15, 2026",
+    "Sprint: Apr 19 - Apr 25, 2026"
+   ],
+   "pipeline": null
+  },
+  {
+   "repo": "2026-1-AnatoQuizUp",
+   "repoGhId": 0,
+   "numero": 145,
+   "titulo": "Lean Inception — Atividade 7: Revisão Técnica, de Negócio e UX",
+   "estado": "CLOSED",
+   "ehPr": false,
+   "url": "",
+   "criadaEm": "1970-01-01T00:00:00Z",
+   "fechadaEm": "2026-04-18T12:49:08Z",
+   "estimate": null,
+   "labels": [],
+   "responsaveis": [
+    "EhOMiguel",
+    "trindadea",
+    "GenilsonJrs",
+    "Brenofrds",
+    "EhOBruno",
+    "Joa0V",
+    "marialuisa214",
+    "pkbceira03"
+   ],
+   "sprints": [
+    "Sprint: Apr 2 - Apr 15, 2026",
+    "Sprint: Apr 19 - Apr 25, 2026"
+   ],
+   "pipeline": null
+  },
+  {
+   "repo": "2026-1-AnatoQuizUp",
+   "repoGhId": 0,
+   "numero": 144,
+   "titulo": "Lean Inception — Atividade 6: Brainstorming de Funcionalidades",
+   "estado": "CLOSED",
+   "ehPr": false,
+   "url": "",
+   "criadaEm": "1970-01-01T00:00:00Z",
+   "fechadaEm": "2026-04-18T12:49:02Z",
+   "estimate": null,
+   "labels": [],
+   "responsaveis": [
+    "EhOMiguel",
+    "trindadea",
+    "GenilsonJrs",
+    "Brenofrds",
+    "EhOBruno",
+    "Joa0V",
+    "marialuisa214",
+    "pkbceira03"
+   ],
+   "sprints": [
+    "Sprint: Apr 2 - Apr 15, 2026",
+    "Sprint: Apr 19 - Apr 25, 2026"
+   ],
+   "pipeline": null
+  },
+  {
+   "repo": "2026-1-AnatoQuizUp",
+   "repoGhId": 0,
+   "numero": 160,
+   "titulo": "Definir critérios de aceitação das histórias priorizadas",
+   "estado": "CLOSED",
+   "ehPr": false,
+   "url": "",
+   "criadaEm": "1970-01-01T00:00:00Z",
+   "fechadaEm": "2026-04-18T12:47:43Z",
+   "estimate": null,
+   "labels": [],
+   "responsaveis": [
+    "EhOMiguel",
+    "trindadea",
+    "GenilsonJrs",
+    "Brenofrds",
+    "EhOBruno",
+    "Joa0V",
+    "marialuisa214",
+    "pkbceira03"
+   ],
+   "sprints": [
+    "Sprint: Apr 19 - Apr 25, 2026"
+   ],
+   "pipeline": null
+  },
+  {
+   "repo": "2026-1-AnatoQuizUp",
+   "repoGhId": 0,
+   "numero": 171,
+   "titulo": "Criar quadro de conhecimento e pedir para todos responderem",
+   "estado": "CLOSED",
+   "ehPr": false,
+   "url": "",
+   "criadaEm": "1970-01-01T00:00:00Z",
+   "fechadaEm": "2026-04-18T12:45:46Z",
+   "estimate": null,
+   "labels": [],
+   "responsaveis": [
+    "EhOMiguel",
+    "trindadea",
+    "GenilsonJrs",
+    "Brenofrds",
+    "EhOBruno",
+    "Joa0V",
+    "marialuisa214",
+    "pkbceira03"
+   ],
+   "sprints": [
+    "Sprint: Apr 19 - Apr 25, 2026"
+   ],
+   "pipeline": null
+  },
+  {
+   "repo": "2026-1-AnatoQuizUp",
+   "repoGhId": 0,
+   "numero": 159,
+   "titulo": "Definir histórias de usuário do MVP",
+   "estado": "CLOSED",
+   "ehPr": false,
+   "url": "",
+   "criadaEm": "1970-01-01T00:00:00Z",
+   "fechadaEm": "2026-04-18T12:45:41Z",
+   "estimate": null,
+   "labels": [],
+   "responsaveis": [
+    "EhOMiguel",
+    "trindadea",
+    "GenilsonJrs",
+    "Brenofrds",
+    "EhOBruno",
+    "Joa0V",
+    "marialuisa214",
+    "pkbceira03"
+   ],
+   "sprints": [
+    "Sprint: Apr 19 - Apr 25, 2026"
+   ],
+   "pipeline": null
+  },
+  {
+   "repo": "2026-1-AnatoQuizUp-Usuario-Service",
+   "repoGhId": 1208046400,
+   "numero": 1,
+   "titulo": "chore: configurar workflow e sonar; adicionar templates do projeto",
+   "estado": "CLOSED",
+   "ehPr": true,
+   "url": "https://github.com/fga-eps-mds/2026-1-AnatoQuizUp-Usuario-Service/pull/1",
+   "criadaEm": "2026-04-17T00:48:39Z",
+   "fechadaEm": "2026-04-17T19:30:05Z",
+   "estimate": null,
+   "labels": [],
+   "responsaveis": [],
+   "sprints": [
+    "Sprint: Apr 19 - Apr 25, 2026"
+   ],
+   "pipeline": null
+  },
+  {
+   "repo": "2026-1-AnatoQuizUp-Web",
+   "repoGhId": 1208045099,
+   "numero": 1,
+   "titulo": "chore(ci): configurar workflow e sonar; adicionar templates do projeto",
+   "estado": "CLOSED",
+   "ehPr": true,
+   "url": "https://github.com/fga-eps-mds/2026-1-AnatoQuizUp-Web/pull/1",
+   "criadaEm": "2026-04-17T00:51:01Z",
+   "fechadaEm": "2026-04-17T19:29:10Z",
+   "estimate": null,
+   "labels": [],
+   "responsaveis": [],
+   "sprints": [
+    "Sprint: Apr 19 - Apr 25, 2026"
+   ],
+   "pipeline": null
+  },
+  {
+   "repo": "2026-1-AnatoQuizUp",
+   "repoGhId": 0,
+   "numero": 172,
+   "titulo": "Criar o heatmap da equipe",
+   "estado": "CLOSED",
+   "ehPr": false,
+   "url": "",
+   "criadaEm": "1970-01-01T00:00:00Z",
+   "fechadaEm": "2026-04-17T02:57:15Z",
+   "estimate": null,
+   "labels": [],
+   "responsaveis": [
+    "EhOMiguel",
+    "trindadea",
+    "GenilsonJrs",
+    "Brenofrds",
+    "EhOBruno",
+    "Joa0V",
+    "marialuisa214",
+    "pkbceira03"
+   ],
+   "sprints": [],
+   "pipeline": null
+  },
+  {
+   "repo": "2026-1-AnatoQuizUp",
+   "repoGhId": 0,
+   "numero": 163,
+   "titulo": "Configurar repositório de Documentação no GitHub e integrar com ZenHub",
+   "estado": "CLOSED",
+   "ehPr": false,
+   "url": "",
+   "criadaEm": "1970-01-01T00:00:00Z",
+   "fechadaEm": "2026-04-17T01:43:37Z",
+   "estimate": null,
+   "labels": [],
+   "responsaveis": [
+    "EhOMiguel",
+    "trindadea",
+    "GenilsonJrs",
+    "Brenofrds",
+    "EhOBruno",
+    "Joa0V",
+    "marialuisa214",
+    "pkbceira03"
+   ],
+   "sprints": [],
+   "pipeline": null
+  },
+  {
+   "repo": "2026-1-AnatoQuizUp",
+   "repoGhId": 0,
+   "numero": 164,
+   "titulo": "Configurar repositório de Frontend (Web) no GitHub",
+   "estado": "CLOSED",
+   "ehPr": false,
+   "url": "",
+   "criadaEm": "1970-01-01T00:00:00Z",
+   "fechadaEm": "2026-04-17T01:43:28Z",
+   "estimate": null,
+   "labels": [],
+   "responsaveis": [
+    "EhOMiguel",
+    "trindadea",
+    "GenilsonJrs",
+    "Brenofrds",
+    "EhOBruno",
+    "Joa0V",
+    "marialuisa214",
+    "pkbceira03"
+   ],
+   "sprints": [],
+   "pipeline": null
+  },
+  {
+   "repo": "2026-1-AnatoQuizUp",
+   "repoGhId": 0,
+   "numero": 165,
+   "titulo": "Configurar repositório de API no GitHub",
+   "estado": "CLOSED",
+   "ehPr": false,
+   "url": "",
+   "criadaEm": "1970-01-01T00:00:00Z",
+   "fechadaEm": "2026-04-17T01:43:23Z",
+   "estimate": null,
+   "labels": [],
+   "responsaveis": [
+    "EhOMiguel",
+    "trindadea",
+    "GenilsonJrs",
+    "Brenofrds",
+    "EhOBruno",
+    "Joa0V",
+    "marialuisa214",
+    "pkbceira03"
+   ],
+   "sprints": [],
+   "pipeline": null
+  },
+  {
+   "repo": "2026-1-AnatoQuizUp",
+   "repoGhId": 0,
+   "numero": 158,
+   "titulo": "Definir stack que vamos utilizar",
+   "estado": "CLOSED",
+   "ehPr": false,
+   "url": "",
+   "criadaEm": "1970-01-01T00:00:00Z",
+   "fechadaEm": "2026-04-17T01:16:57Z",
+   "estimate": null,
+   "labels": [],
+   "responsaveis": [
+    "EhOMiguel",
+    "trindadea",
+    "GenilsonJrs",
+    "Brenofrds",
+    "EhOBruno",
+    "Joa0V",
+    "marialuisa214",
+    "pkbceira03"
+   ],
+   "sprints": [],
+   "pipeline": null
+  },
+  {
+   "repo": "2026-1-AnatoQuizUp",
+   "repoGhId": 0,
+   "numero": 143,
+   "titulo": "Lean Inception — Atividade 5: Jornada do Usuário",
+   "estado": "CLOSED",
+   "ehPr": false,
+   "url": "",
+   "criadaEm": "1970-01-01T00:00:00Z",
+   "fechadaEm": "2026-04-12T22:18:25Z",
+   "estimate": null,
+   "labels": [],
+   "responsaveis": [
+    "EhOMiguel",
+    "trindadea",
+    "GenilsonJrs",
+    "Brenofrds",
+    "EhOBruno",
+    "Joa0V",
+    "marialuisa214",
+    "pkbceira03"
+   ],
+   "sprints": [
+    "Sprint: Apr 2 - Apr 15, 2026"
+   ],
+   "pipeline": null
+  },
+  {
+   "repo": "2026-1-AnatoQuizUp",
+   "repoGhId": 0,
+   "numero": 142,
+   "titulo": "Lean Inception — Atividade 4: Personas",
+   "estado": "CLOSED",
+   "ehPr": false,
+   "url": "",
+   "criadaEm": "1970-01-01T00:00:00Z",
+   "fechadaEm": "2026-04-12T21:22:40Z",
+   "estimate": null,
+   "labels": [],
+   "responsaveis": [
+    "EhOMiguel",
+    "trindadea",
+    "GenilsonJrs",
+    "Brenofrds",
+    "EhOBruno",
+    "Joa0V",
+    "marialuisa214",
+    "pkbceira03"
+   ],
+   "sprints": [
+    "Sprint: Apr 2 - Apr 15, 2026"
+   ],
+   "pipeline": null
+  },
+  {
+   "repo": "2026-1-AnatoQuizUp",
+   "repoGhId": 0,
+   "numero": 141,
+   "titulo": "Lean Inception — Atividade 3: Objetivos do Negócio",
+   "estado": "CLOSED",
+   "ehPr": false,
+   "url": "",
+   "criadaEm": "1970-01-01T00:00:00Z",
+   "fechadaEm": "2026-04-12T21:22:32Z",
+   "estimate": null,
+   "labels": [],
+   "responsaveis": [
+    "EhOMiguel",
+    "trindadea",
+    "GenilsonJrs",
+    "Brenofrds",
+    "EhOBruno",
+    "Joa0V",
+    "marialuisa214",
+    "pkbceira03"
+   ],
+   "sprints": [
+    "Sprint: Apr 2 - Apr 15, 2026"
+   ],
+   "pipeline": null
+  },
+  {
+   "repo": "2026-1-AnatoQuizUp",
+   "repoGhId": 0,
+   "numero": 140,
+   "titulo": "Lean Inception — Atividade 2: Produto É / Não É / Faz / Não Faz",
+   "estado": "CLOSED",
+   "ehPr": false,
+   "url": "",
+   "criadaEm": "1970-01-01T00:00:00Z",
+   "fechadaEm": "2026-04-12T21:22:28Z",
+   "estimate": null,
+   "labels": [],
+   "responsaveis": [
+    "EhOMiguel",
+    "trindadea",
+    "GenilsonJrs",
+    "Brenofrds",
+    "EhOBruno",
+    "Joa0V",
+    "marialuisa214",
+    "pkbceira03"
+   ],
+   "sprints": [
+    "Sprint: Apr 2 - Apr 15, 2026"
+   ],
+   "pipeline": null
+  },
+  {
+   "repo": "2026-1-AnatoQuizUp",
+   "repoGhId": 0,
+   "numero": 139,
+   "titulo": "Lean Inception — Atividade 1: Visão do Produto",
+   "estado": "CLOSED",
+   "ehPr": false,
+   "url": "",
+   "criadaEm": "1970-01-01T00:00:00Z",
+   "fechadaEm": "2026-04-12T21:22:06Z",
+   "estimate": null,
+   "labels": [],
+   "responsaveis": [
+    "EhOMiguel",
+    "trindadea",
+    "GenilsonJrs",
+    "Brenofrds",
+    "EhOBruno",
+    "Joa0V",
+    "marialuisa214",
+    "pkbceira03"
+   ],
+   "sprints": [
+    "Sprint: Apr 2 - Apr 15, 2026"
+   ],
+   "pipeline": null
+  },
+  {
+   "repo": "2026-1-AnatoQuizUp-Doc",
+   "repoGhId": 1200510400,
+   "numero": 44,
+   "titulo": "Comentário da Questão Obrigatório",
+   "estado": "OPEN",
+   "ehPr": false,
+   "url": "https://github.com/fga-eps-mds/2026-1-AnatoQuizUp-Doc/issues/44",
+   "criadaEm": "2026-05-25T02:16:05Z",
+   "fechadaEm": null,
+   "estimate": null,
+   "labels": [
+    "enhancement"
+   ],
+   "responsaveis": [],
+   "sprints": [],
+   "pipeline": "New Issues"
+  },
+  {
+   "repo": "2026-1-AnatoQuizUp-Doc",
+   "repoGhId": 1200510400,
+   "numero": 43,
+   "titulo": "Mensagem Inicial do WebApp",
+   "estado": "OPEN",
+   "ehPr": false,
+   "url": "https://github.com/fga-eps-mds/2026-1-AnatoQuizUp-Doc/issues/43",
+   "criadaEm": "2026-05-25T02:13:56Z",
+   "fechadaEm": null,
+   "estimate": null,
+   "labels": [
+    "enhancement"
+   ],
+   "responsaveis": [],
+   "sprints": [],
+   "pipeline": "New Issues"
+  },
+  {
+   "repo": "2026-1-AnatoQuizUp-Doc",
+   "repoGhId": 1200510400,
+   "numero": 42,
+   "titulo": "[BUG] Palavras-chave das Questões Não Ficam Salvas",
+   "estado": "OPEN",
+   "ehPr": false,
+   "url": "https://github.com/fga-eps-mds/2026-1-AnatoQuizUp-Doc/issues/42",
+   "criadaEm": "2026-05-25T02:08:57Z",
+   "fechadaEm": null,
+   "estimate": null,
+   "labels": [
+    "bug"
+   ],
+   "responsaveis": [],
+   "sprints": [],
+   "pipeline": "New Issues"
+  },
+  {
+   "repo": "2026-1-AnatoQuizUp-Doc",
+   "repoGhId": 1200510400,
+   "numero": 41,
+   "titulo": "[BUG] Pesquisa de Questões Bloqueada",
+   "estado": "OPEN",
+   "ehPr": false,
+   "url": "https://github.com/fga-eps-mds/2026-1-AnatoQuizUp-Doc/issues/41",
+   "criadaEm": "2026-05-25T02:06:12Z",
+   "fechadaEm": null,
+   "estimate": null,
+   "labels": [
+    "bug"
+   ],
+   "responsaveis": [],
+   "sprints": [],
+   "pipeline": "New Issues"
+  },
+  {
+   "repo": "2026-1-AnatoQuizUp-Doc",
+   "repoGhId": 1200510400,
+   "numero": 38,
+   "titulo": "[AI] Documentação, débitos e roadmap para continuidade do RAG",
+   "estado": "OPEN",
+   "ehPr": false,
+   "url": "https://github.com/fga-eps-mds/2026-1-AnatoQuizUp-Doc/issues/38",
+   "criadaEm": "2026-05-24T18:48:47Z",
+   "fechadaEm": null,
+   "estimate": null,
+   "labels": [],
+   "responsaveis": [],
+   "sprints": [
+    "Sprint: Jun 21 - Jun 27, 2026"
+   ],
+   "pipeline": "New Issues"
+  },
+  {
+   "repo": "2026-1-AnatoQuizUp-Doc",
+   "repoGhId": 1200510400,
+   "numero": 37,
+   "titulo": "[AI] Integração do pipeline de ingestão contínua ao banco vetorial do RAG",
+   "estado": "OPEN",
+   "ehPr": false,
+   "url": "https://github.com/fga-eps-mds/2026-1-AnatoQuizUp-Doc/issues/37",
+   "criadaEm": "2026-05-24T18:44:47Z",
+   "fechadaEm": null,
+   "estimate": null,
+   "labels": [],
+   "responsaveis": [],
+   "sprints": [
+    "Sprint: Jun 14 - Jun 20, 2026"
+   ],
+   "pipeline": "New Issues"
+  },
+  {
+   "repo": "2026-1-AnatoQuizUp-Doc",
+   "repoGhId": 1200510400,
+   "numero": 36,
+   "titulo": "[AI] Criação dos embeds (vetorização do texto)",
+   "estado": "OPEN",
+   "ehPr": false,
+   "url": "https://github.com/fga-eps-mds/2026-1-AnatoQuizUp-Doc/issues/36",
+   "criadaEm": "2026-05-24T18:38:27Z",
+   "fechadaEm": null,
+   "estimate": null,
+   "labels": [],
+   "responsaveis": [],
+   "sprints": [
+    "Sprint: Jun 7 - Jun 13, 2026"
+   ],
+   "pipeline": "New Issues"
+  },
+  {
+   "repo": "2026-1-AnatoQuizUp-Doc",
+   "repoGhId": 1200510400,
+   "numero": 35,
+   "titulo": "[AI] Limpeza, normalização e chunking das questões; finalização do RAG",
+   "estado": "OPEN",
+   "ehPr": false,
+   "url": "https://github.com/fga-eps-mds/2026-1-AnatoQuizUp-Doc/issues/35",
+   "criadaEm": "2026-05-24T18:35:23Z",
+   "fechadaEm": null,
+   "estimate": 4,
+   "labels": [],
+   "responsaveis": [],
+   "sprints": [
+    "Sprint: May 31 - Jun 6, 2026",
+    "Sprint: Jun 7 - Jun 13, 2026"
+   ],
+   "pipeline": "New Issues"
+  },
+  {
+   "repo": "2026-1-AnatoQuizUp-Web",
+   "repoGhId": 1208045099,
+   "numero": 19,
+   "titulo": "[US] [Frontend] Professor com visão de aluno",
+   "estado": "OPEN",
+   "ehPr": false,
+   "url": "https://github.com/fga-eps-mds/2026-1-AnatoQuizUp-Web/issues/19",
+   "criadaEm": "2026-04-18T12:36:04Z",
+   "fechadaEm": null,
+   "estimate": 2,
+   "labels": [
+    "FEATURE",
+    "US",
+    "frontend"
+   ],
+   "responsaveis": [],
+   "sprints": [
+    "Sprint: May 3 - May 9, 2026"
+   ],
+   "pipeline": "New Issues"
+  },
+  {
+   "repo": "2026-1-AnatoQuizUp",
+   "repoGhId": 0,
+   "numero": 126,
+   "titulo": "Lean Inception Validada",
+   "estado": "OPEN",
+   "ehPr": false,
+   "url": "",
+   "criadaEm": "1970-01-01T00:00:00Z",
+   "fechadaEm": null,
+   "estimate": null,
+   "labels": [],
+   "responsaveis": [],
+   "sprints": [],
+   "pipeline": "New Issues"
+  },
+  {
+   "repo": "2026-1-AnatoQuizUp",
+   "repoGhId": 0,
+   "numero": 127,
+   "titulo": "Repositório Configurado",
+   "estado": "OPEN",
+   "ehPr": false,
+   "url": "",
+   "criadaEm": "1970-01-01T00:00:00Z",
+   "fechadaEm": null,
+   "estimate": null,
+   "labels": [],
+   "responsaveis": [],
+   "sprints": [],
+   "pipeline": "New Issues"
+  },
+  {
+   "repo": "2026-1-AnatoQuizUp",
+   "repoGhId": 0,
+   "numero": 128,
+   "titulo": "Arquitetura Definida",
+   "estado": "OPEN",
+   "ehPr": false,
+   "url": "",
+   "criadaEm": "1970-01-01T00:00:00Z",
+   "fechadaEm": null,
+   "estimate": null,
+   "labels": [],
+   "responsaveis": [],
+   "sprints": [],
+   "pipeline": "New Issues"
+  },
+  {
+   "repo": "2026-1-AnatoQuizUp",
+   "repoGhId": 0,
+   "numero": 129,
+   "titulo": "Protótipo de Alta Fidelidade Concluído",
+   "estado": "OPEN",
+   "ehPr": false,
+   "url": "",
+   "criadaEm": "1970-01-01T00:00:00Z",
+   "fechadaEm": null,
+   "estimate": null,
+   "labels": [],
+   "responsaveis": [],
+   "sprints": [],
+   "pipeline": "New Issues"
+  },
+  {
+   "repo": "2026-1-AnatoQuizUp",
+   "repoGhId": 0,
+   "numero": 130,
+   "titulo": "Backlog Priorizado para MVP",
+   "estado": "OPEN",
+   "ehPr": false,
+   "url": "",
+   "criadaEm": "1970-01-01T00:00:00Z",
+   "fechadaEm": null,
+   "estimate": null,
+   "labels": [],
+   "responsaveis": [],
+   "sprints": [],
+   "pipeline": "New Issues"
+  },
+  {
+   "repo": "2026-1-AnatoQuizUp",
+   "repoGhId": 0,
+   "numero": 133,
+   "titulo": "R1 — Planejamento e Base do Produto",
+   "estado": "OPEN",
+   "ehPr": false,
+   "url": "",
+   "criadaEm": "1970-01-01T00:00:00Z",
+   "fechadaEm": null,
+   "estimate": null,
+   "labels": [],
+   "responsaveis": [],
+   "sprints": [],
+   "pipeline": "New Issues"
+  },
+  {
+   "repo": "2026-1-AnatoQuizUp",
+   "repoGhId": 0,
+   "numero": 135,
+   "titulo": "R2 — Evolução do Produto e Qualidade",
+   "estado": "OPEN",
+   "ehPr": false,
+   "url": "",
+   "criadaEm": "1970-01-01T00:00:00Z",
+   "fechadaEm": null,
+   "estimate": null,
+   "labels": [],
+   "responsaveis": [],
+   "sprints": [],
+   "pipeline": "New Issues"
+  },
+  {
+   "repo": "2026-1-AnatoQuizUp",
+   "repoGhId": 0,
+   "numero": 136,
+   "titulo": "R3 = MVP Final e Encerramento",
+   "estado": "OPEN",
+   "ehPr": false,
+   "url": "",
+   "criadaEm": "1970-01-01T00:00:00Z",
+   "fechadaEm": null,
+   "estimate": null,
+   "labels": [],
+   "responsaveis": [],
+   "sprints": [],
+   "pipeline": "New Issues"
+  },
+  {
+   "repo": "2026-1-AnatoQuizUp",
+   "repoGhId": 0,
+   "numero": 138,
+   "titulo": "Gestão do Conhecimento e Pareamentos",
+   "estado": "OPEN",
+   "ehPr": false,
+   "url": "",
+   "criadaEm": "1970-01-01T00:00:00Z",
+   "fechadaEm": null,
+   "estimate": null,
+   "labels": [],
+   "responsaveis": [],
+   "sprints": [],
+   "pipeline": "New Issues"
+  },
+  {
+   "repo": "2026-1-AnatoQuizUp",
+   "repoGhId": 0,
+   "numero": 151,
+   "titulo": "Epic teste",
+   "estado": "OPEN",
+   "ehPr": false,
+   "url": "",
+   "criadaEm": "1970-01-01T00:00:00Z",
+   "fechadaEm": null,
+   "estimate": null,
+   "labels": [],
+   "responsaveis": [],
+   "sprints": [],
+   "pipeline": "New Issues"
+  },
+  {
+   "repo": "2026-1-AnatoQuizUp",
+   "repoGhId": 0,
+   "numero": 228,
+   "titulo": "US",
+   "estado": "OPEN",
+   "ehPr": false,
+   "url": "",
+   "criadaEm": "1970-01-01T00:00:00Z",
+   "fechadaEm": null,
+   "estimate": null,
+   "labels": [],
+   "responsaveis": [],
+   "sprints": [],
+   "pipeline": "New Issues"
+  },
+  {
+   "repo": "2026-1-AnatoQuizUp-Web",
+   "repoGhId": 1208045099,
+   "numero": 18,
+   "titulo": "[Frontend] Tela de erro 404 e fallback",
+   "estado": "OPEN",
+   "ehPr": false,
+   "url": "https://github.com/fga-eps-mds/2026-1-AnatoQuizUp-Web/issues/18",
+   "criadaEm": "2026-04-18T12:35:43Z",
+   "fechadaEm": null,
+   "estimate": 1,
+   "labels": [
+    "US",
+    "frontend"
+   ],
+   "responsaveis": [
+    "Brenofrds"
+   ],
+   "sprints": [
+    "Sprint: Apr 19 - Apr 25, 2026",
+    "Sprint: Apr 26 - May 2, 2026",
+    "Sprint: May 3 - May 9, 2026"
+   ],
+   "pipeline": "Icebox"
+  },
+  {
+   "repo": "2026-1-AnatoQuizUp-Usuario-Service",
+   "repoGhId": 1208046400,
+   "numero": 58,
+   "titulo": "[US] [API] Desafio Multiplayer Aleatório",
+   "estado": "OPEN",
+   "ehPr": false,
+   "url": "https://github.com/fga-eps-mds/2026-1-AnatoQuizUp-Usuario-Service/issues/58",
+   "criadaEm": "2026-05-03T18:39:01Z",
+   "fechadaEm": null,
+   "estimate": null,
+   "labels": [
+    "US"
+   ],
+   "responsaveis": [],
+   "sprints": [],
+   "pipeline": "Icebox"
+  },
+  {
+   "repo": "2026-1-AnatoQuizUp-Usuario-Service",
+   "repoGhId": 1208046400,
+   "numero": 90,
+   "titulo": "[US] [Web] Sistema de Amigos",
+   "estado": "OPEN",
+   "ehPr": false,
+   "url": "https://github.com/fga-eps-mds/2026-1-AnatoQuizUp-Usuario-Service/issues/90",
+   "criadaEm": "2026-05-03T18:42:36Z",
+   "fechadaEm": null,
+   "estimate": null,
+   "labels": [
+    "US"
+   ],
+   "responsaveis": [],
+   "sprints": [],
+   "pipeline": "Icebox"
+  },
+  {
+   "repo": "2026-1-AnatoQuizUp-Usuario-Service",
+   "repoGhId": 1208046400,
+   "numero": 89,
+   "titulo": "[US] [Web] Desafio Direto (Duelo)",
+   "estado": "OPEN",
+   "ehPr": false,
+   "url": "https://github.com/fga-eps-mds/2026-1-AnatoQuizUp-Usuario-Service/issues/89",
+   "criadaEm": "2026-05-03T18:42:34Z",
+   "fechadaEm": null,
+   "estimate": null,
+   "labels": [
+    "US"
+   ],
+   "responsaveis": [],
+   "sprints": [],
+   "pipeline": "Icebox"
+  },
+  {
+   "repo": "2026-1-AnatoQuizUp-Usuario-Service",
+   "repoGhId": 1208046400,
+   "numero": 54,
+   "titulo": "[US] [API] Mapa de Conquistas e Níveis",
+   "estado": "OPEN",
+   "ehPr": false,
+   "url": "https://github.com/fga-eps-mds/2026-1-AnatoQuizUp-Usuario-Service/issues/54",
+   "criadaEm": "2026-05-03T18:38:55Z",
+   "fechadaEm": null,
+   "estimate": null,
+   "labels": [
+    "US"
+   ],
+   "responsaveis": [],
+   "sprints": [],
+   "pipeline": "Icebox"
+  },
+  {
+   "repo": "2026-1-AnatoQuizUp-Usuario-Service",
+   "repoGhId": 1208046400,
+   "numero": 61,
+   "titulo": "[US] [API] Edição de Perfil",
+   "estado": "OPEN",
+   "ehPr": false,
+   "url": "https://github.com/fga-eps-mds/2026-1-AnatoQuizUp-Usuario-Service/issues/61",
+   "criadaEm": "2026-05-03T18:39:06Z",
+   "fechadaEm": null,
+   "estimate": null,
+   "labels": [
+    "US"
+   ],
+   "responsaveis": [],
+   "sprints": [],
+   "pipeline": "Icebox"
+  },
+  {
+   "repo": "2026-1-AnatoQuizUp-Usuario-Service",
+   "repoGhId": 1208046400,
+   "numero": 57,
+   "titulo": "[US] [API] Customização de Avatar",
+   "estado": "OPEN",
+   "ehPr": false,
+   "url": "https://github.com/fga-eps-mds/2026-1-AnatoQuizUp-Usuario-Service/issues/57",
+   "criadaEm": "2026-05-03T18:39:00Z",
+   "fechadaEm": null,
+   "estimate": null,
+   "labels": [
+    "US"
+   ],
+   "responsaveis": [],
+   "sprints": [],
+   "pipeline": "Icebox"
+  },
+  {
+   "repo": "2026-1-AnatoQuizUp-Usuario-Service",
+   "repoGhId": 1208046400,
+   "numero": 55,
+   "titulo": "[US] [API] Sistema de Moedas",
+   "estado": "OPEN",
+   "ehPr": false,
+   "url": "https://github.com/fga-eps-mds/2026-1-AnatoQuizUp-Usuario-Service/issues/55",
+   "criadaEm": "2026-05-03T18:38:56Z",
+   "fechadaEm": null,
+   "estimate": null,
+   "labels": [
+    "US"
+   ],
+   "responsaveis": [],
+   "sprints": [],
+   "pipeline": "Icebox"
+  },
+  {
+   "repo": "2026-1-AnatoQuizUp-Usuario-Service",
+   "repoGhId": 1208046400,
+   "numero": 59,
+   "titulo": "[US] [API] Salas de Estudo em Grupo",
+   "estado": "OPEN",
+   "ehPr": false,
+   "url": "https://github.com/fga-eps-mds/2026-1-AnatoQuizUp-Usuario-Service/issues/59",
+   "criadaEm": "2026-05-03T18:39:03Z",
+   "fechadaEm": null,
+   "estimate": null,
+   "labels": [
+    "US"
+   ],
+   "responsaveis": [],
+   "sprints": [],
+   "pipeline": "Icebox"
+  },
+  {
+   "repo": "2026-1-AnatoQuizUp-Usuario-Service",
+   "repoGhId": 1208046400,
+   "numero": 92,
+   "titulo": "[US] [Web] Relatório de Engajamento",
+   "estado": "OPEN",
+   "ehPr": false,
+   "url": "https://github.com/fga-eps-mds/2026-1-AnatoQuizUp-Usuario-Service/issues/92",
+   "criadaEm": "2026-05-03T18:42:38Z",
+   "fechadaEm": null,
+   "estimate": null,
+   "labels": [
+    "US"
+   ],
+   "responsaveis": [],
+   "sprints": [],
+   "pipeline": "Icebox"
+  },
+  {
+   "repo": "2026-1-AnatoQuizUp-Usuario-Service",
+   "repoGhId": 1208046400,
+   "numero": 87,
+   "titulo": "[US] [Web] Ajuste Dinâmico de Dificuldade",
+   "estado": "OPEN",
+   "ehPr": false,
+   "url": "https://github.com/fga-eps-mds/2026-1-AnatoQuizUp-Usuario-Service/issues/87",
+   "criadaEm": "2026-05-03T18:42:31Z",
+   "fechadaEm": null,
+   "estimate": null,
+   "labels": [
+    "US"
+   ],
+   "responsaveis": [],
+   "sprints": [],
+   "pipeline": "Icebox"
+  },
+  {
+   "repo": "2026-1-AnatoQuizUp-Usuario-Service",
+   "repoGhId": 1208046400,
+   "numero": 85,
+   "titulo": "[US] [Web] Exclusão de Conta (LGPD)",
+   "estado": "OPEN",
+   "ehPr": false,
+   "url": "https://github.com/fga-eps-mds/2026-1-AnatoQuizUp-Usuario-Service/issues/85",
+   "criadaEm": "2026-05-03T18:42:28Z",
+   "fechadaEm": null,
+   "estimate": null,
+   "labels": [
+    "US"
+   ],
+   "responsaveis": [],
+   "sprints": [],
+   "pipeline": "Icebox"
+  },
+  {
+   "repo": "2026-1-AnatoQuizUp-Usuario-Service",
+   "repoGhId": 1208046400,
+   "numero": 78,
+   "titulo": "[US] [Web] Ranking de Desempenho",
+   "estado": "OPEN",
+   "ehPr": false,
+   "url": "https://github.com/fga-eps-mds/2026-1-AnatoQuizUp-Usuario-Service/issues/78",
+   "criadaEm": "2026-05-03T18:42:16Z",
+   "fechadaEm": null,
+   "estimate": null,
+   "labels": [
+    "US"
+   ],
+   "responsaveis": [],
+   "sprints": [],
+   "pipeline": "Icebox"
+  },
+  {
+   "repo": "2026-1-AnatoQuizUp-Usuario-Service",
+   "repoGhId": 1208046400,
+   "numero": 75,
+   "titulo": "[US] [Web] Mapa de Lacunas",
+   "estado": "OPEN",
+   "ehPr": false,
+   "url": "https://github.com/fga-eps-mds/2026-1-AnatoQuizUp-Usuario-Service/issues/75",
+   "criadaEm": "2026-05-03T18:42:11Z",
+   "fechadaEm": null,
+   "estimate": null,
+   "labels": [
+    "US"
+   ],
+   "responsaveis": [],
+   "sprints": [],
+   "pipeline": "Icebox"
+  },
+  {
+   "repo": "2026-1-AnatoQuizUp-Usuario-Service",
+   "repoGhId": 1208046400,
+   "numero": 73,
+   "titulo": "[US] [Web] Curadoria de Especialista",
+   "estado": "OPEN",
+   "ehPr": false,
+   "url": "https://github.com/fga-eps-mds/2026-1-AnatoQuizUp-Usuario-Service/issues/73",
+   "criadaEm": "2026-05-03T18:42:08Z",
+   "fechadaEm": null,
+   "estimate": null,
+   "labels": [
+    "US"
+   ],
+   "responsaveis": [],
+   "sprints": [],
+   "pipeline": "Icebox"
+  },
+  {
+   "repo": "2026-1-AnatoQuizUp-Usuario-Service",
+   "repoGhId": 1208046400,
+   "numero": 68,
+   "titulo": "[US] [API] Relatório de Engajamento",
+   "estado": "OPEN",
+   "ehPr": false,
+   "url": "https://github.com/fga-eps-mds/2026-1-AnatoQuizUp-Usuario-Service/issues/68",
+   "criadaEm": "2026-05-03T18:39:17Z",
+   "fechadaEm": null,
+   "estimate": null,
+   "labels": [
+    "US"
+   ],
+   "responsaveis": [],
+   "sprints": [],
+   "pipeline": "Icebox"
+  },
+  {
+   "repo": "2026-1-AnatoQuizUp-Usuario-Service",
+   "repoGhId": 1208046400,
+   "numero": 62,
+   "titulo": "[US] [API] Exclusão de Conta (LGPD)",
+   "estado": "OPEN",
+   "ehPr": false,
+   "url": "https://github.com/fga-eps-mds/2026-1-AnatoQuizUp-Usuario-Service/issues/62",
+   "criadaEm": "2026-05-03T18:39:08Z",
+   "fechadaEm": null,
+   "estimate": null,
+   "labels": [
+    "US"
+   ],
+   "responsaveis": [],
+   "sprints": [],
+   "pipeline": "Icebox"
+  },
+  {
+   "repo": "2026-1-AnatoQuizUp-Usuario-Service",
+   "repoGhId": 1208046400,
+   "numero": 64,
+   "titulo": "[US] [API] Ajuste Dinâmico de Dificuldade",
+   "estado": "OPEN",
+   "ehPr": false,
+   "url": "https://github.com/fga-eps-mds/2026-1-AnatoQuizUp-Usuario-Service/issues/64",
+   "criadaEm": "2026-05-03T18:39:10Z",
+   "fechadaEm": null,
+   "estimate": null,
+   "labels": [
+    "US"
+   ],
+   "responsaveis": [],
+   "sprints": [],
+   "pipeline": "Icebox"
+  },
+  {
+   "repo": "2026-1-AnatoQuizUp-Usuario-Service",
+   "repoGhId": 1208046400,
+   "numero": 86,
+   "titulo": "[US] [Web] Reporte de Erro de IA",
+   "estado": "OPEN",
+   "ehPr": false,
+   "url": "https://github.com/fga-eps-mds/2026-1-AnatoQuizUp-Usuario-Service/issues/86",
+   "criadaEm": "2026-05-03T18:42:30Z",
+   "fechadaEm": null,
+   "estimate": null,
+   "labels": [
+    "US"
+   ],
+   "responsaveis": [],
+   "sprints": [],
+   "pipeline": "Icebox"
+  },
+  {
+   "repo": "2026-1-AnatoQuizUp-Usuario-Service",
+   "repoGhId": 1208046400,
+   "numero": 53,
+   "titulo": "[US] [API] Chatbot Tutorial Interativo",
+   "estado": "OPEN",
+   "ehPr": false,
+   "url": "https://github.com/fga-eps-mds/2026-1-AnatoQuizUp-Usuario-Service/issues/53",
+   "criadaEm": "2026-05-03T18:38:53Z",
+   "fechadaEm": null,
+   "estimate": null,
+   "labels": [
+    "US"
+   ],
+   "responsaveis": [],
+   "sprints": [],
+   "pipeline": "Icebox"
+  },
+  {
+   "repo": "2026-1-AnatoQuizUp-Usuario-Service",
+   "repoGhId": 1208046400,
+   "numero": 74,
+   "titulo": "[US] [Web] Chatbot Tutorial Interativo",
+   "estado": "OPEN",
+   "ehPr": false,
+   "url": "https://github.com/fga-eps-mds/2026-1-AnatoQuizUp-Usuario-Service/issues/74",
+   "criadaEm": "2026-05-03T18:42:10Z",
+   "fechadaEm": null,
+   "estimate": null,
+   "labels": [
+    "US"
+   ],
+   "responsaveis": [],
+   "sprints": [],
+   "pipeline": "Icebox"
+  },
+  {
+   "repo": "2026-1-AnatoQuizUp-Usuario-Service",
+   "repoGhId": 1208046400,
+   "numero": 51,
+   "titulo": "[US] [API] Geração Dinâmica de Questões",
+   "estado": "OPEN",
+   "ehPr": false,
+   "url": "https://github.com/fga-eps-mds/2026-1-AnatoQuizUp-Usuario-Service/issues/51",
+   "criadaEm": "2026-05-03T18:38:50Z",
+   "fechadaEm": null,
+   "estimate": null,
+   "labels": [
+    "US"
+   ],
+   "responsaveis": [],
+   "sprints": [],
+   "pipeline": "Icebox"
+  },
+  {
+   "repo": "2026-1-AnatoQuizUp-Usuario-Service",
+   "repoGhId": 1208046400,
+   "numero": 71,
+   "titulo": "[US] [Web] Geração Dinâmica de Questões",
+   "estado": "OPEN",
+   "ehPr": false,
+   "url": "https://github.com/fga-eps-mds/2026-1-AnatoQuizUp-Usuario-Service/issues/71",
+   "criadaEm": "2026-05-03T18:42:05Z",
+   "fechadaEm": null,
+   "estimate": null,
+   "labels": [
+    "US"
+   ],
+   "responsaveis": [],
+   "sprints": [],
+   "pipeline": "Icebox"
+  },
+  {
+   "repo": "2026-1-AnatoQuizUp-Usuario-Service",
+   "repoGhId": 1208046400,
+   "numero": 56,
+   "titulo": "[US] Visualização de Rankings (Geral por Temas e por Turmas)",
+   "estado": "OPEN",
+   "ehPr": false,
+   "url": "https://github.com/fga-eps-mds/2026-1-AnatoQuizUp-Usuario-Service/issues/56",
+   "criadaEm": "2026-05-03T18:38:58Z",
+   "fechadaEm": null,
+   "estimate": null,
+   "labels": [
+    "US"
+   ],
+   "responsaveis": [
+    "EhOMiguel",
+    "GenilsonJrs"
+   ],
+   "sprints": [],
+   "pipeline": "Product Backlog"
+  },
+  {
+   "repo": "2026-1-AnatoQuizUp-Doc",
+   "repoGhId": 1200510400,
+   "numero": 40,
+   "titulo": "[BUG] Cadastro Aluno - Campo \"nome\" aceitando caracteres especiais",
+   "estado": "OPEN",
+   "ehPr": false,
+   "url": "https://github.com/fga-eps-mds/2026-1-AnatoQuizUp-Doc/issues/40",
+   "criadaEm": "2026-05-24T23:29:27Z",
+   "fechadaEm": null,
+   "estimate": 1,
+   "labels": [
+    "bug"
+   ],
+   "responsaveis": [
+    "EhOBruno"
+   ],
+   "sprints": [],
+   "pipeline": "Product Backlog"
+  },
+  {
+   "repo": "2026-1-AnatoQuizUp-Doc",
+   "repoGhId": 1200510400,
+   "numero": 39,
+   "titulo": "[BUG] Cadastro Professor - Campo \"nome\" aceitando caracteres especiais",
+   "estado": "OPEN",
+   "ehPr": false,
+   "url": "https://github.com/fga-eps-mds/2026-1-AnatoQuizUp-Doc/issues/39",
+   "criadaEm": "2026-05-24T23:29:05Z",
+   "fechadaEm": null,
+   "estimate": 1,
+   "labels": [
+    "bug"
+   ],
+   "responsaveis": [
+    "EhOBruno"
+   ],
+   "sprints": [],
+   "pipeline": "Product Backlog"
+  },
+  {
+   "repo": "2026-1-AnatoQuizUp-Usuario-Service",
+   "repoGhId": 1208046400,
+   "numero": 88,
+   "titulo": "[US] Loja Virtual",
+   "estado": "OPEN",
+   "ehPr": false,
+   "url": "https://github.com/fga-eps-mds/2026-1-AnatoQuizUp-Usuario-Service/issues/88",
+   "criadaEm": "2026-05-03T18:42:32Z",
+   "fechadaEm": null,
+   "estimate": null,
+   "labels": [
+    "US"
+   ],
+   "responsaveis": [],
+   "sprints": [],
+   "pipeline": "Product Backlog"
+  },
+  {
+   "repo": "2026-1-AnatoQuizUp-Usuario-Service",
+   "repoGhId": 1208046400,
+   "numero": 79,
+   "titulo": " [US] Personalização e Inventário do Avatar",
+   "estado": "OPEN",
+   "ehPr": false,
+   "url": "https://github.com/fga-eps-mds/2026-1-AnatoQuizUp-Usuario-Service/issues/79",
+   "criadaEm": "2026-05-03T18:42:18Z",
+   "fechadaEm": null,
+   "estimate": null,
+   "labels": [
+    "US"
+   ],
+   "responsaveis": [],
+   "sprints": [],
+   "pipeline": "Product Backlog"
+  },
+  {
+   "repo": "2026-1-AnatoQuizUp-Usuario-Service",
+   "repoGhId": 1208046400,
+   "numero": 69,
+   "titulo": "[US] Dashboard de Estatísticas Gerais da Plataforma (Admin)",
+   "estado": "OPEN",
+   "ehPr": false,
+   "url": "https://github.com/fga-eps-mds/2026-1-AnatoQuizUp-Usuario-Service/issues/69",
+   "criadaEm": "2026-05-03T18:39:18Z",
+   "fechadaEm": null,
+   "estimate": null,
+   "labels": [
+    "US"
+   ],
+   "responsaveis": [],
+   "sprints": [],
+   "pipeline": "Product Backlog"
+  },
+  {
+   "repo": "2026-1-AnatoQuizUp-Usuario-Service",
+   "repoGhId": 1208046400,
+   "numero": 95,
+   "titulo": "[US] Envio de Reporte de Erros e Sugestões (Feedback Geral)",
+   "estado": "OPEN",
+   "ehPr": false,
+   "url": "https://github.com/fga-eps-mds/2026-1-AnatoQuizUp-Usuario-Service/issues/95",
+   "criadaEm": "2026-05-03T18:42:43Z",
+   "fechadaEm": null,
+   "estimate": null,
+   "labels": [
+    "US"
+   ],
+   "responsaveis": [],
+   "sprints": [],
+   "pipeline": "Product Backlog"
+  },
+  {
+   "repo": "2026-1-AnatoQuizUp-Usuario-Service",
+   "repoGhId": 1208046400,
+   "numero": 72,
+   "titulo": " [US] Gestão e Visualização de Feedbacks (Painel do Admin)",
+   "estado": "OPEN",
+   "ehPr": false,
+   "url": "https://github.com/fga-eps-mds/2026-1-AnatoQuizUp-Usuario-Service/issues/72",
+   "criadaEm": "2026-05-03T18:42:07Z",
+   "fechadaEm": null,
+   "estimate": null,
+   "labels": [
+    "US"
+   ],
+   "responsaveis": [],
+   "sprints": [],
+   "pipeline": "Product Backlog"
+  },
+  {
+   "repo": "2026-1-AnatoQuizUp-Usuario-Service",
+   "repoGhId": 1208046400,
+   "numero": 81,
+   "titulo": "[US] Grupos de Estudo com Amigos",
+   "estado": "OPEN",
+   "ehPr": false,
+   "url": "https://github.com/fga-eps-mds/2026-1-AnatoQuizUp-Usuario-Service/issues/81",
+   "criadaEm": "2026-05-03T18:42:21Z",
+   "fechadaEm": null,
+   "estimate": null,
+   "labels": [
+    "US"
+   ],
+   "responsaveis": [],
+   "sprints": [],
+   "pipeline": "Product Backlog"
+  },
+  {
+   "repo": "2026-1-AnatoQuizUp-Usuario-Service",
+   "repoGhId": 1208046400,
+   "numero": 80,
+   "titulo": "[US] Duelo Síncrono de Questões em Tempo Real",
+   "estado": "OPEN",
+   "ehPr": false,
+   "url": "https://github.com/fga-eps-mds/2026-1-AnatoQuizUp-Usuario-Service/issues/80",
+   "criadaEm": "2026-05-03T18:42:19Z",
+   "fechadaEm": null,
+   "estimate": null,
+   "labels": [
+    "US"
+   ],
+   "responsaveis": [],
+   "sprints": [],
+   "pipeline": "Product Backlog"
+  },
+  {
+   "repo": "2026-1-AnatoQuizUp-Usuario-Service",
+   "repoGhId": 1208046400,
+   "numero": 84,
+   "titulo": "[US] Personalização e Decoração do Quarto (Perfil)",
+   "estado": "OPEN",
+   "ehPr": false,
+   "url": "https://github.com/fga-eps-mds/2026-1-AnatoQuizUp-Usuario-Service/issues/84",
+   "criadaEm": "2026-05-03T18:42:27Z",
+   "fechadaEm": null,
+   "estimate": null,
+   "labels": [
+    "US"
+   ],
+   "responsaveis": [],
+   "sprints": [],
+   "pipeline": "Product Backlog"
+  },
+  {
+   "repo": "2026-1-AnatoQuizUp-Usuario-Service",
+   "repoGhId": 1208046400,
+   "numero": 65,
+   "titulo": " [US] Duelo de Questões entre Amigos (Modo Assíncrono)",
+   "estado": "OPEN",
+   "ehPr": false,
+   "url": "https://github.com/fga-eps-mds/2026-1-AnatoQuizUp-Usuario-Service/issues/65",
+   "criadaEm": "2026-05-03T18:39:12Z",
+   "fechadaEm": null,
+   "estimate": null,
+   "labels": [
+    "US"
+   ],
+   "responsaveis": [],
+   "sprints": [],
+   "pipeline": "Product Backlog"
+  },
+  {
+   "repo": "2026-1-AnatoQuizUp-Usuario-Service",
+   "repoGhId": 1208046400,
+   "numero": 96,
+   "titulo": "[US] Envio de Feedback Personalizado ao Aluno",
+   "estado": "OPEN",
+   "ehPr": false,
+   "url": "https://github.com/fga-eps-mds/2026-1-AnatoQuizUp-Usuario-Service/issues/96",
+   "criadaEm": "2026-05-03T18:42:45Z",
+   "fechadaEm": null,
+   "estimate": null,
+   "labels": [
+    "US"
+   ],
+   "responsaveis": [],
+   "sprints": [],
+   "pipeline": "Product Backlog"
+  },
+  {
+   "repo": "2026-1-AnatoQuizUp-Usuario-Service",
+   "repoGhId": 1208046400,
+   "numero": 91,
+   "titulo": "[US] Gerenciamento e Configuração dos Modelos de IA (Admin)",
+   "estado": "OPEN",
+   "ehPr": false,
+   "url": "https://github.com/fga-eps-mds/2026-1-AnatoQuizUp-Usuario-Service/issues/91",
+   "criadaEm": "2026-05-03T18:42:37Z",
+   "fechadaEm": null,
+   "estimate": null,
+   "labels": [
+    "US"
+   ],
+   "responsaveis": [],
+   "sprints": [],
+   "pipeline": "Product Backlog"
+  },
+  {
+   "repo": "2026-1-AnatoQuizUp-Usuario-Service",
+   "repoGhId": 1208046400,
+   "numero": 83,
+   "titulo": "[US] Curadoria de Dados e Refinamento do Modelo de IA (Admin)",
+   "estado": "OPEN",
+   "ehPr": false,
+   "url": "https://github.com/fga-eps-mds/2026-1-AnatoQuizUp-Usuario-Service/issues/83",
+   "criadaEm": "2026-05-03T18:42:25Z",
+   "fechadaEm": null,
+   "estimate": null,
+   "labels": [
+    "US"
+   ],
+   "responsaveis": [],
+   "sprints": [],
+   "pipeline": "Product Backlog"
+  },
+  {
+   "repo": "2026-1-AnatoQuizUp-Usuario-Service",
+   "repoGhId": 1208046400,
+   "numero": 63,
+   "titulo": "[US] Chatbot Tutor Assistente e Coleta de Feedback (Aluno)",
+   "estado": "OPEN",
+   "ehPr": false,
+   "url": "https://github.com/fga-eps-mds/2026-1-AnatoQuizUp-Usuario-Service/issues/63",
+   "criadaEm": "2026-05-03T18:39:09Z",
+   "fechadaEm": null,
+   "estimate": null,
+   "labels": [
+    "US"
+   ],
+   "responsaveis": [],
+   "sprints": [],
+   "pipeline": "Product Backlog"
+  },
+  {
+   "repo": "2026-1-AnatoQuizUp-Usuario-Service",
+   "repoGhId": 1208046400,
+   "numero": 52,
+   "titulo": "[US] Criação de Imagens por IA",
+   "estado": "OPEN",
+   "ehPr": false,
+   "url": "https://github.com/fga-eps-mds/2026-1-AnatoQuizUp-Usuario-Service/issues/52",
+   "criadaEm": "2026-05-03T18:38:51Z",
+   "fechadaEm": null,
+   "estimate": null,
+   "labels": [
+    "US"
+   ],
+   "responsaveis": [],
+   "sprints": [],
+   "pipeline": "Product Backlog"
+  },
+  {
+   "repo": "2026-1-AnatoQuizUp-Doc",
+   "repoGhId": 1200510400,
+   "numero": 26,
+   "titulo": "[Protótipo] Listagem e Detalhes de Turmas (Aluno)",
+   "estado": "OPEN",
+   "ehPr": false,
+   "url": "https://github.com/fga-eps-mds/2026-1-AnatoQuizUp-Doc/issues/26",
+   "criadaEm": "2026-05-06T14:57:43Z",
+   "fechadaEm": null,
+   "estimate": null,
+   "labels": [],
+   "responsaveis": [],
+   "sprints": [
+    "Sprint: May 10 - May 16, 2026",
+    "Sprint: May 17 - May 23, 2026",
+    "Sprint: May 24 - May 30, 2026",
+    "Sprint: May 31 - Jun 6, 2026",
+    "Sprint: Jun 7 - Jun 13, 2026"
+   ],
+   "pipeline": "Product Backlog"
+  },
+  {
+   "repo": "2026-1-AnatoQuizUp-Web",
+   "repoGhId": 1208045099,
+   "numero": 45,
+   "titulo": "[Web] Listagem de Turmas do Aluno",
+   "estado": "OPEN",
+   "ehPr": false,
+   "url": "https://github.com/fga-eps-mds/2026-1-AnatoQuizUp-Web/issues/45",
+   "criadaEm": "2026-05-06T15:00:11Z",
+   "fechadaEm": null,
+   "estimate": null,
+   "labels": [
+    "frontend"
+   ],
+   "responsaveis": [],
+   "sprints": [
+    "Sprint: May 10 - May 16, 2026",
+    "Sprint: May 17 - May 23, 2026",
+    "Sprint: May 24 - May 30, 2026",
+    "Sprint: May 31 - Jun 6, 2026",
+    "Sprint: Jun 7 - Jun 13, 2026"
+   ],
+   "pipeline": "Product Backlog"
+  },
+  {
+   "repo": "2026-1-AnatoQuizUp-Usuario-Service",
+   "repoGhId": 1208046400,
+   "numero": 105,
+   "titulo": "[IA] Construção e Treinamento do Modelo Generativo",
+   "estado": "OPEN",
+   "ehPr": false,
+   "url": "https://github.com/fga-eps-mds/2026-1-AnatoQuizUp-Usuario-Service/issues/105",
+   "criadaEm": "2026-05-06T15:23:59Z",
+   "fechadaEm": null,
+   "estimate": null,
+   "labels": [
+    "backend"
+   ],
+   "responsaveis": [],
+   "sprints": [],
+   "pipeline": "Product Backlog"
+  },
+  {
+   "repo": "2026-1-AnatoQuizUp-Web",
+   "repoGhId": 1208045099,
+   "numero": 46,
+   "titulo": "[Web] Detalhes da Turma (Aluno)",
+   "estado": "OPEN",
+   "ehPr": false,
+   "url": "https://github.com/fga-eps-mds/2026-1-AnatoQuizUp-Web/issues/46",
+   "criadaEm": "2026-05-06T15:01:22Z",
+   "fechadaEm": null,
+   "estimate": null,
+   "labels": [
+    "frontend"
+   ],
+   "responsaveis": [],
+   "sprints": [
+    "Sprint: May 10 - May 16, 2026",
+    "Sprint: May 17 - May 23, 2026",
+    "Sprint: May 24 - May 30, 2026",
+    "Sprint: May 31 - Jun 6, 2026",
+    "Sprint: Jun 7 - Jun 13, 2026"
+   ],
+   "pipeline": "Product Backlog"
+  },
+  {
+   "repo": "2026-1-AnatoQuizUp-Usuario-Service",
+   "repoGhId": 1208046400,
+   "numero": 102,
+   "titulo": "[Backend] API Dashboard de Evolução (Aluno)",
+   "estado": "OPEN",
+   "ehPr": false,
+   "url": "https://github.com/fga-eps-mds/2026-1-AnatoQuizUp-Usuario-Service/issues/102",
+   "criadaEm": "2026-05-06T13:14:31Z",
+   "fechadaEm": null,
+   "estimate": null,
+   "labels": [
+    "backend"
+   ],
+   "responsaveis": [],
+   "sprints": [
+    "Sprint: May 10 - May 16, 2026",
+    "Sprint: May 17 - May 23, 2026",
+    "Sprint: May 24 - May 30, 2026",
+    "Sprint: May 31 - Jun 6, 2026",
+    "Sprint: Jun 7 - Jun 13, 2026"
+   ],
+   "pipeline": "Product Backlog"
+  },
+  {
+   "repo": "2026-1-AnatoQuizUp-Usuario-Service",
+   "repoGhId": 1208046400,
+   "numero": 99,
+   "titulo": "[Web] Dashboard de Evolução (Aluno)",
+   "estado": "OPEN",
+   "ehPr": false,
+   "url": "https://github.com/fga-eps-mds/2026-1-AnatoQuizUp-Usuario-Service/issues/99",
+   "criadaEm": "2026-05-04T19:19:59Z",
+   "fechadaEm": null,
+   "estimate": null,
+   "labels": [
+    "frontend"
+   ],
+   "responsaveis": [],
+   "sprints": [
+    "Sprint: May 10 - May 16, 2026",
+    "Sprint: May 17 - May 23, 2026",
+    "Sprint: May 24 - May 30, 2026",
+    "Sprint: May 31 - Jun 6, 2026",
+    "Sprint: Jun 7 - Jun 13, 2026"
+   ],
+   "pipeline": "Product Backlog"
+  },
+  {
+   "repo": "2026-1-AnatoQuizUp-Usuario-Service",
+   "repoGhId": 1208046400,
+   "numero": 109,
+   "titulo": "[Back-end] Gerenciamento de Listas",
+   "estado": "OPEN",
+   "ehPr": false,
+   "url": "https://github.com/fga-eps-mds/2026-1-AnatoQuizUp-Usuario-Service/issues/109",
+   "criadaEm": "2026-05-08T19:45:21Z",
+   "fechadaEm": null,
+   "estimate": null,
+   "labels": [
+    "backend"
+   ],
+   "responsaveis": [],
+   "sprints": [],
+   "pipeline": "Product Backlog"
+  },
+  {
+   "repo": "2026-1-AnatoQuizUp-Usuario-Service",
+   "repoGhId": 1208046400,
+   "numero": 60,
+   "titulo": "[Protótipo] Protótipo do Dashboard de Evolução (Aluno)",
+   "estado": "OPEN",
+   "ehPr": false,
+   "url": "https://github.com/fga-eps-mds/2026-1-AnatoQuizUp-Usuario-Service/issues/60",
+   "criadaEm": "2026-05-03T18:39:04Z",
+   "fechadaEm": null,
+   "estimate": null,
+   "labels": [],
+   "responsaveis": [],
+   "sprints": [
+    "Sprint: May 10 - May 16, 2026",
+    "Sprint: May 17 - May 23, 2026",
+    "Sprint: May 24 - May 30, 2026",
+    "Sprint: May 31 - Jun 6, 2026",
+    "Sprint: Jun 7 - Jun 13, 2026"
+   ],
+   "pipeline": "Product Backlog"
+  },
+  {
+   "repo": "2026-1-AnatoQuizUp-Usuario-Service",
+   "repoGhId": 1208046400,
+   "numero": 76,
+   "titulo": "[US] Sistema de Conquistas e Marcos (Badges e Troféus)",
+   "estado": "OPEN",
+   "ehPr": false,
+   "url": "https://github.com/fga-eps-mds/2026-1-AnatoQuizUp-Usuario-Service/issues/76",
+   "criadaEm": "2026-05-03T18:42:13Z",
+   "fechadaEm": null,
+   "estimate": 3,
+   "labels": [
+    "US"
+   ],
+   "responsaveis": [
+    "trindadea",
+    "Joa0V"
+   ],
+   "sprints": [
+    "Sprint: Jun 7 - Jun 13, 2026"
+   ],
+   "pipeline": "Sprint Backlog"
+  },
+  {
+   "repo": "2026-1-AnatoQuizUp-Doc",
+   "repoGhId": 1200510400,
+   "numero": 46,
+   "titulo": "[Task] Alteração Dos Campos das Questões",
+   "estado": "OPEN",
+   "ehPr": false,
+   "url": "https://github.com/fga-eps-mds/2026-1-AnatoQuizUp-Doc/issues/46",
+   "criadaEm": "2026-06-08T14:19:37Z",
+   "fechadaEm": null,
+   "estimate": 2,
+   "labels": [
+    "enhancement"
+   ],
+   "responsaveis": [
+    "pkbceira03",
+    "Brenofrds"
+   ],
+   "sprints": [
+    "Sprint: Jun 7 - Jun 13, 2026"
+   ],
+   "pipeline": "Sprint Backlog"
+  },
+  {
+   "repo": "2026-1-AnatoQuizUp-Doc",
+   "repoGhId": 1200510400,
+   "numero": 34,
+   "titulo": "[US] Lista de Questões (Aluno)",
+   "estado": "OPEN",
+   "ehPr": false,
+   "url": "https://github.com/fga-eps-mds/2026-1-AnatoQuizUp-Doc/issues/34",
+   "criadaEm": "2026-05-24T14:32:17Z",
+   "fechadaEm": null,
+   "estimate": 3,
+   "labels": [
+    "US"
+   ],
+   "responsaveis": [
+    "pkbceira03",
+    "Brenofrds"
+   ],
+   "sprints": [
+    "Sprint: May 31 - Jun 6, 2026",
+    "Sprint: Jun 7 - Jun 13, 2026"
+   ],
+   "pipeline": "Review/QA",
+   "possivelDuplicata": true
+  },
+  {
+   "repo": "2026-1-AnatoQuizUp-AI",
+   "repoGhId": 1208047960,
+   "numero": 1,
+   "titulo": "[AI] Definir arquitetura inicial do RAG, ingestão de PDFs e estruturação do dataset",
+   "estado": "OPEN",
+   "ehPr": false,
+   "url": "https://github.com/fga-eps-mds/2026-1-AnatoQuizUp-AI/issues/1",
+   "criadaEm": "2026-05-24T18:29:50Z",
+   "fechadaEm": null,
+   "estimate": 3,
+   "labels": [],
+   "responsaveis": [
+    "marialuisa214",
+    "EhOBruno"
+   ],
+   "sprints": [
+    "Sprint: May 24 - May 30, 2026",
+    "Sprint: May 31 - Jun 6, 2026",
+    "Sprint: Jun 7 - Jun 13, 2026"
+   ],
+   "pipeline": "Review/QA"
+  },
+  {
+   "repo": "2026-1-AnatoQuizUp-Doc",
+   "repoGhId": 1200510400,
+   "numero": 20,
+   "titulo": "docs(produto): adiciona guia de identidade visual e atualiza yml",
+   "estado": "OPEN",
+   "ehPr": true,
+   "url": "https://github.com/fga-eps-mds/2026-1-AnatoQuizUp-Doc/pull/20",
+   "criadaEm": "2026-05-04T15:55:59Z",
+   "fechadaEm": null,
+   "estimate": null,
+   "labels": [],
+   "responsaveis": [
+    "marialuisa214",
+    "GenilsonJrs"
+   ],
+   "sprints": [
+    "Sprint: May 3 - May 9, 2026",
+    "Sprint: May 10 - May 16, 2026",
+    "Sprint: May 17 - May 23, 2026",
+    "Sprint: May 24 - May 30, 2026",
+    "Sprint: May 31 - Jun 6, 2026",
+    "Sprint: Jun 7 - Jun 13, 2026"
+   ],
+   "pipeline": "Review/QA"
+  },
+  {
+   "repo": "2026-1-AnatoQuizUp-Doc",
+   "repoGhId": 1200510400,
+   "numero": 27,
+   "titulo": "[US] Geração de Questões com Inteligência Artificial",
+   "estado": "OPEN",
+   "ehPr": false,
+   "url": "https://github.com/fga-eps-mds/2026-1-AnatoQuizUp-Doc/issues/27",
+   "criadaEm": "2026-05-06T15:20:17Z",
+   "fechadaEm": null,
+   "estimate": null,
+   "labels": [
+    "US"
+   ],
+   "responsaveis": [
+    "marialuisa214",
+    "EhOBruno"
+   ],
+   "sprints": [
+    "Sprint: May 10 - May 16, 2026",
+    "Sprint: May 17 - May 23, 2026",
+    "Sprint: May 24 - May 30, 2026",
+    "Sprint: May 31 - Jun 6, 2026",
+    "Sprint: Jun 7 - Jun 13, 2026"
+   ],
+   "pipeline": "Rejected"
+  }
+ ],
+ "patchEstimativas": {
+  "aplicadoEm": "2026-06-15T01:08:27.975Z",
+  "motivo": "Débito de registro: cards entregues sem estimate, pontuados pela equipe em 14/06/2026. Valores também gravados no ZenHub.",
+  "cards": {
+   "66": 5,
+   "67": 5,
+   "70": 3,
+   "77": 5,
+   "82": 5,
+   "93": 5,
+   "94": 5,
+   "103": 3
+  }
+ },
+ "patchSprints": {
+  "aplicadoEm": "2026-06-15T01:35:57.583Z",
+  "criterio": "data de fechamento; exclui repo de planejamento e bulk 12/06",
+  "total": 4
+ },
+ "patchResponsaveis": {
+  "aplicadoEm": "2026-06-15T01:56:31.797Z",
+  "criterio": "donos decididos pela equipe em 14/06/2026",
+  "total": 16
+ },
+ "patchColetivas": {
+  "aplicadoEm": "2026-06-15T02:02:57.428Z",
+  "integrantes": [
+   "EhOMiguel",
+   "trindadea",
+   "GenilsonJrs",
+   "Brenofrds",
+   "EhOBruno",
+   "Joa0V",
+   "marialuisa214",
+   "pkbceira03"
+  ],
+  "total": 33,
+  "motivo": "cerimônias coletivas da R1 (Lean Inception, arquitetura, setup) — decisão do time 14/06"
+ },
+ "patchEstimativas23": {
+  "aplicadoEm": "2026-06-15T02:23:47.513Z",
+  "total": 23,
+  "motivo": "2ª leva de estimativas (código/doc) decidida pelo time 14/06"
+ }
+}

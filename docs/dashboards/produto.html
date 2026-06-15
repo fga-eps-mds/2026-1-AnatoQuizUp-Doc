@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dashboard Eixo Produto — AnatoQuizUp</title>
+<link rel="stylesheet" href="dashboards.css">
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.7/dist/chart.umd.min.js"></script>
+<script src="dados-consolidados.js"></script>
+</head>
+<body>
+<main>
+  <h1>Dashboard eixo Produto — modelo Q-Rapids com métricas SonarCloud e GitHub</h1>
+  <p class="subtitulo">Indicadores estratégicos: Qualidade do Produto, Bloqueios e Prontidão. Fatores e métricas avaliadas como densidades normalizadas [0–1] com semáforo verde/amarelo/vermelho, conforme o <em>Plano de Qualidade</em> do AnatoQuizUp.</p>
+  <nav class="abas">
+    <a href="produto.html" class="ativa">Produto</a>
+    <a href="processo.html">Processo</a>
+    <a href="projeto.html">Projeto</a>
+    <a href="canvas.html">Canvas</a>
+  </nav>
+
+  <div class="faixa-titulo">
+    <h2>Eixo Produto — qualidade interna (SonarCloud / Q-Rapids)</h2>
+    <span class="meta" id="meta-produto"></span>
+  </div>
+
+  <div class="cartoes" id="indicadores-estrategicos"></div>
+
+  <div class="legenda">
+    <span class="item verde">verde ≥ 0,75 (aprovado)</span>
+    <span class="item amarelo">amarelo 0,50–0,74 (atenção)</span>
+    <span class="item vermelho">vermelho &lt; 0,50 (crítico)</span>
+    <span style="margin-left:auto">barra = valor da densidade · fonte = SonarCloud / GitHub</span>
+  </div>
+
+  <div class="faixa-titulo"><h2>Fatores e métricas avaliadas — Qualidade do Produto</h2></div>
+  <div class="fatores" id="fatores-qualidade"></div>
+
+  <div class="faixa-titulo"><h2>Fatores e métricas avaliadas — Bloqueios &amp; Prontidão</h2></div>
+  <div class="fatores" id="fatores-prontidao"></div>
+
+  <div class="faixa-titulo">
+    <h2>Métricas SonarCloud — visão consolidada</h2>
+    <span class="meta">modelo de qualidade Q-Rapids · meta de cobertura ≥ 85%</span>
+  </div>
+  <div class="cartoes" id="cartoes-sonar"></div>
+
+  <div class="grade-2">
+    <div>
+      <h3>Cobertura por repositório × meta (85%)</h3>
+      <div class="grafico"><canvas id="grafico-cobertura"></canvas></div>
+    </div>
+    <div>
+      <h3>Radar de cobertura — atual × meta</h3>
+      <div class="grafico"><canvas id="grafico-radar"></canvas></div>
+    </div>
+  </div>
+
+  <div class="grade-2">
+    <div>
+      <h3>Classificações de qualidade (Q-Rapids) por repositório</h3>
+      <table class="tabela" id="tabela-ratings"></table>
+    </div>
+    <div>
+      <h3>Qualidade do Produto por repositório (densidade ponderada)</h3>
+      <div class="grafico"><canvas id="grafico-qualidade-repo"></canvas></div>
+    </div>
+  </div>
+
+  <div class="grade-2">
+    <div>
+      <h3>Tendência — cobertura de testes (histórico SonarCloud)</h3>
+      <div class="grafico"><canvas id="grafico-hist-cobertura"></canvas></div>
+    </div>
+    <div>
+      <h3>Tendência — code smells (histórico SonarCloud)</h3>
+      <div class="grafico"><canvas id="grafico-hist-smells"></canvas></div>
+    </div>
+  </div>
+
+  <div class="nota">
+    <h3>Como ler este painel</h3>
+    <ul>
+      <li><strong>Qualidade do Produto</strong> = média ponderada das densidades por arquivo: Complexidade 35% (ciclomática/função ≤ 10), Comentários 10% (10–30% de linhas comentadas), Duplicação 25% (&lt; 5% de linhas duplicadas) e Cobertura 30% (≥ 85%).</li>
+      <li><strong>Bloqueios</strong> = issues com descrição preenchida / total de issues (GitHub).</li>
+      <li><strong>Prontidão</strong> = builds com sucesso / builds concluídas (GitHub Actions).</li>
+      <li>Densidade = fração dos arquivos de produção dentro da faixa ideal; fonte: SonarCloud <code>component_tree</code> dos 4 repositórios de código.</li>
+    </ul>
+  </div>
+
+  <div class="faixa-titulo"><h2>Glossário — siglas e termos em inglês</h2></div>
+  <div class="glossario">
+    <div class="grupo-gloss">Modelo de qualidade</div>
+    <table class="tabela">
+      <thead><tr><th>Sigla / termo</th><th>Inglês (por extenso)</th><th>Em português</th></tr></thead>
+      <tbody>
+        <tr><td>Q-Rapids</td><td>Quality, Rapid feedback</td><td>Modelo que transforma métricas brutas em indicadores de qualidade normalizados de 0 a 1</td></tr>
+        <tr><td>MeasureSoftGram</td><td>—</td><td>Ferramenta/método de medição de qualidade usado na disciplina (aplica o Q-Rapids)</td></tr>
+        <tr><td>Quality Gate</td><td>Quality Gate</td><td>"Portão de qualidade": regra que bloqueia o merge se a qualidade não atingir o mínimo (ex.: cobertura ≥ 85%)</td></tr>
+        <tr><td>Product Quality</td><td>Product Quality</td><td>Qualidade do Produto (indicador estratégico)</td></tr>
+        <tr><td>Blocking</td><td>Blocking</td><td>Bloqueios (indicador estratégico)</td></tr>
+        <tr><td>Product Readiness</td><td>Product Readiness</td><td>Prontidão do Produto (indicador estratégico)</td></tr>
+      </tbody>
+    </table>
+    <div class="grupo-gloss">Métricas do SonarCloud</div>
+    <table class="tabela">
+      <thead><tr><th>Sigla / termo</th><th>Inglês (por extenso)</th><th>Em português</th></tr></thead>
+      <tbody>
+        <tr><td>Coverage</td><td>Test Coverage</td><td>Cobertura de testes — % do código exercitado pelos testes automatizados</td></tr>
+        <tr><td>Complexity</td><td>Cyclomatic Complexity</td><td>Complexidade ciclomática — nº de caminhos de decisão de uma função (quanto menor, mais simples)</td></tr>
+        <tr><td>Duplication</td><td>Duplicated Lines Density</td><td>Densidade de linhas duplicadas — % de código repetido</td></tr>
+        <tr><td>Comments</td><td>Comment Lines Density</td><td>Densidade de comentários — % de linhas comentadas</td></tr>
+        <tr><td>Code Smell</td><td>Code Smell</td><td>"Mau cheiro de código" — indício de código difícil de manter (não é um defeito/bug)</td></tr>
+        <tr><td>Bug</td><td>Bug</td><td>Defeito — pode causar comportamento errado em produção</td></tr>
+        <tr><td>Vulnerability</td><td>Vulnerability</td><td>Vulnerabilidade — brecha de segurança</td></tr>
+        <tr><td>Reliability</td><td>Reliability Rating</td><td>Confiabilidade — nota A–E baseada na quantidade de bugs</td></tr>
+        <tr><td>Security</td><td>Security Rating</td><td>Segurança — nota A–E baseada em vulnerabilidades</td></tr>
+        <tr><td>Maintainability</td><td>Maintainability Rating</td><td>Manutenibilidade — nota A–E baseada em code smells / dívida técnica</td></tr>
+        <tr><td>ncloc</td><td>Non-Comment Lines of Code</td><td>Linhas de código sem contar comentários (tamanho do código)</td></tr>
+        <tr><td>Rating A–E</td><td>Rating</td><td>Nota de A (melhor) a E (pior)</td></tr>
+      </tbody>
+    </table>
+    <div class="grupo-gloss">Processo / integração</div>
+    <table class="tabela">
+      <thead><tr><th>Sigla / termo</th><th>Inglês (por extenso)</th><th>Em português</th></tr></thead>
+      <tbody>
+        <tr><td>Build</td><td>Build</td><td>Compilação/empacotamento automático do código a cada alteração</td></tr>
+        <tr><td>Build Stability</td><td>Build Stability</td><td>Estabilidade de build — % de execuções de CI que terminam com sucesso</td></tr>
+        <tr><td>CI</td><td>Continuous Integration</td><td>Integração Contínua — pipeline que roda lint, testes e build automaticamente</td></tr>
+        <tr><td>Issue</td><td>Issue</td><td>Item de trabalho (tarefa, história ou bug) registrado no GitHub/ZenHub</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <p class="rodape" id="rodape"></p>
+</main>
+
+<script>
+const D = window.DADOS;
+const VERDE = "#2e7d32", AMARELO = "#f9a825", VERMELHO = "#c62828", AZUL = "#3f51b5";
+const CORES_REPO = { "Usuario-Service": "#3f51b5", "Quiz-Service": "#00897b", "BFF": "#8e24aa", "Web": "#ef6c00" };
+const classe = (v, alto = 0.75, medio = 0.50) => v >= alto ? "verde" : v >= medio ? "amarelo" : "vermelho";
+const cor = (v, alto = 0.75, medio = 0.50) => v >= alto ? VERDE : v >= medio ? AMARELO : VERMELHO;
+const fmt = (v, c = 2) => v == null ? "—" : v.toFixed(c).replace(".", ",");
+const letra = (r) => ({ 1: "A", 2: "B", 3: "C", 4: "D", 5: "E" })[Math.round(r)] ?? "—";
+
+document.getElementById("meta-produto").textContent =
+  `${Object.keys(D.produto.porRepo).length} repositórios · ${D.produto.global.densidades.totalArquivos} arquivos · ${D.geradoEm.slice(0, 10)}`;
+
+// ---- indicadores estratégicos
+const estrategicos = [
+  { nome: "Qualidade do Produto", valor: D.produto.indicadores.qualidadeProduto, desc: "densidades ponderadas (35/10/25/30)" },
+  { nome: "Bloqueios", valor: D.produto.indicadores.bloqueios, desc: "issues bem definidas / total" },
+  { nome: "Prontidão do Produto", valor: D.produto.indicadores.prontidao, desc: "builds com sucesso / concluídas" },
+];
+document.getElementById("indicadores-estrategicos").innerHTML = estrategicos.map((e) => `
+  <div class="cartao">
+    <div class="rotulo">Indicador estratégico</div>
+    <div class="nome">${e.nome}</div>
+    <div class="valor ${classe(e.valor)}">${fmt(e.valor)}</div>
+    <div class="barra"><span style="width:${(e.valor * 100).toFixed(0)}%;background:${cor(e.valor)}"></span></div>
+    <div class="rotulo" style="margin-top:6px">${e.desc}</div>
+  </div>`).join("");
+
+// ---- fatores
+const dens = D.produto.global.densidades;
+const fatoresQualidade = [
+  { grupo: "Code Quality", fonte: "Maintainability · SonarCloud", nome: "Complexity — arquivos não complexos (ciclomática/função ≤ 10)", peso: "35%", valor: dens.complexidade },
+  { grupo: "Code Quality", fonte: "Maintainability · SonarCloud", nome: "Comments — arquivos com 10%–30% de linhas comentadas", peso: "10%", valor: dens.comentarios },
+  { grupo: "Code Quality", fonte: "Maintainability · SonarCloud", nome: "Duplication — arquivos com < 5% de linhas duplicadas", peso: "25%", valor: dens.duplicacao },
+  { grupo: "Testing Status", fonte: "Reliability · SonarCloud", nome: "Coverage — arquivos com cobertura ≥ 85%", peso: "30%", valor: dens.cobertura },
+];
+const fatoresProntidao = [
+  { grupo: "Quality Issues' Specification", fonte: "Blocking · GitHub", nome: "Well defined issues — issues com descrição preenchida", peso: "—", valor: D.produto.indicadores.bloqueios },
+  { grupo: "Product Stability", fonte: "Readiness · GitHub Actions", nome: "Build stability — builds com sucesso / concluídas", peso: "—", valor: D.produto.indicadores.estabilidadeBuilds },
+  { grupo: "Activities Completion", fonte: "Process Factor · GitHub", nome: "Task completion — issues fechadas / total", peso: "—", valor: D.produto.indicadores.conclusaoTarefas },
+];
+const linhaFator = (f) => `
+  <div class="fator ${classe(f.valor)}">
+    <div class="grupo">${f.grupo}<small>${f.fonte} · peso ${f.peso}</small></div>
+    <div class="descricao">${f.nome}</div>
+    <div class="barra"><span style="width:${(f.valor * 100).toFixed(0)}%;background:${cor(f.valor)}"></span></div>
+    <div class="numero">${fmt(f.valor)}</div>
+  </div>`;
+document.getElementById("fatores-qualidade").innerHTML = fatoresQualidade.map(linhaFator).join("");
+document.getElementById("fatores-prontidao").innerHTML = fatoresProntidao.map(linhaFator).join("");
+
+// ---- cards SonarCloud
+const repos = Object.keys(D.produto.porRepo);
+const med = (r, m) => D.produto.porRepo[r].medidas[m];
+const somaNcloc = repos.reduce((s, r) => s + (med(r, "ncloc") ?? 0), 0);
+const coberturaPonderada = repos.reduce((s, r) => s + (med(r, "coverage") ?? 0) * (med(r, "ncloc") ?? 0), 0) / somaNcloc;
+const duplicacaoPonderada = repos.reduce((s, r) => s + (med(r, "duplicated_lines_density") ?? 0) * (med(r, "ncloc") ?? 0), 0) / somaNcloc;
+const bugsTotal = repos.reduce((s, r) => s + (med(r, "bugs") ?? 0), 0);
+const smellsTotal = repos.reduce((s, r) => s + (med(r, "code_smells") ?? 0), 0);
+const cartoesSonar = [
+  { nome: "Cobertura de testes (ponderada)", valor: `${fmt(coberturaPonderada, 1)}%`, cls: coberturaPonderada >= 85 ? "verde" : coberturaPonderada >= 70 ? "amarelo" : "vermelho" },
+  { nome: "Duplicação de código", valor: `${fmt(duplicacaoPonderada, 1)}%`, cls: duplicacaoPonderada < 5 ? "verde" : duplicacaoPonderada <= 10 ? "amarelo" : "vermelho" },
+  { nome: "Bugs detectados", valor: bugsTotal, cls: bugsTotal === 0 ? "verde" : "vermelho" },
+  { nome: "Code smells", valor: smellsTotal, cls: smellsTotal <= 30 ? "verde" : smellsTotal <= 80 ? "amarelo" : "vermelho" },
+  { nome: "Linhas de código (4 repos)", valor: somaNcloc.toLocaleString("pt-BR"), cls: "azul" },
+];
+document.getElementById("cartoes-sonar").innerHTML = cartoesSonar.map((c) => `
+  <div class="cartao">
+    <div class="nome">${c.nome}</div>
+    <div class="valor ${c.cls}">${c.valor}</div>
+  </div>`).join("");
+
+// ---- gráfico cobertura por repo
+new Chart(document.getElementById("grafico-cobertura"), {
+  type: "bar",
+  data: {
+    labels: repos,
+    datasets: [{ label: "Cobertura atual (%)", data: repos.map((r) => med(r, "coverage")), backgroundColor: repos.map((r) => med(r, "coverage") >= 85 ? VERDE : med(r, "coverage") >= 70 ? AMARELO : VERMELHO) }],
+  },
+  options: {
+    indexAxis: "y", maintainAspectRatio: false, scales: { x: { min: 0, max: 100 } },
+    plugins: { annotation: undefined, legend: { display: false }, tooltip: { callbacks: { label: (c) => ` ${c.parsed.x}% (meta ≥ 85%)` } } },
+  },
+});
+
+// ---- radar
+new Chart(document.getElementById("grafico-radar"), {
+  type: "radar",
+  data: {
+    labels: repos,
+    datasets: [
+      { label: "Cobertura atual", data: repos.map((r) => med(r, "coverage")), borderColor: AZUL, backgroundColor: "rgba(63,81,181,.18)", pointBackgroundColor: AZUL },
+      { label: "Meta ≥ 85%", data: repos.map(() => 85), borderColor: "#bbb", borderDash: [6, 4], backgroundColor: "rgba(0,0,0,.04)", pointRadius: 0 },
+    ],
+  },
+  options: { maintainAspectRatio: false, scales: { r: { min: 0, max: 100, ticks: { stepSize: 20 } } } },
+});
+
+// ---- tabela de ratings
+const linhasRatings = repos.map((r) => {
+  const m = D.produto.porRepo[r].medidas;
+  const selo = (l) => `<span class="selo ${l === "A" ? "verde" : l === "B" ? "amarelo" : l === "—" ? "cinza" : "vermelho"}">${l}</span>`;
+  return `<tr>
+    <td><strong>${r}</strong></td>
+    <td>${selo(letra(m.reliability_rating))}</td>
+    <td>${selo(letra(m.security_rating))}</td>
+    <td>${selo(letra(m.sqale_rating))}</td>
+    <td class="num">${fmt(m.coverage, 1)}%</td>
+    <td class="num">${m.bugs ?? "—"}</td>
+    <td class="num">${m.code_smells ?? "—"}</td>
+    <td class="num">${fmt(m.duplicated_lines_density, 1)}%</td>
+  </tr>`;
+}).join("");
+document.getElementById("tabela-ratings").innerHTML = `
+  <thead><tr><th>Repositório</th><th>Reliability</th><th>Security</th><th>Maintainability</th><th class="num">Cobertura</th><th class="num">Bugs</th><th class="num">Smells</th><th class="num">Duplicação</th></tr></thead>
+  <tbody>${linhasRatings}</tbody>`;
+
+// ---- qualidade do produto por repo
+new Chart(document.getElementById("grafico-qualidade-repo"), {
+  type: "bar",
+  data: {
+    labels: repos,
+    datasets: [{ label: "Qualidade do Produto (0–1)", data: repos.map((r) => D.produto.porRepo[r].qualidadeProduto), backgroundColor: repos.map((r) => cor(D.produto.porRepo[r].qualidadeProduto)) }],
+  },
+  options: { maintainAspectRatio: false, scales: { y: { min: 0, max: 1 } }, plugins: { legend: { display: false } } },
+});
+
+// ---- históricos
+function graficoHistorico(canvas, metrica, sufixo = "", max = undefined) {
+  const datasets = repos
+    .filter((r) => D.produto.historico[r]?.[metrica]?.length)
+    .map((r) => ({
+      label: r,
+      data: D.produto.historico[r][metrica].map((p) => ({ x: p.data, y: p.valor })),
+      borderColor: CORES_REPO[r], backgroundColor: CORES_REPO[r], tension: .25, pointRadius: 2,
+    }));
+  new Chart(document.getElementById(canvas), {
+    type: "line",
+    data: { datasets },
+    options: {
+      maintainAspectRatio: false,
+      scales: { x: { type: "category", labels: [...new Set(datasets.flatMap((d) => d.data.map((p) => p.x)))].sort(), ticks: { maxTicksLimit: 10 } }, y: { max, title: { display: Boolean(sufixo), text: sufixo } } },
+    },
+  });
+}
+graficoHistorico("grafico-hist-cobertura", "coverage", "%", 100);
+graficoHistorico("grafico-hist-smells", "code_smells", "code smells");
+
+document.getElementById("rodape").textContent =
+  `Gerado em ${D.geradoEm.slice(0, 16).replace("T", " ")} · Fontes: SonarCloud (medidas atuais, histórico e component_tree por arquivo), GitHub (issues e Actions) · Modelo: Plano de Qualidade AnatoQuizUp (Q-Rapids/MeasureSoftGram 2026.1).`;
+</script>
+</body>
+</html>
