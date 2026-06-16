@@ -15,6 +15,7 @@ A API usa versionamento no caminho. Todos os endpoints de negócio partem do pre
 | `/api/v1/exemplos/*` | Usuario-Service | Módulo técnico didático |
 | `/api/v1/usuarios/*` | Usuario-Service | Busca de usuários (em lote, paginada de alunos, ou pública por id) |
 | `/api/v1/quiz/*` | Quiz-Service | Fluxos de jogo, moedas, histórico e respostas do quiz |
+| `/api/v1/avatarLoja/*` | Quiz-Service | Loja virtual: catálogo, inventário e compra de itens com moedas |
 | `/api/v1/questoes/*` | Quiz-Service | Gestão de questões |
 | `/api/v1/turmas/*` | Quiz-Service | Turmas e vínculo de alunos; rotas de leitura abertas a ALUNO com filtro por papel |
 | `/api/v1/lista/*` | Quiz-Service | Listas de estudo e compartilhamento entre turmas |
@@ -166,6 +167,9 @@ O BFF valida assinatura e expiração antes de repassar. Usuario-Service e Quiz-
 | GET | `/quiz/moedas` | Quiz-Service | ALUNO / PROFESSOR / ADMINISTRADOR |
 | GET | `/quiz/quantidade_por_tema` | Quiz-Service | ALUNO / PROFESSOR / ADMINISTRADOR |
 | GET | `/quiz/historico` | Quiz-Service | ALUNO / PROFESSOR / ADMINISTRADOR |
+| GET | `/avatarLoja/catalogo` | Quiz-Service | ALUNO |
+| GET | `/avatarLoja/meu-inventario` | Quiz-Service | ALUNO |
+| POST | `/avatarLoja/comprar` | Quiz-Service | ALUNO |
 | POST | `/lista` | Quiz-Service | ALUNO / PROFESSOR / ADMINISTRADOR |
 | GET | `/lista` | Quiz-Service | ALUNO / PROFESSOR / ADMINISTRADOR |
 | GET | `/lista/turma/:turmaId` | Quiz-Service | ALUNO / PROFESSOR / ADMINISTRADOR |
@@ -192,10 +196,11 @@ O BFF valida assinatura e expiração antes de repassar. Usuario-Service e Quiz-
 | GET | `/turmasDashboard/:id/macro` | Quiz-Service | PROFESSOR / ADMINISTRADOR |
 | GET | `/turmasDashboard/:id/individual` | Quiz-Service | PROFESSOR / ADMINISTRADOR |
 
-- A documentação detalhada está nas páginas de cada recurso: [Quiz](quiz.md), [Questões](questoes.md), [Turmas](turmas.md), [Listas](lista.md), [Amizade](amizade.md), [Dashboard do Aluno](dashboard-aluno.md) e [Dashboard da Turma](dashboard-turma.md).
+- A documentação detalhada está nas páginas de cada recurso: [Quiz](quiz.md), [Questões](questoes.md), [Turmas](turmas.md), [Listas](lista.md), [Loja Virtual](loja-virtual.md), [Amizade](amizade.md), [Dashboard do Aluno](dashboard-aluno.md) e [Dashboard da Turma](dashboard-turma.md).
 - **`/usuarios/:id`** é a rota usada pelo Web para resolver o nome do professor responsável na tela de detalhe da turma do aluno. Payload mínimo (sem email, senha, ou dados pessoais).
 - **`/turmas` para ALUNO** sempre filtra por `status=ATIVA` e exibe somente turmas em que o aluno está vinculado. Query `?status=` é rejeitada com **400**.
 - **`/turmas/:id`** para aluno sem vínculo retorna **404** (intencional — não vaza existência).
+- **`/avatarLoja/*`** concentra a Loja Virtual. O catálogo lista itens cosméticos ativos disponíveis para compra; o inventário lista itens já adquiridos pelo aluno; e a compra debita moedas da carteira, registra transação com `COMPRA_ITEM_AVATAR` e impede compra duplicada do mesmo item.
 
 ## Histórico de Versão
 
@@ -208,3 +213,4 @@ O BFF valida assinatura e expiração antes de repassar. Usuario-Service e Quiz-
 | 21/05/2026 | 2.2 | Inclui endpoints de `/usuarios/*` e `/turmas/*` com regras de acesso por papel | Miguel Moreira |
 | 25/05/2026 | 2.3 | Inclui endpoints de `/quiz/*`, `/questoes/*` e `/listas/*`| [Caio Santos](https://github.com/caiobsantos) |
 | 02/06/2026 | 2.4 | Inclui os grupos `/amizade/*`, `/dashboardAluno` e `/turmasDashboard/*` e links para as páginas detalhadas | [Miguel Moreira](https://github.com/EhOMiguel) |
+| 16/06/2026 | 2.5 | Inclui endpoints da loja virtual| [Caio Santos](https://github.com/caiobsantos) |

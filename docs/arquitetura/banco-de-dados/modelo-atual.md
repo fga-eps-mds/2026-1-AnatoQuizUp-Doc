@@ -9,7 +9,7 @@ A arquitetura possui **dois bancos PostgreSQL independentes**, um por serviço d
 - **Auth DB** — pertence ao `Usuario-Service`.
 - **Quiz DB** — pertence ao `Quiz-Service`.
 
-IDs de usuário usados no Quiz-Service (`Questao.criadoPorId`, `ResolucaoQuestao.usuarioId`, `Turma.professorId`, `TurmaAluno.alunoId`, `CarteiraMoedas.usuarioId`) são **referências externas** (strings), resolvidas por API (`GET /api/v1/usuarios/:id`) quando é preciso exibir nome/papel. O Quiz-Service também usa **MinIO/S3** para armazenar imagens das questões.
+IDs de usuário usados no Quiz-Service (`Questao.criadoPorId`, `ResolucaoQuestao.usuarioId`, `TransacaoMoeda.usuarioId`, `Turma.professorId`, `TurmaAluno.alunoId`, `CarteiraMoedas.usuarioId`, `InventarioAvatarItem.usuarioId`) são **referências externas** (strings), resolvidas por API (`GET /api/v1/usuarios/:id`) quando é preciso exibir nome/papel. O Quiz-Service também usa **MinIO/S3** para armazenar imagens das questões.
 
 ---
 
@@ -58,6 +58,8 @@ erDiagram
     TURMA ||--o{ LISTATURMA : recebe
     LISTAQUESTAO ||--o{ LISTAQUESTAOITEM : contem
     LISTAQUESTAO ||--o{ LISTATURMA : compartilha
+    ITEMAVATARLOJA ||--o{ INVENTARIOAVATARITEM : adquirido
+    ITEMAVATARLOJA ||--o{ TRANSACAOMOEDA : gera
 ```
 
 | Modelo | Principais campos | Observações |
@@ -67,7 +69,9 @@ erDiagram
 | `QuestaoAlternativa` | `id`, `alternativaA`..`alternativaE`, `questaoId` (único) | 1:1 com `Questao` |
 | `ResolucaoQuestao` | `id`, `respostaMarcada`, `usuarioId`, `questaoId` | `usuarioId` é ID externo; base do histórico e dos dashboards |
 | `CarteiraMoedas` | `id`, `usuarioId` (único), `saldo` | Carteira de moedas ATP do aluno |
-| `TransacaoMoeda` | `id`, `usuarioId`, `questaoId`, `quantidade`, `fonte` | Único por (`usuarioId`, `questaoId`, `fonte`) — evita recompensar a mesma questão duas vezes |
+| `TransacaoMoeda` | `id`, `usuarioId`, `questaoId?`, `itemAvatarLojaId?`, `quantidade`, `fonte`, `descricao?` | Registra entradas e saídas de moedas ATP. Para acertos, usa `questaoId` e fonte `ACERTO_QUESTAO`; para compras da Loja Virtual, usa `itemAvatarLojaId`, quantidade negativa e fonte `COMPRA_ITEM_AVATAR` |
+| `ItemAvatarLoja` | `id`, `codigo`, `nome`, `descricao?`, `tipo`, `raridade`, `precoMoedas`, `imagemUrl?`, `previewImagemUrl?`, `ativo` | Catálogo de itens cosméticos da Loja Virtual; `codigo` é único |
+| `InventarioAvatarItem` | `id`, `usuarioId`, `itemAvatarLojaId`, `equipado`, `adquiridoEm` | Inventário de itens adquiridos pelo aluno; `usuarioId` é ID externo; único por (`usuarioId`, `itemAvatarLojaId`) para impedir compra duplicada |
 | `Turma` | `id`, `codigo` (único), `nome`, `semestre`, `ano`, `descricao`, `status`, `professorId` | `professorId` é ID externo |
 | `TurmaAluno` | `id`, `turmaId`, `alunoId` | Único por (`turmaId`, `alunoId`); `alunoId` é ID externo |
 | `ListaQuestao` | `id`, `nome`, `criadoPorId` | Lista de estudo |
@@ -83,7 +87,9 @@ erDiagram
 | `StatusQuestao` | `ATIVO`, `INATIVO` |
 | `Dificuldade` | `FACIL`, `MEDIA`, `DIFICIL` |
 | `StatusTurma` | `ATIVA`, `INATIVA` |
-| `FonteMoeda` | `ACERTO_QUESTAO` |
+| `FonteMoeda` | `ACERTO_QUESTAO`, `COMPRA_ITEM_AVATAR` | 
+| `TipoItemAvatar` | `CABELO`, `ROUPA`, `JALECO`, `OCULOS`, `ACESSORIO`, `CALCADO`, `OUTRO` |
+| `RaridadeItemAvatar` | `COMUM`, `RARO`, `EPICO`, `LENDARIO` |
 
 ---
 
@@ -98,9 +104,12 @@ Como não há FK entre os bancos, os relacionamentos abaixo são lógicos (por I
 | `Turma.professorId` | `Usuario.id` (professor) |
 | `TurmaAluno.alunoId` | `Usuario.id` (aluno) |
 | `CarteiraMoedas.usuarioId` | `Usuario.id` (aluno) |
+| `TransacaoMoeda.usuarioId` | `Usuario.id` (aluno) |
+| `InventarioAvatarItem.usuarioId` | `Usuario.id` (aluno) |
 
 ## Histórico de Versão
 
 | Data | Versão | Descrição | Autor(es) |
 |------|--------|-----------|-----------|
 | 02/06/2026 | 1.0 | Criação da página do modelo de dados atual (Auth DB e Quiz DB, com amizades, moedas, listas, turmas e enums) | [Miguel Moreira](https://github.com/EhOMiguel) |
+| 16/06/2026 | 1.1 | Atualiza o modelo do Quiz DB para incluir Loja Virtual, itens de avatar, inventário e transações de compra com moedas ATP | [Caio Santos](https://github.com/caiobsantos) |
