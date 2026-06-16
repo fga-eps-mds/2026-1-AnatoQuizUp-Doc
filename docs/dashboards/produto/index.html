@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dashboard Eixo Produto - AnatoQuizUp</title>
+<link rel="stylesheet" href="produto.css">
+<script src="dados-produto.js"></script>
+<script defer src="produto.js"></script>
+</head>
+<body>
+<main>
+  <h1>Dashboard eixo Produto - qualidade por repositorio</h1>
+  <p class="subtitulo">Indicadores consolidados por repositorio: Qualidade do Produto, Bloqueios e Prontidao. Cada painel usa somente o snapshot mais recente do respectivo repositorio em <code>analytics-raw-data</code>.</p>
+  <nav class="abas">
+    <a href="./" class="ativa">Produto</a>
+    <a href="../processo.html">Processo</a>
+    <a href="../projeto.html">Projeto</a>
+    <a href="../canvas.html">Canvas</a>
+  </nav>
+
+  <div class="faixa-titulo">
+    <h2>Eixo Produto - modelo de qualidade por repositorio</h2>
+  </div>
+
+  <div class="legenda">
+    <span class="item verde">verde >= 0,75 (aprovado)</span>
+    <span class="item amarelo">amarelo 0,50-0,74 (atencao)</span>
+    <span class="item vermelho">vermelho &lt; 0,50 (critico)</span>
+  </div>
+
+  <nav class="abas repos" id="abas-repos" aria-label="Dashboards de produto por repositorio"></nav>
+  <div id="dashboards-repos"></div>
+
+  <div class="nota">
+    <h3>Como ler este painel</h3>
+    <ul>
+      <li><strong>Qualidade do Produto</strong> = media ponderada das densidades por arquivo: Complexidade 35%, Comentarios 10%, Duplicacao 25% e Cobertura 30%.</li>
+      <li><strong>Bloqueios</strong> = issues com descricao preenchida / total de issues do repositorio, quando houver export disponivel.</li>
+      <li><strong>Prontidao</strong> = builds com sucesso / builds concluidas do repositorio.</li>
+      <li>O arquivo <code>gerar-dados-produto.mjs</code> escolhe sempre o JSON mais recente de cada repositorio em <code>analytics-raw-data</code> e regenera <code>dados-produto.js</code>.</li>
+    </ul>
+  </div>
+</main>
+</body>
+</html>
