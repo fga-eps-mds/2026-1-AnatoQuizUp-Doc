@@ -67,6 +67,7 @@ nav:
           - Turmas: arquitetura/api/turmas.md
           - Listas: arquitetura/api/lista.md
           - Amizade: arquitetura/api/amizade.md
+          - Loja Virtual: arquitetura/api/loja-virtual.md
           - Dashboard do Aluno: arquitetura/api/dashboard-aluno.md
           - Dashboard da Turma: arquitetura/api/dashboard-turma.md
           - Erros e Contratos: arquitetura/api/erros.md

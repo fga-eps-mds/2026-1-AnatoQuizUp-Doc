@@ -1,44 +1,38 @@
 # API da Loja Virtual
 
-Os endpoints da Loja Virtual de Avatar permitem que alunos visualizem itens cosméticos disponíveis, comprem itens usando moedas ATP e consultem os itens já adquiridos no próprio inventário.
+Os endpoints da Loja Virtual permitem que alunos visualizem itens cosméticos disponíveis, comprem itens usando moedas ATP e consultem os itens já adquiridos no próprio inventário.
 
-O domínio da loja pertence ao **Quiz-Service**, pois a carteira de moedas e o registro de transações também pertencem a esse serviço. A API é exposta publicamente pelo BFF em `/api/v1/avatarLoja/*`.
+O domínio da loja pertence ao **Quiz-Service**, pois a carteira de moedas e o registro de transações também pertencem a esse serviço. A API é exposta publicamente pelo BFF em `/api/v1/loja/*`.
 
 **Acesso:** papel **ALUNO** (autenticação requerida).
 
-Os itens da loja podem possuir os seguintes tipos:
+Os itens da loja possuem um dos seguintes tipos (categorias):
 
-* `CABELO`
-* `ROUPA`
-* `JALECO`
-* `OCULOS`
-* `ACESSORIO`
-* `CALCADO`
-* `OUTRO`
+* `ICONE_PERFIL` — ícone de perfil do aluno.
+* `MOLDURA` — moldura (anel decorativo) do ícone de perfil.
+* `AVATAR` — avatar pronto (modelo fixo, sem customização de peças).
+* `TITULO` — título exibido em destaque no perfil.
+* `PLANO_FUNDO` — cor ou textura de fundo do perfil.
 
-As raridades disponíveis são:
-
-* `COMUM`
-* `RARO`
-* `EPICO`
-* `LENDARIO`
+Cada item tem `precoMoedas` (em ATP), imagens opcionais (`imagemUrl`/`previewImagemUrl`) e um campo
+`valor` opcional usado pelos itens de `PLANO_FUNDO` para guardar a cor (hex) ou o gradiente CSS
+(`null` nos demais tipos).
 
 ---
 
-### **GET** /api/v1/avatarLoja/catalogo
+### **GET** /api/v1/loja/catalogo
 
-**Descrição:** lista os itens ativos disponíveis na Loja Virtual de Avatar.
+**Descrição:** lista os itens ativos disponíveis na Loja Virtual.
 
 Este endpoint retorna o catálogo paginado de itens cosméticos disponíveis para compra. Para cada item, o campo `adquirido` indica se o aluno autenticado já possui aquele item no inventário.
 
 **Query params**
 
-| Campo      | Tipo   | Obrigatório | Regra                                                                                             |
-| ---------- | ------ | ----------- | ------------------------------------------------------------------------------------------------- |
-| `tipo`     | string | Não         | Filtra por tipo do item: `CABELO`, `ROUPA`, `JALECO`, `OCULOS`, `ACESSORIO`, `CALCADO` ou `OUTRO` |
-| `raridade` | string | Não         | Filtra por raridade: `COMUM`, `RARO`, `EPICO` ou `LENDARIO`                                       |
-| `page`     | number | Não         | Página (≥ 1)                                                                                      |
-| `limit`    | number | Não         | Itens por página (1 a 100)                                                                        |
+| Campo   | Tipo   | Obrigatório | Regra                                                                       |
+| ------- | ------ | ----------- | --------------------------------------------------------------------------- |
+| `tipo`  | string | Não         | Filtra por categoria: `ICONE_PERFIL`, `MOLDURA`, `AVATAR`, `TITULO` ou `PLANO_FUNDO` |
+| `page`  | number | Não         | Página (≥ 1)                                                                |
+| `limit` | number | Não         | Itens por página (1 a 100)                                                  |
 
 **Resposta de sucesso — 200**
 
@@ -47,14 +41,14 @@ Este endpoint retorna o catálogo paginado de itens cosméticos disponíveis par
   "dados": [
     {
       "id": "cmqg1mxvh0001sf71omb6hrch",
-      "codigo": "cabelo-curto-classico",
-      "nome": "Cabelo Curto Clássico",
-      "descricao": "Um corte simples e elegante para o avatar.",
-      "tipo": "CABELO",
-      "raridade": "COMUM",
-      "precoMoedas": 100,
-      "imagemUrl": null,
-      "previewImagemUrl": null,
+      "codigo": "icone-coruja",
+      "nome": "Coruja",
+      "descricao": "Para os estudiosos de plantão.",
+      "tipo": "ICONE_PERFIL",
+      "precoMoedas": 60,
+      "valor": null,
+      "imagemUrl": "https://api.iconify.design/game-icons/owl.svg?color=%23ffffff",
+      "previewImagemUrl": "https://api.iconify.design/game-icons/owl.svg?color=%23ffffff",
       "ativo": true,
       "adquirido": false
     }
@@ -62,7 +56,7 @@ Este endpoint retorna o catálogo paginado de itens cosméticos disponíveis par
   "metadados": {
     "page": 1,
     "limit": 10,
-    "total": 14,
+    "total": 20,
     "totalPages": 2
   }
 }
@@ -70,11 +64,11 @@ Este endpoint retorna o catálogo paginado de itens cosméticos disponíveis par
 
 ---
 
-### **GET** /api/v1/avatarLoja/meu-inventario
+### **GET** /api/v1/loja/meu-inventario
 
-**Descrição:** lista os itens de avatar adquiridos pelo aluno autenticado.
+**Descrição:** lista os itens adquiridos pelo aluno autenticado.
 
-Este endpoint retorna o inventário do aluno, contendo os itens comprados na Loja Virtual de Avatar. O campo `equipado` indica se o item está marcado como equipado no inventário.
+Este endpoint retorna o inventário do aluno, contendo os itens comprados na Loja Virtual. O campo `equipado` indica se o item está marcado como equipado.
 
 **Query params**
 
@@ -91,17 +85,17 @@ Este endpoint retorna o inventário do aluno, contendo os itens comprados na Loj
     {
       "id": "cmqg1u0ct0000sf9rddpaq099",
       "equipado": false,
-      "adquiridoEm": "2026-06-16T02:54:49.422Z",
+      "adquiridoEm": "2026-06-17T02:54:49.422Z",
       "item": {
         "id": "cmqg1mxvh0001sf71omb6hrch",
-        "codigo": "cabelo-curto-classico",
-        "nome": "Cabelo Curto Clássico",
-        "descricao": "Um corte simples e elegante para o avatar.",
-        "tipo": "CABELO",
-        "raridade": "COMUM",
-        "precoMoedas": 100,
-        "imagemUrl": null,
-        "previewImagemUrl": null,
+        "codigo": "icone-coruja-sabia",
+        "nome": "Coruja Sábia",
+        "descricao": "Ícone de perfil para os estudiosos de plantão.",
+        "tipo": "ICONE_PERFIL",
+        "precoMoedas": 1,
+        "valor": null,
+        "imagemUrl": "https://api.dicebear.com/9.x/icons/svg?seed=coruja&backgroundColor=b6e3f4",
+        "previewImagemUrl": "https://api.dicebear.com/9.x/icons/svg?seed=coruja&backgroundColor=b6e3f4",
         "ativo": true
       }
     }
@@ -117,25 +111,25 @@ Este endpoint retorna o inventário do aluno, contendo os itens comprados na Loj
 
 ---
 
-### **POST** /api/v1/avatarLoja/comprar
+### **POST** /api/v1/loja/comprar
 
-**Descrição:** compra um item da Loja Virtual de Avatar.
+**Descrição:** compra um item da Loja Virtual.
 
-Este endpoint compra um item de avatar usando moedas ATP do aluno autenticado. A compra debita o valor do item da carteira, adiciona o item ao inventário e registra uma transação de moedas com fonte `COMPRA_ITEM_AVATAR` e quantidade negativa.
+Este endpoint compra um item usando moedas ATP do aluno autenticado. A compra debita o valor do item da carteira, adiciona o item ao inventário e registra uma transação de moedas com fonte `COMPRA_ITEM` e quantidade negativa.
 
 A operação impede compra duplicada do mesmo item pelo mesmo aluno.
 
 **Body**
 
-| Campo              | Tipo   | Obrigatório | Regra                                |
-| ------------------ | ------ | ----------- | ------------------------------------ |
-| `itemAvatarLojaId` | string | Sim         | ID do item da loja que será comprado |
+| Campo        | Tipo   | Obrigatório | Regra                                |
+| ------------ | ------ | ----------- | ------------------------------------ |
+| `itemLojaId` | string | Sim         | ID do item da loja que será comprado |
 
 **Exemplo de requisição**
 
 ```json
 {
-  "itemAvatarLojaId": "cmqg1mxvh0001sf71omb6hrch"
+  "itemLojaId": "cmqg1mxvh0001sf71omb6hrch"
 }
 ```
 
@@ -143,22 +137,22 @@ A operação impede compra duplicada do mesmo item pelo mesmo aluno.
 
 ```json
 {
-  "mensagem": "Item de avatar comprado com sucesso.",
-  "saldoMoedas": 4900,
+  "mensagem": "Item comprado com sucesso.",
+  "saldoMoedas": 4999,
   "item": {
     "id": "cmqg1u0ct0000sf9rddpaq099",
     "equipado": false,
-    "adquiridoEm": "2026-06-16T02:54:49.422Z",
+    "adquiridoEm": "2026-06-17T02:54:49.422Z",
     "item": {
       "id": "cmqg1mxvh0001sf71omb6hrch",
-      "codigo": "cabelo-curto-classico",
-      "nome": "Cabelo Curto Clássico",
-      "descricao": "Um corte simples e elegante para o avatar.",
-      "tipo": "CABELO",
-      "raridade": "COMUM",
-      "precoMoedas": 100,
-      "imagemUrl": null,
-      "previewImagemUrl": null,
+      "codigo": "icone-coruja",
+      "nome": "Coruja",
+      "descricao": "Para os estudiosos de plantão.",
+      "tipo": "ICONE_PERFIL",
+      "precoMoedas": 60,
+      "valor": null,
+      "imagemUrl": "https://api.iconify.design/game-icons/owl.svg?color=%23ffffff",
+      "previewImagemUrl": "https://api.iconify.design/game-icons/owl.svg?color=%23ffffff",
       "ativo": true
     }
   }
@@ -169,10 +163,10 @@ A operação impede compra duplicada do mesmo item pelo mesmo aluno.
 
 | Código HTTP | Código de erro        | Situação                                                      |
 | ----------- | --------------------- | ------------------------------------------------------------- |
-| 400         | `ERRO_DE_VALIDACAO`   | Body inválido ou `itemAvatarLojaId` ausente                   |
+| 400         | `ERRO_DE_VALIDACAO`   | Body inválido ou `itemLojaId` ausente                         |
 | 401         | `NAO_AUTORIZADO`      | Usuário não autenticado                                       |
 | 403         | `ACESSO_NEGADO`       | Usuário sem papel permitido                                   |
-| 404         | `NAO_ENCONTRADO`      | Item de avatar não encontrado                                 |
+| 404         | `NAO_ENCONTRADO`      | Item não encontrado                                           |
 | 409         | `CONFLITO`            | Item já adquirido pelo aluno                                  |
 | 422         | `REQUISICAO_INVALIDA` | Item indisponível para compra ou saldo de moedas insuficiente |
 
@@ -182,7 +176,7 @@ A operação impede compra duplicada do mesmo item pelo mesmo aluno.
 {
   "erro": {
     "codigo": "CONFLITO",
-    "mensagem": "Este item de avatar ja foi adquirido pelo aluno."
+    "mensagem": "Este item ja foi adquirido pelo aluno."
   }
 }
 ```
@@ -193,7 +187,7 @@ A operação impede compra duplicada do mesmo item pelo mesmo aluno.
 {
   "erro": {
     "codigo": "NAO_ENCONTRADO",
-    "mensagem": "Item de avatar nao encontrado."
+    "mensagem": "Item nao encontrado."
   }
 }
 ```
@@ -213,17 +207,26 @@ A operação impede compra duplicada do mesmo item pelo mesmo aluno.
 
 ## Regras de negócio
 
-* Apenas usuários com papel `ALUNO` podem acessar a Loja Virtual de Avatar.
+* Apenas usuários com papel `ALUNO` podem acessar a Loja Virtual.
 * O catálogo retorna apenas itens ativos e não excluídos logicamente.
-* O aluno pode filtrar o catálogo por tipo e raridade.
+* O aluno pode filtrar o catálogo por tipo (categoria).
 * O campo `adquirido` no catálogo indica se o aluno autenticado já possui o item.
 * A compra exige saldo suficiente na carteira de moedas do aluno.
 * Ao comprar um item, o saldo da carteira é debitado conforme `precoMoedas`.
 * O item comprado é adicionado ao inventário do aluno.
-* A compra gera uma transação em `TransacaoMoeda` com fonte `COMPRA_ITEM_AVATAR` e quantidade negativa.
+* A compra gera uma transação em `TransacaoMoeda` com fonte `COMPRA_ITEM` e quantidade negativa.
 * O aluno não pode comprar o mesmo item mais de uma vez.
 * A compra de item inexistente retorna `404`.
 * A tentativa de compra duplicada retorna `409`.
+
+---
+
+## Pendências (próxima iteração)
+
+* **`PATCH /api/v1/loja/inventario/:id/equipar`** — equipar/desequipar um item do inventário
+  (apenas um equipado por tipo) e refletir o cosmético equipado no perfil do aluno. O modelo já
+  contém o campo `equipado` em `InventarioItem`; a implementação do endpoint de equipar e da
+  exibição no perfil ficará a cargo da equipe responsável pela personalização do perfil.
 
 ---
 
@@ -232,3 +235,5 @@ A operação impede compra duplicada do mesmo item pelo mesmo aluno.
 | Data       | Versão | Descrição                                                       | Autor(es)                                     |
 | ---------- | ------ | --------------------------------------------------------------- | --------------------------------------------- |
 | 16/06/2026 | 1.0    | Criação da documentação dos endpoints da Loja Virtual de Avatar | [Caio Santos](https://github.com/caiobsantos) |
+| 17/06/2026 | 2.0    | Generaliza a loja para cosméticos (ícones, avatares, títulos, planos de fundo); renomeia para `/api/v1/loja`, modelo `ItemLoja` e tipos `TipoItemLoja`; remove raridade; adiciona `valor` | Equipe AnatoQuizUp |
+| 18/06/2026 | 2.1    | Adiciona categoria `MOLDURA`; preços diversificados por item; ícones de anatomia (Iconify) | Equipe AnatoQuizUp |
