@@ -213,6 +213,34 @@ A equipe validou a finalização da US de Listas de Questões e acompanhou o pro
 
 **Ata completa:** [reuniao0706-ata.md](../assets/processo/reuniao0706-ata.md)
 
+### 21/06/2026 — Sprint Review, Divisão de Tarefas e Transição de Liderança
+
+**Formato da ata:** Markdown
+
+**Objetivo:**
+Revisar as User Stories desenvolvidas na semana e validar o seu funcionamento, acompanhar as frentes de Inteligência Artificial e de melhoria dos dashboards, distribuir as tarefas da próxima sprint e definir a nova liderança da equipe.
+
+**Resumo da ata:**
+A equipe apresentou as USs concluídas na semana e demonstrou seu funcionamento. Bruno e Maria Luisa apresentaram o andamento da frente de Inteligência Artificial, e foi exibido o trabalho em curso para a melhoria dos dashboards. Por fim, foram alinhadas brevemente as pautas para a reunião do dia seguinte com os POs. A equipe dividiu as tarefas da próxima sprint — incluindo correções de bugs, testes de integração e E2E, documentação da IA e dashboards — e designou Maria Luisa (Malu) e Breno como as novas lideranças do ciclo.
+
+**Principais decisões:**
+
+- Validação do funcionamento das User Stories apresentadas na semana.
+- Definição de Maria Luisa (Malu) e Breno como as novas lideranças do ciclo.
+- Divisão das tarefas da próxima sprint e identificação de possíveis tarefas adicionais.
+
+**Encaminhamentos:**
+
+- Arthur: corrigir o bug da busca de questões.
+- Genilson: corrigir o bug das tags de questões que não são salvas.
+- Pedro e Breno: testes de integração (Quiz-Service).
+- João, Bruno e Arthur: testes E2E.
+- Bruno e Malu: documentação da IA.
+- Miguel e Genilson: melhoria dos dashboards.
+- Equipe: conduzir a reunião com os POs (22/06).
+
+**Ata completa:** [reuniao2106-ata.md](../assets/processo/reuniao2106-ata.md)
+
 ## Histórico de Versão
 
 | Data | Versão | Descrição | Autor(es) |
@@ -227,3 +255,4 @@ A equipe validou a finalização da US de Listas de Questões e acompanhou o pro
 | 24/05/2026 | 1.7 | Inclusão da ata de Sprint Review e planejamento da entrega da Release Major 2 (24/05) | [Breno Fernandes](https://github.com/BrenoFrds), [Genilson Junior](https://github.com/GenilsonJrs), [João Vitor](https://github.com/Joa0V) |
 | 02/06/2026 | 1.8 | Inclusão da ata de Sprint Review, feedback Major 2 e planejamento (31/05) | [Genilson Junior](https://github.com/GenilsonJrs) |
 | 11/06/2026 | 1.9 | Inclusão da ata de Sprint Review e preparação de pauta (07/06) | [Genilson Junior](https://github.com/GenilsonJrs) |
+| 21/06/2026 | 1.10 | Inclusão da ata de Sprint Review, divisão de tarefas e transição de liderança (21/06) | [Genilson Junior](https://github.com/GenilsonJrs) |
