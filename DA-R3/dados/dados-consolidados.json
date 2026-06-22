@@ -1,5 +1,5 @@
 {
- "geradoEm": "2026-06-15T02:26:21.715Z",
+ "geradoEm": "2026-06-22T01:48:47.199Z",
  "premissas": [
   "Produto: densidades Q-Rapids calculadas por arquivo (SonarCloud component_tree) com faixas ideais e pesos do Plano de Qualidade (complexidade 35%, comentários 10%, duplicação 25%, cobertura 30%).",
   "Produto: Bloqueios = issues com descrição / total (GitHub, repos públicos); Prontidão = builds com sucesso / concluídas (último export de runs por repo).",
@@ -1763,7 +1763,7 @@
     "comDescricao": 130,
     "fechadas": 71
    },
-   "estabilidadeBuilds": 0.68,
+   "estabilidadeBuilds": 0.69,
    "buildsPorRepo": {
     "BFF": {
      "sucesso": 43,
@@ -1771,22 +1771,22 @@
      "arquivo": "GitHub_API-Runs-fga-eps-mds-2026-1-AnatoQuizUp-BFF-06-07-2026-13-49-42.json"
     },
     "Quiz-Service": {
-     "sucesso": 42,
-     "concluidas": 61,
-     "arquivo": "GitHub_API-Runs-fga-eps-mds-2026-1-AnatoQuizUp-Quiz-Service-06-07-2026-13-49-15.json"
+     "sucesso": 45,
+     "concluidas": 64,
+     "arquivo": "GitHub_API-Runs-fga-eps-mds-2026-1-AnatoQuizUp-Quiz-Service-06-15-2026-19-21-40.json"
     },
     "Usuario-Service": {
      "sucesso": 92,
      "concluidas": 128,
-     "arquivo": "GitHub_API-Runs-fga-eps-mds-2026-1-AnatoQuizUp-Usuario-Service-06-02-2026-02-48-02.json"
+     "arquivo": "GitHub_API-Runs-fga-eps-mds-2026-1-AnatoQuizUp-Usuario-Service-06-16-2026-16-23-47.json"
     },
     "web": {
-     "sucesso": 84,
-     "concluidas": 126,
-     "arquivo": "GitHub_API-Runs-fga-eps-mds-2026-1-AnatoQuizUp-Web-06-07-2026-13-49-30.json"
+     "sucesso": 88,
+     "concluidas": 127,
+     "arquivo": "GitHub_API-Runs-fga-eps-mds-2026-1-AnatoQuizUp-Web-06-16-2026-16-27-09.json"
     }
    },
-   "prontidao": 0.68,
+   "prontidao": 0.69,
    "qualidadeProduto": 0.86
   }
  },
@@ -1803,6 +1803,314 @@
    "Review/QA",
    "Done",
    "Rejected"
+  ],
+  "flowEfficiency": {
+   "valor": 0.207,
+   "cycleMediana": 1.84,
+   "leadMediana": 8.91,
+   "esperaMediana": 7.07
+  },
+  "retrabalho": {
+   "base": 51,
+   "comRetrabalho": 3,
+   "taxa": 0.059,
+   "exemplos": [
+    "Usuario-Service#14",
+    "Web#8",
+    "Web#9"
+   ]
+  },
+  "agingWip": [
+   {
+    "repo": "AI",
+    "numero": 1,
+    "titulo": "[AI] Definir arquitetura inicial do RAG, ingestão de PDFs e estruturação do dataset",
+    "pipeline": "Review/QA",
+    "diasNaPipeline": 22.3
+   },
+   {
+    "repo": "Usuario-Service",
+    "numero": 76,
+    "titulo": "[US] Sistema de Conquistas e Marcos (Badges e Troféus)",
+    "pipeline": "Sprint Backlog",
+    "diasNaPipeline": 13.5
+   },
+   {
+    "repo": "Doc",
+    "numero": 46,
+    "titulo": "[Task] Alteração Dos Campos das Questões",
+    "pipeline": "Sprint Backlog",
+    "diasNaPipeline": 13.5
+   },
+   {
+    "repo": "Doc",
+    "numero": 34,
+    "titulo": "[US] Lista de Questões (Aluno)",
+    "pipeline": "Review/QA",
+    "diasNaPipeline": 13.5
+   }
+  ],
+  "wipSerie": [
+   {
+    "data": "2026-04-19",
+    "wip": 32
+   },
+   {
+    "data": "2026-04-20",
+    "wip": 32
+   },
+   {
+    "data": "2026-04-21",
+    "wip": 32
+   },
+   {
+    "data": "2026-04-22",
+    "wip": 32
+   },
+   {
+    "data": "2026-04-23",
+    "wip": 29
+   },
+   {
+    "data": "2026-04-24",
+    "wip": 29
+   },
+   {
+    "data": "2026-04-25",
+    "wip": 26
+   },
+   {
+    "data": "2026-04-26",
+    "wip": 20
+   },
+   {
+    "data": "2026-04-27",
+    "wip": 4
+   },
+   {
+    "data": "2026-04-28",
+    "wip": 4
+   },
+   {
+    "data": "2026-04-29",
+    "wip": 3
+   },
+   {
+    "data": "2026-04-30",
+    "wip": 4
+   },
+   {
+    "data": "2026-05-01",
+    "wip": 5
+   },
+   {
+    "data": "2026-05-02",
+    "wip": 6
+   },
+   {
+    "data": "2026-05-03",
+    "wip": 21
+   },
+   {
+    "data": "2026-05-04",
+    "wip": 23
+   },
+   {
+    "data": "2026-05-05",
+    "wip": 23
+   },
+   {
+    "data": "2026-05-06",
+    "wip": 21
+   },
+   {
+    "data": "2026-05-07",
+    "wip": 19
+   },
+   {
+    "data": "2026-05-08",
+    "wip": 16
+   },
+   {
+    "data": "2026-05-09",
+    "wip": 16
+   },
+   {
+    "data": "2026-05-10",
+    "wip": 17
+   },
+   {
+    "data": "2026-05-11",
+    "wip": 15
+   },
+   {
+    "data": "2026-05-12",
+    "wip": 15
+   },
+   {
+    "data": "2026-05-13",
+    "wip": 15
+   },
+   {
+    "data": "2026-05-14",
+    "wip": 12
+   },
+   {
+    "data": "2026-05-15",
+    "wip": 11
+   },
+   {
+    "data": "2026-05-16",
+    "wip": 11
+   },
+   {
+    "data": "2026-05-17",
+    "wip": 13
+   },
+   {
+    "data": "2026-05-18",
+    "wip": 13
+   },
+   {
+    "data": "2026-05-19",
+    "wip": 14
+   },
+   {
+    "data": "2026-05-20",
+    "wip": 14
+   },
+   {
+    "data": "2026-05-21",
+    "wip": 13
+   },
+   {
+    "data": "2026-05-22",
+    "wip": 10
+   },
+   {
+    "data": "2026-05-23",
+    "wip": 10
+   },
+   {
+    "data": "2026-05-24",
+    "wip": 12
+   },
+   {
+    "data": "2026-05-25",
+    "wip": 5
+   },
+   {
+    "data": "2026-05-26",
+    "wip": 5
+   },
+   {
+    "data": "2026-05-27",
+    "wip": 5
+   },
+   {
+    "data": "2026-05-28",
+    "wip": 5
+   },
+   {
+    "data": "2026-05-29",
+    "wip": 5
+   },
+   {
+    "data": "2026-05-30",
+    "wip": 4
+   },
+   {
+    "data": "2026-05-31",
+    "wip": 4
+   },
+   {
+    "data": "2026-06-01",
+    "wip": 4
+   },
+   {
+    "data": "2026-06-02",
+    "wip": 4
+   },
+   {
+    "data": "2026-06-03",
+    "wip": 4
+   },
+   {
+    "data": "2026-06-04",
+    "wip": 4
+   },
+   {
+    "data": "2026-06-05",
+    "wip": 4
+   },
+   {
+    "data": "2026-06-06",
+    "wip": 4
+   },
+   {
+    "data": "2026-06-07",
+    "wip": 3
+   },
+   {
+    "data": "2026-06-08",
+    "wip": 4
+   },
+   {
+    "data": "2026-06-09",
+    "wip": 4
+   },
+   {
+    "data": "2026-06-10",
+    "wip": 4
+   },
+   {
+    "data": "2026-06-11",
+    "wip": 4
+   },
+   {
+    "data": "2026-06-12",
+    "wip": 4
+   },
+   {
+    "data": "2026-06-13",
+    "wip": 4
+   },
+   {
+    "data": "2026-06-14",
+    "wip": 4
+   },
+   {
+    "data": "2026-06-15",
+    "wip": 4
+   },
+   {
+    "data": "2026-06-16",
+    "wip": 4
+   },
+   {
+    "data": "2026-06-17",
+    "wip": 4
+   },
+   {
+    "data": "2026-06-18",
+    "wip": 4
+   },
+   {
+    "data": "2026-06-19",
+    "wip": 4
+   },
+   {
+    "data": "2026-06-20",
+    "wip": 4
+   },
+   {
+    "data": "2026-06-21",
+    "wip": 4
+   },
+   {
+    "data": "2026-06-22",
+    "wip": 4
+   }
   ],
   "cfd": [
    {
@@ -2627,6 +2935,111 @@
    },
    {
     "data": "2026-06-15",
+    "Closed": 108,
+    "Done": 0,
+    "Review/QA": 2,
+    "Blocked": 0,
+    "In Progress": 0,
+    "Rework": 0,
+    "Sprint Backlog": 2,
+    "Product Backlog": 25,
+    "Project Backlog": 0,
+    "Icebox": 23,
+    "New Issues": 20,
+    "Rejected": 1
+   },
+   {
+    "data": "2026-06-16",
+    "Closed": 108,
+    "Done": 0,
+    "Review/QA": 2,
+    "Blocked": 0,
+    "In Progress": 0,
+    "Rework": 0,
+    "Sprint Backlog": 2,
+    "Product Backlog": 25,
+    "Project Backlog": 0,
+    "Icebox": 23,
+    "New Issues": 20,
+    "Rejected": 1
+   },
+   {
+    "data": "2026-06-17",
+    "Closed": 108,
+    "Done": 0,
+    "Review/QA": 2,
+    "Blocked": 0,
+    "In Progress": 0,
+    "Rework": 0,
+    "Sprint Backlog": 2,
+    "Product Backlog": 25,
+    "Project Backlog": 0,
+    "Icebox": 23,
+    "New Issues": 20,
+    "Rejected": 1
+   },
+   {
+    "data": "2026-06-18",
+    "Closed": 108,
+    "Done": 0,
+    "Review/QA": 2,
+    "Blocked": 0,
+    "In Progress": 0,
+    "Rework": 0,
+    "Sprint Backlog": 2,
+    "Product Backlog": 25,
+    "Project Backlog": 0,
+    "Icebox": 23,
+    "New Issues": 20,
+    "Rejected": 1
+   },
+   {
+    "data": "2026-06-19",
+    "Closed": 108,
+    "Done": 0,
+    "Review/QA": 2,
+    "Blocked": 0,
+    "In Progress": 0,
+    "Rework": 0,
+    "Sprint Backlog": 2,
+    "Product Backlog": 25,
+    "Project Backlog": 0,
+    "Icebox": 23,
+    "New Issues": 20,
+    "Rejected": 1
+   },
+   {
+    "data": "2026-06-20",
+    "Closed": 108,
+    "Done": 0,
+    "Review/QA": 2,
+    "Blocked": 0,
+    "In Progress": 0,
+    "Rework": 0,
+    "Sprint Backlog": 2,
+    "Product Backlog": 25,
+    "Project Backlog": 0,
+    "Icebox": 23,
+    "New Issues": 20,
+    "Rejected": 1
+   },
+   {
+    "data": "2026-06-21",
+    "Closed": 108,
+    "Done": 0,
+    "Review/QA": 2,
+    "Blocked": 0,
+    "In Progress": 0,
+    "Rework": 0,
+    "Sprint Backlog": 2,
+    "Product Backlog": 25,
+    "Project Backlog": 0,
+    "Icebox": 23,
+    "New Issues": 20,
+    "Rejected": 1
+   },
+   {
+    "data": "2026-06-22",
     "Closed": 108,
     "Done": 0,
     "Review/QA": 2,
@@ -3892,22 +4305,22 @@
    }
   ],
   "leiDeLittle": {
-   "tpDiaUtil": 0.75,
+   "tpDiaUtil": 0.5,
    "base": "issues de fluxo de código fechadas nas últimas 4 semanas / 20 dias úteis",
    "etapas": {
     "Sprint Backlog": {
      "ltMedioDias": 6.94,
-     "wipCalculado": 6,
-     "wipComMargem50": 8
+     "wipCalculado": 4,
+     "wipComMargem50": 6
     },
     "In Progress": {
      "ltMedioDias": 2.58,
      "wipCalculado": 2,
-     "wipComMargem50": 3
+     "wipComMargem50": 2
     },
     "Review/QA": {
      "ltMedioDias": 1.42,
-     "wipCalculado": 2,
+     "wipCalculado": 1,
      "wipComMargem50": 2
     }
    }
@@ -4023,11 +4436,11 @@
  },
  "projeto": {
   "parametros": {
-   "custoPorPessoaSemana": 102.81,
+   "custoPorPessoaSemana": 325.13,
    "custoFixoSemana": 6.34,
    "equipeBaseline": 9,
-   "custoSemanaBaseline": 931.63,
-   "bac": 9316.3,
+   "custoSemanaBaseline": 2932.51,
+   "bac": 29325.1,
    "ps": 10,
    "totalSprints": 10
   },
@@ -4044,8 +4457,8 @@
     "decorrida": true,
     "emAndamento": false,
     "entregueMedidoSP": 17,
-    "custoPlanejado": 931.63,
-    "custoReal": 1240.06
+    "custoPlanejado": 2932.51,
+    "custoReal": 3907.9
    },
    {
     "id": "S2",
@@ -4059,8 +4472,8 @@
     "decorrida": true,
     "emAndamento": false,
     "entregueMedidoSP": 68,
-    "custoPlanejado": 931.63,
-    "custoReal": 1034.44
+    "custoPlanejado": 2932.51,
+    "custoReal": 3257.64
    },
    {
     "id": "S3",
@@ -4074,8 +4487,8 @@
     "decorrida": true,
     "emAndamento": false,
     "entregueMedidoSP": 28,
-    "custoPlanejado": 931.63,
-    "custoReal": 931.63
+    "custoPlanejado": 2932.51,
+    "custoReal": 2932.51
    },
    {
     "id": "S4",
@@ -4089,8 +4502,8 @@
     "decorrida": true,
     "emAndamento": false,
     "entregueMedidoSP": 11,
-    "custoPlanejado": 931.63,
-    "custoReal": 931.63
+    "custoPlanejado": 2932.51,
+    "custoReal": 2932.51
    },
    {
     "id": "S5",
@@ -4104,8 +4517,8 @@
     "decorrida": true,
     "emAndamento": false,
     "entregueMedidoSP": 66,
-    "custoPlanejado": 931.63,
-    "custoReal": 931.63
+    "custoPlanejado": 2932.51,
+    "custoReal": 2932.51
    },
    {
     "id": "S6",
@@ -4119,8 +4532,8 @@
     "decorrida": true,
     "emAndamento": false,
     "entregueMedidoSP": 3,
-    "custoPlanejado": 931.63,
-    "custoReal": 828.82
+    "custoPlanejado": 2932.51,
+    "custoReal": 2607.38
    },
    {
     "id": "S7",
@@ -4134,8 +4547,8 @@
     "decorrida": true,
     "emAndamento": false,
     "entregueMedidoSP": 15,
-    "custoPlanejado": 931.63,
-    "custoReal": 828.82
+    "custoPlanejado": 2932.51,
+    "custoReal": 2607.38
    },
    {
     "id": "S8",
@@ -4149,23 +4562,23 @@
     "decorrida": true,
     "emAndamento": false,
     "entregueMedidoSP": 0,
-    "custoPlanejado": 931.63,
-    "custoReal": 828.82
+    "custoPlanejado": 2932.51,
+    "custoReal": 2607.38
    },
    {
     "id": "S9",
     "inicio": "2026-06-16",
     "fim": "2026-06-22",
     "equipe": 8,
-    "planejadoSP": null,
-    "entregueSP": null,
-    "fontePlanejado": "futuro",
-    "fonteEntregue": "futuro",
-    "decorrida": false,
+    "planejadoSP": 0,
+    "entregueSP": 0,
+    "fontePlanejado": "zenhub (Sprint: Jun 14 - Jun 20, 2026)",
+    "fonteEntregue": "medido (issues fechadas na janela com estimate)",
+    "decorrida": true,
     "emAndamento": false,
     "entregueMedidoSP": 0,
-    "custoPlanejado": 931.63,
-    "custoReal": 828.82
+    "custoPlanejado": 2932.51,
+    "custoReal": 2607.38
    },
    {
     "id": "S10",
@@ -4179,8 +4592,8 @@
     "decorrida": false,
     "emAndamento": false,
     "entregueMedidoSP": 0,
-    "custoPlanejado": 931.63,
-    "custoReal": 828.82
+    "custoPlanejado": 2932.51,
+    "custoReal": 2607.38
    }
   ],
   "evm": [
@@ -4192,14 +4605,14 @@
     "pvPts": 91,
     "evPts": 71,
     "spiSprint": 0.78,
-    "pvReais": 931.63,
-    "evReais": 726.88,
-    "acReais": 1240.06,
+    "pvReais": 2932.51,
+    "evReais": 2288,
+    "acReais": 3907.9,
     "spi": 0.78,
     "cpi": 0.59,
-    "eac": 15893.73,
-    "etc": 14653.67,
-    "vac": -6577.43
+    "eac": 50087.17,
+    "etc": 46179.27,
+    "vac": -20762.07
    },
    {
     "sprint": "S2",
@@ -4209,14 +4622,14 @@
     "pvPts": 122,
     "evPts": 87,
     "spiSprint": 0.52,
-    "pvReais": 1863.26,
-    "evReais": 1328.72,
-    "acReais": 2274.5,
+    "pvReais": 5865.02,
+    "evReais": 4182.43,
+    "acReais": 7165.54,
     "spi": 0.71,
     "cpi": 0.58,
-    "eac": 15947.64,
-    "etc": 13673.14,
-    "vac": -6631.34
+    "eac": 50241.14,
+    "etc": 43075.6,
+    "vac": -20916.04
    },
    {
     "sprint": "S3",
@@ -4226,14 +4639,14 @@
     "pvPts": 151,
     "evPts": 113,
     "spiSprint": 0.9,
-    "pvReais": 2794.89,
-    "evReais": 2091.54,
-    "acReais": 3206.13,
+    "pvReais": 8797.53,
+    "evReais": 6583.58,
+    "acReais": 10098.05,
     "spi": 0.75,
     "cpi": 0.65,
-    "eac": 14280.99,
-    "etc": 11074.86,
-    "vac": -4964.69
+    "eac": 44979.51,
+    "etc": 34881.46,
+    "vac": -15654.41
    },
    {
     "sprint": "S4",
@@ -4243,14 +4656,14 @@
     "pvPts": 176,
     "evPts": 127,
     "spiSprint": 0.56,
-    "pvReais": 3726.52,
-    "evReais": 2689.02,
-    "acReais": 4137.76,
+    "pvReais": 11730.04,
+    "evReais": 8464.29,
+    "acReais": 13030.56,
     "spi": 0.72,
     "cpi": 0.65,
-    "eac": 14335.55,
-    "etc": 10197.79,
-    "vac": -5019.25
+    "eac": 45145.25,
+    "etc": 32114.69,
+    "vac": -15820.15
    },
    {
     "sprint": "S5",
@@ -4260,14 +4673,14 @@
     "pvPts": 206,
     "evPts": 193,
     "spiSprint": 2.2,
-    "pvReais": 4658.15,
-    "evReais": 4364.19,
-    "acReais": 5069.39,
+    "pvReais": 14662.55,
+    "evReais": 13737.24,
+    "acReais": 15963.07,
     "spi": 0.94,
     "cpi": 0.86,
-    "eac": 10821.7,
-    "etc": 5752.31,
-    "vac": -1505.4
+    "eac": 34076.61,
+    "etc": 18113.54,
+    "vac": -4751.51
    },
    {
     "sprint": "S6",
@@ -4277,14 +4690,14 @@
     "pvPts": 223,
     "evPts": 196,
     "spiSprint": 0.18,
-    "pvReais": 5589.78,
-    "evReais": 4912.99,
-    "acReais": 5898.21,
+    "pvReais": 17595.06,
+    "evReais": 15464.72,
+    "acReais": 18570.45,
     "spi": 0.88,
     "cpi": 0.83,
-    "eac": 11184.53,
-    "etc": 5286.32,
-    "vac": -1868.23
+    "eac": 35214.37,
+    "etc": 16643.92,
+    "vac": -5889.27
    },
    {
     "sprint": "S7",
@@ -4294,14 +4707,14 @@
     "pvPts": 230,
     "evPts": 211,
     "spiSprint": 2.14,
-    "pvReais": 6521.41,
-    "evReais": 5982.68,
-    "acReais": 6727.03,
+    "pvReais": 20527.57,
+    "evReais": 18831.81,
+    "acReais": 21177.83,
     "spi": 0.92,
     "cpi": 0.89,
-    "eac": 10475.4,
-    "etc": 3748.37,
-    "vac": -1159.1
+    "eac": 32978.34,
+    "etc": 11800.51,
+    "vac": -3653.24
    },
    {
     "sprint": "S8",
@@ -4311,14 +4724,31 @@
     "pvPts": 237,
     "evPts": 211,
     "spiSprint": 0,
-    "pvReais": 7453.04,
-    "evReais": 6635.41,
-    "acReais": 7555.85,
+    "pvReais": 23460.08,
+    "evReais": 20886.4,
+    "acReais": 23785.21,
     "spi": 0.89,
     "cpi": 0.88,
-    "eac": 10608.63,
-    "etc": 3052.78,
-    "vac": -1292.33
+    "eac": 33395.11,
+    "etc": 9609.9,
+    "vac": -4070.01
+   },
+   {
+    "sprint": "S9",
+    "fim": "2026-06-22",
+    "emAndamento": false,
+    "prp": 237,
+    "pvPts": 237,
+    "evPts": 211,
+    "spiSprint": null,
+    "pvReais": 26392.59,
+    "evReais": 23497.2,
+    "acReais": 26392.59,
+    "spi": 0.89,
+    "cpi": 0.89,
+    "eac": 32938.62,
+    "etc": 6546.03,
+    "vac": -3613.52
    }
   ],
   "velocity": [
@@ -4369,14 +4799,143 @@
     "planejado": 7,
     "entregue": 0,
     "emAndamento": false
+   },
+   {
+    "sprint": "S9",
+    "planejado": 0,
+    "entregue": 0,
+    "emAndamento": false
    }
   ],
   "previsao": {
-   "velocidadeMedianaSP": 15.5,
+   "velocidadeMedianaSP": 15,
    "backlogAbertoEstimadoSP": 20,
-   "sprintsRestantes": 2,
-   "capacidadeRestanteSP": 31
+   "sprintsRestantes": 1,
+   "capacidadeRestanteSP": 15
   },
+  "custoPorSp": [
+   {
+    "sprint": "S1",
+    "acumulado": 55.04
+   },
+   {
+    "sprint": "S2",
+    "acumulado": 82.36
+   },
+   {
+    "sprint": "S3",
+    "acumulado": 89.36
+   },
+   {
+    "sprint": "S4",
+    "acumulado": 102.6
+   },
+   {
+    "sprint": "S5",
+    "acumulado": 82.71
+   },
+   {
+    "sprint": "S6",
+    "acumulado": 94.75
+   },
+   {
+    "sprint": "S7",
+    "acumulado": 100.37
+   },
+   {
+    "sprint": "S8",
+    "acumulado": 112.73
+   },
+   {
+    "sprint": "S9",
+    "acumulado": 125.08
+   }
+  ],
+  "custoPorSpSprint": [
+   {
+    "sprint": "S1",
+    "valor": 55.04
+   },
+   {
+    "sprint": "S2",
+    "valor": 203.6
+   },
+   {
+    "sprint": "S3",
+    "valor": 112.79
+   },
+   {
+    "sprint": "S4",
+    "valor": 209.47
+   },
+   {
+    "sprint": "S5",
+    "valor": 44.43
+   },
+   {
+    "sprint": "S6",
+    "valor": 869.13
+   },
+   {
+    "sprint": "S7",
+    "valor": 173.83
+   }
+  ],
+  "monteCarlo": {
+   "backlogSp": 20,
+   "p50": 2,
+   "p85": 2,
+   "p95": 3,
+   "media": 1.7,
+   "sprintsRestantes": 1
+  },
+  "qualidadeVelocidade": [
+   {
+    "sprint": "S1",
+    "entregueSP": 71,
+    "coberturaFim": null
+   },
+   {
+    "sprint": "S2",
+    "entregueSP": 16,
+    "coberturaFim": 91.2
+   },
+   {
+    "sprint": "S3",
+    "entregueSP": 26,
+    "coberturaFim": 89.7
+   },
+   {
+    "sprint": "S4",
+    "entregueSP": 14,
+    "coberturaFim": 90.7
+   },
+   {
+    "sprint": "S5",
+    "entregueSP": 66,
+    "coberturaFim": 93.9
+   },
+   {
+    "sprint": "S6",
+    "entregueSP": 3,
+    "coberturaFim": 94.4
+   },
+   {
+    "sprint": "S7",
+    "entregueSP": 15,
+    "coberturaFim": 94.5
+   },
+   {
+    "sprint": "S8",
+    "entregueSP": 0,
+    "coberturaFim": 94.5
+   },
+   {
+    "sprint": "S9",
+    "entregueSP": 0,
+    "coberturaFim": 94.5
+   }
+  ],
   "releases": [
    {
     "nome": "Release Major 1",

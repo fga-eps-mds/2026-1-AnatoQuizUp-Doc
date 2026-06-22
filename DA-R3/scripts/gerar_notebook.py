@@ -207,10 +207,10 @@ cells.append(md("""## 3. Eixo Projeto — AgileEVM com correção metodológica
 | **PV (SP)** | Σ story points **planejados** acumulados | escopo planejado por sprint: relatórios publicados (S1–S4); ZenHub medido (S5+) |
 | **EV (SP)** | Σ story points **entregues** acumulados | fechamentos com estimate por janela de sprint |
 | **SPI** | `EV(SP) / PV(SP)` | — |
-| **BAC** | orçamento da release | R$ 931,63/sprint (baseline 9 pessoas, 4 h/sem) × 10 sprints = **R$ 9.316,30** |
-| **PV (R$)** | `R$ 931,63 × sprints decorridas` (orçamento previsto acumulado) | Plano de Custos |
+| **BAC** | orçamento da release | R$ 2.932,51/sprint (baseline 9 pessoas, 14 h/sem) × 10 sprints = **R$ 29.325,10** (fatia de desenvolvimento do total de R$ 49.852 do Plano de Custos) |
+| **PV (R$)** | `R$ 2.932,51 × sprints decorridas` (orçamento previsto acumulado) | Plano de Custos |
 | **EV (R$)** | `SPI × PV(R$)` (valor agregado em R$) | — |
-| **AC (R$)** | custo **real** incorrido acumulado | equipe efetiva por sprint (12 → 10 → 9 → 8) × regime de 4 h/sem do Plano de Custos |
+| **AC (R$)** | custo **real** incorrido acumulado | equipe efetiva por sprint (12 → 10 → 9 → 8), carga de 14 h/sem do Plano de Custos |
 | **CPI** | `EV(R$) / AC(R$)` | — |
 | **EAC / ETC / VAC** | `BAC / CPI` · `EAC − AC` · `BAC − EAC` | — |
 
@@ -266,7 +266,7 @@ cells.append(md("""### Interpretação — Projeto (planejado × realizado)
 - **Escopo/cronograma (SPI termina em 0,89):** medido pelo registro inicial, o SPI era 0,66 — mas isso era um **artefato de medição**, não de entrega. O board tinha um grande **débito de estimativa**: ~60 SP de trabalho realmente entregue (turmas, recompensas, listas, quiz, cadastro de professor, dashboards, amizades) estava sem `estimate` e por isso não contava no EV. A equipe pontuou esses cards (sizing retrospectivo, 31 cards em duas levas) e o SPI corrigido é **0,89** — ou seja, o time entregou ~89% do que planejou; o board é que escondia isso.
 - **⚠ Limitação honesta — bulk-close nas releases:** este time fecha issues em lote no fim de cada release (R1 em 27/04, R2 em 25/05). Por isso a **velocity por sprint é pouco confiável**: a S5 (que termina na R2) aparece com 66 SP entregues contra 30 planejados, porque concentrou o fechamento de trabalho feito ao longo de toda a R2 (S2–S5). A leitura correta é **cumulativa / por release**, não sprint a sprint. As duplicatas (trackers de US no Doc que espelham trabalho de código) foram **excluídas** do EV para não contar dobrado.
 - **Débito de estimativa corrigido (transparência):** na coleta de 12/06, S5 media 27 SP e S6–S8 mediam ~0 SP entregues, porque vários cards entregues fecharam sem pontuação. Em 14/06 a equipe pontuou esses cards (sizing retrospectivo do esforço real) e as estimativas foram gravadas no ZenHub. Resultado medido: **S5 27 → 48 SP** e **S7 0 → 15 SP**. Não é maquiar número — é completar um registro que faltava, com a estimativa do próprio time, e está documentado (script `aplicar-estimativas.mjs`).
-- **Custo (CPI ≈ 0,80):** o custo real incorrido supera levemente o valor agregado; **EAC ≈ R$ 11,6 mil contra BAC de R$ 9,3 mil (VAC ≈ −R$ 2,3 mil)**. Desvio de custo moderado e estável — a equipe efetiva (média ~9,3) ficou perto do baseline de 9.
+- **Custo (CPI ≈ 0,88):** o custo real incorrido supera levemente o valor agregado; **EAC ≈ R$ 33,4 mil contra BAC de R$ 29,3 mil (VAC ≈ −R$ 4,1 mil)**, usando a base de 14 h/sem do Plano de Custos. Desvio de custo moderado e estável — a equipe efetiva (média ~9) ficou perto do baseline de 9.
 - **SPI ≈ CPI, mas agora por um motivo real:** a equipe efetiva (média ~9,3 pessoas) acompanhou o baseline de 9, então o custo por sprint ficou perto do orçado — o gap para 1,0 é quase todo de **escopo**, não de custo. Diferente do modelo antigo, onde SPI ≡ CPI era imposto por definição (AC = orçamento da sprint). As curvas PV(R\\$) e AC(R\\$) aparecem separadas no gráfico para comprovar.
 - **A leitura gerencial honesta:** o risco do projeto nunca foi custo — foi **gestão de escopo**. A correção do EVM torna isso visível e mensurável.
 - **A S6–S8 mediam ≈ 0 SP por artefato de medição** (cards entregues sem pontuação). Após a correção do débito de estimativa, S7 passou a refletir os 15 SP realmente entregues; a S6/S8 seguem baixas porque o restante do trabalho do período veio como PRs ainda atrelados a cards sem ponto ou a issues fechadas tarde — segue como ação contínua (D7).
@@ -312,7 +312,7 @@ cells.append(md("""## 6. Uso crítico de IA na construção e interpretação
 
 **Aceito (com verificação):**
 - Extração via APIs (ZenHub GraphQL + REST de eventos, GitHub, SonarCloud `component_tree`) com dados brutos versionados para auditoria.
-- **Correção do modelo EVM**: a IA diagnosticou que AC = BAC por sprint forçava SPI ≡ CPI e propôs o AgileEVM cumulativo com AC pela equipe efetiva — aceito após conferência manual dos custos (R$ 1.034,46 da S2 e R$ 931,65 das S3–S5 reproduzidos pela fórmula do Plano de Custos).
+- **Correção do modelo EVM**: a IA diagnosticou que AC = BAC por sprint forçava SPI ≡ CPI e propôs o AgileEVM cumulativo com AC pela equipe efetiva — aceito após conferência manual contra o Plano de Custos (custo semanal baseline R$ 2.932,51 para 9 pessoas a 14 h/sem, batendo com o total documentado de R$ 49.852).
 - Cálculo dos limites WIP pela Lei de Little a partir dos eventos reais do board.
 
 **Rejeitado / corrigido pelo time:**

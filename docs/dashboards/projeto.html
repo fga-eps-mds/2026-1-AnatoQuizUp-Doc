@@ -19,6 +19,26 @@
     <a href="canvas.html">Canvas</a>
   </nav>
 
+  <div class="secao-nova">
+    <div class="titulo-nova"><h2>Eficiência de custo e previsão de entrega</h2></div>
+    <p class="sub-nova">Cruzam custo (Plano de Custos), qualidade (SonarCloud) e entrega para orientar as decisões de orçamento e escopo da R3.</p>
+    <div class="cartoes" id="cartoes-novos-projeto"></div>
+    <div class="grade-2">
+      <div>
+        <h3>Custo por SP entregue (R$/SP) — eficiência por sprint</h3>
+        <div class="grafico"><canvas id="grafico-custo-sp"></canvas></div>
+        <span class="badge-decisao">identificar sprints caras e orçar a R3.</span>
+      </div>
+      <div>
+        <h3>Qualidade × Velocidade — cobertura sobe com a entrega?</h3>
+        <div class="grafico"><canvas id="grafico-qual-vel"></canvas></div>
+        <span class="badge-decisao">velocidade não está custando qualidade.</span>
+      </div>
+    </div>
+    <div class="nota" id="nota-montecarlo"></div>
+  </div>
+
+  <div class="secao-contexto-label"><h2>Contexto operacional — EVM e releases (base do projeto)</h2></div>
   <div class="faixa-titulo">
     <h2>Eixo Projeto — Agile EVM &amp; acompanhamento de releases</h2>
     <span class="meta" id="meta-projeto"></span>
@@ -67,7 +87,7 @@
     <h3>Nota metodológica — correção do modelo EVM</h3>
     <ul>
       <li><strong>Modelo anterior (sprints 2–5):</strong> EVM isolado por sprint com AC = orçamento integral da sprint — forçava SPI ≡ CPI (o índice de custo não trazia informação) e impedia projeção de término (EAC).</li>
-      <li><strong>Modelo atual:</strong> série <em>cumulativa</em> em story points, no mesmo enquadramento do exemplo da disciplina. Cronograma: <code>PV(SP) = Σ planejado</code>, <code>EV(SP) = Σ entregue</code>, <code>SPI = EV/PV</code>. Custo: <code>PV(R$) = R$ 931,63 × sprints decorridas</code>, <code>EV(R$) = SPI × PV(R$)</code>, <code>AC(R$) = custo real incorrido</code> (equipe efetiva 12 → 10 → 9 → 8 × regime de 4 h/sem do Plano de Custos), <code>CPI = EV/AC</code>, <code>EAC = BAC/CPI</code>, <code>VAC = BAC − EAC</code>.</li>
+      <li><strong>Modelo atual:</strong> série <em>cumulativa</em> em story points, no mesmo enquadramento do exemplo da disciplina. Cronograma: <code>PV(SP) = Σ planejado</code>, <code>EV(SP) = Σ entregue</code>, <code>SPI = EV/PV</code>. Custo: <code>PV(R$) = R$ 2.932,51 × sprints decorridas</code>, <code>EV(R$) = SPI × PV(R$)</code>, <code>AC(R$) = custo real incorrido</code> (equipe efetiva 12 → 10 → 9 → 8, carga de 14 h/sem do Plano de Custos), <code>CPI = EV/AC</code>, <code>EAC = BAC/CPI</code>, <code>VAC = BAC − EAC</code>.</li>
       <li><strong>Por que SPI ≈ CPI agora (sem ser o bug antigo):</strong> a equipe efetiva (média ~9,3 pessoas) acompanhou de perto o baseline de 9, então o custo real ficou próximo do orçamento previsto — o afastamento de 1,0 é quase todo de <em>escopo</em>, não de custo. As curvas PV(R$) e AC(R$) aparecem separadas no gráfico ao lado para evidenciar isso (antes eram idênticas por definição).</li>
       <li><strong>Leitura conjunta:</strong> SPI termina em ~0,89 (entrega de ~89% do planejado). O 0,66 do registro inicial era <em>artefato de medição</em>: a equipe quitou o <em>débito de estimativa</em> (31 cards / ~60 SP de trabalho real sem pontuação no board) e excluiu as duplicatas de tracker do Doc. <strong>Caveat honesto:</strong> a velocity por sprint é distorcida pelo <em>bulk-close</em> nas releases (R1 27/04, R2 25/05) — a S5 mostra 66 SP porque concentrou o fechamento de toda a R2; leia o cumulativo, não sprint a sprint.</li>
       <li><strong>Fontes:</strong> S1–S4 dos relatórios de sprint publicados; S5+ medido do ZenHub (sprints e fechamentos com estimate na janela). O time não registra horas reais desde a S1 — AC usa a aproximação de equipe efetiva; com registro de horas, basta substituir no consolidador. Sprints com baixa disciplina de estimativa estão sinalizadas na tabela.</li>
@@ -84,7 +104,7 @@
         <tr><td>PV (= VP)</td><td>Planned Value</td><td>Valor Planejado — quanto de trabalho <em>deveria</em> estar feito até agora</td></tr>
         <tr><td>EV (= VA)</td><td>Earned Value</td><td>Valor Agregado — quanto <em>de fato</em> foi entregue (medido)</td></tr>
         <tr><td>AC (= CR)</td><td>Actual Cost</td><td>Custo Real — quanto custou de verdade o que foi feito</td></tr>
-        <tr><td>BAC</td><td>Budget At Completion</td><td>Orçamento No Término — orçamento total previsto da release (aqui R$ 9.316,30)</td></tr>
+        <tr><td>BAC</td><td>Budget At Completion</td><td>Orçamento No Término — orçamento das 10 sprints de desenvolvimento (aqui R$ 29.325,10, do Plano de Custos)</td></tr>
       </tbody>
     </table>
     <div class="grupo-gloss">Índices de desempenho</div>
@@ -137,6 +157,42 @@ const serie = J.evm;
 const fechadaIdx = serie.findLastIndex((p) => !p.emAndamento);
 const ultimaFechada = serie[fechadaIdx];
 const atual = serie.at(-1);
+
+// ============ SEÇÃO NOVA — métricas analíticas próprias ============
+const rsSpFim = J.custoPorSp.at(-1)?.acumulado;
+const mc = J.monteCarlo;
+const qv = J.qualidadeVelocidade.filter((q) => q.coberturaFim != null);
+const cobUlt = qv.at(-1)?.coberturaFim, cobPri = qv[0]?.coberturaFim;
+const cabe = mc && mc.p85 <= mc.sprintsRestantes;
+const cartoesNovosProj = [
+  { nome: "Custo por SP entregue (acumulado)", valor: reais(rsSpFim), cls: "azul", sub: "AC ÷ EV — cruza Plano de Custos × velocity" },
+  { nome: "Previsão Monte Carlo da R3 (P85)", valor: mc ? `${mc.p85} sprints` : "—", cls: cabe ? "verde" : "vermelho", sub: mc ? `85% de confiança p/ ${mc.backlogSp} SP · restam ${mc.sprintsRestantes} sprints` : "—" },
+  { nome: "Cobertura ao longo do projeto", valor: cobUlt ? `${fmt(cobUlt, 1)}%` : "—", cls: "verde", sub: cobPri ? `subiu de ${fmt(cobPri, 1)}% — qualidade preservada` : "—" },
+  { nome: "Veredito Monte Carlo", valor: cabe ? "CABE ✓" : "NÃO CABE", cls: cabe ? "verde" : "vermelho", sub: `backlog ${mc?.backlogSp} SP em ${mc?.p85} sprints (P85) vs ${mc?.sprintsRestantes} restantes` },
+];
+document.getElementById("cartoes-novos-projeto").innerHTML = cartoesNovosProj.map((c) => `
+  <div class="cartao"><div class="nome">${c.nome}</div><div class="valor ${c.cls}" style="font-size:1.6rem">${c.valor}</div><div class="rotulo">${c.sub}</div></div>`).join("");
+
+new Chart(document.getElementById("grafico-custo-sp"), {
+  type: "bar",
+  data: { labels: J.custoPorSpSprint.map((c) => c.sprint), datasets: [{ label: "R$ por SP entregue na sprint", data: J.custoPorSpSprint.map((c) => c.valor), backgroundColor: J.custoPorSpSprint.map((c) => c.valor > 100 ? VERMELHO : c.valor > 50 ? AMARELO : VERDE) }] },
+  options: { maintainAspectRatio: false, plugins: { legend: { display: false }, tooltip: { callbacks: { label: (c) => ` R$ ${fmt(c.parsed.y)}/SP` } } }, scales: { y: { title: { display: true, text: "R$/SP" } } } },
+});
+
+new Chart(document.getElementById("grafico-qual-vel"), {
+  data: {
+    labels: qv.map((q) => q.sprint),
+    datasets: [
+      { type: "bar", label: "SP entregues", data: qv.map((q) => q.entregueSP), backgroundColor: AZUL_CLARO, yAxisID: "y" },
+      { type: "line", label: "Cobertura (%)", data: qv.map((q) => q.coberturaFim), borderColor: VERDE, backgroundColor: VERDE, tension: .2, yAxisID: "y2" },
+    ],
+  },
+  options: { maintainAspectRatio: false, plugins: { legend: { position: "bottom" } }, scales: { y: { position: "left", title: { display: true, text: "SP" } }, y2: { position: "right", min: 80, max: 100, title: { display: true, text: "cobertura %" }, grid: { drawOnChartArea: false } } } },
+});
+
+document.getElementById("nota-montecarlo").innerHTML = mc ? `
+  <h3>Previsão Monte Carlo — como lemos</h3>
+  <p style="margin:4px 0">Simulamos 10 000 futuros sorteando a velocity das sprints passadas até zerar o backlog estimado de <strong>${mc.backlogSp} SP</strong>. Resultado: <strong>P50 = ${mc.p50}</strong>, <strong>P85 = ${mc.p85}</strong>, <strong>P95 = ${mc.p95}</strong> sprints. Como restam <strong>${mc.sprintsRestantes} sprints</strong> até a R3, o escopo estimado <strong>${cabe ? "cabe com folga" : "NÃO cabe — repriorizar"}</strong> (com 85% de confiança). Diferente da projeção linear do ZenHub, isso dá um intervalo de confiança.</p>` : "";
 
 document.getElementById("meta-projeto").textContent =
   `Sprint atual: ${sprintAtual ? `${sprintAtual.id} (${sprintAtual.inicio.slice(5)} → ${sprintAtual.fim.slice(5)})` : "—"} · ${D.geradoEm.slice(0, 10)}`;

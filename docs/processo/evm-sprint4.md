@@ -1,5 +1,9 @@
 # EVM Ágil — Sprint 4
 
+!!! warning "Modelo superado — ver EVM Consolidado"
+    Esta página calcula o EVM **por sprint isolada com `AC = BAC`** (custo realizado = planejado), o que força **CPI ≡ SPI** e impede projeção de término. O cálculo **corrigido e cumulativo** (`AC` = custo da equipe efetiva, independente do orçamento) está em **[EVM Consolidado](evm-consolidado.md)** e no [Dashboard de Projeto](https://fga-eps-mds.github.io/2026-1-AnatoQuizUp-Doc/dashboards/projeto.html).
+
+
 O EVM (*Earned Value Management*) é usado para acompanhar a relação entre o valor planejado, o valor efetivamente agregado e o custo consumido pelo projeto. Neste documento, o EVM foi adaptado ao contexto ágil usando pontos de história/cards como medida de escopo e o [Plano de Custos](plano-de-custos.md) como base para o custo financeiro estimado da sprint.
 
 ## Legenda

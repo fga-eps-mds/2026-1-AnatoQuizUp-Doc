@@ -28,6 +28,7 @@ nav:
           - Release Major 3: backlog/release-major-3.md
       - Acompanhamento por Sprint:
           - Visão Geral das Sprints: processo/sprints.md
+          - EVM Consolidado (corrigido): processo/evm-consolidado.md
           - Sprint 1:
               - EVM: processo/evm-sprint1.md
           - Sprint 2:

@@ -61,11 +61,11 @@ const SPRINTS = [
   { id: "S10", inicio: "2026-06-23", fim: "2026-06-29", equipe: 8, planejadoSP: null, entregueSP: null, fontePlanejado: "futuro", fonteEntregue: "futuro" },
 ];
 
-// Plano de custos (docs/processo/plano-de-custos.md), regime de 4 h/sem por
-// pessoa adotado nos EVMs das sprints 2–5:
-//   trabalho 309,02×(4/14) + computador 13,46 + energia 1,26×(4/10) + internet 1,39×(4/10)
-const CUSTO_POR_PESSOA_SEMANA = 88.29 + 13.46 + 0.504 + 0.556; // 102,81
-const CUSTO_FIXO_SEMANA = 6.34; // Railway Hobby
+// Plano de custos (docs/processo/plano-de-custos.md), carga DOCUMENTADA de 14 h/sem
+// por pessoa (4h presencial + 10h remota) — a mesma base do total de R$ 49.852,38:
+//   trabalho 309,02 + computador 13,46 + energia 1,26 + internet 1,39 = 325,13/pessoa
+const CUSTO_POR_PESSOA_SEMANA = 309.02 + 13.46 + 1.26 + 1.39; // 325,13
+const CUSTO_FIXO_SEMANA = 6.34; // Railway Hobby (fixo, por equipe)
 const EQUIPE_BASELINE = 9; // baseline do plano de custos
 const custoSemana = (pessoas) => pessoas * CUSTO_POR_PESSOA_SEMANA + CUSTO_FIXO_SEMANA;
 
@@ -319,8 +319,60 @@ for (const [repo, itens] of Object.entries(github)) {
   }
 }
 
+// ===== MÉTRICAS ANALÍTICAS NOVAS (não existem no ZenHub) =====
+
+// Flow Efficiency = cycle time / lead time. Fração do tempo em que a tarefa está
+// sendo trabalhada vs esperando em fila. Lean/Kanban; ZenHub não calcula.
+const ltMedianaFluxo = mediana(leadTimes.filter((l) => l.fluxo).map((l) => l.dias)) ?? 0;
+const ctMediana = mediana(cycleTimes.map((c) => c.dias)) ?? 0;
+const flowEfficiency = {
+  valor: ltMedianaFluxo ? arred(ctMediana / ltMedianaFluxo, 3) : null,
+  cycleMediana: arred(ctMediana, 2),
+  leadMediana: arred(ltMedianaFluxo, 2),
+  esperaMediana: arred(ltMedianaFluxo - ctMediana, 2),
+};
+
+// Taxa de retrabalho: issues de fluxo que passaram por Rework ou voltaram do Review/QA
+function teveRetrabalho(issue) {
+  const trechos = linhas.get(issue) ?? [];
+  if (trechos.some((t) => t.pipeline === "Rework")) return true;
+  for (let k = 1; k < trechos.length; k++) {
+    if (trechos[k - 1].pipeline === "Review/QA" && ["In Progress", "Sprint Backlog", "Rework"].includes(trechos[k].pipeline)) return true;
+  }
+  return false;
+}
+const fluxoFechadas = fechadas.filter(passouEmProgresso);
+const comRetrabalho = fluxoFechadas.filter(teveRetrabalho);
+const retrabalho = {
+  base: fluxoFechadas.length,
+  comRetrabalho: comRetrabalho.length,
+  taxa: fluxoFechadas.length ? arred(comRetrabalho.length / fluxoFechadas.length, 3) : null,
+  exemplos: comRetrabalho.slice(0, 8).map((i) => `${i.repo.replace("2026-1-AnatoQuizUp-", "")}#${i.numero}`),
+};
+
+// Aging do WIP atual: itens abertos em pipeline ativa, dias na pipeline atual
+const agora = new Date().toISOString();
+const agingWip = naoPr
+  .filter((i) => !i.fechadaEm && PIPELINES_ATIVAS.includes(i.pipeline))
+  .map((i) => {
+    const trechos = linhas.get(i);
+    const entrada = trechos?.length ? trechos.at(-1).de : i.criadaEm;
+    return { repo: i.repo.replace("2026-1-AnatoQuizUp-", ""), numero: i.numero, titulo: i.titulo, pipeline: i.pipeline, diasNaPipeline: arred(dias(entrada, agora), 1) };
+  })
+  .sort((a, b) => b.diasNaPipeline - a.diasNaPipeline);
+
+// Lei de Little empírica: WIP (de pipelines ativas) ao longo do tempo, do CFD
+const wipSerie = cfd.map((d) => ({
+  data: d.data,
+  wip: (d["In Progress"] ?? 0) + (d["Review/QA"] ?? 0) + (d["Sprint Backlog"] ?? 0) + (d["Blocked"] ?? 0) + (d["Rework"] ?? 0),
+}));
+
 const processo = {
   pipelines: workspace.pipelines.map((p) => p.name),
+  flowEfficiency,
+  retrabalho,
+  agingWip,
+  wipSerie,
   cfd,
   leadTime: {
     todas: { mediaDias: arred(media(leadTimes.map((l) => l.dias)), 2), medianaDias: arred(mediana(leadTimes.map((l) => l.dias)), 2), amostra: leadTimes.length },
@@ -427,6 +479,39 @@ const velocidadeMediana = mediana(velocidades);
 const backlogAbertoSP = naoPr.filter((i) => !i.fechadaEm && i.estimate != null).reduce((s, i) => s + i.estimate, 0);
 const sprintsRestantes = sprintsCalc.filter((s) => !s.decorrida).length;
 
+// ===== MÉTRICAS ANALÍTICAS NOVAS (cruzam fontes; não existem no ZenHub) =====
+
+// Custo por SP entregue (R$/SP) — eficiência de custo. Cruza Plano de Custos × velocity.
+const custoPorSp = serieEvm.filter((e) => e.evPts > 0).map((e) => ({ sprint: e.sprint, acumulado: arred(e.acReais / e.evPts, 2) }));
+const custoPorSpSprint = sprintsCalc.filter((s) => s.decorrida && (s.entregueSP ?? 0) > 0).map((s) => ({ sprint: s.id, valor: arred(s.custoReal / s.entregueSP, 2) }));
+
+// Previsão Monte Carlo: amostra a velocity histórica até zerar o backlog restante.
+const velsHist = sprintsCalc.filter((s) => s.decorrida).map((s) => s.entregueSP ?? 0).filter((v) => v > 0);
+function monteCarlo(backlog, sims = 10000) {
+  if (!velsHist.length || backlog <= 0) return null;
+  const res = [];
+  for (let k = 0; k < sims; k++) {
+    let resto = backlog, n = 0;
+    while (resto > 0 && n < 60) { resto -= velsHist[(Math.random() * velsHist.length) | 0]; n++; }
+    res.push(n);
+  }
+  res.sort((a, b) => a - b);
+  const pct = (p) => res[Math.min(res.length - 1, Math.floor(sims * p))];
+  return { backlogSp: backlog, p50: pct(0.5), p85: pct(0.85), p95: pct(0.95), media: arred(media(res), 1), sprintsRestantes };
+}
+const monte = monteCarlo(backlogAbertoSP);
+
+// Qualidade × Velocidade: por sprint, SP entregue vs cobertura média ao fim da sprint.
+function coberturaNaData(dataIso) {
+  const vals = [];
+  for (const r of Object.keys(produto.historico)) {
+    const ate = (produto.historico[r]?.coverage ?? []).filter((p) => p.data <= dataIso);
+    if (ate.length) vals.push(ate.at(-1).valor);
+  }
+  return vals.length ? arred(media(vals), 1) : null;
+}
+const qualidadeVelocidade = sprintsCalc.filter((s) => s.decorrida).map((s) => ({ sprint: s.id, entregueSP: s.entregueSP, coberturaFim: coberturaNaData(s.fim) }));
+
 const projeto = {
   parametros: {
     custoPorPessoaSemana: arred(CUSTO_POR_PESSOA_SEMANA, 2),
@@ -446,6 +531,10 @@ const projeto = {
     sprintsRestantes,
     capacidadeRestanteSP: velocidadeMediana != null ? arred(velocidadeMediana * sprintsRestantes, 0) : null,
   },
+  custoPorSp,
+  custoPorSpSprint,
+  monteCarlo: monte,
+  qualidadeVelocidade,
   releases: RELEASES,
 };
 

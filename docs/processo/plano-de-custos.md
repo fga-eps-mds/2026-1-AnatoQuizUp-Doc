@@ -118,6 +118,25 @@ As ferramentas de apoio utilizadas pelo projeto foram consideradas sem custo dir
 | MkDocs Material | Documentação | R$ 0,00 |
 | Figma | Protótipos e apoio visual | R$ 0,00 |
 
+### 3.7 Base de custo para o acompanhamento (EVM)
+
+O EVM do projeto usa **exatamente a mesma base de custo** estimada acima — a carga documentada de **14 h/semana** por integrante. O custo semanal por integrante (sem a hospedagem fixa) é:
+
+| Item | Valor/semana |
+|---|---:|
+| Hora de trabalho | R$ 309,02 |
+| Computadores (depreciação) | R$ 13,46 |
+| Energia | R$ 1,26 |
+| Internet | R$ 1,39 |
+| **Subtotal por integrante** | **R$ 325,13** |
+
+Com a **equipe baseline de 9 integrantes** mais a hospedagem fixa (R$ 6,34/semana):
+
+- **Custo semanal baseline:** 9 × R$ 325,13 + R$ 6,34 = **R$ 2.932,51** (≈ o custo semanal da equipe da seção 5)
+- **BAC do projeto (10 sprints de desenvolvimento, S1 19/04 → S10 29/06):** R$ 2.932,51 × 10 = **R$ 29.325,10** — é a fatia das 10 semanas de desenvolvimento dentro do total de R$ 49.852,38 (17 semanas).
+
+Esse é o orçamento (`BAC`) e a base do **Valor Planejado (`PV`)** no [EVM Consolidado](evm-consolidado.md). O **Custo Real (`AC`)** de cada sprint usa a **equipe efetiva** de cada período (12 → 10 → 9 → 8 integrantes), e **não** a baseline — é o que dá significado independente ao CPI (corrige o erro `AC = BAC` das páginas de EVM por sprint).
+
 ## 4. Planilha de Custos
 
 Os cálculos do plano de custos estão detalhados na planilha a seguir:
