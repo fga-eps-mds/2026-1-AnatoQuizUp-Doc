@@ -19,6 +19,26 @@
     <a href="canvas.html">Canvas</a>
   </nav>
 
+  <div class="secao-nova">
+    <div class="titulo-nova"><h2>Eficiência de fluxo e capacidade</h2></div>
+    <p class="sub-nova">Indicadores de Lean/Kanban — eficiência de fluxo, retrabalho e limites de WIP pela Lei de Little — que orientam decisões de processo.</p>
+    <div class="cartoes" id="cartoes-novos-processo"></div>
+    <div class="grade-2">
+      <div>
+        <h3>Eficiência de Fluxo — tempo trabalhando × esperando</h3>
+        <div class="grafico"><canvas id="grafico-flow"></canvas></div>
+        <p class="rotulo" id="legenda-flow" style="color:var(--cinza);font-size:.85rem"></p>
+        <span class="badge-decisao">atacar a fila de entrada (Sprint Backlog), não a execução.</span>
+      </div>
+      <div>
+        <h3>Aging do WIP atual — o que desbloquear hoje</h3>
+        <table class="tabela" id="tabela-aging"></table>
+        <span class="badge-decisao">priorizar o desbloqueio dos itens mais antigos.</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="secao-contexto-label"><h2>Contexto operacional — dados de base do board</h2></div>
   <div class="faixa-titulo">
     <h2>Eixo Processo — fluxo, lead/cycle time &amp; GitHub</h2>
     <span class="meta" id="meta-processo"></span>
@@ -129,6 +149,32 @@ const fmt = (v, c = 1) => v == null ? "—" : v.toFixed(c).replace(".", ",");
 
 document.getElementById("meta-processo").textContent =
   `${P.higiene.totalIssues} issues · ${P.prs.total} PRs · ${D.geradoEm.slice(0, 10)}`;
+
+// ============ SEÇÃO NOVA — métricas analíticas próprias ============
+const fe = P.flowEfficiency;
+const L = P.leiDeLittle.etapas;
+const cartoesNovos = [
+  { nome: "Flow Efficiency (eficiência de fluxo)", valor: `${Math.round(fe.valor * 100)}%`, cls: fe.valor >= 0.4 ? "verde" : fe.valor >= 0.25 ? "amarelo" : "vermelho", sub: `cycle ${fmt(fe.cycleMediana)}d ÷ lead ${fmt(fe.leadMediana)}d — ${100 - Math.round(fe.valor * 100)}% do tempo é espera` },
+  { nome: "Taxa de retrabalho", valor: `${Math.round(P.retrabalho.taxa * 100)}%`, cls: P.retrabalho.taxa <= 0.1 ? "verde" : P.retrabalho.taxa <= 0.25 ? "amarelo" : "vermelho", sub: `${P.retrabalho.comRetrabalho} de ${P.retrabalho.base} issues voltaram p/ Rework/Review` },
+  { nome: "Limite WIP — In Progress (Lei de Little)", valor: `≤ ${L["In Progress"].wipComMargem50}`, cls: "azul", sub: `WIP = TP × LT = ${P.leiDeLittle.tpDiaUtil}/dia × ${fmt(L["In Progress"].ltMedioDias)}d` },
+  { nome: "Itens parados no WIP agora", valor: P.agingWip.length, cls: P.agingWip.length > 5 ? "vermelho" : "amarelo", sub: P.agingWip[0] ? `mais antigo: ${P.agingWip[0].repo}#${P.agingWip[0].numero} há ${fmt(P.agingWip[0].diasNaPipeline)}d` : "—" },
+];
+document.getElementById("cartoes-novos-processo").innerHTML = cartoesNovos.map((c) => `
+  <div class="cartao"><div class="nome">${c.nome}</div><div class="valor ${c.cls}" style="font-size:1.7rem">${c.valor}</div><div class="rotulo">${c.sub}</div></div>`).join("");
+
+// Flow Efficiency — donut: trabalhando vs esperando
+new Chart(document.getElementById("grafico-flow"), {
+  type: "doughnut",
+  data: { labels: [`Trabalhando (cycle) ${fmt(fe.cycleMediana)}d`, `Esperando em fila ${fmt(fe.esperaMediana)}d`], datasets: [{ data: [fe.cycleMediana, fe.esperaMediana], backgroundColor: [VERDE, "#e0e0e0"] }] },
+  options: { maintainAspectRatio: false, plugins: { legend: { position: "bottom" }, tooltip: { callbacks: { label: (c) => ` ${c.label}` } } } },
+});
+document.getElementById("legenda-flow").textContent =
+  `Só ${Math.round(fe.valor * 100)}% do lead time (${fmt(fe.leadMediana)}d) é trabalho ativo; ${fmt(fe.esperaMediana)}d são espera em fila — o gargalo é a entrada, não a execução.`;
+
+// Aging do WIP atual
+document.getElementById("tabela-aging").innerHTML = P.agingWip.length === 0
+  ? `<tbody><tr><td>Nenhum item parado em pipeline ativa.</td></tr></tbody>`
+  : `<thead><tr><th>Item</th><th>Pipeline</th><th class="num">Dias parado</th></tr></thead><tbody>${P.agingWip.slice(0, 8).map((a) => `<tr><td>${a.repo}#${a.numero}</td><td>${a.pipeline}</td><td class="num"><span class="selo ${a.diasNaPipeline > 14 ? "vermelho" : a.diasNaPipeline > 7 ? "amarelo" : "verde"}">${fmt(a.diasNaPipeline)}</span></td></tr>`).join("")}</tbody>`;
 
 // ---- cartões de fluxo
 const ultimaSemana = P.throughputSemanal.at(-1) ?? { fechadas: 0 };

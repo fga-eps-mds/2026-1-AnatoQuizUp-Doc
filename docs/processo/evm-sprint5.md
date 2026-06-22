@@ -1,5 +1,9 @@
 # EVM Ágil — Sprint 5
 
+!!! warning "Modelo superado — ver EVM Consolidado"
+    Esta página calcula o EVM **por sprint isolada com `AC = BAC`** (custo realizado = planejado), o que força **CPI ≡ SPI** e impede projeção de término. O cálculo **corrigido e cumulativo** (`AC` = custo da equipe efetiva, independente do orçamento) está em **[EVM Consolidado](evm-consolidado.md)** e no [Dashboard de Projeto](https://fga-eps-mds.github.io/2026-1-AnatoQuizUp-Doc/dashboards/projeto.html).
+
+
 !!! warning "Sprint em andamento"
     Este EVM registra a situação parcial da Sprint 5. Como a sprint ainda não foi finalizada, os valores de pontos concluídos, EV, CPI e SPI devem ser revisados no fechamento.
 
