@@ -25,3 +25,4 @@ Os dados brutos de cada coleta ficam versionados em `DA-R3/dados/`, garantindo r
 |------|--------|-----------|-----------|
 | 12/06/2026 | 1.0 | Criação dos dashboards do eixo de processo e projeto com dados reais de ZenHub, GitHub e SonarCloud | [Miguel Moreira](https://github.com/EhOMiguel) |
 | 22/06/2026 | 2.0 | Criação do dashboards do eixo de produto Q-Rapids por repositório com dados do SonarCloud | [Bruno Ricardo](https://github.com/EhOBruno) |
+| 23/06/2026 | 2.1 | Correção de algumas fórmulas e pesos do Dashboard de Produto | [Bruno Ricardo](https://github.com/EhOBruno) |
