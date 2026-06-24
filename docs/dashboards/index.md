@@ -4,7 +4,7 @@ Painéis técnico-gerenciais do AnatoQuizUp com dados reais de execução do pro
 
 | Eixo | Painel | Embasamento |
 |------|--------|-------------|
-| **Produto** | [Dashboard de Produto](produto/){target=_blank} | Modelo Q-Rapids/MeasureSoftGram com pesos e faixas do [Plano de Qualidade](../qualidade/qualidade.md): indicadores estratégicos (Qualidade do Produto, Bloqueios, Prontidão) como densidades normalizadas [0–1] |
+| **Produto** | [Dashboard de Produto](produto/){target=_blank} | Modelo Q-Rapids e Analytics da Disciplina |
 | **Processo** | [Dashboard de Processo](processo.html){target=_blank} | Kanban: Cumulative Flow Diagram, lead/cycle time, throughput e limites WIP calculados pela **Lei de Little** (WIP = TP × LT, algoritmo de Brechner) sobre os eventos reais do board |
 | **Projeto** | [Dashboard de Projeto](projeto.html){target=_blank} | **AgileEVM** (Sulaiman/Barton/Blackburn) cumulativo: SPI em story points, CPI em R$ com PV na equipe baseline do [Plano de Custos](../processo/plano-de-custos.md) e AC na equipe efetiva por sprint |
 | **Síntese** | [Canvas Analytics](canvas.html){target=_blank} | Síntese visual de uma página: indicadores-chave dos três eixos, planejado × realizado e decisões orientadas a dados |

@@ -5,10 +5,11 @@ import { fileURLToPath } from "node:url";
 const AQUI = dirname(fileURLToPath(import.meta.url));
 const DOCS_RAIZ = join(AQUI, "..", "..", "..");
 const RAW_DATA = join(DOCS_RAIZ, "analytics-raw-data");
+const TEST_RESULTS_MANUAIS = join(RAW_DATA, "test-results-manuais");
 
 const PESOS_QRAPIDS = { complexidade: 0.35, comentarios: 0.10, duplicacao: 0.25, cobertura: 0.30 };
 const PESOS_NOTEBOOK = {
-  codeQuality: { complexidade: 0.40, comentarios: 0.20, duplicacao: 0.40 },
+  codeQuality: { complexidade: 0.33, comentarios: 0.33, duplicacao: 0.33 },
   testingStatus: { testSuccess: 0.25, fastTests: 0.25, cobertura: 0.50 },
   maintainability: 0.50,
   reliability: 0.50,
@@ -76,6 +77,14 @@ async function lerJson(pasta, nome) {
   return JSON.parse(await readFile(join(RAW_DATA, pasta, nome), "utf8"));
 }
 
+async function lerResultadoTestesManual(repo) {
+  try {
+    return JSON.parse(await readFile(join(TEST_RESULTS_MANUAIS, `${repo}.json`), "utf8"));
+  } catch {
+    return null;
+  }
+}
+
 function medidasParaObjeto(lista = []) {
   return Object.fromEntries(lista.map((m) => [m.metric, numero(m.value)]));
 }
@@ -90,12 +99,16 @@ function densidadesQRapids(componentes = []) {
     .map((c) => ({ caminho: c.path, medidas: medidasComponente(c) }))
     .filter((a) => (a.medidas.ncloc ?? 0) > 0);
 
-  const comFuncoes = arquivos.filter((a) => (a.medidas.functions ?? 0) > 0);
   const comCobertura = arquivos.filter((a) => a.medidas.coverage !== undefined);
   const frac = (lista, pred) => lista.length ? lista.filter(pred).length / lista.length : null;
 
   return {
-    complexidade: frac(comFuncoes, (a) => a.medidas.complexity / a.medidas.functions <= 10),
+    // Q-Rapids: arquivos não complexos / total de arquivos. Arquivos sem
+    // funções são não complexos, pois não possuem função acima do limite.
+    complexidade: frac(arquivos, (a) => {
+      const funcoes = a.medidas.functions ?? 0;
+      return funcoes === 0 || (a.medidas.complexity ?? 0) / funcoes <= 10;
+    }),
     comentarios: frac(arquivos, (a) => (a.medidas.comment_lines_density ?? 0) >= 10 && (a.medidas.comment_lines_density ?? 0) <= 30),
     duplicacao: frac(arquivos, (a) => (a.medidas.duplicated_lines_density ?? 0) < 5),
     cobertura: frac(comCobertura, (a) => a.medidas.coverage >= 80),
@@ -110,13 +123,17 @@ function qualidadeProduto(dens) {
   return parcelas.length ? arred(parcelas.reduce((a, b) => a + b, 0), 2) : null;
 }
 
-function metricasTeste(componentes = [], runs = []) {
-  const testes = componentes
-    .filter((c) => c.qualifier === "UTS")
-    .map((c) => medidasComponente(c));
-
-  const suitesAvaliadas = testes.filter((m) => Number.isFinite(m.test_errors) || Number.isFinite(m.test_failures));
-  const suitesAprovadas = suitesAvaliadas.filter((m) => (m.test_errors ?? 0) === 0 && (m.test_failures ?? 0) === 0);
+function metricasTeste(medidas = {}, runs = [], resultadoManual = null) {
+  const totalTestesManual = resultadoManual?.numTotalTests;
+  const errosManual = resultadoManual?.numRuntimeErrorTestSuites;
+  const falhasManual = resultadoManual?.numFailedTests;
+  const totalTestes = Number.isFinite(totalTestesManual) ? totalTestesManual : medidas.tests;
+  const erros = Number.isFinite(errosManual) ? errosManual : medidas.test_errors;
+  const falhas = Number.isFinite(falhasManual) ? falhasManual : medidas.test_failures;
+  const possuiContagens = Number.isFinite(totalTestes)
+    && totalTestes > 0
+    && Number.isFinite(erros)
+    && Number.isFinite(falhas);
   const buildsDeTeste = runs
     .filter((run) => run.status === "completed" && /(^|\W)ci(\W|$)/i.test(run.name ?? ""))
     .map((run) => ({ inicio: new Date(run.run_started_at), fim: new Date(run.updated_at) }))
@@ -124,13 +141,18 @@ function metricasTeste(componentes = [], runs = []) {
   const buildsRapidos = buildsDeTeste.filter(({ inicio, fim }) => fim - inicio < 300000);
 
   return {
-    testSuccess: suitesAvaliadas.length ? suitesAprovadas.length / suitesAvaliadas.length : null,
+    // Q-Rapids: (testes unitários - erros - falhas) / testes unitários.
+    // Não substitua pela proporção de suítes aprovadas: são grandezas
+    // diferentes. Sem as três contagens, a métrica fica indisponível.
+    testSuccess: possuiContagens
+      ? Math.max(0, totalTestes - erros - falhas) / totalTestes
+      : null,
     fastTests: buildsDeTeste.length ? buildsRapidos.length / buildsDeTeste.length : null,
   };
 }
 
-function metricasTabela(latestSonar, medidas, densidades, runs = []) {
-  const testes = metricasTeste(latestSonar?.payload?.components ?? [], runs);
+function metricasTabela(latestSonar, medidas, densidades, runs = [], resultadoManual = null) {
+  const testes = metricasTeste(medidas, runs, resultadoManual);
   const testSuccess = testes.testSuccess;
   const fastTests = testes.fastTests;
   const cobertura = densidades.cobertura ?? null;
@@ -281,6 +303,7 @@ async function montarRepositorio(repo) {
   const latestSonar = sonarFiles.at(-1);
   const latestRuns = runsFiles.at(-1);
   const latestIssues = escolherMaisRecente(arquivos, (nome) => nome.startsWith("GitHub_API-Issues-") && nome.endsWith(".json"));
+  const resultadoTestesManual = await lerResultadoTestesManual(repo.nome);
 
   const medidas = medidasParaObjeto(latestSonar?.payload?.baseComponent?.measures ?? []);
   const densidades = densidadesQRapids(latestSonar?.payload?.components ?? []);
@@ -293,17 +316,24 @@ async function montarRepositorio(repo) {
     detalheIssues: { total: 0, comDescricao: 0, fechadas: 0 },
   };
 
-  const historicoTabela = preencherAtributosAusentes([...sonarFiles].reverse().map((sonar) => {
+  const historicoTabela = preencherAtributosAusentes([...sonarFiles].reverse().map((sonar, indice) => {
     const runsDoPeriodo = runsFiles.filter((item) => item.data <= sonar.data).at(-1);
     const medidasHistoricas = medidasParaObjeto(sonar.payload?.baseComponent?.measures ?? []);
     const densidadesHistoricas = densidadesQRapids(sonar.payload?.components ?? []);
-    return metricasTabela(sonar, medidasHistoricas, densidadesHistoricas, runsDoPeriodo?.payload?.workflow_runs ?? []);
+    return metricasTabela(
+      sonar,
+      medidasHistoricas,
+      densidadesHistoricas,
+      runsDoPeriodo?.payload?.workflow_runs ?? [],
+      indice === 0 ? resultadoTestesManual : null,
+    );
   }));
 
   return {
     medidas,
     densidades,
-    tabela: historicoTabela[0] ?? metricasTabela(latestSonar, medidas, densidades, runsPayload?.workflow_runs ?? []),
+    tabela: historicoTabela[0]
+      ?? metricasTabela(latestSonar, medidas, densidades, runsPayload?.workflow_runs ?? [], resultadoTestesManual),
     qualidadeProduto: qualidade,
     indicadores: {
       qualidadeProduto: qualidade,
@@ -320,6 +350,7 @@ async function montarRepositorio(repo) {
       sonar: latestSonar?.nome ?? null,
       runs: latestRuns?.nome ?? null,
       issues: latestIssues?.nome ?? null,
+      testesManuais: resultadoTestesManual ? `${repo.nome}.json` : null,
     },
   };
 }

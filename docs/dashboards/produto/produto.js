@@ -73,12 +73,12 @@ function renderDashboard(repoInfo) {
     { tipo: "Fator de Qualidade", nome: "Reliability (Confiabilidade)", valor: t.reliability, maximo: 0.50 },
   ];
   const codeQuality = [
-    { nome: "Complexity — arquivos não complexos (ciclomática/função ≤ 10)", valor: t.complexity },
+    { nome: "Complexity — arquivos não complexos (nenhuma função com complexidade ciclomática > 10)", valor: t.complexity },
     { nome: "Comments — arquivos com linhas de comentários aceitáveis (10–30%)", valor: t.comments },
     { nome: "Duplication — arquivos com menos de 5% de linhas duplicadas", valor: t.duplication },
   ];
   const testingStatus = [
-    { nome: "Test success — suítes sem erros ou falhas / suítes avaliadas", valor: t.testSuccess },
+    { nome: "Test success — testes aprovados / total de testes unitários", valor: t.testSuccess },
     { nome: "Fast tests — builds de CI concluídos em menos de 5 minutos", valor: t.fastTests },
     { nome: "Coverage — arquivos com cobertura adequada (≥ 80%)", valor: t.coverage },
   ];
@@ -95,10 +95,11 @@ function renderDashboard(repoInfo) {
     <section class="memoria">
       <h3>Fórmulas Utilizadas</h3>
       <div class="formulas">
-        <div><code>Code Quality</code> = (Complexity × 0,40) + (Comments × 0,20) + (Duplication × 0,40)<small>Conformidade dos arquivos para complexidade, comentários e duplicação.</small></div>
-        <div><code>Testing Status</code> = (Test Success × 0,25) + (Fast Tests × 0,25) + (Coverage × 0,50)<small>Estabilidade das suítes de testes, velocidade dos builds de CI e cobertura por arquivo.</small></div>
+        <div><code>Code Quality</code> = (Complexity × 0,33) + (Comments × 0,33) + (Duplication × 0,33)<small>Conformidade dos arquivos para complexidade, comentários e duplicação.</small></div>
+        <div><code>Testing Status</code> = (Test Success × 0,25) + (Fast Tests × 0,25) + (Coverage × 0,50)<small>Sucesso dos testes, velocidade dos builds de CI e cobertura por arquivo.</small></div>
         <div><code>Maintainability</code> = Code Quality × 0,50<small>Fator de Qualidade 1</small></div>
         <div><code>Reliability</code> = Testing Status × 0,50<small>Fator de Qualidade 2</small></div>
+        <div><code>Product Quality</code> = Maintainability + Reliability<small>Qualidade total do produto</small></div>
       </div>
     </section>
     <section class="painel-qualidade">
@@ -110,14 +111,13 @@ function renderDashboard(repoInfo) {
     <section class="observacoes">
       <h3>Observações:</h3>
       <p>O dashboard escolhe sempre o JSON mais recente do respectivo repositório em <code>analytics-raw-data</code>.</p>
-      <p>Quando um atributo não está presente na coleta atual por algum motivo, somente ele utiliza o último valor disponível.</p>
       <h3>Cálculo das métricas-base</h3>
       <div class="calculos-base">
-        <div><code>Complexity</code><span>arquivos com (complexidade ciclomática ÷ funções) ≤ 10 ÷ total de arquivos com funções</span><small>Fonte: SonarQube</small></div>
+        <div><code>Complexity</code><span>arquivos não complexos ÷ total de arquivos; um arquivo é complexo quando sua complexidade ciclomática por função é &gt; 10</span><small>Fonte: SonarQube</small></div>
         <div><code>Comments</code><span>arquivos com 10%–30% de linhas comentadas ÷ total de arquivos analisados</span><small>Fonte: SonarQube</small></div>
         <div><code>Duplication</code><span>arquivos com menos de 5% de linhas duplicadas ÷ total de arquivos analisados</span><small>Fonte: SonarQube</small></div>
-        <div><code>Test Success</code><span>suítes sem erros ou falhas ÷ total de suítes UTS avaliadas</span><small>Fonte: SonarQube</small></div>
-        <div><code>Fast Tests</code><span>builds de CI concluídos em menos de 5 minutos ÷ total de builds de CI concluídos</span><small>Fonte: GitHub Actions</small></div>
+        <div><code>Test Success</code><span>(testes unitários − erros − falhas) ÷ total de testes unitários</span><small>Fonte: SonarQube</small></div>
+        <div><code>Fast Tests</code><span>execuções de testes unitários abaixo de 5 minutos ÷ total de execuções de testes unitários</span><small>Fonte: GitHub Actions (workflow CI)</small></div>
         <div><code>Coverage</code><span>arquivos com cobertura ≥ 80% ÷ total de arquivos que possuem medição de cobertura</span><small>Fonte: SonarQube</small></div>
       </div>
       <h3>Histórico de dados</h3>
