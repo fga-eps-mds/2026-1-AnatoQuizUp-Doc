@@ -384,7 +384,7 @@
                 "description": "New feature or request"
             }
         ],
-        "state": "open",
+        "state": "closed",
         "locked": false,
         "assignees": [
             {
@@ -433,8 +433,8 @@
         "milestone": null,
         "comments": 0,
         "created_at": "2026-06-08T14:19:37Z",
-        "updated_at": "2026-06-08T14:43:57Z",
-        "closed_at": null,
+        "updated_at": "2026-06-24T00:24:33Z",
+        "closed_at": "2026-06-24T00:24:33Z",
         "assignee": {
             "login": "pkbceira03",
             "id": 109092210,
@@ -481,7 +481,27 @@
             "total_blocking": 0
         },
         "body": "Alterar os campos de registro de quest\u00f5es de acordo com o dicionario de dados com a adi\u00e7\u00e3o de atributos com rela\u00e7\u00e3o \u00e0 frente de quest\u00f5es com Intelig\u00eancia Articial.\n\nEssa atividade engloba modifica\u00e7\u00f5es nos reposit\u00f3rios Web e Quiz-Service.\n\n[Dicion\u00e1rio de Dados - Quest\u00f5es (Intelig\u00eancia Artificial)-1.pdf](https://api.zenhub.com/attachedFiles/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBOXdrRGc9PSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--f66ce53e23dd83225988c0cf990c76b3faa9785d/Dicion%C3%A1rio%20de%20Dados%20-%20Quest%C3%B5es%20%28Intelig%C3%AAncia%20Artificial%29-1.pdf)\n",
-        "closed_by": null,
+        "closed_by": {
+            "login": "Brenofrds",
+            "id": 132412607,
+            "node_id": "U_kgDOB-R0vw",
+            "avatar_url": "https://avatars.githubusercontent.com/u/132412607?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/Brenofrds",
+            "html_url": "https://github.com/Brenofrds",
+            "followers_url": "https://api.github.com/users/Brenofrds/followers",
+            "following_url": "https://api.github.com/users/Brenofrds/following{/other_user}",
+            "gists_url": "https://api.github.com/users/Brenofrds/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/Brenofrds/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/Brenofrds/subscriptions",
+            "organizations_url": "https://api.github.com/users/Brenofrds/orgs",
+            "repos_url": "https://api.github.com/users/Brenofrds/repos",
+            "events_url": "https://api.github.com/users/Brenofrds/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/Brenofrds/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+        },
         "reactions": {
             "url": "https://api.github.com/repos/fga-eps-mds/2026-1-AnatoQuizUp-Doc/issues/46/reactions",
             "total_count": 0,
@@ -496,7 +516,7 @@
         },
         "timeline_url": "https://api.github.com/repos/fga-eps-mds/2026-1-AnatoQuizUp-Doc/issues/46/timeline",
         "performed_via_github_app": null,
-        "state_reason": null,
+        "state_reason": "completed",
         "pinned_comment": null
     },
     {
