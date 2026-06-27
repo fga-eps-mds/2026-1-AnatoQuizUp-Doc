@@ -10,8 +10,8 @@
 </head>
 <body>
 <main>
-  <h1>Dashboard eixo Processo — fluxo Kanban, lead/cycle time e Lei de Little</h1>
-  <p class="subtitulo">Métricas de fluxo do quadro ZenHub (workspace 2026-1-AnatoQuizUp) e do GitHub. Limites WIP calculados pela Lei de Little (WIP = TP × LT), conforme o algoritmo de Brechner.</p>
+  <h1>Dashboard eixo Processo — Q-Rapids (Process Performance) + fluxo Kanban</h1>
+  <p class="subtitulo">Indicador estratégico <strong>Process Performance</strong> do modelo <strong>Q-Rapids</strong> (densidades dos fatores Issues' Velocity e Development Speed), complementado por análise de fluxo Lean/Kanban (lead/cycle time, eficiência de fluxo e limites WIP pela Lei de Little). Dados do quadro ZenHub e do GitHub.</p>
   <nav class="abas">
     <a href="produto/">Produto</a>
     <a href="processo.html" class="ativa">Processo</a>
@@ -19,9 +19,29 @@
     <a href="canvas.html">Canvas</a>
   </nav>
 
+  <div class="metodologia">
+    <h2>Metodologia — Q-Rapids (modelo de qualidade do processo)</h2>
+    <p>O eixo Processo é estruturado pelo indicador estratégico <strong>Process Performance</strong> do <strong>Q-Rapids</strong> (Martínez-Fernández et al., 2019) — o mesmo modelo do eixo Produto. As métricas de fluxo viram <strong>assessed metrics</strong> dos fatores <strong>Issues' Velocity</strong> (Team Throughput, Resolved Issues' Throughput, Old Issues, Bugs Ratio) e <strong>Development Speed</strong> (Commit review duration), cada uma expressa como <strong>densidade [0–1]</strong>. Como camada de análise complementar (Lean/Kanban), incluímos eficiência de fluxo e limites WIP pela <strong>Lei de Little</strong> (Brechner) — explicitada por não fazer parte do Q-Rapids.</p>
+    <p class="ref">Referência: MARTÍNEZ-FERNÁNDEZ, S. et al. <em>Continuously Assessing and Improving Software Quality With Software Analytics Tools: A Case Study</em>. IEEE Access 7, 2019 (modelo Q-Rapids, abril/2019).<br>
+    <span class="fonte">dados: ZenHub (pipelines, sprints, eventos)</span><span class="fonte">GitHub (issues, PRs, labels)</span></p>
+  </div>
+
+  <div class="faixa-titulo">
+    <h2>Process Performance (Q-Rapids) — indicador estratégico do processo</h2>
+    <span class="meta" id="meta-qrapids"></span>
+  </div>
+  <p class="subtitulo" style="margin-top:0">Cada métrica é uma <strong>densidade [0–1]</strong> = fração das issues/PRs dentro da faixa ideal, agregada nos fatores <em>Issues' Velocity</em> e <em>Development Speed</em>. Verde ≥ 0,75 · amarelo ≥ 0,50 · vermelho &lt; 0,50.</p>
+  <div class="cartoes" id="cartoes-qrapids"></div>
+  <div class="fatores" id="fatores-qrapids"></div>
+  <div class="brutos">
+    <h3>Estrutura Q-Rapids e dados brutos — Indicador → Fator → Assessed Metric → Dado bruto → Fonte</h3>
+    <table class="tabela" id="tabela-qrapids"></table>
+    <p class="legenda-fonte">Limiares (parametrizáveis — "user defined" no Q-Rapids): lead time ≤ 14 dias · idade de WIP ≤ 14 dias · revisão de PR ≤ 2 dias.</p>
+  </div>
+
   <div class="secao-nova">
-    <div class="titulo-nova"><h2>Eficiência de fluxo e capacidade</h2></div>
-    <p class="sub-nova">Indicadores de Lean/Kanban — eficiência de fluxo, retrabalho e limites de WIP pela Lei de Little — que orientam decisões de processo.</p>
+    <div class="titulo-nova"><h2>Análise de fluxo (Lean/Kanban) — complementar ao Q-Rapids</h2></div>
+    <p class="sub-nova">Camada adicional (fora do Q-Rapids, por isso explicitada): eficiência de fluxo, retrabalho e limites de WIP pela Lei de Little — detalham <em>por que</em> o fluxo se comporta como mostram as densidades acima.</p>
     <div class="cartoes" id="cartoes-novos-processo"></div>
     <div class="grade-2">
       <div>
@@ -149,6 +169,44 @@ const fmt = (v, c = 1) => v == null ? "—" : v.toFixed(c).replace(".", ",");
 
 document.getElementById("meta-processo").textContent =
   `${P.higiene.totalIssues} issues · ${P.prs.total} PRs · ${D.geradoEm.slice(0, 10)}`;
+
+// ============ Q-RAPIDS — Process Performance ============
+const QR = P.qrapids;
+const clsDens = (v) => v == null ? "cinza" : v >= 0.75 ? "verde" : v >= 0.5 ? "amarelo" : "vermelho";
+const pct = (v) => v == null ? "—" : `${Math.round(v * 100)}%`;
+document.getElementById("meta-qrapids").textContent = `indicador agregado: ${pct(QR.valor)}`;
+const metricasQR = QR.fatores.flatMap((f) => f.metricas.map((m) => ({ ...m, fator: f.fator })));
+const cartoesQR = [
+  { nome: "Process Performance (indicador)", valor: pct(QR.valor), cls: clsDens(QR.valor), sub: "média das densidades dos fatores Q-Rapids" },
+  ...metricasQR.map((m) => ({ nome: m.metrica, valor: pct(m.densidade), cls: clsDens(m.densidade), sub: m.bruto })),
+];
+document.getElementById("cartoes-qrapids").innerHTML = cartoesQR.map((c) => `
+  <div class="cartao"><div class="nome">${c.nome}</div><div class="valor ${c.cls}" style="font-size:1.6rem">${c.valor}</div><div class="rotulo">${c.sub}</div></div>`).join("");
+
+document.getElementById("fatores-qrapids").innerHTML = metricasQR.map((m) => {
+  const v = m.densidade ?? 0, cls = clsDens(m.densidade);
+  return `<div class="fator ${cls}">
+    <div class="grupo">${m.metrica}<small>${m.fator}</small></div>
+    <div class="descricao">${m.formula}</div>
+    <div class="barra"><span style="width:${Math.round(v * 100)}%;background:var(--${cls})"></span></div>
+    <div class="numero">${pct(m.densidade)}</div>
+  </div>`;
+}).join("");
+
+const totalM = QR.fatores.reduce((s, f) => s + f.metricas.length, 0);
+let primeira = true;
+document.getElementById("tabela-qrapids").innerHTML = `
+  <thead><tr><th>Indicador</th><th>Fator</th><th>Assessed Metric</th><th class="num">Densidade</th><th>Dado bruto (num/den)</th><th>Fonte</th></tr></thead>
+  <tbody>${QR.fatores.flatMap((f) => f.metricas.map((m, idx) => {
+    const ind = primeira ? `<td rowspan="${totalM}"><strong>${QR.indicador}</strong><br><span style="color:var(--cinza)">${pct(QR.valor)}</span></td>` : "";
+    primeira = false;
+    const fat = idx === 0 ? `<td rowspan="${f.metricas.length}"><strong>${f.fator}</strong><br><span style="font-size:.78rem;color:var(--cinza)">${f.descricao}</span></td>` : "";
+    return `<tr>${ind}${fat}
+      <td>${m.metrica}</td>
+      <td class="num"><span class="selo ${clsDens(m.densidade)}">${pct(m.densidade)}</span></td>
+      <td>${m.bruto}<br><span style="font-size:.78rem;color:var(--cinza)">${m.formula}</span></td>
+      <td>${m.fonte}</td></tr>`;
+  })).join("")}</tbody>`;
 
 // ============ SEÇÃO NOVA — métricas analíticas próprias ============
 const fe = P.flowEfficiency;

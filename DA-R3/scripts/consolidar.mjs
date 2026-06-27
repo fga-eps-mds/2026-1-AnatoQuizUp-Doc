@@ -62,11 +62,14 @@ const SPRINTS = [
 ];
 
 // Plano de custos (docs/processo/plano-de-custos.md), carga DOCUMENTADA de 14 h/sem
-// por pessoa (4h presencial + 10h remota) — a mesma base do total de R$ 49.852,38:
+// por pessoa (4h presencial + 10h remota) — a mesma base do total de R$ 66.434,30
+// (equipe completa de 12 × 17 semanas):
 //   trabalho 309,02 + computador 13,46 + energia 1,26 + internet 1,39 = 325,13/pessoa
 const CUSTO_POR_PESSOA_SEMANA = 309.02 + 13.46 + 1.26 + 1.39; // 325,13
 const CUSTO_FIXO_SEMANA = 6.34; // Railway Hobby (fixo, por equipe)
-const EQUIPE_BASELINE = 9; // baseline do plano de custos
+// Baseline do PLANO = equipe completa no início do semestre (12). O PV/BAC do EVM usa
+// esse plano; o AC usa a equipe EFETIVA de cada sprint (12→10→9→8), que encolheu.
+const EQUIPE_BASELINE = 12;
 const custoSemana = (pessoas) => pessoas * CUSTO_POR_PESSOA_SEMANA + CUSTO_FIXO_SEMANA;
 
 const RELEASES = [
@@ -367,8 +370,55 @@ const wipSerie = cfd.map((d) => ({
   wip: (d["In Progress"] ?? 0) + (d["Review/QA"] ?? 0) + (d["Sprint Backlog"] ?? 0) + (d["Blocked"] ?? 0) + (d["Rework"] ?? 0),
 }));
 
+// ===== Q-RAPIDS — Indicador Estratégico "Process Performance" =====
+// Mapeia as métricas de fluxo do board para os fatores e assessed metrics do modelo
+// Q-Rapids (Martínez-Fernández et al., IEEE Access 2019). Cada métrica é uma
+// DENSIDADE [0–1] = fração dentro da faixa ideal, no mesmo espírito do eixo Produto.
+// Limiares "user defined" do Q-Rapids: lead ≤ 14d, idade de WIP ≤ 14d, revisão de PR ≤ 2d.
+const LIM_LEAD = 14, LIM_IDADE = 14, LIM_REVISAO = 2;
+const ehBug = (i) => i.labels.some((l) => /bug/i.test(l)) || /\[bug\]/i.test(i.titulo);
+const abertasNaoPr = naoPr.filter((i) => !i.fechadaEm);
+const resolvidas = fechadas.filter((i) => !i.abandonado);
+const fluxoResolvido = fluxoDeCodigo.filter((i) => !i.abandonado);
+const totalNaoAband = naoPr.filter((i) => !i.abandonado).length;
+const idadeAberta = (i) => dias(i.criadaEm, agora);
+const dens = (num, den) => (den ? arred(num / den, 3) : null);
+
+const qrTeamThroughput = dens(resolvidas.length, totalNaoAband);
+const qrResolvedTP = dens(fluxoResolvido.filter((i) => dias(i.criadaEm, i.fechadaEm) <= LIM_LEAD).length, fluxoResolvido.length);
+const qrOldIssues = dens(abertasNaoPr.filter((i) => idadeAberta(i) <= LIM_IDADE).length, abertasNaoPr.length);
+const qrBugsRatio = dens(abertasNaoPr.filter((i) => !ehBug(i)).length, abertasNaoPr.length);
+const qrCommitReview = dens(prsFechados.filter((p) => dias(p.criadaEm, p.fechadaEm) <= LIM_REVISAO).length, prsFechados.length);
+
+const qrapids = {
+  indicador: "Process Performance",
+  referencia: "Q-Rapids (Martínez-Fernández et al., IEEE Access 2019)",
+  limiares: { leadDias: LIM_LEAD, idadeDias: LIM_IDADE, revisaoDias: LIM_REVISAO },
+  fatores: [
+    {
+      fator: "Issues' Velocity",
+      descricao: "capacidade de fechar as issues planejadas (vazão, atualidade e qualidade do fluxo)",
+      metricas: [
+        { metrica: "Team Throughput", densidade: qrTeamThroughput, formula: "issues resolvidas / total de issues", bruto: `${resolvidas.length} / ${totalNaoAband}`, fonte: "ZenHub + GitHub" },
+        { metrica: "Resolved Issues' Throughput", densidade: qrResolvedTP, formula: `resolvidas em ≤ ${LIM_LEAD}d / total resolvidas (fluxo de código)`, bruto: `${fluxoResolvido.filter((i) => dias(i.criadaEm, i.fechadaEm) <= LIM_LEAD).length} / ${fluxoResolvido.length}`, fonte: "ZenHub (eventos)" },
+        { metrica: "Old Issues", densidade: qrOldIssues, formula: `issues abertas com idade ≤ ${LIM_IDADE}d / total abertas`, bruto: `${abertasNaoPr.filter((i) => idadeAberta(i) <= LIM_IDADE).length} / ${abertasNaoPr.length}`, fonte: "ZenHub" },
+        { metrica: "Bugs Ratio", densidade: qrBugsRatio, formula: "issues abertas não-bug / total abertas", bruto: `${abertasNaoPr.filter((i) => !ehBug(i)).length} / ${abertasNaoPr.length}`, fonte: "GitHub (labels)" },
+      ],
+    },
+    {
+      fator: "Development Speed",
+      descricao: "eficiência das atividades de integração contínua e revisão",
+      metricas: [
+        { metrica: "Commit review duration", densidade: qrCommitReview, formula: `PRs revisados em ≤ ${LIM_REVISAO}d / total de PRs fechados`, bruto: `${prsFechados.filter((p) => dias(p.criadaEm, p.fechadaEm) <= LIM_REVISAO).length} / ${prsFechados.length}`, fonte: "GitHub (PRs)" },
+      ],
+    },
+  ],
+};
+qrapids.valor = arred(media([qrTeamThroughput, qrResolvedTP, qrOldIssues, qrBugsRatio, qrCommitReview].filter((v) => v != null)), 3);
+
 const processo = {
   pipelines: workspace.pipelines.map((p) => p.name),
+  qrapids,
   flowEfficiency,
   retrabalho,
   agingWip,
@@ -401,21 +451,34 @@ function entregueMedido(inicio, fim) {
   const ini = new Date(inicio), f = new Date(new Date(fim).getTime() + DIA_MS - 1);
   return naoPr
     // exclui trackers de US no Doc que duplicam trabalho já contado no código (sem dupla contagem)
-    .filter((i) => i.estimate != null && !i.possivelDuplicata && i.fechadaEm && new Date(i.fechadaEm) >= ini && new Date(i.fechadaEm) <= f)
+    // e exclui os cards encerrados na limpeza de board de 27/06 (abandonado, não entregue)
+    .filter((i) => i.estimate != null && !i.possivelDuplicata && !i.abandonado && i.fechadaEm && new Date(i.fechadaEm) >= ini && new Date(i.fechadaEm) <= f)
     .reduce((s, i) => s + i.estimate, 0);
 }
 
-// Planejado via sprint ZenHub com maior sobreposição de janela
+// Planejado por sprint = soma dos estimates das issues ATRIBUÍDAS àquela sprint
+// (campo `sprints` da issue), contadas na primeira sprint em que foram planejadas.
+// Período consistente com o entregue (ambos derivados das issues) e estável — não
+// depende do `totalPoints` volátil das sprints do ZenHub, que mede janelas diferentes.
 const zhSprints = workspace.sprints.nodes ?? workspace.sprints;
-function planejadoZenhub(inicio, fim) {
-  const ini = new Date(inicio), f = new Date(fim);
+const sprintZhParaS = {}; // nome da sprint ZenHub -> id da janela S (maior sobreposição)
+for (const z of zhSprints) {
+  const zi = new Date(z.startAt), zf = new Date(z.endAt);
   let melhor = null, melhorOverlap = 0;
-  for (const s of zhSprints) {
-    const si = new Date(s.startAt), sf = new Date(s.endAt);
-    const overlap = Math.min(f, sf) - Math.max(ini, si);
-    if (overlap > melhorOverlap) { melhorOverlap = overlap; melhor = s; }
+  for (const s of SPRINTS) {
+    const ov = Math.min(zf, new Date(s.fim)) - Math.max(zi, new Date(s.inicio));
+    if (ov > melhorOverlap) { melhorOverlap = ov; melhor = s.id; }
   }
-  return melhor ? { pontos: melhor.totalPoints ?? 0, sprintZenhub: melhor.name } : { pontos: 0, sprintZenhub: null };
+  if (melhor) sprintZhParaS[z.name] = melhor;
+}
+const ordemS = Object.fromEntries(SPRINTS.map((s, idx) => [s.id, idx]));
+const planejadoAtribuido = Object.fromEntries(SPRINTS.map((s) => [s.id, 0]));
+for (const i of naoPr) {
+  if (i.estimate == null || i.possivelDuplicata || i.abandonado) continue;
+  const ids = [...new Set((i.sprints || []).map((n) => sprintZhParaS[n]).filter(Boolean))];
+  if (!ids.length) continue;
+  ids.sort((a, b) => ordemS[a] - ordemS[b]);
+  planejadoAtribuido[ids[0]] += i.estimate; // conta na 1ª sprint em que foi planejada
 }
 
 const sprintsCalc = SPRINTS.map((s) => {
@@ -423,9 +486,8 @@ const sprintsCalc = SPRINTS.map((s) => {
   const emAndamento = !decorrida && new Date(s.inicio) <= new Date();
   let planejado = s.planejadoSP, fontePlanejado = s.fontePlanejado;
   if (planejado == null && (decorrida || emAndamento)) {
-    const zh = planejadoZenhub(s.inicio, s.fim);
-    planejado = zh.pontos;
-    fontePlanejado = `zenhub (${zh.sprintZenhub})`;
+    planejado = planejadoAtribuido[s.id] ?? 0;
+    fontePlanejado = "atribuição de sprint (estimates das issues planejadas no ZenHub)";
   }
   let entregue = s.entregueSP, fonteEntregue = s.fonteEntregue;
   if (entregue == null && (decorrida || emAndamento)) {
@@ -476,7 +538,11 @@ for (const s of sprintsCalc) {
 // Velocity e previsão de ritmo
 const velocidades = sprintsCalc.filter((s) => s.decorrida).map((s) => s.entregueSP ?? 0);
 const velocidadeMediana = mediana(velocidades);
-const backlogAbertoSP = naoPr.filter((i) => !i.fechadaEm && i.estimate != null).reduce((s, i) => s + i.estimate, 0);
+const backlogAbertoItens = naoPr
+  .filter((i) => !i.fechadaEm && i.estimate != null)
+  .map((i) => ({ repo: i.repo, numero: i.numero, titulo: i.titulo, estimate: i.estimate, pipeline: i.pipeline }))
+  .sort((a, b) => b.estimate - a.estimate);
+const backlogAbertoSP = backlogAbertoItens.reduce((s, i) => s + i.estimate, 0);
 const sprintsRestantes = sprintsCalc.filter((s) => !s.decorrida).length;
 
 // ===== MÉTRICAS ANALÍTICAS NOVAS (cruzam fontes; não existem no ZenHub) =====
@@ -528,6 +594,7 @@ const projeto = {
   previsao: {
     velocidadeMedianaSP: velocidadeMediana,
     backlogAbertoEstimadoSP: backlogAbertoSP,
+    backlogAberto: backlogAbertoItens,
     sprintsRestantes,
     capacidadeRestanteSP: velocidadeMediana != null ? arred(velocidadeMediana * sprintsRestantes, 0) : null,
   },
@@ -549,9 +616,9 @@ const consolidado = {
     "Processo: lead time = criação→fechamento; cycle time = 1ª entrada em In Progress→fechamento; 'fluxo de código' = issues que passaram por In Progress.",
     "Processo: limites WIP pela Lei de Little (WIP = TP × LT) com TP das últimas 4 semanas e margem de 50% (Brechner).",
     "Projeto: EVM ágil em story points (mesmo enquadramento do exemplo do professor) — PV(SP) = planejado acumulado; EV(SP) = entregue acumulado; SPI = EV/PV em SP. Planejado/entregue S1–S4 dos relatórios de sprint publicados; S5+ medido do ZenHub.",
-    "Projeto: custo em R$ derivado do Plano de Custos para o CPI — PV(R$) = custo baseline (9 pessoas) × sprints decorridas; EV(R$) = SPI × PV(R$); AC(R$) = custo real incorrido (equipe efetiva 12,10,9,9,9,8,8,8 × regime de 4 h/sem); CPI = EV(R$)/AC(R$).",
-    "Projeto: o time não registra horas reais desde a S1, então AC é aproximado pela equipe efetiva — substituir por horas reais se voltarem a ser registradas. SPI e CPI ficam próximos porque a equipe efetiva (média ~9,3) acompanhou o baseline de 9; o desvio de 1,0 é quase todo de escopo, não de custo.",
-    "Projeto: BAC = custo semanal baseline (9 pessoas, R$ 931,63) × PS = 10 sprints (S1 19/04 → S10 29/06) = R$ 9.316,30; EAC = BAC/CPI; VAC = BAC − EAC.",
+    "Projeto: custo em R$ derivado do Plano de Custos para o CPI — PV(R$) = custo baseline (12 pessoas, R$ 3.907,90/sem) × sprints decorridas; EV(R$) = SPI × PV(R$); AC(R$) = custo real incorrido (equipe efetiva 12→10→9→8 × R$ 325,13/pessoa, carga de 14 h/sem); CPI = EV(R$)/AC(R$).",
+    "Projeto: o baseline do PLANO é a equipe completa de 12 (início do semestre). O time não registra horas reais, então AC é aproximado pela equipe EFETIVA de cada sprint. Como a equipe encolheu de 12 para ~8, o AC fica abaixo do PV: o projeto gasta MENOS que o orçado (CPI > 1, sob orçamento) mas entrega MENOS escopo que o planejado (SPI < 1) — dois desvios independentes, que é justamente o que o CPI≠SPI passa a revelar.",
+    "Projeto: BAC = custo semanal baseline (12 pessoas, R$ 3.907,90) × PS = 10 sprints (S1 19/04 → S10 29/06) = R$ 39.079,00; EAC = BAC/CPI; VAC = BAC − EAC.",
     `Qualidade dos dados: ${higiene.semEstimate}/${higiene.totalIssues} issues sem estimate; ${higiene.semResponsavel} sem responsável; ${higiene.fechadasEmLote1206} fechadas em lote em 12/06 (limpeza de board) — análise crítica no notebook.`,
   ],
   produto,

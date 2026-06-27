@@ -1,13 +1,84 @@
 {
- "extraidoEm": "2026-06-13T00:07:30.490Z",
+ "extraidoEm": "2026-06-27T12:58:29.249Z",
  "2026-1-AnatoQuizUp-Doc": [
+  {
+   "numero": 50,
+   "titulo": "Ajustes Front Aluno/Admin/Professor",
+   "estado": "closed",
+   "ehPr": false,
+   "criadaEm": "2026-06-26T03:27:10Z",
+   "fechadaEm": "2026-06-27T12:53:26Z",
+   "mergeadaEm": null,
+   "labels": [
+    "bug",
+    "enhancement",
+    "frontend"
+   ],
+   "responsaveis": [
+    "caiobsantos"
+   ],
+   "autor": "caiobsantos",
+   "milestone": null,
+   "temDescricao": false,
+   "comentarios": 0
+  },
+  {
+   "numero": 49,
+   "titulo": "Feat/dashboards da r3",
+   "estado": "closed",
+   "ehPr": true,
+   "criadaEm": "2026-06-21T22:38:48Z",
+   "fechadaEm": "2026-06-22T01:52:21Z",
+   "mergeadaEm": "2026-06-22T01:52:21Z",
+   "labels": [],
+   "responsaveis": [],
+   "autor": "EhOMiguel",
+   "milestone": null,
+   "temDescricao": false,
+   "comentarios": 0
+  },
+  {
+   "numero": 48,
+   "titulo": "[US] Personalizar Perfil",
+   "estado": "open",
+   "ehPr": false,
+   "criadaEm": "2026-06-15T14:06:23Z",
+   "fechadaEm": null,
+   "mergeadaEm": null,
+   "labels": [
+    "US"
+   ],
+   "responsaveis": [
+    "pkbceira03",
+    "Brenofrds"
+   ],
+   "autor": "EhOBruno",
+   "milestone": null,
+   "temDescricao": true,
+   "comentarios": 0
+  },
+  {
+   "numero": 47,
+   "titulo": "Feat/dashboards da r3",
+   "estado": "closed",
+   "ehPr": true,
+   "criadaEm": "2026-06-13T01:31:37Z",
+   "fechadaEm": "2026-06-15T02:56:30Z",
+   "mergeadaEm": "2026-06-15T02:56:30Z",
+   "labels": [],
+   "responsaveis": [],
+   "autor": "EhOMiguel",
+   "milestone": null,
+   "temDescricao": false,
+   "comentarios": 0
+  },
   {
    "numero": 46,
    "titulo": "[Task] Alteração Dos Campos das Questões",
-   "estado": "open",
+   "estado": "closed",
    "ehPr": false,
    "criadaEm": "2026-06-08T14:19:37Z",
-   "fechadaEm": null,
+   "fechadaEm": "2026-06-24T00:24:33Z",
    "mergeadaEm": null,
    "labels": [
     "enhancement"
@@ -39,10 +110,10 @@
   {
    "numero": 44,
    "titulo": "Comentário da Questão Obrigatório",
-   "estado": "open",
+   "estado": "closed",
    "ehPr": false,
    "criadaEm": "2026-05-25T02:16:05Z",
-   "fechadaEm": null,
+   "fechadaEm": "2026-06-27T12:53:26Z",
    "mergeadaEm": null,
    "labels": [
     "enhancement"
@@ -56,10 +127,10 @@
   {
    "numero": 43,
    "titulo": "Mensagem Inicial do WebApp",
-   "estado": "open",
+   "estado": "closed",
    "ehPr": false,
    "criadaEm": "2026-05-25T02:13:56Z",
-   "fechadaEm": null,
+   "fechadaEm": "2026-06-27T12:53:27Z",
    "mergeadaEm": null,
    "labels": [
     "enhancement"
@@ -81,7 +152,9 @@
    "labels": [
     "bug"
    ],
-   "responsaveis": [],
+   "responsaveis": [
+    "GenilsonJrs"
+   ],
    "autor": "Joa0V",
    "milestone": null,
    "temDescricao": true,
@@ -151,7 +224,10 @@
    "fechadaEm": null,
    "mergeadaEm": null,
    "labels": [],
-   "responsaveis": [],
+   "responsaveis": [
+    "marialuisa214",
+    "EhOBruno"
+   ],
    "autor": "marialuisa214",
    "milestone": null,
    "temDescricao": true,
@@ -160,13 +236,16 @@
   {
    "numero": 37,
    "titulo": "[AI] Integração do pipeline de ingestão contínua ao banco vetorial do RAG",
-   "estado": "open",
+   "estado": "closed",
    "ehPr": false,
    "criadaEm": "2026-05-24T18:44:47Z",
-   "fechadaEm": null,
+   "fechadaEm": "2026-06-22T01:54:30Z",
    "mergeadaEm": null,
    "labels": [],
-   "responsaveis": [],
+   "responsaveis": [
+    "marialuisa214",
+    "EhOBruno"
+   ],
    "autor": "marialuisa214",
    "milestone": null,
    "temDescricao": true,
@@ -175,13 +254,16 @@
   {
    "numero": 36,
    "titulo": "[AI] Criação dos embeds (vetorização do texto)",
-   "estado": "open",
+   "estado": "closed",
    "ehPr": false,
    "criadaEm": "2026-05-24T18:38:27Z",
-   "fechadaEm": null,
+   "fechadaEm": "2026-06-15T14:19:58Z",
    "mergeadaEm": null,
    "labels": [],
-   "responsaveis": [],
+   "responsaveis": [
+    "marialuisa214",
+    "EhOBruno"
+   ],
    "autor": "marialuisa214",
    "milestone": null,
    "temDescricao": true,
@@ -190,13 +272,16 @@
   {
    "numero": 35,
    "titulo": "[AI] Limpeza, normalização e chunking das questões; finalização do RAG",
-   "estado": "open",
+   "estado": "closed",
    "ehPr": false,
    "criadaEm": "2026-05-24T18:35:23Z",
-   "fechadaEm": null,
+   "fechadaEm": "2026-06-15T14:14:29Z",
    "mergeadaEm": null,
    "labels": [],
-   "responsaveis": [],
+   "responsaveis": [
+    "marialuisa214",
+    "EhOBruno"
+   ],
    "autor": "marialuisa214",
    "milestone": null,
    "temDescricao": true,
@@ -314,7 +399,9 @@
    "fechadaEm": "2026-05-25T13:55:33Z",
    "mergeadaEm": null,
    "labels": [],
-   "responsaveis": [],
+   "responsaveis": [
+    "marialuisa214"
+   ],
    "autor": "pkbceira03",
    "milestone": null,
    "temDescricao": true,
@@ -323,10 +410,10 @@
   {
    "numero": 27,
    "titulo": "[US] Geração de Questões com Inteligência Artificial",
-   "estado": "open",
+   "estado": "closed",
    "ehPr": false,
    "criadaEm": "2026-05-06T15:20:17Z",
-   "fechadaEm": null,
+   "fechadaEm": "2026-06-27T12:53:36Z",
    "mergeadaEm": null,
    "labels": [
     "US"
@@ -343,10 +430,10 @@
   {
    "numero": 26,
    "titulo": "[Protótipo] Listagem e Detalhes de Turmas (Aluno)",
-   "estado": "open",
+   "estado": "closed",
    "ehPr": false,
    "criadaEm": "2026-05-06T14:57:43Z",
-   "fechadaEm": null,
+   "fechadaEm": "2026-06-27T12:53:33Z",
    "mergeadaEm": null,
    "labels": [],
    "responsaveis": [],
@@ -385,7 +472,9 @@
    "fechadaEm": "2026-05-25T13:55:55Z",
    "mergeadaEm": null,
    "labels": [],
-   "responsaveis": [],
+   "responsaveis": [
+    "marialuisa214"
+   ],
    "autor": "pkbceira03",
    "milestone": "Milestone 2: Módulo de questão",
    "temDescricao": true,
@@ -659,6 +748,126 @@
   }
  ],
  "2026-1-AnatoQuizUp-Web": [
+  {
+   "numero": 76,
+   "titulo": "fix(questoes): envia e le palavras-chave das questoes",
+   "estado": "closed",
+   "ehPr": true,
+   "criadaEm": "2026-06-26T02:55:19Z",
+   "fechadaEm": "2026-06-26T19:05:28Z",
+   "mergeadaEm": "2026-06-26T19:05:28Z",
+   "labels": [],
+   "responsaveis": [],
+   "autor": "GenilsonJrs",
+   "milestone": null,
+   "temDescricao": true,
+   "comentarios": 2
+  },
+  {
+   "numero": 75,
+   "titulo": "feat(ranking): interface da US de ranking (aluno e professor)",
+   "estado": "closed",
+   "ehPr": true,
+   "criadaEm": "2026-06-25T19:33:32Z",
+   "fechadaEm": "2026-06-25T23:11:30Z",
+   "mergeadaEm": "2026-06-25T23:11:30Z",
+   "labels": [],
+   "responsaveis": [],
+   "autor": "GenilsonJrs",
+   "milestone": null,
+   "temDescricao": true,
+   "comentarios": 2
+  },
+  {
+   "numero": 74,
+   "titulo": "fix(perfil): corrige piscar do avatar e adiciona desequipar de cosmético",
+   "estado": "closed",
+   "ehPr": true,
+   "criadaEm": "2026-06-22T14:57:03Z",
+   "fechadaEm": "2026-06-23T23:31:24Z",
+   "mergeadaEm": "2026-06-23T23:31:24Z",
+   "labels": [],
+   "responsaveis": [],
+   "autor": "GenilsonJrs",
+   "milestone": null,
+   "temDescricao": true,
+   "comentarios": 2
+  },
+  {
+   "numero": 73,
+   "titulo": "fix(perfil): evitar erro ao renderizar conquistas destacadas",
+   "estado": "closed",
+   "ehPr": true,
+   "criadaEm": "2026-06-22T05:15:07Z",
+   "fechadaEm": "2026-06-22T05:17:27Z",
+   "mergeadaEm": "2026-06-22T05:17:27Z",
+   "labels": [],
+   "responsaveis": [],
+   "autor": "trindadea",
+   "milestone": null,
+   "temDescricao": false,
+   "comentarios": 2
+  },
+  {
+   "numero": 72,
+   "titulo": "Feat/loja e perfil",
+   "estado": "closed",
+   "ehPr": true,
+   "criadaEm": "2026-06-21T18:33:13Z",
+   "fechadaEm": "2026-06-22T04:11:11Z",
+   "mergeadaEm": "2026-06-22T04:11:11Z",
+   "labels": [],
+   "responsaveis": [],
+   "autor": "pkbceira03",
+   "milestone": null,
+   "temDescricao": true,
+   "comentarios": 2
+  },
+  {
+   "numero": 71,
+   "titulo": "Feature/error 404",
+   "estado": "closed",
+   "ehPr": true,
+   "criadaEm": "2026-06-18T04:37:33Z",
+   "fechadaEm": "2026-06-22T03:08:07Z",
+   "mergeadaEm": "2026-06-22T03:08:06Z",
+   "labels": [],
+   "responsaveis": [],
+   "autor": "caiobsantos",
+   "milestone": null,
+   "temDescricao": true,
+   "comentarios": 2
+  },
+  {
+   "numero": 70,
+   "titulo": "Feat/novos campos questao",
+   "estado": "closed",
+   "ehPr": true,
+   "criadaEm": "2026-06-15T12:31:43Z",
+   "fechadaEm": "2026-06-15T19:21:42Z",
+   "mergeadaEm": "2026-06-15T19:21:42Z",
+   "labels": [],
+   "responsaveis": [],
+   "autor": "pkbceira03",
+   "milestone": null,
+   "temDescricao": true,
+   "comentarios": 2
+  },
+  {
+   "numero": 69,
+   "titulo": "fix: nome no cadastro de aluno e professor nao aceita mais caracteres…",
+   "estado": "closed",
+   "ehPr": true,
+   "criadaEm": "2026-06-14T20:23:39Z",
+   "fechadaEm": "2026-06-16T16:26:39Z",
+   "mergeadaEm": "2026-06-16T16:26:39Z",
+   "labels": [],
+   "responsaveis": [],
+   "autor": "EhOBruno",
+   "milestone": null,
+   "temDescricao": true,
+   "comentarios": 2
+  },
   {
    "numero": 68,
    "titulo": "Feat/listas aluno",
@@ -981,7 +1190,10 @@
    "labels": [
     "frontend"
    ],
-   "responsaveis": [],
+   "responsaveis": [
+    "EhOMiguel",
+    "trindadea"
+   ],
    "autor": "pkbceira03",
    "milestone": null,
    "temDescricao": true,
@@ -1005,10 +1217,10 @@
   {
    "numero": 46,
    "titulo": "[Web] Detalhes da Turma (Aluno)",
-   "estado": "open",
+   "estado": "closed",
    "ehPr": false,
    "criadaEm": "2026-05-06T15:01:22Z",
-   "fechadaEm": null,
+   "fechadaEm": "2026-06-27T12:53:34Z",
    "mergeadaEm": null,
    "labels": [
     "frontend"
@@ -1022,10 +1234,10 @@
   {
    "numero": 45,
    "titulo": "[Web] Listagem de Turmas do Aluno",
-   "estado": "open",
+   "estado": "closed",
    "ehPr": false,
    "criadaEm": "2026-05-06T15:00:11Z",
-   "fechadaEm": null,
+   "fechadaEm": "2026-06-27T12:53:33Z",
    "mergeadaEm": null,
    "labels": [
     "frontend"
@@ -1047,7 +1259,10 @@
    "labels": [
     "frontend"
    ],
-   "responsaveis": [],
+   "responsaveis": [
+    "trindadea",
+    "Joa0V"
+   ],
    "autor": "pkbceira03",
    "milestone": "Milestone 2: Módulo de questão",
    "temDescricao": true,
@@ -1064,7 +1279,9 @@
    "labels": [
     "frontend"
    ],
-   "responsaveis": [],
+   "responsaveis": [
+    "pkbceira03"
+   ],
    "autor": "pkbceira03",
    "milestone": "Milestone 2: Módulo de questão",
    "temDescricao": true,
@@ -1462,10 +1679,10 @@
   {
    "numero": 19,
    "titulo": "[US] [Frontend] Professor com visão de aluno",
-   "estado": "open",
+   "estado": "closed",
    "ehPr": false,
    "criadaEm": "2026-04-18T12:36:04Z",
-   "fechadaEm": null,
+   "fechadaEm": "2026-06-27T12:53:27Z",
    "mergeadaEm": null,
    "labels": [
     "FEATURE",
@@ -1491,7 +1708,7 @@
     "US"
    ],
    "responsaveis": [
-    "Brenofrds"
+    "caiobsantos"
    ],
    "autor": "EhOMiguel",
    "milestone": "Milestone 2: Módulo de questão",
@@ -1585,7 +1802,9 @@
    "fechadaEm": "2026-05-01T12:25:03Z",
    "mergeadaEm": null,
    "labels": [],
-   "responsaveis": [],
+   "responsaveis": [
+    "EhOMiguel"
+   ],
    "autor": "EhOMiguel",
    "milestone": null,
    "temDescricao": true,
@@ -1745,6 +1964,51 @@
   }
  ],
  "2026-1-AnatoQuizUp-BFF": [
+  {
+   "numero": 22,
+   "titulo": "feat(ranking): orquestracao do ranking (geral, amigos, turma, lista)",
+   "estado": "closed",
+   "ehPr": true,
+   "criadaEm": "2026-06-25T19:33:29Z",
+   "fechadaEm": "2026-06-25T23:12:12Z",
+   "mergeadaEm": "2026-06-25T23:12:12Z",
+   "labels": [],
+   "responsaveis": [],
+   "autor": "GenilsonJrs",
+   "milestone": null,
+   "temDescricao": true,
+   "comentarios": 1
+  },
+  {
+   "numero": 21,
+   "titulo": "Feat/conquistas",
+   "estado": "closed",
+   "ehPr": true,
+   "criadaEm": "2026-06-22T02:48:35Z",
+   "fechadaEm": "2026-06-22T04:11:05Z",
+   "mergeadaEm": "2026-06-22T04:11:05Z",
+   "labels": [],
+   "responsaveis": [],
+   "autor": "trindadea",
+   "milestone": null,
+   "temDescricao": false,
+   "comentarios": 1
+  },
+  {
+   "numero": 20,
+   "titulo": "Feat/loja e perfil",
+   "estado": "closed",
+   "ehPr": true,
+   "criadaEm": "2026-06-21T18:25:37Z",
+   "fechadaEm": "2026-06-22T03:07:37Z",
+   "mergeadaEm": "2026-06-22T03:07:37Z",
+   "labels": [],
+   "responsaveis": [],
+   "autor": "pkbceira03",
+   "milestone": null,
+   "temDescricao": true,
+   "comentarios": 1
+  },
   {
    "numero": 19,
    "titulo": "fdeat: adiciona rotas para resolução de lista",
@@ -2035,6 +2299,51 @@
  ],
  "2026-1-AnatoQuizUp-Usuario-Service": [
   {
+   "numero": 120,
+   "titulo": "feat(ranking): alunos visiveis e visibilidade no resumo de amigo",
+   "estado": "closed",
+   "ehPr": true,
+   "criadaEm": "2026-06-25T19:33:27Z",
+   "fechadaEm": "2026-06-25T23:11:55Z",
+   "mergeadaEm": "2026-06-25T23:11:55Z",
+   "labels": [],
+   "responsaveis": [],
+   "autor": "GenilsonJrs",
+   "milestone": null,
+   "temDescricao": true,
+   "comentarios": 1
+  },
+  {
+   "numero": 119,
+   "titulo": "fix: nome no cadastro de aluno e professor nao aceita mais caracteres…",
+   "estado": "closed",
+   "ehPr": true,
+   "criadaEm": "2026-06-14T20:22:26Z",
+   "fechadaEm": "2026-06-16T16:23:17Z",
+   "mergeadaEm": "2026-06-16T16:23:17Z",
+   "labels": [],
+   "responsaveis": [],
+   "autor": "EhOBruno",
+   "milestone": null,
+   "temDescricao": true,
+   "comentarios": 1
+  },
+  {
+   "numero": 118,
+   "titulo": "Test/teste integracao",
+   "estado": "open",
+   "ehPr": true,
+   "criadaEm": "2026-06-13T20:30:59Z",
+   "fechadaEm": null,
+   "mergeadaEm": null,
+   "labels": [],
+   "responsaveis": [],
+   "autor": "pkbceira03",
+   "milestone": null,
+   "temDescricao": true,
+   "comentarios": 2
+  },
+  {
    "numero": 117,
    "titulo": "Feat/sistema amizade",
    "estado": "closed",
@@ -2157,10 +2466,10 @@
   {
    "numero": 109,
    "titulo": "[Back-end] Gerenciamento de Listas",
-   "estado": "open",
+   "estado": "closed",
    "ehPr": false,
    "criadaEm": "2026-05-08T19:45:21Z",
-   "fechadaEm": null,
+   "fechadaEm": "2026-06-27T12:53:35Z",
    "mergeadaEm": null,
    "labels": [
     "backend"
@@ -2183,7 +2492,9 @@
     "backend",
     "Documentação"
    ],
-   "responsaveis": [],
+   "responsaveis": [
+    "Brenofrds"
+   ],
    "autor": "pkbceira03",
    "milestone": null,
    "temDescricao": true,
@@ -2222,10 +2533,10 @@
   {
    "numero": 105,
    "titulo": "[IA] Construção e Treinamento do Modelo Generativo",
-   "estado": "open",
+   "estado": "closed",
    "ehPr": false,
    "criadaEm": "2026-05-06T15:23:59Z",
-   "fechadaEm": null,
+   "fechadaEm": "2026-06-27T12:53:33Z",
    "mergeadaEm": null,
    "labels": [
     "backend"
@@ -2248,7 +2559,9 @@
     "backend",
     "Documentação"
    ],
-   "responsaveis": [],
+   "responsaveis": [
+    "Brenofrds"
+   ],
    "autor": "pkbceira03",
    "milestone": "Milestone 2: Módulo de questão",
    "temDescricao": true,
@@ -2265,7 +2578,9 @@
    "labels": [
     "backend"
    ],
-   "responsaveis": [],
+   "responsaveis": [
+    "trindadea"
+   ],
    "autor": "pkbceira03",
    "milestone": "Milestone 2: Módulo de questão",
    "temDescricao": true,
@@ -2274,10 +2589,10 @@
   {
    "numero": 102,
    "titulo": "[Backend] API Dashboard de Evolução (Aluno)",
-   "estado": "open",
+   "estado": "closed",
    "ehPr": false,
    "criadaEm": "2026-05-06T13:14:31Z",
-   "fechadaEm": null,
+   "fechadaEm": "2026-06-27T12:53:34Z",
    "mergeadaEm": null,
    "labels": [
     "backend"
@@ -2321,10 +2636,10 @@
   {
    "numero": 99,
    "titulo": "[Web] Dashboard de Evolução (Aluno)",
-   "estado": "open",
+   "estado": "closed",
    "ehPr": false,
    "criadaEm": "2026-05-04T19:19:59Z",
-   "fechadaEm": null,
+   "fechadaEm": "2026-06-27T12:53:35Z",
    "mergeadaEm": null,
    "labels": [
     "frontend"
@@ -2368,10 +2683,10 @@
   {
    "numero": 96,
    "titulo": "[US] Envio de Feedback Personalizado ao Aluno",
-   "estado": "open",
+   "estado": "closed",
    "ehPr": false,
    "criadaEm": "2026-05-03T18:42:45Z",
-   "fechadaEm": null,
+   "fechadaEm": "2026-06-27T12:53:31Z",
    "mergeadaEm": null,
    "labels": [
     "US"
@@ -2385,10 +2700,10 @@
   {
    "numero": 95,
    "titulo": "[US] Envio de Reporte de Erros e Sugestões (Feedback Geral)",
-   "estado": "open",
+   "estado": "closed",
    "ehPr": false,
    "criadaEm": "2026-05-03T18:42:43Z",
-   "fechadaEm": null,
+   "fechadaEm": "2026-06-27T12:53:29Z",
    "mergeadaEm": null,
    "labels": [
     "US"
@@ -2442,10 +2757,10 @@
   {
    "numero": 92,
    "titulo": "[US] [Web] Relatório de Engajamento",
-   "estado": "open",
+   "estado": "closed",
    "ehPr": false,
    "criadaEm": "2026-05-03T18:42:38Z",
-   "fechadaEm": null,
+   "fechadaEm": "2026-06-27T12:53:27Z",
    "mergeadaEm": null,
    "labels": [
     "US"
@@ -2459,10 +2774,10 @@
   {
    "numero": 91,
    "titulo": "[US] Gerenciamento e Configuração dos Modelos de IA (Admin)",
-   "estado": "open",
+   "estado": "closed",
    "ehPr": false,
    "criadaEm": "2026-05-03T18:42:37Z",
-   "fechadaEm": null,
+   "fechadaEm": "2026-06-27T12:53:31Z",
    "mergeadaEm": null,
    "labels": [
     "US"
@@ -2476,10 +2791,10 @@
   {
    "numero": 90,
    "titulo": "[US] [Web] Sistema de Amigos",
-   "estado": "open",
+   "estado": "closed",
    "ehPr": false,
    "criadaEm": "2026-05-03T18:42:36Z",
-   "fechadaEm": null,
+   "fechadaEm": "2026-06-27T12:53:28Z",
    "mergeadaEm": null,
    "labels": [
     "US"
@@ -2493,10 +2808,10 @@
   {
    "numero": 89,
    "titulo": "[US] [Web] Desafio Direto (Duelo)",
-   "estado": "open",
+   "estado": "closed",
    "ehPr": false,
    "criadaEm": "2026-05-03T18:42:34Z",
-   "fechadaEm": null,
+   "fechadaEm": "2026-06-27T12:53:28Z",
    "mergeadaEm": null,
    "labels": [
     "US"
@@ -2518,7 +2833,11 @@
    "labels": [
     "US"
    ],
-   "responsaveis": [],
+   "responsaveis": [
+    "caiobsantos",
+    "GenilsonJrs",
+    "EhOMiguel"
+   ],
    "autor": "ViictorHugoo",
    "milestone": null,
    "temDescricao": true,
@@ -2527,10 +2846,10 @@
   {
    "numero": 87,
    "titulo": "[US] [Web] Ajuste Dinâmico de Dificuldade",
-   "estado": "open",
+   "estado": "closed",
    "ehPr": false,
    "criadaEm": "2026-05-03T18:42:31Z",
-   "fechadaEm": null,
+   "fechadaEm": "2026-06-27T12:53:27Z",
    "mergeadaEm": null,
    "labels": [
     "US"
@@ -2544,10 +2863,10 @@
   {
    "numero": 86,
    "titulo": "[US] [Web] Reporte de Erro de IA",
-   "estado": "open",
+   "estado": "closed",
    "ehPr": false,
    "criadaEm": "2026-05-03T18:42:30Z",
-   "fechadaEm": null,
+   "fechadaEm": "2026-06-27T12:53:30Z",
    "mergeadaEm": null,
    "labels": [
     "US"
@@ -2561,10 +2880,10 @@
   {
    "numero": 85,
    "titulo": "[US] [Web] Exclusão de Conta (LGPD)",
-   "estado": "open",
+   "estado": "closed",
    "ehPr": false,
    "criadaEm": "2026-05-03T18:42:28Z",
-   "fechadaEm": null,
+   "fechadaEm": "2026-06-27T12:53:28Z",
    "mergeadaEm": null,
    "labels": [
     "US"
@@ -2578,10 +2897,10 @@
   {
    "numero": 84,
    "titulo": "[US] Personalização e Decoração do Quarto (Perfil)",
-   "estado": "open",
+   "estado": "closed",
    "ehPr": false,
    "criadaEm": "2026-05-03T18:42:27Z",
-   "fechadaEm": null,
+   "fechadaEm": "2026-06-27T12:53:30Z",
    "mergeadaEm": null,
    "labels": [
     "US"
@@ -2595,10 +2914,10 @@
   {
    "numero": 83,
    "titulo": "[US] Curadoria de Dados e Refinamento do Modelo de IA (Admin)",
-   "estado": "open",
+   "estado": "closed",
    "ehPr": false,
    "criadaEm": "2026-05-03T18:42:25Z",
-   "fechadaEm": null,
+   "fechadaEm": "2026-06-27T12:53:31Z",
    "mergeadaEm": null,
    "labels": [
     "US"
@@ -2615,7 +2934,7 @@
    "estado": "closed",
    "ehPr": false,
    "criadaEm": "2026-05-03T18:42:23Z",
-   "fechadaEm": "2026-06-08T13:26:44Z",
+   "fechadaEm": "2026-06-15T01:05:58Z",
    "mergeadaEm": null,
    "labels": [
     "US"
@@ -2633,10 +2952,10 @@
   {
    "numero": 81,
    "titulo": "[US] Grupos de Estudo com Amigos",
-   "estado": "open",
+   "estado": "closed",
    "ehPr": false,
    "criadaEm": "2026-05-03T18:42:21Z",
-   "fechadaEm": null,
+   "fechadaEm": "2026-06-27T12:53:30Z",
    "mergeadaEm": null,
    "labels": [
     "US"
@@ -2650,10 +2969,10 @@
   {
    "numero": 80,
    "titulo": "[US] Duelo Síncrono de Questões em Tempo Real",
-   "estado": "open",
+   "estado": "closed",
    "ehPr": false,
    "criadaEm": "2026-05-03T18:42:19Z",
-   "fechadaEm": null,
+   "fechadaEm": "2026-06-27T12:53:34Z",
    "mergeadaEm": null,
    "labels": [
     "US"
@@ -2667,10 +2986,10 @@
   {
    "numero": 79,
    "titulo": " [US] Personalização e Inventário do Avatar",
-   "estado": "open",
+   "estado": "closed",
    "ehPr": false,
    "criadaEm": "2026-05-03T18:42:18Z",
-   "fechadaEm": null,
+   "fechadaEm": "2026-06-27T12:53:31Z",
    "mergeadaEm": null,
    "labels": [
     "US"
@@ -2684,10 +3003,10 @@
   {
    "numero": 78,
    "titulo": "[US] [Web] Ranking de Desempenho",
-   "estado": "open",
+   "estado": "closed",
    "ehPr": false,
    "criadaEm": "2026-05-03T18:42:16Z",
-   "fechadaEm": null,
+   "fechadaEm": "2026-06-27T12:53:28Z",
    "mergeadaEm": null,
    "labels": [
     "US"
@@ -2741,10 +3060,10 @@
   {
    "numero": 75,
    "titulo": "[US] [Web] Mapa de Lacunas",
-   "estado": "open",
+   "estado": "closed",
    "ehPr": false,
    "criadaEm": "2026-05-03T18:42:11Z",
-   "fechadaEm": null,
+   "fechadaEm": "2026-06-27T12:53:28Z",
    "mergeadaEm": null,
    "labels": [
     "US"
@@ -2758,10 +3077,10 @@
   {
    "numero": 74,
    "titulo": "[US] [Web] Chatbot Tutorial Interativo",
-   "estado": "open",
+   "estado": "closed",
    "ehPr": false,
    "criadaEm": "2026-05-03T18:42:10Z",
-   "fechadaEm": null,
+   "fechadaEm": "2026-06-27T12:53:31Z",
    "mergeadaEm": null,
    "labels": [
     "US"
@@ -2775,10 +3094,10 @@
   {
    "numero": 73,
    "titulo": "[US] [Web] Curadoria de Especialista",
-   "estado": "open",
+   "estado": "closed",
    "ehPr": false,
    "criadaEm": "2026-05-03T18:42:08Z",
-   "fechadaEm": null,
+   "fechadaEm": "2026-06-27T12:53:29Z",
    "mergeadaEm": null,
    "labels": [
     "US"
@@ -2792,10 +3111,10 @@
   {
    "numero": 72,
    "titulo": " [US] Gestão e Visualização de Feedbacks (Painel do Admin)",
-   "estado": "open",
+   "estado": "closed",
    "ehPr": false,
    "criadaEm": "2026-05-03T18:42:07Z",
-   "fechadaEm": null,
+   "fechadaEm": "2026-06-27T12:53:30Z",
    "mergeadaEm": null,
    "labels": [
     "US"
@@ -2809,10 +3128,10 @@
   {
    "numero": 71,
    "titulo": "[US] [Web] Geração Dinâmica de Questões",
-   "estado": "open",
+   "estado": "closed",
    "ehPr": false,
    "criadaEm": "2026-05-03T18:42:05Z",
-   "fechadaEm": null,
+   "fechadaEm": "2026-06-27T12:53:31Z",
    "mergeadaEm": null,
    "labels": [
     "US"
@@ -2834,7 +3153,9 @@
    "labels": [
     "backend"
    ],
-   "responsaveis": [],
+   "responsaveis": [
+    "GenilsonJrs"
+   ],
    "autor": "ViictorHugoo",
    "milestone": "Milestone 2: Módulo de questão",
    "temDescricao": true,
@@ -2843,10 +3164,10 @@
   {
    "numero": 69,
    "titulo": "[US] Dashboard de Estatísticas Gerais da Plataforma (Admin)",
-   "estado": "open",
+   "estado": "closed",
    "ehPr": false,
    "criadaEm": "2026-05-03T18:39:18Z",
-   "fechadaEm": null,
+   "fechadaEm": "2026-06-27T12:53:32Z",
    "mergeadaEm": null,
    "labels": [
     "US"
@@ -2860,10 +3181,10 @@
   {
    "numero": 68,
    "titulo": "[US] [API] Relatório de Engajamento",
-   "estado": "open",
+   "estado": "closed",
    "ehPr": false,
    "criadaEm": "2026-05-03T18:39:17Z",
-   "fechadaEm": null,
+   "fechadaEm": "2026-06-27T12:53:29Z",
    "mergeadaEm": null,
    "labels": [
     "US"
@@ -2880,7 +3201,7 @@
    "estado": "closed",
    "ehPr": false,
    "criadaEm": "2026-05-03T18:39:15Z",
-   "fechadaEm": "2026-06-02T13:41:15Z",
+   "fechadaEm": "2026-06-15T01:06:00Z",
    "mergeadaEm": null,
    "labels": [
     "US"
@@ -2900,7 +3221,7 @@
    "estado": "closed",
    "ehPr": false,
    "criadaEm": "2026-05-03T18:39:14Z",
-   "fechadaEm": "2026-06-07T20:07:27Z",
+   "fechadaEm": "2026-06-15T01:05:59Z",
    "mergeadaEm": null,
    "labels": [
     "US"
@@ -2917,10 +3238,10 @@
   {
    "numero": 65,
    "titulo": " [US] Duelo de Questões entre Amigos (Modo Assíncrono)",
-   "estado": "open",
+   "estado": "closed",
    "ehPr": false,
    "criadaEm": "2026-05-03T18:39:12Z",
-   "fechadaEm": null,
+   "fechadaEm": "2026-06-27T12:53:30Z",
    "mergeadaEm": null,
    "labels": [
     "US"
@@ -2934,10 +3255,10 @@
   {
    "numero": 64,
    "titulo": "[US] [API] Ajuste Dinâmico de Dificuldade",
-   "estado": "open",
+   "estado": "closed",
    "ehPr": false,
    "criadaEm": "2026-05-03T18:39:10Z",
-   "fechadaEm": null,
+   "fechadaEm": "2026-06-27T12:53:30Z",
    "mergeadaEm": null,
    "labels": [
     "US"
@@ -2951,10 +3272,10 @@
   {
    "numero": 63,
    "titulo": "[US] Chatbot Tutor Assistente e Coleta de Feedback (Aluno)",
-   "estado": "open",
+   "estado": "closed",
    "ehPr": false,
    "criadaEm": "2026-05-03T18:39:09Z",
-   "fechadaEm": null,
+   "fechadaEm": "2026-06-27T12:53:31Z",
    "mergeadaEm": null,
    "labels": [
     "US"
@@ -2968,10 +3289,10 @@
   {
    "numero": 62,
    "titulo": "[US] [API] Exclusão de Conta (LGPD)",
-   "estado": "open",
+   "estado": "closed",
    "ehPr": false,
    "criadaEm": "2026-05-03T18:39:08Z",
-   "fechadaEm": null,
+   "fechadaEm": "2026-06-27T12:53:30Z",
    "mergeadaEm": null,
    "labels": [
     "US"
@@ -2985,10 +3306,10 @@
   {
    "numero": 61,
    "titulo": "[US] [API] Edição de Perfil",
-   "estado": "open",
+   "estado": "closed",
    "ehPr": false,
    "criadaEm": "2026-05-03T18:39:06Z",
-   "fechadaEm": null,
+   "fechadaEm": "2026-06-27T12:53:28Z",
    "mergeadaEm": null,
    "labels": [
     "US"
@@ -3002,10 +3323,10 @@
   {
    "numero": 60,
    "titulo": "[Protótipo] Protótipo do Dashboard de Evolução (Aluno)",
-   "estado": "open",
+   "estado": "closed",
    "ehPr": false,
    "criadaEm": "2026-05-03T18:39:04Z",
-   "fechadaEm": null,
+   "fechadaEm": "2026-06-27T12:53:35Z",
    "mergeadaEm": null,
    "labels": [],
    "responsaveis": [],
@@ -3017,10 +3338,10 @@
   {
    "numero": 59,
    "titulo": "[US] [API] Salas de Estudo em Grupo",
-   "estado": "open",
+   "estado": "closed",
    "ehPr": false,
    "criadaEm": "2026-05-03T18:39:03Z",
-   "fechadaEm": null,
+   "fechadaEm": "2026-06-27T12:53:27Z",
    "mergeadaEm": null,
    "labels": [
     "US"
@@ -3034,10 +3355,10 @@
   {
    "numero": 58,
    "titulo": "[US] [API] Desafio Multiplayer Aleatório",
-   "estado": "open",
+   "estado": "closed",
    "ehPr": false,
    "criadaEm": "2026-05-03T18:39:01Z",
-   "fechadaEm": null,
+   "fechadaEm": "2026-06-27T12:53:27Z",
    "mergeadaEm": null,
    "labels": [
     "US"
@@ -3051,10 +3372,10 @@
   {
    "numero": 57,
    "titulo": "[US] [API] Customização de Avatar",
-   "estado": "open",
+   "estado": "closed",
    "ehPr": false,
    "criadaEm": "2026-05-03T18:39:00Z",
-   "fechadaEm": null,
+   "fechadaEm": "2026-06-27T12:53:29Z",
    "mergeadaEm": null,
    "labels": [
     "US"
@@ -3077,8 +3398,7 @@
     "US"
    ],
    "responsaveis": [
-    "GenilsonJrs",
-    "EhOMiguel"
+    "GenilsonJrs"
    ],
    "autor": "ViictorHugoo",
    "milestone": null,
@@ -3088,10 +3408,10 @@
   {
    "numero": 55,
    "titulo": "[US] [API] Sistema de Moedas",
-   "estado": "open",
+   "estado": "closed",
    "ehPr": false,
    "criadaEm": "2026-05-03T18:38:56Z",
-   "fechadaEm": null,
+   "fechadaEm": "2026-06-27T12:53:26Z",
    "mergeadaEm": null,
    "labels": [
     "US"
@@ -3105,10 +3425,10 @@
   {
    "numero": 54,
    "titulo": "[US] [API] Mapa de Conquistas e Níveis",
-   "estado": "open",
+   "estado": "closed",
    "ehPr": false,
    "criadaEm": "2026-05-03T18:38:55Z",
-   "fechadaEm": null,
+   "fechadaEm": "2026-06-27T12:53:28Z",
    "mergeadaEm": null,
    "labels": [
     "US"
@@ -3122,10 +3442,10 @@
   {
    "numero": 53,
    "titulo": "[US] [API] Chatbot Tutorial Interativo",
-   "estado": "open",
+   "estado": "closed",
    "ehPr": false,
    "criadaEm": "2026-05-03T18:38:53Z",
-   "fechadaEm": null,
+   "fechadaEm": "2026-06-27T12:53:30Z",
    "mergeadaEm": null,
    "labels": [
     "US"
@@ -3139,10 +3459,10 @@
   {
    "numero": 52,
    "titulo": "[US] Criação de Imagens por IA",
-   "estado": "open",
+   "estado": "closed",
    "ehPr": false,
    "criadaEm": "2026-05-03T18:38:51Z",
-   "fechadaEm": null,
+   "fechadaEm": "2026-06-27T12:53:32Z",
    "mergeadaEm": null,
    "labels": [
     "US"
@@ -3156,10 +3476,10 @@
   {
    "numero": 51,
    "titulo": "[US] [API] Geração Dinâmica de Questões",
-   "estado": "open",
+   "estado": "closed",
    "ehPr": false,
    "criadaEm": "2026-05-03T18:38:50Z",
-   "fechadaEm": null,
+   "fechadaEm": "2026-06-27T12:53:31Z",
    "mergeadaEm": null,
    "labels": [
     "US"
@@ -3692,7 +4012,10 @@
    "fechadaEm": "2026-05-01T12:25:04Z",
    "mergeadaEm": null,
    "labels": [],
-   "responsaveis": [],
+   "responsaveis": [
+    "EhOMiguel",
+    "Brenofrds"
+   ],
    "autor": "EhOMiguel",
    "milestone": null,
    "temDescricao": true,
@@ -4004,6 +4327,126 @@
  ],
  "2026-1-AnatoQuizUp-Quiz-Service": [
   {
+   "numero": 22,
+   "titulo": "fix(questoes): persiste e retorna palavras-chave das questoes",
+   "estado": "closed",
+   "ehPr": true,
+   "criadaEm": "2026-06-26T02:55:08Z",
+   "fechadaEm": "2026-06-26T19:05:41Z",
+   "mergeadaEm": "2026-06-26T19:05:41Z",
+   "labels": [],
+   "responsaveis": [],
+   "autor": "GenilsonJrs",
+   "milestone": null,
+   "temDescricao": true,
+   "comentarios": 1
+  },
+  {
+   "numero": 21,
+   "titulo": "feat(ranking): pontuacao de alunos e endpoint de ranking",
+   "estado": "closed",
+   "ehPr": true,
+   "criadaEm": "2026-06-25T19:33:24Z",
+   "fechadaEm": "2026-06-25T23:11:43Z",
+   "mergeadaEm": "2026-06-25T23:11:43Z",
+   "labels": [],
+   "responsaveis": [],
+   "autor": "GenilsonJrs",
+   "milestone": null,
+   "temDescricao": true,
+   "comentarios": 1
+  },
+  {
+   "numero": 20,
+   "titulo": "feat(inventario): desequipar item do inventário",
+   "estado": "closed",
+   "ehPr": true,
+   "criadaEm": "2026-06-22T14:56:43Z",
+   "fechadaEm": "2026-06-23T23:31:41Z",
+   "mergeadaEm": "2026-06-23T23:31:41Z",
+   "labels": [],
+   "responsaveis": [],
+   "autor": "GenilsonJrs",
+   "milestone": null,
+   "temDescricao": true,
+   "comentarios": 1
+  },
+  {
+   "numero": 19,
+   "titulo": "fix(conquistas): corrigir contrato das conquistas destacadas",
+   "estado": "closed",
+   "ehPr": true,
+   "criadaEm": "2026-06-22T05:16:15Z",
+   "fechadaEm": "2026-06-22T05:16:27Z",
+   "mergeadaEm": "2026-06-22T05:16:27Z",
+   "labels": [],
+   "responsaveis": [],
+   "autor": "trindadea",
+   "milestone": null,
+   "temDescricao": false,
+   "comentarios": 1
+  },
+  {
+   "numero": 18,
+   "titulo": "fix(seed): adiciona carga segura do catálogo no Railway",
+   "estado": "closed",
+   "ehPr": true,
+   "criadaEm": "2026-06-22T04:29:22Z",
+   "fechadaEm": "2026-06-22T04:29:37Z",
+   "mergeadaEm": "2026-06-22T04:29:37Z",
+   "labels": [],
+   "responsaveis": [],
+   "autor": "trindadea",
+   "milestone": null,
+   "temDescricao": true,
+   "comentarios": 1
+  },
+  {
+   "numero": 17,
+   "titulo": "Feat/conquistas",
+   "estado": "closed",
+   "ehPr": true,
+   "criadaEm": "2026-06-22T02:47:44Z",
+   "fechadaEm": "2026-06-22T04:11:02Z",
+   "mergeadaEm": "2026-06-22T04:11:02Z",
+   "labels": [],
+   "responsaveis": [],
+   "autor": "trindadea",
+   "milestone": null,
+   "temDescricao": true,
+   "comentarios": 1
+  },
+  {
+   "numero": 16,
+   "titulo": "Feat/loja e perfil",
+   "estado": "closed",
+   "ehPr": true,
+   "criadaEm": "2026-06-21T18:24:41Z",
+   "fechadaEm": "2026-06-22T03:06:37Z",
+   "mergeadaEm": "2026-06-22T03:06:37Z",
+   "labels": [],
+   "responsaveis": [],
+   "autor": "pkbceira03",
+   "milestone": null,
+   "temDescricao": true,
+   "comentarios": 1
+  },
+  {
+   "numero": 15,
+   "titulo": "Feat/novos campos questao",
+   "estado": "closed",
+   "ehPr": true,
+   "criadaEm": "2026-06-15T12:27:17Z",
+   "fechadaEm": "2026-06-15T19:21:20Z",
+   "mergeadaEm": "2026-06-15T19:21:20Z",
+   "labels": [],
+   "responsaveis": [],
+   "autor": "pkbceira03",
+   "milestone": null,
+   "temDescricao": true,
+   "comentarios": 1
+  },
+  {
    "numero": 14,
    "titulo": "Feat/listas aluno",
    "estado": "closed",
@@ -4218,10 +4661,10 @@
   {
    "numero": 1,
    "titulo": "[AI] Definir arquitetura inicial do RAG, ingestão de PDFs e estruturação do dataset",
-   "estado": "open",
+   "estado": "closed",
    "ehPr": false,
    "criadaEm": "2026-05-24T18:29:50Z",
-   "fechadaEm": null,
+   "fechadaEm": "2026-06-15T14:14:27Z",
    "mergeadaEm": null,
    "labels": [],
    "responsaveis": [
