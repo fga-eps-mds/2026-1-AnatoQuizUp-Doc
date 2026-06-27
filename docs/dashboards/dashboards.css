@@ -75,6 +75,17 @@ table.tabela td.num, table.tabela th.num { text-align: right; }
 .secao-nova > p.sub-nova { color: var(--cinza); margin: 0 0 16px; font-size: .9rem; }
 .badge-decisao { display: inline-block; background: #e8f5e9; color: var(--verde); font-size: .78rem; padding: 2px 8px; border-radius: 4px; margin-top: 6px; font-family: -apple-system, Arial, sans-serif; }
 .badge-decisao::before { content: "→ decisão: "; font-weight: 700; }
+/* Banner de metodologia — nomeia o modelo teórico do eixo (Q-Rapids / AgileEVM) */
+.metodologia { border: 1px solid var(--borda); border-left: 5px solid var(--verde); background: #f4faf4; border-radius: 8px; padding: 12px 18px; margin: 16px 0 10px; font-size: .9rem; }
+.metodologia h2 { margin: 0 0 6px; font-size: 1.05rem; }
+.metodologia p { margin: 4px 0; }
+.metodologia .ref { color: var(--cinza); font-size: .82rem; }
+.metodologia .fonte { display: inline-block; font-family: -apple-system, Arial, sans-serif; font-size: .76rem; background: #e8f5e9; color: var(--verde); padding: 1px 8px; border-radius: 4px; margin: 2px 6px 2px 0; }
+/* Dados brutos / memória de cálculo — tabelas densas e fórmulas verificáveis */
+.brutos { margin: 8px 0 26px; }
+.brutos table.tabela { font-size: .85rem; }
+.brutos .formula, code.formula { font-family: ui-monospace, "Courier New", monospace; font-size: .84rem; background: var(--fundo-suave); padding: 1px 5px; border-radius: 3px; color: var(--tinta); }
+.brutos .legenda-fonte { font-size: .8rem; color: var(--cinza); margin: 8px 0 0; }
 .secao-contexto-label { display: flex; align-items: center; gap: 10px; margin: 34px 0 4px; color: var(--cinza); }
 .secao-contexto-label::before { content: ""; flex: 0 0 4px; height: 22px; background: var(--borda); border-radius: 2px; }
 .secao-contexto-label h2 { margin: 0; font-size: 1.1rem; color: var(--cinza); font-weight: 400; }
