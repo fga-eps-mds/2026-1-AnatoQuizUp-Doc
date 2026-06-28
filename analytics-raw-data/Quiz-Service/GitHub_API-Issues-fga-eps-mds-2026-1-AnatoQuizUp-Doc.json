@@ -88,7 +88,7 @@
         "milestone": null,
         "comments": 0,
         "created_at": "2026-06-26T03:27:10Z",
-        "updated_at": "2026-06-26T03:28:44Z",
+        "updated_at": "2026-06-28T20:18:47Z",
         "closed_at": null,
         "assignee": {
             "login": "caiobsantos",
@@ -127,7 +127,27 @@
             "total_blocking": 0
         },
         "body": null,
-        "closed_by": null,
+        "closed_by": {
+            "login": "EhOMiguel",
+            "id": 98056127,
+            "node_id": "U_kgDOBdg3vw",
+            "avatar_url": "https://avatars.githubusercontent.com/u/98056127?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/EhOMiguel",
+            "html_url": "https://github.com/EhOMiguel",
+            "followers_url": "https://api.github.com/users/EhOMiguel/followers",
+            "following_url": "https://api.github.com/users/EhOMiguel/following{/other_user}",
+            "gists_url": "https://api.github.com/users/EhOMiguel/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/EhOMiguel/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/EhOMiguel/subscriptions",
+            "organizations_url": "https://api.github.com/users/EhOMiguel/orgs",
+            "repos_url": "https://api.github.com/users/EhOMiguel/repos",
+            "events_url": "https://api.github.com/users/EhOMiguel/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/EhOMiguel/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+        },
         "reactions": {
             "url": "https://api.github.com/repos/fga-eps-mds/2026-1-AnatoQuizUp-Doc/issues/50/reactions",
             "total_count": 0,
@@ -142,7 +162,7 @@
         },
         "timeline_url": "https://api.github.com/repos/fga-eps-mds/2026-1-AnatoQuizUp-Doc/issues/50/timeline",
         "performed_via_github_app": null,
-        "state_reason": null,
+        "state_reason": "reopened",
         "pinned_comment": null
     },
     {
@@ -800,14 +820,14 @@
                 "description": "New feature or request"
             }
         ],
-        "state": "open",
+        "state": "closed",
         "locked": false,
         "assignees": [],
         "milestone": null,
         "comments": 0,
         "created_at": "2026-05-25T02:16:05Z",
-        "updated_at": "2026-05-25T02:17:03Z",
-        "closed_at": null,
+        "updated_at": "2026-06-27T12:53:26Z",
+        "closed_at": "2026-06-27T12:53:26Z",
         "assignee": null,
         "author_association": "CONTRIBUTOR",
         "issue_field_values": [],
@@ -825,7 +845,27 @@
             "total_blocking": 0
         },
         "body": "**Descri\u00e7\u00e3o**\n\n- Coment\u00e1rio da quest\u00e3o deveria ser obrigat\u00f3rio.\n\n\n\n\n **A\u00e7\u00e3o sugerida**\n\n- Alinhar com PO se o coment\u00e1rio equivale \u00e0 explica\u00e7\u00e3o pedag\u00f3gica ou se exige novo campo obrigat\u00f3rio.",
-        "closed_by": null,
+        "closed_by": {
+            "login": "EhOMiguel",
+            "id": 98056127,
+            "node_id": "U_kgDOBdg3vw",
+            "avatar_url": "https://avatars.githubusercontent.com/u/98056127?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/EhOMiguel",
+            "html_url": "https://github.com/EhOMiguel",
+            "followers_url": "https://api.github.com/users/EhOMiguel/followers",
+            "following_url": "https://api.github.com/users/EhOMiguel/following{/other_user}",
+            "gists_url": "https://api.github.com/users/EhOMiguel/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/EhOMiguel/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/EhOMiguel/subscriptions",
+            "organizations_url": "https://api.github.com/users/EhOMiguel/orgs",
+            "repos_url": "https://api.github.com/users/EhOMiguel/repos",
+            "events_url": "https://api.github.com/users/EhOMiguel/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/EhOMiguel/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+        },
         "reactions": {
             "url": "https://api.github.com/repos/fga-eps-mds/2026-1-AnatoQuizUp-Doc/issues/44/reactions",
             "total_count": 0,
@@ -840,7 +880,7 @@
         },
         "timeline_url": "https://api.github.com/repos/fga-eps-mds/2026-1-AnatoQuizUp-Doc/issues/44/timeline",
         "performed_via_github_app": null,
-        "state_reason": null,
+        "state_reason": "not_planned",
         "pinned_comment": null
     },
     {
@@ -886,14 +926,14 @@
                 "description": "New feature or request"
             }
         ],
-        "state": "open",
+        "state": "closed",
         "locked": false,
         "assignees": [],
         "milestone": null,
         "comments": 0,
         "created_at": "2026-05-25T02:13:56Z",
-        "updated_at": "2026-05-25T02:14:57Z",
-        "closed_at": null,
+        "updated_at": "2026-06-27T12:53:27Z",
+        "closed_at": "2026-06-27T12:53:27Z",
         "assignee": null,
         "author_association": "CONTRIBUTOR",
         "issue_field_values": [],
@@ -911,7 +951,27 @@
             "total_blocking": 0
         },
         "body": "**Descri\u00e7\u00e3o**\n\n- Mensagem inicial do WebApp n\u00e3o evidencia anatomia radiol\u00f3gica.\n\n\n\n\n **A\u00e7\u00e3o sugerida**\n\n- Revisar textos da p\u00e1gina inicial para explicitar o foco em anatomia radiol\u00f3gica e imaginologia.",
-        "closed_by": null,
+        "closed_by": {
+            "login": "EhOMiguel",
+            "id": 98056127,
+            "node_id": "U_kgDOBdg3vw",
+            "avatar_url": "https://avatars.githubusercontent.com/u/98056127?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/EhOMiguel",
+            "html_url": "https://github.com/EhOMiguel",
+            "followers_url": "https://api.github.com/users/EhOMiguel/followers",
+            "following_url": "https://api.github.com/users/EhOMiguel/following{/other_user}",
+            "gists_url": "https://api.github.com/users/EhOMiguel/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/EhOMiguel/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/EhOMiguel/subscriptions",
+            "organizations_url": "https://api.github.com/users/EhOMiguel/orgs",
+            "repos_url": "https://api.github.com/users/EhOMiguel/repos",
+            "events_url": "https://api.github.com/users/EhOMiguel/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/EhOMiguel/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+        },
         "reactions": {
             "url": "https://api.github.com/repos/fga-eps-mds/2026-1-AnatoQuizUp-Doc/issues/43/reactions",
             "total_count": 0,
@@ -926,7 +986,7 @@
         },
         "timeline_url": "https://api.github.com/repos/fga-eps-mds/2026-1-AnatoQuizUp-Doc/issues/43/timeline",
         "performed_via_github_app": null,
-        "state_reason": null,
+        "state_reason": "not_planned",
         "pinned_comment": null
     },
     {
@@ -2800,11 +2860,11 @@
                 "user_view_type": "public",
                 "site_admin": false
             },
-            "open_issues": 1,
-            "closed_issues": 10,
+            "open_issues": 0,
+            "closed_issues": 11,
             "state": "open",
             "created_at": "2026-05-01T12:05:54Z",
-            "updated_at": "2026-05-25T13:56:29Z",
+            "updated_at": "2026-06-27T12:53:33Z",
             "due_on": "2026-05-23T00:00:00Z",
             "closed_at": null
         },
@@ -3078,7 +3138,7 @@
                 "description": null
             }
         ],
-        "state": "open",
+        "state": "closed",
         "locked": false,
         "assignees": [
             {
@@ -3127,8 +3187,8 @@
         "milestone": null,
         "comments": 0,
         "created_at": "2026-05-06T15:20:17Z",
-        "updated_at": "2026-05-10T22:37:53Z",
-        "closed_at": null,
+        "updated_at": "2026-06-27T12:53:36Z",
+        "closed_at": "2026-06-27T12:53:36Z",
         "assignee": {
             "login": "marialuisa214",
             "id": 91849929,
@@ -3165,8 +3225,8 @@
         "active_lock_reason": null,
         "sub_issues_summary": {
             "total": 1,
-            "completed": 0,
-            "percent_completed": 0
+            "completed": 1,
+            "percent_completed": 100
         },
         "issue_dependencies_summary": {
             "blocked_by": 0,
@@ -3175,7 +3235,27 @@
             "total_blocking": 0
         },
         "body": "**Como** professor da plataforma  \n**Quero** gerar quest\u00f5es automaticamente utilizando Intelig\u00eancia Artificial a partir de um tema e/ou uma imagem  \n**Para** otimizar o meu tempo de preparo de material e diversificar o banco de quest\u00f5es dispon\u00edveis para os alunos\n\n---\n\n### Crit\u00e9rios de Aceita\u00e7\u00e3o\n- [ ] **Acesso:** Funcionalidade dispon\u00edvel na tela de cria\u00e7\u00e3o de quest\u00f5es, exclusiva para perfil `Professor` ou `Admin`.\n- [ ] **Inputs do Usu\u00e1rio:** O professor deve poder inserir um \"Tema\" (obrigat\u00f3rio) e fazer o upload de uma \"Imagem\" (opcional) como base para a gera\u00e7\u00e3o.\n- [ ] **Processamento Multimodal:** O modelo de IA deve ser capaz de interpretar tanto o texto do tema quanto o contexto visual da imagem fornecida para formular a pergunta.\n- [ ] **Sa\u00edda Estruturada:** A IA deve retornar os dados em um formato que preencha automaticamente o formul\u00e1rio de cria\u00e7\u00e3o existente:\n    - Enunciado\n    - Tipo (M\u00faltipla Escolha ou Verdadeiro/Falso)\n    - 5 Alternativas (se aplic\u00e1vel)\n    - Indica\u00e7\u00e3o da resposta correta\n    - Explica\u00e7\u00e3o pedag\u00f3gica\n- [ ] **Revis\u00e3o Humana:** A quest\u00e3o gerada n\u00e3o deve ser salva diretamente no banco de dados. Ela deve apenas preencher os campos da interface para que o professor possa revisar, editar e aprovar antes de clicar em \"Salvar\".\n- [ ] **Tratamento de Erros:** Exibir feedback claro caso a IA demore a responder, falhe ou retorne um formato inv\u00e1lido.\n\n---\n\n### Valor de Neg\u00f3cio\nA ado\u00e7\u00e3o de IA generativa atua como um \"co-piloto\" para os docentes, reduzindo drasticamente o esfor\u00e7o bra\u00e7al de formular perguntas e alternativas incorretas plaus\u00edveis (distratores). Isso escala a alimenta\u00e7\u00e3o do banco de quest\u00f5es, tornando o sistema mais atrativo e rico em conte\u00fado.",
-        "closed_by": null,
+        "closed_by": {
+            "login": "EhOMiguel",
+            "id": 98056127,
+            "node_id": "U_kgDOBdg3vw",
+            "avatar_url": "https://avatars.githubusercontent.com/u/98056127?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/EhOMiguel",
+            "html_url": "https://github.com/EhOMiguel",
+            "followers_url": "https://api.github.com/users/EhOMiguel/followers",
+            "following_url": "https://api.github.com/users/EhOMiguel/following{/other_user}",
+            "gists_url": "https://api.github.com/users/EhOMiguel/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/EhOMiguel/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/EhOMiguel/subscriptions",
+            "organizations_url": "https://api.github.com/users/EhOMiguel/orgs",
+            "repos_url": "https://api.github.com/users/EhOMiguel/repos",
+            "events_url": "https://api.github.com/users/EhOMiguel/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/EhOMiguel/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+        },
         "reactions": {
             "url": "https://api.github.com/repos/fga-eps-mds/2026-1-AnatoQuizUp-Doc/issues/27/reactions",
             "total_count": 0,
@@ -3190,7 +3270,7 @@
         },
         "timeline_url": "https://api.github.com/repos/fga-eps-mds/2026-1-AnatoQuizUp-Doc/issues/27/timeline",
         "performed_via_github_app": null,
-        "state_reason": null,
+        "state_reason": "not_planned",
         "pinned_comment": null
     },
     {
@@ -3226,7 +3306,7 @@
             "site_admin": false
         },
         "labels": [],
-        "state": "open",
+        "state": "closed",
         "locked": false,
         "assignees": [],
         "milestone": {
@@ -3259,18 +3339,18 @@
                 "user_view_type": "public",
                 "site_admin": false
             },
-            "open_issues": 1,
-            "closed_issues": 10,
+            "open_issues": 0,
+            "closed_issues": 11,
             "state": "open",
             "created_at": "2026-05-01T12:05:54Z",
-            "updated_at": "2026-05-25T13:56:29Z",
+            "updated_at": "2026-06-27T12:53:33Z",
             "due_on": "2026-05-23T00:00:00Z",
             "closed_at": null
         },
         "comments": 0,
         "created_at": "2026-05-06T14:57:43Z",
-        "updated_at": "2026-05-06T14:58:30Z",
-        "closed_at": null,
+        "updated_at": "2026-06-27T12:53:33Z",
+        "closed_at": "2026-06-27T12:53:33Z",
         "assignee": null,
         "author_association": "CONTRIBUTOR",
         "issue_field_values": [],
@@ -3289,7 +3369,27 @@
             "total_blocking": 0
         },
         "body": "## Informa\u00e7\u00f5es\n| Campo | Valor |\n|-------|-------|\n| Epic | Turmas do Aluno |\n\n## Crit\u00e9rios de Aceita\u00e7\u00e3o\n- [ ] Criar prot\u00f3tipo da tela de \"Minhas Turmas\" em formato de grid ou lista de cards\n- [ ] Desenhar o card de turma contendo: Nome da Turma e Semestre\n- [ ] Desenhar o estado vazio (Empty State) com ilustra\u00e7\u00e3o e mensagem amig\u00e1vel para alunos sem turmas\n- [ ] Criar prot\u00f3tipo da tela de \"Detalhes da Turma\" contendo o nome da turma, semestre, descri\u00e7\u00e3o e nome do professor respons\u00e1vel\n- [ ] Criar vers\u00e3o responsiva (Mobile) para a visualiza\u00e7\u00e3o dos cards e detalhes\n\n## Tarefas T\u00e9cnicas\n\n### Design\n- [ ] Estruturar layout das p\u00e1ginas no Figma\n- [ ] Definir hierarquia visual para diferenciar o t\u00edtulo da turma, semestre e a descri\u00e7\u00e3o\n- [ ] Criar fluxo de navega\u00e7\u00e3o prototipado (Listagem \u2192 Detalhes)",
-        "closed_by": null,
+        "closed_by": {
+            "login": "EhOMiguel",
+            "id": 98056127,
+            "node_id": "U_kgDOBdg3vw",
+            "avatar_url": "https://avatars.githubusercontent.com/u/98056127?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/EhOMiguel",
+            "html_url": "https://github.com/EhOMiguel",
+            "followers_url": "https://api.github.com/users/EhOMiguel/followers",
+            "following_url": "https://api.github.com/users/EhOMiguel/following{/other_user}",
+            "gists_url": "https://api.github.com/users/EhOMiguel/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/EhOMiguel/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/EhOMiguel/subscriptions",
+            "organizations_url": "https://api.github.com/users/EhOMiguel/orgs",
+            "repos_url": "https://api.github.com/users/EhOMiguel/repos",
+            "events_url": "https://api.github.com/users/EhOMiguel/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/EhOMiguel/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+        },
         "reactions": {
             "url": "https://api.github.com/repos/fga-eps-mds/2026-1-AnatoQuizUp-Doc/issues/26/reactions",
             "total_count": 0,
@@ -3304,7 +3404,7 @@
         },
         "timeline_url": "https://api.github.com/repos/fga-eps-mds/2026-1-AnatoQuizUp-Doc/issues/26/timeline",
         "performed_via_github_app": null,
-        "state_reason": null,
+        "state_reason": "not_planned",
         "pinned_comment": null
     },
     {
@@ -3447,11 +3547,11 @@
                 "user_view_type": "public",
                 "site_admin": false
             },
-            "open_issues": 1,
-            "closed_issues": 10,
+            "open_issues": 0,
+            "closed_issues": 11,
             "state": "open",
             "created_at": "2026-05-01T12:05:54Z",
-            "updated_at": "2026-05-25T13:56:29Z",
+            "updated_at": "2026-06-27T12:53:33Z",
             "due_on": "2026-05-23T00:00:00Z",
             "closed_at": null
         },
@@ -3495,8 +3595,8 @@
         "active_lock_reason": null,
         "sub_issues_summary": {
             "total": 4,
-            "completed": 1,
-            "percent_completed": 25
+            "completed": 4,
+            "percent_completed": 100
         },
         "issue_dependencies_summary": {
             "blocked_by": 0,
@@ -3631,11 +3731,11 @@
                 "user_view_type": "public",
                 "site_admin": false
             },
-            "open_issues": 1,
-            "closed_issues": 10,
+            "open_issues": 0,
+            "closed_issues": 11,
             "state": "open",
             "created_at": "2026-05-01T12:05:54Z",
-            "updated_at": "2026-05-25T13:56:29Z",
+            "updated_at": "2026-06-27T12:53:33Z",
             "due_on": "2026-05-23T00:00:00Z",
             "closed_at": null
         },
@@ -3859,11 +3959,11 @@
                 "user_view_type": "public",
                 "site_admin": false
             },
-            "open_issues": 1,
-            "closed_issues": 10,
+            "open_issues": 0,
+            "closed_issues": 11,
             "state": "open",
             "created_at": "2026-05-01T12:05:54Z",
-            "updated_at": "2026-05-25T13:56:29Z",
+            "updated_at": "2026-06-27T12:53:33Z",
             "due_on": "2026-05-23T00:00:00Z",
             "closed_at": null
         },
@@ -4095,11 +4195,11 @@
                 "user_view_type": "public",
                 "site_admin": false
             },
-            "open_issues": 1,
-            "closed_issues": 10,
+            "open_issues": 0,
+            "closed_issues": 11,
             "state": "open",
             "created_at": "2026-05-01T12:05:54Z",
-            "updated_at": "2026-05-25T13:56:29Z",
+            "updated_at": "2026-06-27T12:53:33Z",
             "due_on": "2026-05-23T00:00:00Z",
             "closed_at": null
         },
@@ -4310,11 +4410,11 @@
                 "user_view_type": "public",
                 "site_admin": false
             },
-            "open_issues": 1,
-            "closed_issues": 10,
+            "open_issues": 0,
+            "closed_issues": 11,
             "state": "open",
             "created_at": "2026-05-01T12:05:54Z",
-            "updated_at": "2026-05-25T13:56:29Z",
+            "updated_at": "2026-06-27T12:53:33Z",
             "due_on": "2026-05-23T00:00:00Z",
             "closed_at": null
         },
@@ -4907,11 +5007,11 @@
                 "user_view_type": "public",
                 "site_admin": false
             },
-            "open_issues": 1,
-            "closed_issues": 10,
+            "open_issues": 0,
+            "closed_issues": 11,
             "state": "open",
             "created_at": "2026-05-01T12:05:54Z",
-            "updated_at": "2026-05-25T13:56:29Z",
+            "updated_at": "2026-06-27T12:53:33Z",
             "due_on": "2026-05-23T00:00:00Z",
             "closed_at": null
         },
@@ -5102,11 +5202,11 @@
                 "user_view_type": "public",
                 "site_admin": false
             },
-            "open_issues": 1,
-            "closed_issues": 10,
+            "open_issues": 0,
+            "closed_issues": 11,
             "state": "open",
             "created_at": "2026-05-01T12:05:54Z",
-            "updated_at": "2026-05-25T13:56:29Z",
+            "updated_at": "2026-06-27T12:53:33Z",
             "due_on": "2026-05-23T00:00:00Z",
             "closed_at": null
         },
@@ -5318,11 +5418,11 @@
                 "user_view_type": "public",
                 "site_admin": false
             },
-            "open_issues": 1,
-            "closed_issues": 10,
+            "open_issues": 0,
+            "closed_issues": 11,
             "state": "open",
             "created_at": "2026-05-01T12:05:54Z",
-            "updated_at": "2026-05-25T13:56:29Z",
+            "updated_at": "2026-06-27T12:53:33Z",
             "due_on": "2026-05-23T00:00:00Z",
             "closed_at": null
         },
@@ -5534,11 +5634,11 @@
                 "user_view_type": "public",
                 "site_admin": false
             },
-            "open_issues": 1,
-            "closed_issues": 10,
+            "open_issues": 0,
+            "closed_issues": 11,
             "state": "open",
             "created_at": "2026-05-01T12:05:54Z",
-            "updated_at": "2026-05-25T13:56:29Z",
+            "updated_at": "2026-06-27T12:53:33Z",
             "due_on": "2026-05-23T00:00:00Z",
             "closed_at": null
         },
