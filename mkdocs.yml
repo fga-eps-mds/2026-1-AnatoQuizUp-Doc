@@ -90,6 +90,7 @@ nav:
   - Registro:
       - Reuniões: processo/reunioes.md
       - Validação Release Minor 3: processo/validacao-release-minor-3.md
+      - Validação Incremento 18/05: processo/validacao-incremento-1805.md
 
   - Contribuição:
       - Setup Local: contribuicao/setup-local.md
