@@ -92,6 +92,7 @@ nav:
       - Validação Release Minor 3: processo/validacao-release-minor-3.md
       - Validação Incremento 18/05: processo/validacao-incremento-1805.md
       - Validação Release Major 2: processo/validacao-release-major-2.md
+      - Validação Release Minor 4: processo/validacao-funcionalidades-rm4.md
 
   - Contribuição:
       - Setup Local: contribuicao/setup-local.md
