@@ -1,4 +1,4 @@
-﻿import { readdir, readFile, writeFile } from "node:fs/promises";
+import { readdir, readFile, writeFile } from "node:fs/promises";
 import { dirname, join } from "node:path";
 import { fileURLToPath } from "node:url";
 
@@ -127,19 +127,30 @@ function densidadesQRapids(componentes = []) {
     .filter((a) => (a.medidas.ncloc ?? 0) > 0);
 
   const comCobertura = arquivos.filter((a) => a.medidas.coverage !== undefined);
-  const frac = (lista, pred) => lista.length ? lista.filter(pred).length / lista.length : null;
+  const conta = (lista, pred) => lista.filter(pred).length;
+  const fracao = (parte, total) => total ? parte / total : null;
+  const arquivosNaoComplexos = conta(arquivos, (a) => {
+    const funcoes = a.medidas.functions ?? 0;
+    return funcoes === 0 || (a.medidas.complexity ?? 0) / funcoes <= 10;
+  });
+  const arquivosComentariosOk = conta(arquivos, (a) => (a.medidas.comment_lines_density ?? 0) >= 10 && (a.medidas.comment_lines_density ?? 0) <= 30);
+  const arquivosDuplicacaoOk = conta(arquivos, (a) => (a.medidas.duplicated_lines_density ?? 0) < 5);
+  const arquivosCoberturaOk = conta(comCobertura, (a) => a.medidas.coverage >= 80);
 
   return {
-    // Q-Rapids: arquivos nÃ£o complexos / total de arquivos. Arquivos sem
-    // funÃ§Ãµes sÃ£o nÃ£o complexos, pois nÃ£o possuem funÃ§Ã£o acima do limite.
-    complexidade: frac(arquivos, (a) => {
-      const funcoes = a.medidas.functions ?? 0;
-      return funcoes === 0 || (a.medidas.complexity ?? 0) / funcoes <= 10;
-    }),
-    comentarios: frac(arquivos, (a) => (a.medidas.comment_lines_density ?? 0) >= 10 && (a.medidas.comment_lines_density ?? 0) <= 30),
-    duplicacao: frac(arquivos, (a) => (a.medidas.duplicated_lines_density ?? 0) < 5),
-    cobertura: frac(comCobertura, (a) => a.medidas.coverage >= 80),
+    complexidade: fracao(arquivosNaoComplexos, arquivos.length),
+    comentarios: fracao(arquivosComentariosOk, arquivos.length),
+    duplicacao: fracao(arquivosDuplicacaoOk, arquivos.length),
+    cobertura: fracao(arquivosCoberturaOk, comCobertura.length),
     totalArquivos: arquivos.length,
+    brutos: {
+      totalArquivos: arquivos.length,
+      arquivosNaoComplexos,
+      arquivosComentariosOk,
+      arquivosDuplicacaoOk,
+      totalArquivosComCobertura: comCobertura.length,
+      arquivosCoberturaOk,
+    },
   };
 }
 
@@ -168,13 +179,21 @@ function metricasTeste(medidas = {}, runs = [], resultadoManual = null) {
   const buildsRapidos = buildsDeTeste.filter(({ inicio, fim }) => fim - inicio < 300000);
 
   return {
-    // Q-Rapids: (testes unitÃ¡rios - erros - falhas) / testes unitÃ¡rios.
-    // NÃ£o substitua pela proporÃ§Ã£o de suÃ­tes aprovadas: sÃ£o grandezas
-    // diferentes. Sem as trÃªs contagens, a mÃ©trica fica indisponÃ­vel.
     testSuccess: possuiContagens
       ? Math.max(0, totalTestes - erros - falhas) / totalTestes
       : null,
     fastTests: buildsDeTeste.length ? buildsRapidos.length / buildsDeTeste.length : null,
+    brutos: {
+      fonte: resultadoManual ? "manual" : "sonar",
+      totalTestes: Number.isFinite(totalTestes) ? totalTestes : null,
+      testesAprovados: possuiContagens ? Math.max(0, totalTestes - erros - falhas) : null,
+      falhas: Number.isFinite(falhas) ? falhas : null,
+      erros: Number.isFinite(erros) ? erros : null,
+      suitesFalhando: Number.isFinite(resultadoManual?.numFailedTestSuites) ? resultadoManual.numFailedTestSuites : null,
+      totalSuites: Number.isFinite(resultadoManual?.numTotalTestSuites) ? resultadoManual.numTotalTestSuites : null,
+      buildsCiConcluidas: buildsDeTeste.length,
+      buildsCiRapidas: buildsRapidos.length,
+    },
   };
 }
 
@@ -217,6 +236,22 @@ function metricasTabela(latestSonar, medidas, densidades, runs = [], resultadoMa
     maintainability: arred(maintainability, 4),
     reliability: arred(reliability, 4),
     scoreTotal: arred(Number.isFinite(maintainability) && Number.isFinite(reliability) ? maintainability + reliability : null, 4),
+    brutos: {
+      sonar: {
+        arquivo: latestSonar?.nome ?? null,
+        ncloc: medidas.ncloc ?? null,
+        complexity: medidas.complexity ?? null,
+        commentLinesDensity: medidas.comment_lines_density ?? null,
+        duplicatedLinesDensity: medidas.duplicated_lines_density ?? null,
+        coverage: medidas.coverage ?? null,
+        files: medidas.files ?? null,
+        functions: medidas.functions ?? null,
+        securityRating: medidas.security_rating ?? null,
+      },
+      qrapids: densidades.brutos ?? null,
+      testes: testes.brutos ?? null,
+      manual: resultadoManual ?? null,
+    },
   };
 }
 

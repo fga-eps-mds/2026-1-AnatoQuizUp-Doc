@@ -11,7 +11,7 @@ const REPOS = [
 const temNumero = (v) => typeof v === "number" && Number.isFinite(v);
 const classe = (v, alto = 0.75, medio = 0.50) => !temNumero(v) ? "cinza" : v >= alto ? "verde" : v >= medio ? "amarelo" : "vermelho";
 const cor = (v, alto = 0.75, medio = 0.50) => !temNumero(v) ? CINZA : v >= alto ? VERDE : v >= medio ? AMARELO : VERMELHO;
-const fmt = (v) => temNumero(v) ? v.toFixed(2).replace(".", ",") : "Sem dados disponíveis";
+const fmt = (v) => temNumero(v) ? v.toFixed(2).replace(".", ",") : "Sem dados dispon&iacute;veis";
 const normalizar = (v, maximo = 1) => temNumero(v) && maximo > 0 ? v / maximo : v;
 const largura = (v, maximo = 1) => temNumero(v) ? Math.max(0, Math.min(100, normalizar(v, maximo) * 100)) : 0;
 const repoSlug = (repo) => repo.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "");
@@ -47,80 +47,97 @@ function grupo(titulo, fonte, metricas) {
 }
 
 function tabelaHistorico(linhas = []) {
-  const celula = (valor, casas = 4) => temNumero(valor) ? valor.toFixed(casas).replace(".", ",") : "—";
-  const inteiro = (valor) => temNumero(valor) ? Math.round(valor).toLocaleString("pt-BR") : "—";
-  const corpo = linhas.map((linha) => `<tr>
-    <td>${linha.versao ?? "N/A"}</td><td>${linha.data ?? "—"}</td><td class="num">${inteiro(linha.ncloc)}</td>
-    <td class="num">${celula(linha.complexity)}</td><td class="num">${celula(linha.comments)}</td><td class="num">${celula(linha.duplication)}</td>
-    <td class="num">${celula(linha.testSuccess)}</td><td class="num">${celula(linha.fastTests)}</td><td class="num">${celula(linha.coverage)}</td>
-    <td class="num">${celula(linha.maintainability)}</td><td class="num">${celula(linha.reliability)}</td><td class="num">${celula(linha.scoreTotal)}</td>
-  </tr>`).join("");
-  return `<div class="tabela-scroll"><table class="tabela tabela-produto tabela-historico">
-    <thead><tr><th>Versão</th><th>Data da coleta</th><th class="num">Ncloc</th><th class="num">Complexity</th><th class="num">Comments</th><th class="num">Duplication</th><th class="num">Test Success</th><th class="num">Fast Tests</th><th class="num">Coverage</th><th class="num">Maintainability</th><th class="num">Reliability</th><th class="num">Product Quality</th></tr></thead>
-    <tbody>${corpo || '<tr><td colspan="12">Sem histórico disponível.</td></tr>'}</tbody>
+  const celula = (valor, casas = 4) => temNumero(valor) ? valor.toFixed(casas).replace(".", ",") : "-";
+  const inteiro = (valor) => temNumero(valor) ? Math.round(valor).toLocaleString("pt-BR") : "-";
+  const bruto = (valor) => temNumero(valor) ? Number(valor).toLocaleString("pt-BR") : "-";
+  const razao = (parte, total) => `${bruto(parte)}/${bruto(total)}`;
+  const formula = (nome, expressao, resultado, casas = 4) => `<div class="formula-celula"><span>${nome}: ${expressao}</span><strong>${nome} Result: ${celula(resultado, casas)}</strong></div>`;
+  const corpo = linhas.map((linha) => {
+    const b = linha.brutos ?? {};
+    const q = b.qrapids ?? {};
+    const testes = b.testes ?? {};
+    const complexity = formula("Complexity", razao(q.arquivosNaoComplexos, q.totalArquivos), linha.complexity);
+    const comments = formula("Comments", razao(q.arquivosComentariosOk, q.totalArquivos), linha.comments);
+    const duplication = formula("Duplication", razao(q.arquivosDuplicacaoOk, q.totalArquivos), linha.duplication);
+    const testSuccess = formula("Test Success", `(${bruto(testes.totalTestes)} - ${bruto(testes.erros)} - ${bruto(testes.falhas)}) / ${bruto(testes.totalTestes)}`, linha.testSuccess);
+    const fastTests = formula("Fast Tests", razao(testes.buildsCiRapidas, testes.buildsCiConcluidas), linha.fastTests);
+    const coverage = formula("Coverage", razao(q.arquivosCoberturaOk, q.totalArquivosComCobertura), linha.coverage);
+    const maintainability = formula("Maintainability", `((${celula(linha.complexity)} * 0,33) + (${celula(linha.comments)} * 0,33) + (${celula(linha.duplication)} * 0,33)) * 0,50`, linha.maintainability);
+    const reliability = formula("Reliability", `((${celula(linha.testSuccess)} * 0,25) + (${celula(linha.fastTests)} * 0,25) + (${celula(linha.coverage)} * 0,50)) * 0,50`, linha.reliability);
+    const productQuality = formula("Product Quality", `${celula(linha.maintainability)} + ${celula(linha.reliability)}`, linha.scoreTotal);
+    return `<tr>
+      <td>${linha.versao ?? "N/A"}</td><td>${linha.data ?? "-"}</td><td class="num">${inteiro(linha.ncloc)}</td>
+      <td>${complexity}</td><td>${comments}</td><td>${duplication}</td>
+      <td>${testSuccess}</td><td>${fastTests}</td><td>${coverage}</td>
+      <td>${maintainability}</td><td>${reliability}</td><td>${productQuality}</td>
+    </tr>`;
+  }).join("");
+  return `<div class="tabela-scroll" tabindex="0"><table class="tabela tabela-produto tabela-historico">
+    <thead><tr><th>Vers&atilde;o</th><th>Data da coleta</th><th class="num">Ncloc</th><th>Complexity</th><th>Comments</th><th>Duplication</th><th>Test Success</th><th>Fast Tests</th><th>Coverage</th><th>Maintainability</th><th>Reliability</th><th>Product Quality</th></tr></thead>
+    <tbody>${corpo || '<tr><td colspan="12">Sem hist&oacute;rico dispon&iacute;vel.</td></tr>'}</tbody>
   </table></div>`;
 }
 
 function renderDashboard(repoInfo) {
   const dados = D?.porRepo?.[repoInfo.id];
   const slug = repoSlug(repoInfo.id);
-  if (!dados) return `<section class="dashboard-repo" id="dashboard-${slug}"><div class="nota">Sem dados disponíveis para este repositório.</div></section>`;
+  if (!dados) return `<section class="dashboard-repo" id="dashboard-${slug}"><div class="nota">Sem dados dispon&iacute;veis para este reposit&oacute;rio.</div></section>`;
 
   const t = dados.tabela ?? {};
   const cards = [
-    { tipo: "Indicador estratégico", nome: "Product Quality (Qualidade do Produto)", valor: t.scoreTotal },
+    { tipo: "Indicador estrat&eacute;gico", nome: "Product Quality (Qualidade do Produto)", valor: t.scoreTotal },
     { tipo: "Fator de Qualidade", nome: "Maintainability (Manutenibilidade)", valor: t.maintainability, maximo: 0.50 },
     { tipo: "Fator de Qualidade", nome: "Reliability (Confiabilidade)", valor: t.reliability, maximo: 0.50 },
   ];
   const codeQuality = [
-    { nome: "Complexity — arquivos não complexos (nenhuma função com complexidade ciclomática > 10)", valor: t.complexity },
-    { nome: "Comments — arquivos com linhas de comentários aceitáveis (10–30%)", valor: t.comments },
-    { nome: "Duplication — arquivos com menos de 5% de linhas duplicadas", valor: t.duplication },
+    { nome: "Complexity - arquivos n&atilde;o complexos (nenhuma fun&ccedil;&atilde;o com complexidade ciclom&aacute;tica > 10)", valor: t.complexity },
+    { nome: "Comments - arquivos com linhas de coment&aacute;rios aceit&aacute;veis (10-30%)", valor: t.comments },
+    { nome: "Duplication - arquivos com menos de 5% de linhas duplicadas", valor: t.duplication },
   ];
   const testingStatus = [
-    { nome: "Test success — testes aprovados / total de testes unitários", valor: t.testSuccess },
-    { nome: "Fast tests — builds de CI concluídos em menos de 5 minutos", valor: t.fastTests },
-    { nome: "Coverage — arquivos com cobertura adequada (≥ 80%)", valor: t.coverage },
+    { nome: "Test success - testes aprovados / total de testes unit&aacute;rios", valor: t.testSuccess },
+    { nome: "Fast tests - builds de CI conclu&iacute;dos em menos de 5 minutos", valor: t.fastTests },
+    { nome: "Coverage - arquivos com cobertura adequada (&ge; 80%)", valor: t.coverage },
   ];
 
   return `<section class="dashboard-repo" id="dashboard-${slug}">
-    <div class="faixa-titulo"><h2>${repoInfo.titulo}</h2><span class="meta">${t.release ? `Release ${t.release} · ` : ""}versão ${t.versao ?? "N/A"} · ${t.data ?? "sem data"}</span></div>
+    <div class="faixa-titulo"><h2>${repoInfo.titulo}</h2><span class="meta">${t.release ? `Release ${t.release} &middot; ` : ""}vers&atilde;o ${t.versao ?? "N/A"} &middot; ${t.data ?? "sem data"}</span></div>
     <div class="cartoes">${cards.map(card).join("")}</div>
     <div class="legenda legenda-fatores" aria-label="Legenda dos fatores com escala de zero a 0,50">
-      <strong>Maintainability e Reliability — escala de 0 a 0,50:</strong>
-      <span class="item verde">verde ≥ 0,375</span>
+      <strong>Maintainability e Reliability - escala de 0 a 0,50:</strong>
+      <span class="item verde">verde &ge; 0,375</span>
       <span class="item amarelo">amarelo de 0,25 a 0,374</span>
       <span class="item vermelho">vermelho &lt; 0,25</span>
     </div>
     <section class="memoria">
-      <h3>Fórmulas Utilizadas</h3>
+      <h3>F&oacute;rmulas Utilizadas</h3>
       <div class="formulas">
-        <div><code>Code Quality</code> = (Complexity × 0,33) + (Comments × 0,33) + (Duplication × 0,33)<small>Conformidade dos arquivos para complexidade, comentários e duplicação.</small></div>
-        <div><code>Testing Status</code> = (Test Success × 0,25) + (Fast Tests × 0,25) + (Coverage × 0,50)<small>Sucesso dos testes, velocidade dos builds de CI e cobertura por arquivo.</small></div>
-        <div><code>Maintainability</code> = Code Quality × 0,50<small>Fator de Qualidade 1</small></div>
-        <div><code>Reliability</code> = Testing Status × 0,50<small>Fator de Qualidade 2</small></div>
+        <div><code>Code Quality</code> = (Complexity &times; 0,33) + (Comments &times; 0,33) + (Duplication &times; 0,33)<small>Conformidade dos arquivos para complexidade, coment&aacute;rios e duplica&ccedil;&atilde;o.</small></div>
+        <div><code>Testing Status</code> = (Test Success &times; 0,25) + (Fast Tests &times; 0,25) + (Coverage &times; 0,50)<small>Sucesso dos testes, velocidade dos builds de CI e cobertura por arquivo.</small></div>
+        <div><code>Maintainability</code> = Code Quality &times; 0,50<small>Fator de Qualidade 1</small></div>
+        <div><code>Reliability</code> = Testing Status &times; 0,50<small>Fator de Qualidade 2</small></div>
         <div><code>Product Quality</code> = Maintainability + Reliability<small>Qualidade total do produto</small></div>
       </div>
     </section>
     <section class="painel-qualidade">
-      <h3>Fatores e métricas avaliadas — Product Quality</h3>
-      <div class="legenda legenda-interna"><span class="item verde">verde ≥ 0,75 (aprovado)</span><span class="item amarelo">amarelo 0,50–0,74 (atenção)</span><span class="item vermelho">vermelho &lt; 0,50 (crítico)</span></div>
-      ${grupo("Code Quality", "Maintainability · Fonte: SonarQube", codeQuality)}
-      ${grupo("Testing Status", "Reliability · Fontes: SonarQube / GitHub Actions", testingStatus)}
+      <h3>Fatores e m&eacute;tricas avaliadas - Product Quality</h3>
+      <div class="legenda legenda-interna"><span class="item verde">verde &ge; 0,75 (aprovado)</span><span class="item amarelo">amarelo 0,50-0,74 (aten&ccedil;&atilde;o)</span><span class="item vermelho">vermelho &lt; 0,50 (cr&iacute;tico)</span></div>
+      ${grupo("Code Quality", "Maintainability &middot; Fonte: SonarQube", codeQuality)}
+      ${grupo("Testing Status", "Reliability &middot; Fontes: SonarQube / GitHub Actions", testingStatus)}
     </section>
     <section class="observacoes">
-      <h3>Observações:</h3>
-      <p>O dashboard escolhe sempre o JSON mais recente do respectivo repositório em <code>analytics-raw-data</code>.</p>
-      <h3>Cálculo das métricas-base</h3>
+      <h3>Observa&ccedil;&otilde;es:</h3>
+      <p>O dashboard escolhe sempre o JSON mais recente do respectivo reposit&oacute;rio em <code>analytics-raw-data</code>.</p>
+      <h3>C&aacute;lculo das m&eacute;tricas-base</h3>
       <div class="calculos-base">
-        <div><code>Complexity</code><span>arquivos não complexos ÷ total de arquivos; um arquivo é complexo quando sua complexidade ciclomática por função é &gt; 10</span><small>Fonte: SonarQube</small></div>
-        <div><code>Comments</code><span>arquivos com 10%–30% de linhas comentadas ÷ total de arquivos analisados</span><small>Fonte: SonarQube</small></div>
-        <div><code>Duplication</code><span>arquivos com menos de 5% de linhas duplicadas ÷ total de arquivos analisados</span><small>Fonte: SonarQube</small></div>
-        <div><code>Test Success</code><span>(testes unitários − erros − falhas) ÷ total de testes unitários</span><small>Fonte: SonarQube</small></div>
-        <div><code>Fast Tests</code><span>execuções de testes unitários abaixo de 5 minutos ÷ total de execuções de testes unitários</span><small>Fonte: GitHub Actions (workflow CI)</small></div>
-        <div><code>Coverage</code><span>arquivos com cobertura ≥ 80% ÷ total de arquivos que possuem medição de cobertura</span><small>Fonte: SonarQube</small></div>
+        <div><code>Complexity</code><span>arquivos n&atilde;o complexos &divide; total de arquivos; um arquivo &eacute; complexo quando sua complexidade ciclom&aacute;tica por fun&ccedil;&atilde;o &eacute; &gt; 10</span><small>Fonte: SonarQube</small></div>
+        <div><code>Comments</code><span>arquivos com 10-30% de linhas comentadas &divide; total de arquivos analisados</span><small>Fonte: SonarQube</small></div>
+        <div><code>Duplication</code><span>arquivos com menos de 5% de linhas duplicadas &divide; total de arquivos analisados</span><small>Fonte: SonarQube</small></div>
+        <div><code>Test Success</code><span>(testes unit&aacute;rios - erros - falhas) &divide; total de testes unit&aacute;rios</span><small>Fonte: SonarQube</small></div>
+        <div><code>Fast Tests</code><span>execu&ccedil;&otilde;es de testes unit&aacute;rios abaixo de 5 minutos &divide; total de execu&ccedil;&otilde;es de testes unit&aacute;rios</span><small>Fonte: GitHub Actions (workflow CI)</small></div>
+        <div><code>Coverage</code><span>arquivos com cobertura &ge; 80% &divide; total de arquivos que possuem medi&ccedil;&atilde;o de cobertura</span><small>Fonte: SonarQube</small></div>
       </div>
-      <h3>Histórico de dados</h3>
+      <h3>Hist&oacute;rico de dados</h3>
       ${tabelaHistorico(dados.historicoTabela)}
     </section>
   </section>`;

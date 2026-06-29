@@ -44,3 +44,7 @@ Essa pipeline não está integrada com o restante do produto. O material entregu
 - A planilha com todos os atributos a serem preenchidos definidos no semestre 2026/1 foi enviada aos POs.
 - O combinado foi ter essa planilha preenchida para o semestre 2026/2.
 - O novo dataset deverá ser integrado nessa pipeline no próximo semestre.
+
+| Data | Versão | Descrição | Autor(es) |
+|------|--------|-----------|-----------|
+| 28/06/2026 | 1.0 | Documentação da frente de IA no projeto | [Bruno Ricardo](https://github.com/EhOBruno) |
