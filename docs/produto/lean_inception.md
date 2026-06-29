@@ -74,7 +74,7 @@ O Canvas MVP foi o artefato que consolidou, em uma visão única, as personas, a
 
 ### Custo e cronograma
 
-O Canvas estimou o projeto em **17 semanas**, com custo total estimado de **R$ 49.852,38** e três releases major. O detalhamento atualizado está em [Plano de Custos](../processo/plano-de-custos.md) e [Datas Importantes](../processo/datas-importantes.md).
+O Canvas estimou o projeto em **17 semanas**, com custo total estimado de **R$ 66.434,30** (equipe completa de 12 integrantes) e três releases major. O detalhamento atualizado está em [Plano de Custos](../processo/plano-de-custos.md) e [Datas Importantes](../processo/datas-importantes.md).
 
 ## Acompanhamento das Etapas
 

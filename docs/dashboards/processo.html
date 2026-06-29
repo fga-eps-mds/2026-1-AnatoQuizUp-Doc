@@ -5,135 +5,77 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Dashboard Eixo Processo — AnatoQuizUp</title>
 <link rel="stylesheet" href="dashboards.css">
-<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.7/dist/chart.umd.min.js"></script>
 <script src="dados-consolidados.js"></script>
 </head>
 <body>
 <main>
-  <h1>Dashboard eixo Processo — fluxo Kanban, lead/cycle time e Lei de Little</h1>
-  <p class="subtitulo">Métricas de fluxo do quadro ZenHub (workspace 2026-1-AnatoQuizUp) e do GitHub. Limites WIP calculados pela Lei de Little (WIP = TP × LT), conforme o algoritmo de Brechner.</p>
+  <h1>Dashboard eixo Processo — Q-Rapids (Process Performance)</h1>
+  <p class="subtitulo">Indicador estratégico <strong>Process Performance</strong> do modelo <strong>Q-Rapids</strong>: as métricas do board viram <em>assessed metrics</em> dos fatores Issues' Velocity e Development Speed, cada uma como <strong>densidade [0–1]</strong> = fração das issues/PRs dentro da faixa ideal.</p>
   <nav class="abas">
     <a href="produto/">Produto</a>
     <a href="processo.html" class="ativa">Processo</a>
     <a href="projeto.html">Projeto</a>
-    <a href="canvas.html">Canvas</a>
   </nav>
 
-  <div class="secao-nova">
-    <div class="titulo-nova"><h2>Eficiência de fluxo e capacidade</h2></div>
-    <p class="sub-nova">Indicadores de Lean/Kanban — eficiência de fluxo, retrabalho e limites de WIP pela Lei de Little — que orientam decisões de processo.</p>
-    <div class="cartoes" id="cartoes-novos-processo"></div>
-    <div class="grade-2">
-      <div>
-        <h3>Eficiência de Fluxo — tempo trabalhando × esperando</h3>
-        <div class="grafico"><canvas id="grafico-flow"></canvas></div>
-        <p class="rotulo" id="legenda-flow" style="color:var(--cinza);font-size:.85rem"></p>
-        <span class="badge-decisao">atacar a fila de entrada (Sprint Backlog), não a execução.</span>
-      </div>
-      <div>
-        <h3>Aging do WIP atual — o que desbloquear hoje</h3>
-        <table class="tabela" id="tabela-aging"></table>
-        <span class="badge-decisao">priorizar o desbloqueio dos itens mais antigos.</span>
-      </div>
-    </div>
-  </div>
-
-  <div class="secao-contexto-label"><h2>Contexto operacional — dados de base do board</h2></div>
-  <div class="faixa-titulo">
-    <h2>Eixo Processo — fluxo, lead/cycle time &amp; GitHub</h2>
-    <span class="meta" id="meta-processo"></span>
-  </div>
-
-  <div class="cartoes" id="cartoes-fluxo"></div>
-
-  <div class="grade-2">
-    <div>
-      <h3>Cumulative Flow Diagram — issues por estado</h3>
-      <div class="grafico alto"><canvas id="grafico-cfd"></canvas></div>
-    </div>
-    <div>
-      <h3>Issues por pipeline — hoje</h3>
-      <div class="grafico alto"><canvas id="grafico-pipelines"></canvas></div>
-    </div>
-  </div>
-
-  <div class="grade-2">
-    <div>
-      <h3>Lead time — issues de fluxo de código concluídas</h3>
-      <div class="grafico"><canvas id="grafico-lead"></canvas></div>
-      <p class="rotulo" id="legenda-lead" style="color:var(--cinza);font-size:.85rem"></p>
-    </div>
-    <div>
-      <h3>Throughput semanal — issues e PRs fechados</h3>
-      <div class="grafico"><canvas id="grafico-throughput"></canvas></div>
-    </div>
+  <div class="metodologia">
+    <h2>Metodologia — Q-Rapids (modelo de qualidade do processo)</h2>
+    <p>O eixo Processo é estruturado pelo indicador estratégico <strong>Process Performance</strong> do <strong>Q-Rapids</strong> (Martínez-Fernández et al., 2019) — o mesmo modelo do eixo Produto. As métricas do board são mapeadas nas <strong>assessed metrics</strong> dos fatores <strong>Issues' Velocity</strong> (Team Throughput, Resolved Issues' Throughput, Old Issues, Bugs Ratio) e <strong>Development Speed</strong> (Commit review duration), cada uma expressa como <strong>densidade [0–1]</strong>. O indicador é a média das densidades.</p>
+    <p class="ref">Referência: MARTÍNEZ-FERNÁNDEZ, S. et al. <em>Continuously Assessing and Improving Software Quality With Software Analytics Tools: A Case Study</em>. IEEE Access 7, 2019 (modelo Q-Rapids, abril/2019).<br>
+    <span class="fonte">dados: ZenHub (issues, sprints, eventos)</span><span class="fonte">GitHub (issues, PRs, labels)</span></p>
   </div>
 
   <div class="faixa-titulo">
-    <h2>Limites WIP pela Lei de Little — WIP = TP × LT</h2>
-    <span class="meta" id="meta-little"></span>
+    <h2>Process Performance — indicador estratégico do processo</h2>
+    <span class="meta" id="meta-qrapids"></span>
   </div>
-  <div class="grade-2">
-    <div>
-      <table class="tabela" id="tabela-little"></table>
-      <div class="nota">
-        <h3>Teoria aplicada (Brechner / Lei de Little)</h3>
-        <ul>
-          <li><strong>LT</strong> (lead time da etapa) = tempo médio que uma issue permanece na etapa, medido dos eventos reais de movimentação do board.</li>
-          <li><strong>TP</strong> (throughput) = vazão da etapa gargalo, medida nas últimas 4 semanas.</li>
-          <li><strong>WIP = TP × LT</strong>, arredondado para cima, com margem de 50% sugerida por Brechner para acomodar variações.</li>
-          <li>O quadro hoje opera <em>dentro</em> dos limites calculados — sinal de ritmo sustentável; valores muito abaixo podem indicar capacidade ociosa.</li>
-        </ul>
-      </div>
-    </div>
-    <div>
-      <h3>Distribuição de issues fechadas e PRs por membro</h3>
-      <div class="grafico alto"><canvas id="grafico-membros"></canvas></div>
-      <p class="rotulo" style="color:var(--cinza);font-size:.82rem;margin-top:6px">A equipe iniciou com 12 integrantes e encerrou o semestre com 8 ativos; integrantes que trancaram a disciplina aparecem com a contribuição até a saída. As atividades coletivas da R1 (Lean Inception, arquitetura) são creditadas à equipe ativa.</p>
-    </div>
+  <p class="subtitulo" style="margin-top:0">Verde ≥ 0,75 (aprovado) · amarelo ≥ 0,50 (atenção) · vermelho &lt; 0,50 (crítico). Limiares parametrizáveis ("user defined" no Q-Rapids): lead ≤ 14 dias · idade de issue aberta ≤ 14 dias · revisão de PR ≤ 2 dias.</p>
+  <div class="cartoes" id="cartoes-qrapids"></div>
+  <div class="fatores" id="fatores-qrapids"></div>
+
+  <div class="brutos">
+    <h2 style="font-size:1.15rem">Dados brutos — Indicador → Fator → Assessed Metric → contagem → Fonte</h2>
+    <p class="legenda-fonte">Cada densidade é a fração <em>num / den</em> dentro da faixa ideal, calculada das issues e PRs reais do board (sem normalização adicional). Confira métrica por métrica:</p>
+    <table class="tabela" id="tabela-qrapids"></table>
+
+    <h3 style="margin-top:24px">De onde vem cada número (ZenHub + GitHub) — coleta "do zero"</h3>
+    <p class="legenda-fonte">As únicas fontes deste eixo são o <strong>board do ZenHub</strong> e o <strong>GitHub</strong>. Cada quantidade abaixo (os num/den que formam as densidades) com a <strong>fonte exata</strong> e o <strong>critério de coleta</strong>, sem normalização.</p>
+    <table class="tabela" id="tabela-brutos-processo"></table>
   </div>
 
-  <div class="faixa-titulo"><h2>Higiene do board — qualidade dos dados de processo</h2></div>
-  <div class="cartoes" id="cartoes-higiene"></div>
-
-  <div class="faixa-titulo"><h2>Glossário — siglas e termos em inglês</h2></div>
+  <div class="faixa-titulo"><h2>Glossário — termos usados neste eixo</h2></div>
   <div class="glossario">
-    <div class="grupo-gloss">Fluxo Kanban</div>
+    <div class="grupo-gloss">Modelo Q-Rapids</div>
     <table class="tabela">
-      <thead><tr><th>Sigla / termo</th><th>Inglês (por extenso)</th><th>Em português</th></tr></thead>
+      <thead><tr><th>Termo</th><th>Inglês (por extenso)</th><th>Em português — o que é</th></tr></thead>
       <tbody>
-        <tr><td>CFD</td><td>Cumulative Flow Diagram</td><td>Diagrama de Fluxo Cumulativo — mostra quantas issues estão em cada estado ao longo do tempo</td></tr>
-        <tr><td>Lead Time</td><td>Lead Time</td><td>Tempo de atravessamento — da criação da issue até a conclusão (inclui tempo em fila)</td></tr>
-        <tr><td>Cycle Time</td><td>Cycle Time</td><td>Tempo de ciclo — do início do trabalho (entrada em "In Progress") até a conclusão</td></tr>
-        <tr><td>Throughput</td><td>Throughput</td><td>Vazão — quantidade de itens concluídos por período (ex.: por semana)</td></tr>
-        <tr><td>WIP</td><td>Work In Progress</td><td>Trabalho em progresso — nº de itens sendo trabalhados ao mesmo tempo</td></tr>
-        <tr><td>Pipeline</td><td>Pipeline</td><td>Coluna/etapa do quadro Kanban (ex.: In Progress, Review/QA, Done)</td></tr>
-        <tr><td>Backlog</td><td>Backlog</td><td>Lista priorizada de itens ainda não iniciados</td></tr>
-        <tr><td>Review/QA</td><td>Review / Quality Assurance</td><td>Revisão / Garantia de Qualidade — etapa de revisão de código e testes</td></tr>
-        <tr><td>Done</td><td>Done</td><td>Concluído</td></tr>
-        <tr><td>Blocked</td><td>Blocked</td><td>Bloqueado — item parado por dependência externa</td></tr>
-        <tr><td>Rework</td><td>Rework</td><td>Retrabalho — item que voltou para correção</td></tr>
-        <tr><td>Icebox</td><td>Icebox</td><td>"Geladeira" — ideias/itens congelados, sem previsão</td></tr>
+        <tr><td>Process Performance</td><td>Process Performance</td><td>Indicador estratégico do Q-Rapids para a eficiência e a qualidade do processo de desenvolvimento</td></tr>
+        <tr><td>Issues' Velocity</td><td>Issues' Velocity</td><td>Fator do Q-Rapids — capacidade de fechar as issues planejadas (vazão, atualidade e qualidade do fluxo)</td></tr>
+        <tr><td>Development Speed</td><td>Development Speed</td><td>Fator do Q-Rapids — eficiência das atividades de integração e revisão</td></tr>
+        <tr><td>Assessed Metric</td><td>Assessed Metric</td><td>Métrica avaliada — cada medida concreta que compõe um fator</td></tr>
+        <tr><td>Densidade</td><td>Density</td><td>Fração [0–1] dos itens dentro da faixa ideal — forma normalizada do Q-Rapids</td></tr>
       </tbody>
     </table>
-    <div class="grupo-gloss">Lei de Little</div>
+    <div class="grupo-gloss">Métricas avaliadas (assessed metrics)</div>
     <table class="tabela">
-      <thead><tr><th>Sigla / termo</th><th>Inglês (por extenso)</th><th>Em português</th></tr></thead>
+      <thead><tr><th>Métrica</th><th>Inglês (por extenso)</th><th>Em português — o que é</th></tr></thead>
       <tbody>
-        <tr><td>Little's Law</td><td>Little's Law</td><td>Lei de Little — relação <code>WIP = TP × LT</code> que define o limite de trabalho em progresso</td></tr>
-        <tr><td>TP</td><td>Throughput</td><td>Vazão da etapa gargalo (itens por dia útil)</td></tr>
-        <tr><td>LT</td><td>Lead Time</td><td>Tempo médio que um item permanece na etapa</td></tr>
-        <tr><td>WIP limit</td><td>Work In Progress limit</td><td>Limite de trabalho em progresso — teto recomendado de itens por etapa</td></tr>
+        <tr><td>Team Throughput</td><td>Team Throughput</td><td>Vazão do time — issues resolvidas ÷ total de issues</td></tr>
+        <tr><td>Resolved Issues' Throughput</td><td>Resolved Issues' Throughput</td><td>Issues resolvidas dentro do prazo (lead ≤ 14 dias) ÷ total de resolvidas</td></tr>
+        <tr><td>Old Issues</td><td>Old Issues</td><td>Issues abertas ainda novas (idade ≤ 14 dias) ÷ total de issues abertas</td></tr>
+        <tr><td>Bugs Ratio</td><td>Bugs Ratio</td><td>Issues abertas que não são bug ÷ total de issues abertas</td></tr>
+        <tr><td>Commit review duration</td><td>Commit review duration</td><td>PRs revisados em ≤ 2 dias ÷ total de PRs fechados</td></tr>
       </tbody>
     </table>
-    <div class="grupo-gloss">GitHub / código</div>
+    <div class="grupo-gloss">Termos do board / GitHub</div>
     <table class="tabela">
-      <thead><tr><th>Sigla / termo</th><th>Inglês (por extenso)</th><th>Em português</th></tr></thead>
+      <thead><tr><th>Termo</th><th>Inglês (por extenso)</th><th>Em português — o que é</th></tr></thead>
       <tbody>
-        <tr><td>PR</td><td>Pull Request</td><td>"Pedido de incorporação" — proposta de juntar uma alteração de código ao projeto, com revisão</td></tr>
-        <tr><td>Code Review Time</td><td>Code Review Time</td><td>Tempo de revisão de código — da abertura do PR até ser fechado/incorporado</td></tr>
-        <tr><td>Merge</td><td>Merge</td><td>Incorporação — juntar a alteração ao código principal</td></tr>
         <tr><td>Issue</td><td>Issue</td><td>Item de trabalho (tarefa, história ou bug)</td></tr>
+        <tr><td>PR</td><td>Pull Request</td><td>"Pedido de incorporação" — proposta de juntar uma alteração de código, com revisão</td></tr>
+        <tr><td>Lead Time</td><td>Lead Time</td><td>Tempo de atravessamento — da criação da issue até a conclusão</td></tr>
+        <tr><td>Throughput</td><td>Throughput</td><td>Vazão — quantidade de itens concluídos por período</td></tr>
+        <tr><td>In Progress</td><td>In Progress</td><td>Pipeline do board onde está o trabalho em execução</td></tr>
+        <tr><td>Review/QA</td><td>Review / Quality Assurance</td><td>Pipeline de revisão de código e testes</td></tr>
       </tbody>
     </table>
   </div>
@@ -144,184 +86,59 @@
 <script>
 const D = window.DADOS;
 const P = D.processo;
-const VERDE = "#2e7d32", AMARELO = "#f9a825", VERMELHO = "#c62828", AZUL = "#3f51b5";
 const fmt = (v, c = 1) => v == null ? "—" : v.toFixed(c).replace(".", ",");
 
-document.getElementById("meta-processo").textContent =
-  `${P.higiene.totalIssues} issues · ${P.prs.total} PRs · ${D.geradoEm.slice(0, 10)}`;
+// ============ Q-RAPIDS — Process Performance ============
+const QR = P.qrapids;
+const clsDens = (v) => v == null ? "cinza" : v >= 0.75 ? "verde" : v >= 0.5 ? "amarelo" : "vermelho";
+const pct = (v) => v == null ? "—" : `${Math.round(v * 100)}%`;
+document.getElementById("meta-qrapids").textContent = `${pct(QR.valor)} · ${P.higiene.totalIssues} issues · ${P.prs.total} PRs · ${D.geradoEm.slice(0, 10)}`;
 
-// ============ SEÇÃO NOVA — métricas analíticas próprias ============
-const fe = P.flowEfficiency;
-const L = P.leiDeLittle.etapas;
-const cartoesNovos = [
-  { nome: "Flow Efficiency (eficiência de fluxo)", valor: `${Math.round(fe.valor * 100)}%`, cls: fe.valor >= 0.4 ? "verde" : fe.valor >= 0.25 ? "amarelo" : "vermelho", sub: `cycle ${fmt(fe.cycleMediana)}d ÷ lead ${fmt(fe.leadMediana)}d — ${100 - Math.round(fe.valor * 100)}% do tempo é espera` },
-  { nome: "Taxa de retrabalho", valor: `${Math.round(P.retrabalho.taxa * 100)}%`, cls: P.retrabalho.taxa <= 0.1 ? "verde" : P.retrabalho.taxa <= 0.25 ? "amarelo" : "vermelho", sub: `${P.retrabalho.comRetrabalho} de ${P.retrabalho.base} issues voltaram p/ Rework/Review` },
-  { nome: "Limite WIP — In Progress (Lei de Little)", valor: `≤ ${L["In Progress"].wipComMargem50}`, cls: "azul", sub: `WIP = TP × LT = ${P.leiDeLittle.tpDiaUtil}/dia × ${fmt(L["In Progress"].ltMedioDias)}d` },
-  { nome: "Itens parados no WIP agora", valor: P.agingWip.length, cls: P.agingWip.length > 5 ? "vermelho" : "amarelo", sub: P.agingWip[0] ? `mais antigo: ${P.agingWip[0].repo}#${P.agingWip[0].numero} há ${fmt(P.agingWip[0].diasNaPipeline)}d` : "—" },
+const metricasQR = QR.fatores.flatMap((f) => f.metricas.map((m) => ({ ...m, fator: f.fator })));
+const cartoesQR = [
+  { nome: "Process Performance (indicador)", valor: pct(QR.valor), cls: clsDens(QR.valor), sub: "média das densidades dos fatores Q-Rapids" },
+  ...metricasQR.map((m) => ({ nome: m.metrica, valor: pct(m.densidade), cls: clsDens(m.densidade), sub: m.bruto })),
 ];
-document.getElementById("cartoes-novos-processo").innerHTML = cartoesNovos.map((c) => `
-  <div class="cartao"><div class="nome">${c.nome}</div><div class="valor ${c.cls}" style="font-size:1.7rem">${c.valor}</div><div class="rotulo">${c.sub}</div></div>`).join("");
+document.getElementById("cartoes-qrapids").innerHTML = cartoesQR.map((c) => `
+  <div class="cartao"><div class="nome">${c.nome}</div><div class="valor ${c.cls}" style="font-size:1.6rem">${c.valor}</div><div class="rotulo">${c.sub}</div></div>`).join("");
 
-// Flow Efficiency — donut: trabalhando vs esperando
-new Chart(document.getElementById("grafico-flow"), {
-  type: "doughnut",
-  data: { labels: [`Trabalhando (cycle) ${fmt(fe.cycleMediana)}d`, `Esperando em fila ${fmt(fe.esperaMediana)}d`], datasets: [{ data: [fe.cycleMediana, fe.esperaMediana], backgroundColor: [VERDE, "#e0e0e0"] }] },
-  options: { maintainAspectRatio: false, plugins: { legend: { position: "bottom" }, tooltip: { callbacks: { label: (c) => ` ${c.label}` } } } },
-});
-document.getElementById("legenda-flow").textContent =
-  `Só ${Math.round(fe.valor * 100)}% do lead time (${fmt(fe.leadMediana)}d) é trabalho ativo; ${fmt(fe.esperaMediana)}d são espera em fila — o gargalo é a entrada, não a execução.`;
+document.getElementById("fatores-qrapids").innerHTML = metricasQR.map((m) => {
+  const v = m.densidade ?? 0, cls = clsDens(m.densidade);
+  return `<div class="fator ${cls}">
+    <div class="grupo">${m.metrica}<small>${m.fator}</small></div>
+    <div class="descricao">${m.formula}</div>
+    <div class="barra"><span style="width:${Math.round(v * 100)}%;background:var(--${cls})"></span></div>
+    <div class="numero">${pct(m.densidade)}</div>
+  </div>`;
+}).join("");
 
-// Aging do WIP atual
-document.getElementById("tabela-aging").innerHTML = P.agingWip.length === 0
-  ? `<tbody><tr><td>Nenhum item parado em pipeline ativa.</td></tr></tbody>`
-  : `<thead><tr><th>Item</th><th>Pipeline</th><th class="num">Dias parado</th></tr></thead><tbody>${P.agingWip.slice(0, 8).map((a) => `<tr><td>${a.repo}#${a.numero}</td><td>${a.pipeline}</td><td class="num"><span class="selo ${a.diasNaPipeline > 14 ? "vermelho" : a.diasNaPipeline > 7 ? "amarelo" : "verde"}">${fmt(a.diasNaPipeline)}</span></td></tr>`).join("")}</tbody>`;
+const totalM = QR.fatores.reduce((s, f) => s + f.metricas.length, 0);
+let primeira = true;
+document.getElementById("tabela-qrapids").innerHTML = `
+  <thead><tr><th>Indicador</th><th>Fator</th><th>Assessed Metric</th><th>Fórmula</th><th class="num">Densidade</th><th>Dado bruto (num/den)</th><th>Fonte</th></tr></thead>
+  <tbody>${QR.fatores.flatMap((f) => f.metricas.map((m, idx) => {
+    const ind = primeira ? `<td rowspan="${totalM}"><strong>${QR.indicador}</strong><br><span style="color:var(--cinza)">${pct(QR.valor)}</span></td>` : "";
+    primeira = false;
+    const fat = idx === 0 ? `<td rowspan="${f.metricas.length}"><strong>${f.fator}</strong><br><span style="font-size:.78rem;color:var(--cinza)">${f.descricao}</span></td>` : "";
+    return `<tr>${ind}${fat}
+      <td>${m.metrica}</td>
+      <td><code style="font-size:.85rem">${m.formula}</code></td>
+      <td class="num"><span class="selo ${clsDens(m.densidade)}">${pct(m.densidade)}</span></td>
+      <td>${m.bruto}</td>
+      <td>${m.fonte}</td></tr>`;
+  })).join("")}</tbody>`;
 
-// ---- cartões de fluxo
-const ultimaSemana = P.throughputSemanal.at(-1) ?? { fechadas: 0 };
-const penultimaSemana = P.throughputSemanal.at(-2) ?? { fechadas: 0 };
-const ultimaSemanaPr = P.prs.porSemana.at(-1) ?? { fechados: 0 };
-const cartoes = [
-  { nome: "Issues concluídas (última semana)", valor: penultimaSemana.fechadas, cls: "verde", sub: `semana de ${penultimaSemana.semana ?? "—"}` },
-  { nome: "Lead time mediano (fluxo de código)", valor: `${fmt(P.leadTime.fluxoDeCodigo.medianaDias)} d`, cls: P.leadTime.fluxoDeCodigo.medianaDias <= 7 ? "verde" : P.leadTime.fluxoDeCodigo.medianaDias <= 14 ? "amarelo" : "vermelho", sub: `média ${fmt(P.leadTime.fluxoDeCodigo.mediaDias)} d · n=${P.leadTime.fluxoDeCodigo.amostra}` },
-  { nome: "Cycle time mediano (In Progress → fechado)", valor: `${fmt(P.cycleTime.medianaDias)} d`, cls: P.cycleTime.medianaDias <= 3 ? "verde" : P.cycleTime.medianaDias <= 7 ? "amarelo" : "vermelho", sub: `média ${fmt(P.cycleTime.mediaDias)} d · n=${P.cycleTime.amostra}` },
-  { nome: "PR throughput (última semana)", valor: `${ultimaSemanaPr.fechados} PRs`, cls: "azul", sub: `semana de ${ultimaSemanaPr.semana ?? "—"}` },
-  { nome: "Code review time (mediano)", valor: `${fmt(P.prs.tempoRevisao.medianaDias)} d`, cls: P.prs.tempoRevisao.medianaDias <= 1 ? "verde" : P.prs.tempoRevisao.medianaDias <= 3 ? "amarelo" : "vermelho", sub: `média ${fmt(P.prs.tempoRevisao.mediaDias)} d · ${P.prs.fechados} PRs fechados` },
-];
-document.getElementById("cartoes-fluxo").innerHTML = cartoes.map((c) => `
-  <div class="cartao">
-    <div class="nome">${c.nome}</div>
-    <div class="valor ${c.cls}">${c.valor}</div>
-    <div class="rotulo">${c.sub}</div>
-  </div>`).join("");
-
-// ---- CFD
-const ESTADOS_CFD = [
-  { chave: "Closed", cor: "#b0a99c" },
-  { chave: "Review/QA", cor: "#f9a825" },
-  { chave: "Blocked", cor: "#c62828" },
-  { chave: "In Progress", cor: "#1e88e5" },
-  { chave: "Rework", cor: "#8e24aa" },
-  { chave: "Sprint Backlog", cor: "#26a69a" },
-  { chave: "Product Backlog", cor: "#9ccc65" },
-  { chave: "Project Backlog", cor: "#c5e1a5" },
-  { chave: "Icebox", cor: "#90caf9" },
-  { chave: "New Issues", cor: "#66bb6a" },
-];
-new Chart(document.getElementById("grafico-cfd"), {
-  type: "line",
-  data: {
-    labels: P.cfd.map((d) => d.data),
-    datasets: ESTADOS_CFD.map((e) => ({
-      label: e.chave, data: P.cfd.map((d) => d[e.chave] ?? 0),
-      borderColor: e.cor, backgroundColor: e.cor + "cc", fill: true, pointRadius: 0, borderWidth: 1, tension: .2,
-    })),
-  },
-  options: {
-    maintainAspectRatio: false,
-    scales: { y: { stacked: true, title: { display: true, text: "Issues" } }, x: { ticks: { maxTicksLimit: 12 } } },
-    plugins: { legend: { position: "bottom", labels: { boxWidth: 12 } } },
-    interaction: { mode: "index", intersect: false },
-  },
-});
-
-// ---- issues por pipeline hoje
-const hoje = P.cfd.at(-1);
-const pipelinesHoje = ESTADOS_CFD.map((e) => ({ nome: e.chave, qtd: hoje[e.chave] ?? 0, cor: e.cor })).reverse();
-new Chart(document.getElementById("grafico-pipelines"), {
-  type: "bar",
-  data: { labels: pipelinesHoje.map((p) => p.nome), datasets: [{ data: pipelinesHoje.map((p) => p.qtd), backgroundColor: pipelinesHoje.map((p) => p.cor) }] },
-  options: { indexAxis: "y", maintainAspectRatio: false, plugins: { legend: { display: false } } },
-});
-
-// ---- lead time scatter (fluxo de código)
-const pontosLead = P.leadTime.pontos.filter((p) => p.fluxo);
-new Chart(document.getElementById("grafico-lead"), {
-  type: "scatter",
-  data: {
-    datasets: [
-      { label: "Issue concluída", data: pontosLead.map((p) => ({ x: p.fechadaEm, y: p.dias })), backgroundColor: VERDE, pointRadius: 5 },
-      { label: `Mediana ${fmt(P.leadTime.fluxoDeCodigo.medianaDias)} d`, type: "line", data: [...new Set(pontosLead.map((p) => p.fechadaEm))].sort().map((x) => ({ x, y: P.leadTime.fluxoDeCodigo.medianaDias })), borderColor: VERMELHO, borderDash: [6, 4], pointRadius: 0 },
-    ],
-  },
-  options: {
-    maintainAspectRatio: false,
-    scales: { x: { type: "category", labels: [...new Set(pontosLead.map((p) => p.fechadaEm))].sort(), ticks: { maxTicksLimit: 10 } }, y: { title: { display: true, text: "Dias (criação → fechamento)" } } },
-    plugins: { tooltip: { callbacks: { label: (c) => { const p = pontosLead[c.dataIndex]; return c.datasetIndex === 0 ? ` ${p.repo}#${p.numero}: ${fmt(p.dias)} d` : ""; } } } },
-  },
-});
-document.getElementById("legenda-lead").textContent =
-  `Inclui apenas issues que passaram por In Progress (fluxo de código), evitando distorção das ${P.higiene.fechadasEmLote1206} issues administrativas fechadas em lote em 12/06.`;
-
-// ---- throughput semanal
-const semanas = P.throughputSemanal.map((s) => s.semana);
-const mapaPr = Object.fromEntries(P.prs.porSemana.map((s) => [s.semana, s.fechados]));
-new Chart(document.getElementById("grafico-throughput"), {
-  type: "bar",
-  data: {
-    labels: semanas,
-    datasets: [
-      { label: "Issues fechadas", data: P.throughputSemanal.map((s) => s.fechadas), backgroundColor: AZUL },
-      { label: "PRs fechados", data: semanas.map((s) => mapaPr[s] ?? 0), backgroundColor: "#90caf9" },
-    ],
-  },
-  options: { maintainAspectRatio: false, plugins: { legend: { position: "bottom" } } },
-});
-
-// ---- Lei de Little
-document.getElementById("meta-little").textContent =
-  `TP = ${fmt(P.leiDeLittle.tpDiaUtil, 2)} issues/dia útil (últimas 4 semanas)`;
-const wipAtualEtapa = (e) => P.wipAtual[e] ?? 0;
-document.getElementById("tabela-little").innerHTML = `
-  <thead><tr><th>Etapa</th><th class="num">LT médio (dias)</th><th class="num">WIP calculado</th><th class="num">WIP c/ margem 50%</th><th class="num">WIP atual</th><th>Situação</th></tr></thead>
-  <tbody>${Object.entries(P.leiDeLittle.etapas).map(([etapa, v]) => {
-    const atual = wipAtualEtapa(etapa);
-    const ok = atual <= v.wipComMargem50;
-    return `<tr>
-      <td><strong>${etapa}</strong></td>
-      <td class="num">${fmt(v.ltMedioDias, 2)}</td>
-      <td class="num">${v.wipCalculado}</td>
-      <td class="num">${v.wipComMargem50}</td>
-      <td class="num">${atual}</td>
-      <td><span class="selo ${ok ? "verde" : "vermelho"}">${ok ? "dentro do limite" : "acima do limite"}</span></td>
-    </tr>`;
-  }).join("")}</tbody>`;
-
-// ---- distribuição por membro
-const membros = Object.entries(P.porMembro).sort((a, b) => (b[1].issuesFechadas + b[1].prs) - (a[1].issuesFechadas + a[1].prs));
-new Chart(document.getElementById("grafico-membros"), {
-  type: "bar",
-  data: {
-    labels: membros.map(([m]) => m),
-    datasets: [
-      { label: "Issues fechadas (responsável)", data: membros.map(([, v]) => v.issuesFechadas), backgroundColor: AZUL },
-      { label: "PRs de autoria", data: membros.map(([, v]) => v.prs), backgroundColor: "#26a69a" },
-    ],
-  },
-  options: { indexAxis: "y", maintainAspectRatio: false, scales: { x: { stacked: true }, y: { stacked: true } }, plugins: { legend: { position: "bottom" } } },
-});
-
-// ---- higiene
-const H = P.higiene;
-// Débito medido sobre itens TRABALHADOS (fechados + em sprint ativa). Itens de
-// Icebox/Backlog ficam de fora — não ter estimate/sprint no backlog é normal.
-const pctT = (n) => `${Math.round(100 * n / H.totalTrabalhadas)}%`;
-const clsT = (n) => n / H.totalTrabalhadas > 0.4 ? "vermelho" : n / H.totalTrabalhadas > 0.15 ? "amarelo" : "verde";
-const cartoesHigiene = [
-  { nome: "Sem estimate (itens trabalhados)", valor: `${H.semEstimateTrab} (${pctT(H.semEstimateTrab)})`, cls: clsT(H.semEstimateTrab), sub: `de ${H.totalTrabalhadas} trabalhados · impacta velocity/EVM · ${H.semEstimate} no total c/ backlog` },
-  { nome: "Sem responsável (trabalhados)", valor: `${H.semResponsavelTrab} (${pctT(H.semResponsavelTrab)})`, cls: clsT(H.semResponsavelTrab), sub: `impacta distribuição por membro · ${H.semResponsavel} no total c/ backlog` },
-  { nome: "Sem sprint (trabalhados)", valor: `${H.semSprintTrab} (${pctT(H.semSprintTrab)})`, cls: clsT(H.semSprintTrab), sub: `impacta planejado × realizado · ${H.semSprint} no total c/ backlog` },
-  { nome: "Issues paradas > 14 dias", valor: H.paradasMais14d, cls: H.paradasMais14d > 5 ? "vermelho" : H.paradasMais14d > 0 ? "amarelo" : "verde", sub: "abertas em etapas de trabalho" },
-  { nome: "Fechadas em lote (12/06)", valor: H.fechadasEmLote1206, cls: "amarelo", sub: "limpeza de board — excluídas do lead time de fluxo" },
-];
-document.getElementById("cartoes-higiene").innerHTML = cartoesHigiene.map((c) => `
-  <div class="cartao">
-    <div class="nome">${c.nome}</div>
-    <div class="valor ${c.cls}" style="font-size:1.5rem">${c.valor}</div>
-    <div class="rotulo">${c.sub}</div>
-  </div>`).join("");
+document.getElementById("tabela-brutos-processo").innerHTML = `
+  <thead><tr><th>Quantidade</th><th class="num">Valor</th><th>Fonte</th><th>Como é coletada</th></tr></thead>
+  <tbody>${QR.dadosBrutos.map((d) => `<tr>
+    <td>${d.quantidade}</td>
+    <td class="num"><strong>${d.valor}</strong></td>
+    <td><span style="font-size:.82rem">${d.fonte}</span></td>
+    <td style="font-size:.84rem;color:var(--cinza)">${d.coleta}</td>
+  </tr>`).join("")}</tbody>`;
 
 document.getElementById("rodape").textContent =
-  `Gerado em ${D.geradoEm.slice(0, 16).replace("T", " ")} · Fontes: ZenHub (pipelines, sprints e eventos transferIssue) e GitHub (issues e PRs) · Linha do tempo de cada issue reconstruída dos eventos reais de movimentação do board.`;
+  `Gerado em ${D.geradoEm.slice(0, 16).replace("T", " ")} · Modelo Q-Rapids (Process Performance) · Fontes: ZenHub (issues, sprints, eventos de movimentação) e GitHub (issues, PRs, labels).`;
 </script>
 </body>
 </html>

@@ -11,7 +11,7 @@ Como o AnatoQuizUp é um projeto acadêmico da Universidade de Brasília, os val
 | Premissa | Valor adotado |
 |---|---:|
 | Período considerado | 17 semanas |
-| Quantidade atual de estudantes | 9 integrantes |
+| Quantidade de estudantes (baseline do plano) | 12 integrantes (equipe completa no início do semestre) |
 | Carga semanal por integrante | 14 horas |
 | Carga presencial semanal | 4 horas |
 | Carga remota semanal | 10 horas |
@@ -23,7 +23,7 @@ Como o AnatoQuizUp é um projeto acadêmico da Universidade de Brasília, os val
 | Hospedagem considerada | Railway Hobby |
 | Cotação utilizada para USD | US$ 1,00 = R$ 5,0720 |
 
-O número de integrantes usado como baseline é 9. Caso a equipe seja reduzida para 8 estudantes, os custos proporcionais de hora de trabalho, computadores, energia e internet devem ser recalculados na planilha.
+O baseline deste plano é a **equipe completa de 12 integrantes** com que o projeto foi planejado no início do semestre. Ao longo da execução a equipe foi reduzida (12 → 10 → 9 integrantes; três trancaram a disciplina). Este documento mantém o baseline de 12, pois ele representa o **orçamento previsto** (`PV`/`BAC`) do plano original. O **custo real (`AC`) por sprint** — que acompanha a equipe efetiva de cada período — é tratado no [EVM Consolidado](evm-consolidado.md), e é justamente a diferença entre os dois que dá significado ao índice de custo (`CPI`).
 
 ## 3. Estimativa de Custos
 
@@ -41,8 +41,8 @@ Como a disciplina possui 4 créditos e foi adotada a média de 40 créditos anua
 | Créditos da disciplina | 4 |
 | Custo por estudante na disciplina | R$ 5.253,30 |
 | Custo semanal por estudante | R$ 309,02 |
-| Custo semanal da equipe | R$ 2.781,16 |
-| Custo total da equipe em 17 semanas | R$ 47.279,70 |
+| Custo semanal da equipe (12 integrantes) | R$ 3.708,24 |
+| Custo total da equipe em 17 semanas | R$ 63.040,08 |
 
 Esse valor não é desembolsado pela equipe. Ele representa uma aproximação do investimento público associado ao tempo dos estudantes alocados à disciplina.
 
@@ -58,9 +58,9 @@ Para calcular essa depreciação, foi adotado um computador intermediário de R$
 | Vida útil | 5 anos |
 | Semanas consideradas na vida útil | 260 semanas |
 | Depreciação semanal por computador | R$ 13,46 |
-| Quantidade de computadores | 9 |
-| Custo semanal de depreciação | R$ 121,15 |
-| Custo total de depreciação em 17 semanas | R$ 2.059,62 |
+| Quantidade de computadores | 12 |
+| Custo semanal de depreciação | R$ 161,52 |
+| Custo total de depreciação em 17 semanas | R$ 2.745,84 |
 
 ### 3.3 Energia
 
@@ -73,8 +73,8 @@ O custo de energia foi calculado considerando somente a carga remota de trabalho
 | Consumo semanal por computador | 1,50 kWh |
 | Tarifa considerada | R$ 0,84/kWh |
 | Custo semanal por integrante | R$ 1,26 |
-| Custo semanal da equipe | R$ 11,34 |
-| Custo total em 17 semanas | R$ 192,78 |
+| Custo semanal da equipe (12 integrantes) | R$ 15,12 |
+| Custo total em 17 semanas | R$ 257,04 |
 
 ### 3.4 Internet
 
@@ -87,8 +87,8 @@ Para internet, foi considerado um plano residencial de R$ 100,00 por mês. O cus
 | Custo por hora | R$ 0,14 |
 | Uso remoto semanal por integrante | 10 h |
 | Custo semanal por integrante | R$ 1,39 |
-| Custo semanal da equipe | R$ 12,50 |
-| Custo total em 17 semanas | R$ 212,50 |
+| Custo semanal da equipe (12 integrantes) | R$ 16,68 |
+| Custo total em 17 semanas | R$ 283,56 |
 
 ### 3.5 Hospedagem e Deploy
 
@@ -130,12 +130,12 @@ O EVM do projeto usa **exatamente a mesma base de custo** estimada acima — a c
 | Internet | R$ 1,39 |
 | **Subtotal por integrante** | **R$ 325,13** |
 
-Com a **equipe baseline de 9 integrantes** mais a hospedagem fixa (R$ 6,34/semana):
+Com a **equipe baseline de 12 integrantes** (plano do início do semestre) mais a hospedagem fixa (R$ 6,34/semana):
 
-- **Custo semanal baseline:** 9 × R$ 325,13 + R$ 6,34 = **R$ 2.932,51** (≈ o custo semanal da equipe da seção 5)
-- **BAC do projeto (10 sprints de desenvolvimento, S1 19/04 → S10 29/06):** R$ 2.932,51 × 10 = **R$ 29.325,10** — é a fatia das 10 semanas de desenvolvimento dentro do total de R$ 49.852,38 (17 semanas).
+- **Custo semanal baseline:** 12 × R$ 325,13 + R$ 6,34 = **R$ 3.907,90** (= o custo semanal da equipe da seção 5)
+- **BAC do projeto (10 sprints de desenvolvimento, S1 19/04 → S10 29/06):** R$ 3.907,90 × 10 = **R$ 39.079,00** — é a fatia das 10 semanas de desenvolvimento dentro do total de R$ 66.434,30 (17 semanas).
 
-Esse é o orçamento (`BAC`) e a base do **Valor Planejado (`PV`)** no [EVM Consolidado](evm-consolidado.md). O **Custo Real (`AC`)** de cada sprint usa a **equipe efetiva** de cada período (12 → 10 → 9 → 8 integrantes), e **não** a baseline — é o que dá significado independente ao CPI (corrige o erro `AC = BAC` das páginas de EVM por sprint).
+Esse é o orçamento (`BAC`) e a base do **Valor Planejado (`PV`)** no [EVM Consolidado](evm-consolidado.md). O **Custo Real (`AC`)** de cada sprint usa a **equipe efetiva** de cada período (12 → 10 → 9 integrantes), e **não** a baseline — é o que dá significado independente ao CPI (corrige os erros `AC = BAC` e baseline reduzida das páginas de EVM por sprint). Como a equipe efetiva ficou **abaixo** do baseline de 12, o `AC` corre abaixo do `PV` e o **CPI fica > 1** (projeto sob orçamento por ter rodado com menos pessoas que o planejado).
 
 ## 4. Planilha de Custos
 
@@ -149,13 +149,13 @@ Os cálculos do plano de custos estão detalhados na planilha a seguir:
 
 | Categoria | Custo semanal | Custo total em 17 semanas |
 |---|---:|---:|
-| Hora de trabalho dos integrantes | R$ 2.781,16 | R$ 47.279,70 |
-| Computadores | R$ 121,15 | R$ 2.059,62 |
-| Energia | R$ 11,34 | R$ 192,78 |
-| Internet | R$ 12,50 | R$ 212,50 |
+| Hora de trabalho dos integrantes | R$ 3.708,24 | R$ 63.040,08 |
+| Computadores | R$ 161,52 | R$ 2.745,84 |
+| Energia | R$ 15,12 | R$ 257,04 |
+| Internet | R$ 16,68 | R$ 283,56 |
 | Hospedagem e deploy | R$ 6,34 | R$ 107,78 |
 | Ferramentas de apoio | R$ 0,00 | R$ 0,00 |
-| **Total estimado** | **R$ 2.932,49** | **R$ 49.852,38** |
+| **Total estimado** | **R$ 3.907,90** | **R$ 66.434,30** |
 
 O custo financeiro direto previsto para operação mínima do projeto é o custo de hospedagem no Railway. Os demais valores representam custo acadêmico estimado, depreciação ou proporcionalização de recursos já utilizados pelos integrantes.
 
@@ -184,3 +184,4 @@ O custo financeiro direto previsto para operação mínima do projeto é o custo
 | Versão | Data | Descrição | Autor | Revisor |
 | :---: | :---: | :--- | :--- | :--- |
 | `1.0` | 16/05/2026 | Criação do plano de custos do AnatoQuizUp | [Arthur Carneiro Trindade](https://github.com/trindadea) | [Miguel Moreira de Oliveira](https://github.com/EhOMiguel) |
+| `1.1` | 27/06/2026 | Correção do baseline para a equipe completa de 12 integrantes (plano do início do semestre); recálculo das seções 3.1–3.5, 3.7 e 5; total R$ 66.434,30 e BAC R$ 39.079,00 | [Miguel Moreira de Oliveira](https://github.com/EhOMiguel) | [Arthur Carneiro Trindade](https://github.com/trindadea) |

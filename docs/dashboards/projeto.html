@@ -16,29 +16,15 @@
     <a href="produto/">Produto</a>
     <a href="processo.html">Processo</a>
     <a href="projeto.html" class="ativa">Projeto</a>
-    <a href="canvas.html">Canvas</a>
   </nav>
 
-  <div class="secao-nova">
-    <div class="titulo-nova"><h2>Eficiência de custo e previsão de entrega</h2></div>
-    <p class="sub-nova">Cruzam custo (Plano de Custos), qualidade (SonarCloud) e entrega para orientar as decisões de orçamento e escopo da R3.</p>
-    <div class="cartoes" id="cartoes-novos-projeto"></div>
-    <div class="grade-2">
-      <div>
-        <h3>Custo por SP entregue (R$/SP) — eficiência por sprint</h3>
-        <div class="grafico"><canvas id="grafico-custo-sp"></canvas></div>
-        <span class="badge-decisao">identificar sprints caras e orçar a R3.</span>
-      </div>
-      <div>
-        <h3>Qualidade × Velocidade — cobertura sobe com a entrega?</h3>
-        <div class="grafico"><canvas id="grafico-qual-vel"></canvas></div>
-        <span class="badge-decisao">velocidade não está custando qualidade.</span>
-      </div>
-    </div>
-    <div class="nota" id="nota-montecarlo"></div>
+  <div class="metodologia">
+    <h2>Metodologia — AgileEVM (Gestão de Valor Agregado ágil)</h2>
+    <p>Este eixo segue o <strong>AgileEVM</strong> de Sulaiman, Barton &amp; Blackburn (2006): o EVM do <strong>PMBOK</strong> (PMI) adaptado ao ágil — o escopo é medido em <strong>story points</strong> (SPI) e o custo em <strong>R$</strong> do Plano de Custos (CPI), de forma <strong>cumulativa</strong> (onda rolante). O Q-Rapids, usado nos eixos Produto e Processo, <strong>não cobre custo/EVM</strong>; por isso o eixo Projeto usa AgileEVM, conforme a literatura de gerência de projetos da disciplina.</p>
+    <p class="ref">Referência: SULAIMAN, T.; BARTON, B.; BLACKBURN, T. <em>AgileEVM — Earned Value Management in Scrum Projects</em>. AGILE 2006. · PMI, <em>Guia PMBOK</em>.<br>
+    <span class="fonte">dados: relatórios de sprint</span><span class="fonte">ZenHub (issues/estimates/sprints)</span><span class="fonte">Plano de Custos</span></p>
   </div>
 
-  <div class="secao-contexto-label"><h2>Contexto operacional — EVM e releases (base do projeto)</h2></div>
   <div class="faixa-titulo">
     <h2>Eixo Projeto — Agile EVM &amp; acompanhamento de releases</h2>
     <span class="meta" id="meta-projeto"></span>
@@ -83,15 +69,42 @@
     </div>
   </div>
 
-  <div class="nota">
-    <h3>Nota metodológica — correção do modelo EVM</h3>
-    <ul>
-      <li><strong>Modelo anterior (sprints 2–5):</strong> EVM isolado por sprint com AC = orçamento integral da sprint — forçava SPI ≡ CPI (o índice de custo não trazia informação) e impedia projeção de término (EAC).</li>
-      <li><strong>Modelo atual:</strong> série <em>cumulativa</em> em story points, no mesmo enquadramento do exemplo da disciplina. Cronograma: <code>PV(SP) = Σ planejado</code>, <code>EV(SP) = Σ entregue</code>, <code>SPI = EV/PV</code>. Custo: <code>PV(R$) = R$ 2.932,51 × sprints decorridas</code>, <code>EV(R$) = SPI × PV(R$)</code>, <code>AC(R$) = custo real incorrido</code> (equipe efetiva 12 → 10 → 9 → 8, carga de 14 h/sem do Plano de Custos), <code>CPI = EV/AC</code>, <code>EAC = BAC/CPI</code>, <code>VAC = BAC − EAC</code>.</li>
-      <li><strong>Por que SPI ≈ CPI agora (sem ser o bug antigo):</strong> a equipe efetiva (média ~9,3 pessoas) acompanhou de perto o baseline de 9, então o custo real ficou próximo do orçamento previsto — o afastamento de 1,0 é quase todo de <em>escopo</em>, não de custo. As curvas PV(R$) e AC(R$) aparecem separadas no gráfico ao lado para evidenciar isso (antes eram idênticas por definição).</li>
-      <li><strong>Leitura conjunta:</strong> SPI termina em ~0,89 (entrega de ~89% do planejado). O 0,66 do registro inicial era <em>artefato de medição</em>: a equipe quitou o <em>débito de estimativa</em> (31 cards / ~60 SP de trabalho real sem pontuação no board) e excluiu as duplicatas de tracker do Doc. <strong>Caveat honesto:</strong> a velocity por sprint é distorcida pelo <em>bulk-close</em> nas releases (R1 27/04, R2 25/05) — a S5 mostra 66 SP porque concentrou o fechamento de toda a R2; leia o cumulativo, não sprint a sprint.</li>
-      <li><strong>Fontes:</strong> S1–S4 dos relatórios de sprint publicados; S5+ medido do ZenHub (sprints e fechamentos com estimate na janela). O time não registra horas reais desde a S1 — AC usa a aproximação de equipe efetiva; com registro de horas, basta substituir no consolidador. Sprints com baixa disciplina de estimativa estão sinalizadas na tabela.</li>
-    </ul>
+
+  <div class="faixa-titulo"><h2>PRP — Pontos Planejados por Release (e onde mudou)</h2></div>
+  <p class="subtitulo" style="margin-top:0">PRP = soma dos story points <strong>planejados</strong> nas sprints de cada release major. A equipe encolheu de <strong>12 → 10 → 9</strong> nas primeiras sprints (S2 e S3 ↓), reduzindo a capacidade — e o planejado das releases seguintes acompanhou.</p>
+  <div class="grade-2">
+    <div>
+      <h3>PRP por release — planejado × entregue (SP)</h3>
+      <div class="grafico"><canvas id="grafico-prp"></canvas></div>
+    </div>
+    <div>
+      <h3>Planejado e tamanho da equipe por sprint — onde o PRP mudou</h3>
+      <div class="grafico"><canvas id="grafico-prp-sprint"></canvas></div>
+    </div>
+  </div>
+  <table class="tabela" id="tabela-prp"></table>
+  <a class="btn-csv" href="datasets/projeto-prp.csv" download>baixar dataset PRP (CSV)</a>
+
+  <div class="faixa-titulo"><h2>Dados brutos &amp; memória de cálculo — como verificar o EVM</h2></div>
+  <div class="brutos">
+    <p class="legenda-fonte">Os <strong>insumos crus</strong> que alimentam os cálculos acima, para conferir conta por conta. Constantes do <a href="https://fga-eps-mds.github.io/2026-1-AnatoQuizUp-Doc/processo/plano-de-custos/">Plano de Custos</a>; PV de S1–S5 dos <a href="https://fga-eps-mds.github.io/2026-1-AnatoQuizUp-Doc/processo/sprints/">relatórios de sprint (MkDocs)</a>, S6–S10 das atribuições de sprint do ZenHub; EV das issues fechadas (ZenHub).</p>
+    <p style="margin:4px 0"><a class="btn-csv" href="datasets/projeto-evm.csv" download>EVM por sprint (CSV)</a><a class="btn-csv" href="datasets/projeto-insumos-sprint.csv" download>insumos por sprint (CSV)</a><a class="btn-csv" href="datasets/projeto-backlog.csv" download>backlog (CSV)</a></p>
+    <div class="grade-2">
+      <div>
+        <h3>Constantes de custo (Plano de Custos)</h3>
+        <table class="tabela" id="tabela-constantes"></table>
+      </div>
+      <div>
+        <h3>Issues abertas — backlog em aberto (bruto do ZenHub)</h3>
+        <table class="tabela" id="tabela-backlog"></table>
+      </div>
+    </div>
+    <h3 style="margin-top:18px">Insumos por sprint — story points (ZenHub) e custo real AC (Plano de Custos)</h3>
+    <table class="tabela" id="tabela-brutos-sprint"></table>
+    <div class="nota">
+      <h3>Memória de cálculo — última sprint fechada (passo a passo)</h3>
+      <p id="memoria-calculo" style="margin:4px 0"></p>
+    </div>
   </div>
 
   <div class="faixa-titulo"><h2>Glossário — siglas do EVM (Gestão de Valor Agregado)</h2></div>
@@ -104,7 +117,7 @@
         <tr><td>PV (= VP)</td><td>Planned Value</td><td>Valor Planejado — quanto de trabalho <em>deveria</em> estar feito até agora</td></tr>
         <tr><td>EV (= VA)</td><td>Earned Value</td><td>Valor Agregado — quanto <em>de fato</em> foi entregue (medido)</td></tr>
         <tr><td>AC (= CR)</td><td>Actual Cost</td><td>Custo Real — quanto custou de verdade o que foi feito</td></tr>
-        <tr><td>BAC</td><td>Budget At Completion</td><td>Orçamento No Término — orçamento das 10 sprints de desenvolvimento (aqui R$ 29.325,10, do Plano de Custos)</td></tr>
+        <tr><td>BAC</td><td>Budget At Completion</td><td>Orçamento No Término — orçamento das 10 sprints de desenvolvimento (aqui R$ 39.079,00, do Plano de Custos: 12 integrantes × R$ 325,13/sem + hospedagem × 10 sprints)</td></tr>
       </tbody>
     </table>
     <div class="grupo-gloss">Índices de desempenho</div>
@@ -151,48 +164,10 @@ const fmt = (v, c = 2) => v == null ? "—" : v.toLocaleString("pt-BR", { minimu
 const reais = (v) => v == null ? "—" : `R$ ${fmt(v)}`;
 const clsIndice = (v) => v == null ? "cinza" : v >= 0.9 ? "verde" : v >= 0.7 ? "amarelo" : "vermelho";
 
-const decorridas = J.sprints.filter((s) => s.decorrida);
 const sprintAtual = J.sprints.find((s) => s.emAndamento);
 const serie = J.evm;
 const fechadaIdx = serie.findLastIndex((p) => !p.emAndamento);
 const ultimaFechada = serie[fechadaIdx];
-const atual = serie.at(-1);
-
-// ============ SEÇÃO NOVA — métricas analíticas próprias ============
-const rsSpFim = J.custoPorSp.at(-1)?.acumulado;
-const mc = J.monteCarlo;
-const qv = J.qualidadeVelocidade.filter((q) => q.coberturaFim != null);
-const cobUlt = qv.at(-1)?.coberturaFim, cobPri = qv[0]?.coberturaFim;
-const cabe = mc && mc.p85 <= mc.sprintsRestantes;
-const cartoesNovosProj = [
-  { nome: "Custo por SP entregue (acumulado)", valor: reais(rsSpFim), cls: "azul", sub: "AC ÷ EV — cruza Plano de Custos × velocity" },
-  { nome: "Previsão Monte Carlo da R3 (P85)", valor: mc ? `${mc.p85} sprints` : "—", cls: cabe ? "verde" : "vermelho", sub: mc ? `85% de confiança p/ ${mc.backlogSp} SP · restam ${mc.sprintsRestantes} sprints` : "—" },
-  { nome: "Cobertura ao longo do projeto", valor: cobUlt ? `${fmt(cobUlt, 1)}%` : "—", cls: "verde", sub: cobPri ? `subiu de ${fmt(cobPri, 1)}% — qualidade preservada` : "—" },
-  { nome: "Veredito Monte Carlo", valor: cabe ? "CABE ✓" : "NÃO CABE", cls: cabe ? "verde" : "vermelho", sub: `backlog ${mc?.backlogSp} SP em ${mc?.p85} sprints (P85) vs ${mc?.sprintsRestantes} restantes` },
-];
-document.getElementById("cartoes-novos-projeto").innerHTML = cartoesNovosProj.map((c) => `
-  <div class="cartao"><div class="nome">${c.nome}</div><div class="valor ${c.cls}" style="font-size:1.6rem">${c.valor}</div><div class="rotulo">${c.sub}</div></div>`).join("");
-
-new Chart(document.getElementById("grafico-custo-sp"), {
-  type: "bar",
-  data: { labels: J.custoPorSpSprint.map((c) => c.sprint), datasets: [{ label: "R$ por SP entregue na sprint", data: J.custoPorSpSprint.map((c) => c.valor), backgroundColor: J.custoPorSpSprint.map((c) => c.valor > 100 ? VERMELHO : c.valor > 50 ? AMARELO : VERDE) }] },
-  options: { maintainAspectRatio: false, plugins: { legend: { display: false }, tooltip: { callbacks: { label: (c) => ` R$ ${fmt(c.parsed.y)}/SP` } } }, scales: { y: { title: { display: true, text: "R$/SP" } } } },
-});
-
-new Chart(document.getElementById("grafico-qual-vel"), {
-  data: {
-    labels: qv.map((q) => q.sprint),
-    datasets: [
-      { type: "bar", label: "SP entregues", data: qv.map((q) => q.entregueSP), backgroundColor: AZUL_CLARO, yAxisID: "y" },
-      { type: "line", label: "Cobertura (%)", data: qv.map((q) => q.coberturaFim), borderColor: VERDE, backgroundColor: VERDE, tension: .2, yAxisID: "y2" },
-    ],
-  },
-  options: { maintainAspectRatio: false, plugins: { legend: { position: "bottom" } }, scales: { y: { position: "left", title: { display: true, text: "SP" } }, y2: { position: "right", min: 80, max: 100, title: { display: true, text: "cobertura %" }, grid: { drawOnChartArea: false } } } },
-});
-
-document.getElementById("nota-montecarlo").innerHTML = mc ? `
-  <h3>Previsão Monte Carlo — como lemos</h3>
-  <p style="margin:4px 0">Simulamos 10 000 futuros sorteando a velocity das sprints passadas até zerar o backlog estimado de <strong>${mc.backlogSp} SP</strong>. Resultado: <strong>P50 = ${mc.p50}</strong>, <strong>P85 = ${mc.p85}</strong>, <strong>P95 = ${mc.p95}</strong> sprints. Como restam <strong>${mc.sprintsRestantes} sprints</strong> até a R3, o escopo estimado <strong>${cabe ? "cabe com folga" : "NÃO cabe — repriorizar"}</strong> (com 85% de confiança). Diferente da projeção linear do ZenHub, isso dá um intervalo de confiança.</p>` : "";
 
 document.getElementById("meta-projeto").textContent =
   `Sprint atual: ${sprintAtual ? `${sprintAtual.id} (${sprintAtual.inicio.slice(5)} → ${sprintAtual.fim.slice(5)})` : "—"} · ${D.geradoEm.slice(0, 10)}`;
@@ -313,6 +288,82 @@ document.getElementById("previsao-texto").innerHTML =
 
 document.getElementById("rodape").textContent =
   `Gerado em ${D.geradoEm.slice(0, 16).replace("T", " ")} · BAC = ${reais(J.parametros.bac)} (custo semanal baseline ${reais(J.parametros.custoSemanaBaseline)} × ${J.parametros.totalSprints} sprints) · Fontes: relatórios de sprint (docs), ZenHub e Plano de Custos. * sprint em andamento.`;
+
+// ====== DADOS BRUTOS / MEMÓRIA DE CÁLCULO ======
+const par = J.parametros;
+const repoCurto = (r) => r.replace("2026-1-AnatoQuizUp-", "").replace("2026-1-AnatoQuizUp", "meta");
+
+document.getElementById("tabela-constantes").innerHTML = `
+  <thead><tr><th>Item</th><th class="num">Valor</th></tr></thead>
+  <tbody>
+    <tr><td>Custo por pessoa/semana (14 h) = 309,02 + 13,46 + 1,26 + 1,39</td><td class="num">${reais(par.custoPorPessoaSemana)}</td></tr>
+    <tr><td>Custo fixo/semana (hospedagem Railway)</td><td class="num">${reais(par.custoFixoSemana)}</td></tr>
+    <tr><td>Equipe baseline (plano — equipe completa do início)</td><td class="num">${par.equipeBaseline} pessoas</td></tr>
+    <tr><td>Custo semanal baseline = ${par.equipeBaseline} × ${fmt(par.custoPorPessoaSemana)} + ${fmt(par.custoFixoSemana)}</td><td class="num">${reais(par.custoSemanaBaseline)}</td></tr>
+    <tr><td><strong>BAC</strong> = ${reais(par.custoSemanaBaseline)} × ${par.totalSprints} sprints</td><td class="num"><strong>${reais(par.bac)}</strong></td></tr>
+  </tbody>`;
+
+document.getElementById("tabela-backlog").innerHTML = J.previsao.backlogAberto.length === 0
+  ? `<tbody><tr><td>Nenhuma issue de trabalho em aberto.</td></tr></tbody>`
+  : `<thead><tr><th>Issue (ZenHub)</th><th>Pipeline</th><th class="num">SP</th></tr></thead>
+  <tbody>${J.previsao.backlogAberto.map((i) => `<tr><td>${repoCurto(i.repo)}#${i.numero} — ${i.titulo.slice(0, 34)}</td><td><span class="selo amarelo">${i.pipeline ?? "—"}</span></td><td class="num">${i.estimate ?? "—"}</td></tr>`).join("")}
+    <tr><td colspan="2"><strong>${J.previsao.backlogAberto.length} issue(s) aberta(s) · estimado</strong></td><td class="num"><strong>${J.previsao.backlogAbertoEstimadoSP} SP</strong></td></tr></tbody>`;
+
+document.getElementById("tabela-brutos-sprint").innerHTML = `
+  <thead><tr><th>Sprint</th><th class="num">Equipe</th><th class="num">PV (SP)</th><th>fonte PV</th><th class="num">EV (SP)</th><th class="num">AC (R$) = eq × ${fmt(par.custoPorPessoaSemana)} + ${fmt(par.custoFixoSemana)}</th></tr></thead>
+  <tbody>${J.sprints.filter((s) => s.decorrida || s.emAndamento).map((s) => `<tr>
+    <td><strong>${s.id}</strong>${s.emAndamento ? " *" : ""}</td>
+    <td class="num">${s.equipe}</td>
+    <td class="num">${s.planejadoSP ?? "—"}</td>
+    <td style="font-size:.8rem;color:var(--cinza)">${String(s.fontePlanejado).startsWith("doc") ? "relatório de sprint (MkDocs)" : "atribuição de sprint (ZenHub)"}</td>
+    <td class="num">${s.entregueSP ?? "—"}</td>
+    <td class="num">${reais(s.custoReal)}</td>
+  </tr>`).join("")}</tbody>`;
+
+const u = ultimaFechada;
+const nU = serie.findIndex((x) => x.sprint === u.sprint) + 1;
+document.getElementById("memoria-calculo").innerHTML =
+  `<p style="margin:0 0 8px 0">Passo a passo para <strong>${u.sprint}</strong> (valores acumulados):</p>
+  <table class="tabela" style="width:100%">
+    <thead><tr><th>Métrica</th><th>Fórmula</th><th class="num">Resultado</th></tr></thead>
+    <tbody>
+      <tr><td>SPI</td><td><code>EV(SP) / PV(SP) = ${u.evPts} / ${u.pvPts}</code></td><td class="num"><strong>${fmt(u.spi)}</strong></td></tr>
+      <tr><td>PV (R$)</td><td><code>${reais(par.custoSemanaBaseline)} × ${nU} sprints</code></td><td class="num">${reais(u.pvReais)}</td></tr>
+      <tr><td>EV (R$)</td><td><code>SPI × PV(R$) = ${fmt(u.spi)} × ${reais(u.pvReais)}</code></td><td class="num">${reais(u.evReais)}</td></tr>
+      <tr><td>CPI</td><td><code>EV(R$) / AC(R$) = ${reais(u.evReais)} / ${reais(u.acReais)}</code></td><td class="num"><strong>${fmt(u.cpi)}</strong></td></tr>
+      <tr><td>EAC</td><td><code>BAC / CPI = ${reais(par.bac)} / ${fmt(u.cpi)}</code></td><td class="num">${reais(u.eac)}</td></tr>
+      <tr><td>VAC</td><td><code>BAC − EAC = ${reais(par.bac)} − ${reais(u.eac)}</code></td><td class="num">${reais(u.vac)}</td></tr>
+    </tbody>
+  </table>`;
+
+// ====== PRP — Pontos Planejados por Release ======
+const PRP = J.prp;
+new Chart(document.getElementById("grafico-prp"), {
+  type: "bar",
+  data: { labels: PRP.releases.map((r) => r.release), datasets: [
+    { label: "PRP planejado (SP)", data: PRP.releases.map((r) => r.prpSP), backgroundColor: AZUL_CLARO },
+    { label: "Entregue (SP)", data: PRP.releases.map((r) => r.entregueSP), backgroundColor: AZUL },
+  ] },
+  options: { maintainAspectRatio: false, plugins: { legend: { position: "bottom" }, tooltip: { callbacks: { afterLabel: (c) => { const r = PRP.releases[c.dataIndex]; return `equipe ${r.equipeInicial}→${r.equipeFinal} · SPI ${fmt(r.spiRelease)}`; } } } }, scales: { y: { title: { display: true, text: "Story points" } } } },
+});
+new Chart(document.getElementById("grafico-prp-sprint"), {
+  data: { labels: PRP.porSprint.map((s) => s.sprint + (s.mudouEquipe ? " ↓" : "")), datasets: [
+    { type: "bar", label: "Planejado (SP)", data: PRP.porSprint.map((s) => s.planejadoSP), backgroundColor: AZUL_CLARO, yAxisID: "y" },
+    { type: "line", label: "Equipe (pessoas)", data: PRP.porSprint.map((s) => s.equipe), borderColor: VERMELHO, backgroundColor: VERMELHO, tension: 0, yAxisID: "y2", pointRadius: 4 },
+  ] },
+  options: { maintainAspectRatio: false, plugins: { legend: { position: "bottom" } }, scales: { y: { position: "left", title: { display: true, text: "SP planejado" } }, y2: { position: "right", min: 0, max: 13, title: { display: true, text: "equipe" }, grid: { drawOnChartArea: false } } } },
+});
+document.getElementById("tabela-prp").innerHTML = `
+  <thead><tr><th>Release</th><th>Sprints</th><th class="num">Equipe</th><th class="num">PRP (SP plan.)</th><th class="num">Entregue (SP)</th><th class="num">SPI release</th></tr></thead>
+  <tbody>${PRP.releases.map((r) => `<tr>
+    <td><strong>${r.release}</strong> — ${r.nome.replace("Release Major", "Major")}</td>
+    <td>${r.sprints.join(", ")}</td>
+    <td class="num">${r.equipeInicial === r.equipeFinal ? r.equipeInicial : `${r.equipeInicial}→${r.equipeFinal}`}</td>
+    <td class="num"><strong>${r.prpSP}</strong></td>
+    <td class="num">${r.entregueSP}</td>
+    <td class="num">${fmt(r.spiRelease)}</td>
+  </tr>`).join("")}</tbody>
+  <tfoot><tr><td colspan="6" style="color:var(--cinza);font-size:.8rem">PRP = soma do PV(SP) das sprints da release. A equipe caiu 12 → 10 → 9 em S2–S3 (↓); a R3 foi planejada com bem menos pontos — efeito da equipe menor somado ao descopo do board.</td></tr></tfoot>`;
 </script>
 </body>
 </html>

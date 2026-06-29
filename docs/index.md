@@ -44,4 +44,4 @@ A solução busca aumentar o engajamento e melhorar a efetividade do aprendizado
 |------|------|------|------|------|------|------|------|------|
 | ![](https://github.com/trindadea.png) | ![](https://github.com/Brenofrds.png) | ![](https://github.com/EhOBruno.png) | ![](https://github.com/caiobsantos.png) | ![](https://github.com/GenilsonJrs.png) | ![](https://github.com/Joa0V.png) | ![](https://github.com/marialuisa214.png) | ![](https://github.com/EhOMiguel.png) | ![](https://github.com/pkbceira03.png) |
 
-> A equipe iniciou o projeto com 12 integrantes e, ao longo das releases, passou a contar com 9 integrantes ativos.
+> A equipe iniciou o projeto com 12 integrantes e, ao longo das releases (12 → 10 → 9), passou a contar com 9 integrantes ativos.

@@ -1,11 +1,11 @@
 {
- "extraidoEm": "2026-06-13T00:12:07.750Z",
+ "extraidoEm": "2026-06-29T01:33:57.412Z",
  "projetos": {
   "fga-eps-mds_2026-1-AnatoQuizUp-Usuario-Service": [
    {
     "caminho": "src/modules/admin/admin.controller.ts",
     "medidas": {
-     "comment_lines_density": 0,
+     "comment_lines_density": 26.3,
      "complexity": 7,
      "coverage": 100,
      "functions": 5,
@@ -16,7 +16,7 @@
    {
     "caminho": "src/modules/admin/admin.repository.ts",
     "medidas": {
-     "comment_lines_density": 0,
+     "comment_lines_density": 24.1,
      "complexity": 4,
      "coverage": 100,
      "functions": 3,
@@ -27,7 +27,7 @@
    {
     "caminho": "src/modules/admin/admin.routes.ts",
     "medidas": {
-     "comment_lines_density": 0,
+     "comment_lines_density": 6.1,
      "complexity": 0,
      "functions": 0,
      "ncloc": 31,
@@ -37,7 +37,7 @@
    {
     "caminho": "src/modules/admin/admin.schemas.ts",
     "medidas": {
-     "comment_lines_density": 0,
+     "comment_lines_density": 20,
      "complexity": 0,
      "coverage": 100,
      "functions": 0,
@@ -48,7 +48,7 @@
    {
     "caminho": "src/modules/admin/admin.service.ts",
     "medidas": {
-     "comment_lines_density": 7.9,
+     "comment_lines_density": 33.9,
      "complexity": 23,
      "coverage": 100,
      "functions": 5,
@@ -59,7 +59,7 @@
    {
     "caminho": "src/modules/admin/dto/alterar.status_user.types.ts",
     "medidas": {
-     "comment_lines_density": 0,
+     "comment_lines_density": 16.7,
      "complexity": 4,
      "coverage": 100,
      "functions": 1,
@@ -80,7 +80,7 @@
    {
     "caminho": "src/modules/auth/aluno/aluno.controller.ts",
     "medidas": {
-     "comment_lines_density": 0,
+     "comment_lines_density": 26.4,
      "complexity": 4,
      "coverage": 100,
      "functions": 4,
@@ -91,9 +91,9 @@
    {
     "caminho": "src/modules/auth/aluno/aluno.repository.ts",
     "medidas": {
-     "comment_lines_density": 0,
+     "comment_lines_density": 19,
      "complexity": 8,
-     "coverage": 93.8,
+     "coverage": 100,
      "functions": 4,
      "ncloc": 153,
      "duplicated_lines_density": 0
@@ -102,7 +102,7 @@
    {
     "caminho": "src/modules/auth/aluno/aluno.routes.ts",
     "medidas": {
-     "comment_lines_density": 0,
+     "comment_lines_density": 8.1,
      "complexity": 0,
      "functions": 0,
      "ncloc": 34,
@@ -112,21 +112,21 @@
    {
     "caminho": "src/modules/auth/aluno/aluno.schemas.ts",
     "medidas": {
-     "comment_lines_density": 0,
+     "comment_lines_density": 20.6,
      "complexity": 10,
      "coverage": 100,
      "functions": 7,
-     "ncloc": 73,
+     "ncloc": 77,
      "duplicated_lines_density": 0
     }
    },
    {
     "caminho": "src/modules/auth/aluno/aluno.service.ts",
     "medidas": {
-     "comment_lines_density": 0,
+     "comment_lines_density": 26.6,
      "complexity": 24,
      "coverage": 89.6,
-     "duplicated_lines_density": 15.6,
+     "duplicated_lines_density": 17.1,
      "functions": 11,
      "ncloc": 135
     }
@@ -134,7 +134,7 @@
    {
     "caminho": "src/modules/amizade/amizade.controller.ts",
     "medidas": {
-     "comment_lines_density": 0,
+     "comment_lines_density": 30.8,
      "complexity": 15,
      "coverage": 100,
      "functions": 8,
@@ -145,18 +145,18 @@
    {
     "caminho": "src/modules/amizade/amizade.repository.ts",
     "medidas": {
-     "comment_lines_density": 0,
+     "comment_lines_density": 29.7,
      "complexity": 20,
      "coverage": 96.2,
      "functions": 11,
-     "ncloc": 241,
+     "ncloc": 242,
      "duplicated_lines_density": 0
     }
    },
    {
     "caminho": "src/modules/amizade/amizade.routes.ts",
     "medidas": {
-     "comment_lines_density": 10.8,
+     "comment_lines_density": 15.9,
      "complexity": 0,
      "functions": 0,
      "ncloc": 74,
@@ -166,7 +166,7 @@
    {
     "caminho": "src/modules/amizade/amizade.schema.ts",
     "medidas": {
-     "comment_lines_density": 0,
+     "comment_lines_density": 20,
      "complexity": 0,
      "coverage": 100,
      "functions": 0,
@@ -177,7 +177,7 @@
    {
     "caminho": "src/modules/amizade/amizade.service.ts",
     "medidas": {
-     "comment_lines_density": 0,
+     "comment_lines_density": 28.9,
      "complexity": 49,
      "coverage": 95.5,
      "functions": 11,
@@ -188,7 +188,7 @@
    {
     "caminho": "src/shared/types/api.types.ts",
     "medidas": {
-     "comment_lines_density": 0,
+     "comment_lines_density": 12.5,
      "complexity": 0,
      "functions": 0,
      "ncloc": 21,
@@ -198,7 +198,7 @@
    {
     "caminho": "src/config/app.ts",
     "medidas": {
-     "comment_lines_density": 1.9,
+     "comment_lines_density": 17.7,
      "complexity": 2,
      "functions": 2,
      "ncloc": 51,
@@ -208,9 +208,9 @@
    {
     "caminho": "src/shared/middlewares/autenticacao.middleware.ts",
     "medidas": {
-     "comment_lines_density": 0,
+     "comment_lines_density": 30.5,
      "complexity": 20,
-     "coverage": 90.5,
+     "coverage": 93.7,
      "functions": 7,
      "ncloc": 130,
      "duplicated_lines_density": 0
@@ -219,7 +219,7 @@
    {
     "caminho": "src/shared/types/autenticacao.types.ts",
     "medidas": {
-     "comment_lines_density": 0,
+     "comment_lines_density": 18.2,
      "complexity": 0,
      "functions": 0,
      "ncloc": 18,
@@ -249,7 +249,7 @@
    {
     "caminho": "src/shared/errors/codigos-de-erro.ts",
     "medidas": {
-     "comment_lines_density": 0,
+     "comment_lines_density": 4.2,
      "complexity": 0,
      "functions": 0,
      "ncloc": 23,
@@ -269,7 +269,7 @@
    {
     "caminho": "src/config/cors.ts",
     "medidas": {
-     "comment_lines_density": 0,
+     "comment_lines_density": 14.3,
      "complexity": 6,
      "coverage": 100,
      "functions": 4,
@@ -301,7 +301,7 @@
    {
     "caminho": "src/config/db.ts",
     "medidas": {
-     "comment_lines_density": 0,
+     "comment_lines_density": 20.8,
      "complexity": 4,
      "functions": 2,
      "ncloc": 19,
@@ -311,7 +311,7 @@
    {
     "caminho": "src/shared/services/emailService.ts",
     "medidas": {
-     "comment_lines_density": 1,
+     "comment_lines_density": 12.9,
      "complexity": 3,
      "coverage": 100,
      "functions": 3,
@@ -322,7 +322,7 @@
    {
     "caminho": "src/config/env.ts",
     "medidas": {
-     "comment_lines_density": 1.9,
+     "comment_lines_density": 17.7,
      "complexity": 9,
      "coverage": 79.3,
      "functions": 4,
@@ -333,7 +333,7 @@
    {
     "caminho": "src/shared/errors/erro-aplicacao.ts",
     "medidas": {
-     "comment_lines_density": 0,
+     "comment_lines_density": 26.9,
      "complexity": 1,
      "functions": 1,
      "ncloc": 19,
@@ -343,7 +343,7 @@
    {
     "caminho": "src/modules/exemplo/exemplo.controller.ts",
     "medidas": {
-     "comment_lines_density": 0,
+     "comment_lines_density": 29.7,
      "complexity": 4,
      "functions": 4,
      "ncloc": 52,
@@ -353,7 +353,7 @@
    {
     "caminho": "src/modules/exemplo/exemplo.repository.ts",
     "medidas": {
-     "comment_lines_density": 0,
+     "comment_lines_density": 10.9,
      "complexity": 6,
      "functions": 3,
      "ncloc": 49,
@@ -383,7 +383,7 @@
    {
     "caminho": "src/modules/exemplo/exemplo.service.ts",
     "medidas": {
-     "comment_lines_density": 0,
+     "comment_lines_density": 8,
      "complexity": 6,
      "functions": 4,
      "ncloc": 46,
@@ -434,7 +434,7 @@
    {
     "caminho": "src/shared/utils/jwt.ts",
     "medidas": {
-     "comment_lines_density": 0,
+     "comment_lines_density": 23.5,
      "complexity": 6,
      "coverage": 84.6,
      "functions": 4,
@@ -455,7 +455,7 @@
    {
     "caminho": "src/modules/admin/dto/listar.users.types.ts",
     "medidas": {
-     "comment_lines_density": 0,
+     "comment_lines_density": 25,
      "complexity": 0,
      "functions": 0,
      "ncloc": 6,
@@ -475,7 +475,7 @@
    {
     "caminho": "src/modules/auth/aluno/localidades/localidades.controller.ts",
     "medidas": {
-     "comment_lines_density": 0,
+     "comment_lines_density": 27.3,
      "complexity": 3,
      "coverage": 100,
      "functions": 3,
@@ -507,7 +507,7 @@
    {
     "caminho": "src/modules/auth/aluno/localidades/localidades.service.ts",
     "medidas": {
-     "comment_lines_density": 0,
+     "comment_lines_density": 19,
      "complexity": 3,
      "coverage": 100,
      "functions": 3,
@@ -528,7 +528,7 @@
    {
     "caminho": "src/config/logger.ts",
     "medidas": {
-     "comment_lines_density": 0,
+     "comment_lines_density": 12.2,
      "complexity": 6,
      "functions": 3,
      "ncloc": 36,
@@ -538,7 +538,7 @@
    {
     "caminho": "src/modules/auth/sessao/dto/login.types.ts",
     "medidas": {
-     "comment_lines_density": 0,
+     "comment_lines_density": 12.2,
      "complexity": 0,
      "functions": 0,
      "ncloc": 43,
@@ -548,7 +548,7 @@
    {
     "caminho": "src/shared/constants/mensagens.ts",
     "medidas": {
-     "comment_lines_density": 0,
+     "comment_lines_density": 10.3,
      "complexity": 0,
      "functions": 0,
      "ncloc": 61,
@@ -579,7 +579,7 @@
    {
     "caminho": "src/modules/auth/aluno/nacionalidades/nacionalidades.service.ts",
     "medidas": {
-     "comment_lines_density": 0,
+     "comment_lines_density": 22.2,
      "complexity": 1,
      "coverage": 100,
      "functions": 1,
@@ -621,7 +621,7 @@
    {
     "caminho": "src/modules/auth/aluno/opcoes-academicas/opcoes-academicas.service.ts",
     "medidas": {
-     "comment_lines_density": 0,
+     "comment_lines_density": 13.6,
      "complexity": 1,
      "coverage": 100,
      "functions": 1,
@@ -642,7 +642,7 @@
    {
     "caminho": "src/shared/utils/paginacao.util.ts",
     "medidas": {
-     "comment_lines_density": 0,
+     "comment_lines_density": 34,
      "complexity": 7,
      "coverage": 100,
      "functions": 2,
@@ -653,7 +653,7 @@
    {
     "caminho": "src/shared/middlewares/papeis.middleware.ts",
     "medidas": {
-     "comment_lines_density": 0,
+     "comment_lines_density": 31.4,
      "complexity": 4,
      "functions": 2,
      "ncloc": 24,
@@ -663,7 +663,7 @@
    {
     "caminho": "src/shared/constants/papeis.ts",
     "medidas": {
-     "comment_lines_density": 0,
+     "comment_lines_density": 7.1,
      "complexity": 0,
      "functions": 0,
      "ncloc": 13,
@@ -673,7 +673,7 @@
    {
     "caminho": "src/modules/auth/professor/professor.controller.ts",
     "medidas": {
-     "comment_lines_density": 0,
+     "comment_lines_density": 23.5,
      "complexity": 2,
      "coverage": 100,
      "functions": 2,
@@ -684,7 +684,7 @@
    {
     "caminho": "src/modules/auth/professor/professor.repository.ts",
     "medidas": {
-     "comment_lines_density": 0,
+     "comment_lines_density": 18.8,
      "complexity": 6,
      "coverage": 100,
      "functions": 4,
@@ -705,21 +705,21 @@
    {
     "caminho": "src/modules/auth/professor/professor.schemas.ts",
     "medidas": {
-     "comment_lines_density": 0,
+     "comment_lines_density": 14.3,
      "complexity": 5,
      "coverage": 100,
      "functions": 5,
-     "ncloc": 38,
+     "ncloc": 42,
      "duplicated_lines_density": 0
     }
    },
    {
     "caminho": "src/modules/auth/professor/professor.service.ts",
     "medidas": {
-     "comment_lines_density": 0,
+     "comment_lines_density": 25.2,
      "complexity": 20,
      "coverage": 96.6,
-     "duplicated_lines_density": 22.2,
+     "duplicated_lines_density": 24.2,
      "functions": 7,
      "ncloc": 92
     }
@@ -727,7 +727,7 @@
    {
     "caminho": "src/modules/auth/recuperar-senha/recuperar-senha.controller.ts",
     "medidas": {
-     "comment_lines_density": 0,
+     "comment_lines_density": 26.8,
      "complexity": 3,
      "coverage": 100,
      "functions": 3,
@@ -738,7 +738,7 @@
    {
     "caminho": "src/modules/auth/recuperar-senha/recuperar-senha.repository.ts",
     "medidas": {
-     "comment_lines_density": 0,
+     "comment_lines_density": 18.2,
      "complexity": 8,
      "coverage": 100,
      "functions": 5,
@@ -759,7 +759,7 @@
    {
     "caminho": "src/modules/auth/recuperar-senha/recuperar-senha.schemas.ts",
     "medidas": {
-     "comment_lines_density": 0,
+     "comment_lines_density": 23.8,
      "complexity": 1,
      "coverage": 100,
      "functions": 1,
@@ -770,7 +770,7 @@
    {
     "caminho": "src/modules/auth/recuperar-senha/recuperar-senha.service.ts",
     "medidas": {
-     "comment_lines_density": 0,
+     "comment_lines_density": 27.9,
      "complexity": 12,
      "coverage": 100,
      "functions": 7,
@@ -801,7 +801,7 @@
    {
     "caminho": "src/modules/auth/aluno/dto/resposta.aluno.types.ts",
     "medidas": {
-     "comment_lines_density": 0,
+     "comment_lines_density": 7.7,
      "complexity": 2,
      "coverage": 75,
      "functions": 1,
@@ -812,7 +812,7 @@
    {
     "caminho": "src/modules/exemplo/dto/resposta.exemplo.types.ts",
     "medidas": {
-     "comment_lines_density": 0,
+     "comment_lines_density": 9.5,
      "complexity": 1,
      "functions": 1,
      "ncloc": 19,
@@ -852,7 +852,7 @@
    {
     "caminho": "src/modules/auth/professor/dto/resposta.professor.types.ts",
     "medidas": {
-     "comment_lines_density": 0,
+     "comment_lines_density": 10.2,
      "complexity": 1,
      "coverage": 100,
      "functions": 1,
@@ -863,7 +863,7 @@
    {
     "caminho": "src/modules/admin/dto/resposta.user.types.ts",
     "medidas": {
-     "comment_lines_density": 0,
+     "comment_lines_density": 3.5,
      "complexity": 4,
      "coverage": 100,
      "functions": 1,
@@ -874,17 +874,17 @@
    {
     "caminho": "src/modules/amizade/dto/response/resumo_amigo_dto.ts",
     "medidas": {
-     "comment_lines_density": 0,
+     "comment_lines_density": 14.3,
      "complexity": 0,
      "functions": 0,
-     "ncloc": 11,
+     "ncloc": 12,
      "duplicated_lines_density": 0
     }
    },
    {
     "caminho": "src/server.ts",
     "medidas": {
-     "comment_lines_density": 23.7,
+     "comment_lines_density": 27.5,
      "complexity": 7,
      "functions": 7,
      "ncloc": 29,
@@ -894,7 +894,7 @@
    {
     "caminho": "src/modules/auth/sessao/sessao.controller.ts",
     "medidas": {
-     "comment_lines_density": 0,
+     "comment_lines_density": 26.7,
      "complexity": 7,
      "coverage": 100,
      "functions": 5,
@@ -905,7 +905,7 @@
    {
     "caminho": "src/modules/auth/sessao/sessao.repository.ts",
     "medidas": {
-     "comment_lines_density": 0,
+     "comment_lines_density": 21.8,
      "complexity": 16,
      "coverage": 100,
      "functions": 9,
@@ -916,7 +916,7 @@
    {
     "caminho": "src/modules/auth/sessao/sessao.routes.ts",
     "medidas": {
-     "comment_lines_density": 0,
+     "comment_lines_density": 10.8,
      "complexity": 0,
      "functions": 0,
      "ncloc": 33,
@@ -926,7 +926,7 @@
    {
     "caminho": "src/modules/auth/sessao/sessao.schemas.ts",
     "medidas": {
-     "comment_lines_density": 0,
+     "comment_lines_density": 22.2,
      "complexity": 1,
      "coverage": 100,
      "functions": 1,
@@ -937,7 +937,7 @@
    {
     "caminho": "src/modules/auth/sessao/sessao.service.ts",
     "medidas": {
-     "comment_lines_density": 0,
+     "comment_lines_density": 29.6,
      "complexity": 33,
      "coverage": 100,
      "functions": 12,
@@ -978,7 +978,7 @@
    {
     "caminho": "src/shared/middlewares/token-interno.middleware.ts",
     "medidas": {
-     "comment_lines_density": 0,
+     "comment_lines_density": 27.3,
      "complexity": 3,
      "coverage": 100,
      "functions": 1,
@@ -989,7 +989,7 @@
    {
     "caminho": "src/shared/middlewares/tratamento-erros.middleware.ts",
     "medidas": {
-     "comment_lines_density": 0,
+     "comment_lines_density": 27.8,
      "complexity": 3,
      "functions": 1,
      "ncloc": 39,
@@ -999,50 +999,50 @@
    {
     "caminho": "src/modules/usuarios/dto/usuario.types.ts",
     "medidas": {
-     "comment_lines_density": 0,
+     "comment_lines_density": 11.1,
      "complexity": 4,
      "coverage": 100,
      "functions": 3,
-     "ncloc": 49,
+     "ncloc": 56,
      "duplicated_lines_density": 0
     }
    },
    {
     "caminho": "src/modules/usuarios/usuarios.controller.ts",
     "medidas": {
-     "comment_lines_density": 0,
-     "complexity": 4,
-     "coverage": 93.3,
-     "functions": 4,
-     "ncloc": 56,
+     "comment_lines_density": 29,
+     "complexity": 7,
+     "coverage": 96.3,
+     "functions": 5,
+     "ncloc": 76,
      "duplicated_lines_density": 0
     }
    },
    {
     "caminho": "src/modules/usuarios/usuarios.repository.ts",
     "medidas": {
-     "comment_lines_density": 0,
-     "complexity": 5,
-     "coverage": 80,
-     "functions": 4,
-     "ncloc": 78,
+     "comment_lines_density": 28.9,
+     "complexity": 7,
+     "coverage": 100,
+     "functions": 5,
+     "ncloc": 96,
      "duplicated_lines_density": 0
     }
    },
    {
     "caminho": "src/modules/usuarios/usuarios.routes.ts",
     "medidas": {
-     "comment_lines_density": 5.4,
+     "comment_lines_density": 18.2,
      "complexity": 0,
      "functions": 0,
-     "ncloc": 35,
+     "ncloc": 36,
      "duplicated_lines_density": 0
     }
    },
    {
     "caminho": "src/modules/usuarios/usuarios.schemas.ts",
     "medidas": {
-     "comment_lines_density": 0,
+     "comment_lines_density": 15.4,
      "complexity": 4,
      "coverage": 100,
      "functions": 4,
@@ -1053,18 +1053,18 @@
    {
     "caminho": "src/modules/usuarios/usuarios.service.ts",
     "medidas": {
-     "comment_lines_density": 0,
-     "complexity": 5,
+     "comment_lines_density": 25.4,
+     "complexity": 6,
      "coverage": 100,
-     "functions": 4,
-     "ncloc": 46,
+     "functions": 5,
+     "ncloc": 50,
      "duplicated_lines_density": 0
     }
    },
    {
     "caminho": "src/shared/middlewares/validacao.middleware.ts",
     "medidas": {
-     "comment_lines_density": 0,
+     "comment_lines_density": 31.9,
      "complexity": 3,
      "coverage": 100,
      "functions": 2,
@@ -1077,7 +1077,7 @@
    {
     "caminho": "src/shared/types/api.types.ts",
     "medidas": {
-     "comment_lines_density": 0,
+     "comment_lines_density": 12.5,
      "complexity": 0,
      "functions": 0,
      "ncloc": 21,
@@ -1087,17 +1087,17 @@
    {
     "caminho": "src/config/app.ts",
     "medidas": {
-     "comment_lines_density": 0,
+     "comment_lines_density": 9.7,
      "complexity": 2,
      "functions": 2,
-     "ncloc": 56,
+     "ncloc": 65,
      "duplicated_lines_density": 0
     }
    },
    {
     "caminho": "src/shared/middlewares/autenticacao.middleware.ts",
     "medidas": {
-     "comment_lines_density": 0,
+     "comment_lines_density": 12,
      "complexity": 6,
      "coverage": 100,
      "functions": 3,
@@ -1108,7 +1108,7 @@
    {
     "caminho": "src/shared/types/autenticacao.types.ts",
     "medidas": {
-     "comment_lines_density": 0,
+     "comment_lines_density": 12.5,
      "complexity": 0,
      "functions": 0,
      "ncloc": 14,
@@ -1118,18 +1118,17 @@
    {
     "caminho": "src/shared/errors/codigos-de-erro.ts",
     "medidas": {
-     "comment_lines_density": 0,
+     "comment_lines_density": 4.3,
      "complexity": 0,
-     "coverage": 0,
      "functions": 0,
-     "ncloc": 21,
+     "ncloc": 22,
      "duplicated_lines_density": 0
     }
    },
    {
     "caminho": "src/shared/types/comuns.types.ts",
     "medidas": {
-     "comment_lines_density": 0,
+     "comment_lines_density": 33.3,
      "complexity": 0,
      "functions": 0,
      "ncloc": 2,
@@ -1137,9 +1136,83 @@
     }
    },
    {
+    "caminho": "src/modules/conquistas/conquistas.constants.ts",
+    "medidas": {
+     "comment_lines_density": 20.7,
+     "complexity": 0,
+     "functions": 0,
+     "ncloc": 23,
+     "duplicated_lines_density": 0
+    }
+   },
+   {
+    "caminho": "src/modules/conquistas/conquistas.controller.ts",
+    "medidas": {
+     "comment_lines_density": 29.4,
+     "complexity": 9,
+     "coverage": 88.9,
+     "functions": 9,
+     "ncloc": 142,
+     "duplicated_lines_density": 0
+    }
+   },
+   {
+    "caminho": "src/modules/conquistas/conquistas.dto.ts",
+    "medidas": {
+     "comment_lines_density": 10.5,
+     "complexity": 0,
+     "functions": 0,
+     "ncloc": 94,
+     "duplicated_lines_density": 0
+    }
+   },
+   {
+    "caminho": "src/modules/conquistas/conquistas.repository.ts",
+    "medidas": {
+     "comment_lines_density": 24.1,
+     "complexity": 25,
+     "coverage": 81.6,
+     "duplicated_lines_density": 16.2,
+     "functions": 20,
+     "ncloc": 480
+    }
+   },
+   {
+    "caminho": "src/modules/conquistas/conquistas.routes.ts",
+    "medidas": {
+     "comment_lines_density": 13.5,
+     "complexity": 0,
+     "functions": 0,
+     "ncloc": 64,
+     "duplicated_lines_density": 0
+    }
+   },
+   {
+    "caminho": "src/modules/conquistas/conquistas.schemas.ts",
+    "medidas": {
+     "comment_lines_density": 17.2,
+     "complexity": 2,
+     "coverage": 66.7,
+     "functions": 2,
+     "ncloc": 24,
+     "duplicated_lines_density": 0
+    }
+   },
+   {
+    "caminho": "src/modules/conquistas/conquistas.service.ts",
+    "medidas": {
+     "comment_lines_density": 24.6,
+     "complexity": 65,
+     "coverage": 87.9,
+     "functions": 25,
+     "ncloc": 430,
+     "duplicated_lines_density": 0
+    }
+   },
+   {
     "caminho": "src/modules/quiz/dto/mappers/converter_para_resposta_questao_quiz.ts",
     "medidas": {
-     "comment_lines_density": 0,
+     "comment_lines_density": 8.3,
      "complexity": 1,
      "coverage": 100,
      "functions": 1,
@@ -1150,7 +1223,7 @@
    {
     "caminho": "src/config/cors.ts",
     "medidas": {
-     "comment_lines_density": 0,
+     "comment_lines_density": 11.8,
      "complexity": 6,
      "coverage": 100,
      "functions": 4,
@@ -1172,7 +1245,7 @@
    {
     "caminho": "src/modules/dashboardAluno/dashboardAluno.controller.ts",
     "medidas": {
-     "comment_lines_density": 0,
+     "comment_lines_density": 33.3,
      "complexity": 2,
      "coverage": 100,
      "functions": 2,
@@ -1183,18 +1256,18 @@
    {
     "caminho": "src/modules/dashboardAluno/dashboardAluno.repository.ts",
     "medidas": {
-     "comment_lines_density": 0,
-     "complexity": 1,
+     "comment_lines_density": 22.4,
+     "complexity": 2,
      "coverage": 100,
-     "functions": 1,
-     "ncloc": 25,
+     "functions": 2,
+     "ncloc": 59,
      "duplicated_lines_density": 0
     }
    },
    {
     "caminho": "src/modules/dashboardAluno/dashboardAluno.routes.ts",
     "medidas": {
-     "comment_lines_density": 0,
+     "comment_lines_density": 11.1,
      "complexity": 0,
      "functions": 0,
      "ncloc": 16,
@@ -1204,82 +1277,82 @@
    {
     "caminho": "src/modules/dashboardAluno/dashboardAluno.service.ts",
     "medidas": {
-     "comment_lines_density": 0,
-     "complexity": 16,
-     "coverage": 97.9,
-     "functions": 6,
-     "ncloc": 72,
+     "comment_lines_density": 14.4,
+     "complexity": 19,
+     "coverage": 98.4,
+     "functions": 8,
+     "ncloc": 101,
      "duplicated_lines_density": 0
     }
    },
    {
     "caminho": "src/modules/dashboardAluno/dto/dashboardAluno.types.ts",
     "medidas": {
-     "comment_lines_density": 0,
+     "comment_lines_density": 12.1,
      "complexity": 0,
      "functions": 0,
-     "ncloc": 17,
+     "ncloc": 29,
      "duplicated_lines_density": 0
     }
    },
    {
     "caminho": "src/modules/dashboardTurma/dashboardTruma.schemas.ts",
     "medidas": {
-     "comment_lines_density": 0,
+     "comment_lines_density": 13,
      "complexity": 0,
      "coverage": 100,
      "functions": 0,
-     "ncloc": 8,
+     "ncloc": 20,
      "duplicated_lines_density": 0
     }
    },
    {
     "caminho": "src/modules/dashboardTurma/dashboardTurma.controller.ts",
     "medidas": {
-     "comment_lines_density": 0,
-     "complexity": 7,
-     "coverage": 100,
-     "functions": 4,
-     "ncloc": 46,
+     "comment_lines_density": 30.1,
+     "complexity": 11,
+     "coverage": 92.7,
+     "functions": 5,
+     "ncloc": 65,
      "duplicated_lines_density": 0
     }
    },
    {
     "caminho": "src/modules/dashboardTurma/dashboardTurma.repository.ts",
     "medidas": {
-     "comment_lines_density": 0,
-     "complexity": 4,
+     "comment_lines_density": 25.4,
+     "complexity": 5,
      "coverage": 100,
-     "functions": 4,
-     "ncloc": 54,
+     "functions": 5,
+     "ncloc": 85,
      "duplicated_lines_density": 0
     }
    },
    {
     "caminho": "src/modules/dashboardTurma/dashboardTurma.routes.ts",
     "medidas": {
-     "comment_lines_density": 0,
+     "comment_lines_density": 13.6,
      "complexity": 0,
      "functions": 0,
-     "ncloc": 32,
+     "ncloc": 38,
      "duplicated_lines_density": 0
     }
    },
    {
     "caminho": "src/modules/dashboardTurma/dashboardTurma.service.ts",
     "medidas": {
-     "comment_lines_density": 0,
-     "complexity": 35,
-     "coverage": 99.1,
-     "functions": 16,
-     "ncloc": 130,
+     "comment_lines_density": 22.4,
+     "complexity": 48,
+     "coverage": 96.6,
+     "functions": 21,
+     "ncloc": 177,
      "duplicated_lines_density": 0
     }
    },
    {
     "caminho": "src/modules/dashboardTurma/dto/dashboardTurma.types.ts",
     "medidas": {
-     "comment_lines_density": 0,
+     "comment_lines_density": 8.7,
      "complexity": 0,
      "functions": 0,
      "ncloc": 21,
@@ -1289,7 +1362,7 @@
    {
     "caminho": "src/config/db.ts",
     "medidas": {
-     "comment_lines_density": 0,
+     "comment_lines_density": 20.8,
      "complexity": 4,
      "functions": 2,
      "ncloc": 19,
@@ -1299,7 +1372,7 @@
    {
     "caminho": "src/config/env.ts",
     "medidas": {
-     "comment_lines_density": 0,
+     "comment_lines_density": 14.3,
      "complexity": 5,
      "coverage": 94.7,
      "functions": 2,
@@ -1310,21 +1383,31 @@
    {
     "caminho": "src/shared/errors/erro-aplicacao.ts",
     "medidas": {
-     "comment_lines_density": 0,
+     "comment_lines_density": 9.5,
      "complexity": 1,
-     "coverage": 0,
      "functions": 1,
      "ncloc": 19,
      "duplicated_lines_density": 0
     }
    },
    {
+    "caminho": "src/shared/events/event-emitter.ts",
+    "medidas": {
+     "comment_lines_density": 33.3,
+     "complexity": 0,
+     "coverage": 100,
+     "functions": 0,
+     "ncloc": 2,
+     "duplicated_lines_density": 0
+    }
+   },
+   {
     "caminho": "src/modules/quiz/dto/responses/feedback_quiz_dto.ts",
     "medidas": {
-     "comment_lines_density": 0,
+     "comment_lines_density": 17.6,
      "complexity": 0,
      "functions": 0,
-     "ncloc": 12,
+     "ncloc": 14,
      "duplicated_lines_density": 0
     }
    },
@@ -1342,7 +1425,7 @@
    {
     "caminho": "src/modules/quiz/dto/mappers/historico_quiz.mapper.ts",
     "medidas": {
-     "comment_lines_density": 0,
+     "comment_lines_density": 8.1,
      "complexity": 4,
      "coverage": 81.8,
      "functions": 2,
@@ -1381,6 +1464,16 @@
     }
    },
    {
+    "caminho": "src/modules/dashboardTurma/index.ts",
+    "medidas": {
+     "comment_lines_density": 0,
+     "complexity": 0,
+     "functions": 0,
+     "ncloc": 1,
+     "duplicated_lines_density": 0
+    }
+   },
+   {
     "caminho": "src/modules/dashboardAluno/index.ts",
     "medidas": {
      "comment_lines_density": 0,
@@ -1401,9 +1494,103 @@
     }
    },
    {
-    "caminho": "src/shared/utils/jwt.ts",
+    "caminho": "src/modules/loja/index.ts",
     "medidas": {
      "comment_lines_density": 0,
+     "complexity": 0,
+     "functions": 0,
+     "ncloc": 4,
+     "duplicated_lines_density": 0
+    }
+   },
+   {
+    "caminho": "src/modules/inventario/index.ts",
+    "medidas": {
+     "comment_lines_density": 0,
+     "complexity": 0,
+     "functions": 0,
+     "ncloc": 1,
+     "duplicated_lines_density": 0
+    }
+   },
+   {
+    "caminho": "src/modules/ranking/index.ts",
+    "medidas": {
+     "comment_lines_density": 0,
+     "complexity": 0,
+     "functions": 0,
+     "ncloc": 1,
+     "duplicated_lines_density": 0
+    }
+   },
+   {
+    "caminho": "src/modules/inventario/inventario.controller.ts",
+    "medidas": {
+     "comment_lines_density": 40.2,
+     "complexity": 6,
+     "coverage": 93.5,
+     "functions": 6,
+     "ncloc": 58,
+     "duplicated_lines_density": 0
+    }
+   },
+   {
+    "caminho": "src/modules/inventario/inventario.repository.ts",
+    "medidas": {
+     "comment_lines_density": 13.2,
+     "complexity": 7,
+     "coverage": 100,
+     "functions": 7,
+     "ncloc": 112,
+     "duplicated_lines_density": 0
+    }
+   },
+   {
+    "caminho": "src/modules/inventario/inventario.routes.ts",
+    "medidas": {
+     "comment_lines_density": 20.9,
+     "complexity": 0,
+     "functions": 0,
+     "ncloc": 34,
+     "duplicated_lines_density": 0
+    }
+   },
+   {
+    "caminho": "src/modules/inventario/inventario.schema.ts",
+    "medidas": {
+     "comment_lines_density": 16,
+     "complexity": 2,
+     "coverage": 100,
+     "functions": 2,
+     "ncloc": 21,
+     "duplicated_lines_density": 0
+    }
+   },
+   {
+    "caminho": "src/modules/inventario/inventario.service.ts",
+    "medidas": {
+     "comment_lines_density": 23.1,
+     "complexity": 14,
+     "coverage": 100,
+     "functions": 9,
+     "ncloc": 90,
+     "duplicated_lines_density": 0
+    }
+   },
+   {
+    "caminho": "src/modules/inventario/DTO/inventario.types.ts",
+    "medidas": {
+     "comment_lines_density": 23.1,
+     "complexity": 0,
+     "functions": 0,
+     "ncloc": 10,
+     "duplicated_lines_density": 0
+    }
+   },
+   {
+    "caminho": "src/shared/utils/jwt.ts",
+    "medidas": {
+     "comment_lines_density": 11.4,
      "complexity": 4,
      "coverage": 72.2,
      "functions": 2,
@@ -1414,7 +1601,7 @@
    {
     "caminho": "src/modules/lista/lista.controller.ts",
     "medidas": {
-     "comment_lines_density": 0,
+     "comment_lines_density": 29.9,
      "complexity": 16,
      "coverage": 100,
      "functions": 16,
@@ -1425,7 +1612,7 @@
    {
     "caminho": "src/modules/lista/lista.repository.ts",
     "medidas": {
-     "comment_lines_density": 0,
+     "comment_lines_density": 10.5,
      "complexity": 39,
      "coverage": 97.6,
      "functions": 28,
@@ -1436,7 +1623,7 @@
    {
     "caminho": "src/modules/lista/lista.routes.ts",
     "medidas": {
-     "comment_lines_density": 0,
+     "comment_lines_density": 13.5,
      "complexity": 0,
      "functions": 0,
      "ncloc": 109,
@@ -1446,7 +1633,7 @@
    {
     "caminho": "src/modules/lista/lista.schemas.ts",
     "medidas": {
-     "comment_lines_density": 0,
+     "comment_lines_density": 19.2,
      "complexity": 7,
      "coverage": 100,
      "functions": 6,
@@ -1457,9 +1644,9 @@
    {
     "caminho": "src/modules/lista/lista.service.ts",
     "medidas": {
-     "comment_lines_density": 0,
+     "comment_lines_density": 16.8,
      "complexity": 70,
-     "coverage": 95,
+     "coverage": 96.3,
      "functions": 47,
      "ncloc": 352,
      "duplicated_lines_density": 0
@@ -1468,7 +1655,7 @@
    {
     "caminho": "src/modules/lista/dto/lista.types.ts",
     "medidas": {
-     "comment_lines_density": 0,
+     "comment_lines_density": 15.4,
      "complexity": 0,
      "functions": 0,
      "ncloc": 66,
@@ -1478,9 +1665,8 @@
    {
     "caminho": "src/shared/constants/localidades.ts",
     "medidas": {
-     "comment_lines_density": 0,
+     "comment_lines_density": 3.3,
      "complexity": 0,
-     "coverage": 0,
      "functions": 0,
      "ncloc": 88,
      "duplicated_lines_density": 0
@@ -1489,7 +1675,7 @@
    {
     "caminho": "src/config/logger.ts",
     "medidas": {
-     "comment_lines_density": 0,
+     "comment_lines_density": 10,
      "complexity": 6,
      "functions": 3,
      "ncloc": 36,
@@ -1497,20 +1683,83 @@
     }
    },
    {
+    "caminho": "src/modules/loja/loja.controller.ts",
+    "medidas": {
+     "comment_lines_density": 31,
+     "complexity": 4,
+     "coverage": 93.3,
+     "functions": 4,
+     "ncloc": 49,
+     "duplicated_lines_density": 0
+    }
+   },
+   {
+    "caminho": "src/modules/loja/dto/loja.dto.ts",
+    "medidas": {
+     "comment_lines_density": 12.9,
+     "complexity": 0,
+     "functions": 0,
+     "ncloc": 27,
+     "duplicated_lines_density": 0
+    }
+   },
+   {
+    "caminho": "src/modules/loja/loja.repository.ts",
+    "medidas": {
+     "comment_lines_density": 15.2,
+     "complexity": 14,
+     "coverage": 93.5,
+     "functions": 6,
+     "ncloc": 178,
+     "duplicated_lines_density": 0
+    }
+   },
+   {
+    "caminho": "src/modules/loja/loja.routes.ts",
+    "medidas": {
+     "comment_lines_density": 13.2,
+     "complexity": 0,
+     "functions": 0,
+     "ncloc": 33,
+     "duplicated_lines_density": 0
+    }
+   },
+   {
+    "caminho": "src/modules/loja/loja.schemas.ts",
+    "medidas": {
+     "comment_lines_density": 20.7,
+     "complexity": 0,
+     "coverage": 100,
+     "functions": 0,
+     "ncloc": 23,
+     "duplicated_lines_density": 0
+    }
+   },
+   {
+    "caminho": "src/modules/loja/loja.service.ts",
+    "medidas": {
+     "comment_lines_density": 21.8,
+     "complexity": 10,
+     "coverage": 100,
+     "functions": 9,
+     "ncloc": 97,
+     "duplicated_lines_density": 0
+    }
+   },
+   {
     "caminho": "src/shared/constants/mensagens.ts",
     "medidas": {
-     "comment_lines_density": 0,
+     "comment_lines_density": 8.1,
      "complexity": 0,
-     "coverage": 0,
      "functions": 0,
-     "ncloc": 53,
+     "ncloc": 57,
      "duplicated_lines_density": 0
     }
    },
    {
     "caminho": "src/modules/questoes/minio.service.ts",
     "medidas": {
-     "comment_lines_density": 0,
+     "comment_lines_density": 20.4,
      "complexity": 11,
      "coverage": 78.4,
      "functions": 3,
@@ -1523,7 +1772,6 @@
     "medidas": {
      "comment_lines_density": 0,
      "complexity": 0,
-     "coverage": 0,
      "functions": 0,
      "ncloc": 1,
      "duplicated_lines_density": 0
@@ -1532,9 +1780,8 @@
    {
     "caminho": "src/shared/constants/opcoes-academicas.ts",
     "medidas": {
-     "comment_lines_density": 0,
+     "comment_lines_density": 11.5,
      "complexity": 0,
-     "coverage": 0,
      "functions": 0,
      "ncloc": 46,
      "duplicated_lines_density": 0
@@ -1543,7 +1790,7 @@
    {
     "caminho": "src/shared/utils/paginacao.util.ts",
     "medidas": {
-     "comment_lines_density": 0,
+     "comment_lines_density": 15.4,
      "complexity": 7,
      "coverage": 100,
      "functions": 2,
@@ -1554,9 +1801,8 @@
    {
     "caminho": "src/shared/middlewares/papeis.middleware.ts",
     "medidas": {
-     "comment_lines_density": 0,
+     "comment_lines_density": 11.1,
      "complexity": 4,
-     "coverage": 0,
      "functions": 2,
      "ncloc": 24,
      "duplicated_lines_density": 0
@@ -1565,9 +1811,8 @@
    {
     "caminho": "src/shared/constants/papeis.ts",
     "medidas": {
-     "comment_lines_density": 0,
+     "comment_lines_density": 18.8,
      "complexity": 0,
-     "coverage": 0,
      "functions": 0,
      "ncloc": 13,
      "duplicated_lines_density": 0
@@ -1576,7 +1821,7 @@
    {
     "caminho": "src/shared/utils/pdf.util.ts",
     "medidas": {
-     "comment_lines_density": 0,
+     "comment_lines_density": 20,
      "complexity": 1,
      "coverage": 100,
      "functions": 1,
@@ -1587,7 +1832,7 @@
    {
     "caminho": "src/modules/quiz/dto/responses/quantidade_questao_tema_dto.ts",
     "medidas": {
-     "comment_lines_density": 0,
+     "comment_lines_density": 22.2,
      "complexity": 0,
      "functions": 0,
      "ncloc": 7,
@@ -1597,20 +1842,20 @@
    {
     "caminho": "src/modules/questoes/dto/question.types.ts",
     "medidas": {
-     "comment_lines_density": 0,
-     "complexity": 12,
+     "comment_lines_density": 8.9,
+     "complexity": 10,
      "coverage": 100,
-     "functions": 5,
-     "ncloc": 144,
+     "functions": 3,
+     "ncloc": 153,
      "duplicated_lines_density": 0
     }
    },
    {
     "caminho": "src/modules/questoes/questoes.controller.ts",
     "medidas": {
-     "comment_lines_density": 2.7,
+     "comment_lines_density": 30.3,
      "complexity": 14,
-     "coverage": 96.6,
+     "coverage": 98.3,
      "functions": 8,
      "ncloc": 108,
      "duplicated_lines_density": 0
@@ -1619,11 +1864,11 @@
    {
     "caminho": "src/modules/questoes/questoes.repository.ts",
     "medidas": {
-     "comment_lines_density": 0,
-     "complexity": 16,
-     "coverage": 80,
-     "functions": 10,
-     "ncloc": 148,
+     "comment_lines_density": 30.1,
+     "complexity": 26,
+     "coverage": 87.7,
+     "functions": 12,
+     "ncloc": 165,
      "duplicated_lines_density": 0
     }
    },
@@ -1640,29 +1885,29 @@
    {
     "caminho": "src/modules/questoes/questoes.schemas.ts",
     "medidas": {
-     "comment_lines_density": 0,
+     "comment_lines_density": 12,
      "complexity": 4,
-     "coverage": 92.9,
+     "coverage": 93.3,
      "functions": 3,
-     "ncloc": 83,
+     "ncloc": 95,
      "duplicated_lines_density": 0
     }
    },
    {
     "caminho": "src/modules/questoes/questoes.service.ts",
     "medidas": {
-     "comment_lines_density": 0,
-     "complexity": 43,
-     "coverage": 96,
+     "comment_lines_density": 20.6,
+     "complexity": 50,
+     "coverage": 97.2,
      "functions": 11,
-     "ncloc": 194,
+     "ncloc": 204,
      "duplicated_lines_density": 0
     }
    },
    {
     "caminho": "src/modules/quiz/dto/database/questoes_respondidas_banco_dto.ts",
     "medidas": {
-     "comment_lines_density": 0,
+     "comment_lines_density": 5.3,
      "complexity": 0,
      "functions": 0,
      "ncloc": 36,
@@ -1672,7 +1917,7 @@
    {
     "caminho": "src/modules/quiz/quiz.controller.ts",
     "medidas": {
-     "comment_lines_density": 0,
+     "comment_lines_density": 37,
      "complexity": 8,
      "coverage": 93.3,
      "functions": 6,
@@ -1683,28 +1928,28 @@
    {
     "caminho": "src/modules/quiz/quiz.repository.ts",
     "medidas": {
-     "comment_lines_density": 0,
+     "comment_lines_density": 26.6,
      "complexity": 17,
-     "coverage": 94.1,
+     "coverage": 98,
      "functions": 9,
-     "ncloc": 175,
+     "ncloc": 185,
      "duplicated_lines_density": 0
     }
    },
    {
     "caminho": "src/modules/quiz/quiz.routes.ts",
     "medidas": {
-     "comment_lines_density": 0,
+     "comment_lines_density": 15.2,
      "complexity": 0,
      "functions": 0,
-     "ncloc": 35,
+     "ncloc": 39,
      "duplicated_lines_density": 0
     }
    },
    {
     "caminho": "src/modules/quiz/quiz.schemas.ts",
     "medidas": {
-     "comment_lines_density": 0,
+     "comment_lines_density": 17.1,
      "complexity": 0,
      "coverage": 100,
      "functions": 0,
@@ -1715,18 +1960,82 @@
    {
     "caminho": "src/modules/quiz/quiz.service.ts",
     "medidas": {
-     "comment_lines_density": 0,
-     "complexity": 26,
-     "coverage": 96.3,
+     "comment_lines_density": 19,
+     "complexity": 27,
+     "coverage": 97.8,
      "functions": 10,
-     "ncloc": 166,
+     "ncloc": 183,
+     "duplicated_lines_density": 0
+    }
+   },
+   {
+    "caminho": "src/modules/ranking/ranking.controller.ts",
+    "medidas": {
+     "comment_lines_density": 0,
+     "complexity": 2,
+     "coverage": 100,
+     "functions": 2,
+     "ncloc": 19,
+     "duplicated_lines_density": 0
+    }
+   },
+   {
+    "caminho": "src/modules/ranking/ranking.repository.ts",
+    "medidas": {
+     "comment_lines_density": 24.3,
+     "complexity": 3,
+     "coverage": 100,
+     "functions": 1,
+     "ncloc": 28,
+     "duplicated_lines_density": 0
+    }
+   },
+   {
+    "caminho": "src/modules/ranking/ranking.routes.ts",
+    "medidas": {
+     "comment_lines_density": 0,
+     "complexity": 0,
+     "functions": 0,
+     "ncloc": 16,
+     "duplicated_lines_density": 0
+    }
+   },
+   {
+    "caminho": "src/modules/ranking/ranking.schemas.ts",
+    "medidas": {
+     "comment_lines_density": 0,
+     "complexity": 3,
+     "coverage": 100,
+     "functions": 2,
+     "ncloc": 15,
+     "duplicated_lines_density": 0
+    }
+   },
+   {
+    "caminho": "src/modules/ranking/ranking.service.ts",
+    "medidas": {
+     "comment_lines_density": 18.2,
+     "complexity": 9,
+     "coverage": 100,
+     "functions": 4,
+     "ncloc": 27,
+     "duplicated_lines_density": 0
+    }
+   },
+   {
+    "caminho": "src/modules/ranking/ranking.types.ts",
+    "medidas": {
+     "comment_lines_density": 0,
+     "complexity": 0,
+     "functions": 0,
+     "ncloc": 6,
      "duplicated_lines_density": 0
     }
    },
    {
     "caminho": "src/modules/quiz/dto/responses/resolucao_questao_usuario_dto.ts",
     "medidas": {
-     "comment_lines_density": 0,
+     "comment_lines_density": 5.9,
      "complexity": 0,
      "functions": 0,
      "ncloc": 32,
@@ -1736,29 +2045,29 @@
    {
     "caminho": "src/modules/resolucaoLista/resolucaoLista.controller.ts",
     "medidas": {
-     "comment_lines_density": 0,
-     "complexity": 12,
-     "coverage": 90.6,
+     "comment_lines_density": 29.8,
+     "complexity": 13,
+     "coverage": 96.4,
      "functions": 6,
-     "ncloc": 98,
+     "ncloc": 99,
      "duplicated_lines_density": 0
     }
    },
    {
     "caminho": "src/modules/resolucaoLista/resolucaoLista.repository.ts",
     "medidas": {
-     "comment_lines_density": 0,
-     "complexity": 5,
-     "coverage": 100,
+     "comment_lines_density": 28.5,
+     "complexity": 6,
+     "coverage": 90.9,
      "functions": 4,
-     "ncloc": 92,
+     "ncloc": 93,
      "duplicated_lines_density": 0
     }
    },
    {
     "caminho": "src/modules/resolucaoLista/resolucaoLista.routes.ts",
     "medidas": {
-     "comment_lines_density": 0,
+     "comment_lines_density": 14,
      "complexity": 0,
      "functions": 0,
      "ncloc": 43,
@@ -1768,29 +2077,29 @@
    {
     "caminho": "src/modules/resolucaoLista/resolucaoLista.schemas.ts",
     "medidas": {
-     "comment_lines_density": 0,
+     "comment_lines_density": 19.2,
      "complexity": 0,
      "coverage": 100,
      "functions": 0,
-     "ncloc": 20,
+     "ncloc": 21,
      "duplicated_lines_density": 0
     }
    },
    {
     "caminho": "src/modules/resolucaoLista/resolucaoLista.service.ts",
     "medidas": {
-     "comment_lines_density": 0,
+     "comment_lines_density": 26.9,
      "complexity": 31,
-     "coverage": 90.8,
+     "coverage": 97.9,
      "functions": 11,
-     "ncloc": 156,
+     "ncloc": 155,
      "duplicated_lines_density": 0
     }
    },
    {
     "caminho": "src/modules/quiz/dto/requests/responder_questao_quiz_dto.ts",
     "medidas": {
-     "comment_lines_density": 0,
+     "comment_lines_density": 12.5,
      "complexity": 0,
      "functions": 0,
      "ncloc": 7,
@@ -1800,7 +2109,7 @@
    {
     "caminho": "src/modules/quiz/dto/responses/resposta_questao_quiz_dto.ts",
     "medidas": {
-     "comment_lines_density": 0,
+     "comment_lines_density": 5,
      "complexity": 0,
      "functions": 0,
      "ncloc": 19,
@@ -1810,7 +2119,7 @@
    {
     "caminho": "src/server.ts",
     "medidas": {
-     "comment_lines_density": 0,
+     "comment_lines_density": 13.9,
      "complexity": 7,
      "functions": 7,
      "ncloc": 31,
@@ -1820,9 +2129,8 @@
    {
     "caminho": "src/shared/constants/status.ts",
     "medidas": {
-     "comment_lines_density": 0,
+     "comment_lines_density": 12.5,
      "complexity": 0,
-     "coverage": 0,
      "functions": 0,
      "ncloc": 7,
      "duplicated_lines_density": 0
@@ -1831,7 +2139,7 @@
    {
     "caminho": "src/config/storage.ts",
     "medidas": {
-     "comment_lines_density": 0,
+     "comment_lines_density": 12.4,
      "complexity": 13,
      "coverage": 90.9,
      "functions": 2,
@@ -1840,9 +2148,30 @@
     }
    },
    {
-    "caminho": "src/shared/middlewares/token-interno.middleware.ts",
+    "caminho": "src/modules/conquistas/listeners/tema-criado.listener.ts",
+    "medidas": {
+     "comment_lines_density": 9.1,
+     "complexity": 1,
+     "coverage": 100,
+     "functions": 1,
+     "ncloc": 10,
+     "duplicated_lines_density": 0
+    }
+   },
+   {
+    "caminho": "src/shared/events/tema_criado.event.ts",
     "medidas": {
      "comment_lines_density": 0,
+     "complexity": 0,
+     "functions": 0,
+     "ncloc": 4,
+     "duplicated_lines_density": 0
+    }
+   },
+   {
+    "caminho": "src/shared/middlewares/token-interno.middleware.ts",
+    "medidas": {
+     "comment_lines_density": 9.7,
      "complexity": 3,
      "coverage": 100,
      "functions": 1,
@@ -1853,9 +2182,8 @@
    {
     "caminho": "src/shared/middlewares/tratamento-erros.middleware.ts",
     "medidas": {
-     "comment_lines_density": 0,
+     "comment_lines_density": 9.3,
      "complexity": 3,
-     "coverage": 0,
      "functions": 1,
      "ncloc": 39,
      "duplicated_lines_density": 0
@@ -1864,7 +2192,7 @@
    {
     "caminho": "src/modules/turma/turma.controller.ts",
     "medidas": {
-     "comment_lines_density": 0,
+     "comment_lines_density": 39.2,
      "complexity": 14,
      "coverage": 100,
      "functions": 10,
@@ -1875,9 +2203,9 @@
    {
     "caminho": "src/modules/turma/turma.repository.ts",
     "medidas": {
-     "comment_lines_density": 0,
+     "comment_lines_density": 34,
      "complexity": 15,
-     "coverage": 95.2,
+     "coverage": 100,
      "functions": 13,
      "ncloc": 163,
      "duplicated_lines_density": 0
@@ -1896,7 +2224,7 @@
    {
     "caminho": "src/modules/turma/turma.schemas.ts",
     "medidas": {
-     "comment_lines_density": 0,
+     "comment_lines_density": 21.7,
      "complexity": 2,
      "coverage": 100,
      "functions": 2,
@@ -1907,7 +2235,7 @@
    {
     "caminho": "src/modules/turma/turma.service.ts",
     "medidas": {
-     "comment_lines_density": 4.6,
+     "comment_lines_density": 24.4,
      "complexity": 26,
      "coverage": 100,
      "functions": 10,
@@ -1918,7 +2246,7 @@
    {
     "caminho": "src/modules/turma/dto/turma.types.ts",
     "medidas": {
-     "comment_lines_density": 0,
+     "comment_lines_density": 15.8,
      "complexity": 0,
      "functions": 0,
      "ncloc": 48,
@@ -1938,7 +2266,7 @@
    {
     "caminho": "src/shared/middlewares/validacao.middleware.ts",
     "medidas": {
-     "comment_lines_density": 0,
+     "comment_lines_density": 11.1,
      "complexity": 3,
      "coverage": 100,
      "functions": 2,
@@ -1951,7 +2279,7 @@
    {
     "caminho": "src/routes/admin.routes.ts",
     "medidas": {
-     "comment_lines_density": 0,
+     "comment_lines_density": 20,
      "complexity": 0,
      "coverage": 100,
      "functions": 0,
@@ -1962,7 +2290,7 @@
    {
     "caminho": "src/shared/clients/ai.client.ts",
     "medidas": {
-     "comment_lines_density": 0,
+     "comment_lines_density": 18.2,
      "complexity": 1,
      "coverage": 80,
      "functions": 0,
@@ -1973,28 +2301,28 @@
    {
     "caminho": "src/routes/amizade.routes.ts",
     "medidas": {
-     "comment_lines_density": 0,
+     "comment_lines_density": 23.1,
      "complexity": 0,
      "coverage": 100,
      "functions": 0,
-     "ncloc": 8,
+     "ncloc": 10,
      "duplicated_lines_density": 0
     }
    },
    {
     "caminho": "src/shared/types/api.types.ts",
     "medidas": {
-     "comment_lines_density": 0,
+     "comment_lines_density": 10.5,
      "complexity": 0,
      "functions": 0,
-     "ncloc": 11,
+     "ncloc": 17,
      "duplicated_lines_density": 0
     }
    },
    {
     "caminho": "src/config/app.ts",
     "medidas": {
-     "comment_lines_density": 0,
+     "comment_lines_density": 14,
      "complexity": 2,
      "coverage": 100,
      "functions": 2,
@@ -2005,7 +2333,7 @@
    {
     "caminho": "src/shared/middlewares/autenticacao.middleware.ts",
     "medidas": {
-     "comment_lines_density": 0,
+     "comment_lines_density": 28.4,
      "complexity": 6,
      "coverage": 88.9,
      "functions": 1,
@@ -2016,7 +2344,7 @@
    {
     "caminho": "src/routes/auth.routes.ts",
     "medidas": {
-     "comment_lines_density": 0,
+     "comment_lines_density": 12.9,
      "complexity": 4,
      "coverage": 100,
      "functions": 2,
@@ -2027,7 +2355,7 @@
    {
     "caminho": "src/shared/clients/backend.client.ts",
     "medidas": {
-     "comment_lines_density": 0,
+     "comment_lines_density": 22.2,
      "complexity": 0,
      "coverage": 100,
      "functions": 0,
@@ -2038,7 +2366,7 @@
    {
     "caminho": "src/shared/errors/codigos-de-erro.ts",
     "medidas": {
-     "comment_lines_density": 0,
+     "comment_lines_density": 8.3,
      "complexity": 0,
      "coverage": 100,
      "functions": 0,
@@ -2049,7 +2377,7 @@
    {
     "caminho": "src/config/cors.ts",
     "medidas": {
-     "comment_lines_density": 0,
+     "comment_lines_density": 40.4,
      "complexity": 6,
      "coverage": 100,
      "functions": 4,
@@ -2060,7 +2388,7 @@
    {
     "caminho": "src/routes/dashboardAluno.routes.ts",
     "medidas": {
-     "comment_lines_density": 0,
+     "comment_lines_density": 11.1,
      "complexity": 0,
      "coverage": 100,
      "functions": 0,
@@ -2071,7 +2399,7 @@
    {
     "caminho": "src/routes/dashboardTurma.routes.ts",
     "medidas": {
-     "comment_lines_density": 0,
+     "comment_lines_density": 11.1,
      "complexity": 0,
      "coverage": 100,
      "functions": 0,
@@ -2082,7 +2410,7 @@
    {
     "caminho": "src/config/env.ts",
     "medidas": {
-     "comment_lines_density": 0,
+     "comment_lines_density": 40.6,
      "complexity": 7,
      "coverage": 81,
      "functions": 4,
@@ -2093,7 +2421,7 @@
    {
     "caminho": "src/shared/errors/erro-aplicacao.ts",
     "medidas": {
-     "comment_lines_density": 0,
+     "comment_lines_density": 36.7,
      "complexity": 1,
      "coverage": 100,
      "functions": 1,
@@ -2104,7 +2432,7 @@
    {
     "caminho": "src/routes/exemplos.routes.ts",
     "medidas": {
-     "comment_lines_density": 0,
+     "comment_lines_density": 11.1,
      "complexity": 0,
      "coverage": 100,
      "functions": 0,
@@ -2115,7 +2443,7 @@
    {
     "caminho": "src/shared/utils/headers.ts",
     "medidas": {
-     "comment_lines_density": 0,
+     "comment_lines_density": 24.4,
      "complexity": 5,
      "coverage": 100,
      "functions": 1,
@@ -2126,7 +2454,7 @@
    {
     "caminho": "src/routes/ia.routes.ts",
     "medidas": {
-     "comment_lines_density": 0,
+     "comment_lines_density": 14.3,
      "complexity": 3,
      "coverage": 100,
      "functions": 2,
@@ -2137,18 +2465,29 @@
    {
     "caminho": "src/routes/index.ts",
     "medidas": {
-     "comment_lines_density": 0,
+     "comment_lines_density": 14.8,
+     "complexity": 1,
+     "coverage": 97.8,
+     "functions": 1,
+     "ncloc": 52,
+     "duplicated_lines_density": 0
+    }
+   },
+   {
+    "caminho": "src/routes/inventario.routes.ts",
+    "medidas": {
+     "comment_lines_density": 11.1,
      "complexity": 0,
      "coverage": 100,
      "functions": 0,
-     "ncloc": 31,
+     "ncloc": 8,
      "duplicated_lines_density": 0
     }
    },
    {
     "caminho": "src/routes/lista.routes.ts",
     "medidas": {
-     "comment_lines_density": 0,
+     "comment_lines_density": 11.1,
      "complexity": 0,
      "coverage": 100,
      "functions": 0,
@@ -2159,7 +2498,7 @@
    {
     "caminho": "src/routes/listasAlunos.routes.ts",
     "medidas": {
-     "comment_lines_density": 0,
+     "comment_lines_density": 11.1,
      "complexity": 0,
      "coverage": 100,
      "functions": 0,
@@ -2170,7 +2509,7 @@
    {
     "caminho": "src/config/logger.ts",
     "medidas": {
-     "comment_lines_density": 0,
+     "comment_lines_density": 12.2,
      "complexity": 6,
      "coverage": 94.4,
      "functions": 3,
@@ -2190,9 +2529,52 @@
     }
    },
    {
+    "caminho": "src/modules/perfil-social/perfil-social.controller.ts",
+    "medidas": {
+     "comment_lines_density": 35.8,
+     "complexity": 7,
+     "coverage": 100,
+     "duplicated_lines_density": 24.3,
+     "functions": 5,
+     "ncloc": 77
+    }
+   },
+   {
+    "caminho": "src/modules/perfil-social/perfil-social.routes.ts",
+    "medidas": {
+     "comment_lines_density": 26.7,
+     "complexity": 2,
+     "coverage": 64.7,
+     "functions": 1,
+     "ncloc": 22,
+     "duplicated_lines_density": 0
+    }
+   },
+   {
+    "caminho": "src/modules/perfil-social/perfil-social.service.ts",
+    "medidas": {
+     "comment_lines_density": 34.3,
+     "complexity": 16,
+     "coverage": 100,
+     "functions": 8,
+     "ncloc": 132,
+     "duplicated_lines_density": 0
+    }
+   },
+   {
+    "caminho": "src/modules/perfil-social/perfil-social.types.ts",
+    "medidas": {
+     "comment_lines_density": 12.1,
+     "complexity": 0,
+     "functions": 0,
+     "ncloc": 58,
+     "duplicated_lines_density": 0
+    }
+   },
+   {
     "caminho": "src/shared/middlewares/proxy.middleware.ts",
     "medidas": {
-     "comment_lines_density": 0,
+     "comment_lines_density": 33.3,
      "complexity": 7,
      "coverage": 96.4,
      "functions": 3,
@@ -2203,7 +2585,7 @@
    {
     "caminho": "src/routes/questoes.routes.ts",
     "medidas": {
-     "comment_lines_density": 0,
+     "comment_lines_density": 25.9,
      "complexity": 15,
      "coverage": 93.5,
      "functions": 5,
@@ -2214,7 +2596,7 @@
    {
     "caminho": "src/shared/clients/quiz.client.ts",
     "medidas": {
-     "comment_lines_density": 0,
+     "comment_lines_density": 22.2,
      "complexity": 0,
      "coverage": 100,
      "functions": 0,
@@ -2223,9 +2605,52 @@
     }
    },
    {
+    "caminho": "src/modules/ranking/ranking.controller.ts",
+    "medidas": {
+     "comment_lines_density": 41.4,
+     "complexity": 13,
+     "coverage": 96.6,
+     "duplicated_lines_density": 17.2,
+     "functions": 8,
+     "ncloc": 99
+    }
+   },
+   {
+    "caminho": "src/modules/ranking/ranking.routes.ts",
+    "medidas": {
+     "comment_lines_density": 38.1,
+     "complexity": 0,
+     "coverage": 100,
+     "functions": 0,
+     "ncloc": 13,
+     "duplicated_lines_density": 0
+    }
+   },
+   {
+    "caminho": "src/modules/ranking/ranking.service.ts",
+    "medidas": {
+     "comment_lines_density": 36.2,
+     "complexity": 67,
+     "coverage": 98.8,
+     "functions": 34,
+     "ncloc": 350,
+     "duplicated_lines_density": 0
+    }
+   },
+   {
+    "caminho": "src/modules/ranking/ranking.types.ts",
+    "medidas": {
+     "comment_lines_density": 12.5,
+     "complexity": 0,
+     "functions": 0,
+     "ncloc": 133,
+     "duplicated_lines_density": 0
+    }
+   },
+   {
     "caminho": "src/server.ts",
     "medidas": {
-     "comment_lines_density": 0,
+     "comment_lines_density": 30,
      "complexity": 7,
      "functions": 7,
      "ncloc": 21,
@@ -2235,7 +2660,7 @@
    {
     "caminho": "src/shared/middlewares/tratamento-erros.middleware.ts",
     "medidas": {
-     "comment_lines_density": 0,
+     "comment_lines_density": 30.2,
      "complexity": 6,
      "coverage": 100,
      "functions": 1,
@@ -2246,7 +2671,7 @@
    {
     "caminho": "src/routes/turmas.routes.ts",
     "medidas": {
-     "comment_lines_density": 0,
+     "comment_lines_density": 11.1,
      "complexity": 0,
      "coverage": 100,
      "functions": 0,
@@ -2257,7 +2682,7 @@
    {
     "caminho": "src/routes/usuarios.routes.ts",
     "medidas": {
-     "comment_lines_density": 0,
+     "comment_lines_density": 11.1,
      "complexity": 0,
      "coverage": 100,
      "functions": 0,
@@ -2270,29 +2695,150 @@
    {
     "caminho": "src/features/manage-turmas/ui/AbaAlunos.tsx",
     "medidas": {
-     "comment_lines_density": 0,
+     "comment_lines_density": 5.6,
      "complexity": 57,
      "coverage": 96.2,
      "functions": 33,
-     "ncloc": 332,
+     "ncloc": 334,
+     "duplicated_lines_density": 0
+    }
+   },
+   {
+    "caminho": "src/features/achievements/ui/AchievementCard.tsx",
+    "medidas": {
+     "comment_lines_density": 5.8,
+     "complexity": 24,
+     "coverage": 100,
+     "functions": 3,
+     "ncloc": 130,
+     "duplicated_lines_density": 0
+    }
+   },
+   {
+    "caminho": "src/features/achievements/ui/AchievementDetailsModal.tsx",
+    "medidas": {
+     "comment_lines_density": 5.2,
+     "complexity": 32,
+     "coverage": 90.6,
+     "functions": 8,
+     "ncloc": 239,
+     "duplicated_lines_density": 0
+    }
+   },
+   {
+    "caminho": "src/features/achievements/ui/AchievementHighlights.tsx",
+    "medidas": {
+     "comment_lines_density": 6.2,
+     "complexity": 9,
+     "coverage": 100,
+     "functions": 2,
+     "ncloc": 76,
+     "duplicated_lines_density": 0
+    }
+   },
+   {
+    "caminho": "src/features/achievements/ui/AchievementHighlightsModal.tsx",
+    "medidas": {
+     "comment_lines_density": 6.3,
+     "complexity": 45,
+     "coverage": 99,
+     "functions": 24,
+     "ncloc": 285,
+     "duplicated_lines_density": 0
+    }
+   },
+   {
+    "caminho": "src/features/achievements/ui/AchievementMedal.tsx",
+    "medidas": {
+     "comment_lines_density": 8.4,
+     "complexity": 11,
+     "coverage": 97.5,
+     "functions": 1,
+     "ncloc": 87,
+     "duplicated_lines_density": 0
+    }
+   },
+   {
+    "caminho": "src/features/achievements/ui/AchievementProgress.tsx",
+    "medidas": {
+     "comment_lines_density": 10.4,
+     "complexity": 11,
+     "coverage": 100,
+     "functions": 1,
+     "ncloc": 60,
+     "duplicated_lines_density": 0
+    }
+   },
+   {
+    "caminho": "src/features/achievements/ui/AchievementReward.tsx",
+    "medidas": {
+     "comment_lines_density": 8.5,
+     "complexity": 14,
+     "coverage": 100,
+     "functions": 1,
+     "ncloc": 75,
+     "duplicated_lines_density": 0
+    }
+   },
+   {
+    "caminho": "src/features/achievements/achievementService.ts",
+    "medidas": {
+     "comment_lines_density": 8.9,
+     "complexity": 4,
+     "coverage": 100,
+     "functions": 4,
+     "ncloc": 51,
+     "duplicated_lines_density": 0
+    }
+   },
+   {
+    "caminho": "src/features/achievements/ui/AchievementTierBadge.tsx",
+    "medidas": {
+     "comment_lines_density": 13.5,
+     "complexity": 4,
+     "coverage": 100,
+     "functions": 1,
+     "ncloc": 32,
+     "duplicated_lines_density": 0
+    }
+   },
+   {
+    "caminho": "src/features/achievements/ui/AchievementUnlockModal.tsx",
+    "medidas": {
+     "comment_lines_density": 9.7,
+     "complexity": 25,
+     "coverage": 100,
+     "functions": 17,
+     "ncloc": 214,
+     "duplicated_lines_density": 0
+    }
+   },
+   {
+    "caminho": "src/features/achievements/ui/achievementVisuals.ts",
+    "medidas": {
+     "comment_lines_density": 12.9,
+     "complexity": 5,
+     "coverage": 100,
+     "functions": 3,
+     "ncloc": 61,
      "duplicated_lines_density": 0
     }
    },
    {
     "caminho": "src/pages/admin/ui/AdminDashboardPage.tsx",
     "medidas": {
-     "comment_lines_density": 0,
+     "comment_lines_density": 7.6,
      "complexity": 61,
-     "coverage": 93.8,
+     "coverage": 93.9,
      "functions": 24,
-     "ncloc": 235,
+     "ncloc": 279,
      "duplicated_lines_density": 0
     }
    },
    {
     "caminho": "src/features/admin/adminService.ts",
     "medidas": {
-     "comment_lines_density": 0,
+     "comment_lines_density": 10,
      "complexity": 2,
      "coverage": 100,
      "functions": 2,
@@ -2301,13 +2847,35 @@
     }
    },
    {
+    "caminho": "src/features/editar-conta/ui/AlterarSenhaForm.tsx",
+    "medidas": {
+     "comment_lines_density": 7.4,
+     "complexity": 26,
+     "coverage": 92.6,
+     "duplicated_lines_density": 13.1,
+     "functions": 9,
+     "ncloc": 187
+    }
+   },
+   {
+    "caminho": "src/pages/aluno/amigo/ui/AmigoPerfilPage.tsx",
+    "medidas": {
+     "comment_lines_density": 5.9,
+     "complexity": 24,
+     "coverage": 93.9,
+     "functions": 9,
+     "ncloc": 144,
+     "duplicated_lines_density": 0
+    }
+   },
+   {
     "caminho": "src/pages/amigosAluno/ui/AmigosPage.tsx",
     "medidas": {
-     "comment_lines_density": 0,
-     "complexity": 104,
-     "coverage": 88.7,
-     "functions": 35,
-     "ncloc": 652,
+     "comment_lines_density": 8.2,
+     "complexity": 112,
+     "coverage": 88.3,
+     "functions": 40,
+     "ncloc": 675,
      "duplicated_lines_density": 0
     }
    },
@@ -2318,7 +2886,7 @@
      "complexity": 1,
      "coverage": 100,
      "functions": 1,
-     "ncloc": 13,
+     "ncloc": 16,
      "duplicated_lines_density": 0
     }
    },
@@ -2329,29 +2897,29 @@
      "complexity": 1,
      "coverage": 100,
      "functions": 1,
-     "ncloc": 12,
+     "ncloc": 16,
      "duplicated_lines_density": 0
     }
    },
    {
     "caminho": "src/app/providers/AuthProvider.tsx",
     "medidas": {
-     "comment_lines_density": 1.2,
+     "comment_lines_density": 13.7,
      "complexity": 17,
      "coverage": 100,
      "functions": 11,
-     "ncloc": 81,
+     "ncloc": 88,
      "duplicated_lines_density": 0
     }
    },
    {
     "caminho": "src/features/auth-by-credencials/model/authService.ts",
     "medidas": {
-     "comment_lines_density": 0,
-     "complexity": 35,
+     "comment_lines_density": 21.3,
+     "complexity": 36,
      "coverage": 99.1,
      "functions": 8,
-     "ncloc": 127,
+     "ncloc": 129,
      "duplicated_lines_density": 0
     }
    },
@@ -2367,24 +2935,35 @@
     }
    },
    {
+    "caminho": "src/pages/amigosAluno/ui/CardAmigo.tsx",
+    "medidas": {
+     "comment_lines_density": 6.3,
+     "complexity": 17,
+     "coverage": 80.4,
+     "functions": 6,
+     "ncloc": 163,
+     "duplicated_lines_density": 0
+    }
+   },
+   {
     "caminho": "src/features/dashboard-turmas/ui/CardDesempenhoListas.tsx",
     "medidas": {
-     "comment_lines_density": 0,
-     "complexity": 24,
-     "coverage": 100,
-     "functions": 12,
-     "ncloc": 175,
+     "comment_lines_density": 10.9,
+     "complexity": 44,
+     "coverage": 90.7,
+     "functions": 20,
+     "ncloc": 304,
      "duplicated_lines_density": 0
     }
    },
    {
     "caminho": "src/features/dashboard-turmas/ui/CardsResumo.tsx",
     "medidas": {
-     "comment_lines_density": 0,
+     "comment_lines_density": 13.5,
      "complexity": 2,
      "coverage": 100,
      "functions": 1,
-     "ncloc": 42,
+     "ncloc": 45,
      "duplicated_lines_density": 0
     }
    },
@@ -2400,31 +2979,75 @@
     }
    },
    {
+    "caminho": "src/pages/aluno/conquistas/ui/ConquistasPage.tsx",
+    "medidas": {
+     "comment_lines_density": 8.2,
+     "complexity": 71,
+     "coverage": 96.1,
+     "functions": 42,
+     "ncloc": 425,
+     "duplicated_lines_density": 0
+    }
+   },
+   {
+    "caminho": "src/shared/ui/cosmetics/CosmeticPreview.tsx",
+    "medidas": {
+     "comment_lines_density": 9.3,
+     "complexity": 22,
+     "coverage": 75.8,
+     "functions": 2,
+     "ncloc": 107,
+     "duplicated_lines_density": 0
+    }
+   },
+   {
+    "caminho": "src/features/profile-cosmetics/ui/CosmeticsBootstrap.tsx",
+    "medidas": {
+     "comment_lines_density": 10,
+     "complexity": 13,
+     "coverage": 78,
+     "functions": 8,
+     "ncloc": 45,
+     "duplicated_lines_density": 0
+    }
+   },
+   {
+    "caminho": "src/features/profile-cosmetics/cosmeticsService.ts",
+    "medidas": {
+     "comment_lines_density": 14.8,
+     "complexity": 5,
+     "coverage": 100,
+     "functions": 5,
+     "ncloc": 23,
+     "duplicated_lines_density": 0
+    }
+   },
+   {
     "caminho": "src/pages/dashboardAluno/DashboardAlunoPage.tsx",
     "medidas": {
-     "comment_lines_density": 0,
-     "complexity": 16,
+     "comment_lines_density": 6.3,
+     "complexity": 35,
      "coverage": 100,
-     "functions": 9,
-     "ncloc": 226,
+     "functions": 12,
+     "ncloc": 254,
      "duplicated_lines_density": 0
     }
    },
    {
     "caminho": "src/entities/dashboardTurma/api/dashboardTurmaApi.ts",
     "medidas": {
-     "comment_lines_density": 0,
-     "complexity": 3,
+     "comment_lines_density": 16,
+     "complexity": 4,
      "coverage": 100,
-     "functions": 3,
-     "ncloc": 14,
+     "functions": 4,
+     "ncloc": 21,
      "duplicated_lines_density": 0
     }
    },
    {
     "caminho": "src/shared/ui/date-picker/DatePicker.tsx",
     "medidas": {
-     "comment_lines_density": 0,
+     "comment_lines_density": 16.7,
      "complexity": 5,
      "coverage": 75,
      "functions": 1,
@@ -2435,11 +3058,33 @@
    {
     "caminho": "src/features/minhas-turmas/ui/DetalheTurma.tsx",
     "medidas": {
-     "comment_lines_density": 0,
+     "comment_lines_density": 9.9,
      "complexity": 27,
      "coverage": 94.2,
      "functions": 11,
      "ncloc": 127,
+     "duplicated_lines_density": 0
+    }
+   },
+   {
+    "caminho": "src/features/editar-conta/model/editarContaService.ts",
+    "medidas": {
+     "comment_lines_density": 15.7,
+     "complexity": 48,
+     "coverage": 91.6,
+     "functions": 8,
+     "ncloc": 118,
+     "duplicated_lines_density": 0
+    }
+   },
+   {
+    "caminho": "src/pages/aluno/perfil/editar/ui/EditarPerfilPage.tsx",
+    "medidas": {
+     "comment_lines_density": 12.5,
+     "complexity": 1,
+     "coverage": 100,
+     "functions": 1,
+     "ncloc": 28,
      "duplicated_lines_density": 0
     }
    },
@@ -2465,6 +3110,39 @@
     }
    },
    {
+    "caminho": "src/shared/config/__mocks__/env.ts",
+    "medidas": {
+     "comment_lines_density": 0,
+     "complexity": 0,
+     "coverage": 0,
+     "functions": 0,
+     "ncloc": 2,
+     "duplicated_lines_density": 0
+    }
+   },
+   {
+    "caminho": "src/app/error-boundary/ErrorBoundary.tsx",
+    "medidas": {
+     "comment_lines_density": 14,
+     "complexity": 5,
+     "coverage": 100,
+     "functions": 4,
+     "ncloc": 43,
+     "duplicated_lines_density": 0
+    }
+   },
+   {
+    "caminho": "src/app/error-boundary/ErrorFallback.tsx",
+    "medidas": {
+     "comment_lines_density": 7.7,
+     "complexity": 1,
+     "coverage": 100,
+     "functions": 1,
+     "ncloc": 48,
+     "duplicated_lines_density": 0
+    }
+   },
+   {
     "caminho": "src/shared/constants/escolaridade.ts",
     "medidas": {
      "comment_lines_density": 0,
@@ -2478,11 +3156,11 @@
    {
     "caminho": "src/pages/quizAluno/ui/EscolhaQuizPage.tsx",
     "medidas": {
-     "comment_lines_density": 1.3,
+     "comment_lines_density": 6.6,
      "complexity": 25,
      "coverage": 92.2,
      "functions": 11,
-     "ncloc": 224,
+     "ncloc": 226,
      "duplicated_lines_density": 0
     }
    },
@@ -2500,7 +3178,7 @@
    {
     "caminho": "src/features/recover-password/ui/FeedbackMessage.tsx",
     "medidas": {
-     "comment_lines_density": 0,
+     "comment_lines_density": 14.8,
      "complexity": 3,
      "coverage": 100,
      "functions": 1,
@@ -2521,11 +3199,11 @@
    {
     "caminho": "src/features/recover-password/ui/ForgotPasswordForm.tsx",
     "medidas": {
-     "comment_lines_density": 0,
+     "comment_lines_density": 7,
      "complexity": 12,
      "coverage": 92.2,
      "functions": 4,
-     "ncloc": 92,
+     "ncloc": 93,
      "duplicated_lines_density": 0
     }
    },
@@ -2543,11 +3221,11 @@
    {
     "caminho": "src/features/friendship/friendshipService.ts",
     "medidas": {
-     "comment_lines_density": 0,
-     "complexity": 9,
-     "coverage": 83.3,
-     "functions": 9,
-     "ncloc": 124,
+     "comment_lines_density": 7.9,
+     "complexity": 10,
+     "coverage": 84.9,
+     "functions": 10,
+     "ncloc": 139,
      "duplicated_lines_density": 0
     }
    },
@@ -2555,14 +3233,14 @@
     "caminho": "src/app/styles/global.css",
     "medidas": {
      "comment_lines_density": 0,
-     "ncloc": 47,
+     "ncloc": 101,
      "duplicated_lines_density": 0
     }
    },
    {
     "caminho": "src/features/dashboard-turmas/ui/GraficoTemas.tsx",
     "medidas": {
-     "comment_lines_density": 3.1,
+     "comment_lines_density": 11.4,
      "complexity": 7,
      "coverage": 100,
      "functions": 3,
@@ -2573,40 +3251,40 @@
    {
     "caminho": "src/widgets/header/ui/Header.tsx",
     "medidas": {
-     "comment_lines_density": 0.3,
-     "complexity": 52,
-     "coverage": 94,
-     "functions": 29,
-     "ncloc": 297,
+     "comment_lines_density": 10.7,
+     "complexity": 57,
+     "coverage": 92.3,
+     "functions": 33,
+     "ncloc": 358,
      "duplicated_lines_density": 0
     }
    },
    {
     "caminho": "src/pages/historicoAluno/ui/HistoricoDetalhesPage.tsx",
     "medidas": {
-     "comment_lines_density": 0,
+     "comment_lines_density": 7.4,
      "complexity": 26,
      "coverage": 94.6,
      "functions": 7,
-     "ncloc": 174,
+     "ncloc": 175,
      "duplicated_lines_density": 0
     }
    },
    {
     "caminho": "src/pages/historicoAluno/ui/HistoricoPage.tsx",
     "medidas": {
-     "comment_lines_density": 0,
+     "comment_lines_density": 7.5,
      "complexity": 31,
      "coverage": 97.7,
      "functions": 20,
-     "ncloc": 220,
+     "ncloc": 222,
      "duplicated_lines_density": 0
     }
    },
    {
     "caminho": "src/features/historico-quiz/historicoQuizService.ts",
     "medidas": {
-     "comment_lines_density": 0,
+     "comment_lines_density": 14.3,
      "complexity": 1,
      "coverage": 100,
      "functions": 1,
@@ -2617,7 +3295,7 @@
    {
     "caminho": "src/pages/admin/ui/HomeAdminPage.tsx",
     "medidas": {
-     "comment_lines_density": 0,
+     "comment_lines_density": 9.8,
      "complexity": 3,
      "coverage": 100,
      "functions": 2,
@@ -2628,7 +3306,7 @@
    {
     "caminho": "src/pages/homeAluno/ui/HomeAlunoPage.tsx",
     "medidas": {
-     "comment_lines_density": 0,
+     "comment_lines_density": 9.6,
      "complexity": 5,
      "coverage": 100,
      "functions": 4,
@@ -2661,7 +3339,7 @@
    {
     "caminho": "src/shared/api/httpClient.ts",
     "medidas": {
-     "comment_lines_density": 0,
+     "comment_lines_density": 21.7,
      "complexity": 21,
      "coverage": 95.7,
      "functions": 9,
@@ -2706,6 +3384,26 @@
      "complexity": 0,
      "functions": 0,
      "ncloc": 1,
+     "duplicated_lines_density": 0
+    }
+   },
+   {
+    "caminho": "src/shared/ui/cosmetics/index.ts",
+    "medidas": {
+     "comment_lines_density": 0,
+     "complexity": 0,
+     "functions": 0,
+     "ncloc": 5,
+     "duplicated_lines_density": 0
+    }
+   },
+   {
+    "caminho": "src/shared/ui/profile-identity-card/index.ts",
+    "medidas": {
+     "comment_lines_density": 0,
+     "complexity": 0,
+     "functions": 0,
+     "ncloc": 7,
      "duplicated_lines_density": 0
     }
    },
@@ -2800,16 +3498,6 @@
     }
    },
    {
-    "caminho": "src/pages/professor/criar-questao/index.ts",
-    "medidas": {
-     "comment_lines_density": 0,
-     "complexity": 0,
-     "functions": 0,
-     "ncloc": 1,
-     "duplicated_lines_density": 0
-    }
-   },
-   {
     "caminho": "src/pages/quizAluno/index.ts",
     "medidas": {
      "comment_lines_density": 0,
@@ -2831,6 +3519,66 @@
    },
    {
     "caminho": "src/pages/aluno/turma/index.ts",
+    "medidas": {
+     "comment_lines_density": 0,
+     "complexity": 0,
+     "functions": 0,
+     "ncloc": 1,
+     "duplicated_lines_density": 0
+    }
+   },
+   {
+    "caminho": "src/pages/aluno/amigo/index.ts",
+    "medidas": {
+     "comment_lines_density": 0,
+     "complexity": 0,
+     "functions": 0,
+     "ncloc": 1,
+     "duplicated_lines_density": 0
+    }
+   },
+   {
+    "caminho": "src/pages/aluno/perfil/index.ts",
+    "medidas": {
+     "comment_lines_density": 0,
+     "complexity": 0,
+     "functions": 0,
+     "ncloc": 1,
+     "duplicated_lines_density": 0
+    }
+   },
+   {
+    "caminho": "src/pages/aluno/perfil/editar/index.ts",
+    "medidas": {
+     "comment_lines_density": 0,
+     "complexity": 0,
+     "functions": 0,
+     "ncloc": 1,
+     "duplicated_lines_density": 0
+    }
+   },
+   {
+    "caminho": "src/pages/aluno/conquistas/index.ts",
+    "medidas": {
+     "comment_lines_density": 0,
+     "complexity": 0,
+     "functions": 0,
+     "ncloc": 1,
+     "duplicated_lines_density": 0
+    }
+   },
+   {
+    "caminho": "src/pages/aluno/loja/index.ts",
+    "medidas": {
+     "comment_lines_density": 0,
+     "complexity": 0,
+     "functions": 0,
+     "ncloc": 1,
+     "duplicated_lines_density": 0
+    }
+   },
+   {
+    "caminho": "src/pages/aluno/ranking/index.ts",
     "medidas": {
      "comment_lines_density": 0,
      "complexity": 0,
@@ -2866,6 +3614,46 @@
      "complexity": 0,
      "functions": 0,
      "ncloc": 1,
+     "duplicated_lines_density": 0
+    }
+   },
+   {
+    "caminho": "src/pages/not-found/index.ts",
+    "medidas": {
+     "comment_lines_density": 0,
+     "complexity": 0,
+     "functions": 0,
+     "ncloc": 1,
+     "duplicated_lines_density": 0
+    }
+   },
+   {
+    "caminho": "src/pages/professor/criar-questao/index.ts",
+    "medidas": {
+     "comment_lines_density": 0,
+     "complexity": 0,
+     "functions": 0,
+     "ncloc": 1,
+     "duplicated_lines_density": 0
+    }
+   },
+   {
+    "caminho": "src/pages/professor/ranking/index.ts",
+    "medidas": {
+     "comment_lines_density": 0,
+     "complexity": 0,
+     "functions": 0,
+     "ncloc": 1,
+     "duplicated_lines_density": 0
+    }
+   },
+   {
+    "caminho": "src/app/error-boundary/index.ts",
+    "medidas": {
+     "comment_lines_density": 0,
+     "complexity": 0,
+     "functions": 0,
+     "ncloc": 2,
      "duplicated_lines_density": 0
     }
    },
@@ -2950,12 +3738,94 @@
     }
    },
    {
+    "caminho": "src/features/achievements/index.ts",
+    "medidas": {
+     "comment_lines_density": 0,
+     "complexity": 0,
+     "functions": 0,
+     "ncloc": 25,
+     "duplicated_lines_density": 0
+    }
+   },
+   {
+    "caminho": "src/features/editar-conta/index.ts",
+    "medidas": {
+     "comment_lines_density": 0,
+     "complexity": 0,
+     "functions": 0,
+     "ncloc": 12,
+     "duplicated_lines_density": 0
+    }
+   },
+   {
+    "caminho": "src/features/profile-cosmetics/index.ts",
+    "medidas": {
+     "comment_lines_density": 0,
+     "complexity": 0,
+     "functions": 0,
+     "ncloc": 5,
+     "duplicated_lines_density": 0
+    }
+   },
+   {
+    "caminho": "src/features/social-profile/index.ts",
+    "medidas": {
+     "comment_lines_density": 0,
+     "complexity": 0,
+     "functions": 0,
+     "ncloc": 2,
+     "duplicated_lines_density": 0
+    }
+   },
+   {
+    "caminho": "src/features/loja/index.ts",
+    "medidas": {
+     "comment_lines_density": 0,
+     "complexity": 0,
+     "functions": 0,
+     "ncloc": 17,
+     "duplicated_lines_density": 0
+    }
+   },
+   {
+    "caminho": "src/features/ranking/index.ts",
+    "medidas": {
+     "comment_lines_density": 0,
+     "complexity": 0,
+     "functions": 0,
+     "ncloc": 11,
+     "duplicated_lines_density": 0
+    }
+   },
+   {
     "caminho": "src/pages/dashboardAluno/index.tsx",
     "medidas": {
      "comment_lines_density": 0,
      "complexity": 0,
      "functions": 0,
      "ncloc": 1,
+     "duplicated_lines_density": 0
+    }
+   },
+   {
+    "caminho": "src/features/editar-conta/ui/InformacoesPessoaisForm.tsx",
+    "medidas": {
+     "comment_lines_density": 6.9,
+     "complexity": 26,
+     "coverage": 92.8,
+     "duplicated_lines_density": 12.7,
+     "functions": 8,
+     "ncloc": 189
+    }
+   },
+   {
+    "caminho": "src/shared/utils/iniciais.ts",
+    "medidas": {
+     "comment_lines_density": 0,
+     "complexity": 6,
+     "coverage": 93.3,
+     "functions": 1,
+     "ncloc": 6,
      "duplicated_lines_density": 0
     }
    },
@@ -2973,7 +3843,7 @@
    {
     "caminho": "src/entities/lista/api/listaApi.ts",
     "medidas": {
-     "comment_lines_density": 0,
+     "comment_lines_density": 18.4,
      "complexity": 46,
      "coverage": 97.4,
      "functions": 25,
@@ -2984,11 +3854,11 @@
    {
     "caminho": "src/features/resolucaoLista/ui/ListagemListas.tsx",
     "medidas": {
-     "comment_lines_density": 0,
+     "comment_lines_density": 7.8,
      "complexity": 43,
-     "coverage": 81.4,
+     "coverage": 90.3,
      "functions": 23,
-     "ncloc": 268,
+     "ncloc": 272,
      "duplicated_lines_density": 0
     }
    },
@@ -2999,36 +3869,36 @@
      "complexity": 1,
      "coverage": 100,
      "functions": 1,
-     "ncloc": 19,
+     "ncloc": 22,
      "duplicated_lines_density": 0
     }
    },
    {
     "caminho": "src/features/manage-lista/ListarListas.tsx",
     "medidas": {
-     "comment_lines_density": 0.3,
+     "comment_lines_density": 9.5,
      "complexity": 43,
      "coverage": 90.3,
      "functions": 26,
-     "ncloc": 358,
+     "ncloc": 361,
      "duplicated_lines_density": 0
     }
    },
    {
     "caminho": "src/features/manage-turmas/ui/ListarTurmas.tsx",
     "medidas": {
-     "comment_lines_density": 0,
+     "comment_lines_density": 7.2,
      "complexity": 52,
      "coverage": 95.6,
-     "duplicated_lines_density": 3.9,
+     "duplicated_lines_density": 4.1,
      "functions": 32,
-     "ncloc": 360
+     "ncloc": 363
     }
    },
    {
     "caminho": "src/shared/api/localidadesService.ts",
     "medidas": {
-     "comment_lines_density": 0,
+     "comment_lines_density": 26.3,
      "complexity": 7,
      "coverage": 96.2,
      "functions": 2,
@@ -3039,7 +3909,7 @@
    {
     "caminho": "src/features/auth-by-credencials/ui/LoginForm.tsx",
     "medidas": {
-     "comment_lines_density": 0,
+     "comment_lines_density": 6.3,
      "complexity": 10,
      "coverage": 97.4,
      "functions": 5,
@@ -3059,6 +3929,28 @@
     }
    },
    {
+    "caminho": "src/pages/aluno/loja/ui/LojaPage.tsx",
+    "medidas": {
+     "comment_lines_density": 8.8,
+     "complexity": 78,
+     "coverage": 96.1,
+     "functions": 34,
+     "ncloc": 476,
+     "duplicated_lines_density": 0
+    }
+   },
+   {
+    "caminho": "src/features/loja/lojaService.ts",
+    "medidas": {
+     "comment_lines_density": 8.2,
+     "complexity": 4,
+     "coverage": 91.7,
+     "functions": 4,
+     "ncloc": 56,
+     "duplicated_lines_density": 0
+    }
+   },
+   {
     "caminho": "src/main.tsx",
     "medidas": {
      "comment_lines_density": 0,
@@ -3071,7 +3963,7 @@
    {
     "caminho": "src/features/minhas-turmas/ui/MinhasTurmas.tsx",
     "medidas": {
-     "comment_lines_density": 0,
+     "comment_lines_density": 6.7,
      "complexity": 18,
      "coverage": 94.6,
      "functions": 11,
@@ -3093,22 +3985,33 @@
    {
     "caminho": "src/features/auth-by-credencials/model/mockAuthService.ts",
     "medidas": {
-     "comment_lines_density": 0,
-     "complexity": 9,
-     "coverage": 95.3,
-     "functions": 3,
-     "ncloc": 72,
+     "comment_lines_density": 11.8,
+     "complexity": 12,
+     "coverage": 89.8,
+     "functions": 4,
+     "ncloc": 82,
+     "duplicated_lines_density": 0
+    }
+   },
+   {
+    "caminho": "src/features/editar-conta/model/mockEditarContaService.ts",
+    "medidas": {
+     "comment_lines_density": 13.3,
+     "complexity": 5,
+     "coverage": 100,
+     "functions": 2,
+     "ncloc": 26,
      "duplicated_lines_density": 0
     }
    },
    {
     "caminho": "src/features/manage-questions/model/mockQuestionService.ts",
     "medidas": {
-     "comment_lines_density": 0,
-     "complexity": 82,
-     "coverage": 91.1,
+     "comment_lines_density": 22.2,
+     "complexity": 91,
+     "coverage": 91.3,
      "functions": 33,
-     "ncloc": 320,
+     "ncloc": 333,
      "duplicated_lines_density": 0
     }
    },
@@ -3137,7 +4040,7 @@
    {
     "caminho": "src/features/manage-lista/ModalExcluirLista.tsx",
     "medidas": {
-     "comment_lines_density": 0,
+     "comment_lines_density": 9.6,
      "complexity": 5,
      "coverage": 100,
      "functions": 2,
@@ -3148,7 +4051,7 @@
    {
     "caminho": "src/features/manage-turmas/ui/ModalExcluirTurma.tsx",
     "medidas": {
-     "comment_lines_density": 0,
+     "comment_lines_density": 8.8,
      "complexity": 4,
      "coverage": 100,
      "functions": 1,
@@ -3159,29 +4062,29 @@
    {
     "caminho": "src/features/manage-turmas/ui/ModalGerenciarAlunos.tsx",
     "medidas": {
-     "comment_lines_density": 0,
+     "comment_lines_density": 5.5,
      "complexity": 40,
      "coverage": 84.3,
      "functions": 21,
-     "ncloc": 271,
+     "ncloc": 274,
      "duplicated_lines_density": 0
     }
    },
    {
     "caminho": "src/features/manage-lista/ModalGerenciarQuestoesLista.tsx",
     "medidas": {
-     "comment_lines_density": 0,
+     "comment_lines_density": 12.6,
      "complexity": 58,
-     "coverage": 80.5,
+     "coverage": 84.4,
      "functions": 29,
-     "ncloc": 322,
+     "ncloc": 327,
      "duplicated_lines_density": 0
     }
    },
    {
     "caminho": "src/features/manage-lista/ModalLista.tsx",
     "medidas": {
-     "comment_lines_density": 0,
+     "comment_lines_density": 6.7,
      "complexity": 13,
      "coverage": 97.1,
      "functions": 4,
@@ -3192,7 +4095,7 @@
    {
     "caminho": "src/features/manage-turmas/ui/ModalTurma.tsx",
     "medidas": {
-     "comment_lines_density": 0,
+     "comment_lines_density": 4.9,
      "complexity": 24,
      "coverage": 94.9,
      "functions": 10,
@@ -3203,11 +4106,11 @@
    {
     "caminho": "src/features/manage-turmas/ui/ModalVincularLista.tsx",
     "medidas": {
-     "comment_lines_density": 0,
+     "comment_lines_density": 8.6,
      "complexity": 64,
      "coverage": 89.3,
      "functions": 41,
-     "ncloc": 467,
+     "ncloc": 470,
      "duplicated_lines_density": 0
     }
    },
@@ -3225,7 +4128,7 @@
    {
     "caminho": "src/shared/api/nacionalidadesService.ts",
     "medidas": {
-     "comment_lines_density": 0,
+     "comment_lines_density": 23.8,
      "complexity": 3,
      "coverage": 100,
      "functions": 1,
@@ -3234,9 +4137,20 @@
     }
    },
    {
+    "caminho": "src/pages/not-found/ui/NotFoundPage.tsx",
+    "medidas": {
+     "comment_lines_density": 6.2,
+     "complexity": 1,
+     "coverage": 100,
+     "functions": 1,
+     "ncloc": 61,
+     "duplicated_lines_density": 0
+    }
+   },
+   {
     "caminho": "src/shared/constants/opcoes-academicas.ts",
     "medidas": {
-     "comment_lines_density": 0,
+     "comment_lines_density": 8.8,
      "complexity": 0,
      "coverage": 100,
      "functions": 0,
@@ -3247,7 +4161,7 @@
    {
     "caminho": "src/shared/api/opcoesAcademicasService.ts",
     "medidas": {
-     "comment_lines_density": 0,
+     "comment_lines_density": 22.4,
      "complexity": 9,
      "coverage": 100,
      "functions": 2,
@@ -3258,7 +4172,7 @@
    {
     "caminho": "src/features/recover-password/ui/PasswordRecoveryLayout.tsx",
     "medidas": {
-     "comment_lines_density": 0,
+     "comment_lines_density": 13.3,
      "complexity": 1,
      "coverage": 100,
      "functions": 1,
@@ -3267,9 +4181,42 @@
     }
    },
    {
+    "caminho": "src/pages/aluno/perfil/ui/PerfilAlunoPage.tsx",
+    "medidas": {
+     "comment_lines_density": 7.9,
+     "complexity": 36,
+     "coverage": 93.9,
+     "functions": 17,
+     "ncloc": 234,
+     "duplicated_lines_density": 0
+    }
+   },
+   {
+    "caminho": "src/pages/aluno/perfil/personalizar/PersonalizarPerfilPage.tsx",
+    "medidas": {
+     "comment_lines_density": 7.6,
+     "complexity": 65,
+     "coverage": 79.9,
+     "functions": 27,
+     "ncloc": 425,
+     "duplicated_lines_density": 0
+    }
+   },
+   {
+    "caminho": "src/features/ranking/ui/PodiumRanking.tsx",
+    "medidas": {
+     "comment_lines_density": 8.2,
+     "complexity": 10,
+     "coverage": 100,
+     "functions": 5,
+     "ncloc": 101,
+     "duplicated_lines_density": 0
+    }
+   },
+   {
     "caminho": "src/pages/professor-register/ui/ProfessorRegisterPage.tsx",
     "medidas": {
-     "comment_lines_density": 0,
+     "comment_lines_density": 9.3,
      "complexity": 1,
      "coverage": 100,
      "functions": 1,
@@ -3280,18 +4227,29 @@
    {
     "caminho": "src/shared/ui/profile-home/ProfileHome.tsx",
     "medidas": {
-     "comment_lines_density": 0,
+     "comment_lines_density": 7.8,
      "complexity": 6,
      "coverage": 100,
      "functions": 1,
-     "ncloc": 82,
+     "ncloc": 83,
+     "duplicated_lines_density": 0
+    }
+   },
+   {
+    "caminho": "src/shared/ui/profile-identity-card/ProfileIdentityCard.tsx",
+    "medidas": {
+     "comment_lines_density": 6.9,
+     "complexity": 34,
+     "coverage": 98.9,
+     "functions": 2,
+     "ncloc": 216,
      "duplicated_lines_density": 0
     }
    },
    {
     "caminho": "src/app/router/ProtectedRoute.tsx",
     "medidas": {
-     "comment_lines_density": 0,
+     "comment_lines_density": 19.6,
      "complexity": 13,
      "coverage": 94.1,
      "functions": 1,
@@ -3302,29 +4260,29 @@
    {
     "caminho": "src/pages/questao/ui/QuestaoPage.tsx",
     "medidas": {
-     "comment_lines_density": 0,
-     "complexity": 223,
-     "coverage": 87.2,
-     "functions": 106,
-     "ncloc": 1031,
+     "comment_lines_density": 5.8,
+     "complexity": 251,
+     "coverage": 87.9,
+     "functions": 116,
+     "ncloc": 1191,
      "duplicated_lines_density": 0
     }
    },
    {
     "caminho": "src/features/manage-questions/model/questionService.ts",
     "medidas": {
-     "comment_lines_density": 0,
-     "complexity": 115,
-     "coverage": 91.1,
+     "comment_lines_density": 10.6,
+     "complexity": 121,
+     "coverage": 90.7,
      "functions": 34,
-     "ncloc": 357,
+     "ncloc": 364,
      "duplicated_lines_density": 0
     }
    },
    {
     "caminho": "src/features/random-quiz/randomQuizService.ts",
     "medidas": {
-     "comment_lines_density": 0,
+     "comment_lines_density": 8.5,
      "complexity": 4,
      "coverage": 100,
      "functions": 4,
@@ -3333,9 +4291,64 @@
     }
    },
    {
+    "caminho": "src/pages/aluno/ranking/ui/RankingAlunoPage.tsx",
+    "medidas": {
+     "comment_lines_density": 8.2,
+     "complexity": 43,
+     "coverage": 93.6,
+     "functions": 12,
+     "ncloc": 191,
+     "duplicated_lines_density": 0
+    }
+   },
+   {
+    "caminho": "src/features/ranking/ui/RankingBoard.tsx",
+    "medidas": {
+     "comment_lines_density": 10.8,
+     "complexity": 12,
+     "coverage": 100,
+     "functions": 6,
+     "ncloc": 74,
+     "duplicated_lines_density": 0
+    }
+   },
+   {
+    "caminho": "src/pages/professor/ranking/ui/RankingProfessorPage.tsx",
+    "medidas": {
+     "comment_lines_density": 6.2,
+     "complexity": 58,
+     "coverage": 86.4,
+     "functions": 23,
+     "ncloc": 305,
+     "duplicated_lines_density": 0
+    }
+   },
+   {
+    "caminho": "src/features/ranking/ui/RankingRow.tsx",
+    "medidas": {
+     "comment_lines_density": 6.8,
+     "complexity": 9,
+     "coverage": 100,
+     "functions": 2,
+     "ncloc": 68,
+     "duplicated_lines_density": 0
+    }
+   },
+   {
+    "caminho": "src/features/ranking/rankingService.ts",
+    "medidas": {
+     "comment_lines_density": 8.1,
+     "complexity": 7,
+     "coverage": 100,
+     "functions": 6,
+     "ncloc": 57,
+     "duplicated_lines_density": 0
+    }
+   },
+   {
     "caminho": "src/features/recover-password/model/recoverPasswordService.ts",
     "medidas": {
-     "comment_lines_density": 0,
+     "comment_lines_density": 17.4,
      "complexity": 10,
      "coverage": 100,
      "functions": 3,
@@ -3357,21 +4370,21 @@
    {
     "caminho": "src/features/register-professor/ui/RegisterProfessorForm.tsx",
     "medidas": {
-     "comment_lines_density": 0,
-     "complexity": 90,
-     "coverage": 97.4,
-     "duplicated_lines_density": 4.8,
+     "comment_lines_density": 11,
+     "complexity": 92,
+     "coverage": 97.5,
+     "duplicated_lines_density": 4.2,
      "functions": 46,
-     "ncloc": 414
+     "ncloc": 422
     }
    },
    {
     "caminho": "src/features/register-professor/model/registerProfessorService.ts",
     "medidas": {
-     "comment_lines_density": 0,
+     "comment_lines_density": 19.4,
      "complexity": 36,
      "coverage": 95.6,
-     "duplicated_lines_density": 8.9,
+     "duplicated_lines_density": 8.2,
      "functions": 10,
      "ncloc": 141
     }
@@ -3379,21 +4392,21 @@
    {
     "caminho": "src/features/register-student/ui/RegisterStudentForm.tsx",
     "medidas": {
-     "comment_lines_density": 0,
-     "complexity": 239,
-     "coverage": 87.2,
-     "duplicated_lines_density": 2.6,
+     "comment_lines_density": 14.4,
+     "complexity": 240,
+     "coverage": 87.3,
+     "duplicated_lines_density": 2.2,
      "functions": 97,
-     "ncloc": 789
+     "ncloc": 797
     }
    },
    {
     "caminho": "src/features/register-student/model/registerStudentService.ts",
     "medidas": {
-     "comment_lines_density": 0,
+     "comment_lines_density": 24.3,
      "complexity": 50,
      "coverage": 89.9,
-     "duplicated_lines_density": 6.9,
+     "duplicated_lines_density": 7.5,
      "functions": 9,
      "ncloc": 178
     }
@@ -3401,7 +4414,7 @@
    {
     "caminho": "src/features/recover-password/ui/ResetPasswordForm.tsx",
     "medidas": {
-     "comment_lines_density": 0,
+     "comment_lines_density": 7.6,
      "complexity": 29,
      "coverage": 86.8,
      "functions": 9,
@@ -3423,7 +4436,7 @@
    {
     "caminho": "src/entities/resolucaoLista/api/resolucaoListaApi.ts",
     "medidas": {
-     "comment_lines_density": 0,
+     "comment_lines_density": 15.4,
      "complexity": 5,
      "coverage": 83.3,
      "functions": 5,
@@ -3445,40 +4458,40 @@
    {
     "caminho": "src/features/resolucaoLista/ui/ResponderLista.tsx",
     "medidas": {
-     "comment_lines_density": 0,
-     "complexity": 47,
-     "coverage": 92.9,
-     "functions": 21,
-     "ncloc": 316,
+     "comment_lines_density": 7.2,
+     "complexity": 57,
+     "coverage": 96.6,
+     "functions": 23,
+     "ncloc": 336,
      "duplicated_lines_density": 0
     }
    },
    {
     "caminho": "src/pages/quizAluno/ui/ResponderQuizPage.tsx",
     "medidas": {
-     "comment_lines_density": 0,
-     "complexity": 85,
-     "coverage": 93.1,
-     "functions": 26,
-     "ncloc": 334,
+     "comment_lines_density": 7.1,
+     "complexity": 87,
+     "coverage": 93.3,
+     "functions": 27,
+     "ncloc": 355,
      "duplicated_lines_density": 0
     }
    },
    {
     "caminho": "src/app/router.tsx",
     "medidas": {
-     "comment_lines_density": 1.4,
+     "comment_lines_density": 4.4,
      "complexity": 1,
      "coverage": 100,
      "functions": 1,
-     "ncloc": 216,
+     "ncloc": 303,
      "duplicated_lines_density": 0
     }
    },
    {
     "caminho": "src/shared/ui/select/Select.tsx",
     "medidas": {
-     "comment_lines_density": 0,
+     "comment_lines_density": 15.4,
      "complexity": 6,
      "coverage": 80,
      "functions": 2,
@@ -3497,9 +4510,20 @@
     }
    },
    {
+    "caminho": "src/features/social-profile/socialProfileService.ts",
+    "medidas": {
+     "comment_lines_density": 6.7,
+     "complexity": 2,
+     "coverage": 33.3,
+     "functions": 2,
+     "ncloc": 28,
+     "duplicated_lines_density": 0
+    }
+   },
+   {
     "caminho": "src/features/student-coins/ui/StudentCoinsBootstrap.tsx",
     "medidas": {
-     "comment_lines_density": 0,
+     "comment_lines_density": 10.9,
      "complexity": 13,
      "coverage": 90,
      "functions": 8,
@@ -3520,18 +4544,18 @@
    {
     "caminho": "src/features/dashboard-turmas/ui/TabelaDesempenhoIndividual.tsx",
     "medidas": {
-     "comment_lines_density": 0,
+     "comment_lines_density": 8.1,
      "complexity": 39,
      "coverage": 95,
      "functions": 17,
-     "ncloc": 236,
+     "ncloc": 239,
      "duplicated_lines_density": 0
     }
    },
    {
     "caminho": "src/entities/turmas/api/turmaApi.ts",
     "medidas": {
-     "comment_lines_density": 0,
+     "comment_lines_density": 19.2,
      "complexity": 11,
      "coverage": 90,
      "functions": 9,
@@ -3553,12 +4577,12 @@
    {
     "caminho": "src/pages/TurmaDetalhes/ui/TurmaDetalhesPage.tsx",
     "medidas": {
-     "comment_lines_density": 0.9,
+     "comment_lines_density": 8.2,
      "complexity": 65,
      "coverage": 92.8,
-     "duplicated_lines_density": 3.2,
+     "duplicated_lines_density": 3.4,
      "functions": 27,
-     "ncloc": 431
+     "ncloc": 436
     }
    },
    {
@@ -3575,17 +4599,17 @@
    {
     "caminho": "src/pages/dashboardAluno/types.ts",
     "medidas": {
-     "comment_lines_density": 0,
+     "comment_lines_density": 9.4,
      "complexity": 0,
      "functions": 0,
-     "ncloc": 17,
+     "ncloc": 29,
      "duplicated_lines_density": 0
     }
    },
    {
     "caminho": "src/features/register-student/model/types.ts",
     "medidas": {
-     "comment_lines_density": 0,
+     "comment_lines_density": 6.3,
      "complexity": 0,
      "functions": 0,
      "ncloc": 45,
@@ -3595,7 +4619,7 @@
    {
     "caminho": "src/features/register-professor/model/types.ts",
     "medidas": {
-     "comment_lines_density": 0,
+     "comment_lines_density": 11.4,
      "complexity": 0,
      "coverage": 100,
      "functions": 0,
@@ -3606,27 +4630,27 @@
    {
     "caminho": "src/features/manage-questions/model/types.ts",
     "medidas": {
-     "comment_lines_density": 0,
+     "comment_lines_density": 14.3,
      "complexity": 0,
      "functions": 0,
-     "ncloc": 103,
+     "ncloc": 126,
      "duplicated_lines_density": 0
     }
    },
    {
     "caminho": "src/features/random-quiz/types.ts",
     "medidas": {
-     "comment_lines_density": 0,
+     "comment_lines_density": 17.6,
      "complexity": 0,
      "functions": 0,
-     "ncloc": 40,
+     "ncloc": 42,
      "duplicated_lines_density": 0
     }
    },
    {
     "caminho": "src/features/historico-quiz/types.ts",
     "medidas": {
-     "comment_lines_density": 0,
+     "comment_lines_density": 8.8,
      "complexity": 0,
      "functions": 0,
      "ncloc": 31,
@@ -3646,17 +4670,49 @@
    {
     "caminho": "src/features/friendship/types.ts",
     "medidas": {
-     "comment_lines_density": 0,
+     "comment_lines_density": 13.9,
      "complexity": 0,
      "functions": 0,
-     "ncloc": 60,
+     "ncloc": 68,
      "duplicated_lines_density": 0
     }
    },
    {
-    "caminho": "src/entities/user/model/types.ts",
+    "caminho": "src/features/achievements/types.ts",
+    "medidas": {
+     "comment_lines_density": 11.5,
+     "complexity": 0,
+     "functions": 0,
+     "ncloc": 85,
+     "duplicated_lines_density": 0
+    }
+   },
+   {
+    "caminho": "src/features/editar-conta/model/types.ts",
+    "medidas": {
+     "comment_lines_density": 12.5,
+     "complexity": 2,
+     "coverage": 100,
+     "functions": 2,
+     "ncloc": 21,
+     "duplicated_lines_density": 0
+    }
+   },
+   {
+    "caminho": "src/features/profile-cosmetics/types.ts",
     "medidas": {
      "comment_lines_density": 0,
+     "complexity": 5,
+     "coverage": 45.5,
+     "functions": 4,
+     "ncloc": 18,
+     "duplicated_lines_density": 0
+    }
+   },
+   {
+    "caminho": "src/features/social-profile/types.ts",
+    "medidas": {
+     "comment_lines_density": 20.7,
      "complexity": 0,
      "functions": 0,
      "ncloc": 23,
@@ -3664,9 +4720,40 @@
     }
    },
    {
+    "caminho": "src/features/loja/types.ts",
+    "medidas": {
+     "comment_lines_density": 13.5,
+     "complexity": 3,
+     "coverage": 100,
+     "functions": 2,
+     "ncloc": 64,
+     "duplicated_lines_density": 0
+    }
+   },
+   {
+    "caminho": "src/features/ranking/types.ts",
+    "medidas": {
+     "comment_lines_density": 5.5,
+     "complexity": 0,
+     "functions": 0,
+     "ncloc": 69,
+     "duplicated_lines_density": 0
+    }
+   },
+   {
+    "caminho": "src/entities/user/model/types.ts",
+    "medidas": {
+     "comment_lines_density": 13.8,
+     "complexity": 0,
+     "functions": 0,
+     "ncloc": 25,
+     "duplicated_lines_density": 0
+    }
+   },
+   {
     "caminho": "src/entities/turmas/model/types.ts",
     "medidas": {
-     "comment_lines_density": 0,
+     "comment_lines_density": 12.8,
      "complexity": 0,
      "functions": 0,
      "ncloc": 34,
@@ -3676,7 +4763,7 @@
    {
     "caminho": "src/entities/usuarios/model/types.ts",
     "medidas": {
-     "comment_lines_density": 0,
+     "comment_lines_density": 15.2,
      "complexity": 0,
      "functions": 0,
      "ncloc": 28,
@@ -3686,7 +4773,7 @@
    {
     "caminho": "src/entities/lista/model/types.ts",
     "medidas": {
-     "comment_lines_density": 0,
+     "comment_lines_density": 15,
      "complexity": 0,
      "functions": 0,
      "ncloc": 51,
@@ -3696,20 +4783,20 @@
    {
     "caminho": "src/entities/dashboardTurma/model/types.ts",
     "medidas": {
-     "comment_lines_density": 0,
+     "comment_lines_density": 13,
      "complexity": 0,
      "functions": 0,
-     "ncloc": 33,
+     "ncloc": 47,
      "duplicated_lines_density": 0
     }
    },
    {
     "caminho": "src/entities/resolucaoLista/model/types.ts",
     "medidas": {
-     "comment_lines_density": 0,
+     "comment_lines_density": 10,
      "complexity": 0,
      "functions": 0,
-     "ncloc": 35,
+     "ncloc": 36,
      "duplicated_lines_density": 0
     }
    },
@@ -3725,9 +4812,31 @@
     }
    },
    {
+    "caminho": "src/features/achievements/model/useAchievementStore.ts",
+    "medidas": {
+     "comment_lines_density": 14.3,
+     "complexity": 10,
+     "coverage": 95.5,
+     "functions": 6,
+     "ncloc": 36,
+     "duplicated_lines_density": 0
+    }
+   },
+   {
+    "caminho": "src/features/profile-cosmetics/model/useEquippedCosmeticsStore.ts",
+    "medidas": {
+     "comment_lines_density": 10.3,
+     "complexity": 8,
+     "coverage": 100,
+     "functions": 7,
+     "ncloc": 35,
+     "duplicated_lines_density": 0
+    }
+   },
+   {
     "caminho": "src/features/student-coins/model/useStudentCoinsStore.ts",
     "medidas": {
-     "comment_lines_density": 0,
+     "comment_lines_density": 9.5,
      "complexity": 5,
      "coverage": 100,
      "functions": 5,
@@ -3738,7 +4847,7 @@
    {
     "caminho": "src/entities/usuarios/api/usuarioApi.ts",
     "medidas": {
-     "comment_lines_density": 0,
+     "comment_lines_density": 13.5,
      "complexity": 4,
      "coverage": 100,
      "functions": 3,

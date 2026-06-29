@@ -1,5 +1,5 @@
 {
- "extraidoEm": "2026-06-13T00:07:20.907Z",
+ "extraidoEm": "2026-06-29T01:33:50.840Z",
  "id": "69bc08ebd4e9ec001c0c3229",
  "name": "2026-1-AnatoQuizUp",
  "pipelines": [
@@ -38,14 +38,6 @@
   {
    "id": "Z2lkOi8vcmFwdG9yL1BpcGVsaW5lLzM1NDgwNjA",
    "name": "Review/QA"
-  },
-  {
-   "id": "Z2lkOi8vcmFwdG9yL1BpcGVsaW5lLzM1NDgwNjE",
-   "name": "Done"
-  },
-  {
-   "id": "Z2lkOi8vcmFwdG9yL1BpcGVsaW5lLzM1NTY5OTk",
-   "name": "Rejected"
   }
  ],
  "sprints": {
@@ -76,9 +68,9 @@
     "startAt": "2026-04-19T03:59:00Z",
     "endAt": "2026-04-26T02:59:00Z",
     "state": "CLOSED",
-    "totalPoints": 77,
-    "completedPoints": 13,
-    "closedIssuesCount": 13
+    "totalPoints": 78,
+    "completedPoints": 14,
+    "closedIssuesCount": 14
    },
    {
     "id": "Z2lkOi8vcmFwdG9yL1NwcmludC80Nzg5MzQ1",
@@ -86,7 +78,7 @@
     "startAt": "2026-04-26T03:59:00Z",
     "endAt": "2026-05-03T02:59:00Z",
     "state": "CLOSED",
-    "totalPoints": 20,
+    "totalPoints": 30,
     "completedPoints": 16,
     "closedIssuesCount": 6
    },
@@ -96,8 +88,8 @@
     "startAt": "2026-05-03T03:59:00Z",
     "endAt": "2026-05-10T02:59:00Z",
     "state": "CLOSED",
-    "totalPoints": 50,
-    "completedPoints": 10,
+    "totalPoints": 79,
+    "completedPoints": 23,
     "closedIssuesCount": 19
    },
    {
@@ -106,8 +98,8 @@
     "startAt": "2026-05-10T03:59:00Z",
     "endAt": "2026-05-17T02:59:00Z",
     "state": "CLOSED",
-    "totalPoints": 37,
-    "completedPoints": 10,
+    "totalPoints": 81,
+    "completedPoints": 22,
     "closedIssuesCount": 23
    },
    {
@@ -116,8 +108,8 @@
     "startAt": "2026-05-17T03:59:00Z",
     "endAt": "2026-05-24T02:59:00Z",
     "state": "CLOSED",
-    "totalPoints": 30,
-    "completedPoints": 16,
+    "totalPoints": 72,
+    "completedPoints": 26,
     "closedIssuesCount": 10
    },
    {
@@ -126,9 +118,9 @@
     "startAt": "2026-05-24T03:59:00Z",
     "endAt": "2026-05-31T02:59:00Z",
     "state": "CLOSED",
-    "totalPoints": 17,
-    "completedPoints": 14,
-    "closedIssuesCount": 19
+    "totalPoints": 72,
+    "completedPoints": 54,
+    "closedIssuesCount": 22
    },
    {
     "id": "Z2lkOi8vcmFwdG9yL1NwcmludC80ODQyMzQw",
@@ -136,39 +128,39 @@
     "startAt": "2026-05-31T03:59:00Z",
     "endAt": "2026-06-07T02:59:00Z",
     "state": "CLOSED",
-    "totalPoints": 7,
+    "totalPoints": 22,
     "completedPoints": 0,
-    "closedIssuesCount": 6
+    "closedIssuesCount": 5
    },
    {
     "id": "Z2lkOi8vcmFwdG9yL1NwcmludC80ODk1OTgx",
     "name": "Sprint: Jun 7 - Jun 13, 2026",
     "startAt": "2026-06-07T03:59:00Z",
     "endAt": "2026-06-14T02:59:00Z",
-    "state": "OPEN",
-    "totalPoints": 7,
+    "state": "CLOSED",
+    "totalPoints": 25,
     "completedPoints": 0,
-    "closedIssuesCount": 7
+    "closedIssuesCount": 5
    },
    {
     "id": "Z2lkOi8vcmFwdG9yL1NwcmludC80OTQxMTEy",
     "name": "Sprint: Jun 14 - Jun 20, 2026",
     "startAt": "2026-06-14T03:59:00Z",
     "endAt": "2026-06-21T02:59:00Z",
-    "state": "OPEN",
-    "totalPoints": 0,
-    "completedPoints": 0,
-    "closedIssuesCount": 0
+    "state": "CLOSED",
+    "totalPoints": 36,
+    "completedPoints": 20,
+    "closedIssuesCount": 8
    },
    {
     "id": "Z2lkOi8vcmFwdG9yL1NwcmludC80OTYwMjg1",
     "name": "Sprint: Jun 21 - Jun 27, 2026",
     "startAt": "2026-06-21T03:59:00Z",
     "endAt": "2026-06-28T02:59:00Z",
-    "state": "OPEN",
-    "totalPoints": 0,
-    "completedPoints": 0,
-    "closedIssuesCount": 0
+    "state": "CLOSED",
+    "totalPoints": 16,
+    "completedPoints": 5,
+    "closedIssuesCount": 17
    },
    {
     "id": "Z2lkOi8vcmFwdG9yL1NwcmludC80OTg2OTYz",
@@ -176,9 +168,9 @@
     "startAt": "2026-06-28T03:59:00Z",
     "endAt": "2026-07-05T02:59:00Z",
     "state": "OPEN",
-    "totalPoints": 0,
-    "completedPoints": 0,
-    "closedIssuesCount": 0
+    "totalPoints": 11,
+    "completedPoints": 11,
+    "closedIssuesCount": 18
    },
    {
     "id": "Z2lkOi8vcmFwdG9yL1NwcmludC81MDEzNzcy",
@@ -215,6 +207,36 @@
     "name": "Sprint: Jul 26 - Aug 1, 2026",
     "startAt": "2026-07-26T03:59:00Z",
     "endAt": "2026-08-02T02:59:00Z",
+    "state": "OPEN",
+    "totalPoints": 0,
+    "completedPoints": 0,
+    "closedIssuesCount": 0
+   },
+   {
+    "id": "Z2lkOi8vcmFwdG9yL1NwcmludC81MTIyNTE3",
+    "name": "Sprint: Aug 2 - Aug 8, 2026",
+    "startAt": "2026-08-02T03:59:00Z",
+    "endAt": "2026-08-09T02:59:00Z",
+    "state": "OPEN",
+    "totalPoints": 0,
+    "completedPoints": 0,
+    "closedIssuesCount": 0
+   },
+   {
+    "id": "Z2lkOi8vcmFwdG9yL1NwcmludC81MTQ4OTE5",
+    "name": "Sprint: Aug 9 - Aug 15, 2026",
+    "startAt": "2026-08-09T03:59:00Z",
+    "endAt": "2026-08-16T02:59:00Z",
+    "state": "OPEN",
+    "totalPoints": 0,
+    "completedPoints": 0,
+    "closedIssuesCount": 0
+   },
+   {
+    "id": "Z2lkOi8vcmFwdG9yL1NwcmludC81MTc1OTQ1",
+    "name": "Sprint: Aug 16 - Aug 22, 2026",
+    "startAt": "2026-08-16T03:59:00Z",
+    "endAt": "2026-08-23T02:59:00Z",
     "state": "OPEN",
     "totalPoints": 0,
     "completedPoints": 0,

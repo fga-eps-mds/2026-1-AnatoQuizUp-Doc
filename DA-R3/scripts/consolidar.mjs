@@ -54,19 +54,22 @@ const SPRINTS = [
   { id: "S3", inicio: "2026-05-05", fim: "2026-05-11", equipe: 9, planejadoSP: 29, entregueSP: 26, fontePlanejado: "doc", fonteEntregue: "doc" },
   { id: "S4", inicio: "2026-05-12", fim: "2026-05-18", equipe: 9, planejadoSP: 25, entregueSP: 14, fontePlanejado: "doc", fonteEntregue: "doc" },
   { id: "S5", inicio: "2026-05-19", fim: "2026-05-25", equipe: 9, planejadoSP: 30, entregueSP: null, fontePlanejado: "doc", fonteEntregue: "zenhub" },
-  { id: "S6", inicio: "2026-05-26", fim: "2026-06-01", equipe: 8, planejadoSP: null, entregueSP: null, fontePlanejado: "zenhub", fonteEntregue: "zenhub" },
-  { id: "S7", inicio: "2026-06-02", fim: "2026-06-08", equipe: 8, planejadoSP: null, entregueSP: null, fontePlanejado: "zenhub", fonteEntregue: "zenhub" },
-  { id: "S8", inicio: "2026-06-09", fim: "2026-06-15", equipe: 8, planejadoSP: null, entregueSP: null, fontePlanejado: "zenhub", fonteEntregue: "zenhub" },
-  { id: "S9", inicio: "2026-06-16", fim: "2026-06-22", equipe: 8, planejadoSP: null, entregueSP: null, fontePlanejado: "futuro", fonteEntregue: "futuro" },
-  { id: "S10", inicio: "2026-06-23", fim: "2026-06-29", equipe: 8, planejadoSP: null, entregueSP: null, fontePlanejado: "futuro", fonteEntregue: "futuro" },
+  { id: "S6", inicio: "2026-05-26", fim: "2026-06-01", equipe: 9, planejadoSP: null, entregueSP: null, fontePlanejado: "zenhub", fonteEntregue: "zenhub" },
+  { id: "S7", inicio: "2026-06-02", fim: "2026-06-08", equipe: 9, planejadoSP: null, entregueSP: null, fontePlanejado: "zenhub", fonteEntregue: "zenhub" },
+  { id: "S8", inicio: "2026-06-09", fim: "2026-06-15", equipe: 9, planejadoSP: null, entregueSP: null, fontePlanejado: "zenhub", fonteEntregue: "zenhub" },
+  { id: "S9", inicio: "2026-06-16", fim: "2026-06-22", equipe: 9, planejadoSP: null, entregueSP: null, fontePlanejado: "futuro", fonteEntregue: "futuro" },
+  { id: "S10", inicio: "2026-06-23", fim: "2026-06-29", equipe: 9, planejadoSP: null, entregueSP: null, fontePlanejado: "futuro", fonteEntregue: "futuro" },
 ];
 
 // Plano de custos (docs/processo/plano-de-custos.md), carga DOCUMENTADA de 14 h/sem
-// por pessoa (4h presencial + 10h remota) — a mesma base do total de R$ 49.852,38:
+// por pessoa (4h presencial + 10h remota) — a mesma base do total de R$ 66.434,30
+// (equipe completa de 12 × 17 semanas):
 //   trabalho 309,02 + computador 13,46 + energia 1,26 + internet 1,39 = 325,13/pessoa
 const CUSTO_POR_PESSOA_SEMANA = 309.02 + 13.46 + 1.26 + 1.39; // 325,13
 const CUSTO_FIXO_SEMANA = 6.34; // Railway Hobby (fixo, por equipe)
-const EQUIPE_BASELINE = 9; // baseline do plano de custos
+// Baseline do PLANO = equipe completa no início do semestre (12). O PV/BAC do EVM usa
+// esse plano; o AC usa a equipe EFETIVA de cada sprint (12→10→9→8), que encolheu.
+const EQUIPE_BASELINE = 12;
 const custoSemana = (pessoas) => pessoas * CUSTO_POR_PESSOA_SEMANA + CUSTO_FIXO_SEMANA;
 
 const RELEASES = [
@@ -367,8 +370,72 @@ const wipSerie = cfd.map((d) => ({
   wip: (d["In Progress"] ?? 0) + (d["Review/QA"] ?? 0) + (d["Sprint Backlog"] ?? 0) + (d["Blocked"] ?? 0) + (d["Rework"] ?? 0),
 }));
 
+// ===== Q-RAPIDS — Indicador Estratégico "Process Performance" =====
+// Mapeia as métricas de fluxo do board para os fatores e assessed metrics do modelo
+// Q-Rapids (Martínez-Fernández et al., IEEE Access 2019). Cada métrica é uma
+// DENSIDADE [0–1] = fração dentro da faixa ideal, no mesmo espírito do eixo Produto.
+// Limiares "user defined" do Q-Rapids: lead ≤ 14d, idade de WIP ≤ 14d, revisão de PR ≤ 2d.
+const LIM_LEAD = 14, LIM_IDADE = 14, LIM_REVISAO = 2;
+const ehBug = (i) => i.labels.some((l) => /bug/i.test(l)) || /\[bug\]/i.test(i.titulo);
+// exclui o repo de planejamento (épicos de release #133/#135/#136) — são marcos de
+// roadmap, não itens de trabalho, e não devem entrar nas métricas de fluxo do processo.
+const ehPlanejamento = (i) => i.repo === "2026-1-AnatoQuizUp";
+const abertasNaoPr = naoPr.filter((i) => !i.fechadaEm && !ehPlanejamento(i));
+const resolvidas = fechadas.filter((i) => !i.abandonado && !ehPlanejamento(i));
+const fluxoResolvido = fluxoDeCodigo.filter((i) => !i.abandonado && !ehPlanejamento(i));
+const totalNaoAband = naoPr.filter((i) => !i.abandonado && !ehPlanejamento(i)).length;
+const idadeAberta = (i) => dias(i.criadaEm, agora);
+const dens = (num, den) => (den ? arred(num / den, 3) : null);
+
+const qrTeamThroughput = dens(resolvidas.length, totalNaoAband);
+const qrResolvedTP = dens(fluxoResolvido.filter((i) => dias(i.criadaEm, i.fechadaEm) <= LIM_LEAD).length, fluxoResolvido.length);
+const qrOldIssues = dens(abertasNaoPr.filter((i) => idadeAberta(i) <= LIM_IDADE).length, abertasNaoPr.length);
+const qrBugsRatio = dens(abertasNaoPr.filter((i) => !ehBug(i)).length, abertasNaoPr.length);
+const qrCommitReview = dens(prsFechados.filter((p) => dias(p.criadaEm, p.fechadaEm) <= LIM_REVISAO).length, prsFechados.length);
+
+const qrapids = {
+  indicador: "Process Performance",
+  referencia: "Q-Rapids (Martínez-Fernández et al., IEEE Access 2019)",
+  limiares: { leadDias: LIM_LEAD, idadeDias: LIM_IDADE, revisaoDias: LIM_REVISAO },
+  fatores: [
+    {
+      fator: "Issues' Velocity",
+      descricao: "capacidade de fechar as issues planejadas (vazão, atualidade e qualidade do fluxo)",
+      metricas: [
+        { metrica: "Team Throughput", densidade: qrTeamThroughput, formula: "issues resolvidas / total de issues", bruto: `${resolvidas.length} / ${totalNaoAband}`, fonte: "ZenHub + GitHub" },
+        { metrica: "Resolved Issues' Throughput", densidade: qrResolvedTP, formula: `resolvidas em ≤ ${LIM_LEAD}d / total resolvidas (fluxo de código)`, bruto: `${fluxoResolvido.filter((i) => dias(i.criadaEm, i.fechadaEm) <= LIM_LEAD).length} / ${fluxoResolvido.length}`, fonte: "ZenHub (eventos)" },
+        { metrica: "Old Issues", densidade: qrOldIssues, formula: `issues abertas com idade ≤ ${LIM_IDADE}d / total abertas`, bruto: `${abertasNaoPr.filter((i) => idadeAberta(i) <= LIM_IDADE).length} / ${abertasNaoPr.length}`, fonte: "ZenHub" },
+        { metrica: "Bugs Ratio", densidade: qrBugsRatio, formula: "issues abertas não-bug / total abertas", bruto: `${abertasNaoPr.filter((i) => !ehBug(i)).length} / ${abertasNaoPr.length}`, fonte: "GitHub (labels)" },
+      ],
+    },
+    {
+      fator: "Development Speed",
+      descricao: "eficiência das atividades de integração contínua e revisão",
+      metricas: [
+        { metrica: "Commit review duration", densidade: qrCommitReview, formula: `PRs revisados em ≤ ${LIM_REVISAO}d / total de PRs fechados`, bruto: `${prsFechados.filter((p) => dias(p.criadaEm, p.fechadaEm) <= LIM_REVISAO).length} / ${prsFechados.length}`, fonte: "GitHub (PRs)" },
+      ],
+    },
+  ],
+};
+qrapids.valor = arred(media([qrTeamThroughput, qrResolvedTP, qrOldIssues, qrBugsRatio, qrCommitReview].filter((v) => v != null)), 3);
+
+// Dados brutos do processo: cada quantidade (num/den das densidades) com a fonte
+// exata e o critério de coleta — "do zero", sem normalização. Só ZenHub + GitHub.
+qrapids.dadosBrutos = [
+  { quantidade: "Total de issues (não-PR)", valor: totalNaoAband, fonte: "ZenHub + GitHub", coleta: "todas as issues que não são Pull Request, exceto as encerradas na limpeza de board (abandonadas)" },
+  { quantidade: "Issues resolvidas (fechadas)", valor: resolvidas.length, fonte: "ZenHub + GitHub", coleta: "issues não-PR com data de fechamento (closedAt), excluindo abandonadas" },
+  { quantidade: "Issues de fluxo de código resolvidas", valor: fluxoResolvido.length, fonte: "ZenHub (eventos)", coleta: "issues fechadas que passaram pela pipeline 'In Progress', reconstruído dos eventos de movimentação do board" },
+  { quantidade: `Issues de fluxo resolvidas em ≤ ${LIM_LEAD} dias`, valor: fluxoResolvido.filter((i) => dias(i.criadaEm, i.fechadaEm) <= LIM_LEAD).length, fonte: "ZenHub (eventos)", coleta: `das de fluxo, com (data de fechamento − data de criação) ≤ ${LIM_LEAD} dias` },
+  { quantidade: "Issues abertas (total)", valor: abertasNaoPr.length, fonte: "ZenHub + GitHub", coleta: "issues não-PR sem data de fechamento" },
+  { quantidade: `Issues abertas com idade ≤ ${LIM_IDADE} dias`, valor: abertasNaoPr.filter((i) => idadeAberta(i) <= LIM_IDADE).length, fonte: "ZenHub + GitHub", coleta: `das abertas, com (hoje − data de criação) ≤ ${LIM_IDADE} dias` },
+  { quantidade: "Issues abertas não-bug", valor: abertasNaoPr.filter((i) => !ehBug(i)).length, fonte: "GitHub (labels)", coleta: "das abertas, sem a label \"bug\" e sem \"[BUG]\" no título" },
+  { quantidade: "PRs fechados (total)", valor: prsFechados.length, fonte: "GitHub", coleta: "todos os Pull Requests com data de fechamento" },
+  { quantidade: `PRs revisados em ≤ ${LIM_REVISAO} dias`, valor: prsFechados.filter((p) => dias(p.criadaEm, p.fechadaEm) <= LIM_REVISAO).length, fonte: "GitHub", coleta: `dos PRs fechados, com (data de fechamento − data de criação) ≤ ${LIM_REVISAO} dias` },
+];
+
 const processo = {
   pipelines: workspace.pipelines.map((p) => p.name),
+  qrapids,
   flowEfficiency,
   retrabalho,
   agingWip,
@@ -401,21 +468,34 @@ function entregueMedido(inicio, fim) {
   const ini = new Date(inicio), f = new Date(new Date(fim).getTime() + DIA_MS - 1);
   return naoPr
     // exclui trackers de US no Doc que duplicam trabalho já contado no código (sem dupla contagem)
-    .filter((i) => i.estimate != null && !i.possivelDuplicata && i.fechadaEm && new Date(i.fechadaEm) >= ini && new Date(i.fechadaEm) <= f)
+    // e exclui os cards encerrados na limpeza de board de 27/06 (abandonado, não entregue)
+    .filter((i) => i.estimate != null && !i.possivelDuplicata && !i.abandonado && i.fechadaEm && new Date(i.fechadaEm) >= ini && new Date(i.fechadaEm) <= f)
     .reduce((s, i) => s + i.estimate, 0);
 }
 
-// Planejado via sprint ZenHub com maior sobreposição de janela
+// Planejado por sprint = soma dos estimates das issues ATRIBUÍDAS àquela sprint
+// (campo `sprints` da issue), contadas na primeira sprint em que foram planejadas.
+// Período consistente com o entregue (ambos derivados das issues) e estável — não
+// depende do `totalPoints` volátil das sprints do ZenHub, que mede janelas diferentes.
 const zhSprints = workspace.sprints.nodes ?? workspace.sprints;
-function planejadoZenhub(inicio, fim) {
-  const ini = new Date(inicio), f = new Date(fim);
+const sprintZhParaS = {}; // nome da sprint ZenHub -> id da janela S (maior sobreposição)
+for (const z of zhSprints) {
+  const zi = new Date(z.startAt), zf = new Date(z.endAt);
   let melhor = null, melhorOverlap = 0;
-  for (const s of zhSprints) {
-    const si = new Date(s.startAt), sf = new Date(s.endAt);
-    const overlap = Math.min(f, sf) - Math.max(ini, si);
-    if (overlap > melhorOverlap) { melhorOverlap = overlap; melhor = s; }
+  for (const s of SPRINTS) {
+    const ov = Math.min(zf, new Date(s.fim)) - Math.max(zi, new Date(s.inicio));
+    if (ov > melhorOverlap) { melhorOverlap = ov; melhor = s.id; }
   }
-  return melhor ? { pontos: melhor.totalPoints ?? 0, sprintZenhub: melhor.name } : { pontos: 0, sprintZenhub: null };
+  if (melhor) sprintZhParaS[z.name] = melhor;
+}
+const ordemS = Object.fromEntries(SPRINTS.map((s, idx) => [s.id, idx]));
+const planejadoAtribuido = Object.fromEntries(SPRINTS.map((s) => [s.id, 0]));
+for (const i of naoPr) {
+  if (i.estimate == null || i.possivelDuplicata || i.abandonado) continue;
+  const ids = [...new Set((i.sprints || []).map((n) => sprintZhParaS[n]).filter(Boolean))];
+  if (!ids.length) continue;
+  ids.sort((a, b) => ordemS[a] - ordemS[b]);
+  planejadoAtribuido[ids[0]] += i.estimate; // conta na 1ª sprint em que foi planejada
 }
 
 const sprintsCalc = SPRINTS.map((s) => {
@@ -423,9 +503,8 @@ const sprintsCalc = SPRINTS.map((s) => {
   const emAndamento = !decorrida && new Date(s.inicio) <= new Date();
   let planejado = s.planejadoSP, fontePlanejado = s.fontePlanejado;
   if (planejado == null && (decorrida || emAndamento)) {
-    const zh = planejadoZenhub(s.inicio, s.fim);
-    planejado = zh.pontos;
-    fontePlanejado = `zenhub (${zh.sprintZenhub})`;
+    planejado = planejadoAtribuido[s.id] ?? 0;
+    fontePlanejado = "atribuição de sprint (estimates das issues planejadas no ZenHub)";
   }
   let entregue = s.entregueSP, fonteEntregue = s.fonteEntregue;
   if (entregue == null && (decorrida || emAndamento)) {
@@ -476,7 +555,13 @@ for (const s of sprintsCalc) {
 // Velocity e previsão de ritmo
 const velocidades = sprintsCalc.filter((s) => s.decorrida).map((s) => s.entregueSP ?? 0);
 const velocidadeMediana = mediana(velocidades);
-const backlogAbertoSP = naoPr.filter((i) => !i.fechadaEm && i.estimate != null).reduce((s, i) => s + i.estimate, 0);
+// Backlog em aberto = TODAS as issues de trabalho abertas (com estimate ou não),
+// exceto os épicos de release do repo de planejamento (2026-1-AnatoQuizUp).
+const backlogAbertoItens = naoPr
+  .filter((i) => !i.fechadaEm && i.repo !== "2026-1-AnatoQuizUp")
+  .map((i) => ({ repo: i.repo, numero: i.numero, titulo: i.titulo, estimate: i.estimate, pipeline: i.pipeline }))
+  .sort((a, b) => (b.estimate ?? 0) - (a.estimate ?? 0));
+const backlogAbertoSP = backlogAbertoItens.reduce((s, i) => s + (i.estimate ?? 0), 0);
 const sprintsRestantes = sprintsCalc.filter((s) => !s.decorrida).length;
 
 // ===== MÉTRICAS ANALÍTICAS NOVAS (cruzam fontes; não existem no ZenHub) =====
@@ -512,6 +597,40 @@ function coberturaNaData(dataIso) {
 }
 const qualidadeVelocidade = sprintsCalc.filter((s) => s.decorrida).map((s) => ({ sprint: s.id, entregueSP: s.entregueSP, coberturaFim: coberturaNaData(s.fim) }));
 
+// ===== PRP — Pontos Planejados por Release =====
+// Agrupa o PV(SP) das sprints nas 3 releases major e evidencia ONDE o PRP mudou
+// (a equipe encolheu de sprint a sprint, reduzindo a capacidade e o planejado).
+const RELEASES_MAJOR = [
+  { release: "R1", nome: "Release Major 1", prazo: "2026-04-27", ate: "2026-04-27" },
+  { release: "R2", nome: "Release Major 2", prazo: "2026-05-25", ate: "2026-05-25" },
+  { release: "R3", nome: "Release Major 3", prazo: "2026-06-29", ate: "2026-06-29" },
+];
+const releaseDaSprint = (s) =>
+  new Date(s.fim) <= new Date("2026-04-27") ? "R1"
+  : new Date(s.fim) <= new Date("2026-05-25") ? "R2" : "R3";
+// PRP por sprint (com equipe) — base do "onde mudou": cada queda de equipe muda a capacidade
+const prpPorSprint = sprintsCalc
+  .filter((s) => s.decorrida || s.emAndamento)
+  .map((s, i, arr) => ({
+    sprint: s.id, release: releaseDaSprint(s), equipe: s.equipe,
+    planejadoSP: s.planejadoSP ?? 0, entregueSP: s.entregueSP ?? 0,
+    mudouEquipe: i > 0 && s.equipe !== arr[i - 1].equipe, // marca a sprint onde a equipe caiu
+  }));
+const prpReleases = RELEASES_MAJOR.map((r) => {
+  const ss = sprintsCalc.filter((s) => (s.decorrida || s.emAndamento) && releaseDaSprint(s) === r.release);
+  const eq = ss.map((s) => s.equipe);
+  const prp = ss.reduce((a, s) => a + (s.planejadoSP ?? 0), 0);
+  const entregue = ss.reduce((a, s) => a + (s.entregueSP ?? 0), 0);
+  return {
+    release: r.release, nome: r.nome, prazo: r.prazo,
+    sprints: ss.map((s) => s.id),
+    equipeInicial: eq[0] ?? null, equipeFinal: eq.at(-1) ?? null,
+    equipeMin: eq.length ? Math.min(...eq) : null, equipeMax: eq.length ? Math.max(...eq) : null,
+    prpSP: prp, entregueSP: entregue,
+    spiRelease: prp ? arred(entregue / prp, 2) : null,
+  };
+});
+
 const projeto = {
   parametros: {
     custoPorPessoaSemana: arred(CUSTO_POR_PESSOA_SEMANA, 2),
@@ -528,6 +647,7 @@ const projeto = {
   previsao: {
     velocidadeMedianaSP: velocidadeMediana,
     backlogAbertoEstimadoSP: backlogAbertoSP,
+    backlogAberto: backlogAbertoItens,
     sprintsRestantes,
     capacidadeRestanteSP: velocidadeMediana != null ? arred(velocidadeMediana * sprintsRestantes, 0) : null,
   },
@@ -535,6 +655,7 @@ const projeto = {
   custoPorSpSprint,
   monteCarlo: monte,
   qualidadeVelocidade,
+  prp: { releases: prpReleases, porSprint: prpPorSprint },
   releases: RELEASES,
 };
 
@@ -549,9 +670,9 @@ const consolidado = {
     "Processo: lead time = criação→fechamento; cycle time = 1ª entrada em In Progress→fechamento; 'fluxo de código' = issues que passaram por In Progress.",
     "Processo: limites WIP pela Lei de Little (WIP = TP × LT) com TP das últimas 4 semanas e margem de 50% (Brechner).",
     "Projeto: EVM ágil em story points (mesmo enquadramento do exemplo do professor) — PV(SP) = planejado acumulado; EV(SP) = entregue acumulado; SPI = EV/PV em SP. Planejado/entregue S1–S4 dos relatórios de sprint publicados; S5+ medido do ZenHub.",
-    "Projeto: custo em R$ derivado do Plano de Custos para o CPI — PV(R$) = custo baseline (9 pessoas) × sprints decorridas; EV(R$) = SPI × PV(R$); AC(R$) = custo real incorrido (equipe efetiva 12,10,9,9,9,8,8,8 × regime de 4 h/sem); CPI = EV(R$)/AC(R$).",
-    "Projeto: o time não registra horas reais desde a S1, então AC é aproximado pela equipe efetiva — substituir por horas reais se voltarem a ser registradas. SPI e CPI ficam próximos porque a equipe efetiva (média ~9,3) acompanhou o baseline de 9; o desvio de 1,0 é quase todo de escopo, não de custo.",
-    "Projeto: BAC = custo semanal baseline (9 pessoas, R$ 931,63) × PS = 10 sprints (S1 19/04 → S10 29/06) = R$ 9.316,30; EAC = BAC/CPI; VAC = BAC − EAC.",
+    "Projeto: custo em R$ derivado do Plano de Custos para o CPI — PV(R$) = custo baseline (12 pessoas, R$ 3.907,90/sem) × sprints decorridas; EV(R$) = SPI × PV(R$); AC(R$) = custo real incorrido (equipe efetiva 12→10→9 × R$ 325,13/pessoa, carga de 14 h/sem); CPI = EV(R$)/AC(R$).",
+    "Projeto: o baseline do PLANO é a equipe completa de 12 (início do semestre). O time não registra horas reais, então AC é aproximado pela equipe EFETIVA de cada sprint. Como a equipe encolheu de 12 para 9, o AC fica abaixo do PV: o projeto gasta MENOS que o orçado (CPI > 1, sob orçamento) mas entrega MENOS escopo que o planejado (SPI < 1) — dois desvios independentes, que é justamente o que o CPI≠SPI passa a revelar.",
+    "Projeto: BAC = custo semanal baseline (12 pessoas, R$ 3.907,90) × PS = 10 sprints (S1 19/04 → S10 29/06) = R$ 39.079,00; EAC = BAC/CPI; VAC = BAC − EAC.",
     `Qualidade dos dados: ${higiene.semEstimate}/${higiene.totalIssues} issues sem estimate; ${higiene.semResponsavel} sem responsável; ${higiene.fechadasEmLote1206} fechadas em lote em 12/06 (limpeza de board) — análise crítica no notebook.`,
   ],
   produto,
@@ -568,6 +689,41 @@ const DIR_DASH = join(RAIZ_REPO, "docs", "dashboards");
 await mkdir(DIR_DASH, { recursive: true });
 await writeFile(join(DIR_DASH, "dados-consolidados.js"), `window.DADOS = ${JSON.stringify(consolidado)};\n`, "utf8");
 console.log("docs/dashboards/dados-consolidados.js gerado.");
+
+// ----- Datasets CSV (dados brutos baixáveis; espelham as tabelas dos dashboards)
+const DIR_DATASETS = join(DIR_DASH, "datasets");
+await mkdir(DIR_DATASETS, { recursive: true });
+const toCsv = (headers, rows) => {
+  const esc = (v) => {
+    const s = v == null ? "" : String(v);
+    return /[",\n;]/.test(s) ? `"${s.replace(/"/g, '""')}"` : s;
+  };
+  return [headers.join(","), ...rows.map((r) => r.map(esc).join(","))].join("\n") + "\n";
+};
+const escreverCsv = async (nome, headers, rows) => {
+  await writeFile(join(DIR_DATASETS, nome), toCsv(headers, rows), "utf8");
+  console.log(`  dataset: datasets/${nome} (${rows.length} linhas)`);
+};
+const sprintsAtivas = sprintsCalc.filter((s) => s.decorrida || s.emAndamento);
+
+await escreverCsv("projeto-evm.csv",
+  ["sprint", "equipe", "pv_sp", "ev_sp", "pv_reais", "ev_reais", "ac_reais", "spi", "cpi", "eac", "vac"],
+  serieEvm.map((e) => {
+    const s = sprintsCalc.find((x) => x.id === e.sprint);
+    return [e.sprint, s?.equipe, e.pvPts, e.evPts, e.pvReais, e.evReais, e.acReais, e.spi, e.cpi, e.eac, e.vac];
+  }));
+await escreverCsv("projeto-insumos-sprint.csv",
+  ["sprint", "inicio", "fim", "equipe", "planejado_sp", "fonte_planejado", "entregue_sp", "ac_reais"],
+  sprintsAtivas.map((s) => [s.id, s.inicio, s.fim, s.equipe, s.planejadoSP, s.fontePlanejado, s.entregueSP, s.custoReal]));
+await escreverCsv("projeto-backlog.csv",
+  ["repo", "numero", "titulo", "estimate", "pipeline"],
+  backlogAbertoItens.map((i) => [i.repo, i.numero, i.titulo, i.estimate, i.pipeline]));
+await escreverCsv("projeto-prp.csv",
+  ["release", "nome", "prazo", "sprints", "equipe_inicial", "equipe_final", "prp_sp", "entregue_sp", "spi_release"],
+  prpReleases.map((r) => [r.release, r.nome, r.prazo, r.sprints.join(" "), r.equipeInicial, r.equipeFinal, r.prpSP, r.entregueSP, r.spiRelease]));
+// Processo não exporta CSV: as métricas são densidades resumidas; os dados brutos
+// (issues/PRs do ZenHub+GitHub) são exibidos com fonte e critério na própria página.
+console.log("datasets CSV gerados em docs/dashboards/datasets/ (projeto).");
 console.log("\n== Resumo ==");
 console.log("Qualidade do Produto (global):", produto.global.qualidadeProduto);
 console.log("Densidades globais:", JSON.stringify(produto.global.densidades));

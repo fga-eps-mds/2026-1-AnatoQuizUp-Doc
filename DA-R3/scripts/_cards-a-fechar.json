@@ -1,0 +1,426 @@
+[
+ {
+  "pipeline": "New Issues",
+  "id": "Z2lkOi8vcmFwdG9yL0lzc3VlLzQyMTA1MzYyNA",
+  "numero": 50,
+  "repo": "2026-1-AnatoQuizUp-Doc",
+  "titulo": "Ajustes Front Aluno/Admin/Professor",
+  "ehPr": false
+ },
+ {
+  "pipeline": "New Issues",
+  "id": "Z2lkOi8vcmFwdG9yL0lzc3VlLzQxNTQ3ODA4OQ",
+  "numero": 44,
+  "repo": "2026-1-AnatoQuizUp-Doc",
+  "titulo": "Comentário da Questão Obrigatório",
+  "ehPr": false
+ },
+ {
+  "pipeline": "New Issues",
+  "id": "Z2lkOi8vcmFwdG9yL0lzc3VlLzQxNTQ3NjEyOA",
+  "numero": 43,
+  "repo": "2026-1-AnatoQuizUp-Doc",
+  "titulo": "Mensagem Inicial do WebApp",
+  "ehPr": false
+ },
+ {
+  "pipeline": "New Issues",
+  "id": "Z2lkOi8vcmFwdG9yL0lzc3VlLzM5NjYyNTcyOQ",
+  "numero": 19,
+  "repo": "2026-1-AnatoQuizUp-Web",
+  "titulo": "[US] [Frontend] Professor com visão de aluno",
+  "ehPr": false
+ },
+ {
+  "pipeline": "New Issues",
+  "id": "Z2lkOi8vcmFwdG9yL0lzc3VlLzM4ODY2NDkxMQ",
+  "numero": 133,
+  "repo": "2026-1-AnatoQuizUp",
+  "titulo": "R1 — Planejamento e Base do Produto",
+  "ehPr": false
+ },
+ {
+  "pipeline": "New Issues",
+  "id": "Z2lkOi8vcmFwdG9yL0lzc3VlLzM4ODY2NDk2Mg",
+  "numero": 135,
+  "repo": "2026-1-AnatoQuizUp",
+  "titulo": "R2 — Evolução do Produto e Qualidade",
+  "ehPr": false
+ },
+ {
+  "pipeline": "New Issues",
+  "id": "Z2lkOi8vcmFwdG9yL0lzc3VlLzM4ODY2NDk2Nw",
+  "numero": 136,
+  "repo": "2026-1-AnatoQuizUp",
+  "titulo": "R3 = MVP Final e Encerramento",
+  "ehPr": false
+ },
+ {
+  "pipeline": "New Issues",
+  "id": "Z2lkOi8vcmFwdG9yL0lzc3VlLzM4ODY2NjQ0Nw",
+  "numero": 151,
+  "repo": "2026-1-AnatoQuizUp",
+  "titulo": "Epic teste",
+  "ehPr": false
+ },
+ {
+  "pipeline": "New Issues",
+  "id": "Z2lkOi8vcmFwdG9yL0lzc3VlLzQxMTY1MjU4Mw",
+  "numero": 228,
+  "repo": "2026-1-AnatoQuizUp",
+  "titulo": "US",
+  "ehPr": false
+ },
+ {
+  "pipeline": "Icebox",
+  "id": "Z2lkOi8vcmFwdG9yL0lzc3VlLzQwODQ1NDM2Mw",
+  "numero": 58,
+  "repo": "2026-1-AnatoQuizUp-Usuario-Service",
+  "titulo": "[US] [API] Desafio Multiplayer Aleatório",
+  "ehPr": false
+ },
+ {
+  "pipeline": "Icebox",
+  "id": "Z2lkOi8vcmFwdG9yL0lzc3VlLzQwODQ1NDQzNw",
+  "numero": 90,
+  "repo": "2026-1-AnatoQuizUp-Usuario-Service",
+  "titulo": "[US] [Web] Sistema de Amigos",
+  "ehPr": false
+ },
+ {
+  "pipeline": "Icebox",
+  "id": "Z2lkOi8vcmFwdG9yL0lzc3VlLzQwODQ1NDQzNQ",
+  "numero": 89,
+  "repo": "2026-1-AnatoQuizUp-Usuario-Service",
+  "titulo": "[US] [Web] Desafio Direto (Duelo)",
+  "ehPr": false
+ },
+ {
+  "pipeline": "Icebox",
+  "id": "Z2lkOi8vcmFwdG9yL0lzc3VlLzQwODQ1NDM1OA",
+  "numero": 54,
+  "repo": "2026-1-AnatoQuizUp-Usuario-Service",
+  "titulo": "[US] [API] Mapa de Conquistas e Níveis",
+  "ehPr": false
+ },
+ {
+  "pipeline": "Icebox",
+  "id": "Z2lkOi8vcmFwdG9yL0lzc3VlLzQwODQ1NDM2OA",
+  "numero": 61,
+  "repo": "2026-1-AnatoQuizUp-Usuario-Service",
+  "titulo": "[US] [API] Edição de Perfil",
+  "ehPr": false
+ },
+ {
+  "pipeline": "Icebox",
+  "id": "Z2lkOi8vcmFwdG9yL0lzc3VlLzQwODQ1NDM2Mg",
+  "numero": 57,
+  "repo": "2026-1-AnatoQuizUp-Usuario-Service",
+  "titulo": "[US] [API] Customização de Avatar",
+  "ehPr": false
+ },
+ {
+  "pipeline": "Icebox",
+  "id": "Z2lkOi8vcmFwdG9yL0lzc3VlLzQwODQ1NDM1OQ",
+  "numero": 55,
+  "repo": "2026-1-AnatoQuizUp-Usuario-Service",
+  "titulo": "[US] [API] Sistema de Moedas",
+  "ehPr": false
+ },
+ {
+  "pipeline": "Icebox",
+  "id": "Z2lkOi8vcmFwdG9yL0lzc3VlLzQwODQ1NDM2NA",
+  "numero": 59,
+  "repo": "2026-1-AnatoQuizUp-Usuario-Service",
+  "titulo": "[US] [API] Salas de Estudo em Grupo",
+  "ehPr": false
+ },
+ {
+  "pipeline": "Icebox",
+  "id": "Z2lkOi8vcmFwdG9yL0lzc3VlLzQwODQ1NDQ0MQ",
+  "numero": 92,
+  "repo": "2026-1-AnatoQuizUp-Usuario-Service",
+  "titulo": "[US] [Web] Relatório de Engajamento",
+  "ehPr": false
+ },
+ {
+  "pipeline": "Icebox",
+  "id": "Z2lkOi8vcmFwdG9yL0lzc3VlLzQwODQ1NDQzMg",
+  "numero": 87,
+  "repo": "2026-1-AnatoQuizUp-Usuario-Service",
+  "titulo": "[US] [Web] Ajuste Dinâmico de Dificuldade",
+  "ehPr": false
+ },
+ {
+  "pipeline": "Icebox",
+  "id": "Z2lkOi8vcmFwdG9yL0lzc3VlLzQwODQ1NDQyOA",
+  "numero": 85,
+  "repo": "2026-1-AnatoQuizUp-Usuario-Service",
+  "titulo": "[US] [Web] Exclusão de Conta (LGPD)",
+  "ehPr": false
+ },
+ {
+  "pipeline": "Icebox",
+  "id": "Z2lkOi8vcmFwdG9yL0lzc3VlLzQwODQ1NDQxOA",
+  "numero": 78,
+  "repo": "2026-1-AnatoQuizUp-Usuario-Service",
+  "titulo": "[US] [Web] Ranking de Desempenho",
+  "ehPr": false
+ },
+ {
+  "pipeline": "Icebox",
+  "id": "Z2lkOi8vcmFwdG9yL0lzc3VlLzQwODQ1NDQxNQ",
+  "numero": 75,
+  "repo": "2026-1-AnatoQuizUp-Usuario-Service",
+  "titulo": "[US] [Web] Mapa de Lacunas",
+  "ehPr": false
+ },
+ {
+  "pipeline": "Icebox",
+  "id": "Z2lkOi8vcmFwdG9yL0lzc3VlLzQwODQ1NDQxMQ",
+  "numero": 73,
+  "repo": "2026-1-AnatoQuizUp-Usuario-Service",
+  "titulo": "[US] [Web] Curadoria de Especialista",
+  "ehPr": false
+ },
+ {
+  "pipeline": "Icebox",
+  "id": "Z2lkOi8vcmFwdG9yL0lzc3VlLzQwODQ1NDM4MA",
+  "numero": 68,
+  "repo": "2026-1-AnatoQuizUp-Usuario-Service",
+  "titulo": "[US] [API] Relatório de Engajamento",
+  "ehPr": false
+ },
+ {
+  "pipeline": "Icebox",
+  "id": "Z2lkOi8vcmFwdG9yL0lzc3VlLzQwODQ1NDM3MA",
+  "numero": 62,
+  "repo": "2026-1-AnatoQuizUp-Usuario-Service",
+  "titulo": "[US] [API] Exclusão de Conta (LGPD)",
+  "ehPr": false
+ },
+ {
+  "pipeline": "Icebox",
+  "id": "Z2lkOi8vcmFwdG9yL0lzc3VlLzQwODQ1NDM3Mw",
+  "numero": 64,
+  "repo": "2026-1-AnatoQuizUp-Usuario-Service",
+  "titulo": "[US] [API] Ajuste Dinâmico de Dificuldade",
+  "ehPr": false
+ },
+ {
+  "pipeline": "Icebox",
+  "id": "Z2lkOi8vcmFwdG9yL0lzc3VlLzQwODQ1NDQzMA",
+  "numero": 86,
+  "repo": "2026-1-AnatoQuizUp-Usuario-Service",
+  "titulo": "[US] [Web] Reporte de Erro de IA",
+  "ehPr": false
+ },
+ {
+  "pipeline": "Icebox",
+  "id": "Z2lkOi8vcmFwdG9yL0lzc3VlLzQwODQ1NDM1Ng",
+  "numero": 53,
+  "repo": "2026-1-AnatoQuizUp-Usuario-Service",
+  "titulo": "[US] [API] Chatbot Tutorial Interativo",
+  "ehPr": false
+ },
+ {
+  "pipeline": "Icebox",
+  "id": "Z2lkOi8vcmFwdG9yL0lzc3VlLzQwODQ1NDQxMw",
+  "numero": 74,
+  "repo": "2026-1-AnatoQuizUp-Usuario-Service",
+  "titulo": "[US] [Web] Chatbot Tutorial Interativo",
+  "ehPr": false
+ },
+ {
+  "pipeline": "Icebox",
+  "id": "Z2lkOi8vcmFwdG9yL0lzc3VlLzQwODQ1NDM1Mw",
+  "numero": 51,
+  "repo": "2026-1-AnatoQuizUp-Usuario-Service",
+  "titulo": "[US] [API] Geração Dinâmica de Questões",
+  "ehPr": false
+ },
+ {
+  "pipeline": "Icebox",
+  "id": "Z2lkOi8vcmFwdG9yL0lzc3VlLzQwODQ1NDQwNw",
+  "numero": 71,
+  "repo": "2026-1-AnatoQuizUp-Usuario-Service",
+  "titulo": "[US] [Web] Geração Dinâmica de Questões",
+  "ehPr": false
+ },
+ {
+  "pipeline": "Product Backlog",
+  "id": "Z2lkOi8vcmFwdG9yL0lzc3VlLzQwODQ1NDQyMA",
+  "numero": 79,
+  "repo": "2026-1-AnatoQuizUp-Usuario-Service",
+  "titulo": " [US] Personalização e Inventário do Avatar",
+  "ehPr": false
+ },
+ {
+  "pipeline": "Product Backlog",
+  "id": "Z2lkOi8vcmFwdG9yL0lzc3VlLzQwODQ1NDM4Mg",
+  "numero": 69,
+  "repo": "2026-1-AnatoQuizUp-Usuario-Service",
+  "titulo": "[US] Dashboard de Estatísticas Gerais da Plataforma (Admin)",
+  "ehPr": false
+ },
+ {
+  "pipeline": "Product Backlog",
+  "id": "Z2lkOi8vcmFwdG9yL0lzc3VlLzQwODQ1NDQ0Nw",
+  "numero": 95,
+  "repo": "2026-1-AnatoQuizUp-Usuario-Service",
+  "titulo": "[US] Envio de Reporte de Erros e Sugestões (Feedback Geral)",
+  "ehPr": false
+ },
+ {
+  "pipeline": "Product Backlog",
+  "id": "Z2lkOi8vcmFwdG9yL0lzc3VlLzQwODQ1NDQwOQ",
+  "numero": 72,
+  "repo": "2026-1-AnatoQuizUp-Usuario-Service",
+  "titulo": " [US] Gestão e Visualização de Feedbacks (Painel do Admin)",
+  "ehPr": false
+ },
+ {
+  "pipeline": "Product Backlog",
+  "id": "Z2lkOi8vcmFwdG9yL0lzc3VlLzQwODQ1NDQyMw",
+  "numero": 81,
+  "repo": "2026-1-AnatoQuizUp-Usuario-Service",
+  "titulo": "[US] Grupos de Estudo com Amigos",
+  "ehPr": false
+ },
+ {
+  "pipeline": "Product Backlog",
+  "id": "Z2lkOi8vcmFwdG9yL0lzc3VlLzQwODQ1NDQyNw",
+  "numero": 84,
+  "repo": "2026-1-AnatoQuizUp-Usuario-Service",
+  "titulo": "[US] Personalização e Decoração do Quarto (Perfil)",
+  "ehPr": false
+ },
+ {
+  "pipeline": "Product Backlog",
+  "id": "Z2lkOi8vcmFwdG9yL0lzc3VlLzQwODQ1NDM3NA",
+  "numero": 65,
+  "repo": "2026-1-AnatoQuizUp-Usuario-Service",
+  "titulo": " [US] Duelo de Questões entre Amigos (Modo Assíncrono)",
+  "ehPr": false
+ },
+ {
+  "pipeline": "Product Backlog",
+  "id": "Z2lkOi8vcmFwdG9yL0lzc3VlLzQwODQ1NDQ0OQ",
+  "numero": 96,
+  "repo": "2026-1-AnatoQuizUp-Usuario-Service",
+  "titulo": "[US] Envio de Feedback Personalizado ao Aluno",
+  "ehPr": false
+ },
+ {
+  "pipeline": "Product Backlog",
+  "id": "Z2lkOi8vcmFwdG9yL0lzc3VlLzQwODQ1NDQzOQ",
+  "numero": 91,
+  "repo": "2026-1-AnatoQuizUp-Usuario-Service",
+  "titulo": "[US] Gerenciamento e Configuração dos Modelos de IA (Admin)",
+  "ehPr": false
+ },
+ {
+  "pipeline": "Product Backlog",
+  "id": "Z2lkOi8vcmFwdG9yL0lzc3VlLzQwODQ1NDQyNQ",
+  "numero": 83,
+  "repo": "2026-1-AnatoQuizUp-Usuario-Service",
+  "titulo": "[US] Curadoria de Dados e Refinamento do Modelo de IA (Admin)",
+  "ehPr": false
+ },
+ {
+  "pipeline": "Product Backlog",
+  "id": "Z2lkOi8vcmFwdG9yL0lzc3VlLzQwODQ1NDM3Mg",
+  "numero": 63,
+  "repo": "2026-1-AnatoQuizUp-Usuario-Service",
+  "titulo": "[US] Chatbot Tutor Assistente e Coleta de Feedback (Aluno)",
+  "ehPr": false
+ },
+ {
+  "pipeline": "Product Backlog",
+  "id": "Z2lkOi8vcmFwdG9yL0lzc3VlLzQwODQ1NDM1NQ",
+  "numero": 52,
+  "repo": "2026-1-AnatoQuizUp-Usuario-Service",
+  "titulo": "[US] Criação de Imagens por IA",
+  "ehPr": false
+ },
+ {
+  "pipeline": "Product Backlog",
+  "id": "Z2lkOi8vcmFwdG9yL0lzc3VlLzQwOTk2MDA2MA",
+  "numero": 26,
+  "repo": "2026-1-AnatoQuizUp-Doc",
+  "titulo": "[Protótipo] Listagem e Detalhes de Turmas (Aluno)",
+  "ehPr": false
+ },
+ {
+  "pipeline": "Product Backlog",
+  "id": "Z2lkOi8vcmFwdG9yL0lzc3VlLzQwOTk2MTk3NA",
+  "numero": 45,
+  "repo": "2026-1-AnatoQuizUp-Web",
+  "titulo": "[Web] Listagem de Turmas do Aluno",
+  "ehPr": false
+ },
+ {
+  "pipeline": "Product Backlog",
+  "id": "Z2lkOi8vcmFwdG9yL0lzc3VlLzQwOTk3NDM2OA",
+  "numero": 105,
+  "repo": "2026-1-AnatoQuizUp-Usuario-Service",
+  "titulo": "[IA] Construção e Treinamento do Modelo Generativo",
+  "ehPr": false
+ },
+ {
+  "pipeline": "Product Backlog",
+  "id": "Z2lkOi8vcmFwdG9yL0lzc3VlLzQwODQ1NDQyMQ",
+  "numero": 80,
+  "repo": "2026-1-AnatoQuizUp-Usuario-Service",
+  "titulo": "[US] Duelo Síncrono de Questões em Tempo Real",
+  "ehPr": false
+ },
+ {
+  "pipeline": "Product Backlog",
+  "id": "Z2lkOi8vcmFwdG9yL0lzc3VlLzQwOTk2Mzc3Mw",
+  "numero": 46,
+  "repo": "2026-1-AnatoQuizUp-Web",
+  "titulo": "[Web] Detalhes da Turma (Aluno)",
+  "ehPr": false
+ },
+ {
+  "pipeline": "Product Backlog",
+  "id": "Z2lkOi8vcmFwdG9yL0lzc3VlLzQwOTgyMzYxNA",
+  "numero": 102,
+  "repo": "2026-1-AnatoQuizUp-Usuario-Service",
+  "titulo": "[Backend] API Dashboard de Evolução (Aluno)",
+  "ehPr": false
+ },
+ {
+  "pipeline": "Product Backlog",
+  "id": "Z2lkOi8vcmFwdG9yL0lzc3VlLzQwODk2OTk4MA",
+  "numero": 99,
+  "repo": "2026-1-AnatoQuizUp-Usuario-Service",
+  "titulo": "[Web] Dashboard de Evolução (Aluno)",
+  "ehPr": false
+ },
+ {
+  "pipeline": "Product Backlog",
+  "id": "Z2lkOi8vcmFwdG9yL0lzc3VlLzQxMTEwMjA5NQ",
+  "numero": 109,
+  "repo": "2026-1-AnatoQuizUp-Usuario-Service",
+  "titulo": "[Back-end] Gerenciamento de Listas",
+  "ehPr": false
+ },
+ {
+  "pipeline": "Product Backlog",
+  "id": "Z2lkOi8vcmFwdG9yL0lzc3VlLzQwODQ1NDM2Ng",
+  "numero": 60,
+  "repo": "2026-1-AnatoQuizUp-Usuario-Service",
+  "titulo": "[Protótipo] Protótipo do Dashboard de Evolução (Aluno)",
+  "ehPr": false
+ },
+ {
+  "pipeline": "Rejected",
+  "id": "Z2lkOi8vcmFwdG9yL0lzc3VlLzQwOTk3MzI1Ng",
+  "numero": 27,
+  "repo": "2026-1-AnatoQuizUp-Doc",
+  "titulo": "[US] Geração de Questões com Inteligência Artificial",
+  "ehPr": false
+ }
+]

@@ -82,7 +82,7 @@ A cada sprint, todos os 9 integrantes podem migrar entre as frentes técnicas:
 
 A rotação total é deliberadamente pedagógica: ao final da release, todos os integrantes terão tido contato com todas as frentes, evitando silos de conhecimento e cumprindo o objetivo formativo da disciplina EPS.
 
-> A equipe iniciou o projeto com 12 integrantes e atualmente conta com 9 integrantes ativos. A rotação de papéis e o pareamento foram reforçados para absorver a redução sem criar silos de conhecimento.
+> A equipe iniciou o projeto com 12 integrantes e, ao longo das releases (12 → 10 → 9), passou a contar com 9 integrantes ativos. A rotação de papéis e o pareamento foram reforçados para absorver a redução sem criar silos de conhecimento.
 
 ---
 
