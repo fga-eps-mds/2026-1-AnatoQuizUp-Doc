@@ -36,7 +36,10 @@
     <h2 style="font-size:1.15rem">Dados brutos — Indicador → Fator → Assessed Metric → contagem → Fonte</h2>
     <p class="legenda-fonte">Cada densidade é a fração <em>num / den</em> dentro da faixa ideal, calculada das issues e PRs reais do board (sem normalização adicional). Confira métrica por métrica:</p>
     <table class="tabela" id="tabela-qrapids"></table>
-    <a class="btn-csv" href="datasets/processo-qrapids.csv" download>baixar dataset Q-Rapids (CSV)</a>
+
+    <h3 style="margin-top:24px">De onde vem cada número (ZenHub + GitHub) — coleta "do zero"</h3>
+    <p class="legenda-fonte">As únicas fontes deste eixo são o <strong>board do ZenHub</strong> e o <strong>GitHub</strong>. Cada quantidade abaixo (os num/den que formam as densidades) com a <strong>fonte exata</strong> e o <strong>critério de coleta</strong>, sem normalização.</p>
+    <table class="tabela" id="tabela-brutos-processo"></table>
   </div>
 
   <div class="faixa-titulo"><h2>Glossário — termos usados neste eixo</h2></div>
@@ -124,6 +127,15 @@ document.getElementById("tabela-qrapids").innerHTML = `
       <td>${m.bruto}</td>
       <td>${m.fonte}</td></tr>`;
   })).join("")}</tbody>`;
+
+document.getElementById("tabela-brutos-processo").innerHTML = `
+  <thead><tr><th>Quantidade</th><th class="num">Valor</th><th>Fonte</th><th>Como é coletada</th></tr></thead>
+  <tbody>${QR.dadosBrutos.map((d) => `<tr>
+    <td>${d.quantidade}</td>
+    <td class="num"><strong>${d.valor}</strong></td>
+    <td><span style="font-size:.82rem">${d.fonte}</span></td>
+    <td style="font-size:.84rem;color:var(--cinza)">${d.coleta}</td>
+  </tr>`).join("")}</tbody>`;
 
 document.getElementById("rodape").textContent =
   `Gerado em ${D.geradoEm.slice(0, 16).replace("T", " ")} · Modelo Q-Rapids (Process Performance) · Fontes: ZenHub (issues, sprints, eventos de movimentação) e GitHub (issues, PRs, labels).`;

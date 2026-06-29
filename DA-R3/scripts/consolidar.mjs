@@ -416,6 +416,20 @@ const qrapids = {
 };
 qrapids.valor = arred(media([qrTeamThroughput, qrResolvedTP, qrOldIssues, qrBugsRatio, qrCommitReview].filter((v) => v != null)), 3);
 
+// Dados brutos do processo: cada quantidade (num/den das densidades) com a fonte
+// exata e o critério de coleta — "do zero", sem normalização. Só ZenHub + GitHub.
+qrapids.dadosBrutos = [
+  { quantidade: "Total de issues (não-PR)", valor: totalNaoAband, fonte: "ZenHub + GitHub", coleta: "todas as issues que não são Pull Request, exceto as encerradas na limpeza de board (abandonadas)" },
+  { quantidade: "Issues resolvidas (fechadas)", valor: resolvidas.length, fonte: "ZenHub + GitHub", coleta: "issues não-PR com data de fechamento (closedAt), excluindo abandonadas" },
+  { quantidade: "Issues de fluxo de código resolvidas", valor: fluxoResolvido.length, fonte: "ZenHub (eventos)", coleta: "issues fechadas que passaram pela pipeline 'In Progress', reconstruído dos eventos de movimentação do board" },
+  { quantidade: `Issues de fluxo resolvidas em ≤ ${LIM_LEAD} dias`, valor: fluxoResolvido.filter((i) => dias(i.criadaEm, i.fechadaEm) <= LIM_LEAD).length, fonte: "ZenHub (eventos)", coleta: `das de fluxo, com (data de fechamento − data de criação) ≤ ${LIM_LEAD} dias` },
+  { quantidade: "Issues abertas (total)", valor: abertasNaoPr.length, fonte: "ZenHub + GitHub", coleta: "issues não-PR sem data de fechamento" },
+  { quantidade: `Issues abertas com idade ≤ ${LIM_IDADE} dias`, valor: abertasNaoPr.filter((i) => idadeAberta(i) <= LIM_IDADE).length, fonte: "ZenHub + GitHub", coleta: `das abertas, com (hoje − data de criação) ≤ ${LIM_IDADE} dias` },
+  { quantidade: "Issues abertas não-bug", valor: abertasNaoPr.filter((i) => !ehBug(i)).length, fonte: "GitHub (labels)", coleta: "das abertas, sem a label \"bug\" e sem \"[BUG]\" no título" },
+  { quantidade: "PRs fechados (total)", valor: prsFechados.length, fonte: "GitHub", coleta: "todos os Pull Requests com data de fechamento" },
+  { quantidade: `PRs revisados em ≤ ${LIM_REVISAO} dias`, valor: prsFechados.filter((p) => dias(p.criadaEm, p.fechadaEm) <= LIM_REVISAO).length, fonte: "GitHub", coleta: `dos PRs fechados, com (data de fechamento − data de criação) ≤ ${LIM_REVISAO} dias` },
+];
+
 const processo = {
   pipelines: workspace.pipelines.map((p) => p.name),
   qrapids,
@@ -538,11 +552,13 @@ for (const s of sprintsCalc) {
 // Velocity e previsão de ritmo
 const velocidades = sprintsCalc.filter((s) => s.decorrida).map((s) => s.entregueSP ?? 0);
 const velocidadeMediana = mediana(velocidades);
+// Backlog em aberto = TODAS as issues de trabalho abertas (com estimate ou não),
+// exceto os épicos de release do repo de planejamento (2026-1-AnatoQuizUp).
 const backlogAbertoItens = naoPr
-  .filter((i) => !i.fechadaEm && i.estimate != null)
+  .filter((i) => !i.fechadaEm && i.repo !== "2026-1-AnatoQuizUp")
   .map((i) => ({ repo: i.repo, numero: i.numero, titulo: i.titulo, estimate: i.estimate, pipeline: i.pipeline }))
-  .sort((a, b) => b.estimate - a.estimate);
-const backlogAbertoSP = backlogAbertoItens.reduce((s, i) => s + i.estimate, 0);
+  .sort((a, b) => (b.estimate ?? 0) - (a.estimate ?? 0));
+const backlogAbertoSP = backlogAbertoItens.reduce((s, i) => s + (i.estimate ?? 0), 0);
 const sprintsRestantes = sprintsCalc.filter((s) => !s.decorrida).length;
 
 // ===== MÉTRICAS ANALÍTICAS NOVAS (cruzam fontes; não existem no ZenHub) =====
@@ -702,10 +718,9 @@ await escreverCsv("projeto-backlog.csv",
 await escreverCsv("projeto-prp.csv",
   ["release", "nome", "prazo", "sprints", "equipe_inicial", "equipe_final", "prp_sp", "entregue_sp", "spi_release"],
   prpReleases.map((r) => [r.release, r.nome, r.prazo, r.sprints.join(" "), r.equipeInicial, r.equipeFinal, r.prpSP, r.entregueSP, r.spiRelease]));
-await escreverCsv("processo-qrapids.csv",
-  ["indicador", "fator", "assessed_metric", "densidade", "dado_bruto", "formula", "fonte"],
-  qrapids.fatores.flatMap((f) => f.metricas.map((m) => [qrapids.indicador, f.fator, m.metrica, m.densidade, m.bruto, m.formula, m.fonte])));
-console.log("datasets CSV gerados em docs/dashboards/datasets/.");
+// Processo não exporta CSV: as métricas são densidades resumidas; os dados brutos
+// (issues/PRs do ZenHub+GitHub) são exibidos com fonte e critério na própria página.
+console.log("datasets CSV gerados em docs/dashboards/datasets/ (projeto).");
 console.log("\n== Resumo ==");
 console.log("Qualidade do Produto (global):", produto.global.qualidadeProduto);
 console.log("Densidades globais:", JSON.stringify(produto.global.densidades));

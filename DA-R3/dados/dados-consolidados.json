@@ -1,5 +1,5 @@
 {
- "geradoEm": "2026-06-29T01:43:09.069Z",
+ "geradoEm": "2026-06-29T02:18:08.125Z",
  "premissas": [
   "Produto: densidades Q-Rapids calculadas por arquivo (SonarCloud component_tree) com faixas ideais e pesos do Plano de Qualidade (complexidade 35%, comentários 10%, duplicação 25%, cobertura 30%).",
   "Produto: Bloqueios = issues com descrição / total (GitHub, repos públicos); Prontidão = builds com sucesso / concluídas (último export de runs por repo).",
@@ -2475,7 +2475,63 @@
      ]
     }
    ],
-   "valor": 0.72
+   "valor": 0.72,
+   "dadosBrutos": [
+    {
+     "quantidade": "Total de issues (não-PR)",
+     "valor": 133,
+     "fonte": "ZenHub + GitHub",
+     "coleta": "todas as issues que não são Pull Request, exceto as encerradas na limpeza de board (abandonadas)"
+    },
+    {
+     "quantidade": "Issues resolvidas (fechadas)",
+     "valor": 128,
+     "fonte": "ZenHub + GitHub",
+     "coleta": "issues não-PR com data de fechamento (closedAt), excluindo abandonadas"
+    },
+    {
+     "quantidade": "Issues de fluxo de código resolvidas",
+     "valor": 63,
+     "fonte": "ZenHub (eventos)",
+     "coleta": "issues fechadas que passaram pela pipeline 'In Progress', reconstruído dos eventos de movimentação do board"
+    },
+    {
+     "quantidade": "Issues de fluxo resolvidas em ≤ 14 dias",
+     "valor": 36,
+     "fonte": "ZenHub (eventos)",
+     "coleta": "das de fluxo, com (data de fechamento − data de criação) ≤ 14 dias"
+    },
+    {
+     "quantidade": "Issues abertas (total)",
+     "valor": 5,
+     "fonte": "ZenHub + GitHub",
+     "coleta": "issues não-PR sem data de fechamento"
+    },
+    {
+     "quantidade": "Issues abertas com idade ≤ 14 dias",
+     "valor": 1,
+     "fonte": "ZenHub + GitHub",
+     "coleta": "das abertas, com (hoje − data de criação) ≤ 14 dias"
+    },
+    {
+     "quantidade": "Issues abertas não-bug",
+     "valor": 5,
+     "fonte": "GitHub (labels)",
+     "coleta": "das abertas, sem a label \"bug\" e sem \"[BUG]\" no título"
+    },
+    {
+     "quantidade": "PRs fechados (total)",
+     "valor": 89,
+     "fonte": "GitHub",
+     "coleta": "todos os Pull Requests com data de fechamento"
+    },
+    {
+     "quantidade": "PRs revisados em ≤ 2 dias",
+     "valor": 77,
+     "fonte": "GitHub",
+     "coleta": "dos PRs fechados, com (data de fechamento − data de criação) ≤ 2 dias"
+    }
+   ]
   },
   "flowEfficiency": {
    "valor": 0.291,
@@ -6270,7 +6326,22 @@
   "previsao": {
    "velocidadeMedianaSP": 15,
    "backlogAbertoEstimadoSP": 0,
-   "backlogAberto": [],
+   "backlogAberto": [
+    {
+     "repo": "2026-1-AnatoQuizUp-Doc",
+     "numero": 48,
+     "titulo": "[US] Personalizar Perfil",
+     "estimate": null,
+     "pipeline": "Review/QA"
+    },
+    {
+     "repo": "2026-1-AnatoQuizUp-Usuario-Service",
+     "numero": 56,
+     "titulo": "[US] Visualização de Rankings (Geral por Temas e por Turmas)",
+     "estimate": null,
+     "pipeline": "Review/QA"
+    }
+   ],
    "sprintsRestantes": 0,
    "capacidadeRestanteSP": 0
   },

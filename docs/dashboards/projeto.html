@@ -87,7 +87,7 @@
 
   <div class="faixa-titulo"><h2>Dados brutos &amp; memória de cálculo — como verificar o EVM</h2></div>
   <div class="brutos">
-    <p class="legenda-fonte">Os <strong>insumos crus</strong> que alimentam os cálculos acima, para conferir conta por conta. Constantes do <a href="https://fga-eps-mds.github.io/2026-1-AnatoQuizUp-Doc/processo/plano-de-custos/">Plano de Custos</a>; story points e atribuições de sprint do ZenHub.</p>
+    <p class="legenda-fonte">Os <strong>insumos crus</strong> que alimentam os cálculos acima, para conferir conta por conta. Constantes do <a href="https://fga-eps-mds.github.io/2026-1-AnatoQuizUp-Doc/processo/plano-de-custos/">Plano de Custos</a>; PV de S1–S5 dos <a href="https://fga-eps-mds.github.io/2026-1-AnatoQuizUp-Doc/processo/sprints/">relatórios de sprint (MkDocs)</a>, S6–S10 das atribuições de sprint do ZenHub; EV das issues fechadas (ZenHub).</p>
     <p style="margin:4px 0"><a class="btn-csv" href="datasets/projeto-evm.csv" download>EVM por sprint (CSV)</a><a class="btn-csv" href="datasets/projeto-insumos-sprint.csv" download>insumos por sprint (CSV)</a><a class="btn-csv" href="datasets/projeto-backlog.csv" download>backlog (CSV)</a></p>
     <div class="grade-2">
       <div>
@@ -95,7 +95,7 @@
         <table class="tabela" id="tabela-constantes"></table>
       </div>
       <div>
-        <h3>Backlog aberto com estimate (bruto)</h3>
+        <h3>Issues abertas — backlog em aberto (bruto do ZenHub)</h3>
         <table class="tabela" id="tabela-backlog"></table>
       </div>
     </div>
@@ -303,10 +303,11 @@ document.getElementById("tabela-constantes").innerHTML = `
     <tr><td><strong>BAC</strong> = ${reais(par.custoSemanaBaseline)} × ${par.totalSprints} sprints</td><td class="num"><strong>${reais(par.bac)}</strong></td></tr>
   </tbody>`;
 
-document.getElementById("tabela-backlog").innerHTML = `
-  <thead><tr><th>Issue (ZenHub)</th><th>Pipeline</th><th class="num">SP</th></tr></thead>
-  <tbody>${J.previsao.backlogAberto.map((i) => `<tr><td>${repoCurto(i.repo)}#${i.numero} — ${i.titulo.slice(0, 34)}</td><td><span class="selo amarelo">${i.pipeline ?? "—"}</span></td><td class="num">${i.estimate}</td></tr>`).join("")}
-    <tr><td colspan="2"><strong>Total backlog aberto com estimate</strong></td><td class="num"><strong>${J.previsao.backlogAbertoEstimadoSP} SP</strong></td></tr></tbody>`;
+document.getElementById("tabela-backlog").innerHTML = J.previsao.backlogAberto.length === 0
+  ? `<tbody><tr><td>Nenhuma issue de trabalho em aberto.</td></tr></tbody>`
+  : `<thead><tr><th>Issue (ZenHub)</th><th>Pipeline</th><th class="num">SP</th></tr></thead>
+  <tbody>${J.previsao.backlogAberto.map((i) => `<tr><td>${repoCurto(i.repo)}#${i.numero} — ${i.titulo.slice(0, 34)}</td><td><span class="selo amarelo">${i.pipeline ?? "—"}</span></td><td class="num">${i.estimate ?? "—"}</td></tr>`).join("")}
+    <tr><td colspan="2"><strong>${J.previsao.backlogAberto.length} issue(s) aberta(s) · estimado</strong></td><td class="num"><strong>${J.previsao.backlogAbertoEstimadoSP} SP</strong></td></tr></tbody>`;
 
 document.getElementById("tabela-brutos-sprint").innerHTML = `
   <thead><tr><th>Sprint</th><th class="num">Equipe</th><th class="num">PV (SP)</th><th>fonte PV</th><th class="num">EV (SP)</th><th class="num">AC (R$) = eq × ${fmt(par.custoPorPessoaSemana)} + ${fmt(par.custoFixoSemana)}</th></tr></thead>
@@ -314,7 +315,7 @@ document.getElementById("tabela-brutos-sprint").innerHTML = `
     <td><strong>${s.id}</strong>${s.emAndamento ? " *" : ""}</td>
     <td class="num">${s.equipe}</td>
     <td class="num">${s.planejadoSP ?? "—"}</td>
-    <td style="font-size:.8rem;color:var(--cinza)">${String(s.fontePlanejado).startsWith("doc") ? "relatório de sprint" : "atribuição ZenHub"}</td>
+    <td style="font-size:.8rem;color:var(--cinza)">${String(s.fontePlanejado).startsWith("doc") ? "relatório de sprint (MkDocs)" : "atribuição de sprint (ZenHub)"}</td>
     <td class="num">${s.entregueSP ?? "—"}</td>
     <td class="num">${reais(s.custoReal)}</td>
   </tr>`).join("")}</tbody>`;
