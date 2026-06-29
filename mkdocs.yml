@@ -73,6 +73,9 @@ nav:
           - Dashboard da Turma: arquitetura/api/dashboard-turma.md
           - Erros e Contratos: arquitetura/api/erros.md
 
+  - IA:
+      - Visao Geral: ia/index.md
+
   - Qualidade:
       - Métricas e Dashboard: qualidade/qualidade.md
       - Plano de Testes Funcionais: qualidade/testes.md
