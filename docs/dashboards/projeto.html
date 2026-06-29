@@ -16,7 +16,6 @@
     <a href="produto/">Produto</a>
     <a href="processo.html">Processo</a>
     <a href="projeto.html" class="ativa">Projeto</a>
-    <a href="canvas.html">Canvas</a>
   </nav>
 
   <div class="metodologia">
@@ -71,9 +70,25 @@
   </div>
 
 
+  <div class="faixa-titulo"><h2>PRP — Pontos Planejados por Release (e onde mudou)</h2></div>
+  <p class="subtitulo" style="margin-top:0">PRP = soma dos story points <strong>planejados</strong> nas sprints de cada release major. A equipe encolheu de <strong>12 → 10 → 9</strong> nas primeiras sprints (S2 e S3 ↓), reduzindo a capacidade — e o planejado das releases seguintes acompanhou.</p>
+  <div class="grade-2">
+    <div>
+      <h3>PRP por release — planejado × entregue (SP)</h3>
+      <div class="grafico"><canvas id="grafico-prp"></canvas></div>
+    </div>
+    <div>
+      <h3>Planejado e tamanho da equipe por sprint — onde o PRP mudou</h3>
+      <div class="grafico"><canvas id="grafico-prp-sprint"></canvas></div>
+    </div>
+  </div>
+  <table class="tabela" id="tabela-prp"></table>
+  <a class="btn-csv" href="datasets/projeto-prp.csv" download>baixar dataset PRP (CSV)</a>
+
   <div class="faixa-titulo"><h2>Dados brutos &amp; memória de cálculo — como verificar o EVM</h2></div>
   <div class="brutos">
     <p class="legenda-fonte">Os <strong>insumos crus</strong> que alimentam os cálculos acima, para conferir conta por conta. Constantes do <a href="https://fga-eps-mds.github.io/2026-1-AnatoQuizUp-Doc/processo/plano-de-custos/">Plano de Custos</a>; story points e atribuições de sprint do ZenHub.</p>
+    <p style="margin:4px 0"><a class="btn-csv" href="datasets/projeto-evm.csv" download>EVM por sprint (CSV)</a><a class="btn-csv" href="datasets/projeto-insumos-sprint.csv" download>insumos por sprint (CSV)</a><a class="btn-csv" href="datasets/projeto-backlog.csv" download>backlog (CSV)</a></p>
     <div class="grade-2">
       <div>
         <h3>Constantes de custo (Plano de Custos)</h3>
@@ -319,6 +334,35 @@ document.getElementById("memoria-calculo").innerHTML =
       <tr><td>VAC</td><td><code>BAC − EAC = ${reais(par.bac)} − ${reais(u.eac)}</code></td><td class="num">${reais(u.vac)}</td></tr>
     </tbody>
   </table>`;
+
+// ====== PRP — Pontos Planejados por Release ======
+const PRP = J.prp;
+new Chart(document.getElementById("grafico-prp"), {
+  type: "bar",
+  data: { labels: PRP.releases.map((r) => r.release), datasets: [
+    { label: "PRP planejado (SP)", data: PRP.releases.map((r) => r.prpSP), backgroundColor: AZUL_CLARO },
+    { label: "Entregue (SP)", data: PRP.releases.map((r) => r.entregueSP), backgroundColor: AZUL },
+  ] },
+  options: { maintainAspectRatio: false, plugins: { legend: { position: "bottom" }, tooltip: { callbacks: { afterLabel: (c) => { const r = PRP.releases[c.dataIndex]; return `equipe ${r.equipeInicial}→${r.equipeFinal} · SPI ${fmt(r.spiRelease)}`; } } } }, scales: { y: { title: { display: true, text: "Story points" } } } },
+});
+new Chart(document.getElementById("grafico-prp-sprint"), {
+  data: { labels: PRP.porSprint.map((s) => s.sprint + (s.mudouEquipe ? " ↓" : "")), datasets: [
+    { type: "bar", label: "Planejado (SP)", data: PRP.porSprint.map((s) => s.planejadoSP), backgroundColor: AZUL_CLARO, yAxisID: "y" },
+    { type: "line", label: "Equipe (pessoas)", data: PRP.porSprint.map((s) => s.equipe), borderColor: VERMELHO, backgroundColor: VERMELHO, tension: 0, yAxisID: "y2", pointRadius: 4 },
+  ] },
+  options: { maintainAspectRatio: false, plugins: { legend: { position: "bottom" } }, scales: { y: { position: "left", title: { display: true, text: "SP planejado" } }, y2: { position: "right", min: 0, max: 13, title: { display: true, text: "equipe" }, grid: { drawOnChartArea: false } } } },
+});
+document.getElementById("tabela-prp").innerHTML = `
+  <thead><tr><th>Release</th><th>Sprints</th><th class="num">Equipe</th><th class="num">PRP (SP plan.)</th><th class="num">Entregue (SP)</th><th class="num">SPI release</th></tr></thead>
+  <tbody>${PRP.releases.map((r) => `<tr>
+    <td><strong>${r.release}</strong> — ${r.nome.replace("Release Major", "Major")}</td>
+    <td>${r.sprints.join(", ")}</td>
+    <td class="num">${r.equipeInicial === r.equipeFinal ? r.equipeInicial : `${r.equipeInicial}→${r.equipeFinal}`}</td>
+    <td class="num"><strong>${r.prpSP}</strong></td>
+    <td class="num">${r.entregueSP}</td>
+    <td class="num">${fmt(r.spiRelease)}</td>
+  </tr>`).join("")}</tbody>
+  <tfoot><tr><td colspan="6" style="color:var(--cinza);font-size:.8rem">PRP = soma do PV(SP) das sprints da release. A equipe caiu 12 → 10 → 9 em S2–S3 (↓); a R3 foi planejada com bem menos pontos — efeito da equipe menor somado ao descopo do board.</td></tr></tfoot>`;
 </script>
 </body>
 </html>

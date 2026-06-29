@@ -1,0 +1,6 @@
+indicador,fator,assessed_metric,densidade,dado_bruto,formula,fonte
+Process Performance,Issues' Velocity,Team Throughput,0.962,128 / 133,issues resolvidas / total de issues,ZenHub + GitHub
+Process Performance,Issues' Velocity,Resolved Issues' Throughput,0.571,36 / 63,resolvidas em ≤ 14d / total resolvidas (fluxo de código),ZenHub (eventos)
+Process Performance,Issues' Velocity,Old Issues,0.2,1 / 5,issues abertas com idade ≤ 14d / total abertas,ZenHub
+Process Performance,Issues' Velocity,Bugs Ratio,1,5 / 5,issues abertas não-bug / total abertas,GitHub (labels)
+Process Performance,Development Speed,Commit review duration,0.865,77 / 89,PRs revisados em ≤ 2d / total de PRs fechados,GitHub (PRs)

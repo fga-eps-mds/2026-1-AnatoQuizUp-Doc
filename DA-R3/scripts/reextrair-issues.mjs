@@ -91,7 +91,8 @@ const merged = fresh.map((f) => {
     f.sprints = [...new Set([...(f.sprints || []), ...(o.sprints || [])])];
     if (o.possivelDuplicata) f.possivelDuplicata = true;
   }
-  if (abandonSet.has(key)) { f.abandonado = true; marcadosAbandono++; }
+  // só marca abandonado se o card CONTINUA fechado (os 3 de release foram reabertos)
+  if (abandonSet.has(key) && f.estado === "CLOSED") { f.abandonado = true; marcadosAbandono++; }
   mapVelho.delete(key);
   return f;
 });

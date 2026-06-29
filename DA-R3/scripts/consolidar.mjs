@@ -54,11 +54,11 @@ const SPRINTS = [
   { id: "S3", inicio: "2026-05-05", fim: "2026-05-11", equipe: 9, planejadoSP: 29, entregueSP: 26, fontePlanejado: "doc", fonteEntregue: "doc" },
   { id: "S4", inicio: "2026-05-12", fim: "2026-05-18", equipe: 9, planejadoSP: 25, entregueSP: 14, fontePlanejado: "doc", fonteEntregue: "doc" },
   { id: "S5", inicio: "2026-05-19", fim: "2026-05-25", equipe: 9, planejadoSP: 30, entregueSP: null, fontePlanejado: "doc", fonteEntregue: "zenhub" },
-  { id: "S6", inicio: "2026-05-26", fim: "2026-06-01", equipe: 8, planejadoSP: null, entregueSP: null, fontePlanejado: "zenhub", fonteEntregue: "zenhub" },
-  { id: "S7", inicio: "2026-06-02", fim: "2026-06-08", equipe: 8, planejadoSP: null, entregueSP: null, fontePlanejado: "zenhub", fonteEntregue: "zenhub" },
-  { id: "S8", inicio: "2026-06-09", fim: "2026-06-15", equipe: 8, planejadoSP: null, entregueSP: null, fontePlanejado: "zenhub", fonteEntregue: "zenhub" },
-  { id: "S9", inicio: "2026-06-16", fim: "2026-06-22", equipe: 8, planejadoSP: null, entregueSP: null, fontePlanejado: "futuro", fonteEntregue: "futuro" },
-  { id: "S10", inicio: "2026-06-23", fim: "2026-06-29", equipe: 8, planejadoSP: null, entregueSP: null, fontePlanejado: "futuro", fonteEntregue: "futuro" },
+  { id: "S6", inicio: "2026-05-26", fim: "2026-06-01", equipe: 9, planejadoSP: null, entregueSP: null, fontePlanejado: "zenhub", fonteEntregue: "zenhub" },
+  { id: "S7", inicio: "2026-06-02", fim: "2026-06-08", equipe: 9, planejadoSP: null, entregueSP: null, fontePlanejado: "zenhub", fonteEntregue: "zenhub" },
+  { id: "S8", inicio: "2026-06-09", fim: "2026-06-15", equipe: 9, planejadoSP: null, entregueSP: null, fontePlanejado: "zenhub", fonteEntregue: "zenhub" },
+  { id: "S9", inicio: "2026-06-16", fim: "2026-06-22", equipe: 9, planejadoSP: null, entregueSP: null, fontePlanejado: "futuro", fonteEntregue: "futuro" },
+  { id: "S10", inicio: "2026-06-23", fim: "2026-06-29", equipe: 9, planejadoSP: null, entregueSP: null, fontePlanejado: "futuro", fonteEntregue: "futuro" },
 ];
 
 // Plano de custos (docs/processo/plano-de-custos.md), carga DOCUMENTADA de 14 h/sem
@@ -578,6 +578,40 @@ function coberturaNaData(dataIso) {
 }
 const qualidadeVelocidade = sprintsCalc.filter((s) => s.decorrida).map((s) => ({ sprint: s.id, entregueSP: s.entregueSP, coberturaFim: coberturaNaData(s.fim) }));
 
+// ===== PRP — Pontos Planejados por Release =====
+// Agrupa o PV(SP) das sprints nas 3 releases major e evidencia ONDE o PRP mudou
+// (a equipe encolheu de sprint a sprint, reduzindo a capacidade e o planejado).
+const RELEASES_MAJOR = [
+  { release: "R1", nome: "Release Major 1", prazo: "2026-04-27", ate: "2026-04-27" },
+  { release: "R2", nome: "Release Major 2", prazo: "2026-05-25", ate: "2026-05-25" },
+  { release: "R3", nome: "Release Major 3", prazo: "2026-06-29", ate: "2026-06-29" },
+];
+const releaseDaSprint = (s) =>
+  new Date(s.fim) <= new Date("2026-04-27") ? "R1"
+  : new Date(s.fim) <= new Date("2026-05-25") ? "R2" : "R3";
+// PRP por sprint (com equipe) — base do "onde mudou": cada queda de equipe muda a capacidade
+const prpPorSprint = sprintsCalc
+  .filter((s) => s.decorrida || s.emAndamento)
+  .map((s, i, arr) => ({
+    sprint: s.id, release: releaseDaSprint(s), equipe: s.equipe,
+    planejadoSP: s.planejadoSP ?? 0, entregueSP: s.entregueSP ?? 0,
+    mudouEquipe: i > 0 && s.equipe !== arr[i - 1].equipe, // marca a sprint onde a equipe caiu
+  }));
+const prpReleases = RELEASES_MAJOR.map((r) => {
+  const ss = sprintsCalc.filter((s) => (s.decorrida || s.emAndamento) && releaseDaSprint(s) === r.release);
+  const eq = ss.map((s) => s.equipe);
+  const prp = ss.reduce((a, s) => a + (s.planejadoSP ?? 0), 0);
+  const entregue = ss.reduce((a, s) => a + (s.entregueSP ?? 0), 0);
+  return {
+    release: r.release, nome: r.nome, prazo: r.prazo,
+    sprints: ss.map((s) => s.id),
+    equipeInicial: eq[0] ?? null, equipeFinal: eq.at(-1) ?? null,
+    equipeMin: eq.length ? Math.min(...eq) : null, equipeMax: eq.length ? Math.max(...eq) : null,
+    prpSP: prp, entregueSP: entregue,
+    spiRelease: prp ? arred(entregue / prp, 2) : null,
+  };
+});
+
 const projeto = {
   parametros: {
     custoPorPessoaSemana: arred(CUSTO_POR_PESSOA_SEMANA, 2),
@@ -602,6 +636,7 @@ const projeto = {
   custoPorSpSprint,
   monteCarlo: monte,
   qualidadeVelocidade,
+  prp: { releases: prpReleases, porSprint: prpPorSprint },
   releases: RELEASES,
 };
 
@@ -616,8 +651,8 @@ const consolidado = {
     "Processo: lead time = criação→fechamento; cycle time = 1ª entrada em In Progress→fechamento; 'fluxo de código' = issues que passaram por In Progress.",
     "Processo: limites WIP pela Lei de Little (WIP = TP × LT) com TP das últimas 4 semanas e margem de 50% (Brechner).",
     "Projeto: EVM ágil em story points (mesmo enquadramento do exemplo do professor) — PV(SP) = planejado acumulado; EV(SP) = entregue acumulado; SPI = EV/PV em SP. Planejado/entregue S1–S4 dos relatórios de sprint publicados; S5+ medido do ZenHub.",
-    "Projeto: custo em R$ derivado do Plano de Custos para o CPI — PV(R$) = custo baseline (12 pessoas, R$ 3.907,90/sem) × sprints decorridas; EV(R$) = SPI × PV(R$); AC(R$) = custo real incorrido (equipe efetiva 12→10→9→8 × R$ 325,13/pessoa, carga de 14 h/sem); CPI = EV(R$)/AC(R$).",
-    "Projeto: o baseline do PLANO é a equipe completa de 12 (início do semestre). O time não registra horas reais, então AC é aproximado pela equipe EFETIVA de cada sprint. Como a equipe encolheu de 12 para ~8, o AC fica abaixo do PV: o projeto gasta MENOS que o orçado (CPI > 1, sob orçamento) mas entrega MENOS escopo que o planejado (SPI < 1) — dois desvios independentes, que é justamente o que o CPI≠SPI passa a revelar.",
+    "Projeto: custo em R$ derivado do Plano de Custos para o CPI — PV(R$) = custo baseline (12 pessoas, R$ 3.907,90/sem) × sprints decorridas; EV(R$) = SPI × PV(R$); AC(R$) = custo real incorrido (equipe efetiva 12→10→9 × R$ 325,13/pessoa, carga de 14 h/sem); CPI = EV(R$)/AC(R$).",
+    "Projeto: o baseline do PLANO é a equipe completa de 12 (início do semestre). O time não registra horas reais, então AC é aproximado pela equipe EFETIVA de cada sprint. Como a equipe encolheu de 12 para 9, o AC fica abaixo do PV: o projeto gasta MENOS que o orçado (CPI > 1, sob orçamento) mas entrega MENOS escopo que o planejado (SPI < 1) — dois desvios independentes, que é justamente o que o CPI≠SPI passa a revelar.",
     "Projeto: BAC = custo semanal baseline (12 pessoas, R$ 3.907,90) × PS = 10 sprints (S1 19/04 → S10 29/06) = R$ 39.079,00; EAC = BAC/CPI; VAC = BAC − EAC.",
     `Qualidade dos dados: ${higiene.semEstimate}/${higiene.totalIssues} issues sem estimate; ${higiene.semResponsavel} sem responsável; ${higiene.fechadasEmLote1206} fechadas em lote em 12/06 (limpeza de board) — análise crítica no notebook.`,
   ],
@@ -635,6 +670,42 @@ const DIR_DASH = join(RAIZ_REPO, "docs", "dashboards");
 await mkdir(DIR_DASH, { recursive: true });
 await writeFile(join(DIR_DASH, "dados-consolidados.js"), `window.DADOS = ${JSON.stringify(consolidado)};\n`, "utf8");
 console.log("docs/dashboards/dados-consolidados.js gerado.");
+
+// ----- Datasets CSV (dados brutos baixáveis; espelham as tabelas dos dashboards)
+const DIR_DATASETS = join(DIR_DASH, "datasets");
+await mkdir(DIR_DATASETS, { recursive: true });
+const toCsv = (headers, rows) => {
+  const esc = (v) => {
+    const s = v == null ? "" : String(v);
+    return /[",\n;]/.test(s) ? `"${s.replace(/"/g, '""')}"` : s;
+  };
+  return [headers.join(","), ...rows.map((r) => r.map(esc).join(","))].join("\n") + "\n";
+};
+const escreverCsv = async (nome, headers, rows) => {
+  await writeFile(join(DIR_DATASETS, nome), toCsv(headers, rows), "utf8");
+  console.log(`  dataset: datasets/${nome} (${rows.length} linhas)`);
+};
+const sprintsAtivas = sprintsCalc.filter((s) => s.decorrida || s.emAndamento);
+
+await escreverCsv("projeto-evm.csv",
+  ["sprint", "equipe", "pv_sp", "ev_sp", "pv_reais", "ev_reais", "ac_reais", "spi", "cpi", "eac", "vac"],
+  serieEvm.map((e) => {
+    const s = sprintsCalc.find((x) => x.id === e.sprint);
+    return [e.sprint, s?.equipe, e.pvPts, e.evPts, e.pvReais, e.evReais, e.acReais, e.spi, e.cpi, e.eac, e.vac];
+  }));
+await escreverCsv("projeto-insumos-sprint.csv",
+  ["sprint", "inicio", "fim", "equipe", "planejado_sp", "fonte_planejado", "entregue_sp", "ac_reais"],
+  sprintsAtivas.map((s) => [s.id, s.inicio, s.fim, s.equipe, s.planejadoSP, s.fontePlanejado, s.entregueSP, s.custoReal]));
+await escreverCsv("projeto-backlog.csv",
+  ["repo", "numero", "titulo", "estimate", "pipeline"],
+  backlogAbertoItens.map((i) => [i.repo, i.numero, i.titulo, i.estimate, i.pipeline]));
+await escreverCsv("projeto-prp.csv",
+  ["release", "nome", "prazo", "sprints", "equipe_inicial", "equipe_final", "prp_sp", "entregue_sp", "spi_release"],
+  prpReleases.map((r) => [r.release, r.nome, r.prazo, r.sprints.join(" "), r.equipeInicial, r.equipeFinal, r.prpSP, r.entregueSP, r.spiRelease]));
+await escreverCsv("processo-qrapids.csv",
+  ["indicador", "fator", "assessed_metric", "densidade", "dado_bruto", "formula", "fonte"],
+  qrapids.fatores.flatMap((f) => f.metricas.map((m) => [qrapids.indicador, f.fator, m.metrica, m.densidade, m.bruto, m.formula, m.fonte])));
+console.log("datasets CSV gerados em docs/dashboards/datasets/.");
 console.log("\n== Resumo ==");
 console.log("Qualidade do Produto (global):", produto.global.qualidadeProduto);
 console.log("Densidades globais:", JSON.stringify(produto.global.densidades));

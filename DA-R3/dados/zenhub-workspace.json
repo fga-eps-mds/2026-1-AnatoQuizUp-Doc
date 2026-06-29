@@ -1,5 +1,5 @@
 {
- "extraidoEm": "2026-06-27T12:58:25.267Z",
+ "extraidoEm": "2026-06-29T01:33:50.840Z",
  "id": "69bc08ebd4e9ec001c0c3229",
  "name": "2026-1-AnatoQuizUp",
  "pipelines": [
@@ -157,7 +157,7 @@
     "name": "Sprint: Jun 21 - Jun 27, 2026",
     "startAt": "2026-06-21T03:59:00Z",
     "endAt": "2026-06-28T02:59:00Z",
-    "state": "OPEN",
+    "state": "CLOSED",
     "totalPoints": 16,
     "completedPoints": 5,
     "closedIssuesCount": 17
@@ -168,9 +168,9 @@
     "startAt": "2026-06-28T03:59:00Z",
     "endAt": "2026-07-05T02:59:00Z",
     "state": "OPEN",
-    "totalPoints": 0,
-    "completedPoints": 0,
-    "closedIssuesCount": 0
+    "totalPoints": 11,
+    "completedPoints": 11,
+    "closedIssuesCount": 18
    },
    {
     "id": "Z2lkOi8vcmFwdG9yL1NwcmludC81MDEzNzcy",
@@ -227,6 +227,16 @@
     "name": "Sprint: Aug 9 - Aug 15, 2026",
     "startAt": "2026-08-09T03:59:00Z",
     "endAt": "2026-08-16T02:59:00Z",
+    "state": "OPEN",
+    "totalPoints": 0,
+    "completedPoints": 0,
+    "closedIssuesCount": 0
+   },
+   {
+    "id": "Z2lkOi8vcmFwdG9yL1NwcmludC81MTc1OTQ1",
+    "name": "Sprint: Aug 16 - Aug 22, 2026",
+    "startAt": "2026-08-16T03:59:00Z",
+    "endAt": "2026-08-23T02:59:00Z",
     "state": "OPEN",
     "totalPoints": 0,
     "completedPoints": 0,

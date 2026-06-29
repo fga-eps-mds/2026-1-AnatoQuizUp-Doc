@@ -1,5 +1,5 @@
 {
- "extraidoEm": "2026-06-27T12:58:29.249Z",
+ "extraidoEm": "2026-06-29T01:33:54.738Z",
  "2026-1-AnatoQuizUp-Doc": [
   {
    "numero": 50,
@@ -7,7 +7,7 @@
    "estado": "closed",
    "ehPr": false,
    "criadaEm": "2026-06-26T03:27:10Z",
-   "fechadaEm": "2026-06-27T12:53:26Z",
+   "fechadaEm": "2026-06-28T23:30:10Z",
    "mergeadaEm": null,
    "labels": [
     "bug",
@@ -144,10 +144,10 @@
   {
    "numero": 42,
    "titulo": "[BUG] Palavras-chave das Questões Não Ficam Salvas",
-   "estado": "open",
+   "estado": "closed",
    "ehPr": false,
    "criadaEm": "2026-05-25T02:08:57Z",
-   "fechadaEm": null,
+   "fechadaEm": "2026-06-29T00:58:37Z",
    "mergeadaEm": null,
    "labels": [
     "bug"
@@ -163,10 +163,10 @@
   {
    "numero": 41,
    "titulo": "[BUG] Pesquisa de Questões Bloqueada",
-   "estado": "open",
+   "estado": "closed",
    "ehPr": false,
    "criadaEm": "2026-05-25T02:06:12Z",
-   "fechadaEm": null,
+   "fechadaEm": "2026-06-29T00:58:36Z",
    "mergeadaEm": null,
    "labels": [
     "bug"
@@ -180,10 +180,10 @@
   {
    "numero": 40,
    "titulo": "[BUG] Cadastro Aluno - Campo \"nome\" aceitando caracteres especiais",
-   "estado": "open",
+   "estado": "closed",
    "ehPr": false,
    "criadaEm": "2026-05-24T23:29:27Z",
-   "fechadaEm": null,
+   "fechadaEm": "2026-06-29T00:44:28Z",
    "mergeadaEm": null,
    "labels": [
     "bug"
@@ -199,10 +199,10 @@
   {
    "numero": 39,
    "titulo": "[BUG] Cadastro Professor - Campo \"nome\" aceitando caracteres especiais",
-   "estado": "open",
+   "estado": "closed",
    "ehPr": false,
    "criadaEm": "2026-05-24T23:29:05Z",
-   "fechadaEm": null,
+   "fechadaEm": "2026-06-29T00:44:29Z",
    "mergeadaEm": null,
    "labels": [
     "bug"
@@ -218,10 +218,10 @@
   {
    "numero": 38,
    "titulo": "[AI] Documentação, débitos e roadmap para continuidade do RAG",
-   "estado": "open",
+   "estado": "closed",
    "ehPr": false,
    "criadaEm": "2026-05-24T18:48:47Z",
-   "fechadaEm": null,
+   "fechadaEm": "2026-06-29T00:58:10Z",
    "mergeadaEm": null,
    "labels": [],
    "responsaveis": [
@@ -290,10 +290,10 @@
   {
    "numero": 34,
    "titulo": "[US] Lista de Questões (Aluno)",
-   "estado": "open",
+   "estado": "closed",
    "ehPr": false,
    "criadaEm": "2026-05-24T14:32:17Z",
-   "fechadaEm": null,
+   "fechadaEm": "2026-06-29T00:55:10Z",
    "mergeadaEm": null,
    "labels": [
     "US"
@@ -545,10 +545,10 @@
   {
    "numero": 20,
    "titulo": "docs(produto): adiciona guia de identidade visual e atualiza yml",
-   "estado": "open",
+   "estado": "closed",
    "ehPr": true,
    "criadaEm": "2026-05-04T15:55:59Z",
-   "fechadaEm": null,
+   "fechadaEm": "2026-06-29T00:55:12Z",
    "mergeadaEm": null,
    "labels": [],
    "responsaveis": [
@@ -748,6 +748,68 @@
   }
  ],
  "2026-1-AnatoQuizUp-Web": [
+  {
+   "numero": 80,
+   "titulo": "Test/e2e",
+   "estado": "closed",
+   "ehPr": true,
+   "criadaEm": "2026-06-29T00:03:21Z",
+   "fechadaEm": "2026-06-29T00:39:28Z",
+   "mergeadaEm": "2026-06-29T00:39:27Z",
+   "labels": [],
+   "responsaveis": [
+    "Joa0V"
+   ],
+   "autor": "Joa0V",
+   "milestone": null,
+   "temDescricao": true,
+   "comentarios": 2
+  },
+  {
+   "numero": 79,
+   "titulo": "docs: comenta a base de código do Web (densidade de comentários)",
+   "estado": "closed",
+   "ehPr": true,
+   "criadaEm": "2026-06-28T23:00:36Z",
+   "fechadaEm": "2026-06-28T23:05:10Z",
+   "mergeadaEm": "2026-06-28T23:05:10Z",
+   "labels": [],
+   "responsaveis": [],
+   "autor": "GenilsonJrs",
+   "milestone": null,
+   "temDescricao": true,
+   "comentarios": 2
+  },
+  {
+   "numero": 78,
+   "titulo": "Fix/ajustes finais",
+   "estado": "closed",
+   "ehPr": true,
+   "criadaEm": "2026-06-28T20:26:24Z",
+   "fechadaEm": "2026-06-28T23:30:08Z",
+   "mergeadaEm": "2026-06-28T23:30:08Z",
+   "labels": [],
+   "responsaveis": [],
+   "autor": "caiobsantos",
+   "milestone": null,
+   "temDescricao": true,
+   "comentarios": 2
+  },
+  {
+   "numero": 77,
+   "titulo": "fix(questoes): corrigir busca e preservar foco nos filtros",
+   "estado": "closed",
+   "ehPr": true,
+   "criadaEm": "2026-06-28T18:44:51Z",
+   "fechadaEm": "2026-06-28T23:23:32Z",
+   "mergeadaEm": "2026-06-28T23:23:32Z",
+   "labels": [],
+   "responsaveis": [],
+   "autor": "trindadea",
+   "milestone": null,
+   "temDescricao": true,
+   "comentarios": 2
+  },
   {
    "numero": 76,
    "titulo": "fix(questoes): envia e le palavras-chave das questoes",
@@ -1698,10 +1760,10 @@
   {
    "numero": 18,
    "titulo": "[Frontend] Tela de erro 404 e fallback",
-   "estado": "open",
+   "estado": "closed",
    "ehPr": false,
    "criadaEm": "2026-04-18T12:35:43Z",
-   "fechadaEm": null,
+   "fechadaEm": "2026-06-29T00:54:51Z",
    "mergeadaEm": null,
    "labels": [
     "frontend",
@@ -1964,6 +2026,51 @@
   }
  ],
  "2026-1-AnatoQuizUp-BFF": [
+  {
+   "numero": 25,
+   "titulo": "test(e2e): Adicionando dependencias necessarias aos testes End-to-End",
+   "estado": "closed",
+   "ehPr": true,
+   "criadaEm": "2026-06-29T00:27:19Z",
+   "fechadaEm": "2026-06-29T00:39:35Z",
+   "mergeadaEm": "2026-06-29T00:39:35Z",
+   "labels": [],
+   "responsaveis": [],
+   "autor": "Joa0V",
+   "milestone": null,
+   "temDescricao": true,
+   "comentarios": 1
+  },
+  {
+   "numero": 24,
+   "titulo": "teste CI metricas",
+   "estado": "closed",
+   "ehPr": true,
+   "criadaEm": "2026-06-28T23:52:48Z",
+   "fechadaEm": "2026-06-28T23:54:26Z",
+   "mergeadaEm": "2026-06-28T23:54:26Z",
+   "labels": [],
+   "responsaveis": [],
+   "autor": "EhOBruno",
+   "milestone": null,
+   "temDescricao": false,
+   "comentarios": 1
+  },
+  {
+   "numero": 23,
+   "titulo": "docs: comenta a base de codigo da BFF (densidade de comentarios)",
+   "estado": "closed",
+   "ehPr": true,
+   "criadaEm": "2026-06-28T22:54:37Z",
+   "fechadaEm": "2026-06-28T22:58:44Z",
+   "mergeadaEm": "2026-06-28T22:58:44Z",
+   "labels": [],
+   "responsaveis": [],
+   "autor": "GenilsonJrs",
+   "milestone": null,
+   "temDescricao": true,
+   "comentarios": 1
+  },
   {
    "numero": 22,
    "titulo": "feat(ranking): orquestracao do ranking (geral, amigos, turma, lista)",
@@ -2299,6 +2406,36 @@
  ],
  "2026-1-AnatoQuizUp-Usuario-Service": [
   {
+   "numero": 122,
+   "titulo": "Test/e2e",
+   "estado": "closed",
+   "ehPr": true,
+   "criadaEm": "2026-06-29T00:27:37Z",
+   "fechadaEm": "2026-06-29T00:39:47Z",
+   "mergeadaEm": "2026-06-29T00:39:47Z",
+   "labels": [],
+   "responsaveis": [],
+   "autor": "Joa0V",
+   "milestone": null,
+   "temDescricao": true,
+   "comentarios": 1
+  },
+  {
+   "numero": 121,
+   "titulo": "docs: comenta a base de código do Usuario-Service (densidade de comentários)",
+   "estado": "closed",
+   "ehPr": true,
+   "criadaEm": "2026-06-28T23:08:41Z",
+   "fechadaEm": "2026-06-28T23:13:16Z",
+   "mergeadaEm": "2026-06-28T23:13:16Z",
+   "labels": [],
+   "responsaveis": [],
+   "autor": "GenilsonJrs",
+   "milestone": null,
+   "temDescricao": true,
+   "comentarios": 1
+  },
+  {
    "numero": 120,
    "titulo": "feat(ranking): alunos visiveis e visibilidade no resumo de amigo",
    "estado": "closed",
@@ -2331,11 +2468,11 @@
   {
    "numero": 118,
    "titulo": "Test/teste integracao",
-   "estado": "open",
+   "estado": "closed",
    "ehPr": true,
    "criadaEm": "2026-06-13T20:30:59Z",
-   "fechadaEm": null,
-   "mergeadaEm": null,
+   "fechadaEm": "2026-06-28T23:42:10Z",
+   "mergeadaEm": "2026-06-28T23:42:10Z",
    "labels": [],
    "responsaveis": [],
    "autor": "pkbceira03",
@@ -2825,10 +2962,10 @@
   {
    "numero": 88,
    "titulo": "[US] Loja Virtual",
-   "estado": "open",
+   "estado": "closed",
    "ehPr": false,
    "criadaEm": "2026-05-03T18:42:32Z",
-   "fechadaEm": null,
+   "fechadaEm": "2026-06-29T00:54:50Z",
    "mergeadaEm": null,
    "labels": [
     "US"
@@ -3040,10 +3177,10 @@
   {
    "numero": 76,
    "titulo": "[US] Sistema de Conquistas e Marcos (Badges e Troféus)",
-   "estado": "open",
+   "estado": "closed",
    "ehPr": false,
    "criadaEm": "2026-05-03T18:42:13Z",
-   "fechadaEm": null,
+   "fechadaEm": "2026-06-28T22:29:17Z",
    "mergeadaEm": null,
    "labels": [
     "US"
@@ -4326,6 +4463,66 @@
   }
  ],
  "2026-1-AnatoQuizUp-Quiz-Service": [
+  {
+   "numero": 26,
+   "titulo": "Test/e2e",
+   "estado": "closed",
+   "ehPr": true,
+   "criadaEm": "2026-06-29T00:27:28Z",
+   "fechadaEm": "2026-06-29T00:39:41Z",
+   "mergeadaEm": "2026-06-29T00:39:41Z",
+   "labels": [],
+   "responsaveis": [],
+   "autor": "Joa0V",
+   "milestone": null,
+   "temDescricao": true,
+   "comentarios": 1
+  },
+  {
+   "numero": 25,
+   "titulo": "teste CI metricas",
+   "estado": "closed",
+   "ehPr": true,
+   "criadaEm": "2026-06-29T00:06:55Z",
+   "fechadaEm": "2026-06-29T00:09:26Z",
+   "mergeadaEm": "2026-06-29T00:09:26Z",
+   "labels": [],
+   "responsaveis": [],
+   "autor": "EhOBruno",
+   "milestone": null,
+   "temDescricao": true,
+   "comentarios": 1
+  },
+  {
+   "numero": 24,
+   "titulo": "docs: comenta a base de código do Quiz-Service (densidade de comentários)",
+   "estado": "closed",
+   "ehPr": true,
+   "criadaEm": "2026-06-28T23:03:06Z",
+   "fechadaEm": "2026-06-28T23:06:56Z",
+   "mergeadaEm": "2026-06-28T23:06:56Z",
+   "labels": [],
+   "responsaveis": [],
+   "autor": "GenilsonJrs",
+   "milestone": null,
+   "temDescricao": true,
+   "comentarios": 1
+  },
+  {
+   "numero": 23,
+   "titulo": "test: adiciona teste de integração",
+   "estado": "closed",
+   "ehPr": true,
+   "criadaEm": "2026-06-28T17:00:21Z",
+   "fechadaEm": "2026-06-28T22:57:37Z",
+   "mergeadaEm": "2026-06-28T22:57:37Z",
+   "labels": [],
+   "responsaveis": [],
+   "autor": "pkbceira03",
+   "milestone": null,
+   "temDescricao": true,
+   "comentarios": 1
+  },
   {
    "numero": 22,
    "titulo": "fix(questoes): persiste e retorna palavras-chave das questoes",

@@ -19,7 +19,7 @@ O time aplica uma metodologia **híbrida Scrum + Kanban (Scrumban)**:
 
 | Característica do projeto | Implicação na metodologia |
 |---|---|
-| Time acadêmico (8 integrantes ativos), 100% remoto, com agendas heterogêneas | O Scrum puro exigiria sincronia diária inviável; o Kanban puro perderia o ritmo necessário para uma disciplina com prazos fechados. Scrumban concilia ritmo previsível com flexibilidade assíncrona. |
+| Time acadêmico (9 integrantes), 100% remoto, com agendas heterogêneas | O Scrum puro exigiria sincronia diária inviável; o Kanban puro perderia o ritmo necessário para uma disciplina com prazos fechados. Scrumban concilia ritmo previsível com flexibilidade assíncrona. |
 | Múltiplas frentes paralelas (backend, frontend, documentação e DevOps) com dependências cruzadas | Quadro Kanban único dá visibilidade a bloqueios entre frentes; sprints curtas forçam integração frequente. |
 | Stakeholders externos (Product Owners) com janelas de validação restritas | Sprints curtas (1 semana) garantem ciclos de feedback rápidos, mantendo o PO próximo do produto. |
 | Objetivo pedagógico de exercitar todos os papéis ágeis | Rotatividade de funções a cada sprint é compatível com o caráter incremental do Scrumban. |
@@ -71,9 +71,9 @@ Um membro do time assume o papel de SM por **duas sprints consecutivas** (≈ 2 
 - Mediar a comunicação com os POs.
 - Garantir que o quadro Kanban (ZenHub) reflita o estado real do trabalho.
 
-### Equipe de desenvolvimento (8 integrantes, rotação total por sprint)
+### Equipe de desenvolvimento (9 integrantes, rotação total por sprint)
 
-A cada sprint, todos os 8 integrantes podem migrar entre as frentes técnicas:
+A cada sprint, todos os 9 integrantes podem migrar entre as frentes técnicas:
 
 - **Frente Frontend** (React/Vite/FSD)
 - **Frente Backend** (Node/Express/Prisma)
@@ -82,7 +82,7 @@ A cada sprint, todos os 8 integrantes podem migrar entre as frentes técnicas:
 
 A rotação total é deliberadamente pedagógica: ao final da release, todos os integrantes terão tido contato com todas as frentes, evitando silos de conhecimento e cumprindo o objetivo formativo da disciplina EPS.
 
-> A equipe iniciou o projeto com 12 integrantes e, ao longo das releases (12 → 10 → 9 → 8), passou a contar com 8 integrantes ativos. A rotação de papéis e o pareamento foram reforçados para absorver a redução sem criar silos de conhecimento.
+> A equipe iniciou o projeto com 12 integrantes e, ao longo das releases (12 → 10 → 9), passou a contar com 9 integrantes ativos. A rotação de papéis e o pareamento foram reforçados para absorver a redução sem criar silos de conhecimento.
 
 ---
 
@@ -150,4 +150,3 @@ Os documentos abaixo descrevem **métodos** específicos e padrões técnicos in
 | 03/05/2026 | 2.0 | Reescrita com foco em metodologia (Scrumban, valores ágeis, papéis, cadência); práticas operacionais movidas para documentos próprios | [Miguel Moreira](https://github.com/miguelmsoliveira) |
 | 04/05/2026 | 2.1 | Adição do XP nas abordagens de trabalho | [Genilson Junior](https://github.com/GenilsonJrs) |
 | 02/06/2026 | 2.2 | Atualização da composição da equipe (12 → 9 integrantes), ajuste das frentes de trabalho e detalhamento da daily assíncrona | [Miguel Moreira](https://github.com/EhOMiguel) |
-| 27/06/2026 | 2.3 | Composição final da equipe atualizada para 8 integrantes ativos (12 → 10 → 9 → 8), alinhada ao EVM e às contribuições registradas | [Miguel Moreira](https://github.com/EhOMiguel) |

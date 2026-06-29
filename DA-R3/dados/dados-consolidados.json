@@ -1,5 +1,5 @@
 {
- "geradoEm": "2026-06-27T19:08:42.650Z",
+ "geradoEm": "2026-06-29T01:43:09.069Z",
  "premissas": [
   "Produto: densidades Q-Rapids calculadas por arquivo (SonarCloud component_tree) com faixas ideais e pesos do Plano de Qualidade (complexidade 35%, comentários 10%, duplicação 25%, cobertura 30%).",
   "Produto: Bloqueios = issues com descrição / total (GitHub, repos públicos); Prontidão = builds com sucesso / concluídas (último export de runs por repo).",
@@ -7,8 +7,8 @@
   "Processo: lead time = criação→fechamento; cycle time = 1ª entrada em In Progress→fechamento; 'fluxo de código' = issues que passaram por In Progress.",
   "Processo: limites WIP pela Lei de Little (WIP = TP × LT) com TP das últimas 4 semanas e margem de 50% (Brechner).",
   "Projeto: EVM ágil em story points (mesmo enquadramento do exemplo do professor) — PV(SP) = planejado acumulado; EV(SP) = entregue acumulado; SPI = EV/PV em SP. Planejado/entregue S1–S4 dos relatórios de sprint publicados; S5+ medido do ZenHub.",
-  "Projeto: custo em R$ derivado do Plano de Custos para o CPI — PV(R$) = custo baseline (12 pessoas, R$ 3.907,90/sem) × sprints decorridas; EV(R$) = SPI × PV(R$); AC(R$) = custo real incorrido (equipe efetiva 12→10→9→8 × R$ 325,13/pessoa, carga de 14 h/sem); CPI = EV(R$)/AC(R$).",
-  "Projeto: o baseline do PLANO é a equipe completa de 12 (início do semestre). O time não registra horas reais, então AC é aproximado pela equipe EFETIVA de cada sprint. Como a equipe encolheu de 12 para ~8, o AC fica abaixo do PV: o projeto gasta MENOS que o orçado (CPI > 1, sob orçamento) mas entrega MENOS escopo que o planejado (SPI < 1) — dois desvios independentes, que é justamente o que o CPI≠SPI passa a revelar.",
+  "Projeto: custo em R$ derivado do Plano de Custos para o CPI — PV(R$) = custo baseline (12 pessoas, R$ 3.907,90/sem) × sprints decorridas; EV(R$) = SPI × PV(R$); AC(R$) = custo real incorrido (equipe efetiva 12→10→9 × R$ 325,13/pessoa, carga de 14 h/sem); CPI = EV(R$)/AC(R$).",
+  "Projeto: o baseline do PLANO é a equipe completa de 12 (início do semestre). O time não registra horas reais, então AC é aproximado pela equipe EFETIVA de cada sprint. Como a equipe encolheu de 12 para 9, o AC fica abaixo do PV: o projeto gasta MENOS que o orçado (CPI > 1, sob orçamento) mas entrega MENOS escopo que o planejado (SPI < 1) — dois desvios independentes, que é justamente o que o CPI≠SPI passa a revelar.",
   "Projeto: BAC = custo semanal baseline (12 pessoas, R$ 3.907,90) × PS = 10 sprints (S1 19/04 → S10 29/06) = R$ 39.079,00; EAC = BAC/CPI; VAC = BAC − EAC.",
   "Qualidade dos dados: 101/183 issues sem estimate; 58 sem responsável; 6 fechadas em lote em 12/06 (limpeza de board) — análise crítica no notebook."
  ],
@@ -16,14 +16,14 @@
   "porRepo": {
    "Usuario-Service": {
     "medidas": {
-     "coverage": 96.5,
+     "coverage": 96.9,
      "complexity": 437,
      "reliability_rating": 1,
      "code_smells": 14,
-     "duplicated_lines_density": 0.9,
+     "duplicated_lines_density": 1.1,
      "functions": 230,
      "security_rating": 1,
-     "comment_lines_density": 0.8,
+     "comment_lines_density": 21.7,
      "sqale_index": 103,
      "sqale_rating": 1,
      "bugs": 0,
@@ -34,39 +34,39 @@
     },
     "densidades": {
      "complexidade": 1,
-     "comentarios": 0.029411764705882353,
+     "comentarios": 0.5392156862745098,
      "duplicacao": 0.9803921568627451,
      "cobertura": 0.94,
      "totalArquivos": 102
     },
-    "qualidadeProduto": 0.88
+    "qualidadeProduto": 0.93
    },
    "Quiz-Service": {
     "medidas": {
-     "coverage": 92.6,
+     "coverage": 95,
      "complexity": 753,
      "reliability_rating": 1,
      "code_smells": 68,
-     "duplicated_lines_density": 1.1,
+     "duplicated_lines_density": 1,
      "functions": 413,
      "security_rating": 1,
-     "comment_lines_density": 0.7,
+     "comment_lines_density": 20.6,
      "sqale_index": 427,
      "sqale_rating": 1,
      "bugs": 0,
      "cognitive_complexity": 359,
-     "ncloc": 7294,
+     "ncloc": 7296,
      "vulnerabilities": 0,
-     "files": 112
+     "files": 114
     },
     "densidades": {
      "complexidade": 1,
-     "comentarios": 0.026785714285714284,
-     "duplicacao": 0.9910714285714286,
-     "cobertura": 0.8166666666666667,
-     "totalArquivos": 112
+     "comentarios": 0.6052631578947368,
+     "duplicacao": 0.9912280701754386,
+     "cobertura": 0.9166666666666666,
+     "totalArquivos": 114
     },
-    "qualidadeProduto": 0.85
+    "qualidadeProduto": 0.93
    },
    "BFF": {
     "medidas": {
@@ -74,10 +74,10 @@
      "complexity": 182,
      "reliability_rating": 1,
      "code_smells": 4,
-     "duplicated_lines_density": 2.7,
+     "duplicated_lines_density": 2.6,
      "functions": 93,
      "security_rating": 1,
-     "comment_lines_density": 1.1,
+     "comment_lines_density": 29.1,
      "sqale_index": 30,
      "sqale_rating": 1,
      "bugs": 0,
@@ -88,50 +88,50 @@
     },
     "densidades": {
      "complexidade": 1,
-     "comentarios": 0.02631578947368421,
+     "comentarios": 0.6842105263157895,
      "duplicacao": 0.9473684210526315,
      "cobertura": 0.9117647058823529,
      "totalArquivos": 38
     },
-    "qualidadeProduto": 0.86
+    "qualidadeProduto": 0.93
    },
    "Web": {
     "medidas": {
      "coverage": 92.1,
-     "complexity": 3164,
+     "complexity": 3172,
      "reliability_rating": 1,
-     "code_smells": 177,
-     "duplicated_lines_density": 0.8,
-     "functions": 1359,
+     "code_smells": 181,
+     "duplicated_lines_density": 0.7,
+     "functions": 1361,
      "security_rating": 1,
-     "comment_lines_density": 0.3,
-     "sqale_index": 969,
+     "comment_lines_density": 9.4,
+     "sqale_index": 990,
      "sqale_rating": 1,
      "bugs": 0,
-     "cognitive_complexity": 1938,
-     "ncloc": 19166,
+     "cognitive_complexity": 1942,
+     "ncloc": 19422,
      "vulnerabilities": 0,
      "files": 203
     },
     "densidades": {
      "complexidade": 0.9538461538461539,
-     "comentarios": 0.009852216748768473,
+     "comentarios": 0.29064039408866993,
      "duplicacao": 0.9802955665024631,
      "cobertura": 0.8962962962962963,
      "totalArquivos": 203
     },
-    "qualidadeProduto": 0.85
+    "qualidadeProduto": 0.88
    }
   },
   "global": {
    "densidades": {
     "complexidade": 0.9779411764705882,
-    "comentarios": 0.01978021978021978,
-    "duplicacao": 0.9802197802197802,
-    "cobertura": 0.8888888888888888,
-    "totalArquivos": 455
+    "comentarios": 0.4573304157549234,
+    "duplicacao": 0.9803063457330415,
+    "cobertura": 0.910394265232975,
+    "totalArquivos": 457
    },
-   "qualidadeProduto": 0.86
+   "qualidadeProduto": 0.91
   },
   "historico": {
    "Usuario-Service": {
@@ -151,6 +151,18 @@
      {
       "data": "2026-06-25",
       "valor": 96.5
+     },
+     {
+      "data": "2026-06-28",
+      "valor": 96.5
+     },
+     {
+      "data": "2026-06-28",
+      "valor": 96.9
+     },
+     {
+      "data": "2026-06-29",
+      "valor": 96.9
      }
     ],
     "bugs": [
@@ -172,6 +184,18 @@
      },
      {
       "data": "2026-06-25",
+      "valor": 0
+     },
+     {
+      "data": "2026-06-28",
+      "valor": 0
+     },
+     {
+      "data": "2026-06-28",
+      "valor": 0
+     },
+     {
+      "data": "2026-06-29",
       "valor": 0
      }
     ],
@@ -195,6 +219,18 @@
      {
       "data": "2026-06-25",
       "valor": 14
+     },
+     {
+      "data": "2026-06-28",
+      "valor": 14
+     },
+     {
+      "data": "2026-06-28",
+      "valor": 14
+     },
+     {
+      "data": "2026-06-29",
+      "valor": 14
      }
     ],
     "vulnerabilities": [
@@ -216,6 +252,18 @@
      },
      {
       "data": "2026-06-25",
+      "valor": 0
+     },
+     {
+      "data": "2026-06-28",
+      "valor": 0
+     },
+     {
+      "data": "2026-06-28",
+      "valor": 0
+     },
+     {
+      "data": "2026-06-29",
       "valor": 0
      }
     ],
@@ -239,6 +287,18 @@
      {
       "data": "2026-06-25",
       "valor": 0.9
+     },
+     {
+      "data": "2026-06-28",
+      "valor": 1.1
+     },
+     {
+      "data": "2026-06-28",
+      "valor": 1.1
+     },
+     {
+      "data": "2026-06-29",
+      "valor": 1.1
      }
     ],
     "complexity": [
@@ -260,6 +320,18 @@
      },
      {
       "data": "2026-06-25",
+      "valor": 437
+     },
+     {
+      "data": "2026-06-28",
+      "valor": 437
+     },
+     {
+      "data": "2026-06-28",
+      "valor": 437
+     },
+     {
+      "data": "2026-06-29",
       "valor": 437
      }
     ],
@@ -283,6 +355,18 @@
      {
       "data": "2026-06-25",
       "valor": 194
+     },
+     {
+      "data": "2026-06-28",
+      "valor": 194
+     },
+     {
+      "data": "2026-06-28",
+      "valor": 194
+     },
+     {
+      "data": "2026-06-29",
+      "valor": 194
      }
     ],
     "ncloc": [
@@ -304,6 +388,18 @@
      },
      {
       "data": "2026-06-25",
+      "valor": 4625
+     },
+     {
+      "data": "2026-06-28",
+      "valor": 4625
+     },
+     {
+      "data": "2026-06-28",
+      "valor": 4625
+     },
+     {
+      "data": "2026-06-29",
       "valor": 4625
      }
     ],
@@ -327,6 +423,18 @@
      {
       "data": "2026-06-25",
       "valor": 0.8
+     },
+     {
+      "data": "2026-06-28",
+      "valor": 21.7
+     },
+     {
+      "data": "2026-06-28",
+      "valor": 21.7
+     },
+     {
+      "data": "2026-06-29",
+      "valor": 21.7
      }
     ],
     "files": [
@@ -348,6 +456,18 @@
      },
      {
       "data": "2026-06-25",
+      "valor": 102
+     },
+     {
+      "data": "2026-06-28",
+      "valor": 102
+     },
+     {
+      "data": "2026-06-28",
+      "valor": 102
+     },
+     {
+      "data": "2026-06-29",
       "valor": 102
      }
     ],
@@ -371,6 +491,18 @@
      {
       "data": "2026-06-25",
       "valor": 230
+     },
+     {
+      "data": "2026-06-28",
+      "valor": 230
+     },
+     {
+      "data": "2026-06-28",
+      "valor": 230
+     },
+     {
+      "data": "2026-06-29",
+      "valor": 230
      }
     ],
     "reliability_rating": [
@@ -392,6 +524,18 @@
      },
      {
       "data": "2026-06-25",
+      "valor": 1
+     },
+     {
+      "data": "2026-06-28",
+      "valor": 1
+     },
+     {
+      "data": "2026-06-28",
+      "valor": 1
+     },
+     {
+      "data": "2026-06-29",
       "valor": 1
      }
     ],
@@ -415,6 +559,18 @@
      {
       "data": "2026-06-25",
       "valor": 1
+     },
+     {
+      "data": "2026-06-28",
+      "valor": 1
+     },
+     {
+      "data": "2026-06-28",
+      "valor": 1
+     },
+     {
+      "data": "2026-06-29",
+      "valor": 1
      }
     ],
     "sqale_rating": [
@@ -436,6 +592,18 @@
      },
      {
       "data": "2026-06-25",
+      "valor": 1
+     },
+     {
+      "data": "2026-06-28",
+      "valor": 1
+     },
+     {
+      "data": "2026-06-28",
+      "valor": 1
+     },
+     {
+      "data": "2026-06-29",
       "valor": 1
      }
     ],
@@ -470,6 +638,18 @@
      {
       "data": "2026-06-26",
       "valor": 92.6
+     },
+     {
+      "data": "2026-06-28",
+      "valor": 95
+     },
+     {
+      "data": "2026-06-29",
+      "valor": 95
+     },
+     {
+      "data": "2026-06-29",
+      "valor": 95
      }
     ],
     "bugs": [
@@ -503,6 +683,18 @@
      },
      {
       "data": "2026-06-26",
+      "valor": 0
+     },
+     {
+      "data": "2026-06-28",
+      "valor": 0
+     },
+     {
+      "data": "2026-06-29",
+      "valor": 0
+     },
+     {
+      "data": "2026-06-29",
       "valor": 0
      }
     ],
@@ -538,6 +730,18 @@
      {
       "data": "2026-06-26",
       "valor": 68
+     },
+     {
+      "data": "2026-06-28",
+      "valor": 68
+     },
+     {
+      "data": "2026-06-29",
+      "valor": 68
+     },
+     {
+      "data": "2026-06-29",
+      "valor": 68
      }
     ],
     "vulnerabilities": [
@@ -571,6 +775,18 @@
      },
      {
       "data": "2026-06-26",
+      "valor": 0
+     },
+     {
+      "data": "2026-06-28",
+      "valor": 0
+     },
+     {
+      "data": "2026-06-29",
+      "valor": 0
+     },
+     {
+      "data": "2026-06-29",
       "valor": 0
      }
     ],
@@ -606,6 +822,18 @@
      {
       "data": "2026-06-26",
       "valor": 1.1
+     },
+     {
+      "data": "2026-06-28",
+      "valor": 1.1
+     },
+     {
+      "data": "2026-06-29",
+      "valor": 1
+     },
+     {
+      "data": "2026-06-29",
+      "valor": 1
      }
     ],
     "complexity": [
@@ -639,6 +867,18 @@
      },
      {
       "data": "2026-06-26",
+      "valor": 753
+     },
+     {
+      "data": "2026-06-28",
+      "valor": 753
+     },
+     {
+      "data": "2026-06-29",
+      "valor": 753
+     },
+     {
+      "data": "2026-06-29",
       "valor": 753
      }
     ],
@@ -674,6 +914,18 @@
      {
       "data": "2026-06-26",
       "valor": 359
+     },
+     {
+      "data": "2026-06-28",
+      "valor": 359
+     },
+     {
+      "data": "2026-06-29",
+      "valor": 359
+     },
+     {
+      "data": "2026-06-29",
+      "valor": 359
      }
     ],
     "ncloc": [
@@ -708,6 +960,18 @@
      {
       "data": "2026-06-26",
       "valor": 7294
+     },
+     {
+      "data": "2026-06-28",
+      "valor": 7296
+     },
+     {
+      "data": "2026-06-29",
+      "valor": 7296
+     },
+     {
+      "data": "2026-06-29",
+      "valor": 7296
      }
     ],
     "comment_lines_density": [
@@ -742,6 +1006,18 @@
      {
       "data": "2026-06-26",
       "valor": 0.7
+     },
+     {
+      "data": "2026-06-28",
+      "valor": 0.7
+     },
+     {
+      "data": "2026-06-29",
+      "valor": 20.6
+     },
+     {
+      "data": "2026-06-29",
+      "valor": 20.6
      }
     ],
     "files": [
@@ -776,6 +1052,18 @@
      {
       "data": "2026-06-26",
       "valor": 112
+     },
+     {
+      "data": "2026-06-28",
+      "valor": 114
+     },
+     {
+      "data": "2026-06-29",
+      "valor": 114
+     },
+     {
+      "data": "2026-06-29",
+      "valor": 114
      }
     ],
     "functions": [
@@ -809,6 +1097,18 @@
      },
      {
       "data": "2026-06-26",
+      "valor": 413
+     },
+     {
+      "data": "2026-06-28",
+      "valor": 413
+     },
+     {
+      "data": "2026-06-29",
+      "valor": 413
+     },
+     {
+      "data": "2026-06-29",
       "valor": 413
      }
     ],
@@ -844,6 +1144,18 @@
      {
       "data": "2026-06-26",
       "valor": 1
+     },
+     {
+      "data": "2026-06-28",
+      "valor": 1
+     },
+     {
+      "data": "2026-06-29",
+      "valor": 1
+     },
+     {
+      "data": "2026-06-29",
+      "valor": 1
      }
     ],
     "security_rating": [
@@ -877,6 +1189,18 @@
      },
      {
       "data": "2026-06-26",
+      "valor": 1
+     },
+     {
+      "data": "2026-06-28",
+      "valor": 1
+     },
+     {
+      "data": "2026-06-29",
+      "valor": 1
+     },
+     {
+      "data": "2026-06-29",
       "valor": 1
      }
     ],
@@ -912,6 +1236,18 @@
      {
       "data": "2026-06-26",
       "valor": 1
+     },
+     {
+      "data": "2026-06-28",
+      "valor": 1
+     },
+     {
+      "data": "2026-06-29",
+      "valor": 1
+     },
+     {
+      "data": "2026-06-29",
+      "valor": 1
      }
     ],
     "tests": []
@@ -936,6 +1272,14 @@
      },
      {
       "data": "2026-06-25",
+      "valor": 96.7
+     },
+     {
+      "data": "2026-06-28",
+      "valor": 96.7
+     },
+     {
+      "data": "2026-06-29",
       "valor": 96.7
      }
     ],
@@ -963,6 +1307,14 @@
      {
       "data": "2026-06-25",
       "valor": 0
+     },
+     {
+      "data": "2026-06-28",
+      "valor": 0
+     },
+     {
+      "data": "2026-06-29",
+      "valor": 0
      }
     ],
     "code_smells": [
@@ -988,6 +1340,14 @@
      },
      {
       "data": "2026-06-25",
+      "valor": 4
+     },
+     {
+      "data": "2026-06-28",
+      "valor": 4
+     },
+     {
+      "data": "2026-06-29",
       "valor": 4
      }
     ],
@@ -1015,6 +1375,14 @@
      {
       "data": "2026-06-25",
       "valor": 0
+     },
+     {
+      "data": "2026-06-28",
+      "valor": 0
+     },
+     {
+      "data": "2026-06-29",
+      "valor": 0
      }
     ],
     "duplicated_lines_density": [
@@ -1041,6 +1409,14 @@
      {
       "data": "2026-06-25",
       "valor": 2.7
+     },
+     {
+      "data": "2026-06-28",
+      "valor": 2.6
+     },
+     {
+      "data": "2026-06-29",
+      "valor": 2.6
      }
     ],
     "complexity": [
@@ -1066,6 +1442,14 @@
      },
      {
       "data": "2026-06-25",
+      "valor": 182
+     },
+     {
+      "data": "2026-06-28",
+      "valor": 182
+     },
+     {
+      "data": "2026-06-29",
       "valor": 182
      }
     ],
@@ -1093,6 +1477,14 @@
      {
       "data": "2026-06-25",
       "valor": 77
+     },
+     {
+      "data": "2026-06-28",
+      "valor": 77
+     },
+     {
+      "data": "2026-06-29",
+      "valor": 77
      }
     ],
     "ncloc": [
@@ -1118,6 +1510,14 @@
      },
      {
       "data": "2026-06-25",
+      "valor": 1562
+     },
+     {
+      "data": "2026-06-28",
+      "valor": 1562
+     },
+     {
+      "data": "2026-06-29",
       "valor": 1562
      }
     ],
@@ -1145,6 +1545,14 @@
      {
       "data": "2026-06-25",
       "valor": 1.1
+     },
+     {
+      "data": "2026-06-28",
+      "valor": 29.1
+     },
+     {
+      "data": "2026-06-29",
+      "valor": 29.1
      }
     ],
     "files": [
@@ -1170,6 +1578,14 @@
      },
      {
       "data": "2026-06-25",
+      "valor": 38
+     },
+     {
+      "data": "2026-06-28",
+      "valor": 38
+     },
+     {
+      "data": "2026-06-29",
       "valor": 38
      }
     ],
@@ -1197,6 +1613,14 @@
      {
       "data": "2026-06-25",
       "valor": 93
+     },
+     {
+      "data": "2026-06-28",
+      "valor": 93
+     },
+     {
+      "data": "2026-06-29",
+      "valor": 93
      }
     ],
     "reliability_rating": [
@@ -1222,6 +1646,14 @@
      },
      {
       "data": "2026-06-25",
+      "valor": 1
+     },
+     {
+      "data": "2026-06-28",
+      "valor": 1
+     },
+     {
+      "data": "2026-06-29",
       "valor": 1
      }
     ],
@@ -1249,6 +1681,14 @@
      {
       "data": "2026-06-25",
       "valor": 1
+     },
+     {
+      "data": "2026-06-28",
+      "valor": 1
+     },
+     {
+      "data": "2026-06-29",
+      "valor": 1
      }
     ],
     "sqale_rating": [
@@ -1274,6 +1714,14 @@
      },
      {
       "data": "2026-06-25",
+      "valor": 1
+     },
+     {
+      "data": "2026-06-28",
+      "valor": 1
+     },
+     {
+      "data": "2026-06-29",
       "valor": 1
      }
     ],
@@ -1312,6 +1760,14 @@
      {
       "data": "2026-06-26",
       "valor": 92.1
+     },
+     {
+      "data": "2026-06-28",
+      "valor": 92.1
+     },
+     {
+      "data": "2026-06-29",
+      "valor": 92.1
      }
     ],
     "bugs": [
@@ -1349,6 +1805,14 @@
      },
      {
       "data": "2026-06-26",
+      "valor": 0
+     },
+     {
+      "data": "2026-06-28",
+      "valor": 0
+     },
+     {
+      "data": "2026-06-29",
       "valor": 0
      }
     ],
@@ -1388,6 +1852,14 @@
      {
       "data": "2026-06-26",
       "valor": 177
+     },
+     {
+      "data": "2026-06-28",
+      "valor": 177
+     },
+     {
+      "data": "2026-06-29",
+      "valor": 181
      }
     ],
     "vulnerabilities": [
@@ -1425,6 +1897,14 @@
      },
      {
       "data": "2026-06-26",
+      "valor": 0
+     },
+     {
+      "data": "2026-06-28",
+      "valor": 0
+     },
+     {
+      "data": "2026-06-29",
       "valor": 0
      }
     ],
@@ -1464,6 +1944,14 @@
      {
       "data": "2026-06-26",
       "valor": 0.8
+     },
+     {
+      "data": "2026-06-28",
+      "valor": 0.7
+     },
+     {
+      "data": "2026-06-29",
+      "valor": 0.7
      }
     ],
     "complexity": [
@@ -1502,6 +1990,14 @@
      {
       "data": "2026-06-26",
       "valor": 3164
+     },
+     {
+      "data": "2026-06-28",
+      "valor": 3164
+     },
+     {
+      "data": "2026-06-29",
+      "valor": 3172
      }
     ],
     "cognitive_complexity": [
@@ -1540,6 +2036,14 @@
      {
       "data": "2026-06-26",
       "valor": 1938
+     },
+     {
+      "data": "2026-06-28",
+      "valor": 1938
+     },
+     {
+      "data": "2026-06-29",
+      "valor": 1942
      }
     ],
     "ncloc": [
@@ -1578,6 +2082,14 @@
      {
       "data": "2026-06-26",
       "valor": 19166
+     },
+     {
+      "data": "2026-06-28",
+      "valor": 19297
+     },
+     {
+      "data": "2026-06-29",
+      "valor": 19422
      }
     ],
     "comment_lines_density": [
@@ -1616,6 +2128,14 @@
      {
       "data": "2026-06-26",
       "valor": 0.3
+     },
+     {
+      "data": "2026-06-28",
+      "valor": 9.4
+     },
+     {
+      "data": "2026-06-29",
+      "valor": 9.4
      }
     ],
     "files": [
@@ -1653,6 +2173,14 @@
      },
      {
       "data": "2026-06-26",
+      "valor": 203
+     },
+     {
+      "data": "2026-06-28",
+      "valor": 203
+     },
+     {
+      "data": "2026-06-29",
       "valor": 203
      }
     ],
@@ -1692,6 +2220,14 @@
      {
       "data": "2026-06-26",
       "valor": 1359
+     },
+     {
+      "data": "2026-06-28",
+      "valor": 1359
+     },
+     {
+      "data": "2026-06-29",
+      "valor": 1361
      }
     ],
     "reliability_rating": [
@@ -1729,6 +2265,14 @@
      },
      {
       "data": "2026-06-26",
+      "valor": 1
+     },
+     {
+      "data": "2026-06-28",
+      "valor": 1
+     },
+     {
+      "data": "2026-06-29",
       "valor": 1
      }
     ],
@@ -1768,6 +2312,14 @@
      {
       "data": "2026-06-26",
       "valor": 1
+     },
+     {
+      "data": "2026-06-28",
+      "valor": 1
+     },
+     {
+      "data": "2026-06-29",
+      "valor": 1
      }
     ],
     "sqale_rating": [
@@ -1806,6 +2358,14 @@
      {
       "data": "2026-06-26",
       "valor": 1
+     },
+     {
+      "data": "2026-06-28",
+      "valor": 1
+     },
+     {
+      "data": "2026-06-29",
+      "valor": 1
      }
     ],
     "tests": []
@@ -1813,11 +2373,11 @@
   },
   "indicadores": {
    "bloqueios": 0.97,
-   "conclusaoTarefas": 0.92,
+   "conclusaoTarefas": 0.99,
    "detalheIssues": {
     "total": 135,
     "comDescricao": 131,
-    "fechadas": 124
+    "fechadas": 133
    },
    "estabilidadeBuilds": 0.7,
    "buildsPorRepo": {
@@ -1843,7 +2403,7 @@
     }
    },
    "prontidao": 0.7,
-   "qualidadeProduto": 0.86
+   "qualidadeProduto": 0.91
   }
  },
  "processo": {
@@ -1873,30 +2433,30 @@
      "metricas": [
       {
        "metrica": "Team Throughput",
-       "densidade": 0.915,
+       "densidade": 0.962,
        "formula": "issues resolvidas / total de issues",
-       "bruto": "119 / 130",
+       "bruto": "128 / 133",
        "fonte": "ZenHub + GitHub"
       },
       {
        "metrica": "Resolved Issues' Throughput",
-       "densidade": 0.655,
+       "densidade": 0.571,
        "formula": "resolvidas em ≤ 14d / total resolvidas (fluxo de código)",
-       "bruto": "36 / 55",
+       "bruto": "36 / 63",
        "fonte": "ZenHub (eventos)"
       },
       {
        "metrica": "Old Issues",
-       "densidade": 0.091,
+       "densidade": 0.2,
        "formula": "issues abertas com idade ≤ 14d / total abertas",
-       "bruto": "1 / 11",
+       "bruto": "1 / 5",
        "fonte": "ZenHub"
       },
       {
        "metrica": "Bugs Ratio",
-       "densidade": 0.636,
+       "densidade": 1,
        "formula": "issues abertas não-bug / total abertas",
-       "bruto": "7 / 11",
+       "bruto": "5 / 5",
        "fonte": "GitHub (labels)"
       }
      ]
@@ -1907,26 +2467,26 @@
      "metricas": [
       {
        "metrica": "Commit review duration",
-       "densidade": 0.877,
+       "densidade": 0.865,
        "formula": "PRs revisados em ≤ 2d / total de PRs fechados",
-       "bruto": "71 / 81",
+       "bruto": "77 / 89",
        "fonte": "GitHub (PRs)"
       }
      ]
     }
    ],
-   "valor": 0.635
+   "valor": 0.72
   },
   "flowEfficiency": {
-   "valor": 0.275,
-   "cycleMediana": 2.45,
-   "leadMediana": 8.91,
-   "esperaMediana": 6.46
+   "valor": 0.291,
+   "cycleMediana": 3.02,
+   "leadMediana": 10.37,
+   "esperaMediana": 7.35
   },
   "retrabalho": {
-   "base": 55,
+   "base": 63,
    "comRetrabalho": 3,
-   "taxa": 0.055,
+   "taxa": 0.048,
    "exemplos": [
     "Usuario-Service#14",
     "Web#8",
@@ -1936,80 +2496,17 @@
   "agingWip": [
    {
     "repo": "Doc",
-    "numero": 34,
-    "titulo": "[US] Lista de Questões (Aluno)",
-    "pipeline": "Review/QA",
-    "diasNaPipeline": 12.8
-   },
-   {
-    "repo": "Doc",
-    "numero": 40,
-    "titulo": "[BUG] Cadastro Aluno - Campo \"nome\" aceitando caracteres especiais",
-    "pipeline": "Review/QA",
-    "diasNaPipeline": 12.8
-   },
-   {
-    "repo": "Doc",
-    "numero": 39,
-    "titulo": "[BUG] Cadastro Professor - Campo \"nome\" aceitando caracteres especiais",
-    "pipeline": "Review/QA",
-    "diasNaPipeline": 12.8
-   },
-   {
-    "repo": "Doc",
-    "numero": 38,
-    "titulo": "[AI] Documentação, débitos e roadmap para continuidade do RAG",
-    "pipeline": "In Progress",
-    "diasNaPipeline": 5.7
-   },
-   {
-    "repo": "Usuario-Service",
-    "numero": 88,
-    "titulo": "[US] Loja Virtual",
-    "pipeline": "Review/QA",
-    "diasNaPipeline": 5.2
-   },
-   {
-    "repo": "Usuario-Service",
-    "numero": 76,
-    "titulo": "[US] Sistema de Conquistas e Marcos (Badges e Troféus)",
-    "pipeline": "Review/QA",
-    "diasNaPipeline": 5.2
-   },
-   {
-    "repo": "Doc",
     "numero": 48,
     "titulo": "[US] Personalizar Perfil",
     "pipeline": "Review/QA",
-    "diasNaPipeline": 5.2
-   },
-   {
-    "repo": "Web",
-    "numero": 18,
-    "titulo": "[Frontend] Tela de erro 404 e fallback",
-    "pipeline": "Review/QA",
-    "diasNaPipeline": 4.8
-   },
-   {
-    "repo": "Doc",
-    "numero": 41,
-    "titulo": "[BUG] Pesquisa de Questões Bloqueada",
-    "pipeline": "In Progress",
-    "diasNaPipeline": 3.8
-   },
-   {
-    "repo": "Doc",
-    "numero": 42,
-    "titulo": "[BUG] Palavras-chave das Questões Não Ficam Salvas",
-    "pipeline": "Review/QA",
-    "diasNaPipeline": 1.6
+    "diasNaPipeline": 6.5
    },
    {
     "repo": "Usuario-Service",
     "numero": 56,
     "titulo": "[US] Visualização de Rankings (Geral por Temas e por Turmas)",
     "pipeline": "Review/QA",
-    "diasNaPipeline": 1.6
+    "diasNaPipeline": 2.9
    }
   ],
   "wipSerie": [
@@ -2292,6 +2789,14 @@
    {
     "data": "2026-06-27",
     "wip": 11
+   },
+   {
+    "data": "2026-06-28",
+    "wip": 10
+   },
+   {
+    "data": "2026-06-29",
+    "wip": 2
    }
   ],
   "cfd": [
@@ -3297,7 +3802,7 @@
    },
    {
     "data": "2026-06-27",
-    "Closed": 172,
+    "Closed": 168,
     "Done": 0,
     "Review/QA": 9,
     "Blocked": 0,
@@ -3307,21 +3812,129 @@
     "Product Backlog": 0,
     "Project Backlog": 0,
     "Icebox": 0,
-    "New Issues": 0
+    "New Issues": 4
+   },
+   {
+    "data": "2026-06-28",
+    "Closed": 170,
+    "Done": 0,
+    "Review/QA": 9,
+    "Blocked": 0,
+    "In Progress": 1,
+    "Rework": 0,
+    "Sprint Backlog": 0,
+    "Product Backlog": 0,
+    "Project Backlog": 0,
+    "Icebox": 0,
+    "New Issues": 3
+   },
+   {
+    "data": "2026-06-29",
+    "Closed": 178,
+    "Done": 0,
+    "Review/QA": 2,
+    "Blocked": 0,
+    "In Progress": 0,
+    "Rework": 0,
+    "Sprint Backlog": 0,
+    "Product Backlog": 0,
+    "Project Backlog": 0,
+    "Icebox": 0,
+    "New Issues": 3
    }
   ],
   "leadTime": {
    "todas": {
-    "mediaDias": 5765.42,
-    "medianaDias": 52.86,
-    "amostra": 172
+    "mediaDias": 5225.58,
+    "medianaDias": 51.91,
+    "amostra": 178
    },
    "fluxoDeCodigo": {
-    "mediaDias": 14.41,
-    "medianaDias": 8.91,
-    "amostra": 55
+    "mediaDias": 17.71,
+    "medianaDias": 10.37,
+    "amostra": 63
    },
    "pontos": [
+    {
+     "repo": "2026-1-AnatoQuizUp-Doc",
+     "numero": 42,
+     "titulo": "[BUG] Palavras-chave das Questões Não Ficam Salvas",
+     "dias": 34.95,
+     "fechadaEm": "2026-06-29",
+     "fluxo": true
+    },
+    {
+     "repo": "2026-1-AnatoQuizUp-Doc",
+     "numero": 41,
+     "titulo": "[BUG] Pesquisa de Questões Bloqueada",
+     "dias": 34.95,
+     "fechadaEm": "2026-06-29",
+     "fluxo": true
+    },
+    {
+     "repo": "2026-1-AnatoQuizUp-Doc",
+     "numero": 38,
+     "titulo": "[AI] Documentação, débitos e roadmap para continuidade do RAG",
+     "dias": 35.26,
+     "fechadaEm": "2026-06-29",
+     "fluxo": true
+    },
+    {
+     "repo": "2026-1-AnatoQuizUp-Doc",
+     "numero": 34,
+     "titulo": "[US] Lista de Questões (Aluno)",
+     "dias": 35.43,
+     "fechadaEm": "2026-06-29",
+     "fluxo": true
+    },
+    {
+     "repo": "2026-1-AnatoQuizUp-Web",
+     "numero": 18,
+     "titulo": "[Frontend] Tela de erro 404 e fallback",
+     "dias": 71.51,
+     "fechadaEm": "2026-06-29",
+     "fluxo": false
+    },
+    {
+     "repo": "2026-1-AnatoQuizUp-Usuario-Service",
+     "numero": 88,
+     "titulo": "[US] Loja Virtual",
+     "dias": 56.26,
+     "fechadaEm": "2026-06-29",
+     "fluxo": true
+    },
+    {
+     "repo": "2026-1-AnatoQuizUp-Doc",
+     "numero": 39,
+     "titulo": "[BUG] Cadastro Professor - Campo \"nome\" aceitando caracteres especiais",
+     "dias": 35.05,
+     "fechadaEm": "2026-06-29",
+     "fluxo": true
+    },
+    {
+     "repo": "2026-1-AnatoQuizUp-Doc",
+     "numero": 40,
+     "titulo": "[BUG] Cadastro Aluno - Campo \"nome\" aceitando caracteres especiais",
+     "dias": 35.05,
+     "fechadaEm": "2026-06-29",
+     "fluxo": true
+    },
+    {
+     "repo": "2026-1-AnatoQuizUp-Doc",
+     "numero": 50,
+     "titulo": "Ajustes Front Aluno/Admin/Professor",
+     "dias": 2.84,
+     "fechadaEm": "2026-06-28",
+     "fluxo": false
+    },
+    {
+     "repo": "2026-1-AnatoQuizUp-Usuario-Service",
+     "numero": 76,
+     "titulo": "[US] Sistema de Conquistas e Marcos (Badges e Troféus)",
+     "dias": 56.16,
+     "fechadaEm": "2026-06-28",
+     "fluxo": true
+    },
     {
      "repo": "2026-1-AnatoQuizUp-Doc",
      "numero": 27,
@@ -3711,38 +4324,6 @@
      "numero": 44,
      "titulo": "Comentário da Questão Obrigatório",
      "dias": 33.44,
-     "fechadaEm": "2026-06-27",
-     "fluxo": false
-    },
-    {
-     "repo": "2026-1-AnatoQuizUp-Doc",
-     "numero": 50,
-     "titulo": "Ajustes Front Aluno/Admin/Professor",
-     "dias": 1.39,
-     "fechadaEm": "2026-06-27",
-     "fluxo": false
-    },
-    {
-     "repo": "2026-1-AnatoQuizUp",
-     "numero": 136,
-     "titulo": "R3 = MVP Final e Encerramento",
-     "dias": 20631.54,
-     "fechadaEm": "2026-06-27",
-     "fluxo": false
-    },
-    {
-     "repo": "2026-1-AnatoQuizUp",
-     "numero": 135,
-     "titulo": "R2 — Evolução do Produto e Qualidade",
-     "dias": 20631.54,
-     "fechadaEm": "2026-06-27",
-     "fluxo": false
-    },
-    {
-     "repo": "2026-1-AnatoQuizUp",
-     "numero": 133,
-     "titulo": "R1 — Planejamento e Base do Produto",
-     "dias": 20631.54,
      "fechadaEm": "2026-06-27",
      "fluxo": false
     },
@@ -4701,10 +5282,58 @@
    ]
   },
   "cycleTime": {
-   "mediaDias": 4.87,
-   "medianaDias": 2.45,
-   "amostra": 55,
+   "mediaDias": 5.78,
+   "medianaDias": 3.02,
+   "amostra": 63,
    "pontos": [
+    {
+     "repo": "2026-1-AnatoQuizUp-Doc",
+     "numero": 42,
+     "dias": 5.02,
+     "fechadaEm": "2026-06-29"
+    },
+    {
+     "repo": "2026-1-AnatoQuizUp-Doc",
+     "numero": 41,
+     "dias": 5.02,
+     "fechadaEm": "2026-06-29"
+    },
+    {
+     "repo": "2026-1-AnatoQuizUp-Doc",
+     "numero": 38,
+     "dias": 6.96,
+     "fechadaEm": "2026-06-29"
+    },
+    {
+     "repo": "2026-1-AnatoQuizUp-Doc",
+     "numero": 34,
+     "dias": 26.38,
+     "fechadaEm": "2026-06-29"
+    },
+    {
+     "repo": "2026-1-AnatoQuizUp-Usuario-Service",
+     "numero": 88,
+     "dias": 10.97,
+     "fechadaEm": "2026-06-29"
+    },
+    {
+     "repo": "2026-1-AnatoQuizUp-Doc",
+     "numero": 39,
+     "dias": 14.08,
+     "fechadaEm": "2026-06-29"
+    },
+    {
+     "repo": "2026-1-AnatoQuizUp-Doc",
+     "numero": 40,
+     "dias": 14.08,
+     "fechadaEm": "2026-06-29"
+    },
+    {
+     "repo": "2026-1-AnatoQuizUp-Usuario-Service",
+     "numero": 76,
+     "dias": 13.98,
+     "fechadaEm": "2026-06-28"
+    },
     {
      "repo": "2026-1-AnatoQuizUp-Doc",
      "numero": 46,
@@ -5039,19 +5668,19 @@
   },
   "tempoPorEtapa": {
    "Sprint Backlog": {
-    "mediaDias": 7.05,
-    "medianaDias": 7.04,
-    "amostra": 65
+    "mediaDias": 6.86,
+    "medianaDias": 7,
+    "amostra": 73
    },
    "In Progress": {
-    "mediaDias": 2.87,
-    "medianaDias": 1.17,
-    "amostra": 55
+    "mediaDias": 3.02,
+    "medianaDias": 1.26,
+    "amostra": 63
    },
    "Review/QA": {
-    "mediaDias": 1.97,
-    "medianaDias": 0.56,
-    "amostra": 44
+    "mediaDias": 2.97,
+    "medianaDias": 0.68,
+    "amostra": 53
    }
   },
   "throughputSemanal": [
@@ -5097,37 +5726,41 @@
    },
    {
     "semana": "2026-06-22",
-    "fechadas": 55
+    "fechadas": 53
+   },
+   {
+    "semana": "2026-06-29",
+    "fechadas": 8
    }
   ],
   "leiDeLittle": {
-   "tpDiaUtil": 0.35,
+   "tpDiaUtil": 0.75,
    "base": "issues de fluxo de código fechadas nas últimas 4 semanas / 20 dias úteis",
    "etapas": {
     "Sprint Backlog": {
-     "ltMedioDias": 7.05,
+     "ltMedioDias": 6.86,
+     "wipCalculado": 6,
+     "wipComMargem50": 8
+    },
+    "In Progress": {
+     "ltMedioDias": 3.02,
      "wipCalculado": 3,
      "wipComMargem50": 4
     },
-    "In Progress": {
-     "ltMedioDias": 2.87,
-     "wipCalculado": 2,
-     "wipComMargem50": 2
-    },
     "Review/QA": {
-     "ltMedioDias": 1.97,
-     "wipCalculado": 1,
-     "wipComMargem50": 2
+     "ltMedioDias": 2.97,
+     "wipCalculado": 3,
+     "wipComMargem50": 4
     }
    }
   },
   "wipAtual": {
-   "In Progress": 2,
-   "Review/QA": 9
+   "New Issues": 3,
+   "Review/QA": 2
   },
   "prs": {
-   "total": 83,
-   "fechados": 81,
+   "total": 89,
+   "fechados": 89,
    "porSemana": [
     {
      "semana": "2026-04-13",
@@ -5167,11 +5800,15 @@
     },
     {
      "semana": "2026-06-22",
-     "fechados": 8
+     "fechados": 13
+    },
+    {
+     "semana": "2026-06-29",
+     "fechados": 3
     }
    ],
    "tempoRevisao": {
-    "mediaDias": 0.74,
+    "mediaDias": 1.47,
     "medianaDias": 0.13
    }
   },
@@ -5179,50 +5816,50 @@
    "totalIssues": 183,
    "semEstimate": 101,
    "semResponsavel": 58,
-   "semSprint": 67,
-   "totalTrabalhadas": 183,
-   "semEstimateTrab": 101,
-   "semResponsavelTrab": 58,
-   "semSprintTrab": 67,
+   "semSprint": 66,
+   "totalTrabalhadas": 180,
+   "semEstimateTrab": 98,
+   "semResponsavelTrab": 55,
+   "semSprintTrab": 63,
    "fechadasEmLote1206": 6,
-   "paradasMais14d": 10
+   "paradasMais14d": 1
   },
   "porMembro": {
-   "marialuisa214": {
-    "issuesFechadas": 48,
-    "prs": 4
-   },
-   "EhOBruno": {
-    "issuesFechadas": 47,
-    "prs": 5
-   },
-   "caiobsantos": {
-    "issuesFechadas": 8,
-    "prs": 1
-   },
-   "pkbceira03": {
-    "issuesFechadas": 47,
-    "prs": 23
-   },
-   "Brenofrds": {
-    "issuesFechadas": 50,
-    "prs": 13
-   },
-   "trindadea": {
+   "GenilsonJrs": {
     "issuesFechadas": 46,
     "prs": 20
    },
-   "Joa0V": {
-    "issuesFechadas": 47,
+   "marialuisa214": {
+    "issuesFechadas": 49,
+    "prs": 4
+   },
+   "EhOBruno": {
+    "issuesFechadas": 50,
     "prs": 7
    },
+   "pkbceira03": {
+    "issuesFechadas": 48,
+    "prs": 24
+   },
+   "Brenofrds": {
+    "issuesFechadas": 51,
+    "prs": 13
+   },
+   "caiobsantos": {
+    "issuesFechadas": 10,
+    "prs": 2
+   },
    "EhOMiguel": {
-    "issuesFechadas": 49,
+    "issuesFechadas": 50,
     "prs": 36
    },
-   "GenilsonJrs": {
-    "issuesFechadas": 44,
-    "prs": 16
+   "trindadea": {
+    "issuesFechadas": 47,
+    "prs": 21
+   },
+   "Joa0V": {
+    "issuesFechadas": 48,
+    "prs": 11
    },
    "ViictorHugoo": {
     "issuesFechadas": 3,
@@ -5324,7 +5961,7 @@
     "id": "S6",
     "inicio": "2026-05-26",
     "fim": "2026-06-01",
-    "equipe": 8,
+    "equipe": 9,
     "planejadoSP": 26,
     "entregueSP": 3,
     "fontePlanejado": "atribuição de sprint (estimates das issues planejadas no ZenHub)",
@@ -5333,13 +5970,13 @@
     "emAndamento": false,
     "entregueMedidoSP": 3,
     "custoPlanejado": 3907.9,
-    "custoReal": 2607.38
+    "custoReal": 2932.51
    },
    {
     "id": "S7",
     "inicio": "2026-06-02",
     "fim": "2026-06-08",
-    "equipe": 8,
+    "equipe": 9,
     "planejadoSP": 4,
     "entregueSP": 0,
     "fontePlanejado": "atribuição de sprint (estimates das issues planejadas no ZenHub)",
@@ -5348,13 +5985,13 @@
     "emAndamento": false,
     "entregueMedidoSP": 0,
     "custoPlanejado": 3907.9,
-    "custoReal": 2607.38
+    "custoReal": 2932.51
    },
    {
     "id": "S8",
     "inicio": "2026-06-09",
     "fim": "2026-06-15",
-    "equipe": 8,
+    "equipe": 9,
     "planejadoSP": 12,
     "entregueSP": 27,
     "fontePlanejado": "atribuição de sprint (estimates das issues planejadas no ZenHub)",
@@ -5363,13 +6000,13 @@
     "emAndamento": false,
     "entregueMedidoSP": 27,
     "custoPlanejado": 3907.9,
-    "custoReal": 2607.38
+    "custoReal": 2932.51
    },
    {
     "id": "S9",
     "inicio": "2026-06-16",
     "fim": "2026-06-22",
-    "equipe": 8,
+    "equipe": 9,
     "planejadoSP": 5,
     "entregueSP": 3,
     "fontePlanejado": "atribuição de sprint (estimates das issues planejadas no ZenHub)",
@@ -5378,22 +6015,22 @@
     "emAndamento": false,
     "entregueMedidoSP": 3,
     "custoPlanejado": 3907.9,
-    "custoReal": 2607.38
+    "custoReal": 2932.51
    },
    {
     "id": "S10",
     "inicio": "2026-06-23",
     "fim": "2026-06-29",
-    "equipe": 8,
+    "equipe": 9,
     "planejadoSP": 0,
-    "entregueSP": 2,
+    "entregueSP": 10,
     "fontePlanejado": "atribuição de sprint (estimates das issues planejadas no ZenHub)",
     "fonteEntregue": "medido (issues fechadas na janela com estimate)",
-    "decorrida": false,
-    "emAndamento": true,
-    "entregueMedidoSP": 2,
+    "decorrida": true,
+    "emAndamento": false,
+    "entregueMedidoSP": 10,
     "custoPlanejado": 3907.9,
-    "custoReal": 2607.38
+    "custoReal": 2932.51
    }
   ],
   "evm": [
@@ -5492,12 +6129,12 @@
     "spiSprint": 0.12,
     "pvReais": 23447.4,
     "evReais": 19809.01,
-    "acReais": 18570.45,
+    "acReais": 18895.58,
     "spi": 0.84,
-    "cpi": 1.07,
-    "eac": 36635.58,
-    "etc": 18065.13,
-    "vac": 2443.42
+    "cpi": 1.05,
+    "eac": 37276.99,
+    "etc": 18381.41,
+    "vac": 1802.01
    },
    {
     "sprint": "S7",
@@ -5509,12 +6146,12 @@
     "spiSprint": 0,
     "pvReais": 27355.3,
     "evReais": 22718.81,
-    "acReais": 21177.83,
+    "acReais": 21828.09,
     "spi": 0.83,
-    "cpi": 1.07,
-    "eac": 36428.34,
-    "etc": 15250.51,
-    "vac": 2650.66
+    "cpi": 1.04,
+    "eac": 37546.86,
+    "etc": 15718.77,
+    "vac": 1532.14
    },
    {
     "sprint": "S8",
@@ -5526,12 +6163,12 @@
     "spiSprint": 2.25,
     "pvReais": 31263.2,
     "evReais": 28111.67,
-    "acReais": 23785.21,
+    "acReais": 24760.6,
     "spi": 0.9,
-    "cpi": 1.18,
-    "eac": 33064.64,
-    "etc": 9279.43,
-    "vac": 6014.36
+    "cpi": 1.14,
+    "eac": 34420.57,
+    "etc": 9659.97,
+    "vac": 4658.43
    },
    {
     "sprint": "S9",
@@ -5543,29 +6180,29 @@
     "spiSprint": 0.6,
     "pvReais": 35171.1,
     "evReais": 31417.66,
-    "acReais": 26392.59,
+    "acReais": 27693.11,
     "spi": 0.89,
-    "cpi": 1.19,
-    "eac": 32828.54,
-    "etc": 6435.95,
-    "vac": 6250.46
+    "cpi": 1.13,
+    "eac": 34446.2,
+    "etc": 6753.09,
+    "vac": 4632.8
    },
    {
     "sprint": "S10",
     "fim": "2026-06-29",
-    "emAndamento": true,
+    "emAndamento": false,
     "prp": 253,
     "pvPts": 253,
-    "evPts": 228,
+    "evPts": 236,
     "spiSprint": null,
     "pvReais": 39079,
-    "evReais": 35217.44,
-    "acReais": 28999.97,
-    "spi": 0.9,
-    "cpi": 1.21,
-    "eac": 32179.79,
-    "etc": 3179.82,
-    "vac": 6899.21
+    "evReais": 36453.14,
+    "acReais": 30625.62,
+    "spi": 0.93,
+    "cpi": 1.19,
+    "eac": 32831.7,
+    "etc": 2206.08,
+    "vac": 6247.3
    }
   ],
   "velocity": [
@@ -5626,52 +6263,16 @@
    {
     "sprint": "S10",
     "planejado": 0,
-    "entregue": 2,
-    "emAndamento": true
+    "entregue": 10,
+    "emAndamento": false
    }
   ],
   "previsao": {
-   "velocidadeMedianaSP": 16,
-   "backlogAbertoEstimadoSP": 11,
-   "backlogAberto": [
-    {
-     "repo": "2026-1-AnatoQuizUp-Usuario-Service",
-     "numero": 76,
-     "titulo": "[US] Sistema de Conquistas e Marcos (Badges e Troféus)",
-     "estimate": 5,
-     "pipeline": "Review/QA"
-    },
-    {
-     "repo": "2026-1-AnatoQuizUp-Doc",
-     "numero": 34,
-     "titulo": "[US] Lista de Questões (Aluno)",
-     "estimate": 3,
-     "pipeline": "Review/QA"
-    },
-    {
-     "repo": "2026-1-AnatoQuizUp-Web",
-     "numero": 18,
-     "titulo": "[Frontend] Tela de erro 404 e fallback",
-     "estimate": 1,
-     "pipeline": "Review/QA"
-    },
-    {
-     "repo": "2026-1-AnatoQuizUp-Doc",
-     "numero": 40,
-     "titulo": "[BUG] Cadastro Aluno - Campo \"nome\" aceitando caracteres especiais",
-     "estimate": 1,
-     "pipeline": "Review/QA"
-    },
-    {
-     "repo": "2026-1-AnatoQuizUp-Doc",
-     "numero": 39,
-     "titulo": "[BUG] Cadastro Professor - Campo \"nome\" aceitando caracteres especiais",
-     "estimate": 1,
-     "pipeline": "Review/QA"
-    }
-   ],
-   "sprintsRestantes": 1,
-   "capacidadeRestanteSP": 16
+   "velocidadeMedianaSP": 15,
+   "backlogAbertoEstimadoSP": 0,
+   "backlogAberto": [],
+   "sprintsRestantes": 0,
+   "capacidadeRestanteSP": 0
   },
   "custoPorSp": [
    {
@@ -5696,23 +6297,23 @@
    },
    {
     "sprint": "S6",
-    "acumulado": 94.75
+    "acumulado": 96.41
    },
    {
     "sprint": "S7",
-    "acumulado": 108.05
+    "acumulado": 111.37
    },
    {
     "sprint": "S8",
-    "acumulado": 106.66
+    "acumulado": 111.03
    },
    {
     "sprint": "S9",
-    "acumulado": 116.78
+    "acumulado": 122.54
    },
    {
     "sprint": "S10",
-    "acumulado": 127.19
+    "acumulado": 129.77
    }
   ],
   "custoPorSpSprint": [
@@ -5738,25 +6339,22 @@
    },
    {
     "sprint": "S6",
-    "valor": 869.13
+    "valor": 977.5
    },
    {
     "sprint": "S8",
-    "valor": 96.57
+    "valor": 108.61
    },
    {
     "sprint": "S9",
-    "valor": 869.13
+    "valor": 977.5
+   },
+   {
+    "sprint": "S10",
+    "valor": 293.25
    }
   ],
-  "monteCarlo": {
-   "backlogSp": 11,
-   "p50": 1,
-   "p85": 2,
-   "p95": 3,
-   "media": 1.3,
-   "sprintsRestantes": 1
-  },
+  "monteCarlo": null,
   "qualidadeVelocidade": [
    {
     "sprint": "S1",
@@ -5802,8 +6400,151 @@
     "sprint": "S9",
     "entregueSP": 3,
     "coberturaFim": 94.4
+   },
+   {
+    "sprint": "S10",
+    "entregueSP": 10,
+    "coberturaFim": 95.2
    }
   ],
+  "prp": {
+   "releases": [
+    {
+     "release": "R1",
+     "nome": "Release Major 1",
+     "prazo": "2026-04-27",
+     "sprints": [
+      "S1"
+     ],
+     "equipeInicial": 12,
+     "equipeFinal": 12,
+     "equipeMin": 12,
+     "equipeMax": 12,
+     "prpSP": 91,
+     "entregueSP": 71,
+     "spiRelease": 0.78
+    },
+    {
+     "release": "R2",
+     "nome": "Release Major 2",
+     "prazo": "2026-05-25",
+     "sprints": [
+      "S2",
+      "S3",
+      "S4",
+      "S5"
+     ],
+     "equipeInicial": 10,
+     "equipeFinal": 9,
+     "equipeMin": 9,
+     "equipeMax": 10,
+     "prpSP": 115,
+     "entregueSP": 122,
+     "spiRelease": 1.06
+    },
+    {
+     "release": "R3",
+     "nome": "Release Major 3",
+     "prazo": "2026-06-29",
+     "sprints": [
+      "S6",
+      "S7",
+      "S8",
+      "S9",
+      "S10"
+     ],
+     "equipeInicial": 9,
+     "equipeFinal": 9,
+     "equipeMin": 9,
+     "equipeMax": 9,
+     "prpSP": 47,
+     "entregueSP": 43,
+     "spiRelease": 0.91
+    }
+   ],
+   "porSprint": [
+    {
+     "sprint": "S1",
+     "release": "R1",
+     "equipe": 12,
+     "planejadoSP": 91,
+     "entregueSP": 71,
+     "mudouEquipe": false
+    },
+    {
+     "sprint": "S2",
+     "release": "R2",
+     "equipe": 10,
+     "planejadoSP": 31,
+     "entregueSP": 16,
+     "mudouEquipe": true
+    },
+    {
+     "sprint": "S3",
+     "release": "R2",
+     "equipe": 9,
+     "planejadoSP": 29,
+     "entregueSP": 26,
+     "mudouEquipe": true
+    },
+    {
+     "sprint": "S4",
+     "release": "R2",
+     "equipe": 9,
+     "planejadoSP": 25,
+     "entregueSP": 14,
+     "mudouEquipe": false
+    },
+    {
+     "sprint": "S5",
+     "release": "R2",
+     "equipe": 9,
+     "planejadoSP": 30,
+     "entregueSP": 66,
+     "mudouEquipe": false
+    },
+    {
+     "sprint": "S6",
+     "release": "R3",
+     "equipe": 9,
+     "planejadoSP": 26,
+     "entregueSP": 3,
+     "mudouEquipe": false
+    },
+    {
+     "sprint": "S7",
+     "release": "R3",
+     "equipe": 9,
+     "planejadoSP": 4,
+     "entregueSP": 0,
+     "mudouEquipe": false
+    },
+    {
+     "sprint": "S8",
+     "release": "R3",
+     "equipe": 9,
+     "planejadoSP": 12,
+     "entregueSP": 27,
+     "mudouEquipe": false
+    },
+    {
+     "sprint": "S9",
+     "release": "R3",
+     "equipe": 9,
+     "planejadoSP": 5,
+     "entregueSP": 3,
+     "mudouEquipe": false
+    },
+    {
+     "sprint": "S10",
+     "release": "R3",
+     "equipe": 9,
+     "planejadoSP": 0,
+     "entregueSP": 10,
+     "mudouEquipe": false
+    }
+   ]
+  },
   "releases": [
    {
     "nome": "Release Major 1",

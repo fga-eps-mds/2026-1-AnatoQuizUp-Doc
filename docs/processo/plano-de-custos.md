@@ -23,7 +23,7 @@ Como o AnatoQuizUp é um projeto acadêmico da Universidade de Brasília, os val
 | Hospedagem considerada | Railway Hobby |
 | Cotação utilizada para USD | US$ 1,00 = R$ 5,0720 |
 
-O baseline deste plano é a **equipe completa de 12 integrantes** com que o projeto foi planejado no início do semestre. Ao longo da execução a equipe foi reduzida (12 → 10 → 9 → 8 integrantes; três trancaram a disciplina). Este documento mantém o baseline de 12, pois ele representa o **orçamento previsto** (`PV`/`BAC`) do plano original. O **custo real (`AC`) por sprint** — que acompanha a equipe efetiva de cada período — é tratado no [EVM Consolidado](evm-consolidado.md), e é justamente a diferença entre os dois que dá significado ao índice de custo (`CPI`).
+O baseline deste plano é a **equipe completa de 12 integrantes** com que o projeto foi planejado no início do semestre. Ao longo da execução a equipe foi reduzida (12 → 10 → 9 integrantes; três trancaram a disciplina). Este documento mantém o baseline de 12, pois ele representa o **orçamento previsto** (`PV`/`BAC`) do plano original. O **custo real (`AC`) por sprint** — que acompanha a equipe efetiva de cada período — é tratado no [EVM Consolidado](evm-consolidado.md), e é justamente a diferença entre os dois que dá significado ao índice de custo (`CPI`).
 
 ## 3. Estimativa de Custos
 
@@ -135,7 +135,7 @@ Com a **equipe baseline de 12 integrantes** (plano do início do semestre) mais 
 - **Custo semanal baseline:** 12 × R$ 325,13 + R$ 6,34 = **R$ 3.907,90** (= o custo semanal da equipe da seção 5)
 - **BAC do projeto (10 sprints de desenvolvimento, S1 19/04 → S10 29/06):** R$ 3.907,90 × 10 = **R$ 39.079,00** — é a fatia das 10 semanas de desenvolvimento dentro do total de R$ 66.434,30 (17 semanas).
 
-Esse é o orçamento (`BAC`) e a base do **Valor Planejado (`PV`)** no [EVM Consolidado](evm-consolidado.md). O **Custo Real (`AC`)** de cada sprint usa a **equipe efetiva** de cada período (12 → 10 → 9 → 8 integrantes), e **não** a baseline — é o que dá significado independente ao CPI (corrige os erros `AC = BAC` e baseline reduzida das páginas de EVM por sprint). Como a equipe efetiva ficou **abaixo** do baseline de 12, o `AC` corre abaixo do `PV` e o **CPI fica > 1** (projeto sob orçamento por ter rodado com menos pessoas que o planejado).
+Esse é o orçamento (`BAC`) e a base do **Valor Planejado (`PV`)** no [EVM Consolidado](evm-consolidado.md). O **Custo Real (`AC`)** de cada sprint usa a **equipe efetiva** de cada período (12 → 10 → 9 integrantes), e **não** a baseline — é o que dá significado independente ao CPI (corrige os erros `AC = BAC` e baseline reduzida das páginas de EVM por sprint). Como a equipe efetiva ficou **abaixo** do baseline de 12, o `AC` corre abaixo do `PV` e o **CPI fica > 1** (projeto sob orçamento por ter rodado com menos pessoas que o planejado).
 
 ## 4. Planilha de Custos
 

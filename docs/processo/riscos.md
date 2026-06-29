@@ -84,7 +84,7 @@ Ao longo das Releases Major 2 e 3, alguns riscos previstos na matriz efetivament
 
 | Risco da matriz | O que aconteceu | Resposta adotada |
 |-----------------|-----------------|------------------|
-| R02 / R03 — Saída e ausência de membros | A equipe foi reduzida de 12 para 8 integrantes ativos ao longo das releases (12 → 10 → 9 → 8), impactando a vazão das sprints | Reforço de pareamento e rotação de papéis; replanejamento de escopo (dashboards movidos para a Release Major 3) |
+| R02 / R03 — Saída e ausência de membros | A equipe foi reduzida de 12 para 9 integrantes ao longo das releases (12 → 10 → 9), impactando a vazão das sprints | Reforço de pareamento e rotação de papéis; replanejamento de escopo (dashboards movidos para a Release Major 3) |
 | R05 / R13 — Cobertura e Quality Gate no SonarCloud | O quality gate e o gate de cobertura de 85% bloquearam merges em vários momentos, exigindo esforço contínuo de testes | Cobertura tratada desde a abertura do PR; dono de pipeline acompanhando o SonarCloud |
 | R08 — PR parado aguardando review | Identificado como o maior gargalo do fluxo: PRs ficavam parados esperando revisão | Aviso de abertura de PR nos canais do time; board priorizando as reviews (fluxo da direita para a esquerda) |
 | R01 / R15 — Mudanças de escopo e gaps de validação | A validação dos POs reprovou parcialmente a criação de questões por faltarem campos estruturados para a IA, gerando retrabalho | Registro das mudanças como decisão; ajuste do backlog e do modelo de questão nas sprints seguintes |

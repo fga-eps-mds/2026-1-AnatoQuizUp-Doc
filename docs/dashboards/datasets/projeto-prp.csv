@@ -1,0 +1,4 @@
+release,nome,prazo,sprints,equipe_inicial,equipe_final,prp_sp,entregue_sp,spi_release
+R1,Release Major 1,2026-04-27,S1,12,12,91,71,0.78
+R2,Release Major 2,2026-05-25,S2 S3 S4 S5,10,9,115,122,1.06
+R3,Release Major 3,2026-06-29,S6 S7 S8 S9 S10,9,9,47,43,0.91
