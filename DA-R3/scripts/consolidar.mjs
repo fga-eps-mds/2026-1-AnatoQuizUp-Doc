@@ -377,10 +377,13 @@ const wipSerie = cfd.map((d) => ({
 // Limiares "user defined" do Q-Rapids: lead ≤ 14d, idade de WIP ≤ 14d, revisão de PR ≤ 2d.
 const LIM_LEAD = 14, LIM_IDADE = 14, LIM_REVISAO = 2;
 const ehBug = (i) => i.labels.some((l) => /bug/i.test(l)) || /\[bug\]/i.test(i.titulo);
-const abertasNaoPr = naoPr.filter((i) => !i.fechadaEm);
-const resolvidas = fechadas.filter((i) => !i.abandonado);
-const fluxoResolvido = fluxoDeCodigo.filter((i) => !i.abandonado);
-const totalNaoAband = naoPr.filter((i) => !i.abandonado).length;
+// exclui o repo de planejamento (épicos de release #133/#135/#136) — são marcos de
+// roadmap, não itens de trabalho, e não devem entrar nas métricas de fluxo do processo.
+const ehPlanejamento = (i) => i.repo === "2026-1-AnatoQuizUp";
+const abertasNaoPr = naoPr.filter((i) => !i.fechadaEm && !ehPlanejamento(i));
+const resolvidas = fechadas.filter((i) => !i.abandonado && !ehPlanejamento(i));
+const fluxoResolvido = fluxoDeCodigo.filter((i) => !i.abandonado && !ehPlanejamento(i));
+const totalNaoAband = naoPr.filter((i) => !i.abandonado && !ehPlanejamento(i)).length;
 const idadeAberta = (i) => dias(i.criadaEm, agora);
 const dens = (num, den) => (den ? arred(num / den, 3) : null);
 

@@ -1,5 +1,5 @@
 {
- "geradoEm": "2026-06-29T02:18:08.125Z",
+ "geradoEm": "2026-06-29T02:45:53.883Z",
  "premissas": [
   "Produto: densidades Q-Rapids calculadas por arquivo (SonarCloud component_tree) com faixas ideais e pesos do Plano de Qualidade (complexidade 35%, comentários 10%, duplicação 25%, cobertura 30%).",
   "Produto: Bloqueios = issues com descrição / total (GitHub, repos públicos); Prontidão = builds com sucesso / concluídas (último export de runs por repo).",
@@ -2433,9 +2433,9 @@
      "metricas": [
       {
        "metrica": "Team Throughput",
-       "densidade": 0.962,
+       "densidade": 0.977,
        "formula": "issues resolvidas / total de issues",
-       "bruto": "128 / 133",
+       "bruto": "85 / 87",
        "fonte": "ZenHub + GitHub"
       },
       {
@@ -2447,16 +2447,16 @@
       },
       {
        "metrica": "Old Issues",
-       "densidade": 0.2,
+       "densidade": 0.5,
        "formula": "issues abertas com idade ≤ 14d / total abertas",
-       "bruto": "1 / 5",
+       "bruto": "1 / 2",
        "fonte": "ZenHub"
       },
       {
        "metrica": "Bugs Ratio",
        "densidade": 1,
        "formula": "issues abertas não-bug / total abertas",
-       "bruto": "5 / 5",
+       "bruto": "2 / 2",
        "fonte": "GitHub (labels)"
       }
      ]
@@ -2475,17 +2475,17 @@
      ]
     }
    ],
-   "valor": 0.72,
+   "valor": 0.783,
    "dadosBrutos": [
     {
      "quantidade": "Total de issues (não-PR)",
-     "valor": 133,
+     "valor": 87,
      "fonte": "ZenHub + GitHub",
      "coleta": "todas as issues que não são Pull Request, exceto as encerradas na limpeza de board (abandonadas)"
     },
     {
      "quantidade": "Issues resolvidas (fechadas)",
-     "valor": 128,
+     "valor": 85,
      "fonte": "ZenHub + GitHub",
      "coleta": "issues não-PR com data de fechamento (closedAt), excluindo abandonadas"
     },
@@ -2503,7 +2503,7 @@
     },
     {
      "quantidade": "Issues abertas (total)",
-     "valor": 5,
+     "valor": 2,
      "fonte": "ZenHub + GitHub",
      "coleta": "issues não-PR sem data de fechamento"
     },
@@ -2515,7 +2515,7 @@
     },
     {
      "quantidade": "Issues abertas não-bug",
-     "valor": 5,
+     "valor": 2,
      "fonte": "GitHub (labels)",
      "coleta": "das abertas, sem a label \"bug\" e sem \"[BUG]\" no título"
     },
