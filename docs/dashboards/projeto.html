@@ -307,13 +307,18 @@ document.getElementById("tabela-brutos-sprint").innerHTML = `
 const u = ultimaFechada;
 const nU = serie.findIndex((x) => x.sprint === u.sprint) + 1;
 document.getElementById("memoria-calculo").innerHTML =
-  `Para <strong>${u.sprint}</strong> (valores acumulados): ` +
-  `<code class="formula">SPI = EV(SP)/PV(SP) = ${u.evPts}/${u.pvPts} = ${fmt(u.spi)}</code> · ` +
-  `<code class="formula">PV(R$) = ${reais(par.custoSemanaBaseline)} × ${nU} = ${reais(u.pvReais)}</code> · ` +
-  `<code class="formula">EV(R$) = SPI × PV(R$) = ${fmt(u.spi)} × ${reais(u.pvReais)} = ${reais(u.evReais)}</code> · ` +
-  `<code class="formula">CPI = EV(R$)/AC(R$) = ${reais(u.evReais)} / ${reais(u.acReais)} = ${fmt(u.cpi)}</code> · ` +
-  `<code class="formula">EAC = BAC/CPI = ${reais(par.bac)} / ${fmt(u.cpi)} = ${reais(u.eac)}</code> · ` +
-  `<code class="formula">VAC = BAC − EAC = ${reais(u.vac)}</code>.`;
+  `<p style="margin:0 0 8px 0">Passo a passo para <strong>${u.sprint}</strong> (valores acumulados):</p>
+  <table class="tabela" style="width:100%">
+    <thead><tr><th>Métrica</th><th>Fórmula</th><th class="num">Resultado</th></tr></thead>
+    <tbody>
+      <tr><td>SPI</td><td><code>EV(SP) / PV(SP) = ${u.evPts} / ${u.pvPts}</code></td><td class="num"><strong>${fmt(u.spi)}</strong></td></tr>
+      <tr><td>PV (R$)</td><td><code>${reais(par.custoSemanaBaseline)} × ${nU} sprints</code></td><td class="num">${reais(u.pvReais)}</td></tr>
+      <tr><td>EV (R$)</td><td><code>SPI × PV(R$) = ${fmt(u.spi)} × ${reais(u.pvReais)}</code></td><td class="num">${reais(u.evReais)}</td></tr>
+      <tr><td>CPI</td><td><code>EV(R$) / AC(R$) = ${reais(u.evReais)} / ${reais(u.acReais)}</code></td><td class="num"><strong>${fmt(u.cpi)}</strong></td></tr>
+      <tr><td>EAC</td><td><code>BAC / CPI = ${reais(par.bac)} / ${fmt(u.cpi)}</code></td><td class="num">${reais(u.eac)}</td></tr>
+      <tr><td>VAC</td><td><code>BAC − EAC = ${reais(par.bac)} − ${reais(u.eac)}</code></td><td class="num">${reais(u.vac)}</td></tr>
+    </tbody>
+  </table>`;
 </script>
 </body>
 </html>
