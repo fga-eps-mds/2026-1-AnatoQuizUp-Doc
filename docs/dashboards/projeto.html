@@ -70,17 +70,6 @@
     </div>
   </div>
 
-  <div class="nota">
-    <h3>Nota metodológica — correção do modelo EVM</h3>
-    <ul>
-      <li><strong>Modelo anterior (sprints 2–5):</strong> EVM isolado por sprint com AC = orçamento integral da sprint — forçava SPI ≡ CPI (o índice de custo não trazia informação) e impedia projeção de término (EAC).</li>
-      <li><strong>Modelo atual:</strong> série <em>cumulativa</em> em story points, no mesmo enquadramento do exemplo da disciplina. Cronograma: <code>PV(SP) = Σ planejado</code>, <code>EV(SP) = Σ entregue</code>, <code>SPI = EV/PV</code>. Custo: <code>PV(R$) = R$ 3.907,90 × sprints decorridas</code> (baseline de <strong>12</strong> integrantes), <code>EV(R$) = SPI × PV(R$)</code>, <code>AC(R$) = custo real incorrido</code> (equipe efetiva 12 → 10 → 9 → 8, carga de 14 h/sem do Plano de Custos), <code>CPI = EV/AC</code>, <code>EAC = BAC/CPI</code>, <code>VAC = BAC − EAC</code>.</li>
-      <li><strong>Correção do baseline (12, não 9):</strong> o baseline do EVM é o <em>plano do início do projeto</em>, com a <strong>equipe completa de 12</strong>. Usar 9 (a equipe já reduzida) escondia o maior fato do semestre — a perda de 1/3 do time.</li>
-      <li><strong>Por que CPI &gt; SPI agora (CPI ≈ 1,21):</strong> a equipe planejada (12) caiu para 8, então o custo real (AC) correu <em>abaixo</em> do orçamento previsto (PV) — o CPI sobe acima de 1 (projeto <strong>sob orçamento</strong>). <strong>Não é eficiência</strong>: é menos gente que o planejado. O mesmo encolhimento puxa o SPI para baixo (~0,90). São dois efeitos da mesma causa, agora visíveis separadamente. As curvas PV(R$) e AC(R$) aparecem separadas no gráfico ao lado.</li>
-      <li><strong>Leitura conjunta:</strong> SPI termina em ~0,90 (entrega de ~90% do escopo <em>planejado nas sprints</em>). O backlog de ambição que nunca entrou em sprint (53 cards de Icebox/Product Backlog, encerrados na limpeza de board ao fim do semestre) é <em>descopo</em> — não entra no PV. O 0,66 do registro inicial era <em>artefato de medição</em>: a equipe quitou o <em>débito de estimativa</em> (cards entregues sem pontuação no board). <strong>Caveat honesto:</strong> a velocity por sprint é distorcida pelo <em>bulk-close</em> nas releases (R1 27/04, R2 25/05) — a S5 mostra 66 SP porque concentrou o fechamento da R2; leia o cumulativo, não sprint a sprint.</li>
-      <li><strong>Fontes:</strong> PV(SP) S1–S5 dos relatórios de sprint publicados; S6–S10 pela soma dos <em>estimates</em> das issues atribuídas a cada sprint no ZenHub. EV(SP) medido das issues fechadas com estimate na janela. O time não registra horas reais — AC usa a aproximação de equipe efetiva.</li>
-    </ul>
-  </div>
 
   <div class="faixa-titulo"><h2>Dados brutos &amp; memória de cálculo — como verificar o EVM</h2></div>
   <div class="brutos">
