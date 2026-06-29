@@ -1,4 +1,4 @@
-# Validação de Funcionalidades 22/06
+# Validação da Release Minor 5
 
 > **Documento pendente.** O formulário foi enviado aos participantes, mas nenhuma resposta foi recebida até o momento da criação deste documento. As seções de critérios avaliados, feedbacks, resultado e encaminhamentos devem ser preenchidas assim que as respostas chegarem, seguindo o padrão dos documentos anteriores.
 
