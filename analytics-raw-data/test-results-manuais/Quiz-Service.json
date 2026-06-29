@@ -1,7 +1,24 @@
-{
-  "numTotalTests": 224,
-  "numPassedTests": 221,
-  "numFailedTests": 3,
-  "numRuntimeErrorTestSuites": 3,
-  "success": false
+﻿{
+  "resultados": [
+    {
+      "dataColeta": "2026-06-23",
+      "numTotalTests": 224,
+      "numPassedTests": 221,
+      "numFailedTests": 3,
+      "numFailedTestSuites": null,
+      "numTotalTestSuites": null,
+      "numRuntimeErrorTestSuites": 3,
+      "success": false
+    },
+    {
+      "dataColeta": "2026-06-28",
+      "numTotalTests": 377,
+      "numPassedTests": 355,
+      "numFailedTests": 22,
+      "numFailedTestSuites": 30,
+      "numTotalTestSuites": 70,
+      "numRuntimeErrorTestSuites": 0,
+      "success": false
+    }
+  ]
 }

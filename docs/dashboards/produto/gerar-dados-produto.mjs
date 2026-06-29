@@ -1,4 +1,4 @@
-import { readdir, readFile, writeFile } from "node:fs/promises";
+﻿import { readdir, readFile, writeFile } from "node:fs/promises";
 import { dirname, join } from "node:path";
 import { fileURLToPath } from "node:url";
 
@@ -6,6 +6,13 @@ const AQUI = dirname(fileURLToPath(import.meta.url));
 const DOCS_RAIZ = join(AQUI, "..", "..", "..");
 const RAW_DATA = join(DOCS_RAIZ, "analytics-raw-data");
 const TEST_RESULTS_MANUAIS = join(RAW_DATA, "test-results-manuais");
+
+const FORMATADOR_DIA_LOCAL = new Intl.DateTimeFormat("en-US", {
+  timeZone: "America/Sao_Paulo",
+  year: "numeric",
+  month: "2-digit",
+  day: "2-digit",
+});
 
 const PESOS_QRAPIDS = { complexidade: 0.35, comentarios: 0.10, duplicacao: 0.25, cobertura: 0.30 };
 const PESOS_NOTEBOOK = {
@@ -34,14 +41,21 @@ function dataArquivo(nome) {
   return new Date(Date.UTC(ano, mes - 1, dia, hora, minuto, segundo));
 }
 
+function diaLocal(data) {
+  const partes = Object.fromEntries(
+    FORMATADOR_DIA_LOCAL.formatToParts(data).map((parte) => [parte.type, parte.value]),
+  );
+  return `${partes.year}-${partes.month}-${partes.day}`;
+}
+
 function dataTabela(nome) {
   const data = dataArquivo(nome ?? "");
-  return data ? data.toISOString().slice(0, 10) : null;
+  return data ? diaLocal(data) : null;
 }
 
 function releaseDaData(data) {
   if (!data) return null;
-  const dia = data.toISOString().slice(0, 10);
+  const dia = diaLocal(data);
   if (dia >= "2026-03-16" && dia <= "2026-04-27") return 1;
   if (dia >= "2026-04-28" && dia <= "2026-05-25") return 2;
   if (dia >= "2026-05-26" && dia <= "2026-06-29") return 3;
@@ -79,10 +93,23 @@ async function lerJson(pasta, nome) {
 
 async function lerResultadoTestesManual(repo) {
   try {
-    return JSON.parse(await readFile(join(TEST_RESULTS_MANUAIS, `${repo}.json`), "utf8"));
+    const payload = JSON.parse((await readFile(join(TEST_RESULTS_MANUAIS, `${repo}.json`), "utf8")).replace(/^\uFEFF/, ""));
+    if (Array.isArray(payload)) return payload;
+    if (Array.isArray(payload?.resultados)) return payload.resultados;
+    return payload ? [payload] : [];
   } catch {
-    return null;
+    return [];
   }
+}
+
+function dataResultadoManual(resultadoManual) {
+  return resultadoManual?.dataColeta ?? resultadoManual?.data ?? resultadoManual?.collectedAt ?? null;
+}
+
+function sonarDoResultadoManual(sonarFiles, resultadoManual) {
+  const dataManual = dataResultadoManual(resultadoManual);
+  if (!dataManual) return sonarFiles.at(-1) ?? null;
+  return sonarFiles.filter((item) => dataTabela(item.nome) <= dataManual).at(-1) ?? null;
 }
 
 function medidasParaObjeto(lista = []) {
@@ -103,8 +130,8 @@ function densidadesQRapids(componentes = []) {
   const frac = (lista, pred) => lista.length ? lista.filter(pred).length / lista.length : null;
 
   return {
-    // Q-Rapids: arquivos não complexos / total de arquivos. Arquivos sem
-    // funções são não complexos, pois não possuem função acima do limite.
+    // Q-Rapids: arquivos nÃ£o complexos / total de arquivos. Arquivos sem
+    // funÃ§Ãµes sÃ£o nÃ£o complexos, pois nÃ£o possuem funÃ§Ã£o acima do limite.
     complexidade: frac(arquivos, (a) => {
       const funcoes = a.medidas.functions ?? 0;
       return funcoes === 0 || (a.medidas.complexity ?? 0) / funcoes <= 10;
@@ -141,9 +168,9 @@ function metricasTeste(medidas = {}, runs = [], resultadoManual = null) {
   const buildsRapidos = buildsDeTeste.filter(({ inicio, fim }) => fim - inicio < 300000);
 
   return {
-    // Q-Rapids: (testes unitários - erros - falhas) / testes unitários.
-    // Não substitua pela proporção de suítes aprovadas: são grandezas
-    // diferentes. Sem as três contagens, a métrica fica indisponível.
+    // Q-Rapids: (testes unitÃ¡rios - erros - falhas) / testes unitÃ¡rios.
+    // NÃ£o substitua pela proporÃ§Ã£o de suÃ­tes aprovadas: sÃ£o grandezas
+    // diferentes. Sem as trÃªs contagens, a mÃ©trica fica indisponÃ­vel.
     testSuccess: possuiContagens
       ? Math.max(0, totalTestes - erros - falhas) / totalTestes
       : null,
@@ -217,7 +244,7 @@ function recalcularFatores(linha) {
 }
 
 function preencherAtributosAusentes(linhas) {
-  const campos = ["ncloc", "complexity", "comments", "duplication", "testSuccess", "fastTests", "coverage"];
+  const campos = ["ncloc", "complexity", "comments", "duplication", "fastTests", "coverage"];
   const ultimoValor = {};
   const ultimaOrigem = {};
 
@@ -242,7 +269,7 @@ function historicoSonar(sonarFiles) {
   const serie = {};
   for (const item of sonarFiles) {
     const medidas = medidasParaObjeto(item.payload?.baseComponent?.measures ?? []);
-    const data = item.data.toISOString().slice(0, 10);
+    const data = dataTabela(item.nome);
     for (const [metric, valor] of Object.entries(medidas)) {
       if (valor === undefined) continue;
       serie[metric] ??= [];
@@ -303,7 +330,7 @@ async function montarRepositorio(repo) {
   const latestSonar = sonarFiles.at(-1);
   const latestRuns = runsFiles.at(-1);
   const latestIssues = escolherMaisRecente(arquivos, (nome) => nome.startsWith("GitHub_API-Issues-") && nome.endsWith(".json"));
-  const resultadoTestesManual = await lerResultadoTestesManual(repo.nome);
+  const resultadosTestesManuais = await lerResultadoTestesManual(repo.nome);
 
   const medidas = medidasParaObjeto(latestSonar?.payload?.baseComponent?.measures ?? []);
   const densidades = densidadesQRapids(latestSonar?.payload?.components ?? []);
@@ -316,7 +343,13 @@ async function montarRepositorio(repo) {
     detalheIssues: { total: 0, comDescricao: 0, fechadas: 0 },
   };
 
-  const historicoTabela = preencherAtributosAusentes([...sonarFiles].reverse().map((sonar, indice) => {
+  const resultadosPorSonar = new Map();
+  for (const resultado of resultadosTestesManuais) {
+    const sonarManual = sonarDoResultadoManual(sonarFiles, resultado);
+    if (sonarManual) resultadosPorSonar.set(sonarManual.nome, resultado);
+  }
+
+  const historicoTabela = preencherAtributosAusentes([...sonarFiles].reverse().map((sonar) => {
     const runsDoPeriodo = runsFiles.filter((item) => item.data <= sonar.data).at(-1);
     const medidasHistoricas = medidasParaObjeto(sonar.payload?.baseComponent?.measures ?? []);
     const densidadesHistoricas = densidadesQRapids(sonar.payload?.components ?? []);
@@ -325,7 +358,7 @@ async function montarRepositorio(repo) {
       medidasHistoricas,
       densidadesHistoricas,
       runsDoPeriodo?.payload?.workflow_runs ?? [],
-      indice === 0 ? resultadoTestesManual : null,
+      resultadosPorSonar.get(sonar.nome) ?? null,
     );
   }));
 
@@ -333,7 +366,7 @@ async function montarRepositorio(repo) {
     medidas,
     densidades,
     tabela: historicoTabela[0]
-      ?? metricasTabela(latestSonar, medidas, densidades, runsPayload?.workflow_runs ?? [], resultadoTestesManual),
+      ?? metricasTabela(latestSonar, medidas, densidades, runsPayload?.workflow_runs ?? [], resultadosTestesManuais.at(-1) ?? null),
     qualidadeProduto: qualidade,
     indicadores: {
       qualidadeProduto: qualidade,
@@ -350,7 +383,7 @@ async function montarRepositorio(repo) {
       sonar: latestSonar?.nome ?? null,
       runs: latestRuns?.nome ?? null,
       issues: latestIssues?.nome ?? null,
-      testesManuais: resultadoTestesManual ? `${repo.nome}.json` : null,
+      testesManuais: resultadosTestesManuais.length ? `${repo.nome}.json` : null,
     },
   };
 }
@@ -374,3 +407,6 @@ for (const repo of REPOS) {
   const dados = porRepo[repo.nome];
   console.log(`${repo.nome}: sonar=${dados.snapshot.sonar ?? "N/A"} qualidade=${dados.qualidadeProduto ?? "N/A"} prontidao=${dados.indicadores.prontidao ?? "N/A"}`);
 }
+
+
+
