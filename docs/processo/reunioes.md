@@ -241,6 +241,33 @@ A equipe apresentou as USs concluídas na semana e demonstrou seu funcionamento.
 
 **Ata completa:** [reuniao2106-ata.md](../assets/processo/reuniao2106-ata.md)
 
+### 28/06/2026 — Sprint Review e Preparação para a Entrega Final do Semestre
+
+**Formato da ata:** Markdown
+
+**Objetivo:**
+Revisar o trabalho desenvolvido na semana (resolução de bugs, testes e dashboards), alinhar as entregas finais do semestre — Release na plataforma Aprender, dashboard e apresentação final — e dividir as tarefas da última semana da disciplina.
+
+**Resumo da ata:**
+A equipe revisou as entregas da semana, confirmando a resolução dos bugs, a conclusão dos testes de integração e o funcionamento dos testes E2E (ambiente subido via Docker Compose, ainda a finalizar e abrir o PR), além da US extra de Ranking desenvolvida por Genilson. Foram apresentadas as correções de dashboard solicitadas pelo professor e as alterações realizadas. A frente de Inteligência Artificial não pôde ser detalhada, pois Bruno e Malu não compareceram. Por fim, a equipe alinhou as duas datas críticas da Semana 16 — entrega da R3 e do dashboard no Aprender (29/06) e apresentação final (02/07) — e dividiu as frentes de trabalho para a reta final.
+
+**Principais decisões:**
+
+- Confirmação da resolução dos bugs, da conclusão dos testes de integração e do funcionamento dos testes E2E (a finalizar com PR).
+- Conclusão da US extra de Ranking (Genilson).
+- Finalização de todas as entregas no GitHub no mesmo dia (28/06), liberando a semana final para dashboard, slides e apresentação.
+- Divisão das frentes: DA-R3 (Genilson, Bruno, Malu, Breno e Miguel) e slides da apresentação final (demais membros).
+
+**Encaminhamentos:**
+
+- Equipe: entregar a R3 e o dashboard na plataforma Aprender (29/06) e realizar a apresentação final (02/07); cada membro entrega o template individual.
+- Genilson, Bruno, Malu, Breno e Miguel: focar no DA-R3.
+- Demais membros: focar nos slides da apresentação final.
+- Responsáveis pelos testes E2E: finalizar e abrir o PR.
+- Bruno e Malu: esclarecer o andamento da frente de IA.
+
+**Ata completa:** [reuniao2806-ata.md](../assets/processo/reuniao2806-ata.md)
+
 ## Histórico de Versão
 
 | Data | Versão | Descrição | Autor(es) |
@@ -256,3 +283,4 @@ A equipe apresentou as USs concluídas na semana e demonstrou seu funcionamento.
 | 02/06/2026 | 1.8 | Inclusão da ata de Sprint Review, feedback Major 2 e planejamento (31/05) | [Genilson Junior](https://github.com/GenilsonJrs) |
 | 11/06/2026 | 1.9 | Inclusão da ata de Sprint Review e preparação de pauta (07/06) | [Genilson Junior](https://github.com/GenilsonJrs) |
 | 21/06/2026 | 1.10 | Inclusão da ata de Sprint Review, divisão de tarefas e transição de liderança (21/06) | [Genilson Junior](https://github.com/GenilsonJrs) |
+| 28/06/2026 | 1.11 | Inclusão da ata de Sprint Review e preparação para a entrega final do semestre (28/06) | [Genilson Junior](https://github.com/GenilsonJrs) |
