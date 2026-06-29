@@ -112,15 +112,16 @@ document.getElementById("fatores-qrapids").innerHTML = metricasQR.map((m) => {
 const totalM = QR.fatores.reduce((s, f) => s + f.metricas.length, 0);
 let primeira = true;
 document.getElementById("tabela-qrapids").innerHTML = `
-  <thead><tr><th>Indicador</th><th>Fator</th><th>Assessed Metric</th><th class="num">Densidade</th><th>Dado bruto (num/den)</th><th>Fonte</th></tr></thead>
+  <thead><tr><th>Indicador</th><th>Fator</th><th>Assessed Metric</th><th>Fórmula</th><th class="num">Densidade</th><th>Dado bruto (num/den)</th><th>Fonte</th></tr></thead>
   <tbody>${QR.fatores.flatMap((f) => f.metricas.map((m, idx) => {
     const ind = primeira ? `<td rowspan="${totalM}"><strong>${QR.indicador}</strong><br><span style="color:var(--cinza)">${pct(QR.valor)}</span></td>` : "";
     primeira = false;
     const fat = idx === 0 ? `<td rowspan="${f.metricas.length}"><strong>${f.fator}</strong><br><span style="font-size:.78rem;color:var(--cinza)">${f.descricao}</span></td>` : "";
     return `<tr>${ind}${fat}
       <td>${m.metrica}</td>
+      <td><code style="font-size:.85rem">${m.formula}</code></td>
       <td class="num"><span class="selo ${clsDens(m.densidade)}">${pct(m.densidade)}</span></td>
-      <td>${m.bruto}<br><span style="font-size:.78rem;color:var(--cinza)">${m.formula}</span></td>
+      <td>${m.bruto}</td>
       <td>${m.fonte}</td></tr>`;
   })).join("")}</tbody>`;
 
