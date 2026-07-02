@@ -7,6 +7,7 @@ Painéis técnico-gerenciais do AnatoQuizUp com dados reais de execução do pro
 | **Produto** | [Dashboard de Produto](produto/){target=_blank} | Modelo Q-Rapids e Analytics da Disciplina |
 | **Processo** | [Dashboard de Processo](processo.html){target=_blank} | **Q-Rapids**: indicador estratégico Process Performance (fatores Issues' Velocity e Development Speed) com as métricas do board como densidades [0–1] |
 | **Projeto** | [Dashboard de Projeto](projeto.html){target=_blank} | **AgileEVM** (Sulaiman/Barton/Blackburn) cumulativo: SPI em story points, CPI em R$ com PV na equipe baseline do [Plano de Custos](../processo/plano-de-custos.md) e AC na equipe efetiva por sprint; PRP por release |
+| **Síntese** | [Canvas Analytics](canvas.html){target=_blank} | **Software Analytics Canvas** (Choma et al., 2019): planejamento e gestão da análise de dados, conectando os três eixos das questões-chave às metas de melhoria |
 
 A análise completa — normalização, interpretação, auditoria de qualidade dos dados, decisões gerenciais e retrospectiva de uso de IA — está no **Notebook Analytics** da DA-R3: [`DA-R3/notebook-analytics-r3.ipynb`](https://github.com/fga-eps-mds/2026-1-AnatoQuizUp-Doc/blob/main/DA-R3/notebook-analytics-r3.ipynb).
 

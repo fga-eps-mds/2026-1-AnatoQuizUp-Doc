@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Canvas Analytics — AnatoQuizUp</title>
+<link rel="stylesheet" href="dashboards.css">
+<script src="dados-consolidados.js"></script>
+<style>
+  .canvas { display: grid; grid-template-columns: repeat(10, 1fr); gap: 12px; margin: 14px 0 24px; }
+  .bloco { border: 1px solid var(--borda); border-top: 3px solid var(--azul); border-radius: 8px; padding: 11px 13px; background: #fff; display: flex; flex-direction: column; grid-column: span 2; }
+  .bloco.b-larga { grid-column: span 6; }
+  .bloco.b-media { grid-column: span 4; }
+  .bloco .cab { display: flex; align-items: center; gap: 8px; margin-bottom: 2px; }
+  .bloco .n { flex: 0 0 24px; width: 24px; height: 24px; border-radius: 50%; background: var(--azul); color: #fff; font-size: .82rem; font-weight: 700; display: flex; align-items: center; justify-content: center; font-family: -apple-system, Arial, sans-serif; }
+  .bloco h3 { margin: 0; font-size: .98rem; color: var(--tinta); }
+  .bloco .q { font-style: italic; color: var(--cinza); font-size: .78rem; margin: 3px 0 8px; line-height: 1.35; }
+  .bloco ul { margin: 0; padding-left: 15px; font-size: .84rem; line-height: 1.4; }
+  .bloco li { margin: 4px 0; }
+  .bloco b { color: var(--azul); }
+  .val { font-weight: 700; }
+  .val.verde { color: var(--verde); } .val.amarelo { color: #8d6e00; } .val.vermelho { color: var(--vermelho); }
+  .patt { display: inline-block; font-family: -apple-system, Arial, sans-serif; font-size: .68rem; color: var(--cinza); background: var(--fundo-suave); border: 1px solid var(--borda); border-radius: 4px; padding: 0 5px; margin: 6px 4px 0 0; }
+  .patt-wrap { margin-top: auto; padding-top: 6px; }
+  .kanban { display: grid; grid-template-columns: repeat(4, 1fr); gap: 8px; margin-top: 4px; }
+  .duas { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; margin-top: 4px; }
+  .colk { background: var(--fundo-suave); border-radius: 6px; padding: 7px 9px; }
+  .colk .tit { font-family: -apple-system, Arial, sans-serif; font-size: .7rem; font-weight: 700; text-transform: uppercase; letter-spacing: .4px; color: var(--cinza); margin-bottom: 4px; }
+  .colk.feito .tit { color: var(--verde); }
+  .colk.imped .tit { color: var(--vermelho); }
+  .colk ul { padding-left: 14px; font-size: .8rem; }
+  .colk li { margin: 3px 0; }
+  .thresh { list-style: none; padding: 0; margin: 0; font-size: .84rem; }
+  .thresh li { display: flex; justify-content: space-between; gap: 8px; padding: 3px 0; border-bottom: 1px solid var(--fundo-suave); }
+  .thresh .meta { font-weight: 700; color: var(--azul); white-space: nowrap; }
+  @media (max-width: 1100px) { .canvas { grid-template-columns: repeat(2, 1fr); } .bloco, .bloco.b-larga, .bloco.b-media { grid-column: span 1; } .kanban { grid-template-columns: 1fr 1fr; } }
+</style>
+</head>
+<body>
+<main>
+  <h1>Canvas Analytics — planejamento e gestão da análise de dados</h1>
+  <p class="subtitulo">Artefato que organiza <strong>o que</strong> queremos saber, <strong>de onde</strong> vêm os dados, <strong>como</strong> analisamos e <strong>quais decisões</strong> tomamos — dando um fio condutor às análises técnicas e gerenciais dos três dashboards (Produto, Processo, Projeto).</p>
+  <nav class="abas">
+    <a href="produto/">Produto</a>
+    <a href="processo.html">Processo</a>
+    <a href="projeto.html">Projeto</a>
+    <a href="canvas.html" class="ativa">Canvas</a>
+  </nav>
+
+  <div class="metodologia">
+    <h2>Metodologia — Software Analytics Canvas</h2>
+    <p>Seguimos o <strong>Software Analytics Canvas</strong> (Choma, Guerra, Silva da Silva, Zaina &amp; Correia, 2019) — um artefato de <em>software analytics</em> para times ágeis, derivado de oito padrões de análise de dados. Ele estrutura o ciclo de <strong>decisão orientada a dados</strong> em blocos: das questões-chave às fontes, coleta, insights, limiares de qualidade, e as metas e tarefas de melhoria. Cada bloco abaixo traz sua <em>pergunta-guia</em> e, ao pé, os padrões do modelo que o originam.</p>
+    <p class="ref">Referência: CHOMA, J.; GUERRA, E. M.; SILVA DA SILVA, T.; ZAINA, L. A. M.; CORREIA, F. F. <em>Towards an artifact to support agile teams in software analytics activities</em>. SEKE 2019. DOI 10.18293/SEKE2019-146.<br>
+    <span class="fonte">dados: SonarCloud</span><span class="fonte">ZenHub</span><span class="fonte">GitHub</span><span class="fonte">Plano de Custos</span></p>
+  </div>
+
+  <div class="canvas">
+
+    <!-- 1 -->
+    <div class="bloco">
+      <div class="cab"><span class="n">1</span><h3>Key Issues</h3></div>
+      <div class="q">O que queremos saber sobre o software, o processo e o uso?</div>
+      <ul>
+        <li>O código está <b>sustentável</b> para novas releases? (qualidade interna)</li>
+        <li>O <b>fluxo de trabalho</b> do time é saudável? (vazão, gargalos, revisão)</li>
+        <li>Entregamos o <b>escopo planejado</b> no prazo e no orçamento?</li>
+        <li>A <b>redução de equipe</b> (12 → 9) comprometeu entrega e qualidade?</li>
+      </ul>
+      <div class="patt-wrap"><span class="patt">What You Want to Know</span></div>
+    </div>
+
+    <!-- 2 -->
+    <div class="bloco">
+      <div class="cab"><span class="n">2</span><h3>Data Sources</h3></div>
+      <div class="q">Quais fontes fornecem informação sobre essas questões?</div>
+      <ul>
+        <li><b>SonarCloud</b> — qualidade interna por arquivo (atual e histórica)</li>
+        <li><b>ZenHub</b> — board, sprints e eventos de movimentação das issues</li>
+        <li><b>GitHub</b> — issues, PRs, labels, tags/releases e Actions</li>
+        <li><b>Plano de Custos</b> e <b>relatórios de sprint</b> (MkDocs)</li>
+      </ul>
+      <div class="patt-wrap"><span class="patt">Choose the Means</span><span class="patt">Learning from Experiments</span></div>
+    </div>
+
+    <!-- 3 -->
+    <div class="bloco">
+      <div class="cab"><span class="n">3</span><h3>Data Gathering</h3></div>
+      <div class="q">Como coletar e analisar os dados de cada questão?</div>
+      <ul>
+        <li><b>Coleta:</b> scripts em <code>DA-R3/scripts/</code> (ZenHub GraphQL+REST, GitHub REST, SonarCloud API)</li>
+        <li><b>Consolidação:</b> <code>consolidar.mjs</code> → JSON + datasets CSV</li>
+        <li><b>Modelos:</b> Q-Rapids (densidades [0–1]) e AgileEVM (SPI/CPI cumulativos)</li>
+        <li><b>Visualização:</b> 3 dashboards (Chart.js) no GitHub Pages</li>
+      </ul>
+      <div class="patt-wrap"><span class="patt">Choose the Means</span><span class="patt">Learning from Experiments</span></div>
+    </div>
+
+    <!-- 4 -->
+    <div class="bloco">
+      <div class="cab"><span class="n">4</span><h3>Insights</h3></div>
+      <div class="q">O que descobrimos a partir da análise?</div>
+      <ul>
+        <li><b>Produto:</b> qualidade <span id="i-prod" class="val verde">0,91</span>; complexidade e duplicação quase ideais; <b>comentários é o ponto fraco</b> (código autoexplicativo, decisão consciente).</li>
+        <li><b>Processo:</b> Process Performance <span id="i-proc" class="val amarelo">78%</span>; vazão alta, mas metade das issues leva &gt; 14 dias (fechamento em lote).</li>
+        <li><b>Projeto:</b> SPI <span id="i-spi" class="val amarelo">0,93</span> e CPI <span id="i-cpi" class="val verde">1,19</span> são o <b>mesmo efeito</b> da perda de equipe.</li>
+        <li>O board escondia <b>débito de estimativa</b> (~60 SP sem pontuação); ao quitar, o SPI subiu de 0,66 para ~0,90.</li>
+      </ul>
+      <div class="patt-wrap"><span class="patt">→ dispara Reachable Improvement Goals</span></div>
+    </div>
+
+    <!-- 5 -->
+    <div class="bloco">
+      <div class="cab"><span class="n">5</span><h3>Quality Thresholds</h3></div>
+      <div class="q">Que parâmetros definem a qualidade das nossas decisões? (mínimo · meta)</div>
+      <ul class="thresh">
+        <li><span>Cobertura de testes</span><span class="meta">≥ 85% · 90%</span></li>
+        <li><span>Complexidade ciclomática / função</span><span class="meta">≤ 10</span></li>
+        <li><span>Duplicação por arquivo</span><span class="meta">&lt; 5%</span></li>
+        <li><span>Comentários por arquivo</span><span class="meta">10–30%</span></li>
+        <li><span>Lead time de resolução</span><span class="meta">≤ 14 dias</span></li>
+        <li><span>Revisão de PR</span><span class="meta">≤ 2 dias</span></li>
+        <li><span>SPI e CPI (faixa saudável)</span><span class="meta">0,9–1,1</span></li>
+      </ul>
+      <div class="patt-wrap"><span class="patt">Define Quality Standards</span></div>
+    </div>
+
+    <!-- 6 -->
+    <div class="bloco b-larga">
+      <div class="cab"><span class="n">6</span><h3>Analytics Implementation</h3></div>
+      <div class="q">Como implementar as tarefas de analytics junto com as demais tarefas do projeto?</div>
+      <div class="kanban">
+        <div class="colk"><div class="tit">A Fazer</div><ul>
+          <li>Coleta periódica agendada (CI)</li>
+          <li>Alerta quando densidade &lt; limiar</li>
+        </ul></div>
+        <div class="colk"><div class="tit">Em Progresso</div><ul>
+          <li>Notebook Analytics final</li>
+          <li>Roteiros de apresentação</li>
+        </ul></div>
+        <div class="colk feito"><div class="tit">Feito</div><ul>
+          <li>Coleta das 3 fontes automatizada</li>
+          <li>Consolidação + datasets CSV</li>
+          <li>3 dashboards publicados (Pages)</li>
+        </ul></div>
+        <div class="colk imped"><div class="tit">Impedimentos</div><ul>
+          <li>Horas reais não registradas (AC aproximado)</li>
+          <li>Deploy manual não rastreado</li>
+        </ul></div>
+      </div>
+      <div class="patt-wrap"><span class="patt">Software Analytics Planning</span><span class="patt">Analytics in Small Steps</span></div>
+    </div>
+
+    <!-- 7 -->
+    <div class="bloco b-media">
+      <div class="cab"><span class="n">7</span><h3>Incremental Goals</h3></div>
+      <div class="q">Que metas incrementais definimos a partir dos insights da análise?</div>
+      <div class="duas">
+        <div class="colk"><div class="tit">A Fazer</div><ul>
+          <li>Comentar trechos de lógica complexa</li>
+          <li>Fechar cards na hora, não em lote</li>
+          <li>Registrar horas reais da equipe</li>
+          <li>Automatizar deploy p/ rastrear "implantada"</li>
+        </ul></div>
+        <div class="colk feito"><div class="tit">Feito</div><ul>
+          <li>Quality gate de 85% desde a R1</li>
+          <li>Quitação do débito de estimativa</li>
+          <li>Correção do EVM (baseline 12, AC = equipe efetiva)</li>
+        </ul></div>
+      </div>
+      <div class="patt-wrap"><span class="patt">Reachable Improvement Goals</span><span class="patt">Suspend Measurement</span></div>
+    </div>
+
+  </div>
+
+  <div class="nota">
+    <h3>Como ler este canvas</h3>
+    <ul>
+      <li>Os blocos <strong>1 a 5</strong> são o planejamento e a leitura da análise: da pergunta (Key Issues) até o que ela revelou (Insights) e os limiares que julgam nossas decisões (Quality Thresholds).</li>
+      <li>Os blocos <strong>6 e 7</strong> transformam os insights em <strong>ação</strong>: as tarefas de analytics (feito, em progresso, a fazer, impedimentos) e as metas de melhoria contínua.</li>
+      <li>Ele não substitui os dashboards — ele os <strong>amarra</strong>: cada número citado aqui é rastreável ao dashboard e à fonte correspondente (SonarCloud, ZenHub, GitHub, Plano de Custos).</li>
+    </ul>
+  </div>
+
+  <p class="rodape" id="rodape"></p>
+</main>
+
+<script>
+const D = window.DADOS;
+const fmt = (v, c = 2) => v == null ? "—" : v.toLocaleString("pt-BR", { minimumFractionDigits: c, maximumFractionDigits: c });
+const pct = (v) => v == null ? "—" : `${Math.round(v * 100)}%`;
+try {
+  document.getElementById("i-prod").textContent = fmt(D.produto.global.qualidadeProduto);
+  document.getElementById("i-proc").textContent = pct(D.processo.qrapids.valor);
+  const u = D.projeto.evm.filter((e) => !e.emAndamento).at(-1) ?? D.projeto.evm.at(-1);
+  document.getElementById("i-spi").textContent = fmt(u.spi);
+  document.getElementById("i-cpi").textContent = fmt(u.cpi);
+} catch (e) { /* mantém os valores estáticos do HTML */ }
+document.getElementById("rodape").textContent =
+  `Gerado em ${D.geradoEm.slice(0, 16).replace("T", " ")} · Modelo: Software Analytics Canvas (Choma et al., 2019) · Fontes: SonarCloud, ZenHub, GitHub e Plano de Custos.`;
+</script>
+</body>
+</html>
