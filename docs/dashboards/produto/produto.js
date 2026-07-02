@@ -85,9 +85,9 @@ function renderDashboard(repoInfo) {
 
   const t = dados.tabela ?? {};
   const cards = [
-    { tipo: "Indicador estrat&eacute;gico", nome: "Product Quality (Qualidade do Produto)", valor: t.scoreTotal },
-    { tipo: "Fator de Qualidade", nome: "Maintainability (Manutenibilidade)", valor: t.maintainability, maximo: 0.50 },
-    { tipo: "Fator de Qualidade", nome: "Reliability (Confiabilidade)", valor: t.reliability, maximo: 0.50 },
+    { tipo: "Indicador de Qualidade", nome: "Product Quality (Qualidade do Produto)", valor: t.scoreTotal },
+    { tipo: "Aspecto de Qualidade", nome: "Maintainability (Manutenibilidade)", valor: t.maintainability, maximo: 0.50 },
+    { tipo: "Aspecto de Qualidade", nome: "Reliability (Confiabilidade)", valor: t.reliability, maximo: 0.50 },
   ];
   const codeQuality = [
     { nome: "Complexity - arquivos n&atilde;o complexos (nenhuma fun&ccedil;&atilde;o com complexidade ciclom&aacute;tica > 10)", valor: t.complexity },
@@ -114,8 +114,8 @@ function renderDashboard(repoInfo) {
       <div class="formulas">
         <div><code>Code Quality</code> = (Complexity &times; 0,33) + (Comments &times; 0,33) + (Duplication &times; 0,33)<small>Conformidade dos arquivos para complexidade, coment&aacute;rios e duplica&ccedil;&atilde;o.</small></div>
         <div><code>Testing Status</code> = (Test Success &times; 0,25) + (Fast Tests &times; 0,25) + (Coverage &times; 0,50)<small>Sucesso dos testes, velocidade dos builds de CI e cobertura por arquivo.</small></div>
-        <div><code>Maintainability</code> = Code Quality &times; 0,50<small>Fator de Qualidade 1</small></div>
-        <div><code>Reliability</code> = Testing Status &times; 0,50<small>Fator de Qualidade 2</small></div>
+        <div><code>Maintainability</code> = Code Quality &times; 0,50<small>Característica 1</small></div>
+        <div><code>Reliability</code> = Testing Status &times; 0,50<small>Característica 2</small></div>
         <div><code>Product Quality</code> = Maintainability + Reliability<small>Qualidade total do produto</small></div>
       </div>
     </section>
@@ -128,7 +128,7 @@ function renderDashboard(repoInfo) {
     <section class="observacoes">
       <h3>Observa&ccedil;&otilde;es:</h3>
       <p>O dashboard escolhe sempre o JSON mais recente do respectivo reposit&oacute;rio em <code>analytics-raw-data</code>.</p>
-      <h3>C&aacute;lculo das m&eacute;tricas-base</h3>
+      <h3>C&aacute;lculo das m&eacute;tricas</h3>
       <div class="calculos-base">
         <div><code>Complexity</code><span>arquivos n&atilde;o complexos &divide; total de arquivos; um arquivo &eacute; complexo quando sua complexidade ciclom&aacute;tica por fun&ccedil;&atilde;o &eacute; &gt; 10</span><small>Fonte: SonarQube</small></div>
         <div><code>Comments</code><span>arquivos com 10-30% de linhas comentadas &divide; total de arquivos analisados</span><small>Fonte: SonarQube</small></div>
