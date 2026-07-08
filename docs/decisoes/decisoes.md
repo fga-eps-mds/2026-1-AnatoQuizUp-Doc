@@ -33,6 +33,7 @@ Este documento registra decisões relevantes do AnatoQuizUp que afetam escopo, a
 | DP23 | Introduzir listas de questões compartilháveis por turma | `ListaQuestao`/`ListaQuestaoItem`/`ListaTurma`; professor monta listas e compartilha com turmas | Consolidada |
 | DP24 | Disponibilizar dashboards de desempenho (aluno e turma) | Agregação a partir das resoluções; aluno vê o próprio desempenho, professor/admin veem a turma (macro e individual) | Consolidada |
 | DP25 | Adicionar funcionalidades sociais de amizade entre alunos | Convites, busca por visibilidade e vínculo; status `PENDENTE`/`ATIVO`/`RECUSADO`; flag `visivel` no usuário | Consolidada |
+| DP26 | Substituir o construtor de personalização de avatar por avatares prontos e cosméticos em uma Loja Virtual generalizada | Remove do MVP da R3 a customização de avatar por montagem de peças (alto esforço de arte, sem competência interna no time); a personalização passa a ser feita por itens cosméticos adquiridos na loja (ícones de perfil, molduras, avatares estáticos, títulos e planos de fundo) e equipados em Personalizar Perfil, dando uso às moedas ATP; decisão negociada com os POs na reunião de 22/06 | Consolidada |
 
 
 ## Decisões abertas ou em acompanhamento
@@ -52,3 +53,4 @@ Este documento registra decisões relevantes do AnatoQuizUp que afetam escopo, a
 | 27/04/2026 | 1.0 | Registro inicial das decisões de projeto consolidadas até a Sprint 1 | [Miguel Moreira](https://github.com/miguelmsoliveira) |
 | 05/05/2026 | 1.1 | Inclusão das decisões DP16 (adoção de BFF), DP17 (serviços de domínio privados com `X-Internal-Token`), DP18 (JWT em duas camadas) e DP19 (renomeação de repositórios) | [Miguel Moreira](https://github.com/miguelmsoliveira) |
 | 02/06/2026 | 1.2 | Inclusão das decisões DP20–DP25 (Quiz-Service, turmas por papel, moedas, listas, dashboards e amizade), atualização do status de DP10/DP11 e das decisões em acompanhamento | [Miguel Moreira](https://github.com/EhOMiguel) |
+| 07/07/2026 | 1.3 | Inclusão da decisão DP26 (substituição do construtor de avatar por avatares prontos e cosméticos na Loja Virtual generalizada, negociada com os POs em 22/06) | [Breno Fernandes](https://github.com/BrenoFrds) |

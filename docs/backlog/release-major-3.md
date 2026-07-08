@@ -18,7 +18,7 @@ Este documento contém as histórias de usuário e tarefas técnicas da **Releas
 - Resolução de listas de questões pelo aluno.
 - Dashboard de desempenho do aluno e dashboard de rendimento da turma.
 - Conquistas e loja virtual (uso das moedas ATP).
-- Personalização de perfil e avatar.
+- Personalização de perfil com cosméticos da loja (ícones de perfil, molduras, avatares estáticos, títulos e planos de fundo). O construtor de avatar customizável (montagem por peças) ficou **fora do MVP** — ver [DP26](../decisoes/decisoes.md).
 - Funcionalidades sociais (amizade entre alunos).
 - Estrutura de IA/RAG para geração de questões com validação docente.
 
@@ -60,9 +60,10 @@ Este documento contém as histórias de usuário e tarefas técnicas da **Releas
 
 ### US — Personalizar Perfil (EAP 1.5.3.6)
 
-> **Como** aluno **quero** personalizar meu perfil e avatar **para** deixar a experiência minha.
+> **Como** aluno **quero** personalizar meu perfil **para** deixar a experiência minha.
 
-- [ ] Personalização de perfil e avatar.
+- [x] Personalização de perfil equipando cosméticos adquiridos na loja (ícones de perfil, molduras, avatares estáticos, títulos e planos de fundo).
+- Construtor de avatar customizável (montagem por peças) fora do MVP — ver [DP26](../decisoes/decisoes.md).
 
 ### US — Amizade entre Alunos
 
@@ -87,3 +88,4 @@ Este documento contém as histórias de usuário e tarefas técnicas da **Releas
 | Data   | Versão | Descrição | Autor(es) |
 |--------|--------|-----------|-----------|
 | 02/06/2026 | 1.0 | Criação do backlog da Release Major 3 (dashboards, gamificação, social e IA) | [Miguel Moreira](https://github.com/EhOMiguel) |
+| 07/07/2026 | 1.1 | Registro do corte do construtor de avatar customizável do MVP e ajuste da US Personalizar Perfil para cosméticos da loja (ver DP26) | [Breno Fernandes](https://github.com/BrenoFrds) |
