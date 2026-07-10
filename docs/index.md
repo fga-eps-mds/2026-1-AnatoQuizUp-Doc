@@ -38,6 +38,43 @@ O AnatoQuizUp propõe:
 A solução busca aumentar o engajamento e melhorar a efetividade do aprendizado por meio de uma experiência interativa e adaptativa.
 
 
+## Demonstração
+
+Conheça o AnatoQuizUp na prática: primeiro a proposta e os conceitos, depois a plataforma em funcionamento — do login ao fluxo completo dos três perfis (administrador, professor e aluno).
+
+<style>
+.video-wrapper{position:relative;padding-top:56.25%;max-width:900px;margin:1rem 0;border-radius:12px;overflow:hidden;box-shadow:0 8px 30px rgba(0,0,0,.18)}
+.video-wrapper iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+.video-legenda{font-size:.85rem;opacity:.7;margin-top:.4rem}
+</style>
+
+### Explicação Conceitual
+
+O que é o AnatoQuizUp, o problema que ele resolve e o que cada usuário pode fazer na plataforma.
+
+<div class="video-wrapper">
+  <iframe src="https://www.youtube-nocookie.com/embed/wlwsppQuYBI"
+    title="Explicação Conceitual - AnatoQuizUp"
+    allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+    allowfullscreen></iframe>
+</div>
+
+<p class="video-legenda"><em>Apresentação do projeto e da proposta.</em></p>
+
+### Demonstração de Uso
+
+A plataforma em funcionamento: login e todas as funcionalidades, pela ótica do administrador, do professor e do aluno.
+
+<div class="video-wrapper">
+  <iframe src="https://www.youtube-nocookie.com/embed/RxTe1ZYvHXw"
+    title="Demonstração de Uso - AnatoQuizUp"
+    allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+    allowfullscreen></iframe>
+</div>
+
+<p class="video-legenda"><em>Demonstração completa da plataforma (tela + narração).</em></p>
+
+
 ## Equipe do Projeto
 
 | [Arthur Carneiro](https://github.com/trindadea) | [Breno Soares](https://github.com/Brenofrds) | [Bruno Ricardo](https://github.com/EhOBruno) | [Caio Brandão](https://github.com/caiobsantos) | [Genilson Silva](https://github.com/GenilsonJrs) | [João Vitor](https://github.com/Joa0V) | [Maria Luisa](https://github.com/marialuisa214) | [Miguel Moreira](https://github.com/EhOMiguel) | [Pedro Cabeceira](https://github.com/pkbceira03) |
