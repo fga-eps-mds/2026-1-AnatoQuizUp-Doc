@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dashboard Eixo Processo — AnatoQuizUp</title>
+<link rel="stylesheet" href="dashboards.css">
+<script src="dados-consolidados.js"></script>
+</head>
+<body>
+<main>
+  <h1>Dashboard eixo Processo — Q-Rapids (Process Performance)</h1>
+  <p class="subtitulo">Indicador estratégico <strong>Process Performance</strong> do modelo <strong>Q-Rapids</strong>: as métricas do board viram <em>assessed metrics</em> dos fatores Issues' Velocity e Development Speed, cada uma como <strong>densidade [0–1]</strong> = fração das issues/PRs dentro da faixa ideal.</p>
+  <nav class="abas">
+    <a href="produto/">Produto</a>
+    <a href="processo.html" class="ativa">Processo</a>
+    <a href="projeto.html">Projeto</a>
+  </nav>
+
+  <div class="metodologia">
+    <h2>Metodologia — Q-Rapids (modelo de qualidade do processo)</h2>
+    <p>O eixo Processo é estruturado pelo indicador estratégico <strong>Process Performance</strong> do <strong>Q-Rapids</strong> (Martínez-Fernández et al., 2019) — o mesmo modelo do eixo Produto. As métricas do board são mapeadas nas <strong>assessed metrics</strong> dos fatores <strong>Issues' Velocity</strong> (Team Throughput, Resolved Issues' Throughput, Old Issues, Bugs Ratio) e <strong>Development Speed</strong> (Commit review duration), cada uma expressa como <strong>densidade [0–1]</strong>. O indicador é a média das densidades.</p>
+    <p class="ref">Referência: MARTÍNEZ-FERNÁNDEZ, S. et al. <em>Continuously Assessing and Improving Software Quality With Software Analytics Tools: A Case Study</em>. IEEE Access 7, 2019 (modelo Q-Rapids, abril/2019).<br>
+    <span class="fonte">dados: ZenHub (issues, sprints, eventos)</span><span class="fonte">GitHub (issues, PRs, labels)</span></p>
+  </div>
+
+  <div class="faixa-titulo">
+    <h2>Process Performance — indicador estratégico do processo</h2>
+    <span class="meta" id="meta-qrapids"></span>
+  </div>
+  <p class="subtitulo" style="margin-top:0">Verde ≥ 0,75 (aprovado) · amarelo ≥ 0,50 (atenção) · vermelho &lt; 0,50 (crítico). Limiares parametrizáveis ("user defined" no Q-Rapids): lead ≤ 14 dias · idade de issue aberta ≤ 14 dias · revisão de PR ≤ 2 dias.</p>
+  <div class="cartoes" id="cartoes-qrapids"></div>
+  <div class="fatores" id="fatores-qrapids"></div>
+
+  <div class="brutos">
+    <h2 style="font-size:1.15rem">Dados brutos — Indicador → Fator → Assessed Metric → contagem → Fonte</h2>
+    <p class="legenda-fonte">Cada densidade é a fração <em>num / den</em> dentro da faixa ideal, calculada das issues e PRs reais do board (sem normalização adicional). Confira métrica por métrica:</p>
+    <table class="tabela" id="tabela-qrapids"></table>
+
+    <h3 style="margin-top:24px">De onde vem cada número (ZenHub + GitHub) — coleta "do zero"</h3>
+    <p class="legenda-fonte">As únicas fontes deste eixo são o <strong>board do ZenHub</strong> e o <strong>GitHub</strong>. Cada quantidade abaixo (os num/den que formam as densidades) com a <strong>fonte exata</strong> e o <strong>critério de coleta</strong>, sem normalização.</p>
+    <table class="tabela" id="tabela-brutos-processo"></table>
+  </div>
+
+  <div class="faixa-titulo"><h2>Glossário — termos usados neste eixo</h2></div>
+  <div class="glossario">
+    <div class="grupo-gloss">Modelo Q-Rapids</div>
+    <table class="tabela">
+      <thead><tr><th>Termo</th><th>Inglês (por extenso)</th><th>Em português — o que é</th></tr></thead>
+      <tbody>
+        <tr><td>Process Performance</td><td>Process Performance</td><td>Indicador estratégico do Q-Rapids para a eficiência e a qualidade do processo de desenvolvimento</td></tr>
+        <tr><td>Issues' Velocity</td><td>Issues' Velocity</td><td>Fator do Q-Rapids — capacidade de fechar as issues planejadas (vazão, atualidade e qualidade do fluxo)</td></tr>
+        <tr><td>Development Speed</td><td>Development Speed</td><td>Fator do Q-Rapids — eficiência das atividades de integração e revisão</td></tr>
+        <tr><td>Assessed Metric</td><td>Assessed Metric</td><td>Métrica avaliada — cada medida concreta que compõe um fator</td></tr>
+        <tr><td>Densidade</td><td>Density</td><td>Fração [0–1] dos itens dentro da faixa ideal — forma normalizada do Q-Rapids</td></tr>
+      </tbody>
+    </table>
+    <div class="grupo-gloss">Métricas avaliadas (assessed metrics)</div>
+    <table class="tabela">
+      <thead><tr><th>Métrica</th><th>Inglês (por extenso)</th><th>Em português — o que é</th></tr></thead>
+      <tbody>
+        <tr><td>Team Throughput</td><td>Team Throughput</td><td>Vazão do time — issues resolvidas ÷ total de issues</td></tr>
+        <tr><td>Resolved Issues' Throughput</td><td>Resolved Issues' Throughput</td><td>Issues resolvidas dentro do prazo (lead ≤ 14 dias) ÷ total de resolvidas</td></tr>
+        <tr><td>Old Issues</td><td>Old Issues</td><td>Issues abertas ainda novas (idade ≤ 14 dias) ÷ total de issues abertas</td></tr>
+        <tr><td>Bugs Ratio</td><td>Bugs Ratio</td><td>Issues abertas que não são bug ÷ total de issues abertas</td></tr>
+        <tr><td>Commit review duration</td><td>Commit review duration</td><td>PRs revisados em ≤ 2 dias ÷ total de PRs fechados</td></tr>
+      </tbody>
+    </table>
+    <div class="grupo-gloss">Termos do board / GitHub</div>
+    <table class="tabela">
+      <thead><tr><th>Termo</th><th>Inglês (por extenso)</th><th>Em português — o que é</th></tr></thead>
+      <tbody>
+        <tr><td>Issue</td><td>Issue</td><td>Item de trabalho (tarefa, história ou bug)</td></tr>
+        <tr><td>PR</td><td>Pull Request</td><td>"Pedido de incorporação" — proposta de juntar uma alteração de código, com revisão</td></tr>
+        <tr><td>Lead Time</td><td>Lead Time</td><td>Tempo de atravessamento — da criação da issue até a conclusão</td></tr>
+        <tr><td>Throughput</td><td>Throughput</td><td>Vazão — quantidade de itens concluídos por período</td></tr>
+        <tr><td>In Progress</td><td>In Progress</td><td>Pipeline do board onde está o trabalho em execução</td></tr>
+        <tr><td>Review/QA</td><td>Review / Quality Assurance</td><td>Pipeline de revisão de código e testes</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <p class="rodape" id="rodape"></p>
+</main>
+
+<script>
+const D = window.DADOS;
+const P = D.processo;
+const fmt = (v, c = 1) => v == null ? "—" : v.toFixed(c).replace(".", ",");
+
+// ============ Q-RAPIDS — Process Performance ============
+const QR = P.qrapids;
+const clsDens = (v) => v == null ? "cinza" : v >= 0.75 ? "verde" : v >= 0.5 ? "amarelo" : "vermelho";
+const pct = (v) => v == null ? "—" : `${Math.round(v * 100)}%`;
+document.getElementById("meta-qrapids").textContent = `${pct(QR.valor)} · ${P.higiene.totalIssues} issues · ${P.prs.total} PRs · ${D.geradoEm.slice(0, 10)}`;
+
+const metricasQR = QR.fatores.flatMap((f) => f.metricas.map((m) => ({ ...m, fator: f.fator })));
+const cartoesQR = [
+  { nome: "Process Performance (indicador)", valor: pct(QR.valor), cls: clsDens(QR.valor), sub: "média das densidades dos fatores Q-Rapids" },
+  ...metricasQR.map((m) => ({ nome: m.metrica, valor: pct(m.densidade), cls: clsDens(m.densidade), sub: m.bruto })),
+];
+document.getElementById("cartoes-qrapids").innerHTML = cartoesQR.map((c) => `
+  <div class="cartao"><div class="nome">${c.nome}</div><div class="valor ${c.cls}" style="font-size:1.6rem">${c.valor}</div><div class="rotulo">${c.sub}</div></div>`).join("");
+
+document.getElementById("fatores-qrapids").innerHTML = metricasQR.map((m) => {
+  const v = m.densidade ?? 0, cls = clsDens(m.densidade);
+  return `<div class="fator ${cls}">
+    <div class="grupo">${m.metrica}<small>${m.fator}</small></div>
+    <div class="descricao">${m.formula}</div>
+    <div class="barra"><span style="width:${Math.round(v * 100)}%;background:var(--${cls})"></span></div>
+    <div class="numero">${pct(m.densidade)}</div>
+  </div>`;
+}).join("");
+
+const totalM = QR.fatores.reduce((s, f) => s + f.metricas.length, 0);
+let primeira = true;
+document.getElementById("tabela-qrapids").innerHTML = `
+  <thead><tr><th>Indicador</th><th>Fator</th><th>Assessed Metric</th><th>Fórmula</th><th class="num">Densidade</th><th>Dado bruto (num/den)</th><th>Fonte</th></tr></thead>
+  <tbody>${QR.fatores.flatMap((f) => f.metricas.map((m, idx) => {
+    const ind = primeira ? `<td rowspan="${totalM}"><strong>${QR.indicador}</strong><br><span style="color:var(--cinza)">${pct(QR.valor)}</span></td>` : "";
+    primeira = false;
+    const fat = idx === 0 ? `<td rowspan="${f.metricas.length}"><strong>${f.fator}</strong><br><span style="font-size:.78rem;color:var(--cinza)">${f.descricao}</span></td>` : "";
+    return `<tr>${ind}${fat}
+      <td>${m.metrica}</td>
+      <td><code style="font-size:.85rem">${m.formula}</code></td>
+      <td class="num"><span class="selo ${clsDens(m.densidade)}">${pct(m.densidade)}</span></td>
+      <td>${m.bruto}</td>
+      <td>${m.fonte}</td></tr>`;
+  })).join("")}</tbody>`;
+
+document.getElementById("tabela-brutos-processo").innerHTML = `
+  <thead><tr><th>Quantidade</th><th class="num">Valor</th><th>Fonte</th><th>Como é coletada</th></tr></thead>
+  <tbody>${QR.dadosBrutos.map((d) => `<tr>
+    <td>${d.quantidade}</td>
+    <td class="num"><strong>${d.valor}</strong></td>
+    <td><span style="font-size:.82rem">${d.fonte}</span></td>
+    <td style="font-size:.84rem;color:var(--cinza)">${d.coleta}</td>
+  </tr>`).join("")}</tbody>`;
+
+document.getElementById("rodape").textContent =
+  `Gerado em ${D.geradoEm.slice(0, 16).replace("T", " ")} · Modelo Q-Rapids (Process Performance) · Fontes: ZenHub (issues, sprints, eventos de movimentação) e GitHub (issues, PRs, labels).`;
+</script>
+</body>
+</html>

@@ -1,0 +1,11 @@
+sprint,inicio,fim,equipe,planejado_sp,fonte_planejado,entregue_sp,ac_reais
+S1,2026-04-19,2026-04-26,12,91,doc,71,3907.9
+S2,2026-04-27,2026-05-04,10,31,doc,16,3257.64
+S3,2026-05-05,2026-05-11,9,29,doc,26,2932.51
+S4,2026-05-12,2026-05-18,9,25,doc,14,2932.51
+S5,2026-05-19,2026-05-25,9,30,doc,66,2932.51
+S6,2026-05-26,2026-06-01,9,26,atribuição de sprint (estimates das issues planejadas no ZenHub),3,2932.51
+S7,2026-06-02,2026-06-08,9,4,atribuição de sprint (estimates das issues planejadas no ZenHub),0,2932.51
+S8,2026-06-09,2026-06-15,9,12,atribuição de sprint (estimates das issues planejadas no ZenHub),27,2932.51
+S9,2026-06-16,2026-06-22,9,5,atribuição de sprint (estimates das issues planejadas no ZenHub),3,2932.51
+S10,2026-06-23,2026-06-29,9,0,atribuição de sprint (estimates das issues planejadas no ZenHub),10,2932.51

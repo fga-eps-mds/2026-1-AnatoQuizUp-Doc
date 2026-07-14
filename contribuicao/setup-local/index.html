@@ -1,0 +1,4016 @@
+
+<!doctype html>
+<html lang="pt" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="AnatoQuizUp é um jogo de perguntas e respostas sobre anatomia humana, desenvolvido para ajudar estudantes de medicina a aprenderem de forma divertida e interativa.">
+      
+      
+      
+      
+        <link rel="prev" href="../../processo/validacao-funcionalidades-2206/">
+      
+      
+        <link rel="next" href="../codigo_conduta/">
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.45">
+    
+    
+      
+        <title>Setup Local - AnatoQuizUp</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.0253249f.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#setup-local-rodando-o-anatoquizup-do-zero" class="md-skip">
+          Pular para conteúdo
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Cabeçalho">
+    <a href="../.." title="AnatoQuizUp" class="md-header__button md-logo" aria-label="AnatoQuizUp" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            AnatoQuizUp
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Setup Local
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Buscar" placeholder="Buscar" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Pesquisar">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Limpar" aria-label="Limpar" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Inicializando busca
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Abas" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+    
+  
+  Início
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../produto/visao/" class="md-tabs__link">
+          
+  
+  Produto
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../processo/roadmap/" class="md-tabs__link">
+          
+  
+  Planejamento
+
+        </a>
+      </li>
+    
+  
+
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../arquitetura/visao_geral/" class="md-tabs__link">
+          
+  
+  Arquitetura
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../ia/" class="md-tabs__link">
+          
+  
+  IA
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../qualidade/qualidade/" class="md-tabs__link">
+          
+  
+  Qualidade
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../dashboards/" class="md-tabs__link">
+          
+  
+  Dashboards
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../processo/metodologia/" class="md-tabs__link">
+          
+  
+  Gestão
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../processo/reunioes/" class="md-tabs__link">
+          
+  
+  Registro
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="./" class="md-tabs__link">
+          
+  
+  Contribuição
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navegação" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="AnatoQuizUp" class="md-nav__button md-logo" aria-label="AnatoQuizUp" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    AnatoQuizUp
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Início
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Produto
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Produto
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../produto/visao/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Visão do Produto
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../produto/lean_inception/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Lean Inception
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../prototipo/figma/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Protótipos
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Planejamento
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Planejamento
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_1" id="__nav_3_1_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Visão Geral
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_1">
+            <span class="md-nav__icon md-icon"></span>
+            Visão Geral
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../processo/roadmap/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Roadmap e Releases
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../processo/eap/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Estrutura Analítica do Projeto
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../processo/datas-importantes/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Datas Importantes
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_2" id="__nav_3_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Backlog
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_2">
+            <span class="md-nav__icon md-icon"></span>
+            Backlog
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../backlog/overview/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Visão Geral
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../backlog/requisitos/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Requisitos
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../backlog/release-major-1/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Release Major 1
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../backlog/release-major-2/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Release Major 2
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../backlog/release-major-3/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Release Major 3
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_3" id="__nav_3_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Acompanhamento por Sprint
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_3">
+            <span class="md-nav__icon md-icon"></span>
+            Acompanhamento por Sprint
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../processo/sprints/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Visão Geral das Sprints
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../processo/evm-consolidado/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    EVM Consolidado (corrigido)
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_3_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_3_3" id="__nav_3_3_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Sprint 1
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_3_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_3_3">
+            <span class="md-nav__icon md-icon"></span>
+            Sprint 1
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../processo/evm-sprint1/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    EVM
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_3_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_3_4" id="__nav_3_3_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Sprint 2
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_3_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_3_4">
+            <span class="md-nav__icon md-icon"></span>
+            Sprint 2
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../processo/evm-sprint2/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    EVM
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_3_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_3_5" id="__nav_3_3_5_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Sprint 3
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_3_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_3_5">
+            <span class="md-nav__icon md-icon"></span>
+            Sprint 3
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../processo/evm-sprint3/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    EVM
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_3_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_3_6" id="__nav_3_3_6_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Sprint 4
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_3_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_3_6">
+            <span class="md-nav__icon md-icon"></span>
+            Sprint 4
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../processo/evm-sprint4/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    EVM
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_3_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_3_7" id="__nav_3_3_7_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Sprint 5
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_3_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_3_7">
+            <span class="md-nav__icon md-icon"></span>
+            Sprint 5
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../processo/evm-sprint5/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    EVM
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_4" id="__nav_3_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Controle
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_4">
+            <span class="md-nav__icon md-icon"></span>
+            Controle
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../processo/riscos/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Matriz de Riscos
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../processo/plano-de-custos/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Plano de Custos
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Arquitetura
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            Arquitetura
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../arquitetura/visao_geral/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Visão Geral
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../arquitetura/tecnologias/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Tecnologias
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../arquitetura/decisoes/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Decisões Arquiteturais
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../arquitetura/ia/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Inteligência Artificial
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_5" id="__nav_4_5_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Visões Arquiteturais
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_5">
+            <span class="md-nav__icon md-icon"></span>
+            Visões Arquiteturais
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../arquitetura/visoes/logica/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Visão Lógica
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../arquitetura/visoes/processos/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Visão de Processos
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../arquitetura/visoes/implementacao/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Visão de Implementação
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../arquitetura/visoes/implantacao/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Visão de Implantação
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_6" id="__nav_4_6_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Banco de Dados
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_6">
+            <span class="md-nav__icon md-icon"></span>
+            Banco de Dados
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../arquitetura/banco-de-dados/modelo-atual/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Modelo Atual
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../arquitetura/banco-de-dados/v1/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Modelo V1
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_7" id="__nav_4_7_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Endpoints e Contratos
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_7">
+            <span class="md-nav__icon md-icon"></span>
+            Endpoints e Contratos
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../arquitetura/api/visao-geral/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Visão Geral
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../arquitetura/api/autenticacao/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Autenticação
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../arquitetura/api/alunos/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Alunos
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../arquitetura/api/localidades/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Localidades
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../arquitetura/api/admin/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Administração
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../arquitetura/api/exemplos/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Exemplos
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../arquitetura/api/quiz/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Quiz
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../arquitetura/api/questoes/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Questões
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../arquitetura/api/turmas/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Turmas
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../arquitetura/api/lista/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Listas
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../arquitetura/api/amizade/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Amizade
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../arquitetura/api/loja-virtual/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Loja Virtual
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../arquitetura/api/dashboard-aluno/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Dashboard do Aluno
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../arquitetura/api/dashboard-turma/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Dashboard da Turma
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../arquitetura/api/erros/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Erros e Contratos
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    IA
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            IA
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ia/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Visao Geral
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Qualidade
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            Qualidade
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../qualidade/qualidade/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Métricas e Dashboard
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../qualidade/testes/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Plano de Testes Funcionais
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Dashboards
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            Dashboards
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dashboards/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Visão Geral
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8" >
+        
+          
+          <label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Gestão
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8">
+            <span class="md-nav__icon md-icon"></span>
+            Gestão
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../processo/metodologia/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Metodologia de trabalho
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../processo/gerencia-configuracao/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Gerência de Configuração e DevOps
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../processo/comunicacao/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Comunicação
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../processo/quadro-conhecimento/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Quadro de Conhecimento
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../decisoes/decisoes/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Decisões do Projeto
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_9" >
+        
+          
+          <label class="md-nav__link" for="__nav_9" id="__nav_9_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Registro
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_9_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_9">
+            <span class="md-nav__icon md-icon"></span>
+            Registro
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../processo/reunioes/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Reuniões
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../processo/validacao-release-minor-3/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Validação Release Minor 3
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../processo/validacao-incremento-1805/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Validação Incremento 18/05
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../processo/validacao-release-major-2/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Validação Release Major 2
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../processo/validacao-funcionalidades-rm4/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Validação Release Minor 4
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../processo/validacao-funcionalidades-2206/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Validação Release Minor 5
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+      
+        
+        
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_10" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_10" id="__nav_10_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Contribuição
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_10_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_10">
+            <span class="md-nav__icon md-icon"></span>
+            Contribuição
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Setup Local
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Setup Local
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Índice">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Índice
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#pre-requisitos-uma-vez-por-maquina" class="md-nav__link">
+    <span class="md-ellipsis">
+      Pré-requisitos (uma vez por máquina)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#topologia-que-voce-vai-subir" class="md-nav__link">
+    <span class="md-ellipsis">
+      Topologia que você vai subir
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1-clonar-os-repos" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Clonar os repos
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-gerar-segredos-compartilhados" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Gerar segredos compartilhados
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-configurar-cada-repo" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Configurar cada repo
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. Configurar cada repo">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#31-usuario-service-2026-1-anatoquizup-usuario-service" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.1. Usuario-Service (2026-1-AnatoQuizUp-Usuario-Service)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#32-quiz-service-2026-1-anatoquizup-quiz-service" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.2. Quiz-Service (2026-1-AnatoQuizUp-Quiz-Service)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#33-bff-2026-1-anatoquizup-bff" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.3. BFF (2026-1-AnatoQuizUp-BFF)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#34-web-2026-1-anatoquizup-web" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.4. Web (2026-1-AnatoQuizUp-Web)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-no-dia-a-dia-4-terminais" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. No dia a dia — 4 terminais
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4. No dia a dia — 4 terminais">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#com-make" class="md-nav__link">
+    <span class="md-ellipsis">
+      Com Make
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-smoke-tests-validar-que-esta-tudo-conectado" class="md-nav__link">
+    <span class="md-ellipsis">
+      5. Smoke tests — validar que está tudo conectado
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5. Smoke tests — validar que está tudo conectado">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#health-checks-cada-servico-vivo" class="md-nav__link">
+    <span class="md-ellipsis">
+      Health checks (cada serviço vivo)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#usuario-service-rejeita-acesso-direto-sem-x-internal-token" class="md-nav__link">
+    <span class="md-ellipsis">
+      Usuario-Service rejeita acesso direto sem X-Internal-Token
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#quiz-service-rejeita-acesso-direto" class="md-nav__link">
+    <span class="md-ellipsis">
+      Quiz-Service rejeita acesso direto
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#login-pelo-bff" class="md-nav__link">
+    <span class="md-ellipsis">
+      Login pelo BFF
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#listar-questoes-pelo-bff-passa-pelo-quiz-service" class="md-nav__link">
+    <span class="md-ellipsis">
+      Listar questões pelo BFF (passa pelo Quiz-Service)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#listar-turmas-pelo-bff-passa-pelo-quiz-service" class="md-nav__link">
+    <span class="md-ellipsis">
+      Listar turmas pelo BFF (passa pelo Quiz-Service)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#buscar-usuario-publico-pelo-bff-passa-pelo-usuario-service" class="md-nav__link">
+    <span class="md-ellipsis">
+      Buscar usuário público pelo BFF (passa pelo Usuario-Service)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pelo-navegador" class="md-nav__link">
+    <span class="md-ellipsis">
+      Pelo navegador
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-como-rodar-testes-e-lint" class="md-nav__link">
+    <span class="md-ellipsis">
+      6. Como rodar testes e lint
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7-troubleshooting" class="md-nav__link">
+    <span class="md-ellipsis">
+      7. Troubleshooting
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="7. Troubleshooting">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#erros-comuns-no-setup" class="md-nav__link">
+    <span class="md-ellipsis">
+      Erros comuns no setup
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#erros-entre-servicos" class="md-nav__link">
+    <span class="md-ellipsis">
+      Erros entre serviços
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#erros-de-docker-minio" class="md-nav__link">
+    <span class="md-ellipsis">
+      Erros de Docker / MinIO
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#detectar-e-remover-bom-utf-8" class="md-nav__link">
+    <span class="md-ellipsis">
+      Detectar e remover BOM UTF-8
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#comandos-uteis-de-diagnostico" class="md-nav__link">
+    <span class="md-ellipsis">
+      Comandos úteis de diagnóstico
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#8-ordem-de-subir-e-derrubar" class="md-nav__link">
+    <span class="md-ellipsis">
+      8. Ordem de subir e derrubar
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#9-documentos-relacionados" class="md-nav__link">
+    <span class="md-ellipsis">
+      9. Documentos relacionados
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#historico-de-versao" class="md-nav__link">
+    <span class="md-ellipsis">
+      Histórico de Versão
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../codigo_conduta/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Código de Conduta
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../politica_branchs/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Política de Branchs
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../politica_commits/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Política de Commits
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Índice">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Índice
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#pre-requisitos-uma-vez-por-maquina" class="md-nav__link">
+    <span class="md-ellipsis">
+      Pré-requisitos (uma vez por máquina)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#topologia-que-voce-vai-subir" class="md-nav__link">
+    <span class="md-ellipsis">
+      Topologia que você vai subir
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1-clonar-os-repos" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Clonar os repos
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-gerar-segredos-compartilhados" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Gerar segredos compartilhados
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-configurar-cada-repo" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Configurar cada repo
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. Configurar cada repo">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#31-usuario-service-2026-1-anatoquizup-usuario-service" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.1. Usuario-Service (2026-1-AnatoQuizUp-Usuario-Service)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#32-quiz-service-2026-1-anatoquizup-quiz-service" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.2. Quiz-Service (2026-1-AnatoQuizUp-Quiz-Service)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#33-bff-2026-1-anatoquizup-bff" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.3. BFF (2026-1-AnatoQuizUp-BFF)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#34-web-2026-1-anatoquizup-web" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.4. Web (2026-1-AnatoQuizUp-Web)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-no-dia-a-dia-4-terminais" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. No dia a dia — 4 terminais
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4. No dia a dia — 4 terminais">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#com-make" class="md-nav__link">
+    <span class="md-ellipsis">
+      Com Make
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-smoke-tests-validar-que-esta-tudo-conectado" class="md-nav__link">
+    <span class="md-ellipsis">
+      5. Smoke tests — validar que está tudo conectado
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5. Smoke tests — validar que está tudo conectado">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#health-checks-cada-servico-vivo" class="md-nav__link">
+    <span class="md-ellipsis">
+      Health checks (cada serviço vivo)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#usuario-service-rejeita-acesso-direto-sem-x-internal-token" class="md-nav__link">
+    <span class="md-ellipsis">
+      Usuario-Service rejeita acesso direto sem X-Internal-Token
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#quiz-service-rejeita-acesso-direto" class="md-nav__link">
+    <span class="md-ellipsis">
+      Quiz-Service rejeita acesso direto
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#login-pelo-bff" class="md-nav__link">
+    <span class="md-ellipsis">
+      Login pelo BFF
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#listar-questoes-pelo-bff-passa-pelo-quiz-service" class="md-nav__link">
+    <span class="md-ellipsis">
+      Listar questões pelo BFF (passa pelo Quiz-Service)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#listar-turmas-pelo-bff-passa-pelo-quiz-service" class="md-nav__link">
+    <span class="md-ellipsis">
+      Listar turmas pelo BFF (passa pelo Quiz-Service)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#buscar-usuario-publico-pelo-bff-passa-pelo-usuario-service" class="md-nav__link">
+    <span class="md-ellipsis">
+      Buscar usuário público pelo BFF (passa pelo Usuario-Service)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pelo-navegador" class="md-nav__link">
+    <span class="md-ellipsis">
+      Pelo navegador
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-como-rodar-testes-e-lint" class="md-nav__link">
+    <span class="md-ellipsis">
+      6. Como rodar testes e lint
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7-troubleshooting" class="md-nav__link">
+    <span class="md-ellipsis">
+      7. Troubleshooting
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="7. Troubleshooting">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#erros-comuns-no-setup" class="md-nav__link">
+    <span class="md-ellipsis">
+      Erros comuns no setup
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#erros-entre-servicos" class="md-nav__link">
+    <span class="md-ellipsis">
+      Erros entre serviços
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#erros-de-docker-minio" class="md-nav__link">
+    <span class="md-ellipsis">
+      Erros de Docker / MinIO
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#detectar-e-remover-bom-utf-8" class="md-nav__link">
+    <span class="md-ellipsis">
+      Detectar e remover BOM UTF-8
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#comandos-uteis-de-diagnostico" class="md-nav__link">
+    <span class="md-ellipsis">
+      Comandos úteis de diagnóstico
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#8-ordem-de-subir-e-derrubar" class="md-nav__link">
+    <span class="md-ellipsis">
+      8. Ordem de subir e derrubar
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#9-documentos-relacionados" class="md-nav__link">
+    <span class="md-ellipsis">
+      9. Documentos relacionados
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#historico-de-versao" class="md-nav__link">
+    <span class="md-ellipsis">
+      Histórico de Versão
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<h1 id="setup-local-rodando-o-anatoquizup-do-zero">Setup Local — Rodando o AnatoQuizUp do Zero</h1>
+<blockquote>
+<p><strong>Para quem:</strong> qualquer dev novo no projeto, ou veterano que precisa montar a stack do zero numa máquina nova.
+<strong>Objetivo:</strong> sair de "repo recém-clonado" até "consigo logar no Web, listar questões e ver minhas turmas" em ~15 minutos.
+<strong>Última atualização:</strong> 2026-05-21.</p>
+</blockquote>
+<hr />
+<h2 id="pre-requisitos-uma-vez-por-maquina">Pré-requisitos (uma vez por máquina)</h2>
+<ul>
+<li><strong>Node.js 24+</strong>: <code>nvm install 24</code> ou https://nodejs.org/</li>
+<li><strong>Docker Desktop</strong> aberto (a baleia no canto da bandeja precisa estar verde).</li>
+<li><strong>Git</strong> instalado.</li>
+<li><strong>GNU Make</strong> (opcional, mas atalha vários comandos):</li>
+<li>Windows: <code>choco install make</code> ou <code>scoop install make</code></li>
+<li>Mac: <code>brew install make</code></li>
+<li>Linux: já vem na maioria das distros.</li>
+</ul>
+<hr />
+<h2 id="topologia-que-voce-vai-subir">Topologia que você vai subir</h2>
+<p>São <strong>3 containers Docker</strong> + <strong>4 processos Node</strong> em <strong>4 terminais</strong>.</p>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Componente</th>
+<th>Porta</th>
+<th>Sobe como</th>
+<th>Depende de</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td><strong>Postgres do Usuario-Service</strong></td>
+<td>5432</td>
+<td>Docker (compose do Usuario-Service)</td>
+<td>—</td>
+</tr>
+<tr>
+<td>2</td>
+<td><strong>Postgres do Quiz</strong></td>
+<td>5433</td>
+<td>Docker (compose do Quiz-Service)</td>
+<td>—</td>
+</tr>
+<tr>
+<td>3</td>
+<td><strong>MinIO (API)</strong></td>
+<td>9000</td>
+<td>Docker (compose do Quiz-Service)</td>
+<td>—</td>
+</tr>
+<tr>
+<td>4</td>
+<td><strong>MinIO (Console)</strong></td>
+<td>9001</td>
+<td>Docker (compose do Quiz-Service)</td>
+<td>—</td>
+</tr>
+<tr>
+<td>5</td>
+<td><strong>Usuario-Service</strong></td>
+<td>3333</td>
+<td><code>npm run dev</code></td>
+<td>Postgres 5432</td>
+</tr>
+<tr>
+<td>6</td>
+<td><strong>Quiz-Service</strong></td>
+<td>3334</td>
+<td><code>npm run dev</code></td>
+<td>Postgres 5433 + MinIO</td>
+</tr>
+<tr>
+<td>7</td>
+<td><strong>BFF</strong></td>
+<td>4000</td>
+<td><code>npm run dev</code></td>
+<td>Usuario-Service + Quiz-Service</td>
+</tr>
+<tr>
+<td>8</td>
+<td><strong>Web</strong></td>
+<td>5173</td>
+<td><code>npm run dev</code></td>
+<td>BFF</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="1-clonar-os-repos">1. Clonar os repos</h2>
+<p>Crie uma pasta-mãe e clone os 5 repos lado a lado:</p>
+<div class="highlight"><pre><span></span><code><span class="n">mkdir</span> <span class="n">anatoquizup</span>
+<span class="nb">cd </span><span class="n">anatoquizup</span>
+
+<span class="n">git</span> <span class="n">clone</span> <span class="n">https</span><span class="p">://</span><span class="n">github</span><span class="p">.</span><span class="n">com</span><span class="p">/</span><span class="n">fga-eps-mds</span><span class="p">/</span><span class="n">2026</span><span class="p">-</span><span class="n">1-AnatoQuizUp-Web</span><span class="p">.</span><span class="n">git</span>
+<span class="n">git</span> <span class="n">clone</span> <span class="n">https</span><span class="p">://</span><span class="n">github</span><span class="p">.</span><span class="n">com</span><span class="p">/</span><span class="n">fga-eps-mds</span><span class="p">/</span><span class="n">2026</span><span class="p">-</span><span class="n">1-AnatoQuizUp-BFF</span><span class="p">.</span><span class="n">git</span>
+<span class="n">git</span> <span class="n">clone</span> <span class="n">https</span><span class="p">://</span><span class="n">github</span><span class="p">.</span><span class="n">com</span><span class="p">/</span><span class="n">fga-eps-mds</span><span class="p">/</span><span class="n">2026</span><span class="p">-</span><span class="n">1-AnatoQuizUp-Usuario-Service</span><span class="p">.</span><span class="n">git</span>
+<span class="n">git</span> <span class="n">clone</span> <span class="n">https</span><span class="p">://</span><span class="n">github</span><span class="p">.</span><span class="n">com</span><span class="p">/</span><span class="n">fga-eps-mds</span><span class="p">/</span><span class="n">2026</span><span class="p">-</span><span class="n">1-AnatoQuizUp-Quiz-Service</span><span class="p">.</span><span class="n">git</span>
+<span class="n">git</span> <span class="n">clone</span> <span class="n">https</span><span class="p">://</span><span class="n">github</span><span class="p">.</span><span class="n">com</span><span class="p">/</span><span class="n">fga-eps-mds</span><span class="p">/</span><span class="n">2026</span><span class="p">-</span><span class="n">1-AnatoQuizUp-Doc</span><span class="p">.</span><span class="n">git</span>
+</code></pre></div>
+<hr />
+<h2 id="2-gerar-segredos-compartilhados">2. Gerar segredos compartilhados</h2>
+<p>Os mesmos <code>INTERNAL_TOKEN</code> e <code>JWT_SECRET_KEY</code> precisam estar <strong>idênticos</strong> em <strong>Usuario-Service, BFF e Quiz-Service</strong> (senão eles não se conversam).</p>
+<p>Gere uma vez e anote:</p>
+<div class="highlight"><pre><span></span><code><span class="n">node</span> <span class="n">-e</span> <span class="s2">&quot;console.log(&#39;INTERNAL_TOKEN=&#39; + require(&#39;crypto&#39;).randomBytes(32).toString(&#39;hex&#39;))&quot;</span>
+<span class="n">node</span> <span class="n">-e</span> <span class="s2">&quot;console.log(&#39;JWT_SECRET_KEY=&#39; + require(&#39;crypto&#39;).randomBytes(32).toString(&#39;hex&#39;))&quot;</span>
+</code></pre></div>
+<hr />
+<h2 id="3-configurar-cada-repo">3. Configurar cada repo</h2>
+<h3 id="31-usuario-service-2026-1-anatoquizup-usuario-service">3.1. Usuario-Service (<code>2026-1-AnatoQuizUp-Usuario-Service</code>)</h3>
+<div class="highlight"><pre><span></span><code><span class="nb">cd </span><span class="n">2026</span><span class="p">-</span><span class="n">1-AnatoQuizUp-Usuario-Service</span>
+<span class="nb">Copy-Item</span> <span class="p">.</span><span class="n">env</span><span class="p">.</span><span class="n">example</span> <span class="p">.</span><span class="n">env</span>
+</code></pre></div>
+<p>Preencha <code>.env</code>:</p>
+<div class="highlight"><pre><span></span><code>NODE_ENV=development
+PORT=3333
+
+POSTGRES_USER=postgres
+POSTGRES_PASSWORD=postgres
+POSTGRES_DB=postgres
+DATABASE_URL=&quot;postgresql://postgres:postgres@localhost:5432/postgres?schema=public&quot;
+
+LOG_LEVEL=info
+
+JWT_SECRET_KEY=&lt;seu-jwt-secret-do-passo-2&gt;
+JWT_REFRESH_SECRET_KEY=&lt;outro-segredo-qualquer&gt;
+JWT_PASSWORD_REDEFINITION_SECRET_KEY=&lt;outro-segredo-qualquer&gt;
+
+INTERNAL_TOKEN=&lt;seu-internal-token-do-passo-2&gt;
+
+BREVO_API_KEY=dev-brevo-not-used
+EMAIL_FROM=noreply@anatoquizup.local
+FRONTEND_PROD_URL=http://localhost:5173
+CORS_ORIGINS=http://localhost:5173,http://localhost:4000
+</code></pre></div>
+<p>Instale, suba banco, gere Prisma, migre e seed:</p>
+<div class="highlight"><pre><span></span><code><span class="n">docker</span> <span class="n">compose</span> <span class="n">up</span> <span class="n">-d</span> <span class="n">db</span>
+<span class="n">npm</span> <span class="n">ci</span>
+<span class="n">npm</span> <span class="n">run</span> <span class="n">prisma</span><span class="p">:</span><span class="n">generate</span>
+<span class="n">npm</span> <span class="n">run</span> <span class="n">prisma</span><span class="p">:</span><span class="n">migrate</span>
+<span class="n">npm</span> <span class="n">run</span> <span class="n">prisma</span><span class="p">:</span><span class="n">seed</span>
+</code></pre></div>
+<blockquote>
+<p><strong>Se você já tinha o banco antigo</strong> (de antes da migração para Quiz-Service), o <code>prisma:migrate</code> vai detectar <strong>drift</strong> (<code>The migrations recorded in the database diverge from the local migrations directory</code>). Isso é esperado porque as migrations antigas foram consolidadas numa migration única <code>init_auth</code>. Solução:</p>
+<div class="highlight"><pre><span></span><code><span class="n">npx</span> <span class="n">prisma</span> <span class="n">migrate</span> <span class="n">reset</span> <span class="p">-</span><span class="n">-force</span>
+</code></pre></div>
+<p>Esse comando dropa o schema, re-aplica a migration <code>init_auth</code> do zero e roda o seed automaticamente (configurado em <code>prisma.config.ts</code>). Como o time autorizou reset de bancos locais (PRD §6.3), pode rodar sem medo.</p>
+<p><strong>Anote a senha do admin</strong> que aparece no log do seed — você vai precisar dela pra logar.</p>
+</blockquote>
+<h3 id="32-quiz-service-2026-1-anatoquizup-quiz-service">3.2. Quiz-Service (<code>2026-1-AnatoQuizUp-Quiz-Service</code>)</h3>
+<div class="highlight"><pre><span></span><code><span class="nb">cd </span><span class="p">../</span><span class="n">2026</span><span class="p">-</span><span class="n">1-AnatoQuizUp-Quiz-Service</span>
+<span class="nb">Copy-Item</span> <span class="p">.</span><span class="n">env</span><span class="p">.</span><span class="n">example</span> <span class="p">.</span><span class="n">env</span>
+</code></pre></div>
+<p>Preencha <code>.env</code> (use os <strong>mesmos</strong> <code>JWT_SECRET_KEY</code> e <code>INTERNAL_TOKEN</code> do Usuario-Service):</p>
+<div class="highlight"><pre><span></span><code>NODE_ENV=development
+PORT=3334
+
+POSTGRES_USER=postgres
+POSTGRES_PASSWORD=postgres
+POSTGRES_DB=anatoquizup_quiz
+DATABASE_URL=&quot;postgresql://postgres:postgres@localhost:5433/anatoquizup_quiz?schema=public&quot;
+
+LOG_LEVEL=info
+
+JWT_SECRET_KEY=&lt;mesmo-do-backend&gt;
+INTERNAL_TOKEN=&lt;mesmo-do-backend&gt;
+
+CORS_ORIGINS=http://localhost:5173,http://localhost:4000
+
+MINIO_ROOT_USER=minioadmin
+MINIO_ROOT_PASSWORD=minioadmin123
+MINIO_ENDPOINT=http://localhost
+MINIO_API_PORT=9000
+MINIO_CONSOLE_PORT=9001
+</code></pre></div>
+<p>Instale, suba banco + MinIO, gere Prisma, migre:</p>
+<div class="highlight"><pre><span></span><code><span class="n">docker</span> <span class="n">compose</span> <span class="n">up</span> <span class="n">-d</span>
+<span class="n">npm</span> <span class="n">ci</span>
+<span class="n">npm</span> <span class="n">run</span> <span class="n">prisma</span><span class="p">:</span><span class="n">generate</span>
+<span class="n">npm</span> <span class="n">run</span> <span class="n">prisma</span><span class="p">:</span><span class="n">migrate</span>
+</code></pre></div>
+<blockquote>
+<p>O banco do Quiz-Service é <strong>novo</strong> (a primeira migration <code>init_quiz</code> é a única que existe). Não tem drift — <code>prisma:migrate</code> funciona direto, sem precisar de <code>reset</code>.</p>
+</blockquote>
+<h3 id="33-bff-2026-1-anatoquizup-bff">3.3. BFF (<code>2026-1-AnatoQuizUp-BFF</code>)</h3>
+<div class="highlight"><pre><span></span><code><span class="nb">cd </span><span class="p">../</span><span class="n">2026</span><span class="p">-</span><span class="n">1-AnatoQuizUp-BFF</span>
+<span class="nb">Copy-Item</span> <span class="p">.</span><span class="n">env</span><span class="p">.</span><span class="n">example</span> <span class="p">.</span><span class="n">env</span>
+</code></pre></div>
+<p>Preencha <code>.env</code>:</p>
+<div class="highlight"><pre><span></span><code>NODE_ENV=development
+PORT=4000
+LOG_LEVEL=info
+
+BACKEND_URL=http://localhost:3333
+QUIZ_SERVICE_URL=http://localhost:3334
+AI_URL=
+
+JWT_SECRET_KEY=&lt;mesmo-do-backend&gt;
+INTERNAL_TOKEN=&lt;mesmo-do-backend&gt;
+
+CORS_ORIGINS=http://localhost:5173,http://127.0.0.1:5173
+REQUEST_TIMEOUT_MS=15000
+</code></pre></div>
+<p>Instale:</p>
+<div class="highlight"><pre><span></span><code><span class="n">npm</span> <span class="n">ci</span>
+</code></pre></div>
+<h3 id="34-web-2026-1-anatoquizup-web">3.4. Web (<code>2026-1-AnatoQuizUp-Web</code>)</h3>
+<div class="highlight"><pre><span></span><code><span class="nb">cd </span><span class="p">../</span><span class="n">2026</span><span class="p">-</span><span class="n">1-AnatoQuizUp-Web</span>
+<span class="nb">Copy-Item</span> <span class="p">.</span><span class="n">env</span><span class="p">.</span><span class="n">example</span> <span class="p">.</span><span class="n">env</span>
+</code></pre></div>
+<p><code>.env</code>:</p>
+<div class="highlight"><pre><span></span><code>VITE_API_URL=http://localhost:4000/api/v1
+VITE_USE_MOCKS=false
+</code></pre></div>
+<p>Instale:</p>
+<div class="highlight"><pre><span></span><code><span class="n">npm</span> <span class="n">ci</span>
+</code></pre></div>
+<hr />
+<h2 id="4-no-dia-a-dia-4-terminais">4. No dia a dia — 4 terminais</h2>
+<table>
+<thead>
+<tr>
+<th>Terminal</th>
+<th>Pasta</th>
+<th>Comando</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1️⃣ Usuario-Service</td>
+<td><code>2026-1-AnatoQuizUp-Usuario-Service</code></td>
+<td><code>docker compose up -d db ; npm run dev</code></td>
+</tr>
+<tr>
+<td>2️⃣ Quiz-Service</td>
+<td><code>2026-1-AnatoQuizUp-Quiz-Service</code></td>
+<td><code>docker compose up -d ; npm run dev</code></td>
+</tr>
+<tr>
+<td>3️⃣ BFF</td>
+<td><code>2026-1-AnatoQuizUp-BFF</code></td>
+<td><code>npm run dev</code></td>
+</tr>
+<tr>
+<td>4️⃣ Web</td>
+<td><code>2026-1-AnatoQuizUp-Web</code></td>
+<td><code>npm run dev</code></td>
+</tr>
+</tbody>
+</table>
+<p>Espere ver, em cada terminal:</p>
+<ul>
+<li><strong>Usuario-Service</strong> (terminal 1): <code>Servidor em execucao { port: 3333 }</code></li>
+<li><strong>Quiz-Service</strong> (terminal 2): <code>Servidor em execucao { port: 3334 }</code></li>
+<li><strong>BFF</strong> (terminal 3): <code>BFF em execucao { port: 4000 }</code></li>
+<li><strong>Web</strong> (terminal 4): <code>Local: http://localhost:5173</code></li>
+</ul>
+<p>Acesse <strong>http://localhost:5173</strong> no navegador.</p>
+<h3 id="com-make">Com Make</h3>
+<p>Se tiver <code>make</code>, fica mais curto. Em cada pasta:</p>
+<div class="highlight"><pre><span></span><code><span class="n">make</span> <span class="n">dev</span>          <span class="c"># sobe o serviço (já gerencia Docker quando aplicável)</span>
+<span class="n">make</span> <span class="n">test</span>         <span class="c"># roda testes</span>
+<span class="n">make</span> <span class="n">lint</span>         <span class="c"># roda ESLint</span>
+<span class="n">make</span> <span class="nb">test-ci</span>      <span class="c"># testes com coverage (gate 85%)</span>
+</code></pre></div>
+<hr />
+<h2 id="5-smoke-tests-validar-que-esta-tudo-conectado">5. Smoke tests — validar que está tudo conectado</h2>
+<h3 id="health-checks-cada-servico-vivo">Health checks (cada serviço vivo)</h3>
+<div class="highlight"><pre><span></span><code><span class="nb">curl </span><span class="n">http</span><span class="p">://</span><span class="n">localhost</span><span class="p">:</span><span class="n">4000</span><span class="p">/</span><span class="n">health</span>   <span class="c"># BFF</span>
+<span class="nb">curl </span><span class="n">http</span><span class="p">://</span><span class="n">localhost</span><span class="p">:</span><span class="n">3333</span><span class="p">/</span><span class="n">health</span>   <span class="c"># Usuario-Service</span>
+<span class="nb">curl </span><span class="n">http</span><span class="p">://</span><span class="n">localhost</span><span class="p">:</span><span class="n">3334</span><span class="p">/</span><span class="n">health</span>   <span class="c"># Quiz-Service</span>
+</code></pre></div>
+<p>Todos devem retornar <code>{"mensagem":"...","dados":{"status":"ok",...}}</code>.</p>
+<h3 id="usuario-service-rejeita-acesso-direto-sem-x-internal-token">Usuario-Service rejeita acesso direto sem <code>X-Internal-Token</code></h3>
+<div class="highlight"><pre><span></span><code><span class="nb">curl </span><span class="n">http</span><span class="p">://</span><span class="n">localhost</span><span class="p">:</span><span class="n">3333</span><span class="p">/</span><span class="n">api</span><span class="p">/</span><span class="n">v1</span><span class="p">/</span><span class="n">autenticacao</span><span class="p">/</span><span class="n">login</span> <span class="n">-X</span> <span class="n">POST</span> <span class="p">`</span>
+  <span class="n">-H</span> <span class="s2">&quot;Content-Type: application/json&quot;</span> <span class="n">-d</span> <span class="s1">&#39;{}&#39;</span>
+</code></pre></div>
+<p>Esperado: <strong>403</strong> <code>"Token interno ausente. Acesso permitido somente via BFF."</code></p>
+<h3 id="quiz-service-rejeita-acesso-direto">Quiz-Service rejeita acesso direto</h3>
+<div class="highlight"><pre><span></span><code><span class="nb">curl </span><span class="n">http</span><span class="p">://</span><span class="n">localhost</span><span class="p">:</span><span class="n">3334</span><span class="p">/</span><span class="n">api</span><span class="p">/</span><span class="n">v1</span><span class="p">/</span><span class="n">questoes</span>
+</code></pre></div>
+<p>Esperado: <strong>403</strong>.</p>
+<h3 id="login-pelo-bff">Login pelo BFF</h3>
+<div class="highlight"><pre><span></span><code><span class="nb">curl </span><span class="n">http</span><span class="p">://</span><span class="n">localhost</span><span class="p">:</span><span class="n">4000</span><span class="p">/</span><span class="n">api</span><span class="p">/</span><span class="n">v1</span><span class="p">/</span><span class="n">autenticacao</span><span class="p">/</span><span class="n">login</span> <span class="n">-X</span> <span class="n">POST</span> <span class="p">`</span>
+  <span class="n">-H</span> <span class="s2">&quot;Content-Type: application/json&quot;</span> <span class="p">`</span>
+  <span class="n">-d</span> <span class="s2">&quot;{\&quot;</span><span class="n">email</span><span class="p">\</span><span class="s2">&quot;:\&quot;</span><span class="n">admin</span><span class="nv">@anatoquizup</span><span class="p">.</span><span class="n">com</span><span class="p">\</span><span class="s2">&quot;,\&quot;</span><span class="n">senha</span><span class="p">\</span><span class="s2">&quot;:\&quot;</span><span class="p">&lt;</span><span class="n">senha-do-seed</span><span class="p">&gt;\</span><span class="s2">&quot;}&quot;</span>
+</code></pre></div>
+<p>Esperado: <strong>200</strong> com <code>accessToken</code>, <code>refreshToken</code>, <code>usuario</code>.</p>
+<h3 id="listar-questoes-pelo-bff-passa-pelo-quiz-service">Listar questões pelo BFF (passa pelo Quiz-Service)</h3>
+<div class="highlight"><pre><span></span><code><span class="nv">$token</span> <span class="p">=</span> <span class="s2">&quot;&lt;copie-o-accessToken-acima&gt;&quot;</span>
+
+<span class="nb">curl </span><span class="n">http</span><span class="p">://</span><span class="n">localhost</span><span class="p">:</span><span class="n">4000</span><span class="p">/</span><span class="n">api</span><span class="p">/</span><span class="n">v1</span><span class="p">/</span><span class="n">questoes</span> <span class="p">`</span>
+  <span class="n">-H</span> <span class="s2">&quot;Authorization: Bearer $token&quot;</span>
+</code></pre></div>
+<p>Esperado: <strong>200</strong> com lista paginada (provavelmente vazia se o seed não criou questões).</p>
+<blockquote>
+<p>O usuário precisa ter papel <code>PROFESSOR</code> ou <code>ADMINISTRADOR</code> para acessar <code>/questoes</code>.</p>
+</blockquote>
+<h3 id="listar-turmas-pelo-bff-passa-pelo-quiz-service">Listar turmas pelo BFF (passa pelo Quiz-Service)</h3>
+<div class="highlight"><pre><span></span><code><span class="nb">curl </span><span class="n">http</span><span class="p">://</span><span class="n">localhost</span><span class="p">:</span><span class="n">4000</span><span class="p">/</span><span class="n">api</span><span class="p">/</span><span class="n">v1</span><span class="p">/</span><span class="n">turmas</span> <span class="p">`</span>
+  <span class="n">-H</span> <span class="s2">&quot;Authorization: Bearer $token&quot;</span>
+</code></pre></div>
+<p>Esperado: <strong>200</strong> com lista.</p>
+<blockquote>
+<p>Comportamento por papel (resolvido no Quiz-Service):</p>
+<ul>
+<li><strong>ALUNO</strong>: vê apenas as turmas em que está vinculado e que estão <code>status=ATIVA</code>. Filtro <code>?status=</code> é rejeitado com <strong>400</strong> para aluno.</li>
+<li><strong>PROFESSOR</strong>: vê apenas turmas que ele criou.</li>
+<li><strong>ADMINISTRADOR</strong>: vê todas as turmas.</li>
+</ul>
+</blockquote>
+<h3 id="buscar-usuario-publico-pelo-bff-passa-pelo-usuario-service">Buscar usuário público pelo BFF (passa pelo Usuario-Service)</h3>
+<div class="highlight"><pre><span></span><code><span class="nb">curl </span><span class="n">http</span><span class="p">://</span><span class="n">localhost</span><span class="p">:</span><span class="n">4000</span><span class="p">/</span><span class="n">api</span><span class="p">/</span><span class="n">v1</span><span class="p">/</span><span class="n">usuarios</span><span class="p">/&lt;</span><span class="n">id-do-usuario</span><span class="p">&gt;</span> <span class="p">`</span>
+  <span class="n">-H</span> <span class="s2">&quot;Authorization: Bearer $token&quot;</span>
+</code></pre></div>
+<p>Esperado: <strong>200</strong> com payload mínimo <code>{ id, nome, papel }</code>. Acessível a qualquer papel autenticado. É a rota usada pelo Web para resolver o nome do professor responsável na tela de detalhe da turma do aluno.</p>
+<h3 id="pelo-navegador">Pelo navegador</h3>
+<ol>
+<li>Abra <code>http://localhost:5173</code>.</li>
+<li>F12 → aba Network.</li>
+<li>Faça login.</li>
+<li>Confirme: as requests vão para <code>localhost:4000</code>, <strong>nunca</strong> para <code>:3333</code> ou <code>:3334</code>. ✅</li>
+</ol>
+<hr />
+<h2 id="6-como-rodar-testes-e-lint">6. Como rodar testes e lint</h2>
+<p>Em cada repo:</p>
+<div class="highlight"><pre><span></span><code><span class="n">npm</span> <span class="n">run</span> <span class="n">lint</span>                            <span class="c"># ESLint</span>
+<span class="n">npm</span> <span class="n">test</span>                                <span class="c"># Jest sem coverage (rápido)</span>
+<span class="n">npm</span> <span class="n">test</span> <span class="p">--</span> <span class="p">-</span><span class="n">-coverage</span> <span class="p">-</span><span class="n">-runInBand</span>      <span class="c"># com gate de 85%</span>
+</code></pre></div>
+<p>Ou com Make:</p>
+<div class="highlight"><pre><span></span><code><span class="n">make</span> <span class="n">lint</span>
+<span class="n">make</span> <span class="n">test</span>
+<span class="n">make</span> <span class="nb">test-ci</span>
+</code></pre></div>
+<blockquote>
+<p>O gate de cobertura mínima de <strong>85%</strong> é bloqueante no CI (decisão DP08).</p>
+</blockquote>
+<hr />
+<h2 id="7-troubleshooting">7. Troubleshooting</h2>
+<h3 id="erros-comuns-no-setup">Erros comuns no setup</h3>
+<table>
+<thead>
+<tr>
+<th>Sintoma</th>
+<th>Causa</th>
+<th>Solução</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>Missing required environment variable: DATABASE_URL</code> (Prisma)</td>
+<td>Não criou <code>.env</code></td>
+<td><code>Copy-Item .env.example .env</code> e preencher</td>
+</tr>
+<tr>
+<td>Container Postgres em loop de <code>Restarting</code></td>
+<td><code>POSTGRES_PASSWORD</code> vazio no <code>.env</code></td>
+<td>Preencher + <code>docker compose down -v ; docker compose up -d</code></td>
+</tr>
+<tr>
+<td><code>P1001: Can't reach database server at localhost:5432</code></td>
+<td>Banco ainda inicializando ou caiu</td>
+<td><code>docker ps</code>; aguarde 5–10s após <code>up -d</code>; veja <code>docker logs anatoquizup-postgres</code></td>
+</tr>
+<tr>
+<td><code>P3006: Migration &lt;nome&gt; failed to apply cleanly to the shadow database. ERROR: syntax error at or near "﻿"</code></td>
+<td>Arquivo <code>migration.sql</code> ou <code>migration_lock.toml</code> foi salvo com <strong>BOM UTF-8</strong> (3 bytes <code>EF BB BF</code> no início). Costuma acontecer quando o arquivo foi gerado via PowerShell sem <code>-Encoding utf8NoBOM</code></td>
+<td>Remover BOM dos arquivos <code>.sql</code>/<code>.toml</code> da pasta de migrations. Veja <a href="#detectar-e-remover-bom-utf-8">snippet abaixo</a></td>
+</tr>
+<tr>
+<td><code>Drift detected</code> / <code>The migrations recorded in the database diverge from the local migrations directory</code> no <strong>Usuario-Service</strong></td>
+<td>Banco tem schema antigo gravado mas as migrations locais foram consolidadas</td>
+<td><code>npx prisma migrate reset --force</code> no Usuario-Service. Não acontece no Quiz-Service (banco novo)</td>
+</tr>
+<tr>
+<td><code>Cannot find module '@aws-sdk/client-s3'</code> no <strong>Usuario-Service</strong> ao rodar testes</td>
+<td>Arquivos órfãos <code>src/config/storage.ts</code> e <code>tests/unit/config/storage.test.ts</code> (esquecidos na migração para Quiz-Service)</td>
+<td>Remover esses 2 arquivos do Usuario-Service</td>
+</tr>
+<tr>
+<td>Porta 5432 ou 5433 já em uso</td>
+<td>Outro Postgres rodando</td>
+<td><code>docker ps</code> e pare o outro container, ou mude a porta no compose</td>
+</tr>
+</tbody>
+</table>
+<h3 id="erros-entre-servicos">Erros entre serviços</h3>
+<table>
+<thead>
+<tr>
+<th>Sintoma</th>
+<th>Causa</th>
+<th>Solução</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>BFF → Usuario-Service: <strong>403 <code>Token interno invalido</code></strong></td>
+<td><code>INTERNAL_TOKEN</code> diverge entre <code>.env</code>s</td>
+<td>Garantir mesmo valor nos 3 <code>.env</code>s (Usuario-Service, BFF, Quiz-Service)</td>
+</tr>
+<tr>
+<td>Login funciona, mas chamadas seguintes dão <strong>401</strong></td>
+<td><code>JWT_SECRET_KEY</code> diverge</td>
+<td>Mesmo valor nos 3 <code>.env</code>s</td>
+</tr>
+<tr>
+<td>BFF retorna <strong>502 <code>ERRO_DOWNSTREAM</code></strong> em <code>/questoes</code></td>
+<td>Quiz-Service não está rodando</td>
+<td>Subir o terminal 2 (<code>npm run dev</code> no Quiz-Service)</td>
+</tr>
+<tr>
+<td>BFF retorna <strong>502</strong> em <code>/autenticacao</code></td>
+<td>Usuario-Service não está rodando</td>
+<td>Subir o terminal 1</td>
+</tr>
+<tr>
+<td><code>/api/v1/ia/*</code> retorna <strong>503 <code>IA_INDISPONIVEL</code></strong></td>
+<td>Esperado</td>
+<td>AI Service ainda é placeholder; rotas existem mas serviço vazio</td>
+</tr>
+<tr>
+<td><strong>CORS bloqueando</strong> <code>localhost:5173</code></td>
+<td><code>CORS_ORIGINS</code> do BFF não inclui o front</td>
+<td>Adicionar <code>http://localhost:5173</code> no <code>.env</code> do BFF</td>
+</tr>
+</tbody>
+</table>
+<h3 id="erros-de-docker-minio">Erros de Docker / MinIO</h3>
+<table>
+<thead>
+<tr>
+<th>Sintoma</th>
+<th>Causa</th>
+<th>Solução</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>docker compose: command not found</code></td>
+<td>Docker Desktop não está aberto/instalado</td>
+<td>Abrir o Docker Desktop e aguardar inicialização</td>
+</tr>
+<tr>
+<td>MinIO não sobe / "Access denied"</td>
+<td><code>MINIO_ROOT_USER</code>/<code>PASSWORD</code> vazios</td>
+<td>Preencher no <code>.env</code> do Quiz-Service + <code>docker compose down -v ; up -d</code></td>
+</tr>
+<tr>
+<td>Não consigo acessar o Console do MinIO</td>
+<td>Não sei a senha</td>
+<td>Use as variáveis <code>MINIO_ROOT_USER</code>/<code>MINIO_ROOT_PASSWORD</code> do <code>.env</code> para logar em http://localhost:9001</td>
+</tr>
+</tbody>
+</table>
+<h3 id="detectar-e-remover-bom-utf-8">Detectar e remover BOM UTF-8</h3>
+<p>Detectar arquivos com BOM em todo um repo (cole no terminal dentro do repo):</p>
+<div class="highlight"><pre><span></span><code><span class="nb">Get-ChildItem</span> <span class="n">-Recurse</span> <span class="n">-Include</span> <span class="p">*.</span><span class="n">sql</span><span class="p">,*.</span><span class="n">prisma</span><span class="p">,*.</span><span class="n">toml</span><span class="p">,*.</span><span class="n">json</span><span class="p">,*.</span><span class="n">ts</span><span class="p">,*.</span><span class="n">tsx</span> <span class="p">|</span>
+  <span class="nb">Where-Object</span> <span class="p">{</span> <span class="nv">$_</span><span class="p">.</span><span class="n">FullName</span> <span class="o">-notmatch</span> <span class="s1">&#39;node_modules|dist|coverage&#39;</span> <span class="p">}</span> <span class="p">|</span>
+  <span class="k">ForEach</span><span class="n">-Object</span> <span class="p">{</span>
+    <span class="nv">$b</span> <span class="p">=</span> <span class="no">[System.IO.File]</span><span class="p">::</span><span class="n">ReadAllBytes</span><span class="p">(</span><span class="nv">$_</span><span class="p">.</span><span class="n">FullName</span><span class="p">)</span>
+    <span class="k">if</span> <span class="p">(</span><span class="nv">$b</span><span class="p">.</span><span class="n">Length</span> <span class="o">-ge</span> <span class="n">3</span> <span class="o">-and</span> <span class="nv">$b</span><span class="p">[</span><span class="n">0</span><span class="p">]</span> <span class="o">-eq</span> <span class="n">0xEF</span> <span class="o">-and</span> <span class="nv">$b</span><span class="p">[</span><span class="n">1</span><span class="p">]</span> <span class="o">-eq</span> <span class="n">0xBB</span> <span class="o">-and</span> <span class="nv">$b</span><span class="p">[</span><span class="n">2</span><span class="p">]</span> <span class="o">-eq</span> <span class="n">0xBF</span><span class="p">)</span> <span class="p">{</span>
+      <span class="nv">$_</span><span class="p">.</span><span class="n">FullName</span>
+    <span class="p">}</span>
+  <span class="p">}</span>
+</code></pre></div>
+<p>Remover BOM de um arquivo específico:</p>
+<div class="highlight"><pre><span></span><code><span class="nv">$path</span> <span class="p">=</span> <span class="s2">&quot;caminho\para\arquivo.sql&quot;</span>
+<span class="nv">$b</span> <span class="p">=</span> <span class="no">[System.IO.File]</span><span class="p">::</span><span class="n">ReadAllBytes</span><span class="p">(</span><span class="nv">$path</span><span class="p">)</span>
+<span class="k">if</span> <span class="p">(</span><span class="nv">$b</span><span class="p">[</span><span class="n">0</span><span class="p">]</span> <span class="o">-eq</span> <span class="n">0xEF</span> <span class="o">-and</span> <span class="nv">$b</span><span class="p">[</span><span class="n">1</span><span class="p">]</span> <span class="o">-eq</span> <span class="n">0xBB</span> <span class="o">-and</span> <span class="nv">$b</span><span class="p">[</span><span class="n">2</span><span class="p">]</span> <span class="o">-eq</span> <span class="n">0xBF</span><span class="p">)</span> <span class="p">{</span>
+  <span class="no">[System.IO.File]</span><span class="p">::</span><span class="n">WriteAllBytes</span><span class="p">(</span><span class="nv">$path</span><span class="p">,</span> <span class="nv">$b</span><span class="p">[</span><span class="n">3</span><span class="p">..(</span><span class="nv">$b</span><span class="p">.</span><span class="n">Length</span> <span class="p">-</span> <span class="n">1</span><span class="p">)])</span>
+  <span class="s2">&quot;BOM removido.&quot;</span>
+<span class="p">}</span>
+</code></pre></div>
+<p>Para <strong>prevenir</strong> que isso aconteça novamente ao gerar arquivos via PowerShell:</p>
+<div class="highlight"><pre><span></span><code><span class="c"># PS 7+</span>
+<span class="s2">&quot;conteudo&quot;</span> <span class="p">|</span> <span class="nb">Out-File</span> <span class="n">arquivo</span><span class="p">.</span><span class="n">sql</span> <span class="n">-Encoding</span> <span class="n">utf8NoBOM</span>
+
+<span class="c"># PS 5.1</span>
+<span class="no">[System.IO.File]</span><span class="p">::</span><span class="n">WriteAllText</span><span class="p">(</span><span class="s2">&quot;arquivo.sql&quot;</span><span class="p">,</span> <span class="s2">&quot;conteudo&quot;</span><span class="p">,</span> <span class="p">(</span><span class="nb">New-Object</span> <span class="n">System</span><span class="p">.</span><span class="n">Text</span><span class="p">.</span><span class="n">UTF8Encoding</span> <span class="nv">$false</span><span class="p">))</span>
+</code></pre></div>
+<p>No VS Code: confirme no canto inferior direito que o encoding é <code>UTF-8</code> (sem "with BOM"). Se aparecer "UTF-8 with BOM", clique e troque para "UTF-8".</p>
+<h3 id="comandos-uteis-de-diagnostico">Comandos úteis de diagnóstico</h3>
+<div class="highlight"><pre><span></span><code><span class="c"># Ver todos os containers do projeto</span>
+<span class="n">docker</span> <span class="nb">ps</span>
+
+<span class="c"># Logs do Postgres do Usuario-Service</span>
+<span class="n">docker</span> <span class="n">logs</span> <span class="n">anatoquizup-postgres</span> <span class="p">-</span><span class="n">-tail</span> <span class="n">30</span>
+
+<span class="c"># Logs do Postgres do Quiz</span>
+<span class="n">docker</span> <span class="n">logs</span> <span class="n">anatoquizup-quiz-postgres</span> <span class="p">-</span><span class="n">-tail</span> <span class="n">30</span>
+
+<span class="c"># Logs do MinIO</span>
+<span class="n">docker</span> <span class="n">logs</span> <span class="n">anatoquizup-quiz-minio</span> <span class="p">-</span><span class="n">-tail</span> <span class="n">30</span>
+
+<span class="c"># Reset do banco mantendo o container (recomendado em dev quando há drift)</span>
+<span class="c"># Apaga as tabelas, re-aplica migrations e roda seed automaticamente.</span>
+<span class="nb">cd </span><span class="n">2026</span><span class="p">-</span><span class="n">1-AnatoQuizUp-Usuario-Service</span>
+<span class="n">npx</span> <span class="n">prisma</span> <span class="n">migrate</span> <span class="n">reset</span> <span class="p">-</span><span class="n">-force</span>
+
+<span class="nb">cd </span><span class="p">../</span><span class="n">2026</span><span class="p">-</span><span class="n">1-AnatoQuizUp-Quiz-Service</span>
+<span class="n">npx</span> <span class="n">prisma</span> <span class="n">migrate</span> <span class="n">reset</span> <span class="p">-</span><span class="n">-force</span>
+
+<span class="c"># Reset NUCLEAR — apaga o volume Docker (perde dados E destrói o container).</span>
+<span class="c"># Use somente quando o reset acima não resolver.</span>
+<span class="nb">cd </span><span class="n">2026</span><span class="p">-</span><span class="n">1-AnatoQuizUp-Usuario-Service</span>
+<span class="n">docker</span> <span class="n">compose</span> <span class="n">down</span> <span class="n">-v</span>
+<span class="n">docker</span> <span class="n">compose</span> <span class="n">up</span> <span class="n">-d</span> <span class="n">db</span>
+<span class="c"># aguardar 5s</span>
+<span class="n">npm</span> <span class="n">run</span> <span class="n">prisma</span><span class="p">:</span><span class="n">migrate</span>
+<span class="n">npm</span> <span class="n">run</span> <span class="n">prisma</span><span class="p">:</span><span class="n">seed</span>
+
+<span class="nb">cd </span><span class="p">../</span><span class="n">2026</span><span class="p">-</span><span class="n">1-AnatoQuizUp-Quiz-Service</span>
+<span class="n">docker</span> <span class="n">compose</span> <span class="n">down</span> <span class="n">-v</span>
+<span class="n">docker</span> <span class="n">compose</span> <span class="n">up</span> <span class="n">-d</span>
+<span class="c"># aguardar 5s</span>
+<span class="n">npm</span> <span class="n">run</span> <span class="n">prisma</span><span class="p">:</span><span class="n">migrate</span>
+
+<span class="c"># Inspecionar dados via Prisma Studio (interface web)</span>
+<span class="n">npm</span> <span class="n">run</span> <span class="n">prisma</span><span class="p">:</span><span class="n">studio</span>   <span class="c"># roda em http://localhost:5555</span>
+</code></pre></div>
+<hr />
+<h2 id="8-ordem-de-subir-e-derrubar">8. Ordem de subir e derrubar</h2>
+<p><strong>Subir</strong> (de baixo pra cima):</p>
+<ol>
+<li>Postgres Usuario-Service (compose do terminal 1).</li>
+<li>Postgres Quiz + MinIO (compose do terminal 2).</li>
+<li>Usuario-Service (terminal 1, depois do banco).</li>
+<li>Quiz-Service (terminal 2, depois do banco e do MinIO).</li>
+<li>BFF (terminal 3).</li>
+<li>Web (terminal 4).</li>
+</ol>
+<p><strong>Derrubar</strong>:</p>
+<ul>
+<li>Em cada terminal Node: <code>Ctrl + C</code>.</li>
+<li>Para parar os containers Docker:</li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="nb">cd </span><span class="n">2026</span><span class="p">-</span><span class="n">1-AnatoQuizUp-Usuario-Service</span> <span class="p">;</span> <span class="n">docker</span> <span class="n">compose</span> <span class="n">down</span>
+<span class="nb">cd </span><span class="p">../</span><span class="n">2026</span><span class="p">-</span><span class="n">1-AnatoQuizUp-Quiz-Service</span> <span class="p">;</span> <span class="n">docker</span> <span class="n">compose</span> <span class="n">down</span>
+</code></pre></div>
+<blockquote>
+<p><code>down -v</code> apaga os volumes (perde os dados). <code>down</code> (sem <code>-v</code>) só para os containers.</p>
+</blockquote>
+<hr />
+<h2 id="9-documentos-relacionados">9. Documentos relacionados</h2>
+<ul>
+<li><a href="../../arquitetura/visao_geral/">Visão Geral da Arquitetura</a> — diagrama e responsabilidades de cada serviço.</li>
+<li><a href="../../arquitetura/tecnologias/">Tecnologias</a> — stack adotada por componente.</li>
+<li><a href="../../arquitetura/api/visao-geral/">Endpoints e Contratos</a> — roteamento público e contratos da API.</li>
+<li><a href="../politica_branchs/">Política de Branches</a> — Git Flow do projeto.</li>
+<li><a href="../politica_commits/">Política de Commits</a> — Conventional Commits.</li>
+</ul>
+<hr />
+<h2 id="historico-de-versao">Histórico de Versão</h2>
+<table>
+<thead>
+<tr>
+<th>Data</th>
+<th>Versão</th>
+<th>Descrição</th>
+<th>Autor(es)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>2026-05-13</td>
+<td>1.0</td>
+<td>Criação do guia consolidado de setup local para os 5 repos (Web, BFF, Backend, Quiz-Service, AI) com 4 processos + 3 containers, smoke tests e troubleshooting</td>
+<td>Miguel Moreira</td>
+</tr>
+<tr>
+<td>2026-05-21</td>
+<td>1.1</td>
+<td>Adiciona smoke tests de <code>/turmas</code> (com regras de acesso por papel) e <code>/usuarios/:id</code> no fluxo do aluno; remove resíduo do título e atualiza referências documentais</td>
+<td>Miguel Moreira</td>
+</tr>
+</tbody>
+</table>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.tabs"], "search": "../../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copiado para \u00e1rea de transfer\u00eancia", "clipboard.copy": "Copiar para \u00e1rea de transfer\u00eancia", "search.result.more.one": "mais 1 nesta p\u00e1gina", "search.result.more.other": "# mais nesta p\u00e1gina", "search.result.none": "Nenhum documento encontrado", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Digite para iniciar a busca", "search.result.term.missing": "Ausente", "select.version": "Selecione a vers\u00e3o"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.83f73b43.min.js"></script>
+      
+    
+  </body>
+</html>
