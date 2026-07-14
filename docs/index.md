@@ -66,9 +66,9 @@ O que é o AnatoQuizUp, o problema que ele resolve e o que cada usuário pode fa
 A plataforma em funcionamento: login e todas as funcionalidades, pela ótica do administrador, do professor e do aluno.
 
 <div class="video-wrapper">
-  <iframe src="https://www.youtube-nocookie.com/embed/RxTe1ZYvHXw"
+  <iframe src="https://drive.google.com/file/d/19MxIhWRIXeOB3ohjpWfp14eEYXNWGcLY/preview"
     title="Demonstração de Uso - AnatoQuizUp"
-    allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+    allow="autoplay"
     allowfullscreen></iframe>
 </div>
 
